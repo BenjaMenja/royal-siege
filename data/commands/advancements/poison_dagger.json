@@ -1,0 +1,26 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "c1": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "source_entity": {
+                        "type": "minecraft:player",
+                        "equipment": {
+                            "mainhand": {
+                                "nbt": "{poison:1b}",
+                                "items": [
+                                    "minecraft:iron_sword"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "commands:other/poison_dagger"
+    }
+}

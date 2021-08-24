@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bat_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CanPlaceOn:[\"#commands:can_place_on\"],display:{Name:'{\"text\":\"Hatchlings\",\"color\":\"#4300A8\",\"italic\":false}',Lore:['{\"text\":\"Placeable\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Spawns 3 hatchling minions that chase enemies.\"}','{\"text\":\"Up to 10 can exist at once.\"}']},HideFlags:16,CustomModelData:112,hatchlingsred:1b,EntityTag:{Tags:[\"hatchlingsred\",\"hatchlings\"]}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

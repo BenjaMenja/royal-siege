@@ -1,0 +1,35 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 1,
+                    "name": "minecraft:stone",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{playing_card_death:1b}"
+                        },
+                        {
+                            "function": "set_attributes",
+                            "modifiers": [
+                                {
+                                    "attribute": "generic.follow_range",
+                                    "name": "RNG",
+                                    "operation": "addition",
+                                    "slot": "chest",
+                                    "amount": {
+                                        "max": 4,
+                                        "min": 1
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

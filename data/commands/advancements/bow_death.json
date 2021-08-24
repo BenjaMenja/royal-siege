@@ -1,0 +1,45 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "archerbow": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "killing_blow": {
+                    "direct_entity": {
+                        "type": "minecraft:arrow",
+                        "nbt": "{damage:4.0d}"
+                    }
+                }
+            }
+        },
+        "normalarrow": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "killing_blow": {
+                    "direct_entity": {
+                        "type": "minecraft:arrow",
+                        "nbt": "{damage:2.0d}"
+                    }
+                }
+            }
+        },
+        "dueltntarrow": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "killing_blow": {
+                    "direct_entity": {
+                        "type": "minecraft:arrow",
+                        "nbt": "{damage:3.0d}"
+                    }
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "archerbow",
+            "normalarrow",
+            "dueltntarrow"
+        ]
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "ironaxe": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player",
+                    "equipment": {
+                        "mainhand": {
+                            "items": [
+                                "minecraft:iron_axe"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "woodenaxe": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player",
+                    "equipment": {
+                        "mainhand": {
+                            "items": [
+                                "minecraft:wooden_axe"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "ironaxe",
+            "woodenaxe"
+        ]
+    ]
+}

@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:102,display:{Name:'{\"text\":\"Scrambled Eggs\",\"color\":\"yellow\",\"italic\":false}',Lore:['{\"text\":\"Right-Click to use\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Shoots a scrambling egg.\"}','{\"text\":\"Scrambles up an enemy\\'s hotbar when hit.\"}']},Unbreakable:1b,scrambledeggs:1b,scrambledeggsred:1b,Enchantments:[{}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

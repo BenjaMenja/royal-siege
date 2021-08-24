@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:dragon_head"
+    },
+    "title": "Dragon Dive",
+    "description": "As Dragon, get a kill with Dragon Rage while gliding.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "commands:character_challenges/root",
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

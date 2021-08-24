@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:rose_bush",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Thorn Bush\"}',Lore:['{\"text\":\"A thorny bush with very high thorns.\"}']},HideFlags:1,Enchantments:[{id:\"minecraft:thorns\",lvl:11s}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

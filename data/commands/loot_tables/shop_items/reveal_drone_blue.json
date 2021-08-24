@@ -1,0 +1,23 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bat_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:38,CanPlaceOn:[\"#commands:can_place_on\"],HideFlags:16,display:{Name:'{\"text\":\"Reveal Drone\"}',Lore:['{\"text\":\"Placeable\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Reveals and slows enemies in a\"}','{\"text\":\"medium-sized radius.\"}']},EntityTag:{Silent:1b,Invulnerable:1b,Tags:[\"RevealBlue\"]}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

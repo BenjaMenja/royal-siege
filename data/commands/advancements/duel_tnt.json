@@ -1,0 +1,26 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "duel_tnt": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "is_projectile": true,
+                        "direct_entity": {
+                            "type": "minecraft:arrow",
+                            "nbt": "{damage:3.0d}"
+                        },
+                        "source_entity": {
+                            "type": "minecraft:player"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "commands:other/duel_tnt"
+    },
+    "parent": "commands:root"
+}

@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:ender_eye",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": "Corrupt Hoarder",
+    "description": "Have 20 Corrupt Credits in your team's bank.",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "commands:advancements/hoarder",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

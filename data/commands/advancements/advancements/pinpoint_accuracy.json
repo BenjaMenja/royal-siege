@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:bow"
+    },
+    "title": "Pinpoint Accuracy",
+    "description": "Kill a player from over 50 blocks away.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "commands:advancements/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "distance": {
+            "absolute": {
+              "min": 50,
+              "max": 200
+            }
+          }
+        },
+        "entity": {
+          "type": "minecraft:player"
+        }
+      }
+    }
+  }
+}

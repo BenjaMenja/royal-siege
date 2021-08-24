@@ -1,0 +1,3 @@
+give @s[scores={Money=600..}] lapis_lazuli{CustomModelData:7,display:{Name:'{"text":"Strength Stone","italic":false}',Lore:['{"text":"Increases attack damage when in your offhand."}']},HideFlags:1,Enchantments:[{id:"minecraft:luck_of_the_sea",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0.35,Operation:1,UUID:[I;-6419422,-13902225,37378,91204156],Slot:"offhand"}]} 1
+
+scoreboard players remove @s[scores={Money=600..}] Money 600

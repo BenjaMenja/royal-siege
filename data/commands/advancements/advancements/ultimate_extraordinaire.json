@@ -1,0 +1,150 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:dragon_breath"
+    },
+    "title": "Ultimate Extraordinaire",
+    "description": "Use every ultimate available.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "commands:advancements/purchase_ultimate",
+  "criteria": {
+    "ultimate1": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate2": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate3": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate4": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate5": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate6": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate7": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate8": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate9": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate10": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate11": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate12": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate13": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate14": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate15": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate16": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate17": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate18": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate19": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate20": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate21": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate22": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "ultimate1"
+    ],
+    [
+      "ultimate2"
+    ],
+    [
+      "ultimate3"
+    ],
+    [
+      "ultimate4"
+    ],
+    [
+      "ultimate5"
+    ],
+    [
+      "ultimate6"
+    ],
+    [
+      "ultimate7"
+    ],
+    [
+      "ultimate8"
+    ],
+    [
+      "ultimate9"
+    ],
+    [
+      "ultimate10"
+    ],
+    [
+      "ultimate11"
+    ],
+    [
+      "ultimate12"
+    ],
+    [
+      "ultimate13"
+    ],
+    [
+      "ultimate14"
+    ],
+    [
+      "ultimate15"
+    ],
+    [
+      "ultimate16"
+    ],
+    [
+      "ultimate17"
+    ],
+    [
+      "ultimate18"
+    ],
+    [
+      "ultimate19"
+    ],
+    [
+      "ultimate20"
+    ],
+    [
+      "ultimate21"
+    ],
+    [
+      "ultimate22"
+    ]
+  ]
+}

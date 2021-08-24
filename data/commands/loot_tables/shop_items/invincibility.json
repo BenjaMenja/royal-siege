@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Invincibility Potion\"}',Lore:['{\"text\":\"Grants brief invincibility.\"}']},CustomPotionEffects:[{Id:11b,Amplifier:4b,Duration:160}],CustomPotionColor:7039851}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

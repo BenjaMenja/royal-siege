@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "killing_blow": {
+          "source_entity": {
+            "type": "minecraft:player",
+            "equipment": {
+              "mainhand": {
+                "nbt": "{anchor:1b}",
+                "items": [
+                  "minecraft:iron_pickaxe"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

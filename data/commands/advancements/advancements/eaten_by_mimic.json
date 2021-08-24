@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:trapped_chest"
+    },
+    "title": "Eaten Alive",
+    "description": "Get eaten by a mimic.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "commands:advancements/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "position": {
+            "x": {
+              "min": -490,
+              "max": -486
+            },
+            "y": {
+              "min": 54,
+              "max": 58
+            },
+            "z": {
+              "min": -122,
+              "max": -118
+            }
+          }
+        }
+      }
+    }
+  }
+}

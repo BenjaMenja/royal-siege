@@ -1,0 +1,3 @@
+give @s[scores={Money=400..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Multi-Barrel Attachment","color":"dark_gray","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"An ability that makes your weapon fire more bullets."}','{"text":"The gun will still consume the normal amount of bullets."}','{"text":"Lasts 10 seconds."}']},CustomModelData:141,multibarrelattachment:1b} 1
+
+scoreboard players remove @s[scores={Money=400..}] Money 400

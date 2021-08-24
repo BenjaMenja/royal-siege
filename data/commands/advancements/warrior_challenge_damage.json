@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "dealt": {
+            "min": 20,
+            "max": 99
+          },
+          "blocked": false
+        },
+        "entity": {
+          "type": "minecraft:player",
+          "player": {
+            "advancements": {
+              "commands:full_hp": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

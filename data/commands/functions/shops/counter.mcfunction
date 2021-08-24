@@ -1,0 +1,3 @@
+give @s[scores={Money=400..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Counter","color":"#8C4406","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Enter a counter state for 4 seconds, slowing your movement speed in the process."}','{"text":"After the counter state ends, you will receive a level of strength"}','{"text":"based off of the amount of damage you took."}']},Unbreakable:1b,CustomModelData:121,counter:1b} 1
+
+scoreboard players remove @s[scores={Money=400..}] Money 400

@@ -1,0 +1,3 @@
+give @s[scores={Money=700..}] iron_chestplate{Unbreakable:1b,display:{Name:'{"text":"Knight\'s Plate","italic":false}',Lore:['{"text":"A much more powerful iron chestplate."}']},Enchantments:[{id:"minecraft:protection",lvl:3s},{id:"minecraft:blast_protection",lvl:4s},{id:"minecraft:projectile_protection",lvl:3s}],AttributeModifiers:[{AttributeName:"generic.max_health",Name:"generic.max_health",Amount:2,Operation:0,UUID:[I;-37381294,-123891241,838331251,392103],Slot:"chest"},{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;-932819312,123515136,283911,-81293124],Slot:"chest"}]} 1
+
+scoreboard players remove @s[scores={Money=700..}] Money 700

@@ -1,0 +1,73 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "ironsword": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player",
+                    "equipment": {
+                        "mainhand": {
+                            "items": [
+                                "minecraft:iron_sword"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "goldsword": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player",
+                    "equipment": {
+                        "mainhand": {
+                            "items": [
+                                "minecraft:golden_sword"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "woodsword": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player",
+                    "equipment": {
+                        "mainhand": {
+                            "items": [
+                                "minecraft:wooden_sword"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "diamondsword": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player",
+                    "equipment": {
+                        "mainhand": {
+                            "items": [
+                                "minecraft:diamond_sword"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "goldsword",
+            "woodsword",
+            "diamondsword",
+            "ironsword"
+        ]
+    ]
+}

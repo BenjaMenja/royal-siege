@@ -1,0 +1,21 @@
+{
+  "parent": "commands:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player",
+          "equipment": {
+            "mainhand": {
+              "nbt": "{soupoftheday:1b}",
+              "items": [
+                "minecraft:mushroom_stew"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

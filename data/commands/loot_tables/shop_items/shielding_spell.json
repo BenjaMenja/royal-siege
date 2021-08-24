@@ -1,0 +1,23 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Shielding Spell\",\"italic\":false}',Lore:['{\"text\":\"Right-Click to use\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Gives shield health to all nearby allies.\"}']},CustomModelData:35,shieldingspell:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

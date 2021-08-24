@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{redhealingfruit:1b}"
+          }
+        ]
+      }
+    },
+    "req2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{bluehealingfruit:1b}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement",
+      "req2"
+    ]
+  ],
+  "rewards": {
+    "function": "commands:other/remove_healing_fruit"
+  }
+}

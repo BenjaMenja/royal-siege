@@ -1,0 +1,1 @@
+execute as @a[scores={textClick=1..}] run function commands:other/text_clicks

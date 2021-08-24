@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bat_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CanPlaceOn:[\"#commands:can_place_on\"],display:{Name:'{\"text\":\"Corruption\",\"color\":\"#020678\",\"italic\":false}',Lore:['{\"text\":\"Placeable\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Corrupts all players with corrupt credits in their inventory.\"}','{\"text\":\"Corrupted players are much more powerful, but are rather unstable.\"}','{\"text\":\"This ability affects all players, including enemies.\"}']},HideFlags:16,CustomModelData:114,corruptionblue:1b,EntityTag:{Tags:[\"corruptionblue\",\"corruption\"]}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

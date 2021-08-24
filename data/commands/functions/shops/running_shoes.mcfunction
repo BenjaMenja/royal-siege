@@ -1,0 +1,3 @@
+give @s[scores={Money=600..}] leather_boots{display:{Name:'{"text":"Running Shoes"}',Lore:['{"text":"Grants high movement speed and protection."}'],color:16252672},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:4s},{id:"minecraft:blast_protection",lvl:5s}],AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.4,Operation:1,UUID:[I;-773182392,-901321,-9991013,78493],Slot:"feet"},{AttributeName:"generic.armor",Name:"generic.armor",Amount:1,Operation:0,UUID:[I;-6673129,-19031,3718312,12312999],Slot:"feet"}]} 1
+
+scoreboard players remove @s[scores={Money=600..}] Money 600

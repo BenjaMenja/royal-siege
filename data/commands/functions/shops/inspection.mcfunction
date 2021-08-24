@@ -1,0 +1,3 @@
+give @s[scores={Money=400..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Inspection","color":"red","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Reveals all players that currently have their ultimate."}','{"text":"Is consumed upon use."}']},CustomModelData:145,inspection:1b} 1
+
+scoreboard players remove @s[scores={Money=400..}] Money 400

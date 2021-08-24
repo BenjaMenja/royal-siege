@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:poisonous_potato",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Rotting Potato\"}',Lore:['{\"text\":\"Poisons an enemy when you strike them with it.\"}']},HideFlags:1,Enchantments:[{id:\"minecraft:luck_of_the_sea\",lvl:1s}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

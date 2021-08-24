@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lapis_lazuli",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:7,display:{Name:'{\"text\":\"Strength Stone\"}',Lore:['{\"text\":\"Increases attack damage when in your offhand.\"}']},HideFlags:1,Enchantments:[{id:\"minecraft:luck_of_the_sea\",lvl:1s}],AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:0.35,Operation:1,UUID:[I;-6419422,-13902225,37378,91204156],Slot:\"offhand\"}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

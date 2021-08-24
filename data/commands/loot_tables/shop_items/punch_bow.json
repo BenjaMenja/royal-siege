@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:62,display:{Name:'{\"text\":\"Punch Bow\"}',Lore:['{\"text\":\"A high knockback bow.\"}']},Unbreakable:1b,punchbow:1b,Enchantments:[{id:\"minecraft:punch\",lvl:4s},{id:\"minecraft:infinity\",lvl:1s}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

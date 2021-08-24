@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Exp. Bomb Blaster\",\"color\":\"yellow\",\"italic\":false}',Lore:['{\"text\":\"Right-Click to use\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Shoots a spread of Exp. Bottles.\"}','{\"text\":\"Each bottle is loaded with explosives.\"}']},HideFlags:4,Unbreakable:1b,CustomModelData:140,expblaster:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

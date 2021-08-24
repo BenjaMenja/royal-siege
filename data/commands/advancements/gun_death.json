@@ -1,0 +1,14 @@
+{
+    "criteria": {
+        "gundeath": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "killing_blow": {
+                    "direct_entity": {
+                        "nbt": "{damage:3.1d}"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "sniperdeath": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "killing_blow": {
+                    "direct_entity": {
+                        "type": "minecraft:arrow",
+                        "nbt": "{damage:6.0d}"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "name": {
+      "text": "Gunblade - Burst",
+      "color": "red",
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{switch:1b}"
+  }
+]

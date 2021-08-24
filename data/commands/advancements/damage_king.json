@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:wither_skeleton",
+          "nbt": "{Tags:[\"King\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "commands:other/damage_king"
+  }
+}

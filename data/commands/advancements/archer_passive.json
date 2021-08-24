@@ -1,0 +1,57 @@
+{
+  "criteria": {
+    "c1": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:bow"
+              ]
+            }
+          }
+        },
+        "damage": {
+          "blocked": false,
+          "type": {
+            "is_projectile": true
+          }
+        },
+        "entity": {
+          "type": "minecraft:player"
+        }
+      }
+    },
+    "c2": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "type": "minecraft:player",
+          "equipment": {
+            "offhand": {
+              "items": [
+                "minecraft:bow"
+              ]
+            }
+          }
+        },
+        "damage": {
+          "blocked": false,
+          "type": {
+            "is_projectile": true
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "c1",
+      "c2"
+    ]
+  ],
+  "rewards": {
+    "function": "commands:other/archer_passive"
+  }
+}

@@ -1,0 +1,26 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "rotting_potato": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "source_entity": {
+                        "type": "minecraft:player",
+                        "equipment": {
+                            "mainhand": {
+                                "items": [
+                                    "minecraft:poisonous_potato"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "commands:other/rotting_potato"
+    },
+    "parent": "commands:root"
+}

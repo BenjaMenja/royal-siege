@@ -1,0 +1,54 @@
+{
+  "criteria": {
+    "hit_player": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "blocked": false,
+          "source_entity": {
+            "type": "minecraft:player",
+            "equipment": {
+              "mainhand": {
+                "items": [
+                  "minecraft:iron_axe"
+                ]
+              }
+            }
+          }
+        },
+        "entity": {
+          "type": "minecraft:player"
+        }
+      }
+    },
+    "hit_shield": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "blocked": true,
+          "source_entity": {
+            "type": "minecraft:player",
+            "equipment": {
+              "mainhand": {
+                "items": [
+                  "minecraft:iron_axe"
+                ]
+              }
+            }
+          }
+        },
+        "entity": {
+          "type": "minecraft:player"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hit_player"
+    ],
+    [
+      "hit_shield"
+    ]
+  ]
+}

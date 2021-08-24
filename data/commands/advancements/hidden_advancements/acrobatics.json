@@ -1,0 +1,47 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:chain"
+    },
+    "title": "Acrobatics",
+    "description": "Kill a player while standing on the castle chains.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "commands:hidden_advancements/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "location": {
+            "position": {
+              "x": {
+                "min": 7,
+                "max": 11
+              },
+              "y": {
+                "min": 68,
+                "max": 69
+              },
+              "z": {
+                "min": -164,
+                "max": -100
+              }
+            }
+          }
+        },
+        "entity": {
+          "type": "minecraft:player"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ]
+}

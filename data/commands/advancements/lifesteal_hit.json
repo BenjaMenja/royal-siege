@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:player",
+            "equipment": {
+              "mainhand": {
+                "nbt": "{lifesteal:1b}",
+                "items": [
+                  "minecraft:iron_sword"
+                ]
+              }
+            }
+          }
+        },
+        "entity": {
+          "type": "minecraft:player"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "rewards": {
+    "function": "commands:other/lifesteal_hit"
+  }
+}

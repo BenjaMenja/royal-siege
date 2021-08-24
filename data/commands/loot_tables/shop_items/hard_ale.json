@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:56,display:{Name:'{\"text\":\"Hard Ale\"}',Lore:['{\"text\":\"Grants you a lot of melee buffs,\"}','{\"text\":\"but makes you quite tipsy.\"}']},HideFlags:32,CustomPotionEffects:[{Id:2b,Amplifier:0b,Duration:300},{Id:5b,Amplifier:0b,Duration:300},{Id:6b,Amplifier:0b,Duration:1},{Id:9b,Amplifier:0b,Duration:300}],CustomPotionColor:16756257}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

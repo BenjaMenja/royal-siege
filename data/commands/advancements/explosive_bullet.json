@@ -1,0 +1,22 @@
+{
+    "criteria": {
+      "c1": {
+        "trigger": "minecraft:entity_hurt_player",
+        "conditions": {
+          "damage": {
+            "blocked": false,
+            "type": {
+              "direct_entity": {
+                "type": "minecraft:arrow",
+                "nbt": "{CustomPotionEffects:[{Id:26b,Amplifier:0b,Duration:4}]}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "commands:other/explosive_bullet"
+    }
+  }
+  

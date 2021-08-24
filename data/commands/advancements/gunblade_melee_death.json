@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player",
+          "equipment": {
+            "mainhand": {
+              "nbt": "{gunblade:1b}",
+              "items": [
+                "minecraft:carrot_on_a_stick"
+              ]
+            }
+          }
+        },
+        "killing_blow": {
+          "is_projectile": false
+        }
+      }
+    }
+  }
+}

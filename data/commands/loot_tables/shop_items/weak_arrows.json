@@ -1,0 +1,26 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:tipped_arrow",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 4,
+                "max": 12
+              }
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Weakening Arrows\"}'},CustomPotionEffects:[{Id:18b,Amplifier:0b,Duration:200}],CustomPotionColor:3355443}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

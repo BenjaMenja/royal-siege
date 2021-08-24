@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:57,display:{Name:'{\"text\":\"Knockback Stick\"}',Lore:['{\"text\":\"A simple stick with high knockback.\"}']},HideFlags:2,Enchantments:[{id:\"minecraft:knockback\",lvl:4s}],AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:2,Operation:0,UUID:[I;-3285911,271839051,37218214,-932101241],Slot:\"mainhand\"}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "nbt": "{mythtrident:1b}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "commands:other/scourge_kill"
+  }
+}

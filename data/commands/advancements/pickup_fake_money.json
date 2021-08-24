@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{fakemoneyred:1b}"
+          }
+        ]
+      }
+    },
+    "req2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{fakemoneyblue:1b}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "req2",
+      "requirement"
+    ]
+  ],
+  "rewards": {
+    "function": "commands:other/fake_money"
+  }
+}

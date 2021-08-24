@@ -1,0 +1,9 @@
+[
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:blast_protection": -11
+    },
+    "add": true
+  }
+]

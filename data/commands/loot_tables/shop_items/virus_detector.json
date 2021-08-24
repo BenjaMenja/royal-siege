@@ -1,0 +1,23 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Virus Detector\",\"italic\":false}',Lore:['{\"text\":\"Right-Click to use\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Incapacitates an enemy inside of your castle.\"}']},CustomModelData:44,virusdetector:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+tag @a[tag=slam,nbt={OnGround:0b}] add falling

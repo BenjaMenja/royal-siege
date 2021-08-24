@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:player_head",
+      "nbt": "{Enchantments:[{id:\"minecraft:protection\",lvl:2s},{id:\"minecraft:projectile_protection\",lvl:2s}],AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:2,Operation:0,UUID:[I;77729293,10,82894,-192736449],Slot:\"head\"}],SkullOwner:{Id:[I;1506350569,-2016000832,-1167242250,549915695],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTkzZWU1YmIwYzdmYWNjYTBmM2RmZTA5NDMwYzViODRhOTBlNjU4OGQwYTEwOTlkYTg1YjZlYWViODk1OGY5YSJ9fX0=\"}]}}}"
+    },
+    "title": "Justice from Afar",
+    "description": "As Archer, kill someone with Bow of Justice from 40+ blocks away.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "commands:character_challenges/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player",
+          "distance": {
+            "absolute": {
+              "min": 40,
+              "max": 1000
+            }
+          }
+        },
+        "killing_blow": {
+          "direct_entity": {
+            "type": "minecraft:arrow",
+            "nbt": "{damage:52.5d}"
+          }
+        }
+      }
+    }
+  }
+}

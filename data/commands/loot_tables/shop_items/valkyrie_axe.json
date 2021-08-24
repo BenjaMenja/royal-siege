@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_axe",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Valkyrie Axe\"}',Lore:['{\"text\":\"A high damage axe with a slow attack speed.\"}','{\"text\":\" \"}','{\"text\":\"When in Main Hand:\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" 13 Attack Damage\",\"color\":\"dark_green\",\"italic\":false}','{\"text\":\" 0.65 Attack Speed\",\"color\":\"dark_green\",\"italic\":false}']},HideFlags:2,Unbreakable:1b,valkyrieaxe:1b,Enchantments:[{id:\"minecraft:knockback\",lvl:3s}],AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-3.35,Operation:0,UUID:[I;-1384332004,675103578,-1170628146,-1120017965],Slot:\"mainhand\"},{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:13,Operation:0,UUID:[I;747942962,523060152,-1530214356,842403582],Slot:\"mainhand\"}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

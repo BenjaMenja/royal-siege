@@ -1,0 +1,46 @@
+{
+  "parent": "commands:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:wither_skeleton",
+          "nbt": "{Tags:[\"King\"]}"
+        }
+      }
+    },
+    "req2": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:horse"
+        }
+      }
+    },
+    "req3": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:skeleton"
+        }
+      }
+    },
+    "req4": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:zombie"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "req2",
+      "req3",
+      "req4",
+      "requirement"
+    ]
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:egg",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 8,
+                "max": 16
+              }
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Chicken Bomb\"}',Lore:['{\"text\":\"If a chicken hatches from the egg,\"}','{\"text\":\"it will violently explode.\"}']},HideFlags:1,Enchantments:[{}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

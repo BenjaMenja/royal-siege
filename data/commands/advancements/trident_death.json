@@ -1,0 +1,40 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "trident_death": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player"
+                },
+                "killing_blow": {
+                    "is_projectile": true,
+                    "direct_entity": {
+                        "type": "minecraft:trident"
+                    }
+                }
+            }
+        },
+        "trident_death2": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player",
+                    "equipment": {
+                        "mainhand": {
+                            "items": [
+                                "minecraft:trident"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "trident_death",
+            "trident_death2"
+        ]
+    ]
+}

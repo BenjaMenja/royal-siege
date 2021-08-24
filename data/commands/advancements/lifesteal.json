@@ -1,0 +1,29 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "c1": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player"
+                },
+                "killing_blow": {
+                    "direct_entity": {
+                        "type": "minecraft:player",
+                        "equipment": {
+                            "mainhand": {
+                                "nbt": "{lifesteal:1b}",
+                                "items": [
+                                    "minecraft:iron_sword"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "commands:other/lifesteal"
+    }
+}

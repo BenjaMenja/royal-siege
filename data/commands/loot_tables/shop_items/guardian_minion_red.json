@@ -1,0 +1,23 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:guardian_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CanPlaceOn:[\"#commands:can_place_on\"],HideFlags:16,display:{Name:'{\"text\":\"Guardian Minion\"}',Lore:['{\"text\":\"Placeable\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Summons a guardian to fight for your team.\"}']},EntityTag:{Team:\"Red\",Health:35f,Attributes:[{Name:generic.max_health,Base:35},{Name:generic.attack_damage,Base:9}]}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

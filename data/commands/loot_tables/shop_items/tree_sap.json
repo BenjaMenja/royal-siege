@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Tree Sap\"}',Lore:['{\"text\":\"A healthy drink for trees.\"}']},CustomPotionEffects:[{Id:6b,Amplifier:0b,Duration:1},{Id:10b,Amplifier:1b,Duration:300},{Id:22b,Amplifier:0b,Duration:1200},{Id:5b,Amplifier:0b,Duration:600}],CustomPotionColor:13958912}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

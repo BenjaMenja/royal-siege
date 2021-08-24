@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:55,display:{Name:'{\"text\":\"Flaming Stick\"}',Lore:['{\"text\":\"Set your enemies ablaze.\"}']},Enchantments:[{id:\"minecraft:fire_aspect\",lvl:3s}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

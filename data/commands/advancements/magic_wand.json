@@ -1,0 +1,16 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "c1": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "commands:other/magic_wand"
+    }
+}

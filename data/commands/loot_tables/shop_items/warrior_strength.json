@@ -1,0 +1,23 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Strength Potion\"}',Lore:['{\"text\":\"A long lasting strength potion.\"}']},CustomPotionEffects:[{Id:5b,Amplifier:0b,Duration:1000}],CustomPotionColor:8519680}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
