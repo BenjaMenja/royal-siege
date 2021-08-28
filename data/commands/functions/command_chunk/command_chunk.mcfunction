@@ -66,6 +66,8 @@ execute as @e[type=item,tag=!processed,scores={ItemKill=1}] run data modify enti
 
 tag @e[type=item] add processed
 
+kill @e[type=item,nbt={Item:{tag:{gunblade:1b}}}]
+
 #Cavalry Charge (Warrior Ultimate)
 
 execute as @a[scores={Ultimate=2},predicate=!commands:inventory/cavalry_charge] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add  Horse 1
@@ -350,10 +352,6 @@ execute as @p[scores={Start=1..}] at @s run function commands:starting/start_map
 
 scoreboard players set @a[scores={Start=2}] players 0
 
-execute as @a[scores={End=5..6}] run fill 10 52 -92 8 52 -94 stone_bricks replace air
-
-execute as @a[scores={End=5..6}] run fill 8 52 -173 10 52 -171 stone_bricks replace air
-
 #Wizard Minions
 
 scoreboard players add @e[type=zombie,tag=Minion] MinionDeath 1
@@ -598,11 +596,11 @@ execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{tag:{redh
 
 execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{tag:{bluehealingfruit:1b}}}] at @s if entity @p[scores={Kit=8},dx=0] run tellraw @a[team=Blue,scores={Kit=8}] [{"text":"You gave a healing fruit to: ","color":"green"},{"selector":"@p[team=Blue,tag=closest,distance=..100]"}]
 
-execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{tag:{redhealingfruit:1b}}}] run tp @s @p[team=Red,tag=closest]
+execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{tag:{redhealingfruit:1b}}}] at @s run tp @s @p[team=Red,tag=closest]
 
-execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{tag:{bluehealingfruit:1b}}}] run tp @s @p[team=Blue,tag=closest]
+execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{tag:{bluehealingfruit:1b}}}] at @s run tp @s @p[team=Blue,tag=closest]
 
-tag @a remove closest
+tag @a[tag=closest] remove closest
 
 tp @e[type=item,scores={FruitRemove=100..}] ~ -100 ~
 
@@ -794,7 +792,7 @@ tellraw @p[team=Blue,scores={usedCOAS=1..},predicate=commands:holding/menu] ["",
 
 #Give chaos bow users the arrow back
 
-give @a[scores={chaosbow=1..}] arrow{display:{Name:'{"text":"Archer\'s Infinite Arrow","italic":false}'}} 1
+give @a[scores={chaosbow=1..}] arrow{CustomModelData:12,display:{Name:'{"text":"Bottomless Quiver","italic":false}'}} 1
 
 scoreboard players set @a[scores={chaosbow=1..}] chaosbow 0
 
@@ -854,7 +852,7 @@ execute as @a[nbt={AbsorptionAmount:0.0f}] run effect clear @s absorption
 
 #Give menu item to people w/out it
 
-give @a[predicate=commands:in_any_battlefield,predicate=!commands:inventory/menu] carrot_on_a_stick{CustomModelData:5,display:{Name:'{"text":"Menu","color":"aqua","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Opens up a text menu where you"}','{"text":"can purchase items pertaining"}','{"text":"to your class. You can also"}','{"text":"withdraw money and corrupt credits, and purchase arrows."}','{"text":"You can also see how many corrupt credits your team\'s bank has."}']},HideFlags:1,Unbreakable:1b,menu:1b,Enchantments:[{}]} 1
+execute as @a[predicate=commands:in_any_battlefield,predicate=!commands:inventory/menu] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run give @s carrot_on_a_stick{CustomModelData:5,display:{Name:'{"text":"Menu","color":"aqua","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Opens up a text menu where you"}','{"text":"can purchase items pertaining"}','{"text":"to your class. You can also"}','{"text":"withdraw money and corrupt credits, and purchase arrows."}','{"text":"You can also see how many corrupt credits your team\'s bank has."}']},HideFlags:1,Unbreakable:1b,menu:1b,Enchantments:[{}]} 1
 
 #Wizard Items
 
@@ -926,11 +924,9 @@ scoreboard players set @a[scores={dashcharge=361..},tag=!upgraded] dashcharge 36
 
 scoreboard players set @a[scores={dashcharge=301..},tag=upgraded] dashcharge 301
 
-execute as @a[scores={usedCOAS=1..,Kit=2,dashcharge=120..},tag=!upgraded,predicate=commands:holding/ninja_dash] at @s run tag @s add dash
+execute as @a[scores={usedCOAS=1..,Kit=2,dashcharge=120..},tag=!upgraded,tag=!rooted,predicate=commands:holding/ninja_dash] at @s run tag @s add dash
 
-execute as @a[scores={usedCOAS=1..,Kit=2,dashcharge=100..},tag=upgraded,predicate=commands:holding/ninja_dash] at @s run tag @s add dash
-
-tag @a[tag=rooted] remove dash
+execute as @a[scores={usedCOAS=1..,Kit=2,dashcharge=100..},tag=upgraded,tag=!rooted,predicate=commands:holding/ninja_dash] at @s run tag @s add dash
 
 execute as @a[tag=dash] at @s unless score @s shadow matches 1.. anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/ninja_dash_start_ray
 
@@ -1158,8 +1154,6 @@ scoreboard players reset @a mWipeKill
 
 tag @a[scores={died=1..}] remove wipeKill
 
-scoreboard players reset @a mWipeUse
-
 #Damage gives ultimate charge
 
 execute as @a[scores={Ultcharge=1..}] run function commands:other/ult_charge
@@ -1248,35 +1242,11 @@ scoreboard players reset @a[scores={died=1..}] InvisDur
 
 execute as @a[scores={Kit=8,Ultimate=18},predicate=!commands:inventory/decay_aura] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s DecayTimer 1
 
-give @a[team=Red,scores={DecayTimer=3200..}] bat_spawn_egg{CustomModelData:79,CanPlaceOn:["#commands:can_place_on"],ultimateitem:1b,decay:1b,HideFlags:16,display:{Name:'{"text":"Decay Aura","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Damages everything around you, including non-players."}','{"text":"Also heals your king if it is nearby."}']},EntityTag:{Silent:1b,Invulnerable:1b,Tags:["decay"]},Enchantments:[{}]} 1
+give @a[scores={DecayTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Decay Aura","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Damages everything around you, including non-players."}','{"text":"Also heals your king if it is nearby."}']},CustomModelData:79,ultimateitem:1b,decay:1b,Enchantments:[{}]} 1
 
-give @a[team=Blue,scores={DecayTimer=3200..}] bat_spawn_egg{CustomModelData:79,CanPlaceOn:["#commands:can_place_on"],ultimateitem:1b,decay:1b,HideFlags:16,display:{Name:'{"text":"Decay Aura","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Damages everything around you, including non-players."}','{"text":"Also heals your king if it is nearby."}']},EntityTag:{Silent:1b,Invulnerable:1b,Tags:["decayblue"]},Enchantments:[{}]} 1
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/decay_aura] at @s run function commands:ultimates/decay_aura_init
 
 scoreboard players set @a[scores={DecayTimer=3200..}] DecayTimer 0
-
-execute as @e[type=bat,tag=decay] at @s run tag @a[team=Red,scores={Kit=8,Ultimate=18}] add decay
-
-execute as @e[type=bat,tag=decayblue] at @s run tag @a[team=Blue,scores={Kit=8,Ultimate=18}] add decay
-
-execute as @e[type=bat,tag=decay] at @s run playsound minecraft:entity.wither.spawn master @a ~ ~ ~ 1 0
-
-execute as @e[type=bat,tag=decayblue] at @s run playsound minecraft:entity.wither.spawn master @a ~ ~ ~ 1 0
-
-execute if entity @e[type=bat,tag=decay] run tellraw @a [{"selector":"@a[team=Red,scores={Ultimate=18}]"},{"text":" is emitting a decaying aura!"}]
-
-execute if entity @e[type=bat,tag=decayblue] run tellraw @a [{"selector":"@a[team=Blue,scores={Ultimate=18}]"},{"text":" is emitting a decaying aura!"}]
-
-tp @e[type=bat,tag=decay] ~ -100 ~
-
-tp @e[type=bat,tag=decayblue] ~ -100 ~
-
-execute as @a[scores={Decay=1},team=Red] at @s run playsound royalsiege:ultimates.decay_aura_friendly master @a[team=Red] ~ ~ ~ 100 1
-
-execute as @a[scores={Decay=1},team=Red] at @s run playsound royalsiege:ultimates.decay_aura_enemy master @a[team=Blue] ~ ~ ~ 100 1
-
-execute as @a[scores={Decay=1},team=Blue] at @s run playsound royalsiege:ultimates.decay_aura_friendly master @a[team=Bluue] ~ ~ ~ 100 1
-
-execute as @a[scores={Decay=1},team=Blue] at @s run playsound royalsiege:ultimates.decay_aura_enemy master @a[team=Red] ~ ~ ~ 100 1
 
 scoreboard players add @a[tag=decay] DecayD 1
 
@@ -1289,8 +1259,6 @@ scoreboard players set @a[scores={DecayD=22..}] DecayD 0
 scoreboard players set @a[scores={died=1..}] Decay 100
 
 tag @a[scores={Decay=100..}] remove decay
-
-tag @a[scores={Decay=100..}] remove decayblue
 
 scoreboard players set @a[scores={Decay=100..}] DecayD 0
 
@@ -1584,7 +1552,7 @@ give @a[team=Blue,scores={RobotTimer=3600..}] bat_spawn_egg{CustomModelData:83,C
 
 scoreboard players set @a[scores={RobotTimer=3600..}] RobotTimer 0
 
-execute as @e[tag=AI,type=bat] run function commands:ultimates/artificial_intelligence 
+execute as @e[tag=AI,type=bat] run function commands:ultimates/artificial_intelligence
 
 tp @e[type=bat,tag=AI] ~ -100 ~
 
@@ -1610,7 +1578,7 @@ execute as @a[scores={RegenTimer=120},predicate=commands:inventory/regen_staff] 
 
 execute as @a[scores={Kit=9},predicate=!commands:inventory/poseidon_trident,predicate=commands:in_any_battlefield] run function commands:replace/poseidon_trident_replace
 
-execute as @a[scores={Kit=10},predicate=!commands:inventory/gunblade,predicate=commands:in_any_battfield] run function commands:other/gunblade_reload
+execute as @a[scores={Kit=10},predicate=!commands:inventory/gunblade,predicate=commands:in_any_battlefield] run function commands:other/gunblade_reload
 
 scoreboard players add @a[tag=reloading] reload 1
 
@@ -1882,15 +1850,11 @@ title @a[scores={Kit=9}] actionbar [{"text":"Lightning Spell: ","color":"green"}
 
 execute as @a[scores={Ultimate=9},predicate=!commands:inventory/scourge_of_the_seas] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s scourgeTimer 1
 
-give @a[team=Red,scores={scourgeTimer=3200..}] minecraft:bat_spawn_egg{CustomModelData:80,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Scourge of the Seas","color":"dark_aqua","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Call forth a rainstorm while boosting your speed and resistance."}','{"text":"You will receive a trident with riptide and higher damage."}','{"text":"Lasts 15 seconds."}']},HideFlags:16,ultimateitem:1b,scourge:1b,EntityTag:{Invulnerable:1b,Tags:["scourgered"]},Enchantments:[{}]} 1
-
-give @a[team=Blue,scores={scourgeTimer=3200..}] minecraft:bat_spawn_egg{CustomModelData:80,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Scourge of the Seas","color":"dark_aqua","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Call forth a rainstorm while boosting your speed and resistance."}','{"text":"You will receive a trident with riptide and higher damage."}','{"text":"Lasts 15 seconds."}']},HideFlags:16,ultimateitem:1b,scourge:1b,EntityTag:{Invulnerable:1b,Tags:["scourgeblue"]},Enchantments:[{}]} 1
+give @a[scores={scourgeTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Scourge of the Seas","color":"dark_aqua","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Call forth a rainstorm while boosting your speed and resistance."}','{"text":"You will receive a trident with riptide and higher damage."}','{"text":"Lasts 15 seconds."}']},CustomModelData:80,ultimateitem:1b,scourge:1b,Enchantments:[{}]} 1
 
 scoreboard players set @a[scores={scourgeTimer=3200..}] scourgeTimer 0
 
-execute as @e[type=bat,tag=scourgered] run function commands:ultimates/scourge_of_the_seas_red
-
-execute as @e[type=bat,tag=scourgeblue] run function commands:ultimates/scourge_of_the_seas_blue
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/scourge_of_the_seas] run function commands:ultimates/scourge_of_the_seas
 
 scoreboard players add @a[tag=scourgeActive] scourgeDuration 1
 
@@ -2124,15 +2088,11 @@ tag @a remove scrambled
 
 execute as @a[scores={Ultimate=21},predicate=!commands:inventory/dinners_ready] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s dinnerTimer 1
 
-give @a[team=Red,scores={dinnerTimer=3400..}] minecraft:bat_spawn_egg{CustomModelData:104,HideFlags:16,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Dinner\'s Ready!","color":"yellow","italic":false}',Lore:['{"text":"Serve up a buffet of food for your team."}','{"text":"Creates a circle of food around the chef."}','{"text":"Nearby teammates receive a wide variety of buffs around "}']},ultimateitem:1b,dinnersready:1b,Enchantments:[{}],EntityTag:{Silent:1b,Invulnerable:1b,Tags:["dinnersreadyred","dinnersready"]}} 1
-
-give @a[team=Blue,scores={dinnerTimer=3400..}] minecraft:bat_spawn_egg{CustomModelData:104,HideFlags:16,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Dinner\'s Ready!","color":"yellow","italic":false}',Lore:['{"text":"Serve up a buffet of food for your team."}','{"text":"Creates a circle of food around the chef."}','{"text":"Nearby teammates receive a wide variety of buffs around "}']},ultimateitem:1b,dinnersready:1b,Enchantments:[{}],EntityTag:{Silent:1b,Invulnerable:1b,Tags:["dinnersreadyblue","dinnersready"]}} 1
+give @a[scores={dinnerTimer=3400..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Dinner\'s Ready!","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":"Creates a circle of food around the chef."}','{"text":"Nearby teammates receive a wide variety of buffs around "}','{"text":"Serve up a buffet of food for your team."}']},CustomModelData:104,ultimateitem:1b,dinnersready:1b,Enchantments:[{}]} 1
 
 scoreboard players set @a[scores={dinnerTimer=3400..}] dinnerTimer 0
 
-execute as @e[type=bat,tag=dinnersready] run function commands:ultimates/dinners_ready
-
-tp @e[type=bat,tag=dinnersready] ~ -100 ~
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/dinners_ready] run function commands:ultimates/dinners_ready
 
 execute at @a[tag=dinnerTargetRed] run particle angry_villager ~ ~2 ~ 0 0 0 1 1 normal
 
@@ -2150,15 +2110,11 @@ execute as @a[scores={dinnerEnd=300..}] run function commands:ultimates/dinners_
 
 execute if score #gamemode settings matches 0 as @a[scores={Ultimate=22},predicate=!commands:inventory/closing_time] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s closingTimer 1
 
-give @a[team=Red,scores={closingTimer=3400..}] minecraft:bat_spawn_egg{CustomModelData:105,HideFlags:16,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Closing Time","color":"#4F3557","italic":false}',Lore:['{"text":"Closes off the throne room of the castle you are closest to."}']},HideFlags:16,ultimateitem:1b,closingtime:1b,Enchantments:[{}],EntityTag:{Tags:["closingtimered","closingtime"]}} 1
-
-give @a[team=Blue,scores={closingTimer=3400..}] minecraft:bat_spawn_egg{CustomModelData:105,HideFlags:16,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Closing Time","color":"#4F3557","italic":false}',Lore:['{"text":"Closes off the throne room of the castle you are closest to."}']},HideFlags:16,ultimateitem:1b,closingtime:1b,Enchantments:[{}],EntityTag:{Tags:["closingtimeblue","closingtime"]}} 1
+give @a[scores={closingTimer=3400..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Closing Time","color":"#4F3557","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":"Closes off the throne room of the castle you are closest to."}']},CustomModelData:105,ultimateitem:1b,closingtime:1b,Enchantments:[{}]} 1
 
 scoreboard players set @a[scores={closingTimer=3400..}] closingTimer 0
 
-execute as @e[type=bat,tag=closingtime] run function commands:ultimates/closing_time
-
-teleport @e[type=bat,tag=closingtime] ~ -100 ~
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/closing_time] run function commands:ultimates/closing_time
 
 scoreboard players add @a[tag=closingRed] closingEnd 1
 
@@ -2302,15 +2258,9 @@ title @a[scores={Kit=12}] actionbar [{"text":"Dragon Rage: ","color":"green"},{"
 
 #Outrage
 
-execute at @e[type=bat,tag=outragered] run tag @p[team=Red,distance=..5] add outrage
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/outrage] run function commands:other/outrage_init
 
-execute at @e[type=bat,tag=outrageblue] run tag @p[team=Blue,distance=..5] add outrage
-
-tag @a[tag=outrage] add outrageTemp
-
-execute as @a[tag=outrage] run function commands:other/outrage
-
-scoreboard players add @a[tag=outrageTemp] outrageTimer 1
+scoreboard players add @a[tag=outrage] outrageTimer 1
 
 execute as @a[scores={outrageTimer=161..}] run function commands:other/outrage_effects
 
@@ -2320,7 +2270,7 @@ execute as @e[type=bat,tag=hatchlings] at @s run function commands:other/hatchli
 
 #Corruption
 
-execute as @e[type=bat,tag=corruption] at @s run function commands:other/corruption
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/corruption] at @s run function commands:other/corruption
 
 scoreboard players add @a[tag=corrupted] corruptTimer 1
 
@@ -2390,11 +2340,11 @@ execute as @e[type=area_effect_cloud,tag=mShowerPoint,scores={mShowerTimer=200..
 
 execute as @a[scores={Ultimate=24},predicate=!commands:inventory/evolution] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s evolutionTimer 1
 
-give @a[scores={evolutionTimer=3600..}] minecraft:bat_spawn_egg{CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Evolution","color":"#A100FF","italic":false}',Lore:['{"text":"Take to the skies, receiving a pair of wings and fireworks."}','{"text":"Lasts 12 seconds."}']},HideFlags:16,CustomModelData:117,ultimateitem:1b,evolutionUlt:1b,EntityTag:{Tags:["evolution"]}} 1
+give @a[scores={evolutionTimer=3600..}] minecraft:carrot_on_a_stick{CanPlaceOn:["minecraft:can_place_on"],display:{Name:'{"text":"Evolution","color":"#A100FF","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":"Take to the skies, receiving a pair of wings and fireworks."}','{"text":"Lasts 12 seconds."}']},HideFlags:16,CustomModelData:117,ultimateitem:1b,evolutionUlt:1b} 1
 
 scoreboard players reset @a[scores={evolutionTimer=3600..}] evolutionTimer
 
-execute as @e[type=bat,tag=evolution] at @s run function commands:ultimates/evolution_init
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/evolution] at @s run function commands:ultimates/evolution_init
 
 scoreboard players add @a[tag=evolve] evolutionDur 1
 
@@ -2678,17 +2628,7 @@ scoreboard players add @a[scores={chipBet=1..5}] betChipTimer 1
 
 scoreboard players add @a[tag=hasBounty] betChipTimer 1
 
-tellraw @a[tag=chipbet,scores={betChipTimer=400..}] {"text":"Your bounty has freed themselves! Say goodbye to your money!","color":"aqua"}
-
-tag @a[scores={betChipTimer=400..}] remove chipbet
-
-tag @a[scores={betChipTimer=400..}] remove hasBounty
-
-tag @a[scores={betChipTimer=400..}] remove foundBounty
-
-scoreboard players reset @a[scores={betChipTimer=400..}] chipBet
-
-scoreboard players reset @a[scores={betChipTimer=400..}] betChipTimer
+execute as @a[scores={betChipTimer=400..}] run function commands:other/betting_chip_end
 
 #Inspection
 

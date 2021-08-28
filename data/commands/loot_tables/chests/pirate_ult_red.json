@@ -743,7 +743,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "commands:shop_items/outrage_red",
+          "name": "commands:shop_items/outrage",
           "conditions": [
             {
               "condition": "minecraft:random_chance",
@@ -788,7 +788,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "commands:shop_items/corruption_red",
+          "name": "commands:shop_items/corruption",
           "conditions": [
             {
               "condition": "minecraft:random_chance",

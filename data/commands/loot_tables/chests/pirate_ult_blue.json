@@ -608,21 +608,6 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "commands:shop_items/shielding_spell_blue",
-          "conditions": [
-            {
-              "condition": "minecraft:random_chance",
-              "chance": 0.03
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:loot_table",
           "name": "commands:shop_items/lifesteal_dagger",
           "conditions": [
             {
@@ -758,7 +743,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "commands:shop_items/outrage_blue",
+          "name": "commands:shop_items/outrage",
           "conditions": [
             {
               "condition": "minecraft:random_chance",
@@ -803,7 +788,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "commands:shop_items/corruption_blue",
+          "name": "commands:shop_items/corruption",
           "conditions": [
             {
               "condition": "minecraft:random_chance",

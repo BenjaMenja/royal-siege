@@ -10,4 +10,8 @@ tag @s remove closingRed
 
 tag @s remove closingBlue
 
+tag @s remove redCastle
+
+tag @s remove blueCastle
+
 scoreboard players reset @s closingEnd

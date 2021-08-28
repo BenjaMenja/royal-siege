@@ -20,7 +20,7 @@ execute if score #blueUlts multiItems matches 0 run tellraw @s[team=Blue] [{"tex
 
 clear @s carrot_on_a_stick{inspection:1b} 1
 
-scoreboard players reset #redUlts multiItems
+scoreboard players set #redUlts multiItems 0
 
-scoreboard players reset #blueUlts multiItems
+scoreboard players set #blueUlts multiItems 0
 
