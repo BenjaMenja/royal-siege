@@ -112,11 +112,11 @@ execute at @s[tag=midas] run playsound entity.generic.explode master @a[distance
 
 execute at @s[tag=explosion] run playsound entity.generic.explode master @a[distance=..15] ~ ~ ~ 1 2
 
-execute at @e[type=arrow,nbt={CustomPotionEffects:[{Id:19b,Amplifier:0b,Duration:100}]}] run particle dust 0.133 1.000 0.000 1 ~ ~ ~ 0 0 0 1 0 force
+execute at @e[type=arrow,nbt={CustomPotionEffects:[{Id:19b,Amplifier:0b,Duration:100}]}] run particle dust 0.631 0.000 1.000 1 ~ ~ ~ 0 0 0 1 0 force
 
 execute at @e[type=arrow,nbt={CustomPotionEffects:[{Id:26b,Amplifier:0b,Duration:1}]}] run particle dust 0.047 0.361 0.000 1 ~ ~ ~ 0 0 0 1 0 force
 
-execute at @e[type=arrow,nbt={CustomPotionEffects:[{Id:26b,Amplifier:0b,Duration:2}]}] run particle dust 1.000 0.933 0.000 1 ~ ~ ~ 0 0 0 1 0 force
+execute at @e[type=arrow,nbt={CustomPotionEffects:[{Id:26b,Amplifier:0b,Duration:2}]}] run particle dust 0.000 1.000 1.000 1 ~ ~ ~ 0 0 0 1 0 force
 
 execute at @e[type=arrow,nbt={CustomPotionEffects:[{Id:26b,Amplifier:0b,Duration:3}]}] run particle dust 0.749 0.702 0.000 1 ~ ~ ~ 0 0 0 1 0 force
 

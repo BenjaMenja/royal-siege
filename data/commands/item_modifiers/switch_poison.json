@@ -9,6 +9,6 @@
   },
   {
     "function": "minecraft:set_nbt",
-    "tag": "{switch:2b}"
+    "tag": "{switch:2b,CustomModelData:159}"
   }
 ]
