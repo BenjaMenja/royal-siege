@@ -40,7 +40,7 @@ execute if score #gamemode settings matches 0 as @a[team=Blue,x=-1402,y=60,z=119
 
 execute if score #gamemode settings matches 1 as @a[team=Blue,x=-1402,y=60,z=1194,distance=..50,scores={Respawn=200..}] at @s run teleport @s 1015 53 -61
 
-title @a[scores={Respawn=200..},team=Blue] times 10 70 20
+title @a[scores={Respawn=200..},team=Blue] times 10 40 20
 
 scoreboard players set @a[team=Blue,scores={Respawn=200..}] Respawn 0
 

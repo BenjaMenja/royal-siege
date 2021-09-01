@@ -66,8 +66,6 @@ item replace entity @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] armor.
 
 item replace entity @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] armor.feet with chainmail_boots{Unbreakable:1,Enchantments:[{id:projectile_protection,lvl:2},{id:protection,lvl:2}]} 1
 
-give @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Glowing Effect","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Make all enemies glow for a short time."}']},CustomModelData:13,glowingeffect:1b} 1
-
 give @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] minecraft:wooden_sword{CustomModelData:157,display:{Name:'{"text":"Worn Out Staff","italic":false}',Lore:['{"text":"It ran out of magical energy long ago, but it’s decently heavy,"}','{"text":"so you might as well hit something with it."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 6 Attack Damage","color":"dark_green","italic":false}','{"text":" 1.6 Attack Speed","color":"dark_green","italic":false}']},HideFlags:2,Unbreakable:1b,wizardsword:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:6,Operation:0,UUID:[I;-1611929717,-901955548,-1718480892,-874245086],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.4,Operation:0,UUID:[I;-496954904,661209273,-1127692879,-992232192],Slot:"mainhand"}]} 1
 
 give @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] carrot_on_a_stick{CustomModelData:2,display:{Name:'{"text":"Lightning Staff","color":"aqua","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Shoots a beam that strikes lightning"}','{"text":"onto enemy players and blocks."}','{"text":"Can be used every 4 seconds, and "}','{"text":"can hold up to 10 charges."}']},HideFlags:1,Unbreakable:1b,lightningstaff:1b,Enchantments:[{}]} 1
@@ -126,7 +124,11 @@ item replace entity @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] armor
 
 item replace entity @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] armor.legs with iron_leggings{Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:projectile_protection",lvl:1s},{id:"minecraft:blast_protection",lvl:1s}]} 1
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] armor.feet with iron_boots{Unbreakable:1b,nokb:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:feather_falling",lvl:2s},{id:"minecraft:projectile_protection",lvl:1s}]} 1
+item replace entity @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] armor.feet with iron_boots{Unbreakable:1b,nokb:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:feather_falling",lvl:2s},{id:"minecraft:projectile_protection",lvl:1s},{id:"minecraft:blast_protection",lvl:1s}]} 1
+
+item replace entity @p[distance=..8,team=Blue,tag=!upgraded,scores={Kit=10,BlueKit=198}] hotbar.8 with gunpowder{CustomModelData:14,display:{Name:'{"text":"Gunblade Ammo","color":"gray","italic":false}',Lore:['{"text":"Ammo for the Gunblade."}']},gunbladeammo:1b,Enchantments:[{}]} 15
+
+item replace entity @p[distance=..8,team=Blue,tag=upgraded,scores={Kit=10,BlueKit=198}] hotbar.8 with gunpowder{CustomModelData:14,display:{Name:'{"text":"Gunblade Ammo","color":"gray","italic":false}',Lore:['{"text":"Ammo for the Gunblade."}']},gunbladeammo:1b,Enchantments:[{}]} 20
 
 item replace entity @p[distance=..8,team=Blue,scores={Kit=11,BlueKit=198}] armor.head with minecraft:player_head{Enchantments:[{id:"minecraft:protection",lvl:3s},{id:"minecraft:fire_protection",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;-550164555,30754708,-1227168694,-2003086015],Slot:"head"}],SkullOwner:{Id:[I;1448200512,773932192,-2064052068,-324220262],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZmNmYyYmUxNWE2Mzk0OWRiYzQ1OGRkNDEwYjE4NGYxOTAwMzQ1NTVlMWRlOTY2NWRjY2NlOWQ5YjhjMzZlYiJ9fX0="}]}}} 1
 

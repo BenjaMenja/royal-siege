@@ -42,11 +42,11 @@ scoreboard players reset #readyplayers spawnStuff
 
 execute if score #characterselect spawnStuff matches 1 run scoreboard players add #charSelectSong spawnStuff 1
 
-execute if score #charSelectSong spawnStuff matches 1 at @a[limit=1] run playsound royalsiege:songs.character_select_hall_intro master @a ~ ~ ~ 100 1
+execute if score #charSelectSong spawnStuff matches 1 at @a[limit=1] run playsound royalsiege:songs.character_select_hall_intro record @a ~ ~ ~ 100 1
 
-execute if score #charSelectSong spawnStuff matches 1480 unless score #charSelectIntro spawnStuff matches 1 at @a[limit=1] run playsound royalsiege:songs.character_select_hall_loop master @a ~ ~ ~ 100 1
+execute if score #charSelectSong spawnStuff matches 1480 unless score #charSelectIntro spawnStuff matches 1 at @a[limit=1] run playsound royalsiege:songs.character_select_hall_loop record @a ~ ~ ~ 100 1
 
-execute if score #charSelectSong spawnStuff matches 1400 if score #charSelectIntro spawnStuff matches 1 at @a[limit=1] run playsound royalsiege:songs.character_select_hall_loop master @a ~ ~ ~ 100 1
+execute if score #charSelectSong spawnStuff matches 1400 if score #charSelectIntro spawnStuff matches 1 at @a[limit=1] run playsound royalsiege:songs.character_select_hall_loop record @a ~ ~ ~ 100 1
 
 execute if score #charSelectSong spawnStuff matches 1480 run scoreboard players set #charSelectIntro spawnStuff 1
 

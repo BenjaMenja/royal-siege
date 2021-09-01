@@ -120,6 +120,14 @@ tag @a remove randomized
 
 tag @a remove noWarp
 
+tag @a remove found
+
+tag @a remove STOP
+
+tag @a remove highestmoneyred
+
+tag @a remove highestmoneyblue
+
 scoreboard players set #red corruptBank 0
 
 scoreboard players set #blue corruptBank 0

@@ -68,6 +68,8 @@ tag @e[type=item] add processed
 
 kill @e[type=item,nbt={Item:{tag:{gunblade:1b}}}]
 
+scoreboard players add @e[type=item,scores={ItemKill=1}] Timer 1
+
 #Cavalry Charge (Warrior Ultimate)
 
 execute as @a[scores={Ultimate=2},predicate=!commands:inventory/cavalry_charge] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add  Horse 1
@@ -1020,7 +1022,7 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/shadow_step] at @
 
 scoreboard players add @a[tag=shadow] shadow 1
 
-execute as @a[scores={shadow=10..}] at @s run function commands:ultimates/shadow_step_effects
+execute as @a[scores={shadow=10..89}] at @s run function commands:ultimates/shadow_step_effects
 
 execute as @a[scores={shadow=90..}] run function commands:ultimates/shadow_step_end
 
@@ -2753,6 +2755,10 @@ scoreboard players reset @a[scores={damage=1..}] damage
 scoreboard players reset @a[scores={died=1..}] killStreak
 
 tag @a[scores={died=1..}] add notAlive
+
+execute as @a[scores={died=1..}] at @s run tag @e[type=item,distance=..2,scores={ItemKill=1..}] add delete
+
+kill @e[type=item,scores={ItemKill=1,Timer=1..},tag=delete]
 
 scoreboard players set @a[scores={died=1..}] died 0
 

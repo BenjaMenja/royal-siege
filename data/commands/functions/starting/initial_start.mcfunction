@@ -14,9 +14,9 @@ scoreboard players reset #startdelay spawnStuff
 
 scoreboard players reset #startbutton spawnStuff
 
-stopsound @a master royalsiege:songs.character_select_hall_loop
+stopsound @a record royalsiege:songs.character_select_hall_loop
 
-stopsound @a master royalsiege:songs.character_select_hall_intro
+stopsound @a record royalsiege:songs.character_select_hall_intro
 
 tag @a remove startToReady
 
