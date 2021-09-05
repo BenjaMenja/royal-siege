@@ -6,6 +6,8 @@ execute if entity @a[predicate=commands:in_character_select_area] run function c
 
 tag @a[tag=!newPlayer] add newPlayer
 
+execute as @a[tag=newPlayer,tag=!oldPlayer] run function commands:admin/initialize_class_info
+
 execute as @a[tag=newPlayer,tag=!oldPlayer] run function commands:books/manual
 
 kill @e[type=item,nbt={Item:{id:"minecraft:written_book"}},predicate=commands:in_spawn_room]
@@ -101,8 +103,6 @@ scoreboard players reset @a[predicate=commands:on_parkour_floor] parkourTime
 team join parkour @a[predicate=commands:in_parkour_area]
 
 team leave @a[predicate=!commands:in_parkour_area,team=parkour]
- 
-function commands:admin/initialize_class_info
 
 gamemode adventure @a[gamemode=survival]
 

@@ -2,6 +2,10 @@
 
 execute if score #gamemode settings matches 0 run function commands:admin/add_to_class_info
 
+execute if score #gamemode settings matches 1 run function commands:admin/add_to_class_info_tdm
+
+execute as @a run function commands:other/reset_scores
+
 #Other end of game stuff
 
 execute as @p[tag=End] at @s run title @a subtitle ["",{"text":" "}]
@@ -80,8 +84,6 @@ execute as @a[tag=End] at @s run kill @e[type=horse]
 
 execute as @a[tag=End] at @s run kill @e[type=fireball]
 
-execute as @a[tag=End] at @s run scoreboard players reset @a
-
 execute as @a[tag=End] at @s run bossbar set minecraft:blueking visible false
 
 execute as @a[tag=End] at @s run bossbar set minecraft:redking visible false
@@ -95,6 +97,8 @@ execute as @a[tag=End] run scoreboard players set @a Kit 0
 execute as @a[tag=End] at @s run scoreboard players set @a Ultimate 0
 
 scoreboard players set @a ultCheck 0
+
+scoreboard players reset #corrupt Timer
 
 tag @a remove protected
 
@@ -133,6 +137,8 @@ scoreboard players set #red corruptBank 0
 scoreboard players set #blue corruptBank 0
 
 scoreboard players set #gameDuration gameDuration 0
+
+scoreboard players set #numPlayersOnTeam multiItems 0
 
 advancement grant @a[tag=End,advancements={commands:advancements/consecutive_wins={win4=true}}] only commands:advancements/consecutive_wins win5
 

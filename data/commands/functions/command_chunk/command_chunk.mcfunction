@@ -1,14 +1,14 @@
 #Corrupt Credits
 
-scoreboard players add #corrupt CC 1
+scoreboard players add #corrupt Timer 1
 
-execute if score #corrupt CC matches 1200.. if score #corruptcredit settings matches 0 run function commands:other/spawn_cc
+execute if score #corrupt Timer matches 1200.. if score #corruptcredit settings matches 0 run function commands:other/spawn_cc
 
-execute if score #gamemode settings matches 0 run scoreboard players set @e[type=item,x=9,y=53,z=-132,distance=..3,nbt={Item:{Count:5b,tag:{corruptcredit:1b}}}] CCDelete 1
+execute if score #gamemode settings matches 0 run tag @e[type=item,x=9,y=53,z=-132,distance=..3,nbt={Item:{Count:5b,tag:{corruptcredit:1b}}}] add CCDelete
 
-execute if score #gamemode settings matches 1 run scoreboard players set @e[type=item,x=1051,y=53,z=-76,distance=..3,nbt={Item:{Count:5b,tag:{corruptcredit:1b}}}] CCDelete 1
+execute if score #gamemode settings matches 1 run tag @e[type=item,x=1051,y=53,z=-76,distance=..3,nbt={Item:{Count:5b,tag:{corruptcredit:1b}}}] add CCDelete
 
-execute as @e[type=item,scores={CCDelete=1..}] run function commands:other/remove_extra_ccs
+execute as @e[type=item,tag=CCDelete] run function commands:other/remove_extra_ccs
 
 execute as @e[type=item,nbt={Item:{tag:{corruptcredit:1b}}}] run data merge entity @s {Health:1000}
 
@@ -72,7 +72,7 @@ scoreboard players add @e[type=item,scores={ItemKill=1}] Timer 1
 
 #Cavalry Charge (Warrior Ultimate)
 
-execute as @a[scores={Ultimate=2},predicate=!commands:inventory/cavalry_charge] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add  Horse 1
+execute as @a[scores={Ultimate=2},predicate=!commands:inventory/cavalry_charge] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s Horse 1
 
 give @p[team=Red,scores={Ultimate=2,Horse=3000..}] bat_spawn_egg{CustomModelData:64,CanPlaceOn:["#commands:can_place_on"],HideFlags:16,display:{Name:'{"text":"Cavalry Charge","color":"#697052","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Get on a horse and stomp on your enemies!"}']},EntityTag:{id:bat,Tags:["redcavalry","cavalry"],Invulnerable:1,Silent:1},cavalry:1b,ultimateitem:1b,Enchantments:[{}]} 1
 
@@ -174,9 +174,9 @@ tp @e[type=bat,name=RedFlyingSkeleton] ~ -100 ~
 
 tp @e[type=bat,name=BlueFlyingSkeleton] ~ -100 ~
 
-scoreboard players add @e[type=bat,tag=FS] FSBat 1
+scoreboard players add @e[type=bat,tag=FS] Timer 1
 
-kill @e[scores={FSBat=200..}]
+kill @e[type=bat,scores={Timer=200..}]
 
 #Sniper Bow No Gravity
 
@@ -264,7 +264,7 @@ execute as @e[type=horse,tag=RedHorse] at @s run effect give @a[team=Blue,distan
 
 execute as @a[scores={Ultimate=3},predicate=!commands:inventory/immortality] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s immorTimer 1
 
-give @a[scores={immorTimer=3200..,Ultimate=3}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Immortality","color":"#CEFF0A","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Enter a state of immortality for 7 seconds."}','{"text":"All teammates in a 10 block radius below 10 Health will become immune to damage."}','{"text":"Teammates can still die if they take fatal damage while above 10 Health."}']},CustomModelData:138,immortality:1b} 1
+give @a[scores={immorTimer=3200..,Ultimate=3}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Immortality","color":"#CEFF0A","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Enter a state of immortality for 7 seconds."}','{"text":"All teammates in a 10 block radius below 10 Health will become immune to damage."}','{"text":"Teammates can still die if they take fatal damage while above 10 Health."}']},CustomModelData:138,immortality:1b,ultimateitem:1b} 1
 
 scoreboard players reset @a[scores={immorTimer=3200..}] immorTimer
 
@@ -280,7 +280,7 @@ execute as @a[scores={immorDur=140..}] run function commands:ultimates/immortali
 
 execute as @a[scores={Ultimate=4},predicate=!commands:inventory/lifeforce] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s LifeForce 1
 
-give @a[scores={LifeForce=3600..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Life Force","color":"#C90606","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Gives everyone on your team a big boost in health for a short time"}']},CustomModelData:70,lifeforce:1b,Enchantments:[{}]} 1
+give @a[scores={LifeForce=3600..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Life Force","color":"#C90606","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Gives everyone on your team a big boost in health for a short time"}']},CustomModelData:70,lifeforce:1b,ultimateitem:1b,Enchantments:[{}]} 1
 
 scoreboard players set @a[scores={LifeForce=3600..}] LifeForce 0
 
@@ -612,13 +612,13 @@ execute as @a[team=Red] store result score @s hFruitNum run data get entity @s I
 
 execute as @a[team=Red] run scoreboard players operation #redHFruit hFruitNum += @s hFruitNum
 
-execute if score #redHFruit hFruitNum matches 6.. run clear @a[team=Red,scores={Kit=8}] golden_apple{redhealingfruit:1b} 1
+execute if score #redHFruit hFruitNum > #numPlayersOnTeam multiItems run clear @a[team=Red,scores={Kit=8}] golden_apple{redhealingfruit:1b} 1
 
 execute as @a[team=Blue] store result score @s hFruitNum run data get entity @s Inventory[{tag:{bluehealingfruit:1b}}].Count
 
 execute as @a[team=Blue] run scoreboard players operation #blueHFruit hFruitNum += @s hFruitNum
 
-execute if score #blueHFruit hFruitNum matches 6.. run clear @a[team=Blue,scores={Kit=8}] golden_apple{bluehealingfruit:1b} 1
+execute if score #blueHFruit hFruitNum > #numPlayersOnTeam multiItems run clear @a[team=Blue,scores={Kit=8}] golden_apple{bluehealingfruit:1b} 1
 
 scoreboard players reset #redHFruit hFruitNum
 
@@ -936,7 +936,7 @@ tag @a[tag=dash] remove dash
 
 #Smoke Bomb
 
-execute as @e[type=bat,tag=smoke] at @s run summon area_effect_cloud ~ ~ ~ {Particle:"smoke",Radius:5f,RadiusPerTick:-0.01f,Duration:100,Tags:["smoke"]}
+execute as @e[type=bat,tag=smoke] at @s run summon area_effect_cloud ~ ~ ~ {Particle:"smoke",Radius:4f,RadiusPerTick:-0.01f,Duration:100,Tags:["smoke"]}
 
 tp @e[type=bat,tag=smoke] ~ -100 ~
 
@@ -948,7 +948,7 @@ tag @e[type=area_effect_cloud,tag=smoke] add stop
 
 execute at @e[type=area_effect_cloud,tag=smoke] run effect give @a[team=Blue,distance=..5] blindness 2 0 true
 
-execute as @e[type=bat,tag=smokeblue] at @s run summon area_effect_cloud ~ ~ ~ {Particle:"smoke",Radius:5f,RadiusPerTick:-0.01f,Duration:100,Tags:["smokeblue"]}
+execute as @e[type=bat,tag=smokeblue] at @s run summon area_effect_cloud ~ ~ ~ {Particle:"smoke",Radius:4f,RadiusPerTick:-0.01f,Duration:100,Tags:["smokeblue"]}
 
 tp @e[type=bat,tag=smokeblue] ~ -100 ~
 
@@ -964,7 +964,7 @@ execute at @e[type=area_effect_cloud,tag=smokeblue] run effect give @a[team=Red,
 
 effect give @a[scores={Ninjakill=1..,Kit=2}] strength 8 0 true
 
-scoreboard players set @a[scores={Ninjakill=1..,Kit=2}] dashcharge 360
+scoreboard players add @a[scores={Ninjakill=1..,Kit=2}] dashcharge 120
 
 #Display amount of dash charges
 
@@ -1050,13 +1050,13 @@ execute as @e[tag=stop,type=arrow] store success entity @s Air short 1 if data e
 
 #Gunblade Falloff
 
-scoreboard players add @e[type=arrow,tag=bullet] gunFalloff 1
+scoreboard players add @e[type=arrow,tag=bullet] Timer 1
 
-execute as @e[type=arrow,scores={gunFalloff=8}] run data merge entity @s {damage:2.8d}
+execute as @e[type=arrow,scores={Timer=8}] run data merge entity @s {damage:2.8d}
 
-execute as @e[type=arrow,scores={gunFalloff=16}] run data merge entity @s {damage:2.3d}
+execute as @e[type=arrow,scores={Timer=16}] run data merge entity @s {damage:2.3d}
 
-execute as @e[type=arrow,scores={gunFalloff=24}] run data merge entity @s {damage:2.0d}
+execute as @e[type=arrow,scores={Timer=24}] run data merge entity @s {damage:2.0d}
 
 #Display which bullets are ready
 
@@ -1120,7 +1120,7 @@ execute if entity @a[scores={usedCOAS=1..},predicate=commands:holding/virus_dete
 
 execute if entity @a[scores={usedCOAS=1..},predicate=commands:holding/virus_detector,team=Red] as @r[team=Blue,predicate=commands:in_blue_castle] run function commands:other/virus_detector
 
-clear @a[scores={usedCOAS=1..},predicate=commands:holding/virus_detector]
+clear @a[scores={usedCOAS=1..},predicate=commands:holding/virus_detector] carrot_on_a_stick{virusdetector:1b}
 
 #Memory Wipe (Robot Ultimate)
 
@@ -1226,7 +1226,7 @@ tag @a[tag=slamming,nbt={OnGround:1b}] remove slamming
 
 execute as @a[scores={Kit=2,Ultimate=11},predicate=!commands:inventory/invisibility_cloak] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s InvisTimer 1
 
-give @a[scores={InvisTimer=3000..}] carrot_on_a_stick{display:{Name:'{"text":"Invisibility Cloak","color":"gray","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Shroud yourself in an invisibility cloak, making you fully invisible."}','{"text":"While in this state, you have increased speed and damage, but much less defense."}','{"text":"Lasts 10 seconds."}']},CustomModelData:137,inviscloak:1b,Enchantments:[{}]} 1
+give @a[scores={InvisTimer=3000..}] carrot_on_a_stick{display:{Name:'{"text":"Invisibility Cloak","color":"gray","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Shroud yourself in an invisibility cloak, making you fully invisible."}','{"text":"While in this state, you have increased speed and damage, but much less defense."}','{"text":"Lasts 10 seconds."}']},CustomModelData:137,inviscloak:1b,ultimateitem:1b,Enchantments:[{}]} 1
 
 scoreboard players set @a[scores={InvisTimer=3000..}] InvisTimer 0
 
@@ -1362,9 +1362,9 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/assault_spell] ru
 
 #Clear old arrows
 
-scoreboard players add @e[type=arrow] arrowkill 1
+scoreboard players add @e[type=arrow] Timer 1
 
-kill @e[type=arrow,scores={arrowkill=80..}]
+kill @e[type=arrow,scores={Timer=80..}]
 
 #more money from defending
 
@@ -1488,7 +1488,7 @@ tp @e[type=bat,tag=concoction] ~ -100 ~
 
 execute as @a[scores={Kit=5,Ultimate=15},predicate=!commands:inventory/bow_of_justice] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s JusticeTimer 1
  
-give @a[scores={JusticeTimer=3000..}] bow{CustomModelData:73,display:{Name:'{"text":"Bow of Justice","italic":false}',Lore:['{"text":"One shots nearly anything."}','{"text":"Can only be used once and can be deflected by shields."}','{"text":"Also cannot be used near a king."}','{"text":"If you kill a player with this, you will get the bow of justice back."}']},HideFlags:33,Damage:384,ultimateitem:1b,bowofjustice:1b,Enchantments:[{id:"minecraft:power",lvl:100s},{id:"minecraft:infinity",lvl:1s}]} 1
+give @a[scores={JusticeTimer=3000..}] bow{CustomModelData:73,display:{Name:'{"text":"Bow of Justice","italic":false}',Lore:['{"text":"One shots nearly anything."}','{"text":"Can only be used once and can be deflected by shields."}','{"text":"Also cannot be used near a king."}','{"text":"If you kill a player with this, you will get the bow of justice back."}','{"text":"If successful, it must be used again within 15s or else it will disappear."}']},HideFlags:33,Damage:384,ultimateitem:1b,bowofjustice:1b,Enchantments:[{id:"minecraft:power",lvl:100s},{id:"minecraft:infinity",lvl:1s}]} 1
 
 scoreboard players set @a[scores={JusticeTimer=3000..}] JusticeTimer 0
 
@@ -1496,7 +1496,7 @@ execute as @a[advancements={commands:bow_of_justice=true}] run function commands
 
 scoreboard players add @a[tag=justiceKill] jKillTimer 1
 
-execute as @a[scores={jKillTimer=400..}] run function commands:ultimates/bow_of_justice_remove
+execute as @a[scores={jKillTimer=300..}] run function commands:ultimates/bow_of_justice_remove
 
 tag @a[scores={died=1..}] remove justiceKill
 
@@ -1524,7 +1524,7 @@ execute as @e[type=zombie,limit=1,scores={OCTimer=600..}] run function commands:
 
 execute as @a[scores={Kit=7,Ultimate=17},predicate=!commands:inventory/flying_dutchman] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s fDutchmanTimer 1
 
-give @a[scores={fDutchmanTimer=3000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Flying Dutchman","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Summons an invincible boat 10 blocks in the air, then teleports up to 2 teammates to it, including yourself."}','{"text":"The boat will float in the air and is controllable."}','{"text":"The boat will also drop high power fireballs every 0.75s."}','{"text":"The boat will disappear after 10 seconds."}']},CustomModelData:139,flyingdutchman:1b} 1
+give @a[scores={fDutchmanTimer=3000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Flying Dutchman","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Summons an invincible boat 10 blocks in the air, then teleports up to 2 teammates to it, including yourself."}','{"text":"The boat will float in the air and is controllable."}','{"text":"The boat will also drop high power fireballs every 0.75s."}','{"text":"The boat will disappear after 14 seconds."}']},CustomModelData:139,ultimateitem:1b,flyingdutchman:1b} 1
 
 scoreboard players reset @a[scores={fDutchmanTimer=3000..}] fDutchmanTimer
 
@@ -1540,9 +1540,9 @@ execute as @e[type=boat,tag=flyingdutchman,scores={fDutchmanTimer=16..}] at @s r
 
 scoreboard players reset @e[type=boat,tag=flyingdutchman,scores={fDutchmanTimer=16..}] fDutchmanTimer
 
-execute as @e[type=boat,scores={fDutchmanDur=140}] at @s run tellraw @a[distance=..2,predicate=commands:vehicle/flying_dutchman] {"text":"Your boat is falling apart!","color":"green"}
+execute as @e[type=boat,scores={fDutchmanDur=220}] at @s run tellraw @a[distance=..2,predicate=commands:vehicle/flying_dutchman] {"text":"Your boat is falling apart!","color":"green"}
 
-execute as @e[type=boat,scores={fDutchmanDur=200..}] run function commands:ultimates/flying_dutchman_end
+execute as @e[type=boat,scores={fDutchmanDur=280..}] run function commands:ultimates/flying_dutchman_end
 
 #Artificial Intelligence (Robot Alt. Ultimate)
 
@@ -1670,7 +1670,7 @@ advancement grant @a[scores={Health=20..}] only commands:full_hp
 
 advancement revoke @a[scores={Health=..19}] only commands:full_hp
 
-advancement grant @a[advancements={commands:warrior_challenge_damage=true,commands:warrior_challenge_kill=true}] only commands:character_challenges/pure_destruction 
+advancement grant @a[advancements={commands:warrior_challenge_damage=true,commands:warrior_challenge_kill=true},scores={Kit=1}] only commands:character_challenges/pure_destruction 
 
 advancement grant @a[scores={Kit=9,scourgeKills=3..}] only commands:character_challenges/wrath_of_the_gods
 
@@ -1682,7 +1682,7 @@ execute if entity @e[type=area_effect_cloud,tag=bluemushroom,scores={mushroomRad
 
 #Remove extra things
 
-execute as @a[scores={Kit=9}] store result score @s multiItems run clear @s bat_spawn_egg{lightningspell:1b} 0
+execute as @a[scores={Kit=9}] store result score @s multiItems run clear @s snowball{lightningspell:1b} 0
 
 execute as @a[scores={Kit=3}] store result score @s multiItems run clear @s skeleton_spawn_egg{turret:1b} 0
 
@@ -1822,25 +1822,21 @@ scoreboard players remove @a[scores={Kit=9,multiItems=..4},tag=!upgraded] poseid
 
 scoreboard players remove @a[scores={Kit=9,multiItems=..7},tag=upgraded] poseidonPassive 1
 
-give @a[team=Red,scores={poseidonPassive=..0}] minecraft:bat_spawn_egg{CustomModelData:48,CanPlaceOn:["#commands:can_place_on"],HideFlags:16,display:{Name:'{"text":"Lightning Spell","color":"yellow","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Strikes lightning onto nearby enemies."}','{"text":"Has a radius of 9 blocks."}']},lightningspellred:1b,lightningspell:1b,EntityTag:{Invulnerable:1b,Tags:["lightningspellred"]}} 1
+give @a[team=Red,scores={poseidonPassive=..0}] minecraft:snowball{display:{Name:'{"text":"Lightning Spell","color":"yellow","italic":false}',Lore:['{"text":"Throwable","color":"yellow","italic":false}','{"text":" "}','{"text":"Strikes lightning onto nearby enemies."}','{"text":"Has a radius of 4 blocks."}']},CustomModelData:48,lightningspellred:1b,lightningspell:1b} 1
 
-give @a[team=Blue,scores={poseidonPassive=..0}] minecraft:bat_spawn_egg{CustomModelData:48,CanPlaceOn:["#commands:can_place_on"],HideFlags:16,display:{Name:'{"text":"Lightning Spell","color":"yellow","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Strikes lightning onto nearby enemies."}','{"text":"Has a radius of 9 blocks."}']},lightningspellblue:1b,lightningspell:1b,EntityTag:{Invulnerable:1b,Tags:["lightningspellblue"]}} 1
+give @a[team=Blue,scores={poseidonPassive=..0}] minecraft:snowball{display:{Name:'{"text":"Lightning Spell","color":"yellow","italic":false}',Lore:['{"text":"Throwable","color":"yellow","italic":false}','{"text":" "}','{"text":"Strikes lightning onto nearby enemies."}','{"text":"Has a radius of 4 blocks."}']},CustomModelData:48,lightningspellblue:1b,lightningspell:1b} 1
 
 scoreboard players set @a[tag=!upgraded,scores={poseidonPassive=..0}] poseidonPassive 200
 
 scoreboard players set @a[tag=upgraded,scores={poseidonPassive=..0}] poseidonPassive 180
 
-execute as @e[type=bat,tag=lightningspellred] at @s at @a[team=Blue,distance=..9,predicate=!commands:in_tdm_gates] run summon lightning_bolt
+execute as @e[type=snowball,tag=!lightningspellred,nbt={Item:{tag:{lightningspellred:1b}}}] at @s run function commands:ball/lightning_spell_found_red
 
-execute as @e[type=bat,tag=lightningspellblue] at @s at @a[team=Red,distance=..9,predicate=!commands:in_tdm_gates] run summon lightning_bolt
+execute as @e[type=area_effect_cloud,tag=lightningspellred] unless predicate commands:is_riding_lightning_spell_red at @s run function commands:ball/lightning_spell_landed_red
 
-execute as @e[type=bat,tag=lightningspellred] at @s at @a[team=Blue,distance=..9,predicate=!commands:in_tdm_gates] run summon area_effect_cloud ~ ~ ~ {Age:-2147483646,Tags:["l_message"]}
+execute as @e[type=snowball,tag=!lightningspellblue,nbt={Item:{tag:{lightningspellblue:1b}}}] at @s run function commands:ball/lightning_spell_found_blue
 
-execute as @e[type=bat,tag=lightningspellblue] at @s at @a[team=Red,distance=..9,predicate=!commands:in_tdm_gates] run summon area_effect_cloud ~ ~ ~ {Age:-2147483646,Tags:["l_message"]}
-
-tp @e[type=bat,tag=lightningspellred] ~ -100 ~
-
-tp @e[type=bat,tag=lightningspellblue] ~ -100 ~
+execute as @e[type=area_effect_cloud,tag=lightningspellblue] unless predicate commands:is_riding_lightning_spell_blue at @s run function commands:ball/lightning_spell_landed_blue
 
 execute as @a[scores={Kit=9}] run scoreboard players operation @s lightningStore = @s poseidonPassive
 
@@ -2151,6 +2147,8 @@ execute as @e[type=area_effect_cloud,tag=toxinitemred] unless predicate commands
 execute as @e[type=snowball,tag=!toxinballblue,nbt={Item:{tag:{toxinballblue:1b}}}] at @s run function commands:ball/toxin_ball_found_blue
 
 execute as @e[type=area_effect_cloud,tag=toxinitemblue] unless predicate commands:is_riding_toxin_ball_blue at @s run function commands:ball/toxin_ball_landed_blue
+
+#Generic Snowball Attack things
 
 execute as @e[type=snowball,tag=snowball] run function commands:ball/visfix
 
@@ -2664,7 +2662,7 @@ kill @e[type=item,tag=coinBullet,nbt={OnGround:1b}]
 
 execute as @a[scores={Ultimate=25},predicate=!commands:inventory/busted] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s bustedTimer 1
 
-give @a[scores={bustedTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Busted!","color":"gold","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Severely damages all enemies above 21 HP."}','{"text":"Affected players will also lose all of their healing buffs."}']},Enchantments:[{}],CustomModelData:149,busted:1b} 1
+give @a[scores={bustedTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Busted!","color":"gold","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Severely damages all enemies above 21 HP."}','{"text":"Affected players will also lose all of their healing buffs."}']},Enchantments:[{}],CustomModelData:149,ultimateitem:1b,busted:1b} 1
 
 scoreboard players reset @a[scores={bustedTimer=3200..}] bustedTimer
 
@@ -2674,7 +2672,7 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/busted] run funct
 
 execute as @a[scores={Ultimate=26},predicate=!commands:inventory/bad_credit] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s bCreditTimer 1
 
-give @a[scores={bCreditTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Bad Credit","color":"gold","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Disrupts the enemy team\'s economy."}','{"text":"All enemies no longer receive passive money."}','{"text":"Depositing money will only yield 70 Siege Bucks (100 for Pirate)."}','{"text":"Lasts until death."}']},Enchantments:[{}],CustomModelData:150,badcredit:1b} 1
+give @a[scores={bCreditTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Bad Credit","color":"gold","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Disrupts the enemy team\'s economy."}','{"text":"All enemies no longer receive passive money."}','{"text":"Depositing money will only yield 70 Siege Bucks (100 for Pirate)."}','{"text":"Lasts until death."}']},Enchantments:[{}],CustomModelData:150,ultimateitem:1b,badcredit:1b} 1
 
 scoreboard players reset @a[scores={bCreditTimer=3200..}] bCreditTimer
 
@@ -2756,7 +2754,7 @@ scoreboard players reset @a[scores={died=1..}] killStreak
 
 tag @a[scores={died=1..}] add notAlive
 
-execute as @a[scores={died=1..}] at @s run tag @e[type=item,distance=..2,scores={ItemKill=1..}] add delete
+execute as @a[scores={died=1..}] at @s run tag @e[type=item,distance=..5,scores={ItemKill=1..}] add delete
 
 kill @e[type=item,scores={ItemKill=1,Timer=1..},tag=delete]
 

@@ -61,6 +61,8 @@ scoreboard players set @a[scores={Kit=4}] healstreak 0
 
 scoreboard players set @a[scores={Kit=3}] absShieldCount 0
 
+execute as @a[team=Red] run scoreboard players add #numPlayersOnTeam multiItems 1
+
 execute if score #gamemode settings matches 1 run scoreboard players set #bluekills tdmKills 0
 
 execute if score #gamemode settings matches 1 run scoreboard players set #redkills tdmKills 0

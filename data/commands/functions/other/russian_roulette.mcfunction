@@ -12,7 +12,7 @@ execute at @s[team=Red,tag=rouletteFire] anchored eyes run summon minecraft:arro
 
 execute at @s[team=Red,tag=rouletteFire] anchored eyes run summon minecraft:arrow ^-0.07 ^ ^1 {damage:8.0d,PierceLevel:3b,Tags:["rouletteBullet","redProj"],SoundEvent:"entity.zombie.break_wooden_door"}
 
-execute at @s[team=Red,tag=rouletteFire] anchored eyes run summon minecraft:arrow ^ ^-0.07 ^1 {damage:88.0d,PierceLevel:3b,Tags:["rouletteBullet","redProj"],SoundEvent:"entity.zombie.break_wooden_door"}
+execute at @s[team=Red,tag=rouletteFire] anchored eyes run summon minecraft:arrow ^ ^-0.07 ^1 {damage:8.0d,PierceLevel:3b,Tags:["rouletteBullet","redProj"],SoundEvent:"entity.zombie.break_wooden_door"}
 
 execute at @s[team=Blue,tag=rouletteFire] anchored eyes run summon minecraft:arrow ^ ^ ^1 {damage:8.0d,PierceLevel:3b,Tags:["rouletteBullet","blueProj"],SoundEvent:"entity.zombie.break_wooden_door"}
 

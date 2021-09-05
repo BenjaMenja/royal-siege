@@ -1,22 +1,12 @@
 scoreboard players set @s[tag=!chipbet,scores={textClick=122,Money=100..}] chipBet 1
 
-scoreboard players set @s[scores={textClick=123,Money=200..}] chipBet 2
+scoreboard players set @s[tag=!chipbet,scores={textClick=123,Money=200..}] chipBet 2
 
-scoreboard players set @s[scores={textClick=124,Money=300..}] chipBet 3
+scoreboard players set @s[tag=!chipbet,scores={textClick=124,Money=300..}] chipBet 3
 
-scoreboard players set @s[scores={textClick=125,Money=500..}] chipBet 4
+scoreboard players set @s[tag=!chipbet,scores={textClick=125,Money=500..}] chipBet 4
 
-scoreboard players set @s[scores={textClick=126,Money=1000..}] chipBet 5
-
-scoreboard players remove @s[scores={textClick=122,Money=100..}] Money 100
-
-scoreboard players remove @s[scores={textClick=123,Money=200..}] Money 200
-
-scoreboard players remove @s[scores={textClick=124,Money=300..}] Money 300
-
-scoreboard players remove @s[scores={textClick=125,Money=500..}] Money 500
-
-scoreboard players remove @s[scores={textClick=126,Money=1000..}] Money 1000
+scoreboard players set @s[tag=!chipbet,scores={textClick=126,Money=1000..}] chipBet 5
 
 tag @s[scores={textClick=122,Money=100..}] add chipbet
 
@@ -27,6 +17,16 @@ tag @s[scores={textClick=124,Money=300..}] add chipbet
 tag @s[scores={textClick=125,Money=500..}] add chipbet
 
 tag @s[scores={textClick=126,Money=1000..}] add chipbet
+
+scoreboard players remove @s[scores={textClick=122,Money=100..}] Money 100
+
+scoreboard players remove @s[scores={textClick=123,Money=200..}] Money 200
+
+scoreboard players remove @s[scores={textClick=124,Money=300..}] Money 300
+
+scoreboard players remove @s[scores={textClick=125,Money=500..}] Money 500
+
+scoreboard players remove @s[scores={textClick=126,Money=1000..}] Money 1000
 
 execute if entity @s[team=Red] run tag @r[team=Blue,tag=!notAlive] add hasBounty
 

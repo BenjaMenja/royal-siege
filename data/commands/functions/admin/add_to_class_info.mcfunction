@@ -114,6 +114,10 @@ execute if score #dragontemp classInfo matches 1 unless entity @a[tag=End,scores
 
 execute if score #gamblertemp classInfo matches 1 unless entity @a[tag=End,scores={Kit=13}] run scoreboard players add #gamblerlosses classInfo 1
 
+#Player Scores
+
+execute if score #gamemode settings matches 0 as @a run function commands:admin/add_player_class_info
+
 #Reset temp scores
 
 scoreboard players reset #warriortemp classInfo
