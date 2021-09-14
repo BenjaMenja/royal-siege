@@ -9,5 +9,3 @@ effect give @s jump_boost 5 128 true
 effect give @s weakness 5 80 true
 
 execute at @s run summon lightning_bolt
-
-tag @s remove virus

@@ -244,4 +244,34 @@ execute if score @s[tag=!chipbet] textClick matches 122..126 run function comman
 
 execute if score @s textClick matches 127 run function commands:spawn/ready_up
 
+execute if score @s textClick matches 128 run function commands:books/book_menu
+
+execute if score @s textClick matches 129 run tag @s remove oldPlayer
+
+execute if score @s textClick matches 130 run function commands:books/warrior
+
+execute if score @s textClick matches 131 run function commands:books/ninja
+
+execute if score @s textClick matches 132 run function commands:books/guardian
+
+execute if score @s textClick matches 133 run function commands:books/angel
+
+execute if score @s textClick matches 134 run function commands:books/archer
+
+execute if score @s textClick matches 135 run function commands:books/wizard
+
+execute if score @s textClick matches 136 run function commands:books/pirate
+
+execute if score @s textClick matches 137 run function commands:books/ent
+
+execute if score @s textClick matches 138 run function commands:books/poseidon
+
+execute if score @s textClick matches 139 run function commands:books/robot
+
+execute if score @s textClick matches 140 run function commands:books/chef
+
+execute if score @s textClick matches 141 run function commands:books/dragon
+
+execute if score @s textClick matches 142 run function commands:books/gambler
+
 scoreboard players reset @a[scores={textClick=1..}] textClick

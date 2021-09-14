@@ -68,6 +68,10 @@ tag @e[type=item] add processed
 
 kill @e[type=item,nbt={Item:{tag:{gunblade:1b}}}]
 
+kill @e[type=item,nbt={Item:{id:"minecraft:saddle"}}]
+
+kill @e[type=item,nbt={Item:{id:"minecraft:diamond_horse_armor"}}]
+
 scoreboard players add @e[type=item,scores={ItemKill=1}] Timer 1
 
 #Cavalry Charge (Warrior Ultimate)
@@ -358,7 +362,7 @@ scoreboard players set @a[scores={Start=2}] players 0
 
 scoreboard players add @e[type=zombie,tag=Minion] MinionDeath 1
 
-scoreboard players add @a[scores={Kit=6}] WizardMinion 1
+scoreboard players add @a[scores={Kit=6},tag=!notAlive] WizardMinion 1
 
 execute as @a[team=Red,tag=!upgraded,predicate=commands:in_any_battlefield,scores={WizardMinion=400..}] at @s run summon zombie ~ ~1 ~ {CustomName:'{"text":"Wizard Minion"}',CustomNameVisible:1,IsVillager:0,IsBaby:1,ArmorItems:[{},{},{Count:1b,id:leather_chestplate,tag:{display:{color:16711680}}},{}],HandItems:[{Count:1b,id:wooden_sword,tag:{Enchantments:[{id:sharpness,lvl:2}]}},{}],ArmorDropChances:[0.085F,0.085F,0.0F,0.085F],HandDropChances:[0.0F,0.085F],Attributes:[{Name:generic.max_health,Base:12},{Name:generic.movement_speed,Base:0.3},{Name:zombie.spawn_reinforcements,Base:0}],Health:15.0f,Team:"Red",ActiveEffects:[{Id:12b,Amplifier:0b,Duration:10000,ShowParticles:0b}],Tags:["WM","Minion"]}
 
@@ -1118,9 +1122,9 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/disable] run func
 
 execute if entity @a[scores={usedCOAS=1..},predicate=commands:holding/virus_detector,team=Blue] as @r[team=Red,predicate=commands:in_blue_castle] run function commands:other/virus_detector
 
-execute if entity @a[scores={usedCOAS=1..},predicate=commands:holding/virus_detector,team=Red] as @r[team=Blue,predicate=commands:in_blue_castle] run function commands:other/virus_detector
+execute if entity @a[scores={usedCOAS=1..},predicate=commands:holding/virus_detector,team=Red] as @r[team=Blue,predicate=commands:in_red_castle] run function commands:other/virus_detector
 
-clear @a[scores={usedCOAS=1..},predicate=commands:holding/virus_detector] carrot_on_a_stick{virusdetector:1b}
+clear @a[scores={usedCOAS=1..},predicate=commands:holding/virus_detector] carrot_on_a_stick{virusdetector:1b} 1
 
 #Memory Wipe (Robot Ultimate)
 
@@ -1152,7 +1156,7 @@ execute as @a[team=Blue,tag=wipeKill,scores={mWipeKill=1..}] at @s run function 
 
 tag @a[tag=wipeKill,scores={mWipeKill=1..}] remove wipeKill
 
-scoreboard players reset @a mWipeKill
+scoreboard players reset @a[scores={mWipeKill=1..}] mWipeKill
 
 tag @a[scores={died=1..}] remove wipeKill
 
@@ -1560,11 +1564,11 @@ tp @e[type=bat,tag=AI] ~ -100 ~
 
 scoreboard players add @e[type=zombie,tag=AI] timeLimit 1
 
-tp @e[type=zombie,tag=AI,scores={timeLimit=1200..}] ~ -100 ~
+tp @e[type=zombie,tag=AI,scores={timeLimit=900..}] ~ -100 ~
 
-execute if entity @e[type=zombie,team=Red,tag=AI,scores={timeLimit=1200}] run tellraw @a {"text":"The Artificial Intelligence faded away...","color":"red"}
+execute if entity @e[type=zombie,team=Red,tag=AI,scores={timeLimit=900}] run tellraw @a {"text":"The Artificial Intelligence faded away...","color":"red"}
 
-execute if entity @e[type=zombie,team=Blue,tag=AI,scores={timeLimit=1200}] run tellraw @a {"text":"The Artificial Intelligence faded away...","color":"blue"}
+execute if entity @e[type=zombie,team=Blue,tag=AI,scores={timeLimit=900}] run tellraw @a {"text":"The Artificial Intelligence faded away...","color":"blue"}
 
 #Regenerative Staff
 
@@ -1894,11 +1898,11 @@ execute if entity @e[type=elder_guardian,tag=terrorBlue] as @a[team=Red,predicat
 
 scoreboard players add @e[type=elder_guardian,tag=terror] timeLimit 1
 
-tp @e[type=elder_guardian,tag=terror,scores={timeLimit=1200..}] ~ -100 ~
+tp @e[type=elder_guardian,tag=terror,scores={timeLimit=900..}] ~ -100 ~
 
-execute if entity @e[type=elder_guardian,team=Red,tag=terror,scores={timeLimit=1200}] run tellraw @a {"text":"The Terror of the Seas faded away...","color":"red"}
+execute if entity @e[type=elder_guardian,team=Red,tag=terror,scores={timeLimit=900}] run tellraw @a {"text":"The Terror of the Seas faded away...","color":"red"}
 
-execute if entity @e[type=elder_guardian,team=Blue,tag=terror,scores={timeLimit=1200}] run tellraw @a {"text":"The Terror of the Seas faded away...","color":"blue"}
+execute if entity @e[type=elder_guardian,team=Blue,tag=terror,scores={timeLimit=900}] run tellraw @a {"text":"The Terror of the Seas faded away...","color":"blue"}
 
 #Ent Passive
 
@@ -1906,7 +1910,7 @@ execute as @a[team=Red,scores={Kit=8,entPassive=1..}] at @s run effect give @a[t
 
 execute as @a[team=Blue,scores={Kit=8,entPassive=1..}] at @s run effect give @a[team=Blue,distance=..10] regeneration 2 1 true
 
-scoreboard players reset @a entPassive
+scoreboard players reset @a[scores={Kit=8,entPassive=1..}] entPassive
 
 #Ultimate Charger
 
@@ -2218,7 +2222,7 @@ execute at @a[tag=dRush] run playsound entity.ender_dragon.flap master @a[distan
 
 execute as @a[tag=dRush] at @s anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/dragon_rush_start_ray
 
-tag @a remove dRush
+tag @a[tag=dRush] remove dRush
 
 scoreboard players reset @a[scores={died=1..}] dragonRushTimer
 
@@ -2234,7 +2238,7 @@ execute as @a[tag=dRage] at @s run function commands:other/dragon_rage
 
 scoreboard players set @a[scores={died=1..}] dragonRageTimer 0
 
-tag @a remove dRage
+tag @a[tag=dRage] remove dRage
 
 execute as @e[tag=stop,type=dragon_fireball] store success entity @s Air short 1 if data entity @s {Air:0s}
 
@@ -2284,9 +2288,9 @@ scoreboard players reset @a[scores={corruptTimer=200..}] corruptTimer
 
 #Necromantic Axe
 
-execute as @a[team=Red,advancements={commands:necromantic_axe_death=true}] at @s run summon minecraft:zombie ~ ~ ~ {Silent:1b,Team:"Blue",Health:20f,IsBaby:1b,Tags:["hatchlingblue","hatchling"],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:0}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:0}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:0}}},{id:"minecraft:dragon_head",Count:1b}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:20},{Name:generic.follow_range,Base:99},{Name:generic.movement_speed,Base:0.25},{Name:generic.attack_damage,Base:8}]}
+execute as @a[team=Red,advancements={commands:necromantic_axe_death=true}] at @s run summon minecraft:zombie ~ ~ ~ {Silent:1b,Team:"Blue",Health:20f,IsBaby:1b,Tags:["hatchlingblue","hatchling"],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:0}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:0}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{id:"minecraft:dragon_head",Count:1b}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:20},{Name:generic.follow_range,Base:99},{Name:generic.movement_speed,Base:0.25},{Name:generic.attack_damage,Base:8}]}
 
-execute as @a[team=Blue,advancements={commands:necromantic_axe_death=true}] at @s run summon minecraft:zombie ~ ~ ~ {Silent:1b,Team:"Red",Health:20f,IsBaby:1b,Tags:["hatchlingred","hatchling"],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:0}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:0}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:0}}},{id:"minecraft:dragon_head",Count:1b}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:20},{Name:generic.follow_range,Base:99},{Name:generic.movement_speed,Base:0.25},{Name:generic.attack_damage,Base:8}]}
+execute as @a[team=Blue,advancements={commands:necromantic_axe_death=true}] at @s run summon minecraft:zombie ~ ~ ~ {Silent:1b,Team:"Red",Health:20f,IsBaby:1b,Tags:["hatchlingred","hatchling"],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:0}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:0}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:1184511}}},{id:"minecraft:dragon_head",Count:1b}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:20},{Name:generic.follow_range,Base:99},{Name:generic.movement_speed,Base:0.25},{Name:generic.attack_damage,Base:8}]}
 
 advancement revoke @a only commands:necromantic_axe_death
 
@@ -2374,9 +2378,13 @@ execute as @a[scores={blunderTimer=60}] run function commands:replace/blunderbus
 
 #Jump Boost Fix
 
-execute as @a[scores={JBFix=0..},predicate=commands:jump_boost_fix] at @s run scoreboard players add @s JBTime 1
+execute as @a[scores={JBFix=0..},predicate=commands:jump_boost_fix] at @s run tag @s add JBFix
+
+scoreboard players add @a[tag=JBFix] JBTime 1
 
 execute as @a[scores={JBTime=1..}] at @s run tp @s @s
+
+tag @a[tag=JBFix,scores={JBTime=3..}] remove JBFix
 
 scoreboard players reset @a[scores={JBTime=3..}] JBFix
 
@@ -2694,7 +2702,7 @@ execute as @a[tag=cardEffect] at @s run function commands:other/playing_card_dam
 
 scoreboard players add @e[type=item,tag=pCard] pCardsTimer 1
 
-kill @e[type=item,scores={pCardsTimer=10..}]
+kill @e[type=item,scores={pCardsTimer=12..}]
 
 #Gambler Cooldown Displays
 

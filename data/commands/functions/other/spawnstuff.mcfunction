@@ -2,6 +2,12 @@
 
 execute if entity @a[predicate=commands:in_character_select_area] run function commands:spawn/classes_on_same_team
 
+#Temporary
+
+clear @a ender_chest
+
+execute as @a at @s run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace ender_chest
+
 #Guidebook
 
 tag @a[tag=!newPlayer] add newPlayer

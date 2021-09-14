@@ -2,5 +2,5 @@ execute if score #hit ray.lightning matches 0 positioned ~-0.05 ~-0.05 ~-0.05 as
 scoreboard players add #distance ray.lightning 1
 execute if block ~ ~ ~ #commands:can_place_on_without_grass run scoreboard players set #distance ray.lightning 120
 particle dust 0.000 1.000 1.000 1 ~ ~ ~ 0 0 0 1 5 normal
-execute if score #hit ray.lightning matches 0 if score #distance ray.lightning matches 120 positioned ~ ~ ~ run function commands:raycasts/lightning_staff_hit_block
-execute if score #hit ray.lightning matches 0 if score #distance ray.lightning matches ..120 positioned ^ ^ ^0.1 run function commands:raycasts/lightning_staff_ray
+execute if score #hit ray.lightning matches 0 if score #distance ray.lightning matches 100 positioned ~ ~ ~ run function commands:raycasts/lightning_staff_hit_block
+execute if score #hit ray.lightning matches 0 if score #distance ray.lightning matches ..100 positioned ^ ^ ^0.1 run function commands:raycasts/lightning_staff_ray

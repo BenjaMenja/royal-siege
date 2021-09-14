@@ -2,9 +2,9 @@ execute at @s run playsound minecraft:entity.generic.extinguish_fire master @a[d
 
 execute at @s run particle minecraft:campfire_cosy_smoke ~ ~ ~ 1 1 1 1 100 force
 
-execute at @s[team=Red] run clear @a[distance=..9,team=Blue] carrot_on_a_stick
-
 execute at @s[team=Red] run tag @a[distance=..9,team=Blue,nbt={Inventory:[{tag:{ultimateitem:1b}}]}] add hadUltimate
+
+execute at @s[team=Red] run clear @a[distance=..9,team=Blue] carrot_on_a_stick
 
 execute at @s[team=Red] run clear @a[distance=..9,team=Blue] bat_spawn_egg
 
@@ -28,11 +28,11 @@ execute at @s[team=Red] run give @a[team=Blue,scores={Kit=7},distance=..9] minec
 
 execute at @s[team=Red] run give @a[team=Blue,scores={Kit=13},distance=..9] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Playing Cards","color":"green","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Throws a set of 5 playing cards, with two on the side."}','{"text":"Deals damage equal to the average of the card values."}','{"text":"Also has bonus effects depending on poker hand."}']},HideFlags:4,Unbreakable:1b,CustomModelData:151,playingcards:1b} 1
 
+execute at @s[team=Blue] run tag @a[distance=..9,team=Red,nbt={Inventory:[{tag:{ultimateitem:1b}}]}] add hadUltimate
+
 execute at @s[team=Blue] run clear @a[distance=..9,team=Red] carrot_on_a_stick
 
 execute at @s[team=Blue] run clear @a[distance=..9,team=Red] bat_spawn_egg
-
-execute at @s[team=Blue] run tag @a[distance=..9,team=Red,nbt={Inventory:[{tag:{ultimateitem:1b}}]}] add hadUltimate
 
 execute at @s[team=Blue] run give @a[team=Red,scores={Kit=6},distance=..9] carrot_on_a_stick{CustomModelData:2,display:{Name:'{"text":"Lightning Staff","color":"aqua","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Shoots a beam that strikes lightning"}','{"text":"onto enemy players and blocks."}','{"text":"Can be used every 4 seconds, and "}','{"text":"can hold up to 10 charges."}']},HideFlags:1,Unbreakable:1b,lightningstaff:1b,Enchantments:[{}]} 1
 
