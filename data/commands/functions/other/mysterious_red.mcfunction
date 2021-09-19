@@ -1,3 +1,3 @@
-clear @s[team=Red] carrot_on_a_stick{lightningstaff:1b}
+tellraw @s[team=Red] {"text":"Teleporting to Dungeon in 3 seconds...","color":"aqua"}
 
-tp @s[team=Red] -21 25 -141
+tag @s[team=Red] add dungeonTP

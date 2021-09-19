@@ -36,7 +36,9 @@ tag @a[scores={Respawn=200..}] remove notAlive
 
 tag @a[scores={Respawn=200..}] remove shadowdeath
 
-execute if score #gamemode settings matches 0 as @a[team=Red,x=-1402,y=60,z=1194,distance=..50,scores={Respawn=200..}] at @s run teleport @s 22 60 -198
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @a[team=Red,x=-1402,y=60,z=1194,distance=..50,scores={Respawn=200..}] at @s run teleport @s 22 60 -198
+
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @a[team=Red,x=-1402,y=60,z=1194,distance=..50,scores={Respawn=200..}] at @s run teleport @s 139 60 -1004
 
 execute if score #gamemode settings matches 1 as @a[team=Red,x=-1402,y=60,z=1194,distance=..50,scores={Respawn=200..}] at @s run teleport @s 1086 53 -61
 

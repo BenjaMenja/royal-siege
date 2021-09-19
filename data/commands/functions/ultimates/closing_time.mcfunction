@@ -1,6 +1,6 @@
-execute if entity @s[predicate=commands:in_blue_castle] run tag @s add blueCastle
+execute if entity @s[predicate=commands:in_any_blue_castle] run tag @s add blueCastle
 
-execute if entity @s[predicate=commands:in_red_castle] run tag @s add redCastle
+execute if entity @s[predicate=commands:in_any_red_castle] run tag @s add redCastle
 
 execute if entity @s[tag=redCastle] run function commands:ultimates/closing_time_fill_red
 

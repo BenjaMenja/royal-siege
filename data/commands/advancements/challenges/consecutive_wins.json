@@ -7,10 +7,9 @@
     "description": "Win 5 games consecutively.",
     "frame": "challenge",
     "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
+    "announce_to_chat": true
   },
-  "parent": "commands:advancements/winner",
+  "parent": "commands:challenges/root",
   "criteria": {
     "win1": {
       "trigger": "minecraft:impossible"

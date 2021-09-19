@@ -6,11 +6,11 @@
     },
     "title": "Unstoppable Tank",
     "description": "Have over 40 HP at once.",
-    "frame": "goal",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "commands:advancements/root",
+  "parent": "commands:challenges/root",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:impossible"

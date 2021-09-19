@@ -65,3 +65,5 @@ give @s[scores={Ultimate=25}] minecraft:carrot_on_a_stick{display:{Name:'{"text"
 give @s[scores={Ultimate=26}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Bad Credit","color":"gold","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Disrupts the enemy team\'s economy."}','{"text":"All enemies no longer receive passive money."}','{"text":"Depositing money will only yield 70 Siege Bucks (100 for Pirate)."}','{"text":"Lasts until death."}']},CustomModelData:150,badcredit:1b,ultimateitem:1b} 1
 
 tag @s remove hadUltimate
+
+tag @s remove ultimateInv

@@ -5,11 +5,12 @@
       "nbt": "{Enchantments:[{}]}"
     },
     "title": "Corrupt Hoarder",
-    "description": "Have 20 Corrupt Credits in your team's bank.",
+    "description": "Have 25 Corrupt Credits in your team's bank.",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "commands:advancements/hoarder",
+  "parent": "commands:challenges/root",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:impossible"

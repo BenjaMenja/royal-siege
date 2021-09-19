@@ -7,10 +7,9 @@
     "description": "Use every ultimate available.",
     "frame": "challenge",
     "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
+    "announce_to_chat": true
   },
-  "parent": "commands:advancements/purchase_ultimate",
+  "parent": "commands:challenges/root",
   "criteria": {
     "ultimate1": {
       "trigger": "minecraft:impossible"
@@ -76,6 +75,18 @@
       "trigger": "minecraft:impossible"
     },
     "ultimate22": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate23": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate24": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate25": {
+      "trigger": "minecraft:impossible"
+    },
+    "ultimate26": {
       "trigger": "minecraft:impossible"
     }
   },
@@ -145,6 +156,18 @@
     ],
     [
       "ultimate22"
+    ],
+    [
+      "ultimate23"
+    ],
+    [
+      "ultimate24"
+    ],
+    [
+      "ultimate25"
+    ],
+    [
+      "ultimate26"
     ]
   ]
 }

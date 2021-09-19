@@ -9,7 +9,7 @@
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "commands:advancements/root",
+  "parent": "commands:challenges/root",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:player_killed_entity",

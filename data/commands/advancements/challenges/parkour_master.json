@@ -5,12 +5,11 @@
     },
     "title": "Parkour Master",
     "description": "Complete the lobby parkour course.",
-    "frame": "goal",
+    "frame": "challenge",
     "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": true
+    "announce_to_chat": true
   },
-  "parent": "commands:hidden_advancements/root",
+  "parent": "commands:challenges/root",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:impossible"

@@ -56,9 +56,9 @@ execute if entity @s[tag=randomized,tag=randomTeams] run teleport @a -1311.5 53 
 
 #Stuff after teams are randomized
 
-scoreboard players set #playercount spawnStuff 0
-
 scoreboard players set #characterselect spawnStuff 1
+
+scoreboard players set #playercount spawnStuff 0
 
 tag @s remove randomTeams
 

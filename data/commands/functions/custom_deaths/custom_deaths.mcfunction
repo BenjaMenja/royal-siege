@@ -110,6 +110,14 @@ execute if entity @s[team=Blue] if score #gamemode settings matches 1 run scoreb
 
 execute if entity @s[tag=hasBounty] run function commands:other/betting_chip_kill
 
+#Reset Cooldown Scores
+
+function commands:custom_deaths/reset_cooldowns
+
+#Ultimate Check
+
+tag @s[tag=ultimateInv] add hadUltimate
+
 #Reset scores and run function again
 
 scoreboard players set @s Message 0

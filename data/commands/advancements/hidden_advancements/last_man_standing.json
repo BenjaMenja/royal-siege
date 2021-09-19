@@ -3,7 +3,7 @@
     "icon": {
       "item": "minecraft:axolotl_bucket"
     },
-    "title": "Last Man Stamdomg",
+    "title": "Last Man Standing",
     "description": "Be the only person alive in a match.",
     "frame": "goal",
     "show_toast": true,

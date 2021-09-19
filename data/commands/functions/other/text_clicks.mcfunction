@@ -274,4 +274,8 @@ execute if score @s textClick matches 141 run function commands:books/dragon
 
 execute if score @s textClick matches 142 run function commands:books/gambler
 
+execute if score @s textClick matches 143 run function commands:settings/forest_glen
+
+execute if score @s textClick matches 144 run function commands:settings/winterland
+
 scoreboard players reset @a[scores={textClick=1..}] textClick

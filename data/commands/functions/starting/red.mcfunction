@@ -172,6 +172,8 @@ give @p[distance=..8,team=Red,tag=!wipeKill,scores={Kit=13,RedKit=198}] minecraf
 
 give @p[distance=..8,team=Red,scores={Kit=13,RedKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Playing Cards","color":"green","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Throws a set of 5 playing cards, with two on the side."}','{"text":"Deals damage equal to the average of the card values."}','{"text":"Also has bonus effects depending on poker hand."}']},HideFlags:4,Unbreakable:1b,CustomModelData:151,playingcards:1b} 1
 
+execute as @a[scores={RedKit=198},tag=hadUltimate] run function commands:other/ultimate_charger
+
 scoreboard players set @a[scores={Kit=13,RedKit=198}] pCardsTimer 1
 
 scoreboard players set @a[scores={RedKit=200..}] RedKit 0

@@ -1,4 +1,4 @@
-advancement grant @s only commands:hidden_advancements/parkour_master
+advancement grant @s only commands:challenges/parkour_master
 
 #Parkour Time Part
 
