@@ -18,6 +18,8 @@ scoreboard players remove @s[tag=!dababy,tag=nonspec,tag=randomized] secret 2
 
 scoreboard players set @s[tag=!dababy,tag=nonspec,tag=randomized] ultCheck 0
 
+tag @s[tag=nonspec,tag=randomized] remove readyUp
+
 tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Meteor Shower]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 102"}},{"text":" "},{"text":"[Evolution]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 103"}}]
 
 tag @s remove dababy

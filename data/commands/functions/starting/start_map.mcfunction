@@ -115,13 +115,13 @@ execute if score #underground settings matches 1 if score #classicMap settings m
 
 execute if score #underground settings matches 1 if score #classicMap settings matches 1 run fill 25 54 -1046 26 53 -1046 packed_ice
 
-execute if score #underground settings matches 1 if score #classicMap settings matches 1 run fill 72 54 -998 72 53 -997 air
+execute if score #underground settings matches 0 if score #classicMap settings matches 1 run fill 72 54 -998 72 53 -997 air
 
-execute if score #underground settings matches 1 if score #classicMap settings matches 1 run fill 86 51 -1034 87 49 -1034 air
+execute if score #underground settings matches 0 if score #classicMap settings matches 1 run fill 86 51 -1034 87 49 -1034 air
 
-execute if score #underground settings matches 1 if score #classicMap settings matches 1 run fill 64 52 -1063 65 52 -1061 air
+execute if score #underground settings matches 0 if score #classicMap settings matches 1 run fill 64 52 -1063 65 52 -1061 air
 
-execute if score #underground settings matches 1 if score #classicMap settings matches 1 run fill 25 54 -1046 26 53 -1046 air
+execute if score #underground settings matches 0 if score #classicMap settings matches 1 run fill 25 54 -1046 26 53 -1046 air
 
 execute if score #timeofday settings matches 0 run time set 5000
 

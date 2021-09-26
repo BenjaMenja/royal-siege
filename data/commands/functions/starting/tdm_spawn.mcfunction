@@ -2,9 +2,9 @@ spreadplayers 1051.5 -60.5 1 28 under 55 true @s
 
 effect give @s resistance 3 2 true
 
-execute if entity @s[team=Red] if entity @p[distance=..10,team=Blue] run function commands:starting/tdm_spawn
+execute at @s[team=Red] if entity @p[distance=..10,team=Blue] run function commands:starting/tdm_spawn
 
-execute if entity @s[team=Blue] if entity @p[distance=..10,team=Red] run function commands:starting/tdm_spawn
+execute at @s[team=Blue] if entity @p[distance=..10,team=Red] run function commands:starting/tdm_spawn
 
 
 

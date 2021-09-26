@@ -18,6 +18,8 @@ scoreboard players add @s[tag=!dababy,tag=nonspec,tag=randomized] secret 22
 
 scoreboard players set @s[tag=!dababy,tag=nonspec,tag=randomized] ultCheck 0
 
+tag @s[tag=nonspec,tag=randomized] remove readyUp
+
 tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Busted]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 114"}},{"text":" "},{"text":"[Bad Credit]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 115"}}]
 
 tag @s remove dababy

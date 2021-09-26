@@ -19,3 +19,5 @@ execute if entity @s[tag=redCastle] run tellraw @a {"text":"Red team's castle ha
 execute if entity @s[tag=blueCastle] run tellraw @a {"text":"Blue team's castle has shut down!","color":"blue"}
 
 execute at @s run playsound block.anvil.destroy master @a[distance=..10] ~ ~ ~ 1 0
+
+clear @s carrot_on_a_stick{closingtime:1b}

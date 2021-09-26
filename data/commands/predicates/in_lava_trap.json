@@ -132,6 +132,50 @@
           }
         }
       }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "position": {
+            "x": {
+              "min": 42,
+              "max": 48
+            },
+            "y": {
+              "min": 51,
+              "max": 52
+            },
+            "z": {
+              "min": -1102,
+              "max": -1097
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "position": {
+            "x": {
+              "min": 125,
+              "max": 130
+            },
+            "y": {
+              "min": 51,
+              "max": 52
+            },
+            "z": {
+              "min": -1020,
+              "max": -1014
+            }
+          }
+        }
+      }
     }
   ]
 }

@@ -18,6 +18,8 @@ scoreboard players add @s[tag=!dababy,tag=nonspec,tag=randomized] secret 27
 
 scoreboard players set @s[tag=!dababy,tag=nonspec,tag=randomized] ultCheck 0
 
+tag @s[tag=nonspec,tag=randomized] remove readyUp
+
 tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Cavalry Charge]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 88"}},{"text":" "},{"text":"[Rally]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 89"}}]
 
 tag @s remove dababy

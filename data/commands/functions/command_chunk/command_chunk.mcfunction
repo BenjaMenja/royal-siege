@@ -520,9 +520,9 @@ scoreboard players set @a[scores={Treasure=3200..}] Treasure 0
 
 execute as @e[type=bat,tag=Treasure] at @s run summon armor_stand ~ ~29 ~ {Invulnerable:1b,Invisible:1b,Tags:["Chest"]}
 
-execute as @e[type=bat,tag=TRed] at @s run summon falling_block ~ ~30 ~ {BlockState:{Name:"minecraft:chest",Properties:{facing:"north"}},TileEntityData:{Lock:"Golden Cutlass",LootTable:"commands:chests/pirate_ult_red"},Time:1,HurtEntities:1b,FallHurtMax:60,FallHurtAmount:2f,Tags:["FallingChest"]}
+execute as @e[type=bat,tag=TRed] at @s run summon falling_block ~ ~30 ~ {BlockState:{Name:"minecraft:chest",Properties:{facing:"north"}},TileEntityData:{Lock:"Golden Cutlass",LootTable:"commands:chests/treasure_chest_red"},Time:1,HurtEntities:1b,FallHurtMax:60,FallHurtAmount:2f,Tags:["FallingChest"]}
 
-execute as @e[type=bat,tag=TBlue] at @s run summon falling_block ~ ~30 ~ {BlockState:{Name:"minecraft:chest",Properties:{facing:"north"}},TileEntityData:{Lock:"Golden Cutlass",LootTable:"commands:chests/pirate_ult_blue"},Time:1,HurtEntities:1b,FallHurtMax:60,FallHurtAmount:2f,Tags:["FallingChest"]}
+execute as @e[type=bat,tag=TBlue] at @s run summon falling_block ~ ~30 ~ {BlockState:{Name:"minecraft:chest",Properties:{facing:"north"}},TileEntityData:{Lock:"Golden Cutlass",LootTable:"commands:chests/treasure_chest_blue"},Time:1,HurtEntities:1b,FallHurtMax:60,FallHurtAmount:2f,Tags:["FallingChest"]}
 
 execute as @e[type=falling_block,tag=FallingChest] at @s run particle happy_villager ~ ~ ~ 0 0 0 1 10
 
@@ -897,6 +897,8 @@ tag @a[tag=rooted] remove eject
 execute as @a[tag=eject] at @s run teleport @s ~ ~1.5 ~
 
 execute as @a[tag=eject] at @s anchored eyes positioned ^ ^ ^-0.5 anchored feet run summon creeper ~ ~ ~ {Health:1000f,ExplosionRadius:-1b,Fuse:1,ignited:1b,Attributes:[{Name:generic.max_health,Base:1000},{Name:generic.attack_damage,Base:1},{Name:generic.attack_knockback,Base:8.0}],Tags:["ejectbutton"]}
+
+effect give @a[tag=eject] resistance 1 3 true
 
 execute as @e[type=creeper,tag=ejectbutton] at @s run teleport @s ~ ~-0.3 ~
 
@@ -1496,7 +1498,7 @@ tp @e[type=bat,tag=concoction] ~ -100 ~
 
 execute as @a[scores={Kit=5,Ultimate=15},predicate=!commands:inventory/bow_of_justice] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s JusticeTimer 1
  
-give @a[scores={JusticeTimer=3000..}] bow{CustomModelData:73,display:{Name:'{"text":"Bow of Justice","italic":false}',Lore:['{"text":"One shots nearly anything."}','{"text":"Can only be used once and can be deflected by shields."}','{"text":"Also cannot be used near a king."}','{"text":"If you kill a player with this, you will get the bow of justice back."}','{"text":"If successful, it must be used again within 15s or else it will disappear."}']},HideFlags:33,Damage:384,ultimateitem:1b,bowofjustice:1b,Enchantments:[{id:"minecraft:power",lvl:100s},{id:"minecraft:infinity",lvl:1s}]} 1
+give @a[scores={JusticeTimer=3000..}] bow{CustomModelData:73,display:{Name:'{"text":"Bow of Justice","italic":false}',Lore:['{"text":"One shots nearly anything."}','{"text":"Can only be used once and can be deflected by shields."}','{"text":"Also cannot be used near a king."}','{"text":"If you kill a player with this, you will get the bow of justice back."}','{"text":"If successful, it must be used again within 15s or else it will disappear."}']},HideFlags:33,Damage:384,ultimateitem:1b,bowofjustice:1b,Enchantments:[{id:"minecraft:power",lvl:200s},{id:"minecraft:infinity",lvl:1s}]} 1
 
 scoreboard players set @a[scores={JusticeTimer=3000..}] JusticeTimer 0
 
@@ -2139,12 +2141,12 @@ execute as @a[scores={exCharge=0,jump=1..,Kit=1},advancements={commands:explosiv
 advancement revoke @a only commands:explosive_charge
 
 scoreboard players add @a[tag=exCharge] exChargeDelay 1
+ 
+execute as @a[scores={exChargeDelay=2..}] at @s run teleport @s @s
 
-execute as @a[scores={exChargeDelay=3..}] run item modify entity @s armor.legs commands:explosive_charge_blast_protection_remove
+tag @a[scores={exChargeDelay=2..}] remove exCharge
 
-tag @a[scores={exChargeDelay=3..}] remove exCharge
-
-scoreboard players reset @a[scores={exChargeDelay=3..}] exChargeDelay
+scoreboard players reset @a[scores={exChargeDelay=2..}] exChargeDelay
 
 scoreboard players set @a[nbt={OnGround:1b}] jump 0
 
@@ -2580,7 +2582,9 @@ execute as @e[type=skeleton,tag=blueroyalguard,nbt={Attributes:[{Name:"minecraft
 
 execute as @e[type=skeleton,tag=blueroyalguard,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.25d}]}] unless entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:-1.0d}]}
 
-execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s run teleport @s ~ ~ ~-0.2
+execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 0 run teleport @s ~ ~ ~-0.2
+
+execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 1 run teleport @s ~0.2 ~ ~
 
 execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s run teleport @s ~ ~ ~0.2
 

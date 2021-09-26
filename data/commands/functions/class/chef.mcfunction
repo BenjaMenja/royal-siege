@@ -18,6 +18,8 @@ scoreboard players remove @s[tag=!dababy,tag=nonspec,tag=randomized] secret 5
 
 scoreboard players set @s[tag=!dababy,tag=nonspec,tag=randomized] ultCheck 0
 
+tag @s[tag=nonspec,tag=randomized] remove readyUp
+
 execute if score #gamemode settings matches 0 run tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Dinner's Ready]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 70"}},{"text":" "},{"text":"[Closing Time]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 71"}}]
 
 execute if score #gamemode settings matches 1 run tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Dinner's Ready]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 70"}},{"text":" "},{"text":"[Pizza Time]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 112"}}]

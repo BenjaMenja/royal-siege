@@ -83,6 +83,12 @@
     "minecraft:big_dripleaf",
     "minecraft:barrier",
     "minecraft:glass_pane",
-    "minecraft:cactus"
+    "minecraft:cactus",
+    "minecraft:snow_block",
+    "minecraft:ice",
+    "minecraft:packed_ice",
+    "minecraft:blue_ice",
+    "minecraft:amethyst_block",
+    "minecraft:tuff"
   ]
 }

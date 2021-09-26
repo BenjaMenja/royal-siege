@@ -18,6 +18,8 @@ scoreboard players add @s[tag=!dababy,tag=nonspec,tag=randomized] secret 10
 
 scoreboard players set @s[tag=!dababy,tag=nonspec,tag=randomized] ultCheck 0
 
+tag @s[tag=nonspec,tag=randomized] remove readyUp
+
 tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Treasure Chest]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 80"}},{"text":" "},{"text":"[Flying Dutchman]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 81"}}]
 
 tag @s remove dababy

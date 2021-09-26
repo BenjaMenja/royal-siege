@@ -1,0 +1,35 @@
+{
+    "pools": [
+      {
+        "rolls": {
+          "min": 0,
+          "max": 3
+        },
+        "entries": [
+          {
+            "type": "minecraft:loot_table",
+            "name": "commands:chests/pirate_ult_red"
+          }
+        ]
+      },
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:loot_table",
+            "name": "commands:shop_items/money"
+          }
+        ]
+      },
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:loot_table",
+            "name": "commands:shop_items/corrupt_credit"
+          }
+        ]
+      }
+    ]
+  }
+  
