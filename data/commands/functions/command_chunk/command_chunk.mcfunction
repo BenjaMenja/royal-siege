@@ -1978,13 +1978,13 @@ teleport @e[type=zombie,scores={attractorTimer=1200..}] ~ -100 ~
 
 #Spectator boundaries
 
-execute if score #gamemode settings matches 0 as @a[tag=spectator,predicate=!commands:in_forest_glen] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @a[tag=spectator,predicate=!commands:in_forest_glen] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
-execute if score #gamemode settings matches 0 as @a[tag=spectator,predicate=!commands:in_forest_glen] run teleport @s 8 69 -132
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @a[tag=spectator,predicate=!commands:in_forest_glen] run teleport @s 8 69 -132
 
-execute if score #gamemode settings matches 0 as @a[tag=spectator,predicate=!commands:in_winterland] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @a[tag=spectator,predicate=!commands:in_winterland] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
-execute if score #gamemode settings matches 0 as @a[tag=spectator,predicate=!commands:in_winterland] run teleport @s 57 72 -1031
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @a[tag=spectator,predicate=!commands:in_winterland] run teleport @s 57 72 -1031
 
 execute if score #gamemode settings matches 1 as @a[tag=spectator,predicate=!commands:in_tdm_map] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
@@ -2790,7 +2790,7 @@ execute if score #gameDuration gameDuration matches 18000 if score #gamemode set
 
 execute if score #gameDuration gameDuration matches 18000 if score #gamemode settings matches 0 run title @a subtitle {"text":"The game has been going on for 15 minutes!","color":"green"}
 
-execute if score #loseKingHP gameDuration matches 20 as @e[type=wither_skeleton,tag=King] run function commands:other/lower_king_hp
+execute if score #loseKingHP gameDuration matches 20.. as @e[type=wither_skeleton,tag=King] run function commands:other/lower_king_hp
 
 #Teleport to Dungeons
 

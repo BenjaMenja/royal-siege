@@ -30,6 +30,6 @@ execute as @a[scores={Kit=9},tag=fishCannonRed] run execute store result entity 
 
 tag @e[type=item,tag=fishCannonRed] add stop
 
-scoreboard players set @a[tag=fishCannonRed] fishCannonTimer 0
+scoreboard players set @a[tag=fishCannonRed] fishCannonTimer 200
 
 function commands:replace/fish_cannon_red_replace
