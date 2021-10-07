@@ -44,4 +44,4 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 run setblock 48 59 -1107 smooth_quartz_stairs[facing=east,half=top,shape=straight]
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 run fill 43 57 -1107 42 57 -1107 blue_carpet
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 run fill 43 57 -1107 47 57 -1107 blue_carpet

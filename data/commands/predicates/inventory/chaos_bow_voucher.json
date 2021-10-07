@@ -2,6 +2,6 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "nbt": "{Inventory:[{tag:{badcredit:1b}}]}"
+    "nbt": "{Inventory:[{tag:{chaosbowvoucher:1b}}]}"
   }
 }

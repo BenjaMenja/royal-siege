@@ -38,8 +38,6 @@ give @a[distance=..8,team=Red,tag=!wipeKill,scores={Kit=3,RedKit=198}] minecraft
 
 give @a[distance=..8,team=Red,scores={Kit=3,RedKit=198}] shield{Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.max_health",Name:"generic.max_health",Amount:2,Operation:0,UUID:[I;183926069,-2078455965,-1775636573,557814341],Slot:"offhand"}]} 1
 
-give @a[distance=..8,team=Red,scores={Kit=3,RedKit=198}] splash_potion{display:{Name:"\"Guarding Potion\""},CustomPotionEffects:[{Id:11,Amplifier:1,Duration:600},{Id:12,Amplifier:0,Duration:600}]} 1
-
 item replace entity @a[distance=..8,team=Red,scores={Kit=4,RedKit=198}] armor.head with player_head{Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:fire_protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2,Operation:0,UUID:[I;0,787806,0,976389],Slot:"head"}],SkullOwner:{Id:[I;330708613,-1204793457,-1642454402,-2045380575],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzZmMDQ4NTQ1M2QzYTkwZjM1NDMyMWU4ZjM4MmJlZjEwNmJmNTA2NDI0ZjcwYzA0YTIwN2Y4MmJkYjI4NTZiOSJ9fX0="}]}}} 1
 
 item replace entity @a[distance=..8,team=Red,scores={Kit=4,RedKit=198}] armor.chest with leather_chestplate{Unbreakable:1,Enchantments:[{id:protection,lvl:2},{id:fire_protection,lvl:2}],display:{color:65518}} 1
@@ -56,7 +54,7 @@ give @a[distance=..8,team=Red,tag=!wipeKill,scores={Kit=5,RedKit=198}] bow{Custo
 
 give @a[distance=..8,team=Red,scores={Kit=5,RedKit=198}] wooden_axe{CustomModelData:11,HideFlags:1,Enchantments:[{id:unbreaking,lvl:1},{id:"minecraft:efficiency",lvl:5s}],Unbreakable:1,display:{Name:'{"text":"Shield Buster","italic":false}'}} 1
 
-give @a[distance=..8,team=Red,scores={Kit=5,RedKit=198}] arrow{CustomModelData:12,display:{Name:'{"text":"Bottomless Quiver","italic":false}'}} 1
+give @a[distance=..8,team=Red,scores={Kit=5,RedKit=198}] arrow{CustomModelData:12,bottomlessquiver:1b,display:{Name:'{"text":"Bottomless Quiver","italic":false}'}} 1
 
 item replace entity @a[distance=..8,team=Red,scores={Kit=5,RedKit=198}] armor.head with player_head{Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2,Operation:0,UUID:[I;77729293,10,82894,-192736449],Slot:"head"}],SkullOwner:{Id:[I;1506350569,-2016000832,-1167242250,549915695],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTkzZWU1YmIwYzdmYWNjYTBmM2RmZTA5NDMwYzViODRhOTBlNjU4OGQwYTEwOTlkYTg1YjZlYWViODk1OGY5YSJ9fX0="}]}}} 1
 
@@ -176,4 +174,6 @@ execute as @a[scores={RedKit=198},tag=hadUltimate] run function commands:other/u
 
 scoreboard players set @a[scores={Kit=13,RedKit=198}] pCardsTimer 1
 
-scoreboard players set @a[scores={RedKit=200..}] RedKit 0
+execute if score #gameDuration gameDuration matches ..18000 if score #gamemode settings matches 0 run scoreboard players set @a[scores={RedKit=200..}] RedKit 0
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players set @a[scores={RedKit=200..}] RedKit -100

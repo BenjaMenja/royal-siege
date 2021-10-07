@@ -78,7 +78,7 @@ scoreboard players add @e[type=item,scores={ItemKill=1}] Timer 1
 
 #Cavalry Charge (Warrior Ultimate)
 
-execute as @a[scores={Ultimate=2},predicate=!commands:inventory/cavalry_charge] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s Horse 1
+execute as @a[scores={Ultimate=2},tag=!notAlive,predicate=!commands:inventory/cavalry_charge] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s Horse 1
 
 give @p[team=Red,scores={Ultimate=2,Horse=3000..}] bat_spawn_egg{CustomModelData:64,CanPlaceOn:["#commands:can_place_on"],HideFlags:16,display:{Name:'{"text":"Cavalry Charge","color":"#697052","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Get on a horse and stomp on your enemies!"}']},EntityTag:{id:bat,Tags:["redcavalry","cavalry"],Invulnerable:1,Silent:1},cavalry:1b,ultimateitem:1b,Enchantments:[{}]} 1
 
@@ -94,13 +94,13 @@ execute as @a[team=Red,tag=cavalryAlive] unless entity @e[tag=RedHorse] run func
 
 execute as @a[team=Blue,tag=cavalryAlive] unless entity @e[tag=BlueHorse] run function commands:ultimates/cavalry_dead 
 
-execute as @a[team=Red,scores={Ultimate=2}] at @s if data entity @s RootVehicle.Attach if entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:-1.0}]}] run data merge entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest] {Attributes:[{Name:generic.movement_speed,Base:0.45}]}
+execute as @a[team=Red,scores={Ultimate=2}] at @s if data entity @s RootVehicle.Attach if entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:-1.0}]}] run data merge entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest] {Attributes:[{Name:generic.movement_speed,Base:0.35}]}
 
-execute as @a[team=Blue,scores={Ultimate=2}] at @s if data entity @s RootVehicle.Attach if entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:-1.0}]}] run data merge entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest] {Attributes:[{Name:generic.movement_speed,Base:0.45}]}
+execute as @a[team=Blue,scores={Ultimate=2}] at @s if data entity @s RootVehicle.Attach if entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:-1.0}]}] run data merge entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest] {Attributes:[{Name:generic.movement_speed,Base:0.35}]}
 
-execute as @a[team=Red,scores={Ultimate=2}] at @s unless data entity @s RootVehicle.Attach if entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.45}]}] run data merge entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest] {Attributes:[{Name:generic.movement_speed,Base:-1.0}]}
+execute as @a[team=Red,scores={Ultimate=2}] at @s unless data entity @s RootVehicle.Attach if entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.35}]}] run data merge entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest] {Attributes:[{Name:generic.movement_speed,Base:-1.0}]}
 
-execute as @a[team=Blue,scores={Ultimate=2}] at @s unless data entity @s RootVehicle.Attach if entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.45}]}] run data merge entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest] {Attributes:[{Name:generic.movement_speed,Base:-1.0}]}
+execute as @a[team=Blue,scores={Ultimate=2}] at @s unless data entity @s RootVehicle.Attach if entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.35}]}] run data merge entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest] {Attributes:[{Name:generic.movement_speed,Base:-1.0}]}
 
 #Minion Swarm
 
@@ -126,7 +126,7 @@ execute as @a[team=Blue,scores={Death=1..}] at @s run kill @e[type=armor_stand,n
 
 teleport @a[scores={Death=1..}] -488 56 -120
 
-scoreboard players add @a[x=-488,y=54,z=-120,distance=..10,gamemode=!spectator,gamemode=!creative] Mimic 1
+scoreboard players add @a[x=-488,y=54,z=-120,distance=..10,gamemode=!spectator,gamemode=!creative,tag=!notAlive] Mimic 1
 
 execute if entity @a[scores={Mimic=120..}] run tellraw @a [{"selector":"@a[scores={Mimic=120..}]"},{"text":" was eaten by a Mimic.","color":"white"}]
 
@@ -190,15 +190,23 @@ execute as @e[type=arrow,nbt={damage:6.0d}] run data merge entity @s {NoGravity:
 
 #Chaos Bow (Archer Ultimate)
 
-execute as @a[scores={Kit=5,Ultimate=5},predicate=!commands:inventory/chaos_bow] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s ChaosTimer 1
+execute as @a[scores={Kit=5,Ultimate=5},tag=!notAlive,predicate=!commands:inventory/chaos_bow_voucher] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s ChaosTimer 1
 
-give @a[scores={ChaosTimer=4000..}] crossbow{CustomModelData:72,display:{Name:'{"text":"Chaos Bow","color":"#FFF954","italic":false}',Lore:['{"text":"Shoots very quickly and shoots"}','{"text":"3 arrows at a time."}']},Unbreakable:1b,Enchantments:[{id:"minecraft:multishot",lvl:1s},{id:"minecraft:quick_charge",lvl:5s}],ultimateitem:1b,chaosbow:1b} 1
+give @a[scores={ChaosTimer=4000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Chaos Bow Voucher","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Redeemable for a Chaos Bow."}','{"text":"The bow lasts 20s."}']},CustomModelData:165,ultimateitem:1b,chaosbowvoucher:1b} 1
 
 scoreboard players reset @a[scores={ChaosTimer=4000..}] ChaosTimer
 
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/chaos_bow_voucher] run tellraw @a [{"selector":"@s"},{"text":" is going chaotic!"}]
+
+item replace entity @a[scores={usedCOAS=1..},predicate=commands:holding/chaos_bow_voucher] weapon.mainhand with crossbow{CustomModelData:72,display:{Name:'{"text":"Chaos Bow","color":"#FFF954","italic":false}',Lore:['{"text":"Shoots very quickly and shoots"}','{"text":"3 arrows at a time."}']},Unbreakable:1b,Enchantments:[{id:"minecraft:multishot",lvl:1s},{id:"minecraft:quick_charge",lvl:5s}],chaosbow:1b} 1
+
+scoreboard players add @a[predicate=commands:inventory/chaos_bow] chaosBowDur 1
+
+execute as @a[scores={chaosBowDur=400..}] run function commands:ultimates/chaos_bow_end
+
 #Kerfuffle (Wizard Ultimate)
 
-execute as @a[scores={Ultimate=6},predicate=!commands:inventory/kerfuffle] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s Kerfuffle 1
+execute as @a[scores={Ultimate=6},tag=!notAlive,predicate=!commands:inventory/kerfuffle] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s Kerfuffle 1
 
 give @a[scores={Ultimate=6,Kerfuffle=2800..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Kerfuffle","color":"#681CFF","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Scrambles the inventory of everyone on the opposing team,"}','{"text":" then give them blindness."}']},CustomModelData:74,ultimateitem:1b,kerfuffle:1b,Enchantments:[{}]} 1
 
@@ -268,7 +276,7 @@ execute as @e[type=horse,tag=RedHorse] at @s run effect give @a[team=Blue,distan
 
 #Immortality (Guardian Ultimate)
 
-execute as @a[scores={Ultimate=3},predicate=!commands:inventory/immortality] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s immorTimer 1
+execute as @a[scores={Ultimate=3},tag=!notAlive,predicate=!commands:inventory/immortality] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s immorTimer 1
 
 give @a[scores={immorTimer=3200..,Ultimate=3}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Immortality","color":"#CEFF0A","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Enter a state of immortality for 7 seconds."}','{"text":"All teammates in a 10 block radius below 10 Health will become immune to damage."}','{"text":"Teammates can still die if they take fatal damage while above 10 Health."}']},CustomModelData:138,immortality:1b,ultimateitem:1b} 1
 
@@ -284,7 +292,7 @@ execute as @a[scores={immorDur=140..}] run function commands:ultimates/immortali
 
 #Lifeforce
 
-execute as @a[scores={Ultimate=4},predicate=!commands:inventory/lifeforce] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s LifeForce 1
+execute as @a[scores={Ultimate=4},tag=!notAlive,predicate=!commands:inventory/lifeforce] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s LifeForce 1
 
 give @a[scores={LifeForce=3600..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Life Force","color":"#C90606","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Gives everyone on your team a big boost in health for a short time"}']},CustomModelData:70,lifeforce:1b,ultimateitem:1b,Enchantments:[{}]} 1
 
@@ -510,7 +518,7 @@ title @a[scores={Kit=7},predicate=commands:inventory/chain_hook] actionbar [{"te
 
 #Treasure Chest (Pirate Ultimate)
 
-execute as @a[scores={Ultimate=7},predicate=!commands:inventory/treasure_chest] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s Treasure 1
+execute as @a[scores={Ultimate=7},tag=!notAlive,predicate=!commands:inventory/treasure_chest] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s Treasure 1
 
 give @a[team=Red,scores={Treasure=3200..}] bat_spawn_egg{CustomModelData:76,CanPlaceOn:["#commands:can_place_on"],ultimateitem:1b,treasurechest:1b,HideFlags:16,display:{Name:'{"text":"Treasure Chest","color":"gold","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Contains Corrupt Credits and a wide variety"}','{"text":"of shop items from any class."}']},EntityTag:{id:bat,Silent:1b,Invulnerable:1b,Tags:["Treasure","TRed"]},Enchantments:[{}]} 1
 
@@ -664,7 +672,7 @@ execute as @e[type=area_effect_cloud,tag=mushroom] store result score @s mushroo
 
 #Tree of Life (Ent Ultimate)
 
-execute as @a[scores={Ultimate=8},predicate=!commands:inventory/tree_of_life] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s Tree 1
+execute as @a[scores={Ultimate=8},tag=!notAlive,predicate=!commands:inventory/tree_of_life] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s Tree 1
 
 give @a[team=Red,scores={Tree=3200..}] bat_spawn_egg{CustomModelData:78,CanPlaceOn:["#commands:can_place_on"],HideFlags:16,display:{Name:'{"text":"Tree of Life","color":"#22FF00","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Sprouts a tree from the ground that provides healing to allies and damage to enemies."}']},EntityTag:{id:bat,Silent:1b,Invulnerable:1b,Tags:["Tree"]},ultimateitem:1b,treeoflife:1b,treeoflife:2b,Enchantments:[{}]} 1
 
@@ -802,7 +810,7 @@ tellraw @p[team=Blue,scores={usedCOAS=1..},predicate=commands:holding/menu] ["",
 
 #Give chaos bow users the arrow back
 
-give @a[scores={chaosbow=1..}] arrow{CustomModelData:12,display:{Name:'{"text":"Bottomless Quiver","italic":false}'}} 1
+give @a[scores={chaosbow=1..}] arrow{CustomModelData:12,bottomlessquiver:1b,display:{Name:'{"text":"Bottomless Quiver","italic":false}'}} 1
 
 scoreboard players set @a[scores={chaosbow=1..}] chaosbow 0
 
@@ -1022,7 +1030,7 @@ execute at @e[type=chicken] run summon creeper ~ ~ ~ {CustomNameVisible:0b,Explo
 
 #Shadow Step (Ninja Ultimate)
 
-execute as @a[scores={Kit=2,Ultimate=1},predicate=!commands:inventory/shadow_step] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s Ninjault 1
+execute as @a[scores={Kit=2,Ultimate=1},tag=!notAlive,predicate=!commands:inventory/shadow_step] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s Ninjault 1
 
 give @a[scores={Ninjault=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Shadow Step"}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Transform into a shadowy blob for 5 seconds."}','{"text":"While in this form, you are damage immune and"}','{"text":"you deal high damage to every enemy nearby"}','{"text":"(including the enemy king)."}']},CustomModelData:66,ultimateitem:1b,shadowstep:1b,Enchantments:[{}]} 1
 
@@ -1134,7 +1142,7 @@ clear @a[scores={usedCOAS=1..},predicate=commands:holding/virus_detector] carrot
 
 #Memory Wipe (Robot Ultimate)
 
-execute as @a[scores={Ultimate=10},predicate=!commands:inventory/memory_wipe] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s RobotUlt 1
+execute as @a[scores={Ultimate=10},tag=!notAlive,predicate=!commands:inventory/memory_wipe] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s RobotUlt 1
 
 give @a[scores={RobotUlt=3000..}] carrot_on_a_stick{display:{Name:'[{"text":"M","color":"dark_red","italic":false},{"text":"e","color":"#930000","italic":false},{"text":"m","color":"#690000","italic":false},{"text":"o","color":"#3F0000","italic":false},{"text":"ry ","color":"#150000","italic":false},{"text":"W","color":"#3F0000","italic":false},{"text":"i","color":"#690000","italic":false},{"text":"p","color":"#930000","italic":false},{"text":"e","color":"dark_red","italic":false}]',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Clears the inventory of a random player on the enemy team."}']},Unbreakable:1b,CustomModelData:82,ultimateitem:1b,memorywipe:1b,Enchantments:[{}]} 1
 
@@ -1234,7 +1242,7 @@ tag @a[tag=slamming,nbt={OnGround:1b}] remove slamming
 
 #Invisibility Cloak (Ninja Alt. Ultimate)
 
-execute as @a[scores={Kit=2,Ultimate=11},predicate=!commands:inventory/invisibility_cloak] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s InvisTimer 1
+execute as @a[scores={Kit=2,Ultimate=11},tag=!notAlive,predicate=!commands:inventory/invisibility_cloak] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s InvisTimer 1
 
 give @a[scores={InvisTimer=3000..}] carrot_on_a_stick{display:{Name:'{"text":"Invisibility Cloak","color":"gray","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Shroud yourself in an invisibility cloak, making you fully invisible."}','{"text":"While in this state, you have increased speed and damage, but much less defense."}','{"text":"Lasts 10 seconds."}']},CustomModelData:137,inviscloak:1b,ultimateitem:1b,Enchantments:[{}]} 1
 
@@ -1252,7 +1260,7 @@ scoreboard players reset @a[scores={died=1..}] InvisDur
 
 #Decay Aura (Ent Alt. Ultimate)
 
-execute as @a[scores={Kit=8,Ultimate=18},predicate=!commands:inventory/decay_aura] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s DecayTimer 1
+execute as @a[scores={Kit=8,Ultimate=18},tag=!notAlive,predicate=!commands:inventory/decay_aura] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s DecayTimer 1
 
 give @a[scores={DecayTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Decay Aura","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Damages everything around you, including non-players."}','{"text":"Also heals your king if it is nearby."}']},CustomModelData:79,ultimateitem:1b,decay:1b,Enchantments:[{}]} 1
 
@@ -1436,7 +1444,7 @@ title @a[scores={Kit=3},predicate=!commands:inventory/absorption_shield] actionb
 
 #Rally (Warrior Alt. Ultimate)
 
-execute as @a[scores={Kit=1,Ultimate=12},predicate=!commands:inventory/rally] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s RallyTimer 1
+execute as @a[scores={Kit=1,Ultimate=12},tag=!notAlive,predicate=!commands:inventory/rally] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s RallyTimer 1
 
 give @a[scores={RallyTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Rally"}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Rally your team together!"}','{"text":"After a 0.5 second delay, teleport all of your teammates to you."}','{"text":"Every teammate receives strength and speed."}','{"text":"The warrior receives resistance II."}']},CustomModelData:65,ultimateitem:1b,rally:1b,Enchantments:[{}]} 1
 
@@ -1454,7 +1462,7 @@ scoreboard players set @a[scores={RallyDelay=10..}] RallyDelay 0
 
 #Magic Barrier (Guardian Alt. Ultimate)
 
-execute as @a[scores={Kit=3,Ultimate=13},predicate=!commands:inventory/magic_barrier] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s BarrierTimer 1
+execute as @a[scores={Kit=3,Ultimate=13},tag=!notAlive,predicate=!commands:inventory/magic_barrier] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s BarrierTimer 1
 
 give @a[scores={BarrierTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Magic Barrier"}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Surround everyone on you team with magical barriers."}','{"text":"Anyone that attacks the barrier directly will become marked."}','{"text":"Marked players take much more damage when attacked."}']},CustomModelData:69,ultimateitem:1b,magicbarrier:1b,Enchantments:[{}]} 1
 
@@ -1482,7 +1490,7 @@ scoreboard players set @a[scores={Marked=1..}] Marked 0
 
 #Questionable Concoction (Healer Alt. Ultimate)
 
-execute as @a[scores={Kit=4,Ultimate=14},predicate=!commands:inventory/questionable_concoction] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s PotionTimer 1
+execute as @a[scores={Kit=4,Ultimate=14},tag=!notAlive,predicate=!commands:inventory/questionable_concoction] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s PotionTimer 1
 
 give @a[team=Red,scores={PotionTimer=3000..}] bat_spawn_egg{CustomModelData:71,CanPlaceOn:["#commands:can_place_on"],ultimateitem:1b,concoction:1b,HideFlags:16,display:{Name:'{"text":"Questionable Concoction"}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Use to either heal your own king or damage the enemy king."}','{"text":"You must be within close range of your target to use it!"}']},EntityTag:{Silent:1b,Invulnerable:1b,Tags:["concoctionred","concoction"]},Enchantments:[{}]} 1
 
@@ -1496,9 +1504,9 @@ tp @e[type=bat,tag=concoction] ~ -100 ~
  
 #Arrow of Justice (Archer Alt. Ultimate)
 
-execute as @a[scores={Kit=5,Ultimate=15},predicate=!commands:inventory/bow_of_justice] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s JusticeTimer 1
+execute as @a[scores={Kit=5,Ultimate=15},tag=!notAlive,predicate=!commands:inventory/bow_of_justice] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s JusticeTimer 1
  
-give @a[scores={JusticeTimer=3000..}] bow{CustomModelData:73,display:{Name:'{"text":"Bow of Justice","italic":false}',Lore:['{"text":"One shots nearly anything."}','{"text":"Can only be used once and can be deflected by shields."}','{"text":"Also cannot be used near a king."}','{"text":"If you kill a player with this, you will get the bow of justice back."}','{"text":"If successful, it must be used again within 15s or else it will disappear."}']},HideFlags:33,Damage:384,ultimateitem:1b,bowofjustice:1b,Enchantments:[{id:"minecraft:power",lvl:200s},{id:"minecraft:infinity",lvl:1s}]} 1
+give @a[scores={JusticeTimer=3000..}] bow{CustomModelData:73,display:{Name:'{"text":"Bow of Justice","italic":false}',Lore:['{"text":"One shots nearly anything."}','{"text":"Can only be used once and can be deflected by shields."}','{"text":"Also cannot be used near a king."}','{"text":"If you kill a player with this, you will get the bow of justice back."}','{"text":"If successful, it must be used again within 15s or else it will disappear."}']},HideFlags:33,Damage:384,ultimateitem:1b,bowofjustice:1b,Enchantments:[{id:"minecraft:power",lvl:100s},{id:"minecraft:infinity",lvl:1s}]} 1
 
 scoreboard players set @a[scores={JusticeTimer=3000..}] JusticeTimer 0
 
@@ -1512,7 +1520,7 @@ tag @a[scores={died=1..}] remove justiceKill
 
 #Overcharge (Wizard Alt. Ultimate)
 
-execute as @a[scores={Kit=6,Ultimate=16},predicate=!commands:inventory/overcharge] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s MinionTimer 1
+execute as @a[scores={Kit=6,Ultimate=16},tag=!notAlive,predicate=!commands:inventory/overcharge] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s MinionTimer 1
  
 give @a[scores={MinionTimer=3600..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Overcharge","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Supercharges your active minions."}','{"text":"All of them will receive strong buffs, regardless of where they are."}']},CustomModelData:75,ultimateitem:1b,overcharge:1b,Enchantments:[{}]} 1
 
@@ -1532,7 +1540,7 @@ execute as @e[type=zombie,limit=1,scores={OCTimer=600..}] run function commands:
 
 #Flying Dutchman (Pirate Alt. Ultimate)
 
-execute as @a[scores={Kit=7,Ultimate=17},predicate=!commands:inventory/flying_dutchman] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s fDutchmanTimer 1
+execute as @a[scores={Kit=7,Ultimate=17},tag=!notAlive,predicate=!commands:inventory/flying_dutchman] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s fDutchmanTimer 1
 
 give @a[scores={fDutchmanTimer=3000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Flying Dutchman","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Summons an invincible boat 10 blocks in the air, then teleports up to 2 teammates to it, including yourself."}','{"text":"The boat will float in the air and is controllable."}','{"text":"The boat will also drop high power fireballs every 0.75s."}','{"text":"The boat will disappear after 14 seconds."}']},CustomModelData:139,ultimateitem:1b,flyingdutchman:1b} 1
 
@@ -1556,7 +1564,7 @@ execute as @e[type=boat,scores={fDutchmanDur=280..}] run function commands:ultim
 
 #Artificial Intelligence (Robot Alt. Ultimate)
 
-execute as @a[scores={Kit=10,Ultimate=20},predicate=!commands:inventory/artificial_intelligence] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s RobotTimer 1
+execute as @a[scores={Kit=10,Ultimate=20},tag=!notAlive,predicate=!commands:inventory/artificial_intelligence] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s RobotTimer 1
 
 give @a[team=Red,scores={RobotTimer=3600..}] bat_spawn_egg{CustomModelData:83,CanPlaceOn:["#commands:can_place_on"],ultimateitem:1b,ai:1b,HideFlags:16,display:{Name:'{"text":"Artificial Intelligence","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Summons a strong robot ally."}','{"text":"The robot chases after enemies and is tough to kill."}']},EntityTag:{Silent:1b,Invulnerable:1b,Tags:["AIred","AI"]},Enchantments:[{}]} 1
 
@@ -1860,7 +1868,7 @@ title @a[scores={Kit=9},predicate=commands:inventory/fish_cannon,predicate=comma
 
 #Scourge of the Seas (Poseidon Ultimate)
 
-execute as @a[scores={Ultimate=9},predicate=!commands:inventory/scourge_of_the_seas] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s scourgeTimer 1
+execute as @a[scores={Ultimate=9},tag=!notAlive,predicate=!commands:inventory/scourge_of_the_seas] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s scourgeTimer 1
 
 give @a[scores={scourgeTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Scourge of the Seas","color":"dark_aqua","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Call forth a rainstorm while boosting your speed and resistance."}','{"text":"You will receive a trident with riptide and higher damage."}','{"text":"Lasts 15 seconds."}']},CustomModelData:80,ultimateitem:1b,scourge:1b,Enchantments:[{}]} 1
 
@@ -1882,7 +1890,7 @@ scoreboard players reset @a[scores={scourgeDuration=300..}] scourgeDuration
 
 #Terror of the Seas (Poseidon Alt. Ultimate)
 
-execute as @a[scores={Ultimate=19},predicate=!commands:inventory/terror_of_the_seas] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s terrorTimer 1
+execute as @a[scores={Ultimate=19},tag=!notAlive,predicate=!commands:inventory/terror_of_the_seas] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s terrorTimer 1
 
 give @a[team=Red,scores={terrorTimer=3200..}] minecraft:elder_guardian_spawn_egg{CustomModelData:81,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Terror of the Seas","color":"#0011FF","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Summons the terror of the seas."}','{"text":"This elder guardian has increased stats and gives mining fatigue"}','{"text":"to all enemies."}']},terroroftheseasred:1b,ultimateitem:1b,terroroftheseas:1b,EntityTag:{Team:"Red",Health:60f,Tags:["terrorRed","terror"],Attributes:[{Name:generic.max_health,Base:60},{Name:generic.attack_damage,Base:25}]},Enchantments:[{}]} 1
 
@@ -2096,7 +2104,7 @@ tag @a remove scrambled
 
 #Dinner's Ready! (Chef Ultimate)
 
-execute as @a[scores={Ultimate=21},predicate=!commands:inventory/dinners_ready] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s dinnerTimer 1
+execute as @a[scores={Ultimate=21},tag=!notAlive,predicate=!commands:inventory/dinners_ready] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s dinnerTimer 1
 
 give @a[scores={dinnerTimer=3400..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Dinner\'s Ready!","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":"Creates a circle of food around the chef."}','{"text":"Nearby teammates receive a wide variety of buffs around "}','{"text":"Serve up a buffet of food for your team."}']},CustomModelData:104,ultimateitem:1b,dinnersready:1b,Enchantments:[{}]} 1
 
@@ -2118,7 +2126,7 @@ execute as @a[scores={dinnerEnd=300..}] run function commands:ultimates/dinners_
 
 #Closing Time (Chef Alt. Ultimate Classic Mode)
 
-execute if score #gamemode settings matches 0 as @a[scores={Ultimate=22},predicate=!commands:inventory/closing_time] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s closingTimer 1
+execute if score #gamemode settings matches 0 as @a[scores={Ultimate=22},tag=!notAlive,predicate=!commands:inventory/closing_time] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s closingTimer 1
 
 give @a[scores={closingTimer=3400..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Closing Time","color":"#4F3557","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":"Closes off the throne room of the castle you are closest to."}']},CustomModelData:105,ultimateitem:1b,closingtime:1b,Enchantments:[{}]} 1
 
@@ -2344,7 +2352,7 @@ execute as @e[type=armor_stand,tag=cCannonMarker,scores={cCannonTimer=60..}] at 
 
 #Meteor Shower (Dragon Ultimate)
 
-execute as @a[scores={Ultimate=23},predicate=!commands:inventory/meteor_shower] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s mShowerTimer 1
+execute as @a[scores={Ultimate=23},tag=!notAlive,predicate=!commands:inventory/meteor_shower] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s mShowerTimer 1
 
 give @a[scores={mShowerTimer=3600..}] minecraft:bat_spawn_egg{HideFlags:16,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Meteor Shower","color":"#FF0ABE","italic":false}',Lore:['{"text":"Drops meteors from the sky."}','{"text":"Meteors will drop in a 10 block radius centered on where you used the ultimate."}','{"text":"Meteors can vary in power."}','{"text":"Lasts 10 seconds."}']},CustomModelData:116,ultimateitem:1b,meteorshower:1b,EntityTag:{Tags:["meteorshower"]}} 1
 
@@ -2364,7 +2372,7 @@ execute as @e[type=area_effect_cloud,tag=mShowerPoint,scores={mShowerTimer=200..
 
 #Evolution (Dragon Alt. Ultimate)
 
-execute as @a[scores={Ultimate=24},predicate=!commands:inventory/evolution] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s evolutionTimer 1
+execute as @a[scores={Ultimate=24},tag=!notAlive,predicate=!commands:inventory/evolution] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s evolutionTimer 1
 
 give @a[scores={evolutionTimer=3600..}] minecraft:carrot_on_a_stick{CanPlaceOn:["minecraft:can_place_on"],display:{Name:'{"text":"Evolution","color":"#A100FF","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":"Take to the skies, receiving a pair of wings and fireworks."}','{"text":"Lasts 12 seconds."}']},HideFlags:16,CustomModelData:117,ultimateitem:1b,evolutionUlt:1b} 1
 
@@ -2554,21 +2562,21 @@ execute unless entity @e[type=skeleton,tag=redroyalguard] if score #gamemode set
 
 execute unless entity @e[type=skeleton,tag=blueroyalguard] if score #gamemode settings matches 0 run scoreboard players add #blueroyalguard royalguardCD 1
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 if score #redroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 12 57 -209 {PersistenceRequired:1b,Team:"Red",Health:75f,Tags:["redroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:16711680},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:75},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 if score #redroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 12 57 -209 {PersistenceRequired:1b,Team:"Red",Health:65f,Tags:["redroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:16711680},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:65},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 if score #redroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 6 57 -209 {PersistenceRequired:1b,Team:"Red",Health:75f,Tags:["redroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:16711680},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:75},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 if score #redroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 6 57 -209 {PersistenceRequired:1b,Team:"Red",Health:65f,Tags:["redroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:16711680},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:65},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 if score #blueroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 12 57 -55 {PersistenceRequired:1b,Team:"Blue",Health:75f,Tags:["blueroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:4607},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:75},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 if score #blueroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 12 57 -55 {PersistenceRequired:1b,Team:"Blue",Health:65f,Tags:["blueroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:4607},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:65},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 if score #blueroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 6 57 -55 {PersistenceRequired:1b,Team:"Blue",Health:75f,Tags:["blueroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:4607},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:75},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 if score #blueroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 6 57 -55 {PersistenceRequired:1b,Team:"Blue",Health:65f,Tags:["blueroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:4607},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:65},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if score #redroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 150 57 -1020 {PersistenceRequired:1b,Team:"Red",Health:75f,Tags:["redroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:16711680},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:75},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if score #redroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 150 57 -1020 {PersistenceRequired:1b,Team:"Red",Health:65f,Tags:["redroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:16711680},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:65},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if score #redroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 150 57 -1014 {PersistenceRequired:1b,Team:"Red",Health:75f,Tags:["redroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:16711680},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:75},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if score #redroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 150 57 -1014 {PersistenceRequired:1b,Team:"Red",Health:65f,Tags:["redroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:16711680},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:65},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if score #blueroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 42 57 -1122 {PersistenceRequired:1b,Team:"Blue",Health:75f,Tags:["blueroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:4607},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:75},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if score #blueroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 42 57 -1122 {PersistenceRequired:1b,Team:"Blue",Health:65f,Tags:["blueroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:4607},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:65},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if score #blueroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 48 57 -1122 {PersistenceRequired:1b,Team:"Blue",Health:75f,Tags:["blueroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:4607},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:75},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if score #blueroyalguard royalguardCD matches 2400 run summon minecraft:skeleton 48 57 -1122 {PersistenceRequired:1b,Team:"Blue",Health:65f,Tags:["blueroyalguard","royalguard"],HandItems:[{id:"minecraft:iron_sword",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}]}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{id:"minecraft:iron_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_leggings",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:iron_chestplate",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}},{id:"minecraft:leather_helmet",Count:1b,tag:{display:{color:4607},Unbreakable:1b,Enchantments:[{id:"minecraft:projectile_protection",lvl:5s}]}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:generic.max_health,Base:65},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.movement_speed,Base:-1.0},{Name:generic.attack_damage,Base:12}]}
 
 execute if score #redroyalguard royalguardCD matches 2400.. run scoreboard players reset #redroyalguard royalguardCD
 
@@ -2586,7 +2594,9 @@ execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_thr
 
 execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 1 run teleport @s ~0.2 ~ ~
 
-execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s run teleport @s ~ ~ ~0.2
+execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 0 run teleport @s ~ ~ ~0.2
+
+execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 1 run teleport @s ~ ~ ~-0.2
 
 #Wizard minions die when wizard dies
 
@@ -2632,7 +2642,7 @@ execute as @e[type=zombified_piglin,tag=oven,scores={ovenDur=1600..}] at @s run 
 
 #Pizza Time (Chef Alt. Ultimate TDM)
 
-execute if score #gamemode settings matches 1 as @a[scores={Ultimate=22},predicate=!commands:inventory/pizza_time] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s pizzaTimer 1
+execute if score #gamemode settings matches 1 as @a[scores={Ultimate=22},tag=!notAlive,predicate=!commands:inventory/pizza_time] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s pizzaTimer 1
 
 give @a[scores={pizzaTimer=3000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Pizza Time","color":"#FF5E00","italic":false}',Lore:['{"text":"Overloads your active ovens."}','{"text":"Overloaded ovens shoot every second instead of every 8 seconds."}']},Unbreakable:1b,CustomModelData:136,pizzatime:1b,Enchantments:[{}]} 1
 
@@ -2663,16 +2673,6 @@ execute if score #gamemode settings matches 1 run scoreboard players add @a[pred
 execute as @a[scores={tdmSpawnTime=300..}] at @s run function commands:starting/tdm_spawn
 
 execute if score #gamemode settings matches 1 run scoreboard players reset @a[predicate=!commands:in_tdm_gates] tdmSpawnTime
-
-#Money Highlight (Gambler Passive)
-
-execute if entity @a[team=Red,scores={Kit=13}] as @e[type=item,nbt={Item:{tag:{moneyitem:1b}}}] at @s run particle dust 0.933 1.000 0.000 1 ~ ~0.75 ~ 0 0 0 1 0 normal @a[team=Red]
-
-execute if entity @a[team=Blue,scores={Kit=13}] as @e[type=item,nbt={Item:{tag:{moneyitem:1b}}}] at @s run particle dust 0.933 1.000 0.000 1 ~ ~0.75 ~ 0 0 0 1 0 normal @a[team=Blue]
-
-#Money Magnet (Gambler Upgrade Passive)
-
-execute as @a[tag=upgraded,scores={Kit=13},predicate=!commands:is_sneaking] at @s run teleport @e[type=item,nbt={Item:{tag:{moneyitem:1b}}},distance=..4] @s
 
 #Russian Roulette
 
@@ -2722,7 +2722,7 @@ kill @e[type=item,tag=coinBullet,nbt={OnGround:1b}]
 
 #Busted (Gambler Ultimate)
 
-execute as @a[scores={Ultimate=25},predicate=!commands:inventory/busted] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s bustedTimer 1
+execute as @a[scores={Ultimate=25},tag=!notAlive,predicate=!commands:inventory/busted] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s bustedTimer 1
 
 give @a[scores={bustedTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Busted!","color":"gold","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Severely damages all enemies above 21 HP."}','{"text":"Affected players will also lose all of their healing buffs."}']},Enchantments:[{}],CustomModelData:149,ultimateitem:1b,busted:1b} 1
 
@@ -2730,15 +2730,21 @@ scoreboard players reset @a[scores={bustedTimer=3200..}] bustedTimer
 
 execute as @a[scores={usedCOAS=1..},predicate=commands:holding/busted] run function commands:ultimates/busted
 
-#Bad Credit (Gambler Alt. Ultimate)
+#Sleight of Hand (Gambler Alt Ultimate)
 
-execute as @a[scores={Ultimate=26},predicate=!commands:inventory/bad_credit] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s bCreditTimer 1
+execute as @a[scores={Ultimate=26},tag=!notAlive,predicate=!commands:inventory/sleight_of_hand] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s sleightTimer 1
 
-give @a[scores={bCreditTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Bad Credit","color":"gold","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Disrupts the enemy team\'s economy."}','{"text":"All enemies no longer receive passive money."}','{"text":"Depositing money will only yield 70 Siege Bucks (100 for Pirate)."}','{"text":"Lasts until death."}']},Enchantments:[{}],CustomModelData:150,ultimateitem:1b,badcredit:1b} 1
+give @a[scores={sleightTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Sleight of Hand","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Supercharges your Playing Cards."}','{"text":"Reduces cooldown of playing cards to 3s."}','{"text":"Also causes the last two cards to always have a value of 13."}','{"text":"Lasts 15s."}']},CustomModelData:166,sleightofhand:1b} 1
 
-scoreboard players reset @a[scores={bCreditTimer=3200..}] bCreditTimer
+scoreboard players reset @a[scores={sleightTimer=3200..}] sleightTimer
 
-execute as @a[scores={usedCOAS=1..},predicate=commands:holding/bad_credit] run function commands:ultimates/bad_credit
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/sleight_of_hand] run function commands:ultimates/sleight_of_hand
+
+scoreboard players add @a[tag=sleightofhand] sleightDur 1
+
+tag @a[scores={sleightDur=300..}] remove sleightofhand
+
+scoreboard players reset @a[scores={sleightDur=300..}] sleightDur
 
 #Playing Cards
 
@@ -2790,6 +2796,12 @@ execute if score #gameDuration gameDuration matches 18000 if score #gamemode set
 
 execute if score #gameDuration gameDuration matches 18000 if score #gamemode settings matches 0 run title @a subtitle {"text":"The game has been going on for 15 minutes!","color":"green"}
 
+execute if score #gameDuration gameDuration matches 18000 if score #gamemode settings matches 0 run scoreboard players set @a[predicate=commands:in_any_battlefield] Respawn -101
+
+execute if score #gameDuration gameDuration matches 18000 if score #gamemode settings matches 0 run scoreboard players set @a[predicate=commands:in_any_battlefield] RedKit -101
+
+execute if score #gameDuration gameDuration matches 18000 if score #gamemode settings matches 0 run scoreboard players set @a[predicate=commands:in_any_battlefield] BlueKit -101
+
 execute if score #loseKingHP gameDuration matches 20.. as @e[type=wither_skeleton,tag=King] run function commands:other/lower_king_hp
 
 #Teleport to Dungeons
@@ -2835,6 +2847,8 @@ scoreboard players reset @a[scores={usedCOAS=1..}] usedCOAS
 scoreboard players reset @a[scores={damage=1..}] damage
 
 scoreboard players reset @a[scores={died=1..}] killStreak
+
+scoreboard players reset @a[scores={died=1..}] Mimic
 
 scoreboard players reset @a[scores={damageTaken=1..}] damageTaken
 

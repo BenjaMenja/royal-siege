@@ -4,6 +4,10 @@ tag @a[x=-1402,y=60,z=1194,distance=..5] remove rodeHorse
 
 scoreboard players reset @a[x=-1402,y=60,z=1194,distance=..5] Mimic
 
+execute if score #gameDuration gameDuration matches ..18000 if score #gamemode settings matches 0 run title @a[scores={Respawn=-100},team=Red] times 10 170 20
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run title @a[scores={Respawn=-100},team=Red] times 10 270 20
+
 execute if score #gamemode settings matches 0 run title @a[scores={Respawn=1},team=Red] times 10 170 20
 
 execute if score #gamemode settings matches 1 run title @a[scores={Respawn=91},team=Red] times 10 80 20
@@ -11,6 +15,16 @@ execute if score #gamemode settings matches 1 run title @a[scores={Respawn=91},t
 execute if score #gamemode settings matches 0 run title @a[team=Red,scores={Respawn=11}] title ["",{"text":"Spawning in...","color":"blue"}]
 
 execute if score #gamemode settings matches 1 run title @a[team=Red,scores={Respawn=101}] title ["",{"text":"Spawning in...","color":"blue"}]
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run title @a[team=Red,scores={Respawn=-100}] subtitle ["",{"text":"15","color":"green"}]
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run title @a[team=Red,scores={Respawn=-80}] subtitle ["",{"text":"14","color":"green"}]
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run title @a[team=Red,scores={Respawn=-60}] subtitle ["",{"text":"13","color":"green"}]
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run title @a[team=Red,scores={Respawn=-40}] subtitle ["",{"text":"12","color":"green"}]
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run title @a[team=Red,scores={Respawn=-20}] subtitle ["",{"text":"11","color":"green"}]
 
 title @a[team=Red,scores={Respawn=2}] subtitle ["",{"text":"10","color":"green"}]
 

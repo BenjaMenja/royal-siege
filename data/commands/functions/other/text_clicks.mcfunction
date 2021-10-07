@@ -226,7 +226,7 @@ execute if score @s textClick matches 113 run function commands:shops/multi_barr
 
 execute if score @s textClick matches 114 run function commands:starting/ultimate_select/busted
 
-execute if score @s textClick matches 115 run function commands:starting/ultimate_select/bad_credit
+execute if score @s textClick matches 115 run function commands:starting/ultimate_select/sleight_of_hand
 
 execute if score @s textClick matches 116 run function commands:shops/russian_roulette
 

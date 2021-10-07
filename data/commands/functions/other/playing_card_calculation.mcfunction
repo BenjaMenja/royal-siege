@@ -3,6 +3,10 @@
 loot spawn ~ -5 ~ loot commands:rng/card_value
 execute as @e[type=item,nbt={Item:{tag:{cardvalue:1b}}}] store result score #rng RNG run data get entity @s Item.tag.AttributeModifiers.[{}].Amount
 scoreboard players operation @s cardValue = #rng RNG
+execute at @s[tag=card6,tag=redProj] if entity @a[tag=cardShooter,tag=sleightofhand,team=Red] run scoreboard players set @s cardValue 13
+execute at @s[tag=card7,tag=redProj] if entity @a[tag=cardShooter,tag=sleightofhand,team=Red] run scoreboard players set @s cardValue 13
+execute at @s[tag=card6,tag=blueProj] if entity @a[tag=cardShooter,tag=sleightofhand,team=Blue] run scoreboard players set @s cardValue 13
+execute at @s[tag=card7,tag=blueProj] if entity @a[tag=cardShooter,tag=sleightofhand,team=Blue] run scoreboard players set @s cardValue 13
 kill @e[type=item,nbt={Item:{tag:{cardvalue:1b}}}]
 
 loot spawn ~ -5 ~ loot commands:rng/card_suite

@@ -8,7 +8,7 @@ give @s[scores={Ultimate=3}] minecraft:carrot_on_a_stick{display:{Name:'{"text":
 
 give @s[scores={Ultimate=4}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Life Force","color":"#C90606","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Gives everyone on your team a big boost in health for a short time"}']},CustomModelData:70,lifeforce:1b,ultimateitem:1b,Enchantments:[{}]} 1
 
-give @s[scores={Ultimate=5}] crossbow{CustomModelData:72,display:{Name:'{"text":"Chaos Bow","color":"#FFF954","italic":false}',Lore:['{"text":"Shoots very quickly and shoots"}','{"text":"3 arrows at a time."}']},Unbreakable:1b,Enchantments:[{id:"minecraft:multishot",lvl:1s},{id:"minecraft:quick_charge",lvl:5s}],ultimateitem:1b,chaosbow:1b} 1
+give @s[scores={Ultimate=5}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Chaos Bow Voucher","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Redeemable for a Chaos Bow."}','{"text":"The bow lasts 20s."}']},CustomModelData:165,ultimateitem:1b,chaosbowvoucher:1b} 1
 
 give @s[scores={Ultimate=6}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Kerfuffle","color":"#681CFF","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Scrambles the inventory of everyone on the opposing team,"}','{"text":" then give them blindness."}']},CustomModelData:74,ultimateitem:1b,kerfuffle:1b,Enchantments:[{}]} 1
 

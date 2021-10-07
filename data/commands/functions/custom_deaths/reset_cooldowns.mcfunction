@@ -47,3 +47,5 @@ scoreboard players set @s dragonRushTimer 1
 scoreboard players set @s dragonRageTimer 1
 
 scoreboard players set @s pCardsTimer 1
+
+scoreboard players set @s chaosBowDur 0

@@ -62,6 +62,8 @@ execute as @e[tag=pCard,tag=!stop] run function commands:other/playing_card_calc
 
 tag @e[tag=pCard] add stop
 
-scoreboard players set @s pCardsTimer 240
+scoreboard players set @s[tag=!sleightofhand] pCardsTimer 240
+
+scoreboard players set @s[tag=sleightofhand] pCardsTimer 60
 
 tag @s remove cardShooter

@@ -4,13 +4,25 @@ tag @a[x=-1402,y=60,z=1230,distance=..5] remove rodeHorse
 
 scoreboard players reset @a[x=-1402,y=60,z=1230,distance=..5] Mimic
 
-execute if score #gamemode settings matches 0 run title @a[scores={Respawn=1},team=Blue] times 10 170 20
+execute if score #gameDuration gameDuration matches ..18000 if score #gamemode settings matches 0 run title @a[scores={Respawn=-100},team=Blue] times 10 170 20
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run title @a[scores={Respawn=-100},team=Blue] times 10 270 20
 
 execute if score #gamemode settings matches 1 run title @a[scores={Respawn=91},team=Blue] times 10 80 20
 
 execute if score #gamemode settings matches 0 run title @a[team=Blue,scores={Respawn=11}] title ["",{"text":"Spawning in...","color":"blue"}]
 
 execute if score #gamemode settings matches 1 run title @a[team=Blue,scores={Respawn=101}] title ["",{"text":"Spawning in...","color":"blue"}]
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run title @a[team=Blue,scores={Respawn=-100}] subtitle ["",{"text":"15","color":"green"}]
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run title @a[team=Blue,scores={Respawn=-80}] subtitle ["",{"text":"14","color":"green"}]
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run title @a[team=Blue,scores={Respawn=-60}] subtitle ["",{"text":"13","color":"green"}]
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run title @a[team=Blue,scores={Respawn=-40}] subtitle ["",{"text":"12","color":"green"}]
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run title @a[team=Blue,scores={Respawn=-20}] subtitle ["",{"text":"11","color":"green"}]
 
 title @a[team=Blue,scores={Respawn=2}] subtitle ["",{"text":"10","color":"green"}]
 
