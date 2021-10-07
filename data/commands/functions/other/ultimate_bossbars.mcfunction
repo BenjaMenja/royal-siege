@@ -50,7 +50,7 @@ execute if entity @s[team=Blue,scores={Ultimate=24}] store result bossbar comman
 
 execute if entity @s[team=Blue,scores={Ultimate=25}] store result bossbar commands:blue_ult25 value run scoreboard players get @s[team=Blue,scores={Ultimate=25}] bustedTimer
 
-execute if entity @s[team=Blue,scores={Ultimate=26}] store result bossbar commands:blue_ult26 value run scoreboard players get @s[team=Blue,scores={Ultimate=26}] bCreditTimer
+execute if entity @s[team=Blue,scores={Ultimate=26}] store result bossbar commands:blue_ult26 value run scoreboard players get @s[team=Blue,scores={Ultimate=26}] sleightTimer
 
 execute if entity @s[team=Red,scores={Ultimate=1}] store result bossbar commands:red_ult1 value run scoreboard players get @s[team=Red,scores={Ultimate=1}] Ninjault
 
@@ -104,4 +104,4 @@ execute if entity @s[team=Red,scores={Ultimate=24}] store result bossbar command
 
 execute if entity @s[team=Red,scores={Ultimate=25}] store result bossbar commands:red_ult25 value run scoreboard players get @s[team=Red,scores={Ultimate=25}] bustedTimer
 
-execute if entity @s[team=Red,scores={Ultimate=26}] store result bossbar commands:red_ult26 value run scoreboard players get @s[team=Red,scores={Ultimate=26}] bCreditTimer
+execute if entity @s[team=Red,scores={Ultimate=26}] store result bossbar commands:red_ult26 value run scoreboard players get @s[team=Red,scores={Ultimate=26}] sleightTimer

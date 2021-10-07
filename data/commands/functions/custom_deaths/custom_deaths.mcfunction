@@ -122,6 +122,4 @@ tag @s[tag=ultimateInv] add hadUltimate
 
 scoreboard players set @s Message 0
 
-tag @s remove badCredit
-
 execute as @a[scores={Message=1..},limit=1] run function commands:custom_deaths/custom_deaths

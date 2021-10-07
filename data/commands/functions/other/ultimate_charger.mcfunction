@@ -50,7 +50,7 @@ scoreboard players add @s[scores={Ultimate=24}] evolutionTimer 5000
 
 scoreboard players add @s[scores={Ultimate=25}] bustedTimer 5000
 
-scoreboard players add @s[scores={Ultimate=26}] bCreditTimer 5000
+scoreboard players add @s[scores={Ultimate=26}] sleightTimer 5000
 
 tag @s remove hadUltimate
 

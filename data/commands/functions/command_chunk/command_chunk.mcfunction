@@ -1386,9 +1386,9 @@ kill @e[type=arrow,scores={Timer=80..}]
 
 #more money from defending
 
-execute as @a[team=Red,predicate=commands:in_any_red_castle,tag=!badCredit] run scoreboard players add @s Timer 1
+execute as @a[team=Red,predicate=commands:in_any_red_castle] run scoreboard players add @s Timer 1
 
-execute as @a[team=Blue,predicate=commands:in_any_blue_castle,tag=!badCredit] run scoreboard players add @s Timer 1
+execute as @a[team=Blue,predicate=commands:in_any_blue_castle] run scoreboard players add @s Timer 1
 
 #kill multiple cavalry horses
 
@@ -2734,7 +2734,7 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/busted] run funct
 
 execute as @a[scores={Ultimate=26},tag=!notAlive,predicate=!commands:inventory/sleight_of_hand] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s sleightTimer 1
 
-give @a[scores={sleightTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Sleight of Hand","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Supercharges your Playing Cards."}','{"text":"Reduces cooldown of playing cards to 3s."}','{"text":"Also causes the last two cards to always have a value of 13."}','{"text":"Lasts 15s."}']},CustomModelData:166,sleightofhand:1b} 1
+give @a[scores={sleightTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Sleight of Hand","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Supercharges your Playing Cards."}','{"text":"Reduces cooldown of playing cards to 2s."}','{"text":"Also causes the last two cards to always have a value of 13."}','{"text":"Lasts 15s."}']},CustomModelData:166,sleightofhand:1b} 1
 
 scoreboard players reset @a[scores={sleightTimer=3200..}] sleightTimer
 

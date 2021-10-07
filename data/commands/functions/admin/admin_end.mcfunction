@@ -28,6 +28,8 @@ tag @a remove spectator
 
 tag @a remove wipeKill
 
+tag @a remove reloading
+
 execute as @p[tag=End] at @s run scoreboard players set @e[tag=Treeoflife] Treeremove 201
 
 execute as @p[tag=End] at @s run scoreboard players set @e[tag=TreeoflifeBlue] Treeremove 201

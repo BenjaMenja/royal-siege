@@ -18,6 +18,8 @@ tag @a remove watchRed
 
 tag @a remove watchBlue
 
+tag @a remove reloading
+
 scoreboard players reset #redroyalguard royalguardCD
 
 scoreboard players reset #blueroyalguard royalguardCD
