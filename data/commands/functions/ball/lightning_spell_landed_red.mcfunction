@@ -1,4 +1,4 @@
-
+execute if score #poseidonvoicered voicelineCD matches 60.. run playsound royalsiege:abilities.lightning_spell master @a[team=Blue,distance=..4] ~ ~ ~ 1 1
 
 execute at @a[team=Blue,distance=..4,predicate=!commands:in_tdm_gates] run summon lightning_bolt
 

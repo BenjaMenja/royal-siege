@@ -1822,6 +1822,12 @@ execute as @e[type=item,tag=squidzooka] at @s if score @s nearbyBlocks matches 1
 
 tag @a[tag=squidzooking] remove squidzooking
 
+#Poseidon Voice Line CD
+
+scoreboard players add #poseidonvoicered voicelineCD 1
+
+scoreboard players add #poseidonvoiceblue voicelineCD 1
+
 #Poseidon Passive (Lightning Spells)
 
 scoreboard players remove @a[scores={Kit=9,multiItems=..4},predicate=commands:in_any_battlefield,tag=!notAlive,tag=!upgraded] poseidonPassive 1
@@ -1901,6 +1907,14 @@ scoreboard players set @a[scores={terrorTimer=3200..}] terrorTimer 0
 execute as @e[type=elder_guardian,tag=terrorRed,tag=!stop] run tellraw @a [{"selector":"@a[team=Red,scores={Ultimate=19}]"},{"text":" has awoken the Terror of the Seas!"}]
 
 execute as @e[type=elder_guardian,tag=terrorBlue,tag=!stop] run tellraw @a [{"selector":"@a[team=Blue,scores={Ultimate=19}]"},{"text":" has awoken the Terror of the Seas!"}]
+
+execute if entity @e[type=elder_guardian,tag=terrorRed,tag=!stop] run playsound royalsiege:ultimates.terror_of_the_seas_friendly master @a[team=Red] ~ ~ ~ 100 1
+
+execute if entity @e[type=elder_guardian,tag=terrorRed,tag=!stop] run playsound royalsiege:ultimates.terror_of_the_seas_enemy master @a[team=Blue] ~ ~ ~ 100 1
+
+execute if entity @e[type=elder_guardian,tag=terrorBlue,tag=!stop] run playsound royalsiege:ultimates.terror_of_the_seas_friendly master @a[team=Blue] ~ ~ ~ 100 1
+
+execute if entity @e[type=elder_guardian,tag=terrorBlue,tag=!stop] run playsound royalsiege:ultimates.terror_of_the_seas_enemy master @a[team=Red] ~ ~ ~ 100 1
 
 tag @e[type=elder_guardian,tag=terrorRed] add stop
 
