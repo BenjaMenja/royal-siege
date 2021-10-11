@@ -190,15 +190,15 @@ execute as @e[type=arrow,nbt={damage:6.0d}] run data merge entity @s {NoGravity:
 
 #Chaos Bow (Archer Ultimate)
 
-execute as @a[scores={Kit=5,Ultimate=5},tag=!notAlive,predicate=!commands:inventory/chaos_bow_voucher] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s ChaosTimer 1
+execute as @a[scores={Kit=5,Ultimate=5},tag=!notAlive,predicate=!commands:inventory/chaos_bow_token] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s ChaosTimer 1
 
-give @a[scores={ChaosTimer=4000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Chaos Bow Voucher","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Redeemable for a Chaos Bow."}','{"text":"The bow lasts 20s."}']},CustomModelData:165,ultimateitem:1b,chaosbowvoucher:1b} 1
+give @a[scores={ChaosTimer=4000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Chaos Bow Token","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Redeemable for a Chaos Bow."}','{"text":"The bow lasts 20s."}']},CustomModelData:165,ultimateitem:1b,chaosbowtoken:1b} 1
 
 scoreboard players reset @a[scores={ChaosTimer=4000..}] ChaosTimer
 
-execute as @a[scores={usedCOAS=1..},predicate=commands:holding/chaos_bow_voucher] run tellraw @a [{"selector":"@s"},{"text":" is going chaotic!"}]
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/chaos_bow_token] run tellraw @a [{"selector":"@s"},{"text":" is going chaotic!"}]
 
-item replace entity @a[scores={usedCOAS=1..},predicate=commands:holding/chaos_bow_voucher] weapon.mainhand with crossbow{CustomModelData:72,display:{Name:'{"text":"Chaos Bow","color":"#FFF954","italic":false}',Lore:['{"text":"Shoots very quickly and shoots"}','{"text":"3 arrows at a time."}']},Unbreakable:1b,Enchantments:[{id:"minecraft:multishot",lvl:1s},{id:"minecraft:quick_charge",lvl:5s}],chaosbow:1b} 1
+item replace entity @a[scores={usedCOAS=1..},predicate=commands:holding/chaos_bow_token] weapon.mainhand with crossbow{CustomModelData:72,display:{Name:'{"text":"Chaos Bow","color":"#FFF954","italic":false}',Lore:['{"text":"Shoots very quickly and shoots"}','{"text":"3 arrows at a time."}']},Unbreakable:1b,Enchantments:[{id:"minecraft:multishot",lvl:1s},{id:"minecraft:quick_charge",lvl:5s}],chaosbow:1b} 1
 
 scoreboard players add @a[predicate=commands:inventory/chaos_bow] chaosBowDur 1
 
