@@ -114,6 +114,12 @@ execute if entity @s[tag=hasBounty] run function commands:other/betting_chip_kil
 
 function commands:custom_deaths/reset_cooldowns
 
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players set @s Respawn -101
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players set @s RedKit -101
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players set @s BlueKit -101
+
 #Ultimate Check
 
 tag @s[tag=ultimateInv] add hadUltimate

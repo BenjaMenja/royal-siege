@@ -2748,7 +2748,7 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/busted] run funct
 
 execute as @a[scores={Ultimate=26},tag=!notAlive,predicate=!commands:inventory/sleight_of_hand] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s sleightTimer 1
 
-give @a[scores={sleightTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Sleight of Hand","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Supercharges your Playing Cards."}','{"text":"Reduces cooldown of playing cards to 2s."}','{"text":"Also causes the last two cards to always have a value of 13."}','{"text":"Lasts 15s."}']},CustomModelData:166,sleightofhand:1b} 1
+give @a[scores={sleightTimer=3200..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Sleight of Hand","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Supercharges your Playing Cards."}','{"text":"Reduces cooldown of playing cards to 2s."}','{"text":"Also causes the last two cards to always have a value of 13."}','{"text":"Lasts 15s."}']},CustomModelData:166,sleightofhand:1b,ultimateitem:1b} 1
 
 scoreboard players reset @a[scores={sleightTimer=3200..}] sleightTimer
 
@@ -2809,12 +2809,6 @@ execute if score #gameDuration gameDuration matches 18000.. if score #gamemode s
 execute if score #gameDuration gameDuration matches 18000 if score #gamemode settings matches 0 run title @a title {"text":"Your kings have been weakened!","color":"dark_red"}
 
 execute if score #gameDuration gameDuration matches 18000 if score #gamemode settings matches 0 run title @a subtitle {"text":"The game has been going on for 15 minutes!","color":"green"}
-
-execute if score #gameDuration gameDuration matches 18000 if score #gamemode settings matches 0 run scoreboard players set @a[predicate=commands:in_any_battlefield] Respawn -101
-
-execute if score #gameDuration gameDuration matches 18000 if score #gamemode settings matches 0 run scoreboard players set @a[predicate=commands:in_any_battlefield] RedKit -101
-
-execute if score #gameDuration gameDuration matches 18000 if score #gamemode settings matches 0 run scoreboard players set @a[predicate=commands:in_any_battlefield] BlueKit -101
 
 execute if score #loseKingHP gameDuration matches 20.. as @e[type=wither_skeleton,tag=King] run function commands:other/lower_king_hp
 

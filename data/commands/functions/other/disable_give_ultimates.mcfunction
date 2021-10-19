@@ -62,7 +62,7 @@ give @s[scores={Ultimate=24}] minecraft:bat_spawn_egg{CanPlaceOn:["#commands:can
 
 give @s[scores={Ultimate=25}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Busted!","color":"gold","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Severely damages all enemies above 21 HP."}','{"text":"Affected players will also lose all of their healing buffs."}']},CustomModelData:149,busted:1b,ultimateitem:1b} 1
 
-give @s[scores={Ultimate=26}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Sleight of Hand","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Supercharges your Playing Cards."}','{"text":"Reduces cooldown of playing cards to 2s."}','{"text":"Also causes the last two cards to always have a value of 13."}','{"text":"Lasts 15s."}']},CustomModelData:166,sleightofhand:1b} 1
+give @s[scores={Ultimate=26}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Sleight of Hand","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Supercharges your Playing Cards."}','{"text":"Reduces cooldown of playing cards to 2s."}','{"text":"Also causes the last two cards to always have a value of 13."}','{"text":"Lasts 15s."}']},CustomModelData:166,sleightofhand:1b,ultimateitem:1b} 1
 
 tag @s remove hadUltimate
 
