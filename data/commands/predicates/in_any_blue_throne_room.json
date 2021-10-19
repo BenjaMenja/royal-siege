@@ -2,48 +2,12 @@
   "condition": "minecraft:alternative",
   "terms": [
     {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "position": {
-            "x": {
-              "min": 3,
-              "max": 15
-            },
-            "y": {
-              "min": 57,
-              "max": 65
-            },
-            "z": {
-              "min": -69,
-              "max": -46
-            }
-          }
-        }
-      }
+      "condition": "minecraft:reference",
+      "name": "commands:in_blue_throne_room_forest_glen"
     },
     {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "position": {
-            "x": {
-              "min": 39,
-              "max": 51
-            },
-            "y": {
-              "min": 57,
-              "max": 65
-            },
-            "z": {
-              "min": -1130,
-              "max": -1107
-            }
-          }
-        }
-      }
+      "condition": "minecraft:reference",
+      "name": "commands:in_blue_throne_room_winterland"
     }
   ]
 }
