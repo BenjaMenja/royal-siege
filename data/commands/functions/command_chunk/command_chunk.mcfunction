@@ -254,6 +254,16 @@ effect clear @a[scores={Kit=12},tag=!upgraded] resistance
 
 effect clear @a[scores={Kit=12},tag=!upgraded] strength
 
+effect give @a[scores={Kit=14}] jump_boost 1 3 true
+
+effect give @a[predicate=!commands:is_sneaking,scores={Kit=14}] slow_falling 2 0 true
+
+effect give @a[predicate=commands:is_sneaking,scores={Kit=14}] levitation 1 200 true
+
+effect clear @a[predicate=!commands:is_sneaking,scores={Kit=14}] levitation
+
+effect clear @a[predicate=commands:is_sneaking,scores={Kit=14}] slow_falling
+
 #Gravity Spell
 
 execute as @e[type=bat,name=GravityRed] at @s run effect give @a[team=Blue] levitation 5 1 true
