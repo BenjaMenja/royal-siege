@@ -830,6 +830,8 @@ execute as @e[tag=stop,type=experience_bottle] store success entity @s Air short
 
 execute as @e[type=experience_orb] at @s run summon fireball ~ ~ ~ {CustomNameVisible:0b,ExplosionPower:3,power:[0.0,-2.0,0.0],CustomName:'{"text":"Experience Bomb","color":"green"}',Item:{id:"minecraft:experience_bottle",Count:1b},Tags:["fm"]}
 
+kill @e[type=experience_orb]
+
 #King Bossbar
 
 execute store result bossbar minecraft:redking value run data get entity @e[type=wither_skeleton,team=Red,tag=King,limit=1] Health
