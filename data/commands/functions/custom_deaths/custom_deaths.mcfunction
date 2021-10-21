@@ -124,6 +124,8 @@ execute if score #gameDuration gameDuration matches 18000.. if score #gamemode s
 
 tag @s[tag=ultimateInv] add hadUltimate
 
+tag @s add notAlive
+
 #Reset scores and run function again
 
 scoreboard players set @s Message 0

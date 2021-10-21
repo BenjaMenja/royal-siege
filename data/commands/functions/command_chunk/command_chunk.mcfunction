@@ -1334,6 +1334,12 @@ scoreboard players set @a[scores={KillP=1..}] KillP 0
 
 scoreboard players set @a[scores={Message=1..}] Message 0
 
+#Ultimate Checker
+
+scoreboard players add #ultChecker Timer 1
+
+execute if score #ultChecker Timer matches 5.. as @a[tag=!spectator] run function commands:other/ult_checker
+
 #Angel Items
 
 execute as @a[scores={Kit=4},predicate=!commands:inventory/assault_spell,predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s HealerItems 1
@@ -2658,7 +2664,7 @@ execute as @e[type=zombified_piglin,tag=oven,scores={ovenDur=1600..}] at @s run 
 
 execute if score #gamemode settings matches 1 as @a[scores={Ultimate=22},tag=!notAlive,predicate=!commands:inventory/pizza_time] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s pizzaTimer 1
 
-give @a[scores={pizzaTimer=3000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Pizza Time","color":"#FF5E00","italic":false}',Lore:['{"text":"Overloads your active ovens."}','{"text":"Overloaded ovens shoot every second instead of every 8 seconds."}']},Unbreakable:1b,CustomModelData:136,pizzatime:1b,Enchantments:[{}]} 1
+give @a[scores={pizzaTimer=3000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Pizza Time","color":"#FF5E00","italic":false}',Lore:['{"text":"Overloads your active ovens."}','{"text":"Overloaded ovens shoot every second instead of every 8 seconds."}']},Unbreakable:1b,CustomModelData:136,pizzatime:1b,ultimateitem:1b,Enchantments:[{}]} 1
 
 scoreboard players reset @a[scores={pizzaTimer=3000..}] pizzaTimer
 
@@ -2859,8 +2865,6 @@ scoreboard players reset @a[scores={died=1..}] killStreak
 scoreboard players reset @a[scores={died=1..}] Mimic
 
 scoreboard players reset @a[scores={damageTaken=1..}] damageTaken
-
-tag @a[scores={died=1..}] add notAlive
 
 execute as @a[scores={died=1..}] at @s run tag @e[type=item,distance=..5,scores={ItemKill=1..}] add delete
 
