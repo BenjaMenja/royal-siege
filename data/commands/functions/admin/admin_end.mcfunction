@@ -152,4 +152,6 @@ function commands:other/remove_bossbar_display
 
 time set 5000
 
+weather clear 1000000
+
 tag @a[tag=End] remove End

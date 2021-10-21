@@ -156,6 +156,8 @@ advancement revoke @a[advancements={commands:character_challenges/soup_of_the_we
 
 function commands:other/remove_bossbar_display
 
+weather clear 1000000
+
 time set 5000
 
 tag @a[tag=End] remove End
