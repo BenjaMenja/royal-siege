@@ -278,4 +278,16 @@ execute if score @s textClick matches 143 run function commands:settings/forest_
 
 execute if score @s textClick matches 144 run function commands:settings/winterland
 
+execute if score @s textClick matches 145 run function commands:shops/debris_cannon
+
+execute if score @s textClick matches 146 run function commands:shops/gravity_canceler
+
+execute if score @s textClick matches 147 run function commands:shops/rocket_boosters
+
+execute if score @s textClick matches 148 run function commands:shops/safety_tether
+
+execute if score @s textClick matches 149 run function commands:shops/gas_vacuum
+
+execute if score @s textClick matches 150 run function commands:shops/enhanced_space_helmet
+
 scoreboard players reset @a[scores={textClick=1..}] textClick

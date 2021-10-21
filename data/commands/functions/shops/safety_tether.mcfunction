@@ -1,0 +1,3 @@
+give @s[scores={Money=400..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Safety Tether","color":"#854905","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Creates a tether at your current location."}','{"text":"Using the ability again within 10 seconds will teleport you back to the tether."}','{"text":"If you move more than 30 blocks from the tether, it will break."}']},Unbreakable:1b,CustomModelData:175,safetytether:1b} 1
+
+scoreboard players remove @s[scores={Money=400..}] Money 400

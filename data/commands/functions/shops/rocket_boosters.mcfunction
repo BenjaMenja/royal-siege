@@ -1,0 +1,3 @@
+give @s[scores={Money=450..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Rocket Boosters","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Greatly increases speed of nearby teammates for a short time."}']},Unbreakable:1b,CustomModelData:174,rocketboosters:1b} 1
+
+scoreboard players remove @s[scores={Money=450..}] Money 450
