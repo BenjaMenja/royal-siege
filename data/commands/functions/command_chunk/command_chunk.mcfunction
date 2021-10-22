@@ -2852,6 +2852,10 @@ execute as @e[type=area_effect_cloud,tag=asteroidLand] unless predicate commands
 
 execute as @e[type=item,tag=asteroidshard,nbt={OnGround:1b}] at @s run function commands:other/asteroid_shard 
 
+#Rocket Boosters
+
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/rocket_boosters] at @s run function commands:other/rocket_boosters
+
 #Remove Arrows and tridents on ground
 
 kill @e[type=arrow,nbt={inGround:1b}]
