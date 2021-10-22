@@ -50,4 +50,6 @@ scoreboard players set @s pCardsTimer 1
 
 scoreboard players set @s chaosBowDur 0
 
-scoreboard playres set @s asteroidTimer 1
+scoreboard players set @s asteroidTimer 1
+
+scoreboard players set @s gravityTimer 1

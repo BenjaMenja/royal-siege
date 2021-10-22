@@ -264,19 +264,11 @@ effect clear @a[predicate=!commands:is_sneaking,scores={Kit=14}] levitation
 
 effect clear @a[predicate=commands:is_sneaking,scores={Kit=14}] slow_falling
 
-#Gravity Spell
+#Gravity Canceler
 
-execute as @e[type=bat,name=GravityRed] at @s run effect give @a[team=Blue] levitation 5 1 true
+scoreboard players remove @a[scores={gravityTimer=1..},predicate=commands:inventory/gravity_canceler,predicate=commands:in_any_battlefield,tag=!notAlive] gravityTimer 1
 
-execute if entity @e[type=bat,name=GravityRed] run tellraw @a [{"text":"Blue","color":"blue"},{"text":" team's gravity has been inverted!","color":"white"}]
-
-tp @e[type=bat,name=GravityRed] ~ -100 ~
-
-execute as @e[type=bat,name=GravityBlue] at @s run effect give @a[team=Red] levitation 5 1 true
-
-execute if entity @e[type=bat,name=GravityBlue] run tellraw @a [{"text":"Red","color":"red"},{"text":" team's gravity has been inverted!","color":"white"}]
-
-tp @e[type=bat,name=GravityBlue] ~ -100 ~
+execute as @a[scores={usedCOAS=1..,gravityTimer=..0},predicate=commands:holding/gravity_canceler] run function commands:other/gravity_canceler
 
 #Cavalry Slowing
 
