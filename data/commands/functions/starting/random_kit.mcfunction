@@ -36,6 +36,8 @@ execute as @a[team=Red] if score #rngRed RNG matches 12 unless score #rngRed RNG
 
 execute as @a[team=Red] if score #rngRed RNG matches 13 unless score #rngRed RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Red] Kit 13
 
+execute as @a[team=Red] if score #rngRed RNG matches 14 unless score #rngRed RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Red] Kit 14
+
 execute as @a[team=Blue] if score #rngBlue RNG matches 1 unless score #rngBlue RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Blue] Kit 1
 
 execute as @a[team=Blue] if score #rngBlue RNG matches 2 unless score #rngBlue RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Blue] Kit 2
@@ -61,6 +63,8 @@ execute as @a[team=Blue] if score #rngBlue RNG matches 11 unless score #rngBlue 
 execute as @a[team=Blue] if score #rngBlue RNG matches 12 unless score #rngBlue RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Blue] Kit 12
 
 execute as @a[team=Blue] if score #rngBlue RNG matches 13 unless score #rngBlue RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Blue] Kit 13
+
+execute as @a[team=Blue] if score #rngBlue RNG matches 14 unless score #rngBlue RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Blue] Kit 14
 
 scoreboard players reset #rngRed RNG
 

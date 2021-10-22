@@ -1,15 +1,33 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "type": "minecraft:player",
-    "effects": {
-      "minecraft:jump_boost": {
-        "amplifier": {
-          "min": 129,
-          "max": 255
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "effects": {
+          "minecraft:levitation": {
+            "amplifier": {
+              "min": 129,
+              "max": 255
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "effects": {
+          "minecraft:jump_boost": {
+            "amplifier": {
+              "min": 129,
+              "max": 255
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

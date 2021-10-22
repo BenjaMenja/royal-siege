@@ -24,4 +24,6 @@ execute if score @s Kit matches 12 run scoreboard players set @s ultCheck 24
 
 execute if score @s Kit matches 13 run scoreboard players set @s ultCheck 26
 
+execute if score @s Kit matches 14 run scoreboard players set @s ultCheck 28
+
 tellraw @s {"text":"You chose to use ???!","color":"aqua"}

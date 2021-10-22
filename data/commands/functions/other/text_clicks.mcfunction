@@ -290,4 +290,8 @@ execute if score @s textClick matches 149 run function commands:shops/gas_vacuum
 
 execute if score @s textClick matches 150 run function commands:shops/enhanced_space_helmet
 
+execute if score @s textClick matches 151 run function commands:starting/ultimate_select/rocket_launch
+
+execute if score @s textClick matches 152 run function commands:starting/ultimate_select/drone
+
 scoreboard players reset @a[scores={textClick=1..}] textClick

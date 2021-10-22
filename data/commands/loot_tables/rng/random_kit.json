@@ -21,7 +21,7 @@
                                     "operation": "addition",
                                     "slot": "chest",
                                     "amount": {
-                                        "max": 14,
+                                        "max": 15,
                                         "min": 1
                                     }
                                 }
