@@ -2848,6 +2848,18 @@ scoreboard players add @e[type=boat,tag=winterBoat] Timer 1
 
 kill @e[type=boat,tag=winterBoat,scores={Timer=400..}]
 
+#Asteroid
+
+scoreboard players remove @a[scores={Kit=14,asteroidTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] asteroidTimer 1
+
+execute as @a[scores={usedCOAS=1..,asteroidTimer=..0},predicate=commands:holding/asteroid] run tag @s add asteroidShooter
+
+execute as @a[tag=asteroidShooter] at @s run function commands:other/asteroid
+
+execute as @e[type=area_effect_cloud,tag=asteroidLand] unless predicate commands:is_riding_asteroid at @s run function commands:other/asteroid_land
+
+execute as @e[type=item,tag=asteroidshard,nbt={OnGround:1b}] at @s run function commands:other/asteroid_shard 
+
 #Remove Arrows and tridents on ground
 
 kill @e[type=arrow,nbt={inGround:1b}]
