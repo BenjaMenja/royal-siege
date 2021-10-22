@@ -968,7 +968,7 @@ execute at @e[type=area_effect_cloud,tag=smoke,tag=!stop] as @p[team=Red,scores=
 
 tag @e[type=area_effect_cloud,tag=smoke] add stop
 
-execute at @e[type=area_effect_cloud,tag=smoke] run effect give @a[team=Blue,distance=..5] blindness 2 0 true
+execute at @e[type=area_effect_cloud,tag=smoke] run effect give @a[team=Blue,predicate=!commands:armor/enhanced_space_helmet,distance=..5] blindness 2 0 true
 
 execute as @e[type=bat,tag=smokeblue] at @s run summon area_effect_cloud ~ ~ ~ {Particle:"smoke",Radius:4f,RadiusPerTick:-0.01f,Duration:100,Tags:["smokeblue"]}
 
@@ -980,7 +980,7 @@ execute at @e[type=area_effect_cloud,tag=smokeblue,tag=!stop] as @p[team=Blue,sc
 
 tag @e[type=area_effect_cloud,tag=smokeblue] add stop
 
-execute at @e[type=area_effect_cloud,tag=smokeblue] run effect give @a[team=Red,distance=..5] blindness 2 0 true
+execute at @e[type=area_effect_cloud,tag=smokeblue] run effect give @a[team=Red,predicate=!commands:armor/enhanced_space_helmet,distance=..5] blindness 2 0 true
 
 #Ninja Strength passive
 
@@ -2851,6 +2851,14 @@ execute as @e[type=item,tag=asteroidshard,nbt={OnGround:1b}] at @s run function 
 #Rocket Boosters
 
 execute as @a[scores={usedCOAS=1..},predicate=commands:holding/rocket_boosters] at @s run function commands:other/rocket_boosters
+
+#Enhanced Space Helmet
+
+effect clear @a[predicate=commands:armor/enhanced_space_helmet] blindness
+
+effect clear @a[predicate=commands:armor/enhanced_space_helmet] wither
+
+effect clear @a[predicate=commands:armor/enhanced_space_helmet] poison
 
 #Remove Arrows and tridents on ground
 
