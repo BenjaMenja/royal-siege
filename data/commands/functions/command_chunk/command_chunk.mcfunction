@@ -2860,6 +2860,12 @@ effect clear @a[predicate=commands:armor/enhanced_space_helmet] wither
 
 effect clear @a[predicate=commands:armor/enhanced_space_helmet] poison
 
+#Gas Vacuum
+
+scoreboard players remove @a[scores={gasVacTimer=1..},predicate=commands:inventory/gas_vacuum,predicate=commands:in_any_battlefield,tag=!notAlive] gasVacTimer 1
+
+execute as @a[scores={usedCOAS=1..,gasVacTimer=..0},predicate=commands:holding/gas_vacuum] at @s run function commands:other/gas_vacuum
+
 #Remove Arrows and tridents on ground
 
 kill @e[type=arrow,nbt={inGround:1b}]
