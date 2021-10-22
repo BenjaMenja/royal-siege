@@ -1808,10 +1808,6 @@ scoreboard players add @e[type=item,nbt={Item:{tag:{fishcannonitemblue:1b}}}] fi
 
 kill @e[type=item,scores={fishCannonTimer=180..}]
 
-execute as @e[type=item,nbt={Item:{tag:{fishcannonitemred:1b}}}] at @s run data modify entity @s Owner set from entity @p[team=Blue] UUID
-
-execute as @e[type=item,nbt={Item:{tag:{fishcannonitemblue:1b}}}] at @s run data modify entity @s Owner set from entity @p[team=Red] UUID
-
 scoreboard players set @a[scores={died=1..}] fishCannonTimer 0
 
 #Squidzooka
