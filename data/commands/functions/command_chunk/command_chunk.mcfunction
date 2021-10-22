@@ -1794,9 +1794,9 @@ execute as @e[type=item,tag=fishCannon] at @s store result score @s nearbyBlocks
 
 execute as @e[type=item,tag=fishCannon,scores={nearbyBlocks=1..}] at @s run function commands:other/fish_cannon
 
-execute as @a[team=Red,predicate=commands:inventory/fish_cannon_item_red] run function commands:other/fish_cannon_item_blue
+execute as @a[team=Red,predicate=commands:inventory/fish_cannon_item_blue] run function commands:other/fish_cannon_item_blue
 
-execute as @a[team=Blue,predicate=commands:inventory/fish_cannon_item_blue] run function commands:other/fish_cannon_item_red
+execute as @a[team=Blue,predicate=commands:inventory/fish_cannon_item_red] run function commands:other/fish_cannon_item_red
 
 execute as @e[type=item,nbt={Item:{tag:{fishcannonitemred:1b}}}] at @s run data modify entity @s Owner set from entity @p[team=Blue] UUID
 
@@ -2865,6 +2865,20 @@ effect clear @a[predicate=commands:armor/enhanced_space_helmet] poison
 scoreboard players remove @a[scores={gasVacTimer=1..},predicate=commands:inventory/gas_vacuum,predicate=commands:in_any_battlefield,tag=!notAlive] gasVacTimer 1
 
 execute as @a[scores={usedCOAS=1..,gasVacTimer=..0},predicate=commands:holding/gas_vacuum] at @s run function commands:other/gas_vacuum
+
+#Safety Tether
+
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/safety_tether,tag=tethered] at @s run function commands:other/warp_to_tether
+
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/safety_tether,tag=!tethered] at @s run function commands:other/create_tether
+
+execute as @e[type=area_effect_cloud,tag=redTether] at @s unless entity @a[team=Red,distance=..30,tag=tethered] run function commands:other/destroy_tether
+
+execute as @e[type=area_effect_cloud,tag=blueTether] at @s unless entity @a[team=Blue,distance=..30,tag=tethered] run function commands:other/destroy_tether
+
+execute as @e[type=area_effect_cloud,tag=tetherSpot,scores={tetherTimer=200..}] at @s run function commands:other/destroy_tether 
+
+scoreboard players add @e[type=area_effect_cloud,tag=tetherSpot] tetherTimer 1
 
 #Remove Arrows and tridents on ground
 
