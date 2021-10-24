@@ -1186,7 +1186,7 @@ scoreboard players set @a[scores={Ultcharge=1..}] Ultcharge 0
 
 #Ultimate Charge Bossbars
 
-execute as @a[scores={Ultimate=1..26}] run function commands:other/ultimate_bossbars
+execute as @a[scores={Ultimate=1..28}] run function commands:other/ultimate_bossbars
 
 #Warrior Item
 
@@ -1950,7 +1950,7 @@ scoreboard players reset @a[scores={Kit=8,entPassive=1..}] entPassive
 
 #Ultimate Charger
 
-execute at @e[type=bat,tag=ultimatecharger] as @a[distance=..5,limit=1,scores={Ultimate=1..26}] run function commands:other/ultimate_charger
+execute at @e[type=bat,tag=ultimatecharger] as @a[distance=..5,limit=1,scores={Ultimate=1..28}] run function commands:other/ultimate_charger
 
 teleport @e[type=bat,tag=ultimatecharger] ~ -100 ~
 
@@ -2899,6 +2899,22 @@ execute as @e[type=item,tag=blueDebris] at @s run data modify entity @s Owner se
 scoreboard players remove @a[scores={Kit=14,astroPassTimer=1..},tag=upgraded] astroPassTimer 1
 
 execute as @a[scores={Kit=14,astroPassTimer=..0,jump=1..},tag=upgraded,predicate=commands:is_sneaking,nbt={OnGround:1b}] at @s run function commands:other/astronaut_upgrade_passive
+
+#Rocket Launch (Astronaut Ultimate)
+
+execute as @a[scores={Ultimate=27},tag=!notAlive,predicate=!commands:inventory/rocket_launch] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s rocLaunchTimer 1
+
+give @a[scores={rocLaunchTimer=3000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Rocket Launch","color":"dark_red","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"After a short delay, launches a rocket into the air."}','{"text":"The rocket will come crashing down, creating a gigantic explosion."}']},CustomModelData:177,rocketlaunch:1b} 1
+
+scoreboard players reset @a[scores={rocLaunchTimer=3000..}] rocLaunchTimer
+
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/rocket_launch] at @s run function commands:ultimates/rocket_launch_init
+
+scoreboard players add @e[type=area_effect_cloud,tag=rocketPad] rocLaunchTimer 1
+
+execute as @e[type=area_effect_cloud,tag=rocketPad,scores={rocLaunchTimer=100..}] at @s run function commands:ultimates/rocket_launch
+
+execute as @e[type=item,tag=rocketItem,nbt={OnGround:1b}] at @s run function commands:ultimates/rocket_explode
 
 #Remove Arrows and tridents on ground
 

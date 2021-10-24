@@ -193,6 +193,10 @@ bossbar set commands:blue_ult25 players @a[scores={Ultimate=25},team=Blue]
 
 bossbar set commands:blue_ult26 players @a[scores={Ultimate=26},team=Blue]
 
+bossbar set commands:blue_ult27 players @a[scores={Ultimate=27},team=Blue]
+
+bossbar set commands:blue_ult28 players @a[scores={Ultimate=28},team=Blue]
+
 bossbar set commands:red_ult1 players @a[scores={Ultimate=1},team=Red]
 
 bossbar set commands:red_ult2 players @a[scores={Ultimate=2},team=Red]
@@ -244,6 +248,10 @@ bossbar set commands:red_ult24 players @a[scores={Ultimate=24},team=Red]
 bossbar set commands:red_ult25 players @a[scores={Ultimate=25},team=Red]
 
 bossbar set commands:red_ult26 players @a[scores={Ultimate=26},team=Red]
+
+bossbar set commands:red_ult27 players @a[scores={Ultimate=27},team=Red]
+
+bossbar set commands:red_ult28 players @a[scores={Ultimate=28},team=Red]
 
 #Advancement Grants for ultimates
 
@@ -298,7 +306,6 @@ advancement grant @a[scores={Ultimate=24}] only commands:challenges/ultimate_ext
 advancement grant @a[scores={Ultimate=25}] only commands:challenges/ultimate_extraordinaire ultimate25
 
 advancement grant @a[scores={Ultimate=26}] only commands:challenges/ultimate_extraordinaire ultimate26
-
 
 #End of Start
 

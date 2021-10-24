@@ -50,6 +50,10 @@ bossbar set commands:red_ult25 players
 
 bossbar set commands:red_ult26 players
 
+bossbar set commands:red_ult27 players
+
+bossbar set commands:red_ult28 players
+
 bossbar set commands:blue_ult1 players
 
 bossbar set commands:blue_ult2 players
@@ -102,3 +106,6 @@ bossbar set commands:blue_ult25 players
 
 bossbar set commands:blue_ult26 players
 
+bossbar set commands:blue_ult27 players
+
+bossbar set commands:blue_ult28 players

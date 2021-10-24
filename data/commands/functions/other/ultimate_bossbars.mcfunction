@@ -52,6 +52,10 @@ execute if entity @s[team=Blue,scores={Ultimate=25}] store result bossbar comman
 
 execute if entity @s[team=Blue,scores={Ultimate=26}] store result bossbar commands:blue_ult26 value run scoreboard players get @s[team=Blue,scores={Ultimate=26}] sleightTimer
 
+execute if entity @s[team=Blue,scores={Ultimate=27}] store result bossbar commands:blue_ult27 value run scoreboard players get @s[team=Blue,scores={Ultimate=27}] rocLaunchTimer
+
+execute if entity @s[team=Blue,scores={Ultimate=28}] store result bossbar commands:blue_ult28 value run scoreboard players get @s[team=Blue,scores={Ultimate=28}] droneTimer
+
 execute if entity @s[team=Red,scores={Ultimate=1}] store result bossbar commands:red_ult1 value run scoreboard players get @s[team=Red,scores={Ultimate=1}] Ninjault
 
 execute if entity @s[team=Red,scores={Ultimate=2}] store result bossbar commands:red_ult2 value run scoreboard players get @s[team=Red,scores={Ultimate=2}] Horse
@@ -105,3 +109,7 @@ execute if entity @s[team=Red,scores={Ultimate=24}] store result bossbar command
 execute if entity @s[team=Red,scores={Ultimate=25}] store result bossbar commands:red_ult25 value run scoreboard players get @s[team=Red,scores={Ultimate=25}] bustedTimer
 
 execute if entity @s[team=Red,scores={Ultimate=26}] store result bossbar commands:red_ult26 value run scoreboard players get @s[team=Red,scores={Ultimate=26}] sleightTimer
+
+execute if entity @s[team=Red,scores={Ultimate=27}] store result bossbar commands:red_ult27 value run scoreboard players get @s[team=Red,scores={Ultimate=27}] rocLaunchTimer
+
+execute if entity @s[team=Red,scores={Ultimate=28}] store result bossbar commands:red_ult28 value run scoreboard players get @s[team=Red,scores={Ultimate=28}] droneTimer

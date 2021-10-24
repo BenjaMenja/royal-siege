@@ -52,6 +52,10 @@ scoreboard players add @s[scores={Ultimate=25}] bustedTimer 5000
 
 scoreboard players add @s[scores={Ultimate=26}] sleightTimer 5000
 
+scoreboard players add @s[scores={Ultimate=27}] rocLaunchTimer 5000
+
+scoreboard players add @s[scores={Ultimate=28}] droneTimer 5000
+
 tag @s remove hadUltimate
 
 tag @s remove ultimateInv

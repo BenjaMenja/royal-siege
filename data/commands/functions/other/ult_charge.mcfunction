@@ -56,4 +56,8 @@ execute as @s[scores={Ultimate=25,Kit=13}] run scoreboard players operation @s b
 
 execute as @s[scores={Ultimate=26,Kit=13}] run scoreboard players operation @s sleightTimer += @s Ultcharge
 
+execute as @s[scores={Ultimate=27,Kit=14}] run scoreboard players operation @s rocLaunchTimer += @s Ultcharge
+
+execute as @s[scores={Ultimate=28,Kit=14}] run scoreboard players operation @s droneTimer += @s Ultcharge
+
 advancement revoke @s only commands:ult_charge_entities
