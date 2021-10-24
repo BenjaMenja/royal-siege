@@ -1240,8 +1240,6 @@ effect clear @a[tag=slamming,nbt={OnGround:1b}] resistance
 
 scoreboard players reset @a[tag=slamming,nbt={OnGround:1b}] slamSuspend
 
-scoreboard players set @a[scores={Jump=1..}] Jump 0
-
 tag @a[tag=slamming,nbt={OnGround:1b}] remove slamming
 
 #Invisibility Cloak (Ninja Alt. Ultimate)
@@ -2176,8 +2174,6 @@ tag @a[scores={exChargeDelay=2..}] remove exCharge
 
 scoreboard players reset @a[scores={exChargeDelay=2..}] exChargeDelay
 
-scoreboard players set @a[nbt={OnGround:1b}] jump 0
-
 #Toxin Ball
 
 execute as @e[type=snowball,tag=!toxinballred,nbt={Item:{tag:{toxinballred:1b}}}] at @s run function commands:ball/toxin_ball_found_red
@@ -2898,6 +2894,12 @@ execute as @e[type=item,tag=redDebris] at @s run data modify entity @s Owner set
 
 execute as @e[type=item,tag=blueDebris] at @s run data modify entity @s Owner set from entity @p[team=Red] UUID
 
+#Astronaut Upgrade Passive
+
+scoreboard players remove @a[scores={Kit=14,astroPassTimer=1..},tag=upgraded] astroPassTimer 1
+
+execute as @a[scores={Kit=14,astroPassTimer=..0,jump=1..},tag=upgraded,predicate=commands:is_sneaking,nbt={OnGround:1b}] at @s run function commands:other/astronaut_upgrade_passive
+
 #Remove Arrows and tridents on ground
 
 kill @e[type=arrow,nbt={inGround:1b}]
@@ -2905,6 +2907,10 @@ kill @e[type=arrow,nbt={inGround:1b}]
 kill @e[type=trident,nbt={inGround:1b},nbt=!{Trident:{tag:{throwingblade:1b}}}]
 
 #Score Reset
+
+scoreboard players set @a[nbt={OnGround:1b}] jump 0
+
+scoreboard players set @a[scores={Jump=1..}] Jump 0
 
 tag @a[scores={died=1..}] remove insured
 
