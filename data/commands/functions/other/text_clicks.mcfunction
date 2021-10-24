@@ -294,4 +294,6 @@ execute if score @s textClick matches 151 run function commands:starting/ultimat
 
 execute if score @s textClick matches 152 run function commands:starting/ultimate_select/drone
 
+execute if score @s textClick matches 153 run function commands:books/astronaut
+
 scoreboard players reset @a[scores={textClick=1..}] textClick
