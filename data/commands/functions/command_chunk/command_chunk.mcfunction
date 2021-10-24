@@ -2880,6 +2880,24 @@ execute as @e[type=area_effect_cloud,tag=tetherSpot,scores={tetherTimer=200..}] 
 
 scoreboard players add @e[type=area_effect_cloud,tag=tetherSpot] tetherTimer 1
 
+#Debris Cannon
+
+scoreboard players remove @a[scores={debrisTimer=1..},predicate=commands:inventory/debris_cannon,predicate=commands:in_any_battlefield,tag=!notAlive] debrisTimer 1
+
+tag @a[scores={usedCOAS=1..,debrisTimer=..0},predicate=commands:holding/debris_cannon] add debrisShooter
+
+execute as @a[tag=debrisShooter] at @s run function commands:other/debris_cannon
+
+kill @e[type=item,tag=debrisitem,nbt={OnGround:1b}]
+
+execute as @a[team=Red,predicate=commands:inventory/debris_item_red] run function commands:other/debris_item
+
+execute as @a[team=Blue,predicate=commands:inventory/debris_item_blue] run function commands:other/debris_item
+
+execute as @e[type=item,tag=redDebris] at @s run data modify entity @s Owner set from entity @p[team=Blue] UUID
+
+execute as @e[type=item,tag=blueDebris] at @s run data modify entity @s Owner set from entity @p[team=Red] UUID
+
 #Remove Arrows and tridents on ground
 
 kill @e[type=arrow,nbt={inGround:1b}]
