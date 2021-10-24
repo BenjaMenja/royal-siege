@@ -53,3 +53,14 @@ scoreboard players set @s chaosBowDur 0
 scoreboard players set @s asteroidTimer 1
 
 scoreboard players set @s gravityTimer 1
+
+scoreboard players set @s gasVacTimer 1
+
+scoreboard players set @s tetherTimer 1
+
+scoreboard players set @s debrisTimer 1
+
+scoreboard players set @s astroPassTimer 1
+
+scoreboard players set @s wrenchTimer 1
+

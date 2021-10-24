@@ -1,0 +1,21 @@
+{
+  "parent": "commands:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player",
+          "equipment": {
+            "mainhand": {
+              "nbt": "{spacewrench:1b}",
+              "items": [
+                "minecraft:carrot_on_a_stick"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

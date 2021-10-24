@@ -74,6 +74,12 @@ advancement revoke @s only commands:royal_flush_death
 
 advancement revoke @s only commands:playing_card_death
 
+advancement revoke @s only commands:space_wrench_death
+
+advancement revoke @s only commands:asteroid_shard_death
+
+advancement revoke @s only commands:rocket_death
+
 tag @s remove DIED
 
 tag @s remove DIED2
