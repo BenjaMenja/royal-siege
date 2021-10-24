@@ -1,14 +1,22 @@
 execute at @s[team=Red] run effect clear @a[team=Red,distance=..10,scores={absHearts=..6}] absorption
 
-execute at @s[team=Red] run effect give @a[team=Red,distance=..10] absorption 10 0 true
+execute at @s[team=Red,tag=!wrenched] run effect give @a[team=Red,distance=..10] absorption 10 0 true
 
-execute at @s[team=Red] run effect give @a[team=Red,distance=..10] resistance 10 0 true
+execute at @s[team=Red,tag=!wrenched] run effect give @a[team=Red,distance=..10] resistance 10 0 true
+
+execute at @s[team=Red,tag=wrenched] run effect give @a[team=Red,distance=..10] absorption 10 1 true
+
+execute at @s[team=Red,tag=wrenched] run effect give @a[team=Red,distance=..10] resistance 6 1 true
 
 execute at @s[team=Blue] run effect clear @a[team=Blue,distance=..10,scores={absHearts=..6}] absorption
 
-execute at @s[team=Blue] run effect give @a[team=Blue,distance=..10] absorption 10 0 true
+execute at @s[team=Blue,tag=!wrenched] run effect give @a[team=Blue,distance=..10] absorption 10 0 true
 
-execute at @s[team=Blue] run effect give @a[team=Blue,distance=..10] resistance 10 0 true
+execute at @s[team=Blue,tag=!wrenched] run effect give @a[team=Blue,distance=..10] resistance 10 0 true
+
+execute at @s[team=Blue,tag=wrenched] run effect give @a[team=Blue,distance=..10] absorption 10 1 true
+
+execute at @s[team=Blue,tag=wrenched] run effect give @a[team=Blue,distance=..10] resistance 6 1 true
 
 execute at @s run playsound block.anvil.place master @a[distance=..15] ~ ~ ~ 0.3 1.5
 
@@ -23,3 +31,5 @@ execute if entity @s[team=Red] if score #angelspellsblue voicelineCD matches 60.
 clear @s[scores={Kit=4}] carrot_on_a_stick{AssaultSpell:1b}
 
 clear @s carrot_on_a_stick{DefensiveSpell:1b}
+
+tag @s remove wrenched

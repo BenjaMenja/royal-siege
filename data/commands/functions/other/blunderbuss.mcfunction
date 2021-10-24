@@ -1,38 +1,71 @@
 #Red Proj
 
-execute if entity @s[team=Red] anchored eyes run summon minecraft:arrow ^0.05 ^0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
+execute if entity @s[team=Red,tag=!wrenched] anchored eyes run summon minecraft:arrow ^0.05 ^0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
 
-execute if entity @s[team=Red] anchored eyes run summon minecraft:arrow ^0.05 ^-0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
+execute if entity @s[team=Red,tag=!wrenched] anchored eyes run summon minecraft:arrow ^0.05 ^-0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
 
-execute if entity @s[team=Red] anchored eyes run summon minecraft:arrow ^-0.05 ^0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
+execute if entity @s[team=Red,tag=!wrenched] anchored eyes run summon minecraft:arrow ^-0.05 ^0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
 
-execute if entity @s[team=Red] anchored eyes run summon minecraft:arrow ^-0.05 ^-0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
+execute if entity @s[team=Red,tag=!wrenched] anchored eyes run summon minecraft:arrow ^-0.05 ^-0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
 
-execute if entity @s[team=Red] anchored eyes run summon minecraft:arrow ^0.025 ^0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
+execute if entity @s[team=Red,tag=!wrenched] anchored eyes run summon minecraft:arrow ^0.025 ^0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
 
-execute if entity @s[team=Red] anchored eyes run summon minecraft:arrow ^-0.025 ^0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
+execute if entity @s[team=Red,tag=!wrenched] anchored eyes run summon minecraft:arrow ^-0.025 ^0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
 
-execute if entity @s[team=Red] anchored eyes run summon minecraft:arrow ^0.025 ^-0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
+execute if entity @s[team=Red,tag=!wrenched] anchored eyes run summon minecraft:arrow ^0.025 ^-0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
 
-execute if entity @s[team=Red] anchored eyes run summon minecraft:arrow ^-0.025 ^-0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
+execute if entity @s[team=Red,tag=!wrenched] anchored eyes run summon minecraft:arrow ^-0.025 ^-0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","redProj"]}
+
+execute if entity @s[team=Red,tag=wrenched] anchored eyes run summon minecraft:arrow ^0.05 ^0.025 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","redProj"]}
+
+execute if entity @s[team=Red,tag=wrenched] anchored eyes run summon minecraft:arrow ^0.05 ^-0.025 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","redProj"]}
+
+execute if entity @s[team=Red,tag=wrenched] anchored eyes run summon minecraft:arrow ^-0.05 ^0.025 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","redProj"]}
+
+execute if entity @s[team=Red,tag=wrenched] anchored eyes run summon minecraft:arrow ^-0.05 ^-0.025 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","redProj"]}
+
+execute if entity @s[team=Red,tag=wrenched] anchored eyes run summon minecraft:arrow ^0.025 ^0.05 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","redProj"]}
+
+execute if entity @s[team=Red,tag=wrenched] anchored eyes run summon minecraft:arrow ^-0.025 ^0.05 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","redProj"]}
+
+execute if entity @s[team=Red,tag=wrenched] anchored eyes run summon minecraft:arrow ^0.025 ^-0.05 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","redProj"]}
+
+execute if entity @s[team=Red,tag=wrenched] anchored eyes run summon minecraft:arrow ^-0.025 ^-0.05 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","redProj"]}
+
 
 #Blue Proj
 
-execute if entity @s[team=Blue] anchored eyes run summon minecraft:arrow ^0.05 ^0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
+execute if entity @s[team=Blue,tag=!wrenched] anchored eyes run summon minecraft:arrow ^0.05 ^0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
 
-execute if entity @s[team=Blue] anchored eyes run summon minecraft:arrow ^0.05 ^-0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
+execute if entity @s[team=Blue,tag=!wrenched] anchored eyes run summon minecraft:arrow ^0.05 ^-0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
 
-execute if entity @s[team=Blue] anchored eyes run summon minecraft:arrow ^-0.05 ^0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
+execute if entity @s[team=Blue,tag=!wrenched] anchored eyes run summon minecraft:arrow ^-0.05 ^0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
 
-execute if entity @s[team=Blue] anchored eyes run summon minecraft:arrow ^-0.05 ^-0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
+execute if entity @s[team=Blue,tag=!wrenched] anchored eyes run summon minecraft:arrow ^-0.05 ^-0.025 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
 
-execute if entity @s[team=Blue] anchored eyes run summon minecraft:arrow ^0.025 ^0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
+execute if entity @s[team=Blue,tag=!wrenched] anchored eyes run summon minecraft:arrow ^0.025 ^0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
 
-execute if entity @s[team=Blue] anchored eyes run summon minecraft:arrow ^-0.025 ^0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
+execute if entity @s[team=Blue,tag=!wrenched] anchored eyes run summon minecraft:arrow ^-0.025 ^0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
 
-execute if entity @s[team=Blue] anchored eyes run summon minecraft:arrow ^0.025 ^-0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
+execute if entity @s[team=Blue,tag=!wrenched] anchored eyes run summon minecraft:arrow ^0.025 ^-0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
 
-execute if entity @s[team=Blue] anchored eyes run summon minecraft:arrow ^-0.025 ^-0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
+execute if entity @s[team=Blue,tag=!wrenched] anchored eyes run summon minecraft:arrow ^-0.025 ^-0.05 ^1 {pickup:0b,damage:3.5d,Tags:["blunderArrow","blueProj"]}
+
+execute if entity @s[team=Blue,tag=wrenched] anchored eyes run summon minecraft:arrow ^0.05 ^0.025 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","blueProj"]}
+
+execute if entity @s[team=Blue,tag=wrenched] anchored eyes run summon minecraft:arrow ^0.05 ^-0.025 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","blueProj"]}
+
+execute if entity @s[team=Blue,tag=wrenched] anchored eyes run summon minecraft:arrow ^-0.05 ^0.025 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","blueProj"]}
+
+execute if entity @s[team=Blue,tag=wrenched] anchored eyes run summon minecraft:arrow ^-0.05 ^-0.025 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","blueProj"]}
+
+execute if entity @s[team=Blue,tag=wrenched] anchored eyes run summon minecraft:arrow ^0.025 ^0.05 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","blueProj"]}
+
+execute if entity @s[team=Blue,tag=wrenched] anchored eyes run summon minecraft:arrow ^-0.025 ^0.05 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","blueProj"]}
+
+execute if entity @s[team=Blue,tag=wrenched] anchored eyes run summon minecraft:arrow ^0.025 ^-0.05 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","blueProj"]}
+
+execute if entity @s[team=Blue,tag=wrenched] anchored eyes run summon minecraft:arrow ^-0.025 ^-0.05 ^1 {pickup:0b,damage:5.5d,Tags:["blunderArrow","blueProj"]}
 
 #Other
 
@@ -71,6 +104,8 @@ tag @e[tag=blunderArrow] add stop
 scoreboard players reset @s blunderTimer
 
 tag @s remove blunderShoot
+
+tag @s remove wrenched
 
 clear @s arrow 1
 

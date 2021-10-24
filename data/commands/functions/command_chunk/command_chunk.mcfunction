@@ -934,8 +934,6 @@ execute as @a[scores={Kit=2}] run scoreboard players operation @s smokeStore = @
 
 execute as @a[scores={Kit=2}] store result score @s smokeDis run scoreboard players operation @s smokeStore /= #ticks constant
 
-title @a[scores={Kit=2}] actionbar [{"text":"Smoke Bomb: ","color":"green"},{"score":{"name":"*","objective":"smokeDis"},"color":"aqua"}]
-
 #Ninja Dash
 
 scoreboard players add #ninjavoicered voicelineCD 1
@@ -944,7 +942,7 @@ scoreboard players add #ninjavoiceblue voicelineCD 1
 
 scoreboard players add @a[scores={Kit=2},predicate=commands:in_any_battlefield,tag=!notAlive] dashcharge 1
 
-scoreboard players set @a[scores={dashcharge=361..},tag=!upgraded] dashcharge 361
+scoreboard players set @a[scores={dashcharge=361..},tag=!upgraded,tag=!wrenched] dashcharge 361
 
 scoreboard players set @a[scores={dashcharge=301..},tag=upgraded] dashcharge 301
 
@@ -2406,8 +2404,6 @@ execute as @a[scores={evolutionDur=240..}] run function commands:ultimates/evolu
 
 execute as @a[scores={useBow=1..},predicate=commands:holding/punch_bow] run function commands:replace/punch_bow_replace
 
-scoreboard players reset @a[scores={useBow=1..}] useBow
-
 scoreboard players add @a[predicate=commands:inventory/punch_bow] pBowTimer 1
 
 execute as @a[scores={pBowTimer=100}] run function commands:replace/punch_bow_ready
@@ -2900,6 +2896,14 @@ scoreboard players remove @a[scores={Kit=14,astroPassTimer=1..},tag=upgraded] as
 
 execute as @a[scores={Kit=14,astroPassTimer=..0,jump=1..},tag=upgraded,predicate=commands:is_sneaking,nbt={OnGround:1b}] at @s run function commands:other/astronaut_upgrade_passive
 
+#Space Wrench Ability
+
+scoreboard players remove @a[scores={Kit=14,wrenchTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] wrenchTimer 1
+
+tag @a[scores={usedCOAS=1..,wrenchTimer=..0},predicate=commands:holding/space_wrench] add wrenching
+
+execute as @a[tag=wrenching] at @s anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/space_wrench_start_ray
+
 #Rocket Launch (Astronaut Ultimate)
 
 execute as @a[scores={Ultimate=27},tag=!notAlive,predicate=!commands:inventory/rocket_launch] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s rocLaunchTimer 1
@@ -2923,6 +2927,10 @@ kill @e[type=arrow,nbt={inGround:1b}]
 kill @e[type=trident,nbt={inGround:1b},nbt=!{Trident:{tag:{throwingblade:1b}}}]
 
 #Score Reset
+
+tag @a[scores={useBow=1..}] remove wrenched
+
+scoreboard players reset @a[scores={useBow=1..}] useBow
 
 scoreboard players set @a[nbt={OnGround:1b}] jump 0
 

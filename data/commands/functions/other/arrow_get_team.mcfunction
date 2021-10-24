@@ -20,6 +20,8 @@ execute if score @a[scores={useBow=1..},limit=1,team=Red] UUID = #finaluuid UUID
 
 execute if score @a[scores={useBow=1..},limit=1,team=Blue] UUID = #finaluuid UUID run tag @s add blueProj
 
+execute if score @a[scores={Kit=5,useBow=1..},limit=1,tag=wrenched] UUID = #finaluuid UUID run data merge entity @s {PierceLevel:99b}
+
 execute as @a[scores={useCrossbow=1..}] run function commands:other/player_get_uuid
 
 execute if score @a[scores={useCrossbow=1..},limit=1,team=Red] UUID = #finaluuid UUID run tag @s add redProj
