@@ -132,6 +132,14 @@ tag @s[tag=ultimateInv] add hadUltimate
 
 tag @s add notAlive
 
+#Other Tag removals
+
+tag @s remove hasDebrisCannon
+
+tag @s remove hasGravityCanceler
+
+tag @s remove hasGasVacuum
+
 #Reset scores and run function again
 
 scoreboard players set @s Message 0

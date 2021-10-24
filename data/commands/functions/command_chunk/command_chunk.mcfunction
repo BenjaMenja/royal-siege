@@ -2904,6 +2904,10 @@ tag @a[scores={usedCOAS=1..,wrenchTimer=..0},predicate=commands:holding/space_wr
 
 execute as @a[tag=wrenching] at @s anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/space_wrench_start_ray
 
+#Astronaut Cooldown Display
+
+execute as @a[scores={Kit=14}] run function commands:other/astronaut_cooldown_display
+
 #Rocket Launch (Astronaut Ultimate)
 
 execute as @a[scores={Ultimate=27},tag=!notAlive,predicate=!commands:inventory/rocket_launch] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s rocLaunchTimer 1
