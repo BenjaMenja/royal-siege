@@ -30,6 +30,8 @@ execute as @a[scores={Kit=12}] run scoreboard players add #dragontemp classInfo 
 
 execute as @a[scores={Kit=13}] run scoreboard players add #gamblertemp classInfo 1
 
+execute as @a[scores={Kit=14}] run scoreboard players add #astronauttemp classInfo 1
+
 #Add Ties
 
 execute if score #warriortemp classInfo matches 2.. run scoreboard players add #warriorties classInfo 1
@@ -57,6 +59,8 @@ execute if score #cheftemp classInfo matches 2.. run scoreboard players add #che
 execute if score #dragontemp classInfo matches 2.. run scoreboard players add #dragonties classInfo 1
 
 execute if score #gamblertemp classInfo matches 2.. run scoreboard players add #gamblerties classInfo 1
+
+execute if score #astronauttemp classInfo matches 2.. run scoreboard players add #astronautties classInfo 1
 
 #Add Wins
 
@@ -86,6 +90,8 @@ execute if score #dragontemp classInfo matches 1 if entity @a[tag=End,scores={Ki
 
 execute if score #gamblertemp classInfo matches 1 if entity @a[tag=End,scores={Kit=13}] run scoreboard players add #gamblerwins classInfo 1
 
+execute if score #astronauttemp classInfo matches 1 if entity @a[tag=End,scores={Kit=14}] run scoreboard players add #astronautwins classInfo 1
+
 #Add Losses
 
 execute if score #warriortemp classInfo matches 1 unless entity @a[tag=End,scores={Kit=1}] run scoreboard players add #warriorlosses classInfo 1
@@ -113,6 +119,8 @@ execute if score #cheftemp classInfo matches 1 unless entity @a[tag=End,scores={
 execute if score #dragontemp classInfo matches 1 unless entity @a[tag=End,scores={Kit=12}] run scoreboard players add #dragonlosses classInfo 1
 
 execute if score #gamblertemp classInfo matches 1 unless entity @a[tag=End,scores={Kit=13}] run scoreboard players add #gamblerlosses classInfo 1
+
+execute if score #astronauttemp classInfo matches 1 unless entity @a[tag=End,scores={Kit=14}] run scoreboard players add #astronautlosses classInfo 1
 
 #Player Scores
 
@@ -145,3 +153,5 @@ scoreboard players reset #cheftemp classInfo
 scoreboard players reset #dragontemp classInfo
 
 scoreboard players reset #gamblertemp classInfo
+
+scoreboard players reset #astronauttemp classInfo

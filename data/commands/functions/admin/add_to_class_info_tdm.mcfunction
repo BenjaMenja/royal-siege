@@ -30,6 +30,8 @@ execute as @a[scores={Kit=12}] run scoreboard players add #dragontempTDM classIn
 
 execute as @a[scores={Kit=13}] run scoreboard players add #gamblertempTDM classInfo 1
 
+execute as @a[scores={Kit=14}] run scoreboard players add #astronauttempTDM classInfo 1
+
 #Add Ties
 
 execute if score #warriortempTDM classInfo matches 2.. run scoreboard players add #warriortiesTDM classInfo 1
@@ -57,6 +59,8 @@ execute if score #cheftempTDM classInfo matches 2.. run scoreboard players add #
 execute if score #dragontempTDM classInfo matches 2.. run scoreboard players add #dragontiesTDM classInfo 1
 
 execute if score #gamblertempTDM classInfo matches 2.. run scoreboard players add #gamblertiesTDM classInfo 1
+
+execute if score #astronauttempTDM classInfo matches 2.. run scoreboard players add #astronauttiesTDM classInfo 1
 
 #Add Wins
 
@@ -86,6 +90,8 @@ execute if score #dragontempTDM classInfo matches 1 if entity @a[tag=End,scores=
 
 execute if score #gamblertempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=13}] run scoreboard players add #gamblerwinsTDM classInfo 1
 
+execute if score #astronauttempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=14}] run scoreboard players add #astronautwinsTDM classInfo 1
+
 #Add Losses
 
 execute if score #warriortempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=1}] run scoreboard players add #warriorlossesTDM classInfo 1
@@ -113,6 +119,8 @@ execute if score #cheftempTDM classInfo matches 1 unless entity @a[tag=End,score
 execute if score #dragontempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=12}] run scoreboard players add #dragonlossesTDM classInfo 1
 
 execute if score #gamblertempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=13}] run scoreboard players add #gamblerlossesTDM classInfo 1
+
+execute if score #astronauttempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=14}] run scoreboard players add #astronautlossesTDM classInfo 1
 
 #Player Scores
 
@@ -145,3 +153,5 @@ scoreboard players reset #cheftempTDM classInfo
 scoreboard players reset #dragontempTDM classInfo
 
 scoreboard players reset #gamblertempTDM classInfo
+
+scoreboard players reset #astronauttempTDM classInfo
