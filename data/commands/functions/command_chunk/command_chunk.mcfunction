@@ -2882,9 +2882,9 @@ execute as @a[tag=debrisShooter] at @s run function commands:other/debris_cannon
 
 kill @e[type=item,tag=debrisitem,nbt={OnGround:1b}]
 
-execute as @a[team=Red,predicate=commands:inventory/debris_item_red] run function commands:other/debris_item
+execute as @a[team=Red,predicate=commands:inventory/debris_item_blue] run function commands:other/debris_item
 
-execute as @a[team=Blue,predicate=commands:inventory/debris_item_blue] run function commands:other/debris_item
+execute as @a[team=Blue,predicate=commands:inventory/debris_item_red] run function commands:other/debris_item
 
 execute as @e[type=item,tag=redDebris] at @s run data modify entity @s Owner set from entity @p[team=Blue] UUID
 
@@ -2912,7 +2912,7 @@ execute as @a[scores={Kit=14}] run function commands:other/astronaut_cooldown_di
 
 execute as @a[scores={Ultimate=27},tag=!notAlive,predicate=!commands:inventory/rocket_launch] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s rocLaunchTimer 1
 
-give @a[scores={rocLaunchTimer=3000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Rocket Launch","color":"dark_red","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"After a short delay, launches a rocket into the air."}','{"text":"The rocket will come crashing down, creating a gigantic explosion."}']},CustomModelData:177,rocketlaunch:1b} 1
+give @a[scores={rocLaunchTimer=3000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Rocket Launch","color":"dark_red","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"After a short delay, launches a rocket into the air."}','{"text":"The rocket will come crashing down, creating a gigantic explosion."}']},CustomModelData:177,rocketlaunch:1b,ultimateitem:1b} 1
 
 scoreboard players reset @a[scores={rocLaunchTimer=3000..}] rocLaunchTimer
 

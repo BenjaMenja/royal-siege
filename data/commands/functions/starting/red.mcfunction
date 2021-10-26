@@ -182,3 +182,5 @@ execute as @a[scores={RedKit=198},tag=hadUltimate] run function commands:other/u
 
 execute as @a[scores={RedKit=198}] run function commands:custom_deaths/reset_cooldowns
 
+scoreboard players set @a[scores={RedKit=198..}] RedKit 0
+

@@ -182,5 +182,7 @@ execute as @a[scores={BlueKit=198},tag=hadUltimate] run function commands:other/
 
 execute as @a[scores={BlueKit=198}] run function commands:custom_deaths/reset_cooldowns
 
+scoreboard players set @a[scores={BlueKit=198..}] BlueKit 0
+
 
 
