@@ -2,7 +2,17 @@
 
 execute at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered cactus force
 
-#Custom Deaths
+#Dropping Money
+
+execute unless entity @a[team=Blue,predicate=commands:inventory/insurance] at @s[team=Blue] run summon item ~ ~1 ~ {Item:{Count:1b,id:"minecraft:gold_ingot",tag:{moneyitem:1b,Enchantments:[{}],HideFlags:1,CustomModelData:148,display:{Name:'{"text":"Siege Coin","color":"#FFCC00","italic":false}',Lore:['{"text":"Throw into the gold pit at your castle to convert into Siege Bucks."}']}}},Health:1000}
+
+execute unless entity @a[team=Red,predicate=commands:inventory/insurance] at @s[team=Red] run summon item ~ ~1 ~ {Item:{Count:1b,id:"minecraft:gold_ingot",tag:{moneyitem:1b,Enchantments:[{}],HideFlags:1,CustomModelData:148,display:{Name:'{"text":"Siege Coin","color":"#FFCC00","italic":false}',Lore:['{"text":"Throw into the gold pit at your castle to convert into Siege Bucks."}']}}},Health:1000}
+
+execute if entity @a[team=Red,predicate=commands:inventory/insurance] run scoreboard players add @s Money 100
+
+execute if entity @a[team=Blue,predicate=commands:inventory/insurance] run scoreboard players add @s Money 100
+
+#Custom Death Messages
 
 execute if entity @s[advancements={commands:sword_death=true}] run function commands:custom_deaths/sword_death
 
@@ -116,7 +126,7 @@ execute if entity @s[team=Blue] if score #gamemode settings matches 1 run scoreb
 
 execute if entity @s[tag=hasBounty] run function commands:other/betting_chip_kill
 
-#Reset Cooldown Scores
+#Score Removals
 
 function commands:custom_deaths/reset_cooldowns
 
@@ -125,6 +135,12 @@ execute if score #gameDuration gameDuration matches 18000.. if score #gamemode s
 execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players set @s RedKit -101
 
 execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players set @s BlueKit -101
+
+scoreboard players reset @s InvisDur
+
+execute if entity @s[team=Red,scores={Kit=4}] run scoreboard players set #redHS healstreak 0
+
+execute if entity @s[team=Blue,scores={Kit=4}] run scoreboard players set #blueHS healstreak 0
 
 #Ultimate Check
 
@@ -139,6 +155,10 @@ tag @s remove hasDebrisCannon
 tag @s remove hasGravityCanceler
 
 tag @s remove hasGasVacuum
+
+tag @s remove cloaked
+
+tag @s remove justiceKill
 
 #Reset scores and run function again
 

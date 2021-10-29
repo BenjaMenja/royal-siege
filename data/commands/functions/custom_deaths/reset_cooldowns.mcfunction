@@ -4,6 +4,10 @@ scoreboard players set @s glowingEffectCD 1
 
 scoreboard players set @s cHookCD 1
 
+scoreboard players set @s FireballTimer 0
+
+scoreboard players set @s LightningTimer 0
+
 scoreboard players set @s blossomTimer 1
 
 scoreboard players set @s hFruitTimer 1

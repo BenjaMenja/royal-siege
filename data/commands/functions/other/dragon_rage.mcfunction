@@ -44,4 +44,6 @@ scoreboard players set @s dragonRageTimer 200
 
 tag @s remove wrenched
 
+tag @s remove dRage
+
 function commands:replace/dragon_rage_replace

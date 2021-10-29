@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bat_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:16,CanPlaceOn:[\"#commands:can_place_on\"],display:{Name:'{\"text\":\"Poisonous Mushroom\",\"color\":\"#4F0FFF\",\"italic\":false}',Lore:['{\"text\":\"Placeable\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Creates a poison cloud when placed.\"}','{\"text\":\"The cloud grows in size if a player stands in it.\"}']},CustomModelData:33,poisonousmushroom:1b,EntityTag:{Tags:[\"mushroom\",\"redmushroom\"]}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

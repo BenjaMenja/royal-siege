@@ -8,10 +8,10 @@
             "type": "minecraft:player",
             "equipment": {
               "mainhand": {
-                "nbt": "{necroaxe:1b}",
                 "items": [
                   "minecraft:stone_axe"
-                ]
+                ],
+                "nbt": "{necroaxe:1b}"
               }
             }
           }
@@ -23,5 +23,8 @@
     [
       "requirement"
     ]
-  ]
+  ],
+  "rewards": {
+    "function": "commands:other/necromantic_axe"
+  }
 }

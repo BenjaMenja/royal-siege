@@ -103,5 +103,3 @@ scoreboard players reset #mysteryfood RNG
 scoreboard players set @s[tag=!upgraded] basketTimer 280
 
 scoreboard players set @s[tag=upgraded] basketTimer 200
-
-tag @s remove basket

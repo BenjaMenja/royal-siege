@@ -1,10 +1,9 @@
-clear @s gunpowder{gunbladeammo:1b}
+execute if entity @s[tag=!upgraded] run item replace entity @s hotbar.8 with gunpowder{CustomModelData:14,display:{Name:'{"text":"Gunblade Ammo","color":"gray","italic":false}',Lore:['{"text":"Ammo for the Gunblade."}']},gunbladeammo:1b,Enchantments:[{}]} 15
 
-give @s carrot_on_a_stick{CustomModelData:16,display:{Name:'{"text":"Gunblade - Burst","color":"red","italic":false}',Lore:['{"text":"A gun with a blade! It doesn’t get much more dangerous than that."}','{"text":"It shoots a three round burst every 1s. You can switch"}','{"text":"between special bullets by shooting while crouching."}','{"text":"Cannot be fired if you have no ammo in your inventory."}','{"text":"To reload, simply drop the item."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 7.5 Attack Damage","color":"dark_green","italic":false}','{"text":" 1 Attack Speed","color":"dark_green","italic":false}']},HideFlags:2,Unbreakable:1b,gunblade:1b,switch:1b,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-3.0,Operation:0,UUID:[I;-161766760,-1067038840,-1503270007,212943800],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:7.5,Operation:0,UUID:[I;1725832463,-1623243755,-1879494581,-1383118150],Slot:"mainhand"}]} 1
+execute if entity @s[tag=upgraded] run item replace entity @s hotbar.8 with gunpowder{CustomModelData:14,display:{Name:'{"text":"Gunblade Ammo","color":"gray","italic":false}',Lore:['{"text":"Ammo for the Gunblade."}']},gunbladeammo:1b,Enchantments:[{}]} 20
 
-execute at @s run playsound minecraft:block.piston.contract master @s ~ ~ ~ 1 2
+playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 2
 
-tag @s add reloading
+tag @s remove reloading
 
-
-
+scoreboard players reset @s reload

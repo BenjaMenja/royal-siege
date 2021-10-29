@@ -32,6 +32,8 @@ execute as @a[scores={Kit=9},tag=squidzooking] run execute store result entity @
 
 tag @e[type=item,tag=squidzooka] add stop
 
-scoreboard players set @a[tag=squidzooking] squidzookaTimer 200
+tag @s remove squidzooking
+
+scoreboard players set @s squidzookaTimer 200
 
 function commands:replace/squidzooka_replace

@@ -5,8 +5,6 @@ function commands:starting/spawn_dungeon_villagers
 
 #Rest of the Start of the Map
 
-function commands:command_chunk/command_chunk_delayed
-
 teleport @e[type=skeleton] ~ -100 ~
 
 teleport @e[type=zombie] ~ -100 ~

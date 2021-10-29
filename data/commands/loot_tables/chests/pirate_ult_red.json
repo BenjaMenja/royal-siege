@@ -137,7 +137,7 @@
           },
           {
             "type": "minecraft:loot_table",
-            "name": "commands:shop_items/poisonous_mushrooms"
+            "name": "commands:shop_items/poisonous_mushrooms_red"
           },
           {
             "type": "minecraft:loot_table",

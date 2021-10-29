@@ -46,4 +46,6 @@ scoreboard players set @s FireballTimer 0
 
 function commands:replace/fireball_launcher_replace
 
+tag @s remove wizard
+
 tag @s remove charged

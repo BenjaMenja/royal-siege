@@ -90,7 +90,7 @@ give @a[distance=..8,team=Red,tag=!wipeKill,scores={Kit=7,RedKit=198}] minecraft
 
 give @a[distance=..8,team=Red,scores={Kit=7,RedKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Blunderbuss","color":"yellow","italic":false}',Lore:['{"text":"Shoots a blast of 8 arrows in front of you, doing lots of damage."}','{"text":"Can be used every 3 seconds."}']},Unbreakable:1b,CustomModelData:118,blunderbuss:1b} 1
 
-give @a[distance=..8,team=Red,scores={Kit=7,RedKit=198}] gold_ingot{CustomModelData:148,display:{Name:'{"text":"Fake Money","italic":false}',Lore:['{"text":"Throw onto the ground and watch an unsuspecting enemy explode!"}']},HideFlags:1,Enchantments:[{}],fakemoneyred:1b} 1
+give @a[distance=..8,team=Red,scores={Kit=7,RedKit=198}] gold_ingot{CustomModelData:148,display:{Name:'{"text":"Fake Money","italic":false}',Lore:['{"text":"Throw onto the ground and watch an unsuspecting enemy explode!"}']},HideFlags:1,Enchantments:[{}],fakemoneyred:1b,fakemoney:1b} 1
 
 give @a[distance=..8,team=Red,scores={Kit=7,RedKit=198}] arrow 32
 

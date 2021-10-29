@@ -2,9 +2,9 @@ execute at @s[scores={Treeremove=1..2}] run effect give @a[team=Red,distance=..1
 
 execute at @s[scores={Treeremove=1..2}] run effect give @a[team=Red,distance=..10] absorption 10 1 true
 
-execute at @s[scores={Treeremove=1},tag=Treeoflife] run playsound royalsiege:ultimates.tree_of_life_friendly master @a[team=Red] ~ ~ ~ 100 1
+execute at @s[scores={Treeremove=1}] run playsound royalsiege:ultimates.tree_of_life_friendly master @a[team=Red] ~ ~ ~ 100 1
 
-execute at @s[scores={Treeremove=1},tag=Treeoflife] run playsound royalsiege:ultimates.tree_of_life_enemy master @a[team=Blue] ~ ~ ~ 100 1
+execute at @s[scores={Treeremove=1}] run playsound royalsiege:ultimates.tree_of_life_enemy master @a[team=Blue] ~ ~ ~ 100 1
 
 execute at @s run effect give @a[team=Red,distance=..10] speed 1 0 true
 
