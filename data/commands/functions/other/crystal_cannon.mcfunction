@@ -32,6 +32,6 @@ execute store result entity @e[tag=cCannonItem,limit=1,tag=!stop] Motion[2] doub
 
 tag @e[tag=cCannonItem] add stop
 
-scoreboard players set @s cCannonTimer 0
+scoreboard players set @s cCannonTimer 400
 
 function commands:replace/crystal_cannon_replace

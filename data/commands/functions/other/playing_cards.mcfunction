@@ -60,6 +60,8 @@ scoreboard players set #cardTemp cardValue 0
 
 execute as @e[tag=pCard,tag=!stop] run function commands:other/playing_card_calculation
 
+scoreboard players reset #cardsChecked cardTemp
+
 tag @e[tag=pCard] add stop
 
 scoreboard players set @s[tag=!sleightofhand] pCardsTimer 240

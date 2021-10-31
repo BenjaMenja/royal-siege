@@ -1,4 +1,4 @@
-escoreboard players operation @s dSpellStore = @s defensiveSpell
+scoreboard players operation @s dSpellStore = @s defensiveSpell
 
 execute store result score @s dSpellDis run scoreboard players operation @s dSpellStore /= #ticks constant
 

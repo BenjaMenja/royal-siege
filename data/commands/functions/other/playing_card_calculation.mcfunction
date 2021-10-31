@@ -165,5 +165,3 @@ execute if score #cardsChecked cardTemp matches 7 run scoreboard players set #ca
 
 execute if score #cardsChecked cardTemp matches 7 run scoreboard players set #straightFlush cardTemp 0
 
-execute if score #cardsChecked cardTemp matches 7 run scoreboard players reset #cardsChecked cardTemp
-

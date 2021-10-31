@@ -24,6 +24,8 @@ scoreboard players operation #var12 temp = @s draWins
 
 scoreboard players operation #var13 temp = @s gamWins
 
+scoreboard players operation #var81 temp = @s astWins
+
 scoreboard players operation #var14 temp = @s warLosses
 
 scoreboard players operation #var15 temp = @s ninLosses
@@ -49,6 +51,8 @@ scoreboard players operation #var24 temp = @s chefLosses
 scoreboard players operation #var25 temp = @s draLosses
 
 scoreboard players operation #var26 temp = @s gamLosses
+
+scoreboard players operation #var82 temp = @s astLosses
 
 scoreboard players operation #var27 temp = @s warTies
 
@@ -76,6 +80,8 @@ scoreboard players operation #var38 temp = @s draTies
 
 scoreboard players operation #var39 temp = @s gamTies
 
+scoreboard players operation #var83 temp = @s astTies
+
 scoreboard players operation #var40 temp = @s warWinsTDM
 
 scoreboard players operation #var41 temp = @s ninWinsTDM
@@ -102,6 +108,8 @@ scoreboard players operation #var51 temp = @s draWinsTDM
 
 scoreboard players operation #var52 temp = @s gamWinsTDM
 
+scoreboard players operation #var84 temp = @s astWinsTDM
+
 scoreboard players operation #var53 temp = @s warLossesTDM
 
 scoreboard players operation #var54 temp = @s ninLossesTDM
@@ -127,6 +135,8 @@ scoreboard players operation #var63 temp = @s chefLossesTDM
 scoreboard players operation #var64 temp = @s draLossesTDM
 
 scoreboard players operation #var65 temp = @s gamLossesTDM
+
+scoreboard players operation #var85 temp = @s astLossesTDM
 
 scoreboard players operation #var66 temp = @s warTiesTDM
 
@@ -323,3 +333,13 @@ scoreboard players operation @s gamTiesTDM = #var78 temp
 scoreboard players operation @s gamesPlayed = #var79 temp
 
 scoreboard players operation @s gamesPlayedTDM = #var80 temp
+
+scoreboard players operation @s astWins = #var81 temp
+
+scoreboard players operation @s astLosses = #var82 temp
+
+scoreboard players operation @s astTies = #var83 temp
+
+scoreboard players operation @s astWinsTDM = #var84 temp
+
+scoreboard players operation @s astLossesTDM = #var85 temp
