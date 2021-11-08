@@ -1592,11 +1592,11 @@ scoreboard players reset #BlueOCMinions multiItems
 
 #Skybox Check
 
-execute as @a[predicate=commands:skybox] run advancement grant @s only commands:hidden_advancements/hit_skybox
+execute as @a[predicate=commands:skybox] unless entity @a[predicate=commands:in_practice_range] run advancement grant @s only commands:hidden_advancements/hit_skybox
 
-execute as @a[predicate=commands:skybox] at @s run teleport @s ~ 122 ~
+execute as @a[predicate=commands:skybox] unless entity @a[predicate=commands:in_practice_range] at @s run teleport @s ~ 122 ~
 
-execute as @e[type=ender_pearl,predicate=commands:skybox] at @s run teleport @s ~ 122 ~
+execute as @e[type=ender_pearl,predicate=commands:skybox] at @s unless entity @a[predicate=commands:in_practice_range] run teleport @s ~ 122 ~
 
 #Fish Cannon
 
@@ -2490,11 +2490,11 @@ execute as @a[scores={usedCOAS=1..,coinGunTimer=..0,Money=100..},predicate=comma
 
 execute as @a[tag=coinGun] at @s run function commands:other/coin_gun
 
-execute as @e[type=item,tag=coinBulletRed] at @s run tag @a[team=Blue,distance=..2,limit=1,sort=nearest] add coinHit
+execute as @e[type=item,tag=coinBulletRed] at @s run tag @e[type=#commands:projectile_hits,team=Blue,distance=..2,limit=1,sort=nearest] add coinHit
 
-execute as @e[type=item,tag=coinBulletBlue] at @s run tag @a[team=Red,distance=..2,limit=1,sort=nearest] add coinHit
+execute as @e[type=item,tag=coinBulletBlue] at @s run tag @e[type=#commands:projectile_hits,team=Red,distance=..2,limit=1,sort=nearest] add coinHit
 
-execute as @a[tag=coinHit] at @s run function commands:other/coin_gun_hit
+execute as @e[type=#commands:projectile_hits,tag=coinHit] at @s run function commands:other/coin_gun_hit
 
 kill @e[type=item,tag=coinBullet,nbt={OnGround:1b}]
 
@@ -2532,11 +2532,11 @@ execute as @a[scores={usedCOAS=1..,pCardsTimer=..0},predicate=commands:holding/p
 
 execute as @a[tag=cardShooter] at @s run function commands:other/playing_cards
 
-execute as @e[type=item,tag=pCardRed] at @s run tag @a[team=Blue,distance=..2] add cardEffect
+execute as @e[type=item,tag=pCardRed] at @s run tag @e[type=#commands:projectile_hits,team=Blue,distance=..2] add cardEffect
 
-execute as @e[type=item,tag=pCardBlue] at @s run tag @a[team=Red,distance=..2] add cardEffect
+execute as @e[type=item,tag=pCardBlue] at @s run tag @e[type=#commands:projectile_hits,team=Red,distance=..2] add cardEffect
 
-execute as @a[tag=cardEffect] at @s run function commands:other/playing_card_damage
+execute as @e[type=#commands:projectile_hits,tag=cardEffect] at @s run function commands:other/playing_card_damage
 
 scoreboard players add @e[type=item,tag=pCard] pCardsTimer 1
 
@@ -2630,9 +2630,9 @@ execute as @a[tag=debrisShooter] at @s run function commands:other/debris_cannon
 
 kill @e[type=item,tag=debrisitem,nbt={OnGround:1b}]
 
-execute as @a[team=Red,predicate=commands:inventory/debris_item_blue] run function commands:other/debris_item
+execute as @e[type=#commands:projectile_hits,team=Red,predicate=commands:inventory/debris_item_blue] run function commands:other/debris_item
 
-execute as @a[team=Blue,predicate=commands:inventory/debris_item_red] run function commands:other/debris_item
+execute as @e[type=#commands:projectile_hits,team=Blue,predicate=commands:inventory/debris_item_red] run function commands:other/debris_item
 
 execute as @e[type=item,tag=redDebris] at @s run data modify entity @s Owner set from entity @p[team=Blue] UUID
 

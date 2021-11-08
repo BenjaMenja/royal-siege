@@ -66,6 +66,8 @@ execute if entity @a[predicate=commands:in_character_select_area] if score #char
 
 #Other Spawnstuff
 
+execute as @a[predicate=commands:in_practice_range] run scoreboard players operation @s Ultimate = @s ultCheck
+
 effect give @a[predicate=commands:on_character_select_bridge] speed 1 9 true
 
 advancement grant @a[scores={secret=23}] only commands:hidden_advancements/secret

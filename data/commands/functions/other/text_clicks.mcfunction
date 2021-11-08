@@ -296,4 +296,36 @@ execute if score @s textClick matches 152 run function commands:starting/ultimat
 
 execute if score @s textClick matches 153 run function commands:books/astronaut
 
+execute if score @s textClick matches 154 run function commands:practice_range/character/warrior
+
+execute if score @s textClick matches 155 run function commands:practice_range/character/ninja
+
+execute if score @s textClick matches 156 run function commands:practice_range/character/guardian
+
+execute if score @s textClick matches 157 run function commands:practice_range/character/angel
+
+execute if score @s textClick matches 158 run function commands:practice_range/character/archer
+
+execute if score @s textClick matches 159 run function commands:practice_range/character/wizard
+
+execute if score @s textClick matches 160 run function commands:practice_range/character/pirate
+
+execute if score @s textClick matches 161 run function commands:practice_range/character/ent
+
+execute if score @s textClick matches 162 run function commands:practice_range/character/poseidon
+
+execute if score @s textClick matches 163 run function commands:practice_range/character/robot
+
+execute if score @s textClick matches 164 run function commands:practice_range/character/chef
+
+execute if score @s textClick matches 165 run function commands:practice_range/character/dragon
+
+execute if score @s textClick matches 166 run function commands:practice_range/character/gambler
+
+execute if score @s textClick matches 167 run function commands:practice_range/character/astronaut
+
+execute if score @s textClick matches 168 run function commands:practice_range/team/red
+
+execute if score @s textClick matches 169 run function commands:practice_range/team/blue
+
 scoreboard players reset @a[scores={textClick=1..}] textClick

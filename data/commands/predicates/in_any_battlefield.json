@@ -12,6 +12,10 @@
     {
       "condition": "minecraft:reference",
       "name": "commands:in_tdm_map"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:in_practice_range"
     }
   ]
 }

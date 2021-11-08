@@ -1,0 +1,1 @@
+tellraw @s [{"text":"Choose a team","color":"green"},{"text":"\n"},{"text":"[Red]","color":"red","clickEvent":{"action":"run_command","value":"/trigger textClick set 168"}},{"text":"     "},{"text":"[Blue]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger textClick set 169"}}]
