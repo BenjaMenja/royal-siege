@@ -1,15 +1,3 @@
-#Pre Team Randomization Checks
-
-execute unless score @s players matches 4.. run tellraw @a {"text":"You must choose the number of players before playing!","color":"red"}
-
-execute as @a[team=!spectator] run scoreboard players add #playercount spawnStuff 1
-
-execute if score #playercount spawnStuff >= @s players run tag @s add randomTeams
-
-execute if score @s players matches 4.. unless score #playercount spawnStuff >= @s players run tellraw @a {"text":"You do not have enough players for this player count!","color":"red"}
-
-execute if score @s players matches 4.. unless score #playercount spawnStuff >= @s players run tellraw @a {"text":"You must choose a smaller player count or move some people off of spectator.","color":"red"}
-
 #4 Player Game
 
 execute if score @p players matches 4 if entity @a[tag=randomized,tag=randomTeams] run team join Red @a[limit=2,team=!spectator,sort=random]
