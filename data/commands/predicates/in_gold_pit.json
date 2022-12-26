@@ -154,6 +154,72 @@
           }
         }
       }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "position": {
+            "x": {
+              "min": 1984.5,
+              "max": 1986.5
+            },
+            "y": {
+              "min": 52,
+              "max": 54
+            },
+            "z": {
+              "min": 20.5,
+              "max": 22.5
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "position": {
+            "x": {
+              "min": 2037.5,
+              "max": 2039.5
+            },
+            "y": {
+              "min": 52,
+              "max": 54
+            },
+            "z": {
+              "min": 19.5,
+              "max": 21.5
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "position": {
+            "x": {
+              "min": 2005.5,
+              "max": 2007.5
+            },
+            "y": {
+              "min": 52,
+              "max": 54
+            },
+            "z": {
+              "min": -19.5,
+              "max": -17.5
+            }
+          }
+        }
+      }
     }
   ]
 }

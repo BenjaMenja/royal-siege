@@ -52,7 +52,9 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @a[team=Blue,x=-1402,y=60,z=1194,distance=..50,scores={Respawn=200..}] at @s run teleport @s 58 60 -1111
 
-execute if score #gamemode settings matches 1 as @a[team=Blue,x=-1402,y=60,z=1194,distance=..50,scores={Respawn=200..}] at @s run teleport @s 1015 53 -61
+execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 as @a[team=Blue,x=-1402,y=60,z=1194,distance=..50,scores={Respawn=200..}] at @s run teleport @s 1015 53 -61
+
+execute if score #gamemode settings matches 1 if score #tdmMap settings matches 1 as @a[team=Blue,x=-1402,y=60,z=1194,distance=..50,scores={Respawn=200..}] at @s run teleport @s 1971 106 33
 
 title @a[scores={Respawn=200..},team=Blue] times 10 40 20
 

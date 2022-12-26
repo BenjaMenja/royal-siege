@@ -107,6 +107,4 @@ tag @s remove blunderShoot
 
 tag @s remove wrenched
 
-clear @s arrow 1
-
 function commands:replace/blunderbuss_replace

@@ -1,3 +1,5 @@
+tag @s[tag=ultimateInv] add hadUltimate
+
 clear @s
 
 give @s[scores={Kit=1}] minecraft:iron_axe{CustomModelData:153,display:{Name:'{"text":"Warrior\'s Battleaxe","italic":false}',Lore:['{"text":"Nothing fancy, but it gets the job done."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 9.5 Attack Damage","color":"dark_green","italic":false}','{"text":" 0.9 Attack Speed","color":"dark_green","italic":false}']},HideFlags:2,Unbreakable:1b,warrioraxe:1b,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:9.5,Operation:0,UUID:[I;1641905257,66145886,-1588703272,-1985932049],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-3.1,Operation:0,UUID:[I;-1679768215,-1181463334,-1904452306,-759715851],Slot:"mainhand"}]} 1

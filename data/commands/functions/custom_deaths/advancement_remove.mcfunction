@@ -80,6 +80,8 @@ advancement revoke @s only commands:asteroid_shard_death
 
 advancement revoke @s only commands:rocket_death
 
+advancement revoke @s only commands:smart_drone_death
+
 tag @s remove DIED
 
 tag @s remove DIED2

@@ -20,8 +20,6 @@ execute if entity @s[team=Red] if score #angelspellsred voicelineCD matches 60..
 
 execute if entity @s[team=Blue] if score #angelspellsblue voicelineCD matches 60.. run scoreboard players reset #angelspellsblue voicelineCD
 
-clear @s[scores={Kit=4}] carrot_on_a_stick{DefensiveSpell:1b}
-
-clear @s[scores={Kit=4}] carrot_on_a_stick{AssaultSpell:1b}
+scoreboard players set @s[scores={Kit=4}] HealerItems 500
 
 tag @s remove wrenched

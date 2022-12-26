@@ -67,4 +67,3 @@ scoreboard players set @s debrisTimer 1
 scoreboard players set @s astroPassTimer 1
 
 scoreboard players set @s wrenchTimer 1
-

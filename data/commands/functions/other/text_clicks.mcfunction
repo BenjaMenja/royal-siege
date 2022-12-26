@@ -128,6 +128,8 @@ execute if score @s textClick matches 64 run function commands:other/shops
 
 execute if score @s textClick matches 65 run function commands:other/withdraw
 
+#Replace This one first
+
 execute if score @s textClick matches 66 run function commands:shops/arrows
 
 execute if score @s textClick matches 67 run function commands:other/withdraw_credit
@@ -327,5 +329,11 @@ execute if score @s textClick matches 167 run function commands:practice_range/c
 execute if score @s textClick matches 168 run function commands:practice_range/team/red
 
 execute if score @s textClick matches 169 run function commands:practice_range/team/blue
+
+execute if score @s textClick matches 170 run function commands:shops/olympic_vault
+
+execute if score @s textClick matches 171 run function commands:settings/colosseum
+
+execute if score @s textClick matches 172 run function commands:settings/new_chicago_skyline
 
 scoreboard players reset @a[scores={textClick=1..}] textClick

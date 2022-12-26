@@ -11,7 +11,11 @@
     },
     {
       "condition": "minecraft:reference",
-      "name": "commands:in_tdm_map"
+      "name": "commands:in_colosseum"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:in_ncs"
     },
     {
       "condition": "minecraft:reference",

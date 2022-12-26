@@ -1,5 +1,7 @@
 tag @s add selectWarp
 
+scoreboard players reset #playercount spawnStuff
+
 #Players in Practice Range
 
 execute if entity @a[predicate=commands:in_practice_range] run tag @s remove selectWarp

@@ -66,6 +66,8 @@ give @s[scores={Ultimate=26}] minecraft:carrot_on_a_stick{display:{Name:'{"text"
 
 give @s[scores={Ultimate=27}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Rocket Launch","color":"dark_red","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"After a short delay, launches a rocket into the air."}','{"text":"The rocket will come crashing down, creating a gigantic explosion."}']},CustomModelData:177,rocketlaunch:1b} 1
 
+give @s[scores={Ultimate=28}] carrot_on_a_stick{display:{Name:'{"text":"Smart Drone","color":"gray","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Constructs a drone that sits above your head."}','{"text":"The drone fires lasers at the closest enemy on a 4s cooldown."}','{"text":"Using this item while drones are currently active will spawn more drones."}','{"text":"Drones are destroyed when the astronaut takes sufficient damage."}']},HideFlags:4,Unbreakable:1b,CustomModelData:178,smartdrone:1b} 1
+
 tag @s remove hadUltimate
 
 tag @s remove ultimateInv

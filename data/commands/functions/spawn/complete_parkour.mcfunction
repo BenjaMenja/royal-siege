@@ -26,6 +26,14 @@ execute if score @s parkourTime matches 20.. run scoreboard players operation @s
 
 tellraw @a [{"selector":"@s","color":"green"},{"text":" has completed the parkour in ","color":"aqua"},{"score":{"name":"#pminutestore","objective":"parkourTime"},"color":"aqua"},{"text":"m "},{"score":{"name":"#psecondstore","objective":"parkourTime"},"color":"aqua"},{"text":"s "},{"score":{"name":"@s","objective":"parkourTime"},"color":"aqua"},{"text":"t!"}]
 
+stopsound @s record royalsiege:songs.parkour_pain_intro
+
+stopsound @s record royalsiege:songs.parkour_pain_loop
+
+tag @s remove PPainSong
+
+scoreboard players reset @s PPainSong
+
 scoreboard players set #timestore parkourTime 0
 
 scoreboard players set #minutes parkourTime 0

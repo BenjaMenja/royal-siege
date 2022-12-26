@@ -38,4 +38,4 @@ execute at @s[team=Blue] if score #entvoiceblue voicelineCD matches 40.. run pla
 
 execute at @s[team=Blue] if score #entvoiceblue voicelineCD matches 40.. run scoreboard players reset #entvoiceblue voicelineCD
 
-clear @s carrot_on_a_stick{blossom:1b}
+scoreboard players set @s blossomTimer 400

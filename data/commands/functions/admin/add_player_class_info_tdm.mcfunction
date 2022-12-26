@@ -56,7 +56,7 @@ execute if entity @s[tag=!End,scores={Kit=12}] run scoreboard players add @s dra
 
 execute if entity @s[tag=!End,scores={Kit=13}] run scoreboard players add @s gamLossesTDM 1
 
-execute if entity @s[tag=!End,scores={Kit=14}] run scoreboard players add @s gamLossesTDM 1
+execute if entity @s[tag=!End,scores={Kit=14}] run scoreboard players add @s astLossesTDM 1
 
 #Other
 

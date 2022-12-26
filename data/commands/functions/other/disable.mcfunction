@@ -8,9 +8,9 @@ execute at @s[team=Red] run clear @a[distance=..9,team=Blue] carrot_on_a_stick
 
 execute at @s[team=Red] run clear @a[distance=..9,team=Blue] bat_spawn_egg
 
-execute at @s[team=Red] run give @a[team=Blue,scores={Kit=6},distance=..9] carrot_on_a_stick{CustomModelData:2,display:{Name:'{"text":"Lightning Staff","color":"aqua","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Shoots a beam that strikes lightning"}','{"text":"onto enemy players and blocks."}','{"text":"Can be used every 4 seconds, and "}','{"text":"can hold up to 10 charges."}']},HideFlags:1,Unbreakable:1b,lightningstaff:1b,Enchantments:[{}]} 1
+execute at @s[team=Red] run give @a[team=Blue,scores={Kit=6},distance=..9] carrot_on_a_stick{CustomModelData:2,display:{Name:'{"text":"Lightning Staff","color":"aqua","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Shoots a beam that strikes lightning"}','{"text":"onto enemy players and blocks."}','{"text":"Gains a charge every 6 seconds, and "}','{"text":"can hold up to 8 charges."}']},HideFlags:1,Unbreakable:1b,lightningstaff:1b,Enchantments:[{}]} 1
 
-execute at @s[team=Red] run give @a[team=Blue,scores={Kit=6},distance=..9] carrot_on_a_stick{CustomModelData:1,display:{Name:'{"text":"Fireball Launcher","color":"red","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Contains an unlimited "}','{"text":"supply of fireballs to launch."}','{"text":"Can only shoot every 4 seconds."}','{"text":"Text will appear to indicate"}','{"text":"when it is ready."}']},HideFlags:1,Unbreakable:1b,Enchantments:[{}],fireballlauncher:1b} 1
+execute at @s[team=Red] run give @a[team=Blue,scores={Kit=6},distance=..9] carrot_on_a_stick{CustomModelData:1,display:{Name:'{"text":"Fireball Launcher","color":"red","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Contains an unlimited "}','{"text":"supply of fireballs to launch."}','{"text":"Can be used every 6 seconds."}']},HideFlags:1,Unbreakable:1b,Enchantments:[{}],fireballlauncher:1b} 1
 
 execute at @s[team=Red] run give @a[team=Blue,scores={Kit=2},distance=..9] carrot_on_a_stick{CustomModelData:9,display:{Name:'{"text":"Dash","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Dash forward up to 5 blocks, creating an explosion wherever you land."}','{"text":"You also receive brief speed and damage resistance."}']},HideFlags:1,Unbreakable:1b,Enchantments:[{}],ninjadash:1b} 1
 
@@ -44,9 +44,9 @@ execute at @s[team=Blue] run clear @a[distance=..9,team=Red] carrot_on_a_stick
 
 execute at @s[team=Blue] run clear @a[distance=..9,team=Red] bat_spawn_egg
 
-execute at @s[team=Blue] run give @a[team=Red,scores={Kit=6},distance=..9] carrot_on_a_stick{CustomModelData:2,display:{Name:'{"text":"Lightning Staff","color":"aqua","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Shoots a beam that strikes lightning"}','{"text":"onto enemy players and blocks."}','{"text":"Can be used every 4 seconds, and "}','{"text":"can hold up to 10 charges."}']},HideFlags:1,Unbreakable:1b,lightningstaff:1b,Enchantments:[{}]} 1
+execute at @s[team=Blue] run give @a[team=Red,scores={Kit=6},distance=..9] carrot_on_a_stick{CustomModelData:2,display:{Name:'{"text":"Lightning Staff","color":"aqua","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Shoots a beam that strikes lightning"}','{"text":"onto enemy players and blocks."}','{"text":"Gains a charge every 6 seconds, and "}','{"text":"can hold up to 8 charges."}']},HideFlags:1,Unbreakable:1b,lightningstaff:1b,Enchantments:[{}]} 1
 
-execute at @s[team=Blue] run give @a[team=Red,scores={Kit=6},distance=..9] carrot_on_a_stick{CustomModelData:1,display:{Name:'{"text":"Fireball Launcher","color":"red","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Contains an unlimited "}','{"text":"supply of fireballs to launch."}','{"text":"Can only shoot every 4 seconds."}','{"text":"Text will appear to indicate"}','{"text":"when it is ready."}']},HideFlags:1,Unbreakable:1b,Enchantments:[{}],fireballlauncher:1b} 1
+execute at @s[team=Blue] run give @a[team=Red,scores={Kit=6},distance=..9] carrot_on_a_stick{CustomModelData:1,display:{Name:'{"text":"Fireball Launcher","color":"red","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Contains an unlimited "}','{"text":"supply of fireballs to launch."}','{"text":"Can be used every 6 seconds."}']},HideFlags:1,Unbreakable:1b,Enchantments:[{}],fireballlauncher:1b} 1
 
 execute at @s[team=Blue] run give @a[team=Red,scores={Kit=2},distance=..9] carrot_on_a_stick{CustomModelData:9,display:{Name:'{"text":"Dash","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Dash forward up to 5 blocks, creating an explosion wherever you land."}','{"text":"You also receive brief speed and damage resistance."}']},HideFlags:1,Unbreakable:1b,Enchantments:[{}],ninjadash:1b} 1
 
@@ -76,4 +76,4 @@ execute at @s[team=Blue] run tag @a[team=Red,distance=..9] remove hasGasVacuum
 
 execute as @a[tag=hadUltimate] run function commands:other/disable_give_ultimates
 
-clear @s carrot_on_a_stick{disable:1b}
+scoreboard players set @s disableTimer 2000

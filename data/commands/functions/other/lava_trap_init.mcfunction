@@ -22,4 +22,4 @@ execute if entity @s[team=Red,predicate=commands:in_any_blue_castle] run tag @s 
 
 execute if entity @s[team=Blue,predicate=commands:in_any_red_castle] run tag @s add inEnemyCastle
 
-clear @s carrot_on_a_stick{lavatrap:1b}
+scoreboard players set @s lavaTrapTimer 1500

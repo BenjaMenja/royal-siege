@@ -8,4 +8,4 @@ effect give @s slowness 5 0 true
 
 effect give @s resistance 5 1 true
 
-clear @s carrot_on_a_stick{ironwall:1b}
+scoreboard players set @s ironTimer 1200

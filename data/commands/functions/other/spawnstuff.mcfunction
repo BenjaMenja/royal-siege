@@ -98,17 +98,45 @@ effect give @a[predicate=commands:in_parkour_area] saturation 1 100 true
 
 effect give @a[predicate=commands:in_credits_room] saturation 1 100 true
 
-scoreboard players add @a[predicate=commands:in_parkour_area,predicate=!commands:on_parkour_floor] parkourTime 1
+gamemode adventure @a[gamemode=survival]
+
+kill @e[type=item,predicate=commands:in_character_select_area]
+
+#Parkour Stuff
+
+scoreboard players set @a[predicate=commands:in_parkour_area,predicate=commands:on_parkour_first_block,tag=!startParkour] parkourTime 1
+
+scoreboard players set @a[predicate=commands:in_parkour_area,predicate=commands:on_parkour_first_block,tag=!startParkour] PPainSong 1
+
+tag @a[predicate=commands:in_parkour_area,predicate=commands:on_parkour_first_block] add startParkour
+
+playsound royalsiege:songs.parkour_pain_intro record @a[scores={PPainSong=1}] ~ ~ ~ 100 1
+
+scoreboard players add @a[predicate=commands:in_parkour_area,predicate=!commands:on_parkour_floor,scores={parkourTime=1..}] parkourTime 1
+
+scoreboard players add @a[predicate=commands:in_parkour_area,predicate=!commands:on_parkour_floor,scores={PPainSong=1..}] PPainSong 1
+
+playsound royalsiege:songs.parkour_pain_loop record @a[scores={parkourTime=..1211,PPainSong=1201..}] ~ ~ ~ 100 1
+
+playsound royalsiege:songs.parkour_pain_loop record @a[scores={parkourTime=1211..,PPainSong=1121..}] ~ ~ ~ 100 1
+
+scoreboard players set @a[scores={parkourTime=..1211,PPainSong=1201..}] PPainSong 2
+
+scoreboard players set @a[scores={parkourTime=1211..,PPainSong=1121..}] PPainSong 2
+
+scoreboard players reset @a[predicate=commands:on_parkour_floor] PPainSong
+
+stopsound @a[predicate=commands:on_parkour_floor] record royalsiege:songs.parkour_pain_intro
+
+stopsound @a[predicate=commands:on_parkour_floor] record royalsiege:songs.parkour_pain_loop
+
+tag @a[predicate=commands:on_parkour_floor] remove startParkour
 
 scoreboard players reset @a[predicate=commands:on_parkour_floor] parkourTime
 
 team join parkour @a[predicate=commands:in_parkour_area]
 
 team leave @a[predicate=!commands:in_parkour_area,team=parkour]
-
-gamemode adventure @a[gamemode=survival]
-
-kill @e[type=item,predicate=commands:in_character_select_area]
 
 
 
