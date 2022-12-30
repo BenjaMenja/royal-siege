@@ -58,6 +58,8 @@ advancement revoke @s only commands:hatchling_death
 
 advancement revoke @s only commands:crystal_cannon_death
 
+advancement revoke @s only commands:necromantic_axe_death
+
 advancement revoke @s only commands:blunderbuss_death
 
 advancement revoke @s only commands:royal_guard_death

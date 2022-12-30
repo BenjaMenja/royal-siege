@@ -40,7 +40,7 @@ execute as @e[tag=dRageFireball,tag=!stop] store result entity @s power[2] doubl
 
 tag @e[tag=dRageFireball] add stop
 
-scoreboard players set @s dragonRageTimer 200
+scoreboard players set @s dragonRageTimer 240
 
 tag @s remove wrenched
 

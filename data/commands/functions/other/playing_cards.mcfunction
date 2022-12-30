@@ -64,7 +64,7 @@ scoreboard players reset #cardsChecked cardTemp
 
 tag @e[tag=pCard] add stop
 
-scoreboard players set @s[tag=!sleightofhand] pCardsTimer 240
+scoreboard players set @s[tag=!sleightofhand] pCardsTimer 160
 
 scoreboard players set @s[tag=sleightofhand] pCardsTimer 40
 

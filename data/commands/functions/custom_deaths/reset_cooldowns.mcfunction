@@ -30,6 +30,8 @@ scoreboard players set @s ironTimer 1
 
 scoreboard players set @s disableTimer 1
 
+scoreboard players set @s RegenTimer 1
+
 scoreboard players set @s WarriorItem 1
 
 scoreboard players set @s HealerItems 1

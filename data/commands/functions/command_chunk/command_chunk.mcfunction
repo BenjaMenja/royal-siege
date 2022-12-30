@@ -178,9 +178,9 @@ scoreboard players set @a[scores={HorseDie=1..}] HorseDie 0
 
 #Flying Skeleton
 
-execute as @e[type=bat,name="RedFlyingSkeleton"] at @s run summon bat ~ ~1 ~ {Silent:1b,Invulnerable:1b,Tags:["FS"],Passengers:[{id:"minecraft:skeleton",Team:"Red",Health:50f,Tags:["S"],HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:5s}]}},{id:"minecraft:tipped_arrow",Count:64b,tag:{CustomPotionEffects:[{Id:2b,Amplifier:3b,Duration:100}]}}],HandDropChances:[0.000F,-327.670F],ActiveEffects:[{Id:12b,Amplifier:0b,Duration:10000}]}]}
+execute as @e[type=bat,name="RedFlyingSkeleton"] at @s run summon bat ~ ~1 ~ {Silent:1b,Invulnerable:1b,Tags:["FS"],Passengers:[{id:"minecraft:skeleton",Team:"Red",Health:50f,Tags:["S"],HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:5s}]}},{id:"minecraft:tipped_arrow",Count:64b,tag:{CustomPotionEffects:[{Id:2,Amplifier:3b,Duration:100}]}}],HandDropChances:[0.000F,-327.670F],ActiveEffects:[{Id:12,Amplifier:0b,Duration:10000}]}]}
 
-execute as @e[type=bat,name="BlueFlyingSkeleton"] at @s run summon bat ~ ~1 ~ {Silent:1b,Invulnerable:1b,Tags:["FS"],Passengers:[{id:"minecraft:skeleton",Team:"Blue",Health:50f,HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:5s}]}},{id:"minecraft:tipped_arrow",Count:64b,tag:{CustomPotionEffects:[{Id:2b,Amplifier:3b,Duration:100}]}}],HandDropChances:[0.000F,0.000F],ActiveEffects:[{Id:12b,Amplifier:0b,Duration:10000}]}]}
+execute as @e[type=bat,name="BlueFlyingSkeleton"] at @s run summon bat ~ ~1 ~ {Silent:1b,Invulnerable:1b,Tags:["FS"],Passengers:[{id:"minecraft:skeleton",Team:"Blue",Health:50f,HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:5s}]}},{id:"minecraft:tipped_arrow",Count:64b,tag:{CustomPotionEffects:[{Id:2,Amplifier:3b,Duration:100}]}}],HandDropChances:[0.000F,0.000F],ActiveEffects:[{Id:12,Amplifier:0b,Duration:10000}]}]}
 
 tp @e[type=bat,name="RedFlyingSkeleton"] ~ -100 ~
 
@@ -378,13 +378,13 @@ scoreboard players add @e[type=zombie,tag=Minion] MinionDeath 1
 
 scoreboard players add @a[scores={Kit=6},predicate=commands:in_any_battlefield,tag=!notAlive] WizardMinion 1
 
-execute as @a[team=Red,tag=!upgraded,scores={WizardMinion=400..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Red",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],ActiveEffects:[{Id:12b,Amplifier:0b,Duration:10000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:12},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
+execute as @a[team=Red,tag=!upgraded,scores={WizardMinion=400..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Red",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],ActiveEffects:[{Id:12,Amplifier:0b,Duration:10000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:12},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
 
-execute as @a[team=Blue,tag=!upgraded,scores={WizardMinion=400..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Blue",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],ActiveEffects:[{Id:12b,Amplifier:0b,Duration:10000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:12},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
+execute as @a[team=Blue,tag=!upgraded,scores={WizardMinion=400..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Blue",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],ActiveEffects:[{Id:12,Amplifier:0b,Duration:10000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:12},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
 
-execute as @a[team=Red,tag=upgraded,scores={WizardMinion=320..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Red",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],ActiveEffects:[{Id:12b,Amplifier:0b,Duration:10000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:12},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
+execute as @a[team=Red,tag=upgraded,scores={WizardMinion=320..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Red",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],ActiveEffects:[{Id:12,Amplifier:0b,Duration:10000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:12},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
 
-execute as @a[team=Blue,tag=upgraded,scores={WizardMinion=320..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Blue",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],ActiveEffects:[{Id:12b,Amplifier:0b,Duration:10000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:12},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
+execute as @a[team=Blue,tag=upgraded,scores={WizardMinion=320..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Blue",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],ActiveEffects:[{Id:12,Amplifier:0b,Duration:10000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:12},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
 
 scoreboard players set @a[tag=upgraded,scores={WizardMinion=320..}] WizardMinion 0
 
@@ -412,7 +412,7 @@ execute as @e[type=wither_skeleton,tag=King,scores={Defend=1..}] run function co
 
 execute as @a[scores={Kit=5,glowingEffectCD=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s glowingEffectCD 1
 
-execute as @a[scores={usedCOAS=1..},predicate=commands:holding/glowing_effect] run function commands:other/glowing_effect
+execute as @a[scores={usedCOAS=1..,glowingEffectCD=..0},predicate=commands:holding/glowing_effect] run function commands:other/glowing_effect
 
 #Olympic Vault
 
@@ -594,7 +594,7 @@ tag @a[tag=closest] remove closest
 
 tp @e[type=item,scores={FruitRemove=100..}] ~ -100 ~
 
-#Max of 5 healing fruits
+#Max of team healing fruits
 
 execute as @a[team=Red] store result score @s hFruitNum run data get entity @s Inventory[{tag:{redhealingfruit:1b}}].Count
 
@@ -768,7 +768,7 @@ execute store result bossbar minecraft:blueking value run data get entity @e[typ
 
 #Reveal Drone
 
-execute as @e[type=bat,tag=Reveal] at @s run summon zombified_piglin ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4f,IsBaby:1b,Tags:["DroneRed","Drone"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
+execute as @e[type=bat,tag=Reveal] at @s run summon zombified_piglin ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4f,IsBaby:1b,Tags:["DroneRed","Drone"],ActiveEffects:[{Id:14,Amplifier:0b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
 
 tp @e[type=bat,tag=Reveal] ~ -100 ~
 
@@ -778,7 +778,7 @@ execute as @e[type=zombified_piglin,tag=DroneRed] at @s run effect give @a[team=
  
 execute as @e[type=zombified_piglin,tag=DroneRed] at @s run particle dust 1.000 1.000 0.000 1 ~ ~ ~ 0 0 0 1 10 normal
 
-execute as @e[type=bat,tag=RevealBlue] at @s run summon zombified_piglin ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4f,IsBaby:1b,Tags:["DroneBlue","Drone"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
+execute as @e[type=bat,tag=RevealBlue] at @s run summon zombified_piglin ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4f,IsBaby:1b,Tags:["DroneBlue","Drone"],ActiveEffects:[{Id:14,Amplifier:0b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
 
 tp @e[type=bat,tag=RevealBlue] ~ -100 ~
 
@@ -876,7 +876,7 @@ execute if entity @a[scores={Kit=2}] run function commands:other/display_dash_ch
 
 #C4
 
-execute at @e[type=bat,tag=c4] run summon villager ~ ~ ~ {Age:-32767,NoGravity:1b,Silent:1b,NoAI:1b,Health:4.0f,Tags:["c4"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
+execute at @e[type=bat,tag=c4] run summon villager ~ ~ ~ {Age:-32767,NoGravity:1b,Silent:1b,NoAI:1b,Health:4.0f,Tags:["c4"],ActiveEffects:[{Id:14,Amplifier:0b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
 
 tp @e[type=bat,tag=c4] ~ -100 ~
 
@@ -888,7 +888,7 @@ execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/d
 
 execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/detonator_red] run clear @a[scores={usedCOAS=1..}] carrot_on_a_stick{detonatorRed:1b} 1
 
-execute at @e[type=bat,tag=c4blue] run summon villager ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4.0f,Tags:["c4blue"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
+execute at @e[type=bat,tag=c4blue] run summon villager ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4.0f,Tags:["c4blue"],ActiveEffects:[{Id:14,Amplifier:0b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
 
 tp @e[type=bat,tag=c4blue] ~ -100 ~
 
@@ -1216,6 +1216,8 @@ execute as @a[scores={usedCOAS=1..,healSpell=..0},predicate=commands:holding/hea
 
 execute as @a[scores={usedCOAS=1..,HealerItems=..0},predicate=commands:holding/defensive_spell] run function commands:other/defensive_spell
 
+execute as @a[scores={usedCOAS=1..,defensiveSpell=..0},predicate=commands:holding/defensive_spell] run function commands:other/defensive_spell
+
 #Assault Spell
 
 execute as @a[scores={usedCOAS=1..,HealerItems=..0},predicate=commands:holding/assault_spell] run function commands:other/assault_spell
@@ -1264,9 +1266,9 @@ execute as @a[scores={Kit=3,defensiveSpell=1..},predicate=commands:in_any_battle
 
 scoreboard players remove @a[scores={Kit=3},predicate=commands:in_any_battlefield,tag=!notAlive] turretTimer 1
 
-give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg{CustomModelData:68,turret:1b,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Turret","color":"#B8481F","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}']},HideFlags:16,Enchantments:[{}],EntityTag:{Tags:["turret"],Silent:1b,Team:"Red",Health:25f,HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:power",lvl:4s}]}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680},Unbreakable:1b}},{id:"minecraft:dispenser",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-1,Operation:0,UUID:[I;8219412,-14895,-132010193,55327132]}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:200000}],Attributes:[{Name:"minecraft:generic.max_health",Base:25},{Name:"minecraft:generic.knockback_resistance",Base:1}]}} 1
+give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg{CustomModelData:68,turret:1b,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Turret","color":"#B8481F","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}']},HideFlags:16,Enchantments:[{}],EntityTag:{Tags:["turret"],Silent:1b,Team:"Red",Health:25f,HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:power",lvl:4s}]}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680},Unbreakable:1b}},{id:"minecraft:dispenser",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-1,Operation:0,UUID:[I;8219412,-14895,-132010193,55327132]}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],ActiveEffects:[{Id:14,Amplifier:0b,Duration:200000}],Attributes:[{Name:"minecraft:generic.max_health",Base:25},{Name:"minecraft:generic.knockback_resistance",Base:1}]}} 1
 
-give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg{CustomModelData:68,turret:1b,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Turret","color":"#B8481F","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}']},HideFlags:16,Enchantments:[{}],EntityTag:{Tags:["turret"],Silent:1b,Team:"Blue",Health:25f,HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:power",lvl:4s}]}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:255},Unbreakable:1b}},{id:"minecraft:dispenser",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-1,Operation:0,UUID:[I;8219412,-14895,-132010193,55327132]}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:200000}],Attributes:[{Name:"minecraft:generic.max_health",Base:25},{Name:"minecraft:generic.knockback_resistance",Base:1}]}} 1
+give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg{CustomModelData:68,turret:1b,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Turret","color":"#B8481F","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}']},HideFlags:16,Enchantments:[{}],EntityTag:{Tags:["turret"],Silent:1b,Team:"Blue",Health:25f,HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:power",lvl:4s}]}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:255},Unbreakable:1b}},{id:"minecraft:dispenser",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-1,Operation:0,UUID:[I;8219412,-14895,-132010193,55327132]}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],ActiveEffects:[{Id:14,Amplifier:0b,Duration:200000}],Attributes:[{Name:"minecraft:generic.max_health",Base:25},{Name:"minecraft:generic.knockback_resistance",Base:1}]}} 1
 
 scoreboard players set @a[scores={turretTimer=..0}] turretTimer 600
 
@@ -1360,7 +1362,7 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/overcharge] at @s
 
 tag @e[type=zombie,tag=overcharge] add OC
 
-execute as @e[type=zombie,tag=overcharge] at @s run data merge entity @s {CustomNameVisible:1b,Health:20f,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:7s},{id:"minecraft:knockback",lvl:2s},{id:"minecraft:fire_aspect",lvl:1s}]}},{}],HandDropChances:[0.000F,0.085F],ActiveEffects:[{Id:12b,Amplifier:0b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:20},{Name:"minecraft:generic.follow_range",Base:99},{Name:"minecraft:generic.movement_speed",Base:0.35}]}
+execute as @e[type=zombie,tag=overcharge] at @s run data merge entity @s {CustomNameVisible:1b,Health:20f,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:7s},{id:"minecraft:knockback",lvl:2s},{id:"minecraft:fire_aspect",lvl:1s}]}},{}],HandDropChances:[0.000F,0.085F],ActiveEffects:[{Id:12,Amplifier:0b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:20},{Name:"minecraft:generic.follow_range",Base:99},{Name:"minecraft:generic.movement_speed",Base:0.35}]}
  
 tag @e[type=zombie,tag=OC] remove overcharge
 
@@ -1412,11 +1414,11 @@ execute if entity @e[type=zombie,team=Red,tag=AI,scores={timeLimit=900}] run tel
 
 execute if entity @e[type=zombie,team=Blue,tag=AI,scores={timeLimit=900}] run tellraw @a {"text":"The Artificial Intelligence faded away...","color":"blue"}
 
-#Regenerative Staff
+#Angelic Staff Beam
 
 execute as @a[scores={Kit=4,RegenTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s RegenTimer 1
 
-tag @a[scores={usedCOAS=1..,RegenTimer=..0},predicate=commands:holding/regenerative_staff] add regenstaff
+tag @a[scores={usedCOAS=1..,RegenTimer=..0},predicate=commands:holding/angelic_staff] add regenstaff
 
 execute as @a[tag=regenstaff] at @s anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/regen_staff_start_ray
 
@@ -1978,9 +1980,9 @@ tag @e[type=wither_skeleton,scores={kingActive=0}] add inactivated
 
 execute as @e[type=wither_skeleton,tag=inactivated] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:-1}]}
 
-execute at @e[type=wither_skeleton,team=Red,tag=inactivated] run summon minecraft:wandering_trader ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["wanderingKingRed","wanderingKing"],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"generic.knockback_resistance",Base:1.0},{Name:"generic.movement_speed",Base:0.8}],WanderTarget:{X:9,Y:59,Z:-216},Offers:{}}
+execute at @e[type=wither_skeleton,team=Red,tag=inactivated] run summon minecraft:wandering_trader ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["wanderingKingRed","wanderingKing"],ActiveEffects:[{Id:14,Amplifier:1b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"generic.knockback_resistance",Base:1.0},{Name:"generic.movement_speed",Base:0.8}],WanderTarget:{X:9,Y:59,Z:-216},Offers:{}}
 
-execute at @e[type=wither_skeleton,team=Blue,tag=inactivated] run summon minecraft:wandering_trader ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["wanderingKingBlue","wanderingKing"],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"generic.knockback_resistance",Base:1.0},{Name:"generic.movement_speed",Base:0.8}],WanderTarget:{X:9,Y:59,Z:-48},Offers:{}}
+execute at @e[type=wither_skeleton,team=Blue,tag=inactivated] run summon minecraft:wandering_trader ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["wanderingKingBlue","wanderingKing"],ActiveEffects:[{Id:14,Amplifier:1b,Duration:100000,ShowParticles:0b}],Attributes:[{Name:"generic.knockback_resistance",Base:1.0},{Name:"generic.movement_speed",Base:0.8}],WanderTarget:{X:9,Y:59,Z:-48},Offers:{}}
 
 scoreboard players set @e[type=wither_skeleton,tag=inactivated] kingActive -1
 

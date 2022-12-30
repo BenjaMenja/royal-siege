@@ -8,8 +8,8 @@ playsound block.anvil.place master @s ~ ~ ~ 1 0
 
 kill @e[tag=davyLocker,distance=..4,limit=4,sort=nearest]
 
-kill @e[name=Locker,distance=..4,limit=1,sort=nearest]
+kill @e[name="Locker",distance=..4,limit=1,sort=nearest]
 
-kill @e[name=LockerBlue,distance=..4,limit=1,sort=nearest]
+kill @e[name="LockerBlue",distance=..4,limit=1,sort=nearest]
 
 tag @s remove locked
