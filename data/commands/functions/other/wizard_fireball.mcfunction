@@ -1,10 +1,10 @@
 tag @s add wizard
 
-execute at @s[tag=!charged,team=Red] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:4,Tags:["WF","fm","redProj"],CustomName:'{"text":"Wizard Fireball"}'}
+execute at @s[tag=!charged,team=Red] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:3,Tags:["WF","fm","redProj"],CustomName:'{"text":"Wizard Fireball"}'}
 
 execute at @s[tag=charged,team=Red] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:5,Tags:["WF","fm","redProj"],CustomName:'{"text":"Wizard Fireball"}'}
 
-execute at @s[tag=!charged,team=Blue] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:4,Tags:["WF","fm","blueProj"],CustomName:'{"text":"Wizard Fireball"}'}
+execute at @s[tag=!charged,team=Blue] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:3,Tags:["WF","fm","blueProj"],CustomName:'{"text":"Wizard Fireball"}'}
 
 execute at @s[tag=charged,team=Blue] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:5,Tags:["WF","fm","blueProj"],CustomName:'{"text":"Wizard Fireball"}'}
 
@@ -38,7 +38,7 @@ execute store result entity @e[type=fireball,tag=WF,limit=1,tag=!stop] power[2] 
 
 tag @e[type=fireball,tag=WF] add stop
 
-scoreboard players set @s FireballTimer 120
+scoreboard players set @s FireballTimer 160
 
 tag @s remove wizard
 

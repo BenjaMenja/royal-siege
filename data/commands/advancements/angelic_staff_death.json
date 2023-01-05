@@ -8,7 +8,7 @@
             "equipment": {
               "mainhand": {
                 "items": [
-                  "minecraft:stick"
+                  "minecraft:carrot_on_a_stick"
                 ],
                 "nbt": "{angelicstaff:1b}"
               }

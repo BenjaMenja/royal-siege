@@ -8,7 +8,7 @@
             "type": {
               "direct_entity": {
                 "type": "minecraft:arrow",
-                "nbt": "{CustomPotionEffects:[{Id:26b,Amplifier:0b,Duration:3}]}"
+                "nbt": "{CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:3}]}"
               }
             }
           }

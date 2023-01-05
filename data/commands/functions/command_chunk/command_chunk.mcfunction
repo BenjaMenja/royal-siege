@@ -882,7 +882,7 @@ tp @e[type=bat,tag=c4] ~ -100 ~
 
 execute at @e[type=villager,tag=c4] run particle dust 0.271 0.271 0.271 1 ~ ~0.5 ~ 0 0 0 0 5 force
 
-execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/detonator_red] at @e[type=villager,tag=c4] run summon creeper ~ ~ ~ {CustomNameVisible:0b,ExplosionRadius:6b,Invulnerable:1b,Fuse:1,Tags:["c4m"],ignited:1b,CustomName:'{"text":"C4"}'}
+execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/detonator_red] at @e[type=villager,tag=c4] run summon creeper ~ ~ ~ {CustomNameVisible:0b,ExplosionRadius:4b,Invulnerable:1b,Fuse:1,Tags:["c4m"],ignited:1b,CustomName:'{"text":"C4"}'}
 
 execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/detonator_red] run kill @e[type=bat,tag=c4]
 
@@ -894,7 +894,7 @@ tp @e[type=bat,tag=c4blue] ~ -100 ~
 
 execute at @e[type=villager,tag=c4blue] run particle dust 0.271 0.271 0.271 1 ~ ~0.5 ~ 0 0 0 0 5 force
 
-execute if entity @a[team=Blue,scores={usedCOAS=1..},predicate=commands:holding/detonator_blue] at @e[type=villager,tag=c4blue] run summon creeper ~ ~ ~ {CustomNameVisible:0b,ExplosionRadius:6b,Invulnerable:1b,Fuse:1,Tags:["c4m"],ignited:1b,CustomName:'{"text":"C4"}'}
+execute if entity @a[team=Blue,scores={usedCOAS=1..},predicate=commands:holding/detonator_blue] at @e[type=villager,tag=c4blue] run summon creeper ~ ~ ~ {CustomNameVisible:0b,ExplosionRadius:4b,Invulnerable:1b,Fuse:1,Tags:["c4m"],ignited:1b,CustomName:'{"text":"C4"}'}
 
 execute if entity @a[team=Blue,scores={usedCOAS=1..},predicate=commands:holding/detonator_blue] run kill @e[type=bat,tag=c4blue]
 
@@ -912,7 +912,7 @@ effect give @a[predicate=commands:armor/bouncy_boots] jump_boost 2 1 true
 
 #Chicken Bombs
 
-execute at @e[type=chicken] run summon creeper ~ ~ ~ {CustomNameVisible:0b,ExplosionRadius:5b,Fuse:1,ignited:1b,CustomName:'{"text":"Chicken Bomb"}'}
+execute at @e[type=chicken] run summon creeper ~ ~ ~ {CustomNameVisible:0b,ExplosionRadius:4b,Fuse:1,ignited:1b,CustomName:'{"text":"Chicken Bomb"}'}
 
 #Shadow Step (Ninja Ultimate)
 
@@ -2359,6 +2359,16 @@ execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_thr
 execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 0 run teleport @s ~ ~ ~0.2
 
 execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 1 run teleport @s ~ ~ ~-0.2
+
+#King Invulnerable when no one is in the throne room
+
+execute as @e[type=wither_skeleton,team=Red,tag=King] unless entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {Invulnerable:1b}
+
+execute as @e[type=wither_skeleton,team=Blue,tag=King] unless entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {Invulnerable:1b}
+
+execute as @e[type=wither_skeleton,team=Red,tag=King] if entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {Invulnerable:0b}
+
+execute as @e[type=wither_skeleton,team=Blue,tag=King] if entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {Invulnerable:0b}
 
 #Wizard minions die when wizard dies
 

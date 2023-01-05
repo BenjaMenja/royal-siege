@@ -4,7 +4,7 @@
       "item": "minecraft:redstone_ore"
     },
     "title": "Redstoner",
-    "description": "Activate one of the redstone ores in the underground area.",
+    "description": "Activate one of the redstone ores in the underground area of Forest Glen.",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
