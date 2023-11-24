@@ -26,35 +26,35 @@ execute at @s[team=Red,tag=burst] anchored eyes run summon arrow ^-0.05 ^ ^1 {Mo
 
 execute at @s[team=Red,tag=burst,tag=multiBarrel] anchored eyes run summon arrow ^-0.1 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,bullet:1b}
 
-execute at @s[team=Red,tag=poison,tag=multiBarrel] anchored eyes run summon arrow ^-0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:19,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+execute at @s[team=Red,tag=poison,tag=multiBarrel] anchored eyes run summon arrow ^-0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:poison",amplifier:1b,duration:100,show_particles:0b}]}
 
-execute at @s[team=Red,tag=poison] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:19,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+execute at @s[team=Red,tag=poison] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:poison",amplifier:1b,duration:100,show_particles:0b}]}
 
-execute at @s[team=Red,tag=poison,tag=multiBarrel] anchored eyes run summon arrow ^0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:19,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+execute at @s[team=Red,tag=poison,tag=multiBarrel] anchored eyes run summon arrow ^0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:poison",amplifier:1b,duration:100,show_particles:0b}]}
 
-execute at @s[team=Red,tag=toxin,tag=multiBarrel] anchored eyes run summon arrow ^-0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+execute at @s[team=Red,tag=toxin,tag=multiBarrel] anchored eyes run summon arrow ^-0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:1,show_particles:0b}]}
 
-execute at @s[team=Red,tag=toxin] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+execute at @s[team=Red,tag=toxin] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:1,show_particles:0b}]}
 
-execute at @s[team=Red,tag=toxin,tag=multiBarrel] anchored eyes run summon arrow ^0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+execute at @s[team=Red,tag=toxin,tag=multiBarrel] anchored eyes run summon arrow ^0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:1,show_particles:0b}]}
 
-execute at @s[team=Red,tag=stasis,tag=multiBarrel] anchored eyes run summon arrow ^-0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:2,ShowParticles:0b}]}
+execute at @s[team=Red,tag=stasis,tag=multiBarrel] anchored eyes run summon arrow ^-0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:2,show_particles:0b}]}
 
-execute at @s[team=Red,tag=stasis] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:2,ShowParticles:0b}]}
+execute at @s[team=Red,tag=stasis] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:2,show_particles:0b}]}
 
-execute at @s[team=Red,tag=stasis,tag=multiBarrel] anchored eyes run summon arrow ^0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:2,ShowParticles:0b}]}
+execute at @s[team=Red,tag=stasis,tag=multiBarrel] anchored eyes run summon arrow ^0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:2,show_particles:0b}]}
 
-execute at @s[team=Red,tag=midas,tag=multiBarrel] anchored eyes run summon arrow ^-0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:3,ShowParticles:0b}]}
+execute at @s[team=Red,tag=midas,tag=multiBarrel] anchored eyes run summon arrow ^-0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:3,show_particles:0b}]}
 
-execute at @s[team=Red,tag=midas] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:3,ShowParticles:0b}]}
+execute at @s[team=Red,tag=midas] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:3,show_particles:0b}]}
 
-execute at @s[team=Red,tag=midas,tag=multiBarrel] anchored eyes run summon arrow ^0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:3,ShowParticles:0b}]}
+execute at @s[team=Red,tag=midas,tag=multiBarrel] anchored eyes run summon arrow ^0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:3,show_particles:0b}]}
 
-execute at @s[team=Red,tag=explosion,tag=multiBarrel] anchored eyes run summon arrow ^-0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:4,ShowParticles:0b}]}
+execute at @s[team=Red,tag=explosion,tag=multiBarrel] anchored eyes run summon arrow ^-0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:4,show_particles:0b}]}
 
-execute at @s[team=Red,tag=explosion] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:4,ShowParticles:0b}]}
+execute at @s[team=Red,tag=explosion] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:4,show_particles:0b}]}
 
-execute at @s[team=Red,tag=explosion,tag=multiBarrel] anchored eyes run summon arrow ^0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:4,ShowParticles:0b}]}
+execute at @s[team=Red,tag=explosion,tag=multiBarrel] anchored eyes run summon arrow ^0.05 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","redProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:4,show_particles:0b}]}
 
 #Blue Projectiles
 
@@ -68,35 +68,35 @@ execute at @s[team=Blue,tag=burst] anchored eyes run summon arrow ^-0.05 ^ ^1 {M
 
 execute at @s[team=Blue,tag=burst,tag=multiBarrel] anchored eyes run summon arrow ^-0.1 ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,bullet:1b}
 
-execute at @s[team=Blue,tag=poison,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:19,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=poison,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:poison",amplifier:1b,duration:100,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=poison] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:19,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=poison] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:poison",amplifier:1b,duration:100,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=poison,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:19,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=poison,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:poison",amplifier:1b,duration:100,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=toxin,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=toxin,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:1,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=toxin] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=toxin] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:1,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=toxin,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=toxin,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:1,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=stasis,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:2,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=stasis,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:2,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=stasis] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:2,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=stasis] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:2,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=stasis,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:2,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=stasis,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:2,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=midas,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:3,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=midas,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:3,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=midas] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:3,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=midas] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:3,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=midas,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:3,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=midas,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:3,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=explosion,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:4,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=explosion,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:4,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=explosion] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:4,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=explosion] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:4,show_particles:0b}]}
 
-execute at @s[team=Blue,tag=explosion,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:4,ShowParticles:0b}]}
+execute at @s[team=Blue,tag=explosion,tag=multiBarrel] anchored eyes run summon arrow ^ ^ ^1 {Motion:[0.0,0.0,0.0],Owner:[I;0,144,0,101],Tags:["bullet","blueProj"],NoGravity:1b,damage:3.1d,custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:4,show_particles:0b}]}
 
 #Projectile Motion
 
@@ -112,15 +112,15 @@ execute at @s[tag=midas] run playsound entity.generic.explode master @a[distance
 
 execute at @s[tag=explosion] run playsound entity.generic.explode master @a[distance=..15] ~ ~ ~ 1 2
 
-execute at @e[type=arrow,nbt={CustomPotionEffects:[{Id:19,Amplifier:0b,Duration:100}]}] run particle dust 0.631 0.000 1.000 1 ~ ~ ~ 0 0 0 1 0 force
+execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:poison",amplifier:0b,duration:100}]}] run particle dust 0.631 0.000 1.000 1 ~ ~ ~ 0 0 0 1 0 force
 
-execute at @e[type=arrow,nbt={CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:1}]}] run particle dust 0.047 0.361 0.000 1 ~ ~ ~ 0 0 0 1 0 force
+execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:1}]}] run particle dust 0.047 0.361 0.000 1 ~ ~ ~ 0 0 0 1 0 force
 
-execute at @e[type=arrow,nbt={CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:2}]}] run particle dust 0.000 1.000 1.000 1 ~ ~ ~ 0 0 0 1 0 force
+execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:2}]}] run particle dust 0.000 1.000 1.000 1 ~ ~ ~ 0 0 0 1 0 force
 
-execute at @e[type=arrow,nbt={CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:3}]}] run particle dust 0.749 0.702 0.000 1 ~ ~ ~ 0 0 0 1 0 force
+execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:3}]}] run particle dust 0.749 0.702 0.000 1 ~ ~ ~ 0 0 0 1 0 force
 
-execute at @e[type=arrow,nbt={CustomPotionEffects:[{Id:26,Amplifier:0b,Duration:4}]}] run particle dust 1.000 0.110 0.110 1 ~ ~ ~ 0 0 0 1 0 force
+execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:4}]}] run particle dust 1.000 0.110 0.110 1 ~ ~ ~ 0 0 0 1 0 force
 
 execute as @e[type=arrow,tag=bullet,distance=..3,tag=!stop] run data modify entity @s Owner set from entity @a[tag=shoot,limit=1] UUID
 

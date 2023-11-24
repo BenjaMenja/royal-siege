@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Tree Sap\"}',Lore:['{\"text\":\"A healthy drink for trees.\"}']},CustomPotionEffects:[{Id:6b,Amplifier:0b,Duration:1},{Id:10b,Amplifier:1b,Duration:300},{Id:22b,Amplifier:0b,Duration:1200},{Id:5b,Amplifier:0b,Duration:600}],CustomPotionColor:13958912}"
+              "tag": "{display:{Name:'{\"text\":\"Tree Sap\"}',Lore:['{\"text\":\"A healthy drink for trees.\"}']},custom_potion_effects:[{id:\"minecraft:instant_health\",amplifier:0b,duration:1},{id:\"minecraft:regeneration\",amplifier:1b,duration:300},{id:\"minecraft:absorption\",amplifier:0b,duration:1200},{id:\"minecraft:strength\",amplifier:0b,duration:600}],CustomPotionColor:13958912}"
             }
           ]
         }

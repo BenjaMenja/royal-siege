@@ -12,6 +12,8 @@ execute as @a[limit=1,scores={Kit=7},team=Red] at @s run teleport @s ~ ~ ~ facin
 
 execute as @a[limit=1,scores={Kit=7},team=Blue] at @s run teleport @s ~ ~ ~ facing entity @p[tag=hooked,team=Red]
 
+execute as @a[limit=1,scores={Kit=7}] at @s if entity @e[type=wither_skeleton,tag=dummy,tag=hooked] run teleport @s ~ ~ ~ facing entity @e[limit=1,type=wither_skeleton,tag=dummy,tag=hooked,sort=nearest]
+
 effect give @s slowness 1 6 true
 
 effect give @a[limit=1,tag=hookUser] slowness 1 6 true
@@ -19,4 +21,3 @@ effect give @a[limit=1,tag=hookUser] slowness 1 6 true
 effect give @s weakness 1 100 true
 
 effect give @a[limit=1,tag=hookUser] weakness 1 100 true
-

@@ -1,3 +1,3 @@
-give @s[scores={Money=450..}] potion{display:{Name:'{"text":"Hard Ale","italic":false}',Lore:['{"text":"Grants you a lot of melee buffs,"}','{"text":"but makes you quite tipsy."}']},HideFlags:32,CustomPotionEffects:[{Id:2b,Amplifier:0b,Duration:300},{Id:5b,Amplifier:0b,Duration:300},{Id:6b,Amplifier:0b,Duration:1},{Id:9b,Amplifier:0b,Duration:300}],CustomPotionColor:16756257} 1
+give @s[scores={Money=450..}] potion{display:{Name:'{"text":"Hard Ale","italic":false}',Lore:['{"text":"Grants you a lot of melee buffs,"}','{"text":"but makes you quite tipsy."}']},HideFlags:32,custom_potion_effects:[{id:"minecraft:slowness",amplifier:0b,duration:300},{id:"minecraft:haste",amplifier:0b,duration:300},{id:"minecraft:instant_health",amplifier:0b,duration:1},{id:"minecraft:nausea",amplifier:0b,duration:300}],CustomPotionColor:16756257} 1
 
 scoreboard players remove @s[scores={Money=450..}] Money 450

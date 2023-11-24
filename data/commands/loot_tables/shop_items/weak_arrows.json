@@ -16,7 +16,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Weakening Arrows\"}'},CustomPotionEffects:[{Id:18b,Amplifier:0b,Duration:200}],CustomPotionColor:3355443}"
+              "tag": "{display:{Name:'{\"text\":\"Weakening Arrows\"}'},custom_potion_effects:[{id:\"minecraft:weakness\",amplifier:0b,duration:200}],CustomPotionColor:3355443}"
             }
           ]
         }
