@@ -14,6 +14,8 @@ scoreboard players reset #startdelay spawnStuff
 
 scoreboard players reset #startbutton spawnStuff
 
+tag @a add inCurrentMatch
+
 stopsound @a record royalsiege:songs.character_select_hall_loop
 
 stopsound @a record royalsiege:songs.character_select_hall_intro
@@ -23,3 +25,14 @@ tag @a remove startToReady
 tag @a remove startDelay
 
 tag @a remove readyUp
+
+#Getting match ID
+
+loot spawn ~ -5 ~ loot commands:rng/match_id
+
+execute as @e[type=item,nbt={Item:{tag:{matchid:1b}}}] store result score @a matchID run data get entity @s Item.tag.AttributeModifiers.[{}].Amount
+
+execute as @e[type=item,nbt={Item:{tag:{matchid:1b}}}] store result score #matchID matchID run data get entity @s Item.tag.AttributeModifiers.[{}].Amount
+
+kill @e[type=item,nbt={Item:{tag:{matchid:1b}}}]
+

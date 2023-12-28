@@ -1,4 +1,4 @@
-#Corrupt Credits
+# Corrupt Credits
 
 scoreboard players add #corrupt Timer 1
 
@@ -328,6 +328,8 @@ execute if entity @a[team=Red,tag=End] run title @a title ["",{"text":"Red Team 
 
 execute if entity @a[team=Blue,tag=End] run title @a title ["",{"text":"Blue Team Has Won!","color":"blue"}]
 
+execute if entity @a[tag=End] as @a run function commands:starting/end_score_tag_reset
+
 execute as @a[tag=End,limit=1] run function commands:other/end
 
 #TDM Display kills timer
@@ -378,13 +380,13 @@ scoreboard players add @e[type=zombie,tag=Minion] MinionDeath 1
 
 scoreboard players add @a[scores={Kit=6},predicate=commands:in_any_battlefield,tag=!notAlive] WizardMinion 1
 
-execute as @a[team=Red,tag=!upgraded,scores={WizardMinion=400..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Red",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:12},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
+execute as @a[team=Red,tag=!upgraded,scores={WizardMinion=400..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Red",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:15},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
 
-execute as @a[team=Blue,tag=!upgraded,scores={WizardMinion=400..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Blue",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:12},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
+execute as @a[team=Blue,tag=!upgraded,scores={WizardMinion=400..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Blue",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:15},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
 
-execute as @a[team=Red,tag=upgraded,scores={WizardMinion=320..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Red",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:12},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
+execute as @a[team=Red,tag=upgraded,scores={WizardMinion=320..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Red",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:15},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
 
-execute as @a[team=Blue,tag=upgraded,scores={WizardMinion=320..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Blue",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:12},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
+execute as @a[team=Blue,tag=upgraded,scores={WizardMinion=320..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Blue",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:15},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
 
 scoreboard players set @a[tag=upgraded,scores={WizardMinion=320..}] WizardMinion 0
 
@@ -1194,7 +1196,7 @@ scoreboard players set @a[scores={KillP=1..}] KillP 0
 
 scoreboard players set @a[scores={Message=1..}] Message 0
 
-#Ultimate Checker
+# Ultimate Checker
 
 scoreboard players add #ultChecker Timer 1
 
@@ -2721,6 +2723,10 @@ execute as @a[scores={died=1..},tag=hasSmartDrone] at @s run function commands:u
 #Give menu item to people w/out it
 
 execute as @a[predicate=commands:in_any_battlefield,predicate=!commands:inventory/menu] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run give @s carrot_on_a_stick{CustomModelData:5,display:{Name:'{"text":"Menu","color":"aqua","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Opens up a text menu where you"}','{"text":"can purchase items pertaining"}','{"text":"to your class. You can also"}','{"text":"withdraw money and corrupt credits, and purchase arrows."}','{"text":"You can also see how many corrupt credits your team\'s bank has."}']},HideFlags:1,Unbreakable:1b,menu:1b,Enchantments:[{}]} 1
+
+#Match ID Check for people returning while a game is over
+
+execute if score #matchID matchID matches 0 as @a[scores={matchID=-2147483648..2147483647}] run function commands:starting/leave_battlefield_when_match_over
 
 #Remove Arrows and tridents on ground
 

@@ -138,6 +138,10 @@ team join parkour @a[predicate=commands:in_parkour_area]
 
 team leave @a[predicate=!commands:in_parkour_area,team=parkour]
 
+#Move players to spectator if a game is in progress and they join. #matchID's matchID value is NOT 0 if a game is happening.
+
+execute unless score #matchID matchID matches 0 as @a unless score @s matchID = #matchID matchID run function commands:starting/join_as_spectator
+
 
 
 

@@ -10,4 +10,4 @@ execute as @e[type=creeper,tag=ejectbutton] at @s run teleport @s ~ ~-0.3 ~
 
 execute as @e[type=creeper,tag=ejectbutton] at @s if block ~ ~ ~ #commands:can_place_on_without_grass run function commands:other/eject_stuck
 
-scoreboard players set @s ejectTimer 600
+scoreboard players set @s ejectTimer 500
