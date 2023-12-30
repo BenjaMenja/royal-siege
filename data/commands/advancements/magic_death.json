@@ -1,13 +1,18 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "criteria": {
-        "c1": {
-            "trigger": "minecraft:entity_killed_player",
-            "conditions": {
-                "killing_blow": {
-                    "is_magic": true
-                }
-            }
+      "c1": {
+        "trigger": "minecraft:entity_killed_player",
+        "conditions": {
+          "killing_blow": {
+            "tags": [
+              {
+                "id": "minecraft:witch_resistant_to",
+                "expected": true
+              }
+            ]
+          }
         }
+      }
     }
-}
+  }
+  

@@ -84,15 +84,15 @@ scoreboard players set #gameDuration gameDuration 0
 
 scoreboard players set #numPlayersOnTeam multiItems 0
 
-advancement grant @a[tag=End,advancements={commands:advancements/consecutive_wins={win4=true}}] only commands:advancements/consecutive_wins win5
+advancement grant @a[tag=End,advancements={commands:challenges/consecutive_wins={win4=true}}] only commands:challenges/consecutive_wins win5
 
-advancement grant @a[tag=End,advancements={commands:advancements/consecutive_wins={win3=true}}] only commands:advancements/consecutive_wins win4
+advancement grant @a[tag=End,advancements={commands:challenges/consecutive_wins={win3=true}}] only commands:challenges/consecutive_wins win4
 
-advancement grant @a[tag=End,advancements={commands:advancements/consecutive_wins={win2=true}}] only commands:advancements/consecutive_wins win3
+advancement grant @a[tag=End,advancements={commands:challenges/consecutive_wins={win2=true}}] only commands:challenges/consecutive_wins win3
 
-advancement grant @a[tag=End,advancements={commands:advancements/consecutive_wins={win1=true}}] only commands:advancements/consecutive_wins win2
+advancement grant @a[tag=End,advancements={commands:challenges/consecutive_wins={win1=true}}] only commands:challenges/consecutive_wins win2
 
-advancement grant @a[tag=End] only commands:advancements/consecutive_wins win1
+advancement grant @a[tag=End] only commands:challenges/consecutive_wins win1
 
 advancement revoke @a[advancements={commands:character_challenges/soup_of_the_week=false}] only commands:character_challenges/soup_of_the_week
 

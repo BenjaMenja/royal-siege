@@ -200,7 +200,7 @@ execute if score @s textClick matches 99 run function commands:settings/enable_d
 
 execute if score @s textClick matches 100 run function commands:settings/disable_death_counter
 
-execute if score @s textClick matches 101 run function commands:shops/king_activation
+execute if score @s[predicate=commands:in_any_battlefield] textClick matches 101 run function commands:shops/king_activation
 
 execute if score @s textClick matches 102 run function commands:starting/ultimate_select/meteor_shower
 

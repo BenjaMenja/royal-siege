@@ -1,6 +1,6 @@
-execute if score @s Money matches ..199 run tellraw @s {"text":"You don't have enough money to buy that!","color":"red"}
+execute if score @s Money matches ..299 run tellraw @s {"text":"You don't have enough money to buy that!","color":"red"}
 
-tag @s[scores={Money=200..}] add kingPurchase
+tag @s[scores={Money=300..}] add kingPurchase
 
 execute if entity @s[tag=kingPurchase,team=Red] as @e[tag=King,team=Red,scores={kingActive=..0}] run tag @s add activated
 
@@ -18,7 +18,7 @@ execute if entity @s[tag=kingPurchase,team=Blue] as @e[tag=King,team=Blue] run d
 
 tag @e[tag=King] remove activated
 
-scoreboard players remove @s[tag=kingPurchase] Money 200
+scoreboard players remove @s[tag=kingPurchase] Money 300
 
 tag @s remove kingPurchase
 
