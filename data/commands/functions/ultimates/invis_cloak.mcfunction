@@ -1,8 +1,8 @@
 effect give @s invisibility 10 0 true
 
-effect give @s strength 10 1 true
+function commands:attributes/adds/add_invis_cloak_atkdmg
 
-effect give @s speed 10 1 true
+function commands:attributes/adds/add_invis_cloak_speed
 
 effect give @s resistance 10 1 true
 

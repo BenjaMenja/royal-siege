@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "commands:attributes/clears/clear_rally_atkdmg",
+    "commands:attributes/clears/clear_counter_atkdmg",
+    "commands:attributes/clears/clear_corruption_atkdmg",
+    "commands:attributes/clears/clear_invis_cloak_atkdmg",
+    "commands:attributes/clears/clear_vigor_spell_atkdmg",
+    "commands:attributes/clears/clear_assault_spell_atkdmg",
+    "commands:attributes/clears/clear_dinner_effect_atkdmg",
+    "commands:attributes/clears/clear_ninja_passive_atkdmg",
+    "commands:attributes/clears/clear_mystery_basket_atkdmg",
+    "commands:attributes/clears/clear_poseidon_augment_atkdmg"
+  ]
+}

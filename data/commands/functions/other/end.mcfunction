@@ -98,6 +98,8 @@ advancement revoke @a[advancements={commands:character_challenges/soup_of_the_we
 
 function commands:other/remove_bossbar_display
 
+execute as @a run function commands:attributes/clear_all_attribute_modifiers
+
 weather clear 1000000
 
 time set 5000

@@ -2,11 +2,11 @@ kill @s
 
 effect clear @a[team=Blue,distance=..5] regeneration
 
-effect clear @a[team=Blue,distance=..5] health_boost
+execute as @a[team=Blue,distance=..5] run function #commands:clear_health_boost_attributes
 
 effect clear @a[team=Blue,distance=..5] absorption
 
-effect give @a[team=Blue,distance=..5] slowness 5 1
+execute as @a[team=Blue,distance=..5] run function commands:attributes/adds/add_toxin_ball_slow
 
 effect give @a[team=Blue,distance=..5] poison 5 1
 

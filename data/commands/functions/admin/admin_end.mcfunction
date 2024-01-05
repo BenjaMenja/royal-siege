@@ -2,6 +2,8 @@
 
 tag @s add End
 
+execute as @a run function commands:starting/end_score_tag_reset
+
 execute as @p[tag=End] at @s run title @a subtitle ["",{"text":" "}]
 
 scoreboard players set @e[tag=Chest] TreasureDelete 300
@@ -91,6 +93,8 @@ advancement grant @a[tag=End] only commands:advancements/consecutive_wins win1
 advancement revoke @a[advancements={commands:character_challenges/soup_of_the_week=false}] only commands:character_challenges/soup_of_the_week
 
 function commands:other/remove_bossbar_display
+
+execute as @a run function commands:attributes/clear_all_attribute_modifiers
 
 weather clear 1000000
 

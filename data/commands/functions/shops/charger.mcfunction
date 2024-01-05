@@ -1,6 +1,6 @@
 tag @s add purchase
 
-scoreboard players set @s[scores={Money=350..},tag=!charged] LightningTimer 800
+scoreboard players set @s[scores={Money=350..},tag=!charged] LightningTimer 960
 
 tellraw @s[tag=purchase,scores={Money=350..},tag=!charged] {"text":"Your weapons are charged up.","color":"aqua"}
 

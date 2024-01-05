@@ -10,7 +10,7 @@ execute at @s[tag=concoctionred] run effect clear @a[team=Blue,distance=..10] ab
 
 execute at @s[tag=concoctionred] run effect clear @a[team=Blue,distance=..10] regeneration
 
-execute at @s[tag=concoctionred] run effect clear @a[team=Blue,distance=..10] health_boost
+execute at @s[tag=concoctionred] as @a[team=Blue,distance=..10] run function #commands:clear_health_boost_attributes
 
 execute at @s[tag=concoctionred] run effect give @a[team=Blue,distance=..10] poison 8 1 true
 
@@ -18,7 +18,7 @@ execute at @s[tag=concoctionblue] run effect clear @a[team=Red,distance=..10] ab
 
 execute at @s[tag=concoctionblue] run effect clear @a[team=Red,distance=..10] regeneration
 
-execute at @s[tag=concoctionblue] run effect clear @a[team=Red,distance=..10] health_boost
+execute at @s[tag=concoctionblue] as @a[team=Red,distance=..10] run function #commands:clear_health_boost_attributes
 
 execute at @s[tag=concoctionblue] run effect give @a[team=Red,distance=..10] poison 8 1 true
 

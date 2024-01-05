@@ -144,6 +144,10 @@ execute if entity @s[team=Red,scores={Kit=4}] run scoreboard players set #redHS 
 
 execute if entity @s[team=Blue,scores={Kit=4}] run scoreboard players set #blueHS healstreak 0
 
+#Attribute Removal
+
+function commands:attributes/clear_all_attribute_modifiers
+
 #Ultimate Check
 
 tag @s[tag=ultimateInv] add hadUltimate

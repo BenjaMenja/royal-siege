@@ -1,6 +1,6 @@
-effect give @s slowness 1 0 true
+function commands:attributes/adds/add_absorption_shield_slow
 
-effect give @s weakness 1 0 true
+function commands:attributes/adds/add_absorption_shield_atkdmg
 
 execute if entity @s[team=Red] if entity @e[tag=ultimateProj,tag=blueProj,distance=..4] run scoreboard players add @s ultsEaten 1
 

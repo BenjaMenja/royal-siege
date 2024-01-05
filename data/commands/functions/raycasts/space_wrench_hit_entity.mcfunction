@@ -27,7 +27,7 @@ tag @s[scores={Kit=7}] add wrenched
 
 tag @s[scores={Kit=8}] add wrenched
 
-effect give @s[scores={Kit=9}] strength 6 0 true
+execute if score @s Kit matches 9 run function commands:attributes/adds/add_poseidon_augment_atkdmg
 
 item replace entity @s[scores={Kit=10},tag=!upgraded] hotbar.8 with gunpowder{CustomModelData:14,display:{Name:'{"text":"Gunblade Ammo","color":"gray","italic":false}',Lore:['{"text":"Ammo for the Gunblade."}']},gunbladeammo:1b,Enchantments:[{}]} 15
 

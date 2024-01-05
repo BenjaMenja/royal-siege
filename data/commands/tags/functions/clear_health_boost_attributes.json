@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    "commands:attributes/clears/clear_lifeforce_maxhp"
+  ]
+}

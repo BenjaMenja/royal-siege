@@ -6,13 +6,13 @@ execute if entity @s[team=Red] run effect clear @a[team=Blue,scores={Health=21..
 
 execute if entity @s[team=Red] run effect clear @a[team=Blue,scores={Health=21..},predicate=commands:in_any_battlefield] absorption
 
-execute if entity @s[team=Red] run effect clear @a[team=Blue,scores={Health=21..},predicate=commands:in_any_battlefield] health_boost
+execute if entity @s[team=Red] as @a[team=Blue,scores={Health=21..},predicate=commands:in_any_battlefield] run function #commands:clear_health_boost_attributes
 
 execute if entity @s[team=Blue] run effect clear @a[team=Red,scores={Health=21..},predicate=commands:in_any_battlefield] regeneration
 
 execute if entity @s[team=Blue] run effect clear @a[team=Red,scores={Health=21..},predicate=commands:in_any_battlefield] absorption
 
-execute if entity @s[team=Blue] run effect clear @a[team=Red,scores={Health=21..},predicate=commands:in_any_battlefield] health_boost
+execute if entity @s[team=Blue] as @a[team=Red,scores={Health=21..},predicate=commands:in_any_battlefield] run function #commands:clear_health_boost_attributes
 
 execute if entity @s[team=Red] run tellraw @a [{"selector":"@s"},{"text":" has busted the Blue team!"}]
 

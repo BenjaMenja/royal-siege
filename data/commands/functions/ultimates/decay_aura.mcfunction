@@ -54,12 +54,12 @@ execute as @s[scores={DecayD=13},team=Blue] at @s run effect give @e[type=horse,
 
 execute at @s[team=Red] run effect give @a[team=Blue,distance=..7] wither 3 3 true
 
-execute at @s[team=Red] run effect give @a[team=Blue,distance=..7] weakness 3 0 true
+execute at @s[team=Red] as @a[team=Blue,distance=..7] run function commands:attributes/adds/add_decay_aura_atkdmg
 
 execute at @s[team=Red] run tag @a[team=Blue,distance=..7] add decaydeath
 
 execute at @s[team=Blue] run effect give @a[team=Red,distance=..7] wither 3 3 true
 
-execute at @s[team=Blue] run effect give @a[team=Red,distance=..7] weakness 3 0 true
+execute at @s[team=Blue] as @a[team=Red,distance=..7] run function commands:attributes/adds/add_decay_aura_atkdmg
 
 execute at @s[team=Blue] run tag @a[team=Red,distance=..7] add decaydeath

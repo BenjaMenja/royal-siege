@@ -1,4 +1,4 @@
-execute at @s[team=Red] run effect give @a[team=Red] health_boost 20 2 true
+execute at @s[team=Red] as @a[team=Red] run function commands:attributes/adds/add_lifeforce_maxhp
 
 execute at @s[team=Red] run effect give @a[team=Red] instant_health 1 1 true
 
@@ -12,7 +12,7 @@ execute at @s[team=Red] run playsound royalsiege:ultimates.lifeforce_enemy maste
 
 execute if entity @s[team=Red] run scoreboard players reset #angelspellsred voicelineCD
 
-execute at @s[team=Blue] run effect give @a[team=Blue] health_boost 20 2 true
+execute at @s[team=Blue] as @a[team=Blue] run function commands:attributes/adds/add_lifeforce_maxhp
 
 execute at @s[team=Blue] run effect give @a[team=Blue] instant_health 1 1 true
 

@@ -8,7 +8,7 @@ execute if entity @s[team=Blue] run playsound royalsiege:ultimates.scourge_of_th
 
 execute if entity @s[team=Blue] run playsound royalsiege:ultimates.scourge_of_the_seas_enemy master @a[team=Red] ~ ~ ~ 100 1
 
-effect give @s speed 15 1 true
+function commands:attributes/adds/add_scourge_of_the_seas_speed
 
 effect give @s resistance 15 1 true
 

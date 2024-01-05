@@ -1,6 +1,6 @@
 effect clear @a[advancements={commands:toxin_bullet=true}] regeneration
 
-effect clear @a[advancements={commands:toxin_bullet=true}] health_boost
+execute as @a[advancements={commands:toxin_bullet=true}] run function #commands:clear_health_boost_attributes
 
 effect clear @a[advancements={commands:toxin_bullet=true}] absorption
 

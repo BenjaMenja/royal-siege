@@ -1,14 +1,14 @@
-execute at @s[team=Red,tag=!wrenched] run effect give @a[team=Red,distance=..10] speed 10 0 true
+execute at @s[team=Red,tag=!wrenched] as @a[team=Red,distance=..10] run function commands:attributes/adds/add_assault_spell_speed 
 
-execute at @s[team=Red,tag=wrenched] run effect give @a[team=Red,distance=..10] speed 8 1 true
+execute at @s[team=Red,tag=wrenched] run function commands:attributes/adds/add_assault_spell_speed_wrench
 
-execute at @s[team=Red] as @a[team=Red,distance=..10] unless score @s Kit matches 4 run effect give @s strength 10 0 true
+execute at @s[team=Blue,tag=!wrenched] as @a[team=Blue,distance=..10] run function commands:attributes/adds/add_assault_spell_speed 
 
-execute at @s[team=Blue] as @a[team=Blue,distance=..10] unless score @s Kit matches 4 run effect give @s strength 10 0 true
+execute at @s[team=Blue,tag=wrenched] run function commands:attributes/adds/add_assault_spell_speed_wrench
 
-execute at @s[team=Blue,tag=!wrenched] run effect give @a[team=Blue,distance=..10] speed 10 0 true
+execute at @s[team=Red] as @a[team=Red,distance=..10] unless score @s Kit matches 4 run function commands:attributes/adds/add_assault_spell_atkdmg
 
-execute at @s[team=Blue,tag=wrenched] run effect give @a[team=Blue,distance=..10] speed 8 1 true
+execute at @s[team=Blue] as @a[team=Blue,distance=..10] unless score @s Kit matches 4 run function commands:attributes/adds/add_assault_spell_atkdmg
 
 execute at @s run playsound entity.wither.hurt master @a[distance=..15] ~ ~ ~ 0.3 1.5
 

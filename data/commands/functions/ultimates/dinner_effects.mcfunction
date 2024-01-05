@@ -14,22 +14,22 @@ execute at @s[team=Blue] anchored eyes positioned ^ ^ ^ as @e[type=item,tag=dinn
 
 execute at @s[team=Blue] anchored eyes positioned ^ ^ ^ as @e[type=item,tag=dinnerItemBlue4] rotated as @s run teleport @s ^-1 ^ ^ ~10 0
 
-execute at @a[tag=dinnerTargetRed] run effect give @a[team=Red,distance=..10] strength 1 0 true
+execute at @s[tag=dinnerTargetRed] as @a[team=Red,distance=..10] run function commands:attributes/adds/add_dinner_effect_atkdmg
 
-execute at @a[tag=dinnerTargetRed] run effect give @a[team=Red,distance=..10] resistance 1 0 true
+execute at @s[tag=dinnerTargetRed] run effect give @a[team=Red,distance=..10] resistance 1 0 true
 
-execute at @a[tag=dinnerTargetRed] run effect give @a[team=Red,distance=..10] haste 1 0 true
+execute at @s[tag=dinnerTargetRed] as @a[team=Red,distance=..10] run function commands:attributes/adds/add_dinner_effect_atkspd
 
-execute at @a[tag=dinnerTargetRed] run effect give @a[team=Red,distance=..10] fire_resistance 1 0 true
+execute at @s[tag=dinnerTargetRed] run effect give @a[team=Red,distance=..10] fire_resistance 1 0 true
 
-execute at @a[tag=dinnerTargetRed] run effect give @a[team=Red,distance=..10] speed 1 1 true
+execute at @s[tag=dinnerTargetRed] as @a[team=Red,distance=..10] run function commands:attributes/adds/add_dinner_effect_speed
 
-execute at @a[tag=dinnerTargetBlue] run effect give @a[team=Blue,distance=..10] strength 1 0 true
+execute at @s[tag=dinnerTargetBlue] as @a[team=Blue,distance=..10] run function commands:attributes/adds/add_dinner_effect_atkdmg
 
-execute at @a[tag=dinnerTargetBlue] run effect give @a[team=Blue,distance=..10] resistance 1 0 true
+execute at @s[tag=dinnerTargetBlue] run effect give @a[team=Blue,distance=..10] resistance 1 0 true
 
-execute at @a[tag=dinnerTargetBlue] run effect give @a[team=Blue,distance=..10] haste 1 0 true
+execute at @s[tag=dinnerTargetBlue] as @a[team=Blue,distance=..10] run function commands:attributes/adds/add_dinner_effect_atkspd
 
-execute at @a[tag=dinnerTargetBlue] run effect give @a[team=Blue,distance=..10] fire_resistance 1 0 true
+execute at @s[tag=dinnerTargetBlue] run effect give @a[team=Blue,distance=..10] fire_resistance 1 0 true
 
-execute at @a[tag=dinnerTargetBlue] run effect give @a[team=Blue,distance=..10] speed 1 1 true
+execute at @s[tag=dinnerTargetBlue] as @a[team=Blue,distance=..10] run function commands:attributes/adds/add_dinner_effect_speed

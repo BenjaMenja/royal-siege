@@ -1,6 +1,6 @@
-execute at @s[team=Red] run effect give @a[team=Red,distance=..10] strength 20 0 true
+execute at @s[team=Red] as @a[team=Red,distance=..10] run function commands:attributes/adds/add_vigor_spell_atkdmg
 
-execute at @s[team=Red] run effect give @a[team=Red,distance=..10] speed 20 0 true
+execute at @s[team=Red] as @a[team=Red,distance=..10] run function commands:attributes/adds/add_vigor_spell_speed
 
 execute at @s[team=Red] run effect give @a[team=Red,distance=..10] jump_boost 20 0 true
 
@@ -14,9 +14,9 @@ execute if entity @s[team=Red] if score #angelspellsred voicelineCD matches 60..
 
 execute if entity @s[team=Red] at @a[team=Red,distance=..10] run particle dust 1.000 0.000 0.000 1 ~ ~ ~ 0 0 0 1 10 normal
 
-execute at @s[team=Blue] run effect give @a[team=Blue,distance=..10] strength 20 0 true
+execute at @s[team=Blue] as @a[team=Blue,distance=..10] run function commands:attributes/adds/add_vigor_spell_atkdmg
 
-execute at @s[team=Blue] run effect give @a[team=Blue,distance=..10] speed 20 0 true
+execute at @s[team=Blue] as @a[team=Blue,distance=..10] run function commands:attributes/adds/add_vigor_spell_speed
 
 execute at @s[team=Blue] run effect give @a[team=Blue,distance=..10] jump_boost 20 0 true
 

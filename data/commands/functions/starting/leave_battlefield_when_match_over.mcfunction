@@ -4,6 +4,8 @@ clear @s
 
 team leave @s
 
+gamemode adventure @s
+
 scoreboard players reset @s matchID
 
 function commands:starting/end_score_tag_reset

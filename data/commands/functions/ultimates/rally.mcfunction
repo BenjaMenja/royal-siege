@@ -2,13 +2,13 @@ execute at @s[team=Red] run teleport @a[team=Red,predicate=commands:in_any_battl
 
 execute at @s[team=Blue] run teleport @a[team=Blue,predicate=commands:in_any_battlefield] ~ ~ ~ 
 
-execute at @s[team=Red] run effect give @a[team=Red,predicate=commands:in_any_battlefield] strength 10 0 true
+execute at @s[team=Red] as @a[team=Red,predicate=commands:in_any_battlefield] run function commands:attributes/adds/add_rally_atkdmg
 
-execute at @s[team=Red] run effect give @a[team=Red,predicate=commands:in_any_battlefield] speed 10 1 true
+execute at @s[team=Red] as @a[team=Red,predicate=commands:in_any_battlefield] run function commands:attributes/adds/add_rally_speed
 
-execute at @s[team=Blue] run effect give @a[team=Blue,predicate=commands:in_any_battlefield] strength 10 0 true
+execute at @s[team=Blue] as @a[team=Blue,predicate=commands:in_any_battlefield] run function commands:attributes/adds/add_rally_atkdmg
 
-execute at @s[team=Blue] run effect give @a[team=Blue,predicate=commands:in_any_battlefield] speed 10 1 true
+execute at @s[team=Blue] as @a[team=Blue,predicate=commands:in_any_battlefield] run function commands:attributes/adds/add_rally_speed
 
 effect give @s resistance 10 1 true
 

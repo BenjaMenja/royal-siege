@@ -19,7 +19,7 @@
           }
         },
         "entity": {
-          "type": "minecraft:player"
+          "type": "#commands:projectile_hits"
         }
       }
     },

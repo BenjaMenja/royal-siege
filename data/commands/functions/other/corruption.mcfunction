@@ -1,6 +1,6 @@
-effect give @a[nbt={Inventory:[{tag:{corruptcredit:1b}}]}] strength 10 0 true
+execute as @a[nbt={Inventory:[{tag:{corruptcredit:1b}}]}] run function commands:attributes/adds/add_corruption_atkdmg
 
-effect give @a[nbt={Inventory:[{tag:{corruptcredit:1b}}]}] speed 10 1 true
+execute as @a[nbt={Inventory:[{tag:{corruptcredit:1b}}]}] run function commands:attributes/adds/add_corruption_speed
 
 effect give @a[nbt={Inventory:[{tag:{corruptcredit:1b}}]}] jump_boost 10 0 true
 

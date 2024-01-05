@@ -1,0 +1,101 @@
+function commands:attributes/clears/clear_assault_spell_atkdmg
+
+function commands:attributes/clears/clear_assault_spell_speed
+
+function commands:attributes/clears/clear_assault_spell_speed_wrench
+
+function commands:attributes/clears/clear_vigor_spell_speed
+
+function commands:attributes/clears/clear_vigor_spell_atkdmg
+
+function commands:attributes/clears/clear_ninja_passive_atkdmg
+
+function commands:attributes/clears/clear_corruption_atkdmg
+
+function commands:attributes/clears/clear_counter_atkdmg
+
+function commands:attributes/clears/clear_mystery_basket_atkdmg
+
+function commands:attributes/clears/clear_poseidon_augment_atkdmg
+
+function commands:attributes/clears/clear_dinner_effect_atkdmg
+
+function commands:attributes/clears/clear_invis_cloak_atkdmg
+
+function commands:attributes/clears/clear_rally_atkdmg
+
+tag @s add archerpassiveexpire
+
+function commands:attributes/clears/clear_archer_passive_speed
+
+function commands:attributes/clears/clear_blossom_speed
+
+function commands:attributes/clears/clear_blossom_upgrade_speed
+
+function commands:attributes/clears/clear_corruption_speed
+
+function commands:attributes/clears/clear_mystery_basket_speed
+
+function commands:attributes/clears/clear_outrage_speed
+
+function commands:attributes/clears/clear_rocket_booster_speed
+
+function commands:attributes/clears/clear_ninja_dash_speed
+
+function commands:attributes/clears/clear_dinner_effect_speed
+
+function commands:attributes/clears/clear_invis_cloak_speed
+
+function commands:attributes/clears/clear_rally_speed
+
+function commands:attributes/clears/clear_scourge_of_the_seas_speed
+
+function commands:attributes/clears/clear_tree_of_life_speed
+
+function commands:attributes/clears/clear_toxin_ball_slow
+
+function commands:attributes/clears/clear_warrior_passive_slow
+
+function commands:attributes/clears/clear_warrior_passive_upgrade_slow
+
+function commands:attributes/clears/clear_cavalry_charge_slow
+
+function commands:attributes/clears/clear_split_pea_soup_slow
+
+function commands:attributes/clears/clear_absorption_shield_slow
+
+function commands:attributes/clears/clear_corruption_slow
+
+function commands:attributes/clears/clear_counter_slow
+
+function commands:attributes/clears/clear_debris_cannon_slow
+
+function commands:attributes/clears/clear_fish_cannon_slow
+
+function commands:attributes/clears/clear_iron_wall_slow
+
+function commands:attributes/clears/clear_outrage_slow
+
+function commands:attributes/clears/clear_kerfuffle_slow
+
+function commands:attributes/clears/clear_terror_of_the_seas_slow
+
+function commands:attributes/clears/clear_tree_of_life_slow
+
+function commands:attributes/clears/clear_absorption_shield_atkdmg
+
+function commands:attributes/clears/clear_outrage_atkdmg
+
+function commands:attributes/clears/clear_decay_aura_atkdmg
+
+function commands:attributes/clears/clear_mystery_basket_atkspd
+
+function commands:attributes/clears/clear_dinner_effect_atkspd
+
+function commands:attributes/clears/clear_tree_of_life_atkspd
+
+function commands:attributes/clears/clear_terror_of_the_seas_atkspd
+
+function commands:attributes/clears/clear_tree_of_life_atkspd_down
+
+function commands:attributes/clears/clear_lifeforce_maxhp

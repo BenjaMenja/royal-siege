@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "commands:attributes/clears/clear_tree_of_life_atkspd_down",
+    "commands:attributes/clears/clear_terror_of_the_seas_atkspd"
+  ]
+}

@@ -238,19 +238,19 @@ kill @e[type=armor_stand,name="Wall",scores={Wall=160..}]
 
 effect give @a[scores={foof=..19}] saturation 1 0 true
 
-execute as @a[team=Red,scores={Kit=1},tag=!upgraded] at @s run effect give @a[team=Blue,distance=..5] slowness 2 0 true
+execute as @a[team=Red,scores={Kit=1},tag=!upgraded] at @s as @a[team=Blue,distance=..5] run function commands:attributes/adds/add_warrior_passive_slow
 
 execute as @a[team=Red,scores={Kit=3},tag=!upgraded] at @s run effect give @a[team=Red,distance=..5] resistance 2 0 true
 
-execute as @a[team=Blue,scores={Kit=1},tag=!upgraded] at @s run effect give @a[team=Red,distance=..5] slowness 2 0 true
+execute as @a[team=Blue,scores={Kit=1},tag=!upgraded] at @s as @a[team=Red,distance=..5] run function commands:attributes/adds/add_warrior_passive_slow
 
 execute as @a[team=Blue,scores={Kit=3},tag=!upgraded] at @s run effect give @a[team=Blue,distance=..5] resistance 2 0 true
 
-execute as @a[team=Red,scores={Kit=1},tag=upgraded] at @s run effect give @a[team=Blue,distance=..5] slowness 2 1 true
+execute as @a[team=Red,scores={Kit=1},tag=upgraded] at @s as @a[team=Blue,distance=..5] run function commands:attributes/adds/add_warrior_passive_upgrade_slow
 
 execute as @a[team=Red,scores={Kit=3},tag=upgraded] at @s run effect give @a[team=Red,distance=..5] resistance 8 0 true
 
-execute as @a[team=Blue,scores={Kit=1},tag=upgraded] at @s run effect give @a[team=Red,distance=..5] slowness 2 1 true
+execute as @a[team=Blue,scores={Kit=1},tag=upgraded] at @s as @a[team=Red,distance=..5] run function commands:attributes/adds/add_warrior_passive_upgrade_slow
 
 execute as @a[team=Blue,scores={Kit=3},tag=upgraded] at @s run effect give @a[team=Blue,distance=..5] resistance 8 0 true
 
@@ -258,7 +258,7 @@ effect give @a[scores={Kit=5}] strength 1 0 true
 
 effect clear @a[scores={Kit=12},tag=!upgraded] resistance
 
-effect clear @a[scores={Kit=12},tag=!upgraded] strength
+execute as @a[scores={Kit=12},tag=!upgraded] run function #commands:clear_strength_attributes
 
 effect give @a[scores={Kit=14}] jump_boost 1 3 true
 
@@ -278,9 +278,9 @@ execute as @a[scores={usedCOAS=1..,gravityTimer=..0},predicate=commands:holding/
 
 #Cavalry Slowing
 
-execute as @e[type=horse,tag=BlueHorse] at @s run effect give @a[team=Red,distance=..3] slowness 1 2 true
+execute as @e[type=horse,tag=BlueHorse] at @s as @a[team=Red,distance=..3] run function commands:attributes/adds/add_cavalry_charge_slow
 
-execute as @e[type=horse,tag=RedHorse] at @s run effect give @a[team=Blue,distance=..3] slowness 1 2 true
+execute as @e[type=horse,tag=RedHorse] at @s as @a[team=Blue,distance=..3] run function commands:attributes/adds/add_cavalry_charge_slow
 
 #Immortality (Guardian Ultimate)
 
@@ -872,7 +872,7 @@ execute at @e[type=area_effect_cloud,tag=smokeblue] run effect give @a[team=Red,
 
 #Ninja Strength passive
 
-effect give @a[scores={Ninjakill=1..,Kit=2}] strength 8 0 true
+execute as @a[scores={Ninjakill=1..,Kit=2}] run function commands:attributes/adds/add_ninja_passive_atkdmg
 
 scoreboard players add @a[scores={Ninjakill=1..,Kit=2}] dashcharge 120
 
@@ -1714,9 +1714,9 @@ tag @e[type=elder_guardian,tag=terrorRed] add stop
 
 tag @e[type=elder_guardian,tag=terrorBlue] add stop
 
-execute if entity @e[type=elder_guardian,tag=terrorRed] run effect clear @a[team=Red] mining_fatigue
+execute if entity @e[type=elder_guardian,tag=terrorRed] as @a[team=Red] run function #commands:clear_mining_fatigue_attributes
 
-execute if entity @e[type=elder_guardian,tag=terrorBlue] run effect clear @a[team=Blue] mining_fatigue
+execute if entity @e[type=elder_guardian,tag=terrorBlue] as @a[team=Blue] run function #commands:clear_mining_fatigue_attributes
 
 execute if entity @e[type=elder_guardian,tag=terrorRed] as @a[team=Blue,predicate=commands:effects/terror_of_the_seas] run function commands:ultimates/terror_of_the_seas
 
@@ -1840,7 +1840,7 @@ execute at @e[type=sheep,tag=sheepblue] run effect give @a[team=Blue,distance=..
 
 #Split Pea Soup
 
-effect give @a[advancements={commands:split_pea_soup=true}] slowness 3 0 true
+execute as @a[advancements={commands:split_pea_soup=true}] run function commands:attributes/adds/add_split_pea_soup_slow
 
 advancement revoke @a only commands:split_pea_soup
 
@@ -2725,6 +2725,10 @@ execute as @a[predicate=commands:in_any_battlefield,predicate=!commands:inventor
 #Match ID Check for people returning while a game is over
 
 execute if score #matchID matchID matches 0 as @a[scores={matchID=-2147483648..2147483647}] run function commands:starting/leave_battlefield_when_match_over
+
+#Attribute Manager
+
+function commands:attributes/attribute_score_manager
 
 #Remove Arrows and tridents on ground
 

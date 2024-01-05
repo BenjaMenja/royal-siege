@@ -6,15 +6,15 @@ execute at @s[scores={Treeremove=1},tag=TreeoflifeBlue] run playsound royalsiege
 
 execute at @s[scores={Treeremove=1},tag=TreeoflifeBlue] run playsound royalsiege:ultimates.tree_of_life_enemy master @a[team=Red] ~ ~ ~ 100 1
 
-execute at @s run effect give @a[team=Blue,distance=..10] speed 1 0 true
+execute at @s as @a[team=Blue,distance=..10] run function commands:attributes/adds/add_tree_of_life_speed
 
-execute at @s run effect give @a[team=Blue,distance=..10] haste 1 0 true
+execute at @s as @a[team=Blue,distance=..10] run function commands:attributes/adds/add_tree_of_life_atkspd
 
 execute at @s run effect give @a[team=Blue,distance=..10] resistance 1 0 true
 
-execute at @s run effect give @a[team=Red,distance=..10] slowness 1 0 true
+execute at @s as @a[team=Red,distance=..10] run function commands:attributes/adds/add_tree_of_life_slow
 
-execute at @s run effect give @a[team=Red,distance=..10] mining_fatigue 1 0 true
+execute at @s as @a[team=Red,distance=..10] run function commands:attributes/adds/add_tree_of_life_atkspd_down
 
 execute at @s run fill ~ ~ ~ ~ ~4 ~ oak_log replace air
 
