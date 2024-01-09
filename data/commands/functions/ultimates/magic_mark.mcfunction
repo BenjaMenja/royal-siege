@@ -6,9 +6,9 @@ execute at @s run particle dust 0.459 0.000 0.490 1 ~ ~2 ~0.5 0.25 0 0 0 10 norm
 
 execute at @s run particle dust 0.459 0.000 0.490 1 ~0.5 ~2 ~ 0 0 0.25 0 10 normal @a[tag=!marked]
 
-effect give @a[scores={Marked=1..},tag=marked] instant_damage 1 1 true
+effect give @s[scores={Marked=1..}] instant_damage 1 1 true
 
-effect give @a[scores={Marked=1..},tag=marked] wither 5 1
+effect give @s[scores={Marked=1..}] wither 5 1
 
 scoreboard players add @s mMarkDur 1
 

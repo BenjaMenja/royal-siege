@@ -1,13 +1,17 @@
 {
     "criteria": {
-        "dealdamage": {
-            "trigger": "minecraft:player_hurt_entity",
-            "conditions": {
-                "entity": {
-                    "type": "minecraft:player",
-                    "nbt": "{Tags:[\"protected\"]}"
-                }
-            }
+      "dealdamage": {
+        "trigger": "minecraft:player_hurt_entity",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:player",
+            "nbt": "{Tags:[\"protected\"]}"
+          }
         }
+      }
+    },
+    "rewards": {
+        "function": "commands:ultimates/magic_barrier_attack"
     }
-}
+  }
+  

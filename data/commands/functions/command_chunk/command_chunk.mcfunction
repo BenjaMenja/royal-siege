@@ -1312,14 +1312,6 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/magic_barrier] ru
 
 execute as @a[tag=protected] run function commands:ultimates/magic_barrier
 
-execute as @a[advancements={commands:barrier_attack=true}] run tag @s add marked
-
-execute as @a[advancements={commands:barrier_take=true}] run tag @s remove protected
-
-advancement revoke @a[advancements={commands:barrier_attack=true}] only commands:barrier_attack
- 
-advancement revoke @a[advancements={commands:barrier_take=true}] only commands:barrier_take
-
 #Marked Players
 
 execute as @a[tag=marked] run function commands:ultimates/magic_mark
@@ -1590,17 +1582,9 @@ execute as @e[type=ender_pearl,predicate=commands:skybox] at @s unless entity @a
 
 scoreboard players remove @a[scores={fishCannonTimer=1..},predicate=commands:inventory/fish_cannon] fishCannonTimer 1
 
-execute as @a[scores={usedCOAS=1..,fishCannonTimer=..0},predicate=commands:holding/fish_cannon_red] at @s run tag @s add fishCannonRed
+execute as @a[scores={usedCOAS=1..,fishCannonTimer=..0},predicate=commands:holding/fish_cannon_red] at @s run function commands:other/fish_cannon_red
 
-execute as @a[scores={usedCOAS=1..,fishCannonTimer=..0},predicate=commands:holding/fish_cannon_blue] at @s run tag @s add fishCannonBlue
-
-execute as @a[tag=fishCannonRed] at @s run function commands:other/fish_cannon_red
-
-execute as @a[tag=fishCannonBlue] at @s run function commands:other/fish_cannon_blue
-
-tag @a[tag=fishCannonRed] remove fishCannonRed
-
-tag @a[tag=fishCannonBlue] remove fishCannonBlue
+execute as @a[scores={usedCOAS=1..,fishCannonTimer=..0},predicate=commands:holding/fish_cannon_blue] at @s run function commands:other/fish_cannon_blue
 
 execute at @e[type=item,tag=fishCannon] run particle dust 0.000 1.000 0.765 1 ~ ~ ~ 0.25 0.25 0.25 1 5 normal
 
@@ -1630,9 +1614,7 @@ scoreboard players set @a[scores={died=1..}] fishCannonTimer 0
 
 scoreboard players remove @a[scores={squidzookaTimer=1..},predicate=commands:inventory/squidzooka] squidzookaTimer 1
 
-execute as @a[scores={usedCOAS=1..,squidzookaTimer=..0},predicate=commands:holding/squidzooka] run tag @s add squidzooking
-
-execute as @a[tag=squidzooking] at @s run function commands:other/squidzooka
+execute as @a[scores={usedCOAS=1..,squidzookaTimer=..0},predicate=commands:holding/squidzooka] run function commands:other/squidzooka
 
 scoreboard players set @a[scores={died=1..}] squidzookaTimer 0
 
@@ -1826,11 +1808,9 @@ scoreboard players remove @a[scores={Kit=11,basketTimer=1..},predicate=commands:
 
 execute as @a[scores={basketTimer=..0,usedCOAS=1..},predicate=commands:holding/mystery_basket] at @s run function commands:other/mystery_basket
 
-execute as @a[scores={Kit=11}] run scoreboard players operation @s basketStore = @s basketTimer
+#Chef Cooldown Display
 
-execute as @a[scores={Kit=11}] store result score @s basketDis run scoreboard players operation @s basketStore /= #ticks constant
-
-title @a[scores={Kit=11}] actionbar [{"text":"Mystery Basket: ","color":"green"},{"score":{"name":"*","objective":"basketDis"},"color":"aqua"}]
+execute as @a[scores={Kit=11}] run function commands:cooldowns/chef_display
 
 #Sheep Trainee
 
@@ -1838,33 +1818,13 @@ execute at @e[type=sheep,tag=sheepred] run effect give @a[team=Red,distance=..9]
 
 execute at @e[type=sheep,tag=sheepblue] run effect give @a[team=Blue,distance=..9] resistance 1 0 true
 
-#Split Pea Soup
-
-execute as @a[advancements={commands:split_pea_soup=true}] run function commands:attributes/adds/add_split_pea_soup_slow
-
-advancement revoke @a only commands:split_pea_soup
-
-#Chicken Noodle Soup
-
-execute at @a[team=Red,advancements={commands:chicken_noodle_soup=true}] run effect give @a[team=Red,distance=..8] fire_resistance 3 0 true
-
-execute at @a[team=Blue,advancements={commands:chicken_noodle_soup=true}] run effect give @a[team=Blue,distance=..8] fire_resistance 3 0 true
-
-advancement revoke @a only commands:chicken_noodle_soup
-
 #Pay Raise
 
-scoreboard players add @a[predicate=commands:inventory/pay_raise] payRaiseTimer 1
+scoreboard players remove @a[scores={Kit=11,payRaiseTimer=1..},predicate=commands:in_any_battlefield,predicate=commands:inventory/pay_raise,tag=!notAlive] payRaiseTimer 1
 
-execute as @a[scores={payRaiseTimer=300}] run function commands:replace/pay_raise_ready
+execute as @a[team=Red,scores={usedCOAS=1..,payRaiseTimer=..0},predicate=commands:holding/pay_raise_red] at @s anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/pay_raise_red_start_ray
 
-tag @a[team=Red,scores={usedCOAS=1..,payRaiseTimer=300..},predicate=commands:holding/pay_raise_red] add payred
-
-execute as @a[tag=payred] at @s anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/pay_raise_red_start_ray
-
-tag @a[team=Blue,scores={usedCOAS=1..,payRaiseTimer=300..},predicate=commands:holding/pay_raise_blue] add payblue
-
-execute as @a[tag=payblue] at @s anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/pay_raise_blue_start_ray
+execute as @a[team=Blue,scores={usedCOAS=1..,payRaiseTimer=..0},predicate=commands:holding/pay_raise_blue] at @s anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/pay_raise_blue_start_ray
 
 scoreboard players add @a[tag=needsmoney] ray.payRaise 1
 
@@ -1876,15 +1836,9 @@ scoreboard players reset @a[scores={ray.payRaise=10..}] ray.payRaise
 
 #Scrambled Eggs
 
-scoreboard players add @a[predicate=commands:inventory/scrambled_eggs] scrambleTimer 1
+scoreboard players remove @a[scores={Kit=11,scrambleTimer=1..},predicate=commands:in_any_battlefield,predicate=commands:inventory/scrambled_eggs,tag=!notAlive] scrambleTimer 1
 
-execute as @a[scores={scrambleTimer=500}] run function commands:replace/scrambled_eggs_ready
-
-tag @a[scores={usedCOAS=1..,scrambleTimer=500..},predicate=commands:holding/scrambled_eggs] add scramble
-
-execute as @a[tag=scramble] at @s run function commands:other/scrambled_eggs
-
-tag @a remove scramble
+execute as @a[scores={usedCOAS=1..,scrambleTimer=..0},predicate=commands:holding/scrambled_eggs] at @s run function commands:other/scrambled_eggs
 
 execute as @e[type=item,tag=eggred] at @s run tag @p[distance=..4,team=Blue] add scrambled
 
@@ -1894,19 +1848,13 @@ execute as @e[type=item,tag=eggred] at @s if entity @p[distance=..4,team=Blue] r
 
 execute as @e[type=item,tag=eggblue] at @s if entity @p[distance=..4,team=Red] run kill @s
 
-execute as @a[tag=scrambled] at @s run playsound minecraft:block.slime_block.step master @s ~ ~ ~
-
-execute as @a[tag=scrambled] at @s run particle item egg ~ ~ ~ 1 1 1 1 20 normal
-
-execute as @a[tag=scrambled] run function commands:scramble/randomize
+execute as @a[tag=scrambled] at @s run function commands:scramble/randomize
 
 execute at @e[type=item,tag=egg,nbt={OnGround:1b}] run playsound minecraft:block.slime_block.step master @a ~ ~ ~
 
 execute at @e[type=item,tag=egg,nbt={OnGround:1b}] run particle item egg ~ ~ ~ 1 1 1 1 20 normal
 
 kill @e[type=item,tag=egg,nbt={OnGround:1b}]
-
-tag @a remove scrambled
 
 #Dinner's Ready! (Chef Ultimate)
 
@@ -1949,10 +1897,6 @@ execute as @a[scores={closingEnd=200..}] run function commands:ultimates/closing
 #Explosive Charge (Warrior Ability)
 
 scoreboard players remove @a[scores={exCharge=1..},predicate=commands:in_any_battlefield,tag=!notAlive] exCharge 1
-
-execute as @a[scores={exCharge=0,jump=1..,Kit=1},advancements={commands:explosive_charge={hit_player=true}}] at @s run function commands:other/explosive_charge
-
-advancement revoke @a only commands:explosive_charge
 
 scoreboard players add @a[tag=exCharge] exChargeDelay 1
  
@@ -2038,17 +1982,8 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 scoreboard players remove @a[scores={dragonRushTimer=1..},predicate=commands:inventory/dragon_rush,predicate=commands:in_any_battlefield,tag=!notAlive] dragonRushTimer 1
 
-tag @a[scores={Kit=12,usedCOAS=1..,dragonRushTimer=..0},predicate=commands:holding/dragon_rush] add dRush
+execute as @a[scores={Kit=12,usedCOAS=1..,dragonRushTimer=..0},predicate=commands:holding/dragon_rush] at @s anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/dragon_rush_start_ray
 
-tag @a[scores={Kit=12,usedCOAS=1..,dragonRushTimer=..0},predicate=commands:holding/dragon_rush] add dRushTemp
-
-tag @a[tag=rooted] remove dRush
-
-execute at @a[tag=dRush] run playsound entity.ender_dragon.flap master @a[distance=..10] ~ ~ ~ 1 1
-
-execute as @a[tag=dRush] at @s anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/dragon_rush_start_ray
-
-tag @a[tag=dRush] remove dRush
 
 scoreboard players reset @a[scores={died=1..}] dragonRushTimer
 

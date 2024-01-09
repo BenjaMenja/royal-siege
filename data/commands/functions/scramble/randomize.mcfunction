@@ -11,3 +11,9 @@ execute if score #rng RNG matches 3 run function commands:scramble/scramble3
 execute if score #rng RNG matches 4 run function commands:scramble/scramble4
 
 scoreboard players reset #rng RNG
+
+playsound minecraft:block.slime_block.step master @s ~ ~ ~
+
+particle item egg ~ ~ ~ 1 1 1 1 20 normal
+
+tag @s remove scrambled

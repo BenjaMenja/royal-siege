@@ -50,5 +50,8 @@
     [
       "hit_shield"
     ]
-  ]
+  ],
+  "rewards": {
+    "function": "commands:other/explosive_charge"
+  }
 }

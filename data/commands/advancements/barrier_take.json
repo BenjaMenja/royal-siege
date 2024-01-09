@@ -1,15 +1,27 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "criteria": {
-        "takedamage": {
-            "trigger": "minecraft:entity_hurt_player",
-            "conditions": {
-                "damage": {
-                    "source_entity": {
-                        "type": "minecraft:player"
-                    }
-                }
+      "takedamage": {
+        "trigger": "minecraft:entity_hurt_player",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"protected\"]}"
+              }
             }
+          ],
+          "damage": {
+            "source_entity": {
+              "type": "minecraft:player"
+            }
+          }
         }
+      }
+    },
+    "rewards": {
+      "function": "commands:ultimates/magic_barrier_get_hit"
     }
-}
+  }
+  

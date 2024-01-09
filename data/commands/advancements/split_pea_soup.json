@@ -4,7 +4,6 @@
     "requirement": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
-        "player": {},
         "damage": {
           "source_entity": {
             "type": "minecraft:player",
@@ -17,5 +16,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:other/split_pea_soup_effects"
   }
 }

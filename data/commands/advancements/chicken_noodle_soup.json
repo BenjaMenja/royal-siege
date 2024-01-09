@@ -4,17 +4,23 @@
     "requirement": {
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
-        "player": {
-          "equipment": {
-            "mainhand": {
-              "nbt": "{chickennoodlesoup:1b}"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "nbt": "{chickennoodlesoup:1b}"
+                }
+              }
             }
           }
-        },
-        "entity": {
-          "type": "player"
-        }
+        ]
       }
     }
+  },
+  "rewards": {
+    "function": "commands:other/chicken_noodle_soup_effects"
   }
 }

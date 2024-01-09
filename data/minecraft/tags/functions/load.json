@@ -1,0 +1,6 @@
+{
+    "replace": false,
+    "values": [
+        "commands:admin/create_scoreboard_objectives"
+    ]
+}
