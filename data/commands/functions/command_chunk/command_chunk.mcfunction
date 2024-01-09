@@ -2041,11 +2041,7 @@ scoreboard players reset @a[scores={corruptTimer=200..}] corruptTimer
 
 scoreboard players remove @a[predicate=commands:inventory/crystal_cannon,scores={cCannonTimer=1..}] cCannonTimer 1
 
-tag @a[scores={cCannonTimer=..0,usedCOAS=1..},predicate=commands:holding/crystal_cannon] add cCannon
-
-execute as @a[tag=cCannon] at @s run function commands:other/crystal_cannon
-
-tag @a remove cCannon
+execute as @a[scores={cCannonTimer=..0,usedCOAS=1..},predicate=commands:holding/crystal_cannon] at @s run function commands:other/crystal_cannon
 
 execute as @e[type=item,tag=cCannonItem] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on force
 
@@ -2065,7 +2061,7 @@ execute as @e[type=armor_stand,tag=cCannonMarker,scores={cCannonTimer=60..}] at 
 
 execute as @a[scores={Ultimate=23},tag=!notAlive,predicate=!commands:inventory/meteor_shower] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s mShowerTimer 1
 
-give @a[scores={mShowerTimer=3600..}] minecraft:bat_spawn_egg{HideFlags:16,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Meteor Shower","color":"#FF0ABE","italic":false}',Lore:['{"text":"Drops meteors from the sky."}','{"text":"Meteors will drop in a 10 block radius centered on where you used the ultimate."}','{"text":"Meteors can vary in power."}','{"text":"Lasts 10 seconds."}']},CustomModelData:116,ultimateitem:1b,meteorshower:1b,EntityTag:{Tags:["meteorshower"]}} 1
+give @a[scores={mShowerTimer=3600..}] minecraft:bat_spawn_egg{HideFlags:16,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Meteor Shower","color":"#FF0ABE","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Drops meteors from the sky."}','{"text":"Meteors will drop in a 10 block radius centered on where you used the ultimate."}','{"text":"Meteors can vary in power."}','{"text":"Lasts 10 seconds."}']},CustomModelData:116,ultimateitem:1b,meteorshower:1b,EntityTag:{Tags:["meteorshower"]}} 1
 
 scoreboard players reset @a[scores={mShowerTimer=3600..}] mShowerTimer
 
@@ -2085,7 +2081,7 @@ execute as @e[type=area_effect_cloud,tag=mShowerPoint,scores={mShowerTimer=200..
 
 execute as @a[scores={Ultimate=24},tag=!notAlive,predicate=!commands:inventory/evolution] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s evolutionTimer 1
 
-give @a[scores={evolutionTimer=3600..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Evolution","color":"#A100FF","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":"Take to the skies, receiving a pair of wings and fireworks."}','{"text":"Lasts 12 seconds."}']},HideFlags:16,CustomModelData:117,ultimateitem:1b,evolutionUlt:1b} 1
+give @a[scores={evolutionTimer=3600..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Evolution","color":"#A100FF","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Take to the skies, receiving a pair of wings and fireworks."}','{"text":"Lasts 12 seconds."}']},HideFlags:16,CustomModelData:117,ultimateitem:1b,evolutionUlt:1b} 1
 
 scoreboard players reset @a[scores={evolutionTimer=3600..}] evolutionTimer
 
@@ -2195,11 +2191,17 @@ execute store result score #redking bossHP run bossbar get minecraft:redking val
 
 execute store result score #blueking bossHP run bossbar get minecraft:blueking value
 
-execute if score #redking bossHP < #blueking bossHP run setblock 9 51 -132 blue_stained_glass
+execute if score #redking bossHP < #blueking bossHP if score #classicMap settings matches 0 run setblock 9 51 -132 blue_stained_glass
 
-execute if score #redking bossHP > #blueking bossHP run setblock 9 51 -132 red_stained_glass
+execute if score #redking bossHP > #blueking bossHP if score #classicMap settings matches 0 run setblock 9 51 -132 red_stained_glass
 
-execute if score #redking bossHP = #blueking bossHP run setblock 9 51 -132 white_stained_glass
+execute if score #redking bossHP = #blueking bossHP if score #classicMap settings matches 0 run setblock 9 51 -132 white_stained_glass
+
+execute if score #redking bossHP < #blueking bossHP if score #classicMap settings matches 1 run setblock 58 51 -1030 blue_stained_glass
+
+execute if score #redking bossHP > #blueking bossHP if score #classicMap settings matches 1 run setblock 58 51 -1030 red_stained_glass
+
+execute if score #redking bossHP = #blueking bossHP if score #classicMap settings matches 1 run setblock 58 51 -1030 white_stained_glass
 
 #Castle Throne Room Warps (Forest Glen)
 
