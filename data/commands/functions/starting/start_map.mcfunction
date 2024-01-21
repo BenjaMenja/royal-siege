@@ -195,6 +195,10 @@ bossbar set commands:blue_ult27 players @a[scores={Ultimate=27},team=Blue]
 
 bossbar set commands:blue_ult28 players @a[scores={Ultimate=28},team=Blue]
 
+bossbar set commands:blue_ult29 players @a[scores={Ultimate=29},team=Blue]
+
+bossbar set commands:blue_ult30 players @a[scores={Ultimate=30},team=Blue]
+
 bossbar set commands:red_ult1 players @a[scores={Ultimate=1},team=Red]
 
 bossbar set commands:red_ult2 players @a[scores={Ultimate=2},team=Red]
@@ -250,6 +254,10 @@ bossbar set commands:red_ult26 players @a[scores={Ultimate=26},team=Red]
 bossbar set commands:red_ult27 players @a[scores={Ultimate=27},team=Red]
 
 bossbar set commands:red_ult28 players @a[scores={Ultimate=28},team=Red]
+
+bossbar set commands:red_ult29 players @a[scores={Ultimate=29},team=Red]
+
+bossbar set commands:red_ult30 players @a[scores={Ultimate=30},team=Red]
 
 #Advancement Grants for ultimates
 

@@ -26,6 +26,8 @@ execute if entity @s[scores={Kit=13}] run tellraw @a [{"selector":"@s"},{"text":
 
 execute if entity @s[scores={Kit=14}] run tellraw @a [{"selector":"@s"},{"text":" - ","color":"aqua"},{"text":"Astronaut","color":"#BAAEA2"}]
 
+execute if entity @s[scores={Kit=15}] run tellraw @a [{"selector":"@s"},{"text":" - ","color":"aqua"},{"text":"Firecracker","color":"#FFAD08"}]
+
 tag @s add namePrinted
 
 execute as @a[team=Red,tag=!namePrinted,limit=1] run function commands:starting/red_team_print

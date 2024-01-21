@@ -1,0 +1,7 @@
+summon minecraft:snowball ~ ~ ~ {Motion:[0.0,1.1,0.0],Tags:["chrysanthemumlauncher","snowball"],Item:{id:"minecraft:air",Count:1b}}
+
+tag @s add chrysanthemumLaunch
+
+ride @s mount @e[type=snowball,tag=chrysanthemumlauncher,limit=1,sort=nearest]
+
+tellraw @a [{"selector":"@s"},{"text":" is using ultimate"}]

@@ -60,4 +60,8 @@ execute as @s[scores={Ultimate=27,Kit=14}] run scoreboard players operation @s r
 
 execute as @s[scores={Ultimate=28,Kit=14}] run scoreboard players operation @s droneTimer += @s Ultcharge
 
+execute as @s[scores={Ultimate=29,Kit=15}] run scoreboard players operation @s chrysanthemumShellTimer += @s Ultcharge
+
+execute as @s[scores={Ultimate=30,Kit=15}] run scoreboard players operation @s popRocksTimer += @s Ultcharge
+
 advancement revoke @s only commands:ult_charge_entities

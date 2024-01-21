@@ -336,4 +336,20 @@ execute if score @s textClick matches 171 run function commands:settings/colosse
 
 execute if score @s textClick matches 172 run function commands:settings/new_chicago_skyline
 
+execute if score @s textClick matches 173 run function commands:shops/bang_snaps
+
+execute if score @s textClick matches 174 run function commands:shops/napalm_bucket
+
+execute if score @s textClick matches 175 run function commands:shops/bunker_boots
+
+execute if score @s textClick matches 176 run function commands:shops/pyromania
+
+execute if score @s textClick matches 177 run function commands:shops/cinder_bombs
+
+execute if score @s textClick matches 178 run function commands:starting/ultimate_select/chrysanthemum_shell
+
+execute if score @s textClick matches 179 run function commands:starting/ultimate_select/pop_rocks
+
+execute if score @s textClick matches 180 run function commands:practice_range/character/firecracker
+
 scoreboard players reset @a[scores={textClick=1..}] textClick

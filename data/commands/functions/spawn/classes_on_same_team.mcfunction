@@ -26,6 +26,8 @@ execute as @a[team=Red,scores={Kit=13}] run scoreboard players add Check25 Limit
 
 execute as @a[team=Red,scores={Kit=14}] run scoreboard players add Check27 Limit 1
 
+execute as @a[team=Red,scores={Kit=15}] run scoreboard players add Check29 Limit 1
+
 execute as @a[team=Blue,scores={Kit=1}] run scoreboard players add Check11 Limit 1
 
 execute as @a[team=Blue,scores={Kit=2}] run scoreboard players add Check12 Limit 1
@@ -53,6 +55,8 @@ execute as @a[team=Blue,scores={Kit=12}] run scoreboard players add Check24 Limi
 execute as @a[team=Blue,scores={Kit=13}] run scoreboard players add Check26 Limit 1
 
 execute as @a[team=Blue,scores={Kit=14}] run scoreboard players add Check28 Limit 1
+
+execute as @a[team=Blue,scores={Kit=15}] run scoreboard players add Check30 Limit 1
 
 #Red team
 
@@ -140,6 +144,12 @@ execute if score Check27 Limit >= 2 Limit run tellraw @a[team=Red] [{"text":"Kic
 
 execute if score Check27 Limit >= 2 Limit run scoreboard players set @a[team=Red,scores={Kit=14}] Kit 0
 
+execute if score Check29 Limit >= 2 Limit run tellraw @a[team=Red] [{"text":"There are too many Firecrackers on the "},{"text":"Red ","color":"red"},{"text":"team!"}]
+
+execute if score Check29 Limit >= 2 Limit run tellraw @a[team=Red] [{"text":"Kicking all Firecrackers off of "},{"text":"Red ","color":"red"},{"text":"team..."}]
+
+execute if score Check29 Limit >= 2 Limit run scoreboard players set @a[team=Red,scores={Kit=15}] Kit 0
+
 #Blue team
 
 execute if score Check11 Limit >= 2 Limit run tellraw @a[team=Blue] [{"text":"There are too many Warriors on the "},{"text":"Blue ","color":"blue"},{"text":"team!"}]
@@ -226,6 +236,12 @@ execute if score Check28 Limit >= 2 Limit run tellraw @a[team=Blue] [{"text":"Ki
 
 execute if score Check28 Limit >= 2 Limit run scoreboard players set @a[team=Blue,scores={Kit=14}] Kit 0
 
+execute if score Check30 Limit >= 2 Limit run tellraw @a[team=Blue] [{"text":"There are too many Firecrackers on the "},{"text":"Blue ","color":"blue"},{"text":"team!"}]
+
+execute if score Check30 Limit >= 2 Limit run tellraw @a[team=Blue] [{"text":"Kicking all Firecrackers off of "},{"text":"Blue ","color":"blue"},{"text":"team..."}]
+
+execute if score Check30 Limit >= 2 Limit run scoreboard players set @a[team=Blue,scores={Kit=15}] Kit 0
+
 #remove check scores
 
 scoreboard players set Check1 Limit 0
@@ -283,3 +299,7 @@ scoreboard players set Check26 Limit 0
 scoreboard players set Check27 Limit 0
 
 scoreboard players set Check28 Limit 0
+
+scoreboard players set Check29 Limit 0
+
+scoreboard players set Check30 Limit 0

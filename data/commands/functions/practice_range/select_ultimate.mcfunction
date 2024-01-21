@@ -26,4 +26,6 @@ tellraw @s[scores={Kit=13}] [{"text":"Which ultimate would you like to use?\n","
 
 tellraw @s[scores={Kit=14}] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Rocket Launch]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 151"}},{"text":" "},{"text":"[Drone]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 152"}}] 
 
-execute unless score @s Kit matches 1..14 run tellraw @s {"text":"You need to choose a character first!","color":"aqua"}
+tellraw @s[scores={Kit=15}] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Chrysanthemum Shell]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 178"}},{"text":" "},{"text":"[Pop Rocks]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 179"}}] 
+
+execute unless score @s Kit matches 1..15 run tellraw @s {"text":"You need to choose a character first!","color":"aqua"}

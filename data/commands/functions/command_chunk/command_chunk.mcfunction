@@ -68,6 +68,10 @@ scoreboard players set @e[type=item,tag=smartDrone] ItemKill 2
 
 scoreboard players set @e[type=item,tag=smartDroneLaser] ItemKill 2
 
+scoreboard players set @e[type=item,tag=sparkleritem] ItemKill 2
+
+scoreboard players set @e[type=item,tag=blazingspeedbomb] ItemKill 2
+
 execute as @e[type=item,tag=!processed,scores={ItemKill=1}] run data modify entity @s Owner set from entity @s Thrower
 
 execute as @e[type=item,tag=!processed,scores={ItemKill=1}] run data modify entity @s PickupDelay set value 0
@@ -269,6 +273,8 @@ effect give @a[predicate=commands:is_sneaking,scores={Kit=14}] levitation 1 200 
 effect clear @a[predicate=!commands:is_sneaking,scores={Kit=14}] levitation
 
 effect clear @a[predicate=commands:is_sneaking,scores={Kit=14}] slow_falling
+
+effect give @a[scores={Kit=15}] fire_resistance 1 0 true
 
 #Gravity Canceler
 
@@ -1054,7 +1060,7 @@ scoreboard players set @a[scores={Ultcharge=1..}] Ultcharge 0
 
 #Ultimate Charge Bossbars
 
-execute as @a[scores={Ultimate=1..28}] run function commands:other/ultimate_bossbars
+execute as @a[scores={Ultimate=1..30}] run function commands:other/ultimate_bossbars
 
 #Seismic Slam
 
@@ -1722,7 +1728,7 @@ scoreboard players reset @a[scores={Kit=8,entPassive=1..}] entPassive
 
 #Ultimate Charger
 
-execute at @e[type=bat,tag=ultimatecharger] as @a[distance=..5,limit=1,scores={Ultimate=1..28}] run function commands:other/ultimate_charger
+execute at @e[type=bat,tag=ultimatecharger] as @a[distance=..5,limit=1,scores={Ultimate=1..30}] run function commands:other/ultimate_charger
 
 teleport @e[type=bat,tag=ultimatecharger] ~ -100 ~
 
@@ -2654,6 +2660,126 @@ execute as @a[tag=hasSmartDrone] at @s positioned ~ ~2 ~ as @e[type=armor_stand,
 execute as @a[scores={Ultimate=28,droneDamage=150..},tag=hasSmartDrone] at @s run function commands:ultimates/smart_drone_destroy
 
 execute as @a[scores={died=1..},tag=hasSmartDrone] at @s run function commands:ultimates/smart_drone_destroy_all
+
+#Sparkler
+
+scoreboard players remove @a[scores={Kit=15,sparklerTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] sparklerTimer 1
+
+execute as @a[scores={Kit=15,sparklerTimer=1}] run function commands:replace/sparkler_ready
+
+execute as @a[scores={usedCOAS=1..,sparklerTimer=..0},predicate=commands:holding/sparkler] at @s run function commands:other/sparkler
+
+kill @e[type=item,tag=sparkleritem,nbt={OnGround:1b}]
+
+execute as @e[type=item,tag=sparklerred] at @s as @a[team=Blue,distance=..3] at @s run function commands:other/sparkler_hit
+
+execute as @e[type=item,tag=sparklerblue] at @s as @a[team=Red,distance=..3] at @s run function commands:other/sparkler_hit
+
+#Blazing Speed
+
+scoreboard players remove @a[scores={Kit=15,blazingSpeedTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] blazingSpeedTimer 1
+
+execute as @a[scores={usedCOAS=1..,blazingSpeedTimer=..0},predicate=commands:holding/blazing_speed] at @s run function commands:other/blazing_speed
+
+execute as @a[scores={RSAttr.BlazingSpeed=0..}] at @s run function commands:other/blazing_speed_effects
+
+execute as @e[type=item,tag=blazingspeedbomb] run scoreboard players add @s blazingSpeedTimer 1
+
+execute as @e[type=item,tag=blazingspeedbomb,scores={blazingSpeedTimer=20..}] at @s run function commands:other/blazing_speed_bomb_explode
+
+#Bang Snaps
+
+execute as @e[type=snowball,tag=!bangsnapred,nbt={Item:{tag:{bangsnapred:1b}}}] at @s run function commands:ball/bang_snap_found_red
+
+execute as @e[type=snowball,tag=!bangsnapblue,nbt={Item:{tag:{bangsnapblue:1b}}}] at @s run function commands:ball/bang_snap_found_blue
+
+execute as @e[type=area_effect_cloud,tag=bangsnapred] unless predicate commands:is_riding_bang_snap_red at @s run function commands:ball/bang_snap_landed_red
+
+execute as @e[type=area_effect_cloud,tag=bangsnapblue] unless predicate commands:is_riding_bang_snap_blue at @s run function commands:ball/bang_snap_landed_blue
+
+#Bucket of Homemade Napalm
+
+scoreboard players remove @a[scores={Kit=15,napalmBucketTimer=1..},predicate=commands:inventory/napalm_bucket,tag=!notAlive] napalmBucketTimer 1
+
+execute as @a[scores={usedCOAS=1..,napalmBucketTimer=..0},predicate=commands:holding/napalm_bucket] at @s run function commands:other/napalm_bucket_splash
+
+#Bunker Boots
+
+execute as @a[team=Red,predicate=commands:armor/bunker_boots] at @s if entity @a[team=Blue,distance=..5,predicate=commands:effects/on_fire] run function commands:attributes/adds/add_bunker_boots_speed
+
+execute as @a[team=Blue,predicate=commands:armor/bunker_boots] at @s if entity @a[team=Red,distance=..5,predicate=commands:effects/on_fire] run function commands:attributes/adds/add_bunker_boots_speed
+
+#Pyromania
+
+scoreboard players remove @a[scores={Kit=15,pyromaniaTimer=1..},predicate=commands:inventory/pyromania,tag=!notAlive] pyromaniaTimer 1
+
+execute as @a[scores={usedCOAS=1..,pyromaniaTimer=..0},predicate=commands:holding/pyromania] at @s run function commands:other/pyromania
+
+#Cinder Bombs
+
+execute as @e[type=snowball,tag=!cinderbombred,nbt={Item:{tag:{cinderbombred:1b}}}] at @s run function commands:ball/cinder_bomb_found_red
+
+execute as @e[type=snowball,tag=!cinderbombblue,nbt={Item:{tag:{cinderbombblue:1b}}}] at @s run function commands:ball/cinder_bomb_found_blue
+
+execute as @e[type=area_effect_cloud,tag=cinderbombred] unless predicate commands:is_riding_cinder_bomb_red at @s run function commands:ball/cinder_bomb_landed_red
+
+execute as @e[type=area_effect_cloud,tag=cinderbombblue] unless predicate commands:is_riding_cinder_bomb_blue at @s run function commands:ball/cinder_bomb_landed_blue
+
+execute as @e[type=area_effect_cloud,tag=cindersmokered] at @s run effect give @a[distance=..5,team=Blue] blindness 2 0
+
+execute as @e[type=area_effect_cloud,tag=cindersmokeblue] at @s run effect give @a[distance=..5,team=Red] blindness 2 0
+
+execute as @e[type=area_effect_cloud,tag=cindersmoke] at @s run particle flame ~ ~ ~ 1 0.1 1 0.05 4
+
+scoreboard players remove @e[type=area_effect_cloud,tag=cindersmoke] cinderBombDuration 1
+
+execute as @e[type=area_effect_cloud,tag=cindersmoke,scores={cinderBombDuration=..0}] at @s run function commands:other/cinder_bomb_effects
+
+#Chrysanthemum Shell
+
+execute as @a[scores={Ultimate=29},tag=!notAlive,predicate=!commands:inventory/chrysanthemum_shell] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s chrysanthemumShellTimer 1
+
+give @a[scores={chrysanthemumShellTimer=1600..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Chrysanthemum Shell","color":"#FF9900","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Launch yourself into the air, receiving slow falling at the peak."}','{"text":"Right-clicking again will fire a slow but powerful firework that explodes on contact."}','{"text":"The explosion damages and burns enemies in a large radius."}','{"text":"Your movement speed increases based on the number of enemy players hit."}','{"text":"Failure to fire the rocket before landing will waste the ultimate."}']},HideFlags:4,Unbreakable:1b,CustomModelData:193,chrysanthemumshell:1b} 1
+
+scoreboard players reset @a[scores={chrysanthemumShellTimer=1600..}] chrysanthemumShellTimer
+
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/chrysanthemum_shell,tag=chrysanthemumLaunch] at @s run function commands:ultimates/chrysanthemum_rocket
+
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/chrysanthemum_shell,tag=!chrysanthemumLaunch] at @s run function commands:ultimates/chrysanthemum_init
+
+scoreboard players add @e[type=snowball,tag=chrysanthemumlauncher] chrysanthemumShellTimer 1
+
+kill @e[type=snowball,tag=chrysanthemumlauncher,scores={chrysanthemumShellTimer=25..}]
+
+execute as @a[tag=chrysanthemumLaunch] at @s unless data entity @s RootVehicle run effect give @s slow_falling 1 0 true
+
+scoreboard players add @e[type=item,tag=chrysanthemum_projectile] chrysanthemumShellTimer 1
+
+execute as @e[type=item,tag=chrysanthemum_projectile] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on force
+
+execute as @e[type=item,tag=chrysanthemum_projectile,scores={nearbyBlocks=1..}] at @s run function commands:ultimates/chrysanthemum_explosion
+
+execute as @e[type=item,tag=chrysanthemum_projectile,scores={chrysanthemumShellTimer=30..}] at @s run function commands:ultimates/chrysanthemum_explosion
+
+execute as @a[tag=chrysanthemumLaunch,predicate=commands:effects/slow_falling,nbt={OnGround:1b}] run function commands:ultimates/chrysanthemum_expire
+
+#Pop Rocks
+
+execute as @a[scores={Ultimate=30},tag=!notAlive,predicate=!commands:inventory/pop_rocks] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s popRocksTimer 1
+
+give @a[scores={popRocksTimer=2000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Pop Rocks","color":"#FFD940","italic":false}',Lore:['{"text":"Right-Click to use","italic":false}','{"text":" "}','{"text":"Buffs your melee attacks, causing them to pop when striking a burning enemy."}','{"text":"The pop deals damage to enemies nearby."}','{"text":"Using the ultimate also resets the cooldown of blazing speed."}','{"text":"Lasts 10 seconds."}']},HideFlags:4,Unbreakable:1b,CustomModelData:194,poprocks:1b} 1
+
+scoreboard players reset @a[scores={popRocksTimer=2000..}] popRocksTimer
+
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/pop_rocks] at @s run function commands:ultimates/pop_rocks_init
+
+scoreboard players add @a[tag=poprocks] popRocksDur 1
+
+execute as @a[scores={popRocksDur=200..}] run function commands:ultimates/pop_rocks_end
+
+#Firecracker Cooldown Display
+
+execute as @a[scores={Kit=15}] run function commands:cooldowns/firecracker_display
 
 #Give menu item to people w/out it
 

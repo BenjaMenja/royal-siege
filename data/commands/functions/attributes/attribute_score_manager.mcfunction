@@ -258,3 +258,40 @@ scoreboard players add @a[scores={RSAttr.LifeforceMaxHP=0..}] RSAttr.LifeforceMa
 
 execute as @a[scores={RSAttr.LifeforceMaxHP=400..}] run function commands:attributes/clears/clear_lifeforce_maxhp
 
+#Blazing Speed
+
+scoreboard players add @a[scores={RSAttr.BlazingSpeed=0..}] RSAttr.BlazingSpeed 1
+
+execute as @a[scores={RSAttr.BlazingSpeed=30..}] run function commands:attributes/clears/clear_blazing_speed
+
+#Napalm Bucket
+
+scoreboard players add @a[scores={RSAttr.NapalmBucketSlow=0..}] RSAttr.NapalmBucketSlow 1
+
+execute as @a[scores={RSAttr.NapalmBucketSlow=100..}] run function commands:attributes/clears/clear_napalm_bucket_slow
+
+scoreboard players add @a[scores={RSAttr.NapalmBucketArmorShred=0..}] RSAttr.NapalmBucketArmorShred 1
+
+execute as @a[scores={RSAttr.NapalmBucketArmorShred=100..}] run function commands:attributes/clears/clear_napalm_bucket_armor_shred
+
+#Bunker Boots
+
+scoreboard players add @a[scores={RSAttr.BunkerBootsSpeed=0..}] RSAttr.BunkerBootsSpeed 1
+
+execute as @a[scores={RSAttr.BunkerBootsSpeed=10..}] run function commands:attributes/clears/clear_bunker_boots_speed
+
+#Pyromania
+
+scoreboard players add @a[scores={RSAttr.PyromaniaSpeed=0..}] RSAttr.PyromaniaSpeed 1
+
+execute as @a[scores={RSAttr.PyromaniaSpeed=100..}] run function commands:attributes/clears/clear_pyromania_speed
+
+scoreboard players add @a[scores={RSAttr.PyromaniaAtkDmg=0..}] RSAttr.PyromaniaAtkDmg 1
+
+execute as @a[scores={RSAttr.PyromaniaAtkDmg=100..}] run function commands:attributes/clears/clear_pyromania_atkdmg
+
+#Chrysanthemum Shell
+
+scoreboard players add @a[scores={RSAttr.ChrysanthemumSpeed=0..}] RSAttr.ChrysanthemumSpeed 1
+
+execute as @a[scores={RSAttr.ChrysanthemumSpeed=160..}] run function commands:attributes/clears/clear_chrysanthemum_shell_speed

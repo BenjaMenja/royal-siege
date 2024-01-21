@@ -69,3 +69,11 @@ scoreboard players set @s debrisTimer 1
 scoreboard players set @s astroPassTimer 1
 
 scoreboard players set @s wrenchTimer 1
+
+scoreboard players set @s sparklerTimer 1
+
+scoreboard players set @s blazingSpeedTimer 1
+
+scoreboard players set @s napalmBucketTimer 1
+
+scoreboard players set @s pyromaniaTimer 1

@@ -8,11 +8,7 @@ scoreboard players remove @a[tag=moneystealblue] Money 100
 
 execute if entity @a[tag=moneysteal] run scoreboard players add @a[team=Blue,scores={Kit=10}] Money 100
 
-execute if entity @a[tag=moneysteal] run advancement grant @a[team=Blue,scores={Kit=10}] only commands:advancements/steal_gold_with_midas_bullet
-
 execute if entity @a[tag=moneystealblue] run scoreboard players add @a[team=Red,scores={Kit=10}] Money 100
-
-execute if entity @a[tag=moneystealblue] run advancement grant @a[team=Red,scores={Kit=10}] only commands:advancements/steal_gold_with_midas_bullet
 
 tag @a remove moneysteal
 

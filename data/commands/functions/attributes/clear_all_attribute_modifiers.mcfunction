@@ -99,3 +99,17 @@ function commands:attributes/clears/clear_terror_of_the_seas_atkspd
 function commands:attributes/clears/clear_tree_of_life_atkspd_down
 
 function commands:attributes/clears/clear_lifeforce_maxhp
+
+function commands:attributes/clears/clear_blazing_speed
+
+function commands:attributes/clears/clear_napalm_bucket_slow
+
+function commands:attributes/clears/clear_napalm_bucket_armor_shred
+
+function commands:attributes/clears/clear_bunker_boots_speed
+
+function commands:attributes/clears/clear_pyromania_speed
+
+function commands:attributes/clears/clear_pyromania_atkdmg
+
+function commands:attributes/clears/clear_chrysanthemum_shell_speed

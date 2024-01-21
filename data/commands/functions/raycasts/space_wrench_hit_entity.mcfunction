@@ -38,3 +38,7 @@ scoreboard players set @s[scores={Kit=11}] damagePan 300
 tag @s[scores={Kit=12}] add wrenched
 
 scoreboard players set @s[scores={Kit=13}] pCardsTimer 1
+
+scoreboard players set @s[scores={Kit=15}] blazingSpeedTimer 1
+
+scoreboard players set @s[scores={Kit=15}] sparklerTimer 1

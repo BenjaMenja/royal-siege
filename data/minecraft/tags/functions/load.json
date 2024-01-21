@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "commands:admin/create_scoreboard_objectives"
+        "commands:load_functions/create_scoreboard_objectives",
+        "commands:load_functions/create_bossbars"
     ]
 }
