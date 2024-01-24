@@ -1,28 +1,31 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+      "icon": {
+        "item": "minecraft:stone"
+      },
+      "title": "test",
+      "description": "test",
+      "show_toast": true,
+      "announce_to_chat": true
+    },
+    "parent": "commands:root",
     "criteria": {
-        "test": {
-            "trigger": "minecraft:entity_hurt_player",
-            "conditions": {
-                "damage": {
-                    "type": {
-                        "is_projectile": true,
-                        "direct_entity": {
-                            "type": "minecraft:arrow"
-                        }
-                    },
-                    "source_entity": {
-                        "type": "minecraft:player",
-                        "equipment": {
-                            "mainhand": {
-                                "items": [
-                                    "minecraft:bow"
-                                ]
-                            }
-                        }
-                    }
+      "requirement": {
+        "trigger": "minecraft:entity_hurt_player",
+        "conditions": {
+          "player": {},
+          "damage": {
+            "type": {
+              "tags": [
+                {
+                  "id": "commands:sparkler",
+                  "expected": true
                 }
+              ]
             }
+          }
         }
+      }
     }
-}
+  }
+  

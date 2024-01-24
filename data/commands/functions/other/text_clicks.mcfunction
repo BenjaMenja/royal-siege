@@ -352,4 +352,6 @@ execute if score @s textClick matches 179 run function commands:starting/ultimat
 
 execute if score @s textClick matches 180 run function commands:practice_range/character/firecracker
 
+execute if score @s textClick matches 181 run function commands:books/firecracker
+
 scoreboard players reset @a[scores={textClick=1..}] textClick

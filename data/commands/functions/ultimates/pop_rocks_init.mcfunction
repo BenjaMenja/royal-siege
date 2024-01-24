@@ -1,4 +1,4 @@
-tellraw @a [{"selector":"@s"},{"text":" is all flared up!"}]
+tellraw @a [{"selector":"@s"},{"text":" is all fired up!"}]
 
 tag @s add poprocks
 

@@ -4,4 +4,4 @@ tag @s add chrysanthemumLaunch
 
 ride @s mount @e[type=snowball,tag=chrysanthemumlauncher,limit=1,sort=nearest]
 
-tellraw @a [{"selector":"@s"},{"text":" is using ultimate"}]
+tellraw @a [{"selector":"@s"},{"text":" is preparing for the grand finale!"}]

@@ -1,4 +1,4 @@
-damage @s 5 minecraft:pyromania
+damage @s 5 commands:pyromania
 
 particle minecraft:flame ~ ~ ~ 0.5 1 0.5 0 100
 
