@@ -84,13 +84,13 @@ advancement revoke @s only commands:rocket_death
 
 advancement revoke @s only commands:smart_drone_death
 
+advancement revoke @s only commands:sparkler_death
+
+advancement revoke @s only commands:c4_death
+
 tag @s remove DIED
 
 tag @s remove DIED2
-
-tag @s remove DIED3
-
-tag @s remove DIED4
 
 tag @s remove shadowdeath
 

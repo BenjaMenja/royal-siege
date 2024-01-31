@@ -28,7 +28,7 @@ execute if entity @s[advancements={commands:magic_death=true}] run function comm
 
 execute if entity @s[advancements={commands:angelic_staff_death=true}] run function commands:custom_deaths/angelic_staff_death
 
-execute if entity @s[tag=DIED4] run function commands:custom_deaths/lightning_death
+execute if entity @s[advancements={commands:lightning_damage=true}] run function commands:custom_deaths/lightning_death
 
 execute if entity @s[tag=DIED] run function commands:custom_deaths/fireball_death
 
@@ -38,15 +38,13 @@ execute if entity @s[advancements={commands:trident_death=true}] run function co
 
 execute if entity @s[advancements={commands:chicken_death=true}] run function commands:custom_deaths/chicken_death
 
-execute if entity @s[tag=DIED3] run function commands:custom_deaths/c4_death
+execute if entity @s[advancements={commands:c4_death=true}] run function commands:custom_deaths/c4_death
 
 execute if entity @s[advancements={commands:minion_death=true}] run function commands:custom_deaths/minion_death
 
 execute if entity @s[scores={fall=300..},nbt={OnGround:1b}] run function commands:custom_deaths/fall_death
 
 execute if entity @s[advancements={commands:king_death=true}] run function commands:custom_deaths/king_death
-
-execute if entity @s[advancements={commands:gatling_death=true}] run function commands:custom_deaths/gatling_death
 
 execute if entity @s[advancements={commands:cd_death=true}] run function commands:custom_deaths/cd_death
 
@@ -110,17 +108,33 @@ execute if entity @s[advancements={commands:rocket_death=true}] run function com
 
 execute if entity @s[advancements={commands:smart_drone_death=true}] run function commands:custom_deaths/smart_drone_death
 
+execute if entity @s[advancements={commands:sparkler_death=true}] run function commands:custom_deaths/sparkler_death
+
+execute if entity @s[advancements={commands:sparkler_damage=true}] run function commands:custom_deaths/sparkler_death
+
+execute if entity @s[advancements={commands:bang_snap_damage=true}] run function commands:custom_deaths/bang_snap_death
+
+execute if entity @s[advancements={commands:pyromania_damage=true}] run function commands:custom_deaths/pyromania_death
+
+execute if entity @s[advancements={commands:cinder_bomb_damage=true}] run function commands:custom_deaths/cinder_bomb_death
+
+execute if entity @s[advancements={commands:chrysanthemum_shell_damage=true}] run function commands:custom_deaths/chrysanthemum_shell_death
+
+execute if entity @s[advancements={commands:pop_rocks_damage=true}] run function commands:custom_deaths/pop_rocks_death
+
 execute if entity @s[tag=shadowdeath] run function commands:custom_deaths/shadow_death
 
 execute if entity @s[tag=decaydeath] run function commands:custom_deaths/decay_death
 
 execute if entity @s[tag=tChestDeath] run function commands:custom_deaths/treasure_chest_death
 
-execute at @s[scores={fall=..299},advancements={commands:smart_drone_death=false,commands:space_wrench_death=false,commands:asteroid_shard_death=false,commands:rocket_death=false,commands:playing_card_death=false,commands:royal_flush_death=false,commands:security_guard_death=false,commands:roulette_death=false,commands:stylish_cane_death=false,commands:coin_gun_death=false,commands:magic_wand_death=false,commands:royal_guard_death=false,commands:blunderbuss_death=false,commands:dragon_rage_death=false,commands:dragon_rush_death=false,commands:dragon_claw_death=false,commands:hatchling_death=false,commands:crystal_cannon_death=false,commands:gunblade_melee_death=false,commands:terror_death=false,commands:squidzooka_death=false,commands:anchor_death=false,commands:landfish_death=false,commands:sword_death=false,commands:axe_death=false,commands:bow_death=false,commands:sniper_death=false,commands:gun_death=false,commands:magic_death=false,commands:angelic_staff_death=false,commands:trident_death=false,commands:eject_death=false,commands:chicken_death=false,commands:minion_death=false,commands:king_death=false,commands:cd_death=false,commands:justice_death=false,commands:ai_death=false},tag=!DIED,tag=!DIED2,tag=!DIED3,tag=!DIED4] if block ~ ~0.2 ~ minecraft:lava run function commands:custom_deaths/lava_death
+execute if entity @s[advancements={commands:lava_damage=true}] run function commands:custom_deaths/lava_death
 
-execute at @s[scores={fall=..299},advancements={commands:smart_drone_death=false,commands:space_wrench_death=false,commands:asteroid_shard_death=false,commands:rocket_death=false,commands:playing_card_death=false,commands:royal_flush_death=false,commands:security_guard_death=false,commands:roulette_death=false,commands:stylish_cane_death=false,commands:coin_gun_death=false,commands:magic_wand_death=false,commands:royal_guard_death=false,commands:blunderbuss_death=false,commands:dragon_rage_death=false,commands:dragon_rush_death=false,commands:dragon_claw_death=false,commands:hatchling_death=false,commands:crystal_cannon_death=false,commands:gunblade_melee_death=false,commands:terror_death=false,commands:squidzooka_death=false,commands:anchor_death=false,commands:landfish_death=false,commands:sword_death=false,commands:axe_death=false,commands:bow_death=false,commands:sniper_death=false,commands:gun_death=false,commands:magic_death=false,commands:angelic_staff_death=false,commands:trident_death=false,commands:eject_death=false,commands:chicken_death=false,commands:minion_death=false,commands:king_death=false,commands:cd_death=false,commands:justice_death=false,commands:ai_death=false},tag=!DIED,tag=!DIED2,tag=!DIED3,tag=!DIED4] if block ~ ~0.2 ~ minecraft:water run function commands:custom_deaths/water_death
+execute if entity @s[advancements={commands:drowning_damage=true}] run function commands:custom_deaths/water_death
 
-execute at @s[scores={fall=..299,nearbyBlocks=1..},advancements={commands:smart_drone_death=false,commands:space_wrench_death=false,commands:asteroid_shard_death=false,commands:rocket_death=false,commands:playing_card_death=false,commands:royal_flush_death=false,commands:security_guard_death=false,commands:roulette_death=false,commands:stylish_cane_death=false,commands:coin_gun_death=false,commands:magic_wand_death=false,commands:royal_guard_death=false,commands:blunderbuss_death=false,commands:dragon_rage_death=false,commands:dragon_rush_death=false,commands:dragon_claw_death=false,commands:hatchling_death=false,commands:crystal_cannon_death=false,commands:gunblade_melee_death=false,commands:terror_death=false,commands:squidzooka_death=false,commands:anchor_death=false,commands:landfish_death=false,commands:sword_death=false,commands:axe_death=false,commands:bow_death=false,commands:sniper_death=false,commands:gun_death=false,commands:magic_death=false,commands:angelic_staff_death=false,commands:trident_death=false,commands:eject_death=false,commands:chicken_death=false,commands:minion_death=false,commands:king_death=false,commands:cd_death=false,commands:justice_death=false,commands:ai_death=false},tag=!DIED,tag=!DIED2,tag=!DIED3,tag=!DIED4] run function commands:custom_deaths/cactus_death
+execute if entity @s[advancements={commands:cactus_damage=true}] run function commands:custom_deaths/cactus_death
+
+execute if entity @s[advancements={commands:fire_damage=true}] run function commands:custom_deaths/fire_death
 
 execute if entity @s[team=Red] if score #gamemode settings matches 1 run scoreboard players add #bluekills tdmKills 1
 

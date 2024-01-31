@@ -1,0 +1,44 @@
+{
+  "criteria": {
+    "unlit": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player",
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:carrot_on_a_stick"
+              ],
+              "nbt": "{sparklerunlit:1b}"
+            }
+          }
+        }
+      }
+    },
+    "lit": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player",
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:carrot_on_a_stick"
+              ],
+              "nbt": "{sparkler:1b}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "unlit"
+    ],
+    [
+      "lit"
+    ]
+  ]
+}

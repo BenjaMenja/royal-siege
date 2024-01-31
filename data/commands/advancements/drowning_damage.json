@@ -1,0 +1,21 @@
+{
+  "parent": "commands:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": {},
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_drowning",
+                "expected": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "parent": "commands:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": {},
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "commands:is_cactus",
+                "expected": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

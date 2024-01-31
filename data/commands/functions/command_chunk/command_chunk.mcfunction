@@ -274,7 +274,7 @@ effect clear @a[predicate=!commands:is_sneaking,scores={Kit=14}] levitation
 
 effect clear @a[predicate=commands:is_sneaking,scores={Kit=14}] slow_falling
 
-effect give @a[scores={Kit=15}] fire_resistance 1 0 true
+# effect give @a[scores={Kit=15}] fire_resistance 1 0 true
 
 #Gravity Canceler
 
@@ -894,7 +894,7 @@ tp @e[type=bat,tag=c4] ~ -100 ~
 
 execute at @e[type=villager,tag=c4] run particle dust 0.271 0.271 0.271 1 ~ ~0.5 ~ 0 0 0 0 5 force
 
-execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/detonator_red] at @e[type=villager,tag=c4] run summon creeper ~ ~ ~ {CustomNameVisible:0b,ExplosionRadius:4b,Invulnerable:1b,Fuse:1,Tags:["c4m"],ignited:1b,CustomName:'{"text":"C4"}'}
+execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/detonator_red] at @e[type=villager,tag=c4] run summon creeper ~ ~ ~ {ExplosionRadius:4b,Invulnerable:1b,Fuse:1,Tags:["c4m"],ignited:1b}
 
 execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/detonator_red] run kill @e[type=bat,tag=c4]
 
@@ -906,7 +906,7 @@ tp @e[type=bat,tag=c4blue] ~ -100 ~
 
 execute at @e[type=villager,tag=c4blue] run particle dust 0.271 0.271 0.271 1 ~ ~0.5 ~ 0 0 0 0 5 force
 
-execute if entity @a[team=Blue,scores={usedCOAS=1..},predicate=commands:holding/detonator_blue] at @e[type=villager,tag=c4blue] run summon creeper ~ ~ ~ {CustomNameVisible:0b,ExplosionRadius:4b,Invulnerable:1b,Fuse:1,Tags:["c4m"],ignited:1b,CustomName:'{"text":"C4"}'}
+execute if entity @a[team=Blue,scores={usedCOAS=1..},predicate=commands:holding/detonator_blue] at @e[type=villager,tag=c4blue] run summon creeper ~ ~ ~ {ExplosionRadius:4b,Invulnerable:1b,Fuse:1,Tags:["c4m"],ignited:1b}
 
 execute if entity @a[team=Blue,scores={usedCOAS=1..},predicate=commands:holding/detonator_blue] run kill @e[type=bat,tag=c4blue]
 
@@ -1152,10 +1152,6 @@ scoreboard players set @a[scores={Decay=100..}] Decay 0
 
 #Custom Death messages
 
-execute as @e[type=fishing_bobber] at @s run tag @a[distance=..4,scores={Message=1..}] add DIED4
-
-execute as @e[type=area_effect_cloud,tag=l_message] at @s run tag @a[distance=..4,scores={Message=1..}] add DIED4
-
 execute as @e[type=fireball,tag=fm,tag=!no] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["f_message"]}
 
 execute as @e[type=fireball,tag=fm] at @s run teleport @e[type=armor_stand,tag=f_message] @s
@@ -1172,14 +1168,6 @@ tag @e[type=fireball,tag=fmm,tag=!no] add no
 
 execute as @e[type=armor_stand,tag=fm_message] at @s if entity @a[distance=..4,scores={Message=1..}] unless entity @e[type=fireball,tag=fmm,tag=no,distance=..3] run tag @a[distance=..3,scores={Message=1..}] add DIED2
 
-execute as @e[type=creeper,tag=c4m,tag=!no] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["c4_message"]}
-
-execute as @e[type=creeper,tag=c4m] at @s run teleport @e[type=armor_stand,tag=c4_message] @s
-
-tag @e[type=creeper,tag=c4m,tag=!no] add no
-
-execute as @e[type=armor_stand,tag=c4_message] at @s if entity @a[distance=..4,scores={Message=1..}] unless entity @e[type=creeper,tag=c4m,tag=no,distance=..2] run tag @a[distance=..2,scores={Message=1..}] add DIED3
-
 execute as @a[scores={Message=1..}] at @s if entity @e[type=armor_stand,tag=Chest,distance=..2] run tag @s add tChestDeath 
 
 execute as @a[scores={Message=1..},limit=1] run function commands:custom_deaths/custom_deaths
@@ -1187,12 +1175,6 @@ execute as @a[scores={Message=1..},limit=1] run function commands:custom_deaths/
 execute as @e[type=armor_stand,tag=f_message] at @s unless entity @e[type=fireball,tag=fm,tag=no,distance=..2] run kill @s
 
 execute as @e[type=armor_stand,tag=fm_message] at @s unless entity @e[type=fireball,tag=fmm,tag=no,distance=..2] run kill @s
-
-execute as @e[type=armor_stand,tag=c4_message] at @s unless entity @e[type=creeper,tag=c4m,tag=no,distance=..2] run kill @s
-
-scoreboard players add @e[tag=l_message] dmDelay 1
-
-kill @e[tag=l_message,scores={dmDelay=11..}]
 
 scoreboard players set @a[nbt={OnGround:1b}] fall 0
 
@@ -2739,7 +2721,7 @@ execute as @e[type=area_effect_cloud,tag=cindersmoke,scores={cinderBombDuration=
 
 execute as @a[scores={Ultimate=29},tag=!notAlive,predicate=!commands:inventory/chrysanthemum_shell] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s chrysanthemumShellTimer 1
 
-give @a[scores={chrysanthemumShellTimer=1600..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Chrysanthemum Shell","color":"#FF9900","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Launch yourself into the air, receiving slow falling at the peak."}','{"text":"Right-clicking again will fire a slow but powerful firework that explodes on contact."}','{"text":"The explosion damages and burns enemies in a large radius."}','{"text":"Your movement speed increases based on the number of enemy players hit."}','{"text":"Failure to fire the rocket before landing will waste the ultimate."}']},HideFlags:4,Unbreakable:1b,CustomModelData:193,chrysanthemumshell:1b} 1
+give @a[scores={chrysanthemumShellTimer=1600..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Chrysanthemum Shell","color":"#FF9900","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Launch yourself into the air, receiving slow falling at the peak."}','{"text":"Right-clicking again will fire a slow but powerful firework that explodes on contact."}','{"text":"The explosion damages and burns enemies in a large radius."}','{"text":"Your movement speed increases based on the number of enemy players hit."}','{"text":"Failure to fire the rocket before landing will waste the ultimate."}']},HideFlags:4,Unbreakable:1b,CustomModelData:193,chrysanthemumshell:1b,ultimateitem:1b} 1
 
 scoreboard players reset @a[scores={chrysanthemumShellTimer=1600..}] chrysanthemumShellTimer
 
@@ -2767,7 +2749,7 @@ execute as @a[tag=chrysanthemumLaunch,predicate=commands:effects/slow_falling,nb
 
 execute as @a[scores={Ultimate=30},tag=!notAlive,predicate=!commands:inventory/pop_rocks] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s popRocksTimer 1
 
-give @a[scores={popRocksTimer=2000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Pop Rocks","color":"#FFD940","italic":false}',Lore:['{"text":"Right-Click to use","italic":false}','{"text":" "}','{"text":"Buffs your melee attacks, causing them to pop when striking a burning enemy."}','{"text":"The pop deals damage to enemies nearby."}','{"text":"Using the ultimate also resets the cooldown of blazing speed."}','{"text":"Lasts 10 seconds."}']},HideFlags:4,Unbreakable:1b,CustomModelData:194,poprocks:1b} 1
+give @a[scores={popRocksTimer=2000..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Pop Rocks","color":"#FFD940","italic":false}',Lore:['{"text":"Right-Click to use","italic":false}','{"text":" "}','{"text":"Buffs your melee attacks, causing them to pop when striking a burning enemy."}','{"text":"The pop deals damage to enemies nearby."}','{"text":"Using the ultimate also resets the cooldown of blazing speed."}','{"text":"Lasts 10 seconds."}']},HideFlags:4,Unbreakable:1b,CustomModelData:194,poprocks:1b,ultimateitem:1b} 1
 
 scoreboard players reset @a[scores={popRocksTimer=2000..}] popRocksTimer
 
@@ -2839,9 +2821,31 @@ kill @e[type=item,scores={ItemKill=1,Timer=1..},tag=delete]
 
 scoreboard players set @a[scores={died=1..}] died 0
 
-#Other Clears
+#Advancement Clears
 
 advancement revoke @a only commands:warrior_challenge_damage
 
 advancement revoke @a only commands:warrior_challenge_kill
+
+advancement revoke @a only commands:sparkler_damage
+
+advancement revoke @a only commands:bang_snap_damage
+
+advancement revoke @a only commands:cinder_bomb_damage
+
+advancement revoke @a only commands:pyromania_damage
+
+advancement revoke @a only commands:chrysanthemum_shell_damage
+
+advancement revoke @a only commands:pop_rocks_damage
+
+advancement revoke @a only commands:lightning_damage
+
+advancement revoke @a only commands:lava_damage
+
+advancement revoke @a only commands:drowning_damage
+
+advancement revoke @a only commands:cactus_damage
+
+advancement revoke @a only commands:fire_damage
 
