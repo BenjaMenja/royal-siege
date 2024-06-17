@@ -2,7 +2,7 @@
     "condition": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-      "nbt": "{Inventory:[{tag:{pyromania:1b}}]}"
+      "nbt": "{Inventory:[{components:{\"minecraft:custom_data\":{pyromania:1b}}}]}"
     }
   }
   

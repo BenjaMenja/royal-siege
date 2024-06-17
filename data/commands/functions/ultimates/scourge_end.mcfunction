@@ -1,6 +1,6 @@
 weather clear 1000000
 
-clear @s trident{mythtrident:1b}
+clear @s trident[custom_data~{mythtrident:1b}]
 
 tag @s remove scourgeActive
 

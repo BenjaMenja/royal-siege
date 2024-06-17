@@ -8,8 +8,40 @@
           "name": "minecraft:lapis_lazuli",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:7,display:{Name:'{\"text\":\"Strength Stone\"}',Lore:['{\"text\":\"Increases attack damage when in your offhand.\"}']},HideFlags:1,Enchantments:[{id:\"minecraft:luck_of_the_sea\",lvl:1s}],AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:0.35,Operation:1,UUID:[I;-6419422,-13902225,37378,91204156],Slot:\"offhand\"}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Strength Stone",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Increases attack damage when in your offhand."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 7,
+                "minecraft:enchantment_glint_override": true
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "generic.attack_damage",
+                  "amount": 0.35,
+                  "operation": "add_multiplied_base",
+                  "id": "add8793f-8518-4020-9970-0ffc85f94654",
+                  "slot": "offhand"
+                }
+              ]
             }
           ]
         }

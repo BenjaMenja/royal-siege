@@ -1,0 +1,60 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Smart Drone",
+                  "color": "gray",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Right-Click to use",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "text": "Constructs a drone that sits above your head."
+                  },
+                  {
+                    "text": "The drone fires lasers at the closest enemy on a 4s cooldown."
+                  },
+                  {
+                    "text": "Using this item while drones are currently active will spawn more drones."
+                  },
+                  {
+                    "text": "Drones are destroyed when the astronaut takes sufficient damage."
+                  }
+                ],
+                "mode": "insert"
+              },
+              {
+                "function": "minecraft:set_custom_data",
+                "tag": "{ultimateitem:1b,smartdrone:1b}"
+              },
+              {
+                "function": "minecraft:set_components",
+                "components": {
+                  "minecraft:custom_model_data": 178
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -6,6 +6,6 @@ execute if entity @s[team=Red] run tellraw @a [{"selector":"@s"},{"text":" is in
 
 execute if entity @s[team=Blue] run tellraw @a [{"selector":"@s"},{"text":" is inverting Red team's gravity!"}]
 
-clear @s carrot_on_a_stick{gravityconsume:1b} 1
+clear @s carrot_on_a_stick[custom_data~{gravityconsume:1b}] 1
 
 scoreboard players set @s gravityTimer 500

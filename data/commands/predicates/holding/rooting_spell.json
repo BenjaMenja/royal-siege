@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{rootingspell:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{rootingspell:1b}"
+        }
       }
     }
   }

@@ -1,0 +1,49 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:leather_chestplate",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:enchantments": {
+                  "levels": {
+                    "minecraft:blast_protection": 1,
+                    "minecraft:projectile_protection": 1,
+                    "minecraft:protection": 2
+                  }
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "uuid": [
+                      -871638191,
+                      -115487492,
+                      -668900400,
+                      -21478903
+                    ],
+                    "type": "generic.armor",
+                    "name": "generic.armor",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "chest"
+                  }
+                ],
+                "minecraft:dyed_color": 1644825
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

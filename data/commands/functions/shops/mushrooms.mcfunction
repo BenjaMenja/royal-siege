@@ -1,10 +1,7 @@
-tag @s add purchase
+loot give @s[scores={Money=400..},team=Red] loot commands:shop_items/poisonous_mushrooms_red
 
-give @s[scores={Money=400..},tag=purchase,team=Red] bat_spawn_egg{HideFlags:16,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Poisonous Mushroom","color":"#4F0FFF","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Creates a poison cloud when placed."}','{"text":"The cloud grows in size if a player stands in it."}']},CustomModelData:33,poisonousmushroom:1b,EntityTag:{Tags:["redmushroom","mushroom"]}} 2
-
-give @s[scores={Money=400..},tag=purchase,team=Blue] bat_spawn_egg{HideFlags:16,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Poisonous Mushroom","color":"#4F0FFF","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Creates a poison cloud when placed."}','{"text":"The cloud grows in size if a player stands in it."}']},CustomModelData:33,poisonousmushroom:1b,EntityTag:{Tags:["bluemushroom","mushroom"]}} 2
+loot give @s[scores={Money=400..},team=Blue] loot commands:shop_items/poisonous_mushrooms_blue
 
 scoreboard players remove @s[scores={Money=400..}] Money 400
 
-tag @s remove purchase
 

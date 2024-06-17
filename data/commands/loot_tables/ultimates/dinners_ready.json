@@ -1,0 +1,54 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Dinner's Ready!",
+                  "color": "yellow",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Right-Click to use",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "text": "Creates a circle of food around the chef."
+                  },
+                  {
+                    "text": "Nearby teammates receive a wide variety of offensive buffs."
+                  }
+                ],
+                "mode": "insert"
+              },
+              {
+                "function": "minecraft:set_custom_data",
+                "tag": "{ultimateitem:1b,dinnersready:1b}"
+              },
+              {
+                "function": "minecraft:set_components",
+                "components": {
+                  "minecraft:custom_model_data": 104
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

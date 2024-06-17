@@ -8,8 +8,55 @@
           "name": "minecraft:potion",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:56,display:{Name:'{\"text\":\"Hard Ale\"}',Lore:['{\"text\":\"Grants you a lot of melee buffs,\"}','{\"text\":\"but makes you quite tipsy.\"}']},HideFlags:32,custom_potion_effects:[{id:\"minecraft:slowness\",amplifier:0b,duration:300},{id:\"minecraft:strength\",amplifier:0b,duration:300},{id:\"minecraft:instant_health\",amplifier:0b,duration:1},{id:\"minecraft:nausea\",amplifier:0b,duration:300}],CustomPotionColor:16756257}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Hard Ale"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Grants you a lot of melee buffs,"
+                },
+                {
+                  "text": "but makes you quite tipsy."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 56,
+                "minecraft:potion_contents": {
+                  "custom_color": 16756257,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:strength",
+                      "amplifier": 0,
+                      "duration": 300,
+                      "show_particles": false
+                    },
+                    {
+                      "id": "minecraft:slowness",
+                      "amplifier": 0,
+                      "duration": 300,
+                      "show_particles": false
+                    },
+                    {
+                      "id": "minecraft:instant_health",
+                      "amplifier": 0,
+                      "duration": 1
+                    },
+                    {
+                      "id": "minecraft:nausea",
+                      "amplifier": 0,
+                      "duration": 300
+                    }
+                  ]
+                }
+              }
             }
           ]
         }

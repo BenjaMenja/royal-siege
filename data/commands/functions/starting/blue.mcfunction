@@ -2,221 +2,217 @@ scoreboard players add @a[distance=..5,team=Blue] BlueKit 1
 
 effect give @a[team=Blue,distance=..8,scores={BlueKit=198}] resistance 5 3
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=1,BlueKit=198}] armor.head with player_head{Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:projectile_protection",lvl:2s},{id:"minecraft:blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2,Operation:0,UUID:[I;1329132,-1249841,-1249281910,90],Slot:"head"}],SkullOwner:{id:[I;-1119675796,-506206,-2001385496,-61856676],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2ZjYWNjYjRkM2U2MWI1OWEwM2U3ZmVlMDk4YTdjNmE0YTYzZGI5YjI5M2E4YmEyYThkMmFlMWY1OGZjZiJ9fX0="}]}}} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=1,BlueKit=198}] armor.head loot commands:heads/warrior
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=1,BlueKit=198}] armor.chest with iron_chestplate{Unbreakable:1,Enchantments:[{id:"projectile_protection",lvl:2},{id:"protection",lvl:1},{id:"blast_protection",lvl:2s}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=1,BlueKit=198}] armor.chest loot commands:main_armor/warrior_chestplate
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=1,BlueKit=198}] armor.legs with iron_leggings{Unbreakable:1,Enchantments:[{id:"projectile_protection",lvl:2},{id:"protection",lvl:1},{id:"blast_protection",lvl:1s}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=1,BlueKit=198}] armor.legs loot commands:main_armor/warrior_leggings
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=1,BlueKit=198}] armor.feet with iron_boots{Unbreakable:1,Enchantments:[{id:"projectile_protection",lvl:2},{id:"protection",lvl:1},{id:"minecraft:blast_protection",lvl:1s}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=1,BlueKit=198}] armor.feet loot commands:main_armor/warrior_boots
 
-give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=1,BlueKit=198}] minecraft:iron_axe{CustomModelData:153,display:{Name:'{"text":"Warrior\'s Battleaxe","italic":false}',Lore:['{"text":"Nothing fancy, but it gets the job done."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 9.5 Attack Damage","color":"dark_green","italic":false}','{"text":" 0.9 Attack Speed","color":"dark_green","italic":false}']},HideFlags:2,Unbreakable:1b,warrioraxe:1b,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:9.5,Operation:0,UUID:[I;1641905257,66145886,-1588703272,-1985932049],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-3.1,Operation:0,UUID:[I;-1679768215,-1181463334,-1904452306,-759715851],Slot:"mainhand"}]} 1
+loot give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=1,BlueKit=198}] loot commands:main_weapons/warrior_battleaxe
 
-give @a[distance=..8,team=Blue,scores={Kit=1,BlueKit=198}] carrot_on_a_stick{CustomModelData:6,display:{Name:'{"text":"Seismic Slam"}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Gives you strong jump boost for a very brief amount of time. "}','{"text":"It is advised to jump as soon as you use the item."}','{"text":"When you land, all nearby enemies are lifted into the air and will take fall damage."}']},Unbreakable:1b,slam:1b,Enchantments:[{}]} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=1,BlueKit=198}] loot commands:main_abilities/seismic_slam
 
-give @a[distance=..8,team=Blue,scores={Kit=1,BlueKit=198}] shield{Unbreakable:1} 1
+give @a[distance=..8,team=Blue,scores={Kit=1,BlueKit=198}] minecraft:shield[unbreakable={}] 1
 
 give @a[distance=..8,team=Blue,scores={Kit=1,BlueKit=198}] golden_apple 2
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=2,BlueKit=198}] armor.head with player_head{SkullOwner:{id:[I;103604342,-1386918995,-1757972842,74746554],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmY3MzMyNjk2MTRmZThhOWFlODlmNWM1ODI4NmFhNTNiOWUzODNmYzRkYzU3ZTM3ZWNiZmE1ZTkzYSJ9fX0="}]}}} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=2,BlueKit=198}] armor.head loot commands:heads/ninja
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=2,BlueKit=198}] armor.chest with leather_chestplate{display:{color:0},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:5s},{id:"minecraft:projectile_protection",lvl:3s},{id:"minecraft:blast_protection",lvl:4s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:9,Operation:0,UUID:[I;82020384,34567839,-9182949,-888263788],Slot:"chest"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.2,Operation:1,UUID:[I;82919201,-812,-761393,999202],Slot:"chest"}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=2,BlueKit=198}] armor.chest loot commands:main_armor/ninja_chestplate
 
-give @p[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=2,BlueKit=198}] minecraft:iron_sword{CustomModelData:155,display:{Name:'{"text":"Ninjato","italic":false}',Lore:['{"text":"Sturdy and razor sharp, made the traditional way in Japan."}','{"text":"You don’t want to know how many shifts at Taco Bell it took to get this."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 7 Attack Damage","color":"dark_green","italic":false}','{"text":" 2 Attack Speed","color":"dark_green","italic":false}']},HideFlags:2,Unbreakable:1b,lightdagger:1b,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:7,Operation:0,UUID:[I;1504351878,-559725785,-1475738525,-971943002],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2,Operation:0,UUID:[I;-2094652832,-1588574690,-2010162351,2028193702],Slot:"mainhand"}]} 1
+loot give @p[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=2,BlueKit=198}] loot commands:main_weapons/ninjato
 
-give @p[distance=..8,team=Blue,scores={Kit=2,BlueKit=198}] carrot_on_a_stick{CustomModelData:9,display:{Name:'{"text":"Dash","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Dash forward up to 5 blocks, creating an explosion wherever you land."}','{"text":"You also receive brief speed and damage resistance."}']},HideFlags:1,Unbreakable:1b,Enchantments:[{}],ninjadash:1b} 1
+loot give @p[distance=..8,team=Blue,scores={Kit=2,BlueKit=198}] loot commands:main_abilities/dash
 
-give @p[distance=..8,team=Blue,scores={Kit=2,BlueKit=198}] minecraft:trident{display:{Name:'{"text":"Throwing Blade"}',Lore:['{"text":"A high damage ranged weapon that comes back to you."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 5 Attack Damage","color":"dark_green","italic":false}','{"text":" 2 Attack Speed","color":"dark_green","italic":false}']},HideFlags:3,Unbreakable:1b,throwingblade:1b,Enchantments:[{id:"minecraft:loyalty",lvl:3s},{id:"minecraft:impaling",lvl:3s}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:5,Operation:0,UUID:[I;997616110,898125312,-1380512706,-415462830],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2,Operation:0,UUID:[I;-827820228,836979124,-1575813943,-1567089025],Slot:"mainhand"}]} 1
+loot give @p[distance=..8,team=Blue,scores={Kit=2,BlueKit=198}] loot commands:main_abilities/throwing_blade
 
-scoreboard players set @p[distance=..8,team=Blue,scores={Kit=2,RedKit=198}] dashcharge 361
+scoreboard players set @p[distance=..8,team=Blue,scores={Kit=2,BlueKit=198}] dashcharge 361
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=3,BlueKit=198}] armor.head with player_head{Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:2s},{id:"blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2,Operation:0,UUID:[I;0,787806,0,9763],Slot:"head"}],SkullOwner:{id:[I;-369259414,-168932698,-1520939587,824470675],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q0NzMwYWQ1MmE5Yjk5Nzk1MGU2MzdlNTk1NDJmNjY2NDFhYTJmY2Q5OWFmM2E5Mzc3MzZmMDQyNjQyNjg4In19fQ=="}]}}} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=3,BlueKit=198}] armor.head loot commands:heads/guardian
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=3,BlueKit=198}] armor.chest with iron_chestplate{Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;0,620982,0,542167],Slot:"chest"}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=3,BlueKit=198}] armor.chest loot commands:main_armor/guardian_chestplate
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=3,BlueKit=198}] armor.legs with iron_leggings{Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:5,Operation:0,UUID:[I;0,62092,0,542167],Slot:"legs"}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=3,BlueKit=198}] armor.legs loot commands:main_armor/guardian_leggings
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=3,BlueKit=198}] armor.feet with iron_boots{Unbreakable:1,Enchantments:[{id:"protection",lvl:1},{id:"blast_protection",lvl:2}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=3,BlueKit=198}] armor.feet loot commands:main_armor/guardian_boots
 
-give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=3,BlueKit=198}] minecraft:iron_sword{CustomModelData:154,display:{Name:'{"text":"Guardian\'s Blade","color":"dark_gray","italic":false}',Lore:['{"text":"The blade is so wide that the shield almost feels redundant."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 7 Attack Damage","color":"dark_green","italic":false}','{"text":" 1.1 Attack Speed","color":"dark_green","italic":false}']},HideFlags:2,Unbreakable:1b,guardianblade:1b,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:7,Operation:0,UUID:[I;-375892774,1582252271,-1617841036,-972898597],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.9,Operation:0,UUID:[I;1034345602,-190951744,-1994650085,-1712999519],Slot:"mainhand"}]} 1
+loot give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=3,BlueKit=198}] loot commands:main_weapons/guardian_blade
 
-give @a[distance=..8,team=Blue,scores={Kit=3,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Defensive Spell","color":"#00FFBB","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Gives nearby teammates absorption and resistance."}']},Unbreakable:1b,CustomModelData:19,DefensiveSpell:1b} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=3,BlueKit=198}] loot commands:main_abilities/defensive_spell
 
-give @a[distance=..8,team=Blue,scores={Kit=3,BlueKit=198}] shield{Unbreakable:1b} 1
+give @a[distance=..8,team=Blue,scores={Kit=3,BlueKit=198}] minecraft:shield[unbreakable={}] 1
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] armor.head with player_head{Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:fire_protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:1s},{id:"blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2,Operation:0,UUID:[I;0,787806,0,976389],Slot:"head"}],SkullOwner:{id:[I;330708613,-1204793457,-1642454402,-2045380575],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzZmMDQ4NTQ1M2QzYTkwZjM1NDMyMWU4ZjM4MmJlZjEwNmJmNTA2NDI0ZjcwYzA0YTIwN2Y4MmJkYjI4NTZiOSJ9fX0="}]}}} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] armor.head loot commands:heads/angel 
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] armor.chest with leather_chestplate{Unbreakable:1,Enchantments:[{id:"protection",lvl:2s},{id:"fire_protection",lvl:2s},{id:"blast_protection",lvl:1s}],display:{color:65518}} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] armor.chest loot commands:main_armor/angel_chestplate
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] armor.legs with leather_leggings{Unbreakable:1,Enchantments:[{id:"protection",lvl:2s},{id:"fire_protection",lvl:2s},{id:"blast_protection",lvl:1s}],display:{color:65518}} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] armor.legs loot commands:main_armor/angel_leggings
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] armor.feet with leather_boots{Unbreakable:1,Enchantments:[{id:"protection",lvl:2s},{id:"fire_protection",lvl:2s},{id:"projectile_protection",lvl:1s},{id:"blast_protection",lvl:1s}],display:{color:65518}} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] armor.feet loot commands:main_armor/angel_boots
 
-give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=4,BlueKit=198}] carrot_on_a_stick{display:{Name:'{"text":"Angelic Staff","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 6 Attack Damage","color":"dark_green","italic":false}','{"text":" 1.4 Attack Speed","color":"dark_green","italic":false}','{"text":"+2 Max Health","color":"blue","italic":false}','{"text":" "}','{"text":"It looks like a battle axe from afar, but the blades"}','{"text":"are actually decorative wings. What’s up with that?"}','{"text":"Right-clicking fires a healing beam that heals 4 HP if it hits a teammate."}','{"text":"Has a maximum range of 20 blocks."}']},HideFlags:6,CustomModelData:120,angelicstaff:1b,regenstaff:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.max_health",Name:"generic.max_health",Amount:2,Operation:0,UUID:[I;1736054571,-2099229916,-2077417038,-696108436],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:6,Operation:0,UUID:[I;1388389409,-845265271,-1356030255,-1106195676],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.6,Operation:0,UUID:[I;1811776318,-264617826,-1111247713,-1359396940],Slot:"mainhand"}]} 1
+loot give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=4,BlueKit=198}] loot commands:main_weapons/angelic_staff
 
-give @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Healing Spell","color":"#FF08FF","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Gives nearby teammates instant health and regeneration."}']},CustomModelData:18,HealingSpell:1b} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] loot commands:main_abilities/healing_spell
 
-give @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Defensive Spell","color":"#00FFBB","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Gives nearby teammates absorption and resistance."}']},Unbreakable:1b,CustomModelData:19,DefensiveSpell:1b} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] loot commands:main_abilities/defensive_spell
 
-give @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Assault Spell","color":"#820000","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Gives nearby teammates speed and strength."}']},CustomModelData:20,AssaultSpell:1b} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=4,BlueKit=198}] loot commands:main_abilities/assault_spell
 
-give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=5,BlueKit=198}] bow{CustomModelData:158,Unbreakable:1,display:{Name:'{"text":"Archer\'s Bow","italic":false}',Lore:['{"text":"It’s a little less powerful than a standard Olympic bow,"}','{"text":"but a lot less bulky and far more maneuverable."}']},Enchantments:[{id:"sharpness",lvl:4},{id:"power",lvl:3},{id:"punch",lvl:1},{id:"infinity",lvl:1}],archerbow:1b} 1
+loot give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=5,BlueKit=198}] loot commands:main_weapons/archers_bow
 
-give @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] wooden_axe{CustomModelData:11,HideFlags:1,Enchantments:[{id:"unbreaking",lvl:1},{id:"minecraft:efficiency",lvl:5s}],Unbreakable:1,display:{Name:'{"text":"Shield Buster","italic":false}'}} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] loot commands:main_weapons/shield_buster
 
-give @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Glowing Effect","color":"yellow","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Make all enemies glow for a short time."}']},CustomModelData:13,glowingeffect:1b} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] loot commands:main_abilities/glowing_effect
 
-give @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] arrow{CustomModelData:12,bottomlessquiver:1b,display:{Name:'{"text":"Bottomless Quiver","italic":false}'}} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] loot commands:main_weapons/bottomless_quiver
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] armor.head with player_head{Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2,Operation:0,UUID:[I;77729293,10,82894,-192736449],Slot:"head"}],SkullOwner:{id:[I;1506350569,-2016000832,-1167242250,549915695],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTkzZWU1YmIwYzdmYWNjYTBmM2RmZTA5NDMwYzViODRhOTBlNjU4OGQwYTEwOTlkYTg1YjZlYWViODk1OGY5YSJ9fX0="}]}}} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] armor.head loot commands:heads/archer 
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] armor.chest with chainmail_chestplate{Unbreakable:1,Enchantments:[{id:"projectile_protection",lvl:1},{id:"protection",lvl:1},{id:"blast_protection",lvl:1s}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] armor.chest loot commands:main_armor/archer_chestplate
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] armor.legs with chainmail_leggings{Unbreakable:1,Enchantments:[{id:"projectile_protection",lvl:1},{id:"protection",lvl:1},{id:"blast_protection",lvl:1s}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] armor.legs loot commands:main_armor/archer_leggings
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] armor.feet with chainmail_boots{Unbreakable:1,Enchantments:[{id:"projectile_protection",lvl:2},{id:"protection",lvl:2},{id:"blast_protection",lvl:1s}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=5,BlueKit=198}] armor.feet loot commands:main_armor/archer_boots
 
-give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=6,BlueKit=198}] minecraft:wooden_sword{CustomModelData:157,display:{Name:'{"text":"Worn Out Staff","italic":false}',Lore:['{"text":"It ran out of magical energy long ago, but it’s decently heavy,"}','{"text":"so you might as well hit something with it."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 6 Attack Damage","color":"dark_green","italic":false}','{"text":" 1.6 Attack Speed","color":"dark_green","italic":false}']},HideFlags:2,Unbreakable:1b,wizardsword:1b,Enchantments:[{id:"minecraft:knockback",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:6,Operation:0,UUID:[I;-1611929717,-901955548,-1718480892,-874245086],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.4,Operation:0,UUID:[I;-496954904,661209273,-1127692879,-992232192],Slot:"mainhand"}]} 1
+loot give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=6,BlueKit=198}] loot commands:main_weapons/worn_out_staff
 
-give @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] carrot_on_a_stick{CustomModelData:2,display:{Name:'{"text":"Lightning Staff","color":"aqua","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Shoots a beam that strikes lightning"}','{"text":"onto enemy players and blocks."}','{"text":"Gains a charge every 6 seconds, and "}','{"text":"can hold up to 8 charges."}']},HideFlags:1,Unbreakable:1b,lightningstaff:1b,Enchantments:[{}]} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] loot commands:main_abilities/lightning_staff
 
-give @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] carrot_on_a_stick{CustomModelData:1,display:{Name:'{"text":"Fireball Launcher","color":"red","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Contains an unlimited "}','{"text":"supply of fireballs to launch."}','{"text":"Can be used every 8 seconds."}']},HideFlags:1,Unbreakable:1b,Enchantments:[{}],fireballlauncher:1b} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] loot commands:main_abilities/fireball_launcher
 
-give @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] carrot_on_a_stick{CustomModelData:3,display:{Name:'{"text":"Eject Button","color":"green"}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Ejects you in the direction you\'re looking in."}','{"text":"You also receive brief damage resistance when using it."}','{"text":"You are required to jump before using it."}']},HideFlags:1,Unbreakable:1b,Enchantments:[{}],ejectbutton:1b} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] loot commands:main_abilities/eject_button
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] armor.head with player_head{SkullOwner:{id:[I;1816315479,-463912691,-1730839974,1499271469],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTcxNThlNTc2NzFiZWNlNTAxYmRlZjU2MzExYzBlYTYzZTE5NDYxYTg0YzViZDJiZjk0N2RhYjg0YTI0ZWVjZSJ9fX0="}]}}} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] armor.head loot commands:heads/wizard
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] armor.chest with golden_chestplate{Unbreakable:1,Enchantments:[{id:"protection",lvl:2},{id:"fire_protection",lvl:3},{id:"blast_protection",lvl:2}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] armor.chest loot commands:main_armor/wizard_chestplate
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] armor.legs with golden_leggings{Unbreakable:1,Enchantments:[{id:"protection",lvl:2},{id:"fire_protection",lvl:3},{id:"blast_protection",lvl:2}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] armor.legs loot commands:main_armor/wizard_leggings
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] armor.feet with golden_boots{Unbreakable:1,Enchantments:[{id:"protection",lvl:2},{id:"fire_protection",lvl:3},{id:"blast_protection",lvl:1},{id:"minecraft:feather_falling",lvl:3s}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=6,BlueKit=198}] armor.feet loot commands:main_armor/wizard_boots
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] armor.head with player_head{Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:fire_protection",lvl:3s},{id:"minecraft:blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2,Operation:0,UUID:[I;8332222,-10202020,-183647595,-7292],Slot:"head"}],SkullOwner:{id:[I;-1942596583,-1935980410,-1214897882,507028595],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2FlODIzZTFhYzc0YmNlMGZkYzM2MWYyZWM1NDk3ZDg4NDU4ZmZlZTRhN2VjMzcwM2JlMzY5Zjg2ZTI4Nzc4YiJ9fX0="}]}}} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] armor.head loot commands:heads/pirate
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] armor.chest with golden_chestplate{Unbreakable:1b,Enchantments:[{id:"protection",lvl:2},{id:"fire_protection",lvl:3},{id:"blast_protection",lvl:1},{id:"minecraft:projectile_protection",lvl:1s}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] armor.chest loot commands:main_armor/pirate_chestplate
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] armor.legs with golden_leggings{Unbreakable:1b,Enchantments:[{id:"protection",lvl:2},{id:"fire_protection",lvl:3},{id:"blast_protection",lvl:1}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] armor.legs loot commands:main_armor/pirate_leggings
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] armor.feet with golden_boots{Unbreakable:1b,Enchantments:[{id:"protection",lvl:1},{id:"fire_protection",lvl:3},{id:"blast_protection",lvl:2}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] armor.feet loot commands:main_armor/pirate_boots
 
-give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=7,BlueKit=198}] minecraft:golden_sword{CustomModelData:156,display:{Name:'{"text":"Golden Cutlass","italic":false}',Lore:['{"text":"A blade of solid gold: a horribly inefficient and expensive weapon"}','{"text":"that only a pirate of status could afford."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 7 Attack Damage","color":"dark_green","italic":false}','{"text":" 1.6 Attack Speed","color":"dark_green","italic":false}']},HideFlags:2,Unbreakable:1b,goldencutlass:1b,Enchantments:[{id:"minecraft:sweeping",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:7,Operation:0,UUID:[I;1477769489,-486977938,-1348473093,353364157],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.4,Operation:0,UUID:[I;-457325784,700140189,-1812520238,-256406706],Slot:"mainhand"}]} 1
+loot give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=7,BlueKit=198}] loot commands:main_weapons/golden_cutlass
 
-give @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Blunderbuss","color":"yellow","italic":false}',Lore:['{"text":"Shoots a blast of 8 arrows in front of you, doing lots of damage."}','{"text":"Can be used every 3 seconds."}']},Unbreakable:1b,CustomModelData:118,blunderbuss:1b} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] loot commands:main_abilities/blunderbuss
 
-give @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Lava Trap","color":"red","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Use to temporarily open up a lava trap in your castle!"}']},CustomModelData:15,lavatrap:1b} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] loot commands:main_abilities/lava_trap
 
-give @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] gold_ingot{CustomModelData:148,display:{Name:'{"text":"Fake Money","italic":false}',Lore:['{"text":"Throw onto the ground and watch an unsuspecting enemy explode!"}']},HideFlags:1,Enchantments:[{}],fakemoneyblue:1b,fakemoney:1b} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=7,BlueKit=198}] loot commands:main_abilities/fake_money_blue
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=8,BlueKit=198}] armor.head with player_head{Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2,Operation:0,UUID:[I;13342,6354595,867294094,-818373849],Slot:"head"}],SkullOwner:{id:[I;922351862,-2026683839,-1211501750,10060195],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWY1NzE5MmIxOTRjNjU4YWFhODg4MTY4NDhjYmNlN2M3NDk0NjZhNzkyYjhhN2UxZDNmYWZhNDFjNDRmMzQxMiJ9fX0="}]}}} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=8,BlueKit=198}] armor.head loot commands:heads/ent
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=8,BlueKit=198}] armor.chest with leather_chestplate{display:{Name:'"Wooden Chestplate"',color:9127187},Unbreakable:1b,Enchantments:[{id:"protection",lvl:2},{id:"thorns",lvl:4},{id:"minecraft:projectile_protection",lvl:1s},{id:"minecraft:blast_protection",lvl:1s}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=8,BlueKit=198}] armor.chest loot commands:main_armor/ent_chestplate
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=8,BlueKit=198}] armor.legs with leather_leggings{display:{Name:'"Wooden Leggings"',color:9127187},Unbreakable:1b,Enchantments:[{id:"protection",lvl:1},{id:"minecraft:projectile_protection",lvl:2s},{id:"minecraft:blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:'"generic.armor"',Amount:2,Operation:0,UUID:[I;42618293,-4567892,-22771811,92],Slot:"legs"}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=8,BlueKit=198}] armor.legs loot commands:main_armor/ent_leggings
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=8,BlueKit=198}] armor.feet with leather_boots{display:{Name:'"Wooden Boots"',color:9127187},Unbreakable:1b,Enchantments:[{id:"protection",lvl:2},{id:"blast_protection",lvl:1},{id:"minecraft:projectile_protection",lvl:2s}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=8,BlueKit=198}] armor.feet loot commands:main_armor/ent_boots
 
-give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=8,BlueKit=198}] minecraft:iron_axe{CustomModelData:164,display:{Name:'{"text":"Lumberjaxe","color":"#1A5C06","italic":false}',Lore:['{"text":"The name doesn’t make much sense, but damn, if it isn’t a good pun."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 10 Attack Damage","color":"dark_green","italic":false}','{"text":" 0.7 Attack Speed","color":"dark_green","italic":false}']},HideFlags:2,Unbreakable:1b,lumberjaxe:1b,Enchantments:[{}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:10,Operation:0,UUID:[I;871448782,907100199,-1496351264,-751396990],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-3.3,Operation:0,UUID:[I;-1440058921,-1361820466,-1680385539,537147522],Slot:"mainhand"}]} 1
+loot give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=8,BlueKit=198}] loot commands:main_weapons/lumberjaxe
 
-give @a[distance=..8,team=Blue,scores={Kit=8,BlueKit=198}] carrot_on_a_stick{display:{Name:'{"text":"Blossom","color":"#22FF00","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Gives a burst of energy and healing to nearby allies."}']},CustomModelData:31,blossom:1b} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=8,BlueKit=198}] loot commands:main_abilities/blossom
 
-give @a[distance=..8,team=Blue,scores={Kit=8,BlueKit=198}] carrot_on_a_stick{CustomModelData:32,display:{Name:'{"text":"Rooting Spell","color":"#228A12","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Right click to shoot a rooting beam."}','{"text":"Successful hits will root an enemy,"}','{"text":"freezing them in place for a short time."}','{"text":"Has a maximum range of 10 blocks."}']},Unbreakable:1b,rootingspellblue:1b,rootingspell:1b,Enchantments:[{}]} 1
+loot give @a[distance=..8,team=Blue,scores={Kit=8,BlueKit=198}] loot commands:main_abilities/rooting_spell_blue
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=9,BlueKit=198}] armor.head with minecraft:player_head{Enchantments:[{id:"minecraft:fire_protection",lvl:2s},{id:"minecraft:blast_protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2,Operation:0,UUID:[I;-1594009242,-1524611526,-1599119141,1848200418],Slot:"head"}],SkullOwner:{id:[I;-1507039303,-968802075,-188404,-75244524],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzY4ZWExM2ZiOGYzNGU0NDdkYmFiZGNjYzhmNzMzODU1MGQ4MTk1NjEzOTQ5NWFkZTA1MWQ0ZjM4ZGQ2NjJlIn19fQ=="}]}}} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=9,BlueKit=198}] armor.head loot commands:heads/poseidon
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=9,BlueKit=198}] armor.chest with minecraft:leather_chestplate{display:{color:2818303},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:fire_protection",lvl:2s},{id:"minecraft:blast_protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;1906673651,-1350547219,-1865990,814903537],Slot:"chest"}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=9,BlueKit=198}] armor.chest loot commands:main_armor/poseidon_chestplate
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=9,BlueKit=198}] armor.legs with minecraft:leather_leggings{display:{color:2818303},Unbreakable:1b,Enchantments:[{id:"minecraft:fire_protection",lvl:2s},{id:"minecraft:blast_protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:5,Operation:0,UUID:[I;16673651,-135047219,-1136865990,814903537],Slot:"legs"}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=9,BlueKit=198}] armor.legs loot commands:main_armor/poseidon_leggings
 
-item replace entity @a[distance=..8,team=Blue,scores={Kit=9,BlueKit=198}] armor.feet with minecraft:leather_boots{display:{color:2818303},Unbreakable:1b,Enchantments:[{id:"minecraft:fire_protection",lvl:2s},{id:"minecraft:blast_protection",lvl:1s},{id:"minecraft:projectile_protection",lvl:1s},{id:"minecraft:feather_falling",lvl:10s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2,Operation:0,UUID:[I;19066651,-135054219,-113686590,81493537],Slot:"feet"}]} 1
+loot replace entity @a[distance=..8,team=Blue,scores={Kit=9,BlueKit=198}] armor.feet loot commands:main_armor/poseidon_boots
 
-give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=9,BlueKit=198}] minecraft:trident{display:{Name:'{"text":"Poseidon\'s Trident","color":"#00B5AF","italic":false}',Lore:['{"text":"An oldie but a goodie."}','{"text":"Its tines are still as sharp as they were countless millennia prior."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 8 Attack Damage","color":"dark_green","italic":false}','{"text":" 1.6 Attack Speed","color":"dark_green","italic":false}']},HideFlags:2,Unbreakable:1b,poseidontrident:1b,Enchantments:[{id:"minecraft:bane_of_arthropods",lvl:3s},{id:"minecraft:impaling",lvl:5s}],AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.4,Operation:0,UUID:[I;1018290089,-1762506351,-1458388907,-179464298],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:8,Operation:0,UUID:[I;111453944,-1834006513,-1594745056,-1194402031],Slot:"mainhand"}]} 1
+loot give @a[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=9,BlueKit=198}] loot commands:main_weapons/poseidon_trident
 
-give @p[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=10,BlueKit=198}] carrot_on_a_stick{CustomModelData:16,display:{Name:'{"text":"Gunblade - Burst","color":"red","italic":false}',Lore:['{"text":"A gun with a blade! It doesn’t get much more dangerous than that."}','{"text":"It shoots a three round burst every 1s. You can switch"}','{"text":"between special bullets by shooting while crouching."}','{"text":"Cannot be fired if you have no ammo in your inventory."}','{"text":"To reload, simply drop the item."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 7.5 Attack Damage","color":"dark_green","italic":false}','{"text":" 1 Attack Speed","color":"dark_green","italic":false}']},HideFlags:2,Unbreakable:1b,gunblade:1b,switch:1b,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-3.0,Operation:0,UUID:[I;-161766760,-1067038840,-1503270007,212943800],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:7.5,Operation:0,UUID:[I;1725832463,-1623243755,-1879494581,-1383118150],Slot:"mainhand"}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] armor.head loot commands:heads/robot
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] armor.head with player_head{Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:projectile_protection",lvl:1s},{id:"blast_protection",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2,Operation:0,UUID:[I;-312894981,12910313,421124214,920],Slot:"head"}],SkullOwner:{id:[I;1875422177,577324483,-1208308071,1214094985],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTNmMzA4MjNlOTk3NGNhNWFhYTJjMDE5MzA4Yjg0MjQ5ODQ1ZjBiOWFjYTZhYTExMTkxY2UyN2RhYzcwZTk2OCJ9fX0="}]}}} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] armor.chest loot commands:main_armor/robot_chestplate
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] armor.chest with iron_chestplate{Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:projectile_protection",lvl:1s},{id:"minecraft:blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;2212,930112,99123764,4538293],Slot:"chest"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.1,Operation:1,UUID:[I;99999999,-2839404,-12873794,-12],Slot:"chest"}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] armor.legs loot commands:main_armor/robot_leggings
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] armor.legs with iron_leggings{Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:projectile_protection",lvl:1s},{id:"minecraft:blast_protection",lvl:1s}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] armor.feet loot commands:main_armor/robot_boots
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] armor.feet with iron_boots{Unbreakable:1b,nokb:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:feather_falling",lvl:2s},{id:"minecraft:projectile_protection",lvl:1s},{id:"minecraft:blast_protection",lvl:1s}]} 1
+loot give @p[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=10,BlueKit=198}] loot commands:main_weapons/gunblade_burst
 
-give @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'[{"text":"I","color":"dark_gray","italic":false},{"text":"r","color":"#515151","italic":false},{"text":"o","color":"#636363","italic":false},{"text":"n ","color":"#757575","italic":false},{"text":"W","color":"#878787","italic":false},{"text":"a","color":"#999999","italic":false},{"text":"l","color":"#ABABAB","italic":false},{"text":"l","color":"gray","italic":false}]',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Gives you full knockback resistance and"}','{"text":"high damage reduction, but slows your movement further."}','{"text":"Lasts 5 Seconds."}']},CustomModelData:42,ironwall:1b} 1
+loot give @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] loot commands:main_abilities/iron_wall
 
-give @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'[{"text":"D","color":"#7A0404","italic":false},{"text":"i","color":"#850303","italic":false},{"text":"s","color":"#900202","italic":false},{"text":"a","color":"#9C0202","italic":false},{"text":"b","color":"#A70101","italic":false},{"text":"l","color":"#B20000","italic":false},{"text":"e","color":"dark_red","italic":false}]',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Removes all abilities from nearby enemy inventories."}']},CustomModelData:43,disable:1b} 1
+# give @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'[{"text":"D","color":"#7A0404","italic":false},{"text":"i","color":"#850303","italic":false},{"text":"s","color":"#900202","italic":false},{"text":"a","color":"#9C0202","italic":false},{"text":"b","color":"#A70101","italic":false},{"text":"l","color":"#B20000","italic":false},{"text":"e","color":"dark_blue","italic":false}]',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Removes all abilities from nearby enemy inventories."}']},CustomModelData:43,disable:1b} 1
 
-item replace entity @p[distance=..8,team=Blue,tag=!upgraded,scores={Kit=10,BlueKit=198}] hotbar.8 with gunpowder{CustomModelData:14,display:{Name:'{"text":"Gunblade Ammo","color":"gray","italic":false}',Lore:['{"text":"Ammo for the Gunblade."}']},gunbladeammo:1b,Enchantments:[{}]} 15
+execute as @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] run function commands:other/gunblade_reload
 
-item replace entity @p[distance=..8,team=Blue,tag=upgraded,scores={Kit=10,BlueKit=198}] hotbar.8 with gunpowder{CustomModelData:14,display:{Name:'{"text":"Gunblade Ammo","color":"gray","italic":false}',Lore:['{"text":"Ammo for the Gunblade."}']},gunbladeammo:1b,Enchantments:[{}]} 20
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=11,BlueKit=198}] armor.head loot commands:heads/chef
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=11,BlueKit=198}] armor.head with minecraft:player_head{Enchantments:[{id:"minecraft:protection",lvl:3s},{id:"minecraft:fire_protection",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;-550164555,30754708,-1227168694,-2003086015],Slot:"head"}],SkullOwner:{id:[I;1448200512,773932192,-2064052068,-324220262],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZmNmYyYmUxNWE2Mzk0OWRiYzQ1OGRkNDEwYjE4NGYxOTAwMzQ1NTVlMWRlOTY2NWRjY2NlOWQ5YjhjMzZlYiJ9fX0="}]}}} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=11,BlueKit=198}] armor.chest loot commands:main_armor/chef_chestplate
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=11,BlueKit=198}] armor.chest with minecraft:leather_chestplate{display:{color:16777215},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:fire_protection",lvl:2s},{id:"minecraft:blast_protection",lvl:1s}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=11,BlueKit=198}] armor.legs loot commands:main_armor/chef_leggings
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=11,BlueKit=198}] armor.legs with minecraft:leather_leggings{display:{color:16777215},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:fire_protection",lvl:2s},{id:"blast_protection",lvl:1s}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=11,BlueKit=198}] armor.feet loot commands:main_armor/chef_boots
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=11,BlueKit=198}] armor.feet with minecraft:leather_boots{display:{color:16777215},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:3s},{id:"minecraft:fire_protection",lvl:2s}]} 1
+loot give @p[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=11,BlueKit=198}] loot commands:main_weapons/frying_pan
 
-give @p[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=11,BlueKit=198}] minecraft:iron_shovel{CustomModelData:92,HideFlags:2,display:{Name:'{"text":"Frying Pan","color":"#858585","italic":false}',Lore:['{"text":"You can go nuts with this one: there are spares back at the kitchen."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 8.5 Attack Damage","color":"dark_green","italic":false}','{"text":" 1.1 Attack Speed","color":"dark_green","italic":false}']},Unbreakable:1b,fryingpan:1b,Enchantments:[{id:"minecraft:knockback",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.9,Operation:0,UUID:[I;577871925,-622638961,-1400912040,50299767],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:8.5,Operation:0,UUID:[I;1827051760,-1581167840,-1324960273,1823471636],Slot:"mainhand"}]} 1
+loot give @p[distance=..8,team=Blue,scores={Kit=11,BlueKit=198}] loot commands:main_abilities/mystery_basket
 
-give @p[distance=..8,team=Blue,scores={Kit=11,BlueKit=198}] minecraft:carrot_on_a_stick{CustomModelData:94,display:{Name:'{"text":"Mystery Basket","color":"#FFC380","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Generates mystery foods that grant positive effects to teammates nearby."}']},Unbreakable:1b,mysterybasket:1b,Enchantments:[{}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=12,BlueKit=198}] armor.feet loot commands:main_armor/dragon_boots
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=12,BlueKit=198}] armor.feet with minecraft:leather_boots{display:{color:7930037},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:feather_falling",lvl:4s},{id:"minecraft:projectile_protection",lvl:3s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;544133330,139020488,-1980544849,-1998903863],Slot:"feet"}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=12,BlueKit=198}] armor.legs loot commands:main_armor/dragon_leggings
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=12,BlueKit=198}] armor.legs with minecraft:leather_leggings{display:{color:3801175},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:blast_protection",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;-699159456,1776829655,-1588879616,969981986],Slot:"legs"}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=12,BlueKit=198}] armor.chest loot commands:main_armor/dragon_scales
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=12,BlueKit=198}] armor.chest with minecraft:leather_chestplate{display:{Name:'{"text":"Dragon Scales","color":"#6A006E","italic":false}',Lore:['{"text":"A strong chestplate made of with Dragon Scales."}'],color:0},Unbreakable:1b,dragonscales:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:blast_protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;528031124,541672629,-1690845220,-551697474],Slot:"chest"}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=12,BlueKit=198}] armor.head loot commands:heads/dragon
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=12,BlueKit=198}] armor.head with minecraft:dragon_head{Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:blast_protection",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;-814660384,-1969142993,-1353344692,-685734438],Slot:"head"}]} 1
+loot give @p[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=12,BlueKit=198}] loot commands:main_weapons/dragon_claw
 
-give @p[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=12,BlueKit=198}] minecraft:ghast_tear{HideFlags:2,display:{Name:'{"text":"Dragon Claw","color":"yellow","italic":false}',Lore:['{"text":"Don’t even think about making any manicure jokes."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 9 Attack Damage","color":"dark_green","italic":false}','{"text":" 1.6 Attack Speed","color":"dark_green","italic":false}']},CustomModelData:108,dragonclaw:1b,Enchantments:[{}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:9,Operation:0,UUID:[I;739447273,1531596547,-1091498888,-988910221],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.4,Operation:0,UUID:[I;-2003883591,1518618278,-1378843387,295536499],Slot:"mainhand"}]} 1
+loot give @p[distance=..8,team=Blue,scores={Kit=12,BlueKit=198}] loot commands:main_abilities/dragon_rush
 
-give @p[distance=..8,team=Blue,scores={Kit=12,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Dragon Rush","color":"#4000A1","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Teleports you 10 blocks in the direction you\'re facing, after a brief startup."}','{"text":"Teleporting through an enemy will cause them to blow up."}']},Unbreakable:1b,CustomModelData:109,dragonrush:1b} 1
+loot give @p[distance=..8,team=Blue,scores={Kit=12,BlueKit=198}] loot commands:main_abilities/dragon_rage
 
-give @p[distance=..8,team=Blue,scores={Kit=12,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Dragon Rage","color":"#4000A1","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Shoots a weak dragon fireball in the direction you are facing."}']},Unbreakable:1b,CustomModelData:110,dragonrage:1b} 
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=13,BlueKit=198}] armor.head loot commands:heads/gambler
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=13,BlueKit=198}] armor.head with minecraft:player_head{Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:projectile_protection",lvl:1s},{id:"minecraft:blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;-243047553,-1839380602,-1759517554,-973219048],Slot:"head"}],SkullOwner:{id:[I;-537377127,1545619789,-1449981744,-516340289],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTJhMWVlODMwMjUwNmZjMzA2Nzg3NmMwYmYwNmI0OWI3MWZkNTlmM2I2ZTQ0MGQ3NmI3N2JmMDJjZmZkOTMyOSJ9fX0="}]}}} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=13,BlueKit=198}] armor.chest loot commands:main_armor/gambler_chestplate
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=13,BlueKit=198}] armor.chest with minecraft:leather_chestplate{Unbreakable:1b,display:{color:1644825},Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:1s},{id:"minecraft:blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;-213781117,515262358,-1881617361,1518664247],Slot:"chest"}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=13,BlueKit=198}] armor.legs loot commands:main_armor/gambler_leggings
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=13,BlueKit=198}] armor.legs with minecraft:leather_leggings{Unbreakable:1b,display:{color:3684408},Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:1s},{id:"minecraft:blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;-2137811217,51526358,-1881617361,1518664247],Slot:"legs"}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=13,BlueKit=198}] armor.feet loot commands:main_armor/gambler_boots
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=13,BlueKit=198}] armor.feet with minecraft:leather_boots{Unbreakable:1b,display:{color:1644825},Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:projectile_protection",lvl:1s},{id:"minecraft:blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;-2137811217,515262358,-1881617361,151866247],Slot:"feet"}]} 1
+loot give @p[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=13,BlueKit=198}] loot commands:main_weapons/stylish_cane
 
-give @p[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=13,BlueKit=198}] minecraft:stick{CustomModelData:142,HideFlags:2,display:{Name:'{"text":"Stylish Cane","color":"dark_blue","italic":false}',Lore:['{"text":"Cracking skulls or cracking champagne: this cane is perfect for any occasion."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 6 Attack Damage","color":"dark_green","italic":false}','{"text":" 1.5 Attack Speed","color":"dark_green","italic":false}']},stylishcane:1b,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.5,Operation:0,UUID:[I;4384444,1490372978,-2026829387,-379663689]},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:6,Operation:0,UUID:[I;178083087,-2119743523,-1588529874,504382408]}]} 1
+loot give @p[distance=..8,team=Blue,scores={Kit=13,BlueKit=198}] loot commands:main_abilities/playing_cards
 
-give @p[distance=..8,team=Blue,scores={Kit=13,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Playing Cards","color":"green","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Throws a set of 5 playing cards, with two on the side."}','{"text":"Deals damage equal to the average of the card values."}','{"text":"Also has bonus effects depending on poker hand."}']},HideFlags:4,Unbreakable:1b,CustomModelData:151,playingcards:1b} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=14,BlueKit=198}] armor.head loot commands:heads/astronaut
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=14,BlueKit=198}] armor.head with minecraft:player_head{display:{Name:'{"text":"Space Helmet","color":"yellow","italic":false}'},Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:blast_protection",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;-838649708,-2065346789,-2072091591,1261527696],Slot:"head"}],SkullOwner:{id:[I;454251851,-1251392843,-1643556432,222096488],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTVlYzY1NzU0ODRiMzQ5Yjc0MjgzMWVlNTVkNTNiNzVkYjJhMTNhZjY0MjVjOGQ1NWYyNmY4YWFlZDg3ZTQifX19"}]}}} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=14,BlueKit=198}] armor.chest loot commands:main_armor/astronaut_chestplate
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=14,BlueKit=198}] armor.chest with minecraft:leather_chestplate{display:{color:13617866},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:blast_protection",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:4,Operation:0,UUID:[I;1563598628,-1008186816,-1215592581,-1025376216],Slot:"chest"}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=14,BlueKit=198}] armor.legs loot commands:main_armor/astronaut_leggings
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=14,BlueKit=198}] armor.legs with minecraft:leather_leggings{display:{color:13617866},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:4,Operation:0,UUID:[I;-954864671,-1972088907,-1953839702,2113898212],Slot:"legs"}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=14,BlueKit=198}] armor.feet loot commands:main_armor/astronaut_boots
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=14,BlueKit=198}] armor.feet with minecraft:leather_boots{display:{color:13617866},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:blast_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;-768315197,-781955629,-1271636834,-1375703499],Slot:"feet"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.1,Operation:1,UUID:[I;132554122,-428390711,-1268942269,394307535],Slot:"feet"}]} 1
+loot give @p[distance=..8,team=Blue,scores={Kit=14,BlueKit=198}] loot commands:main_weapons/space_wrench
 
-give @p[distance=..8,team=Blue,scores={Kit=14,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Space Wrench","color":"dark_purple","italic":false}',Lore:['{"text":"Right-Click to use Ability","color":"yellow","italic":false}','{"text":" "}','{"text":"A multipurpose wrench, useful for bashing foes and augmenting things."}','{"text":"Right-Clicking while aiming at a teammate will augment them."}','{"text":"The augment varies based on their character choice."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 6.5 Attack Damage","color":"dark_green","italic":false}','{"text":" 1.4 Attack Speed","color":"dark_green","italic":false}']},HideFlags:2,Unbreakable:1b,CustomModelData:171,spacewrench:1b,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:6.5,Operation:0,UUID:[I;-399400289,-1430499980,-1343667229,-2028172281],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.6,Operation:0,UUID:[I;926493501,1622690736,-1898122313,1673352428],Slot:"mainhand"}]} 1
+loot give @p[distance=..8,team=Blue,scores={Kit=14,BlueKit=198}] loot commands:main_abilities/asteroid
 
-give @p[distance=..8,team=Blue,scores={Kit=14,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Asteroid","color":"dark_red","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Fires a fast asteroid that explodes on contact, "}','{"text":"sending fiery chunks of rock in a chaotic fashion."}','{"text":"The chunks explode when they hit the ground."}']},Unbreakable:1b,CustomModelData:172,asteroid:1b} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=15,BlueKit=198}] armor.head loot commands:heads/firecracker
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=15,BlueKit=198}] armor.head with minecraft:player_head{AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;-1901048034,188566646,-1619905059,1737736360],Slot:"head"}],SkullOwner:{Id:[I;584747035,-887930049,-1826469917,1698739490],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODgzZjk3YzQyNmE5Y2ZjMWFkMGYyNjgzYmE2OWFmN2U5ZWUyMDc4ZTk4NzU0ZjM4ODA2ODkzODcyMzUyYmVkNCJ9fX0="}]}}} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=15,BlueKit=198}] armor.chest loot commands:main_armor/firecracker_chestplate
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=15,BlueKit=198}] armor.chest with minecraft:leather_chestplate{display:{color:16740096},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:blast_protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:1s}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=15,BlueKit=198}] armor.legs loot commands:main_armor/firecracker_leggings
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=15,BlueKit=198}] armor.legs with minecraft:leather_leggings{display:{color:16729633},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:blast_protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:1s}]} 1
+loot replace entity @p[distance=..8,team=Blue,scores={Kit=15,BlueKit=198}] armor.feet loot commands:main_armor/firecracker_boots
 
-item replace entity @p[distance=..8,team=Blue,scores={Kit=15,BlueKit=198}] armor.feet with minecraft:leather_boots{display:{color:16723502},Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:blast_protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:1,Operation:0,UUID:[I;-926275809,1374372514,-1145031694,-1184990216],Slot:"feet"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.2,Operation:1,UUID:[I;999318254,-1269412238,-1555905714,765267742],Slot:"feet"}]} 1
+loot give @p[distance=..8,team=Blue,scores={Kit=15,BlueKit=198}] loot commands:main_weapons/sparkler
 
-give @p[distance=..8,team=Blue,scores={Kit=15,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Sparkler","color":"#FAFF70","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Fires a spread of 3 sparks in front of you."}','{"text":"The sparks deal damage on contact and sets enemies on fire."}','{"text":"Firing the projectiles puts out the sparks for 4s, causing the sparkler"}','{"text":"to deal 1 less damage and no longer burn."}','{"text":" "}','{"text":"When in Main Hand:","color":"gray","italic":false}','{"text":" 6.5 Attack Damage","color":"dark_green","italic":false}','{"text":" 1.8 Attack Speed","color":"dark_green","italic":false}','{"text":" 8.5 Projectile Damage","color":"dark_green","italic":false}']},HideFlags:6,Unbreakable:1b,CustomModelData:184,sparkler:1b,Enchantments:[{id:"minecraft:fire_aspect",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:6.5,Operation:0,UUID:[I;-256855339,-647740206,-1900213591,-103578416],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.2,Operation:0,UUID:[I;405800534,-1315157995,-1837554019,1923929251],Slot:"mainhand"}]} 1
-
-give @p[distance=..8,team=Blue,scores={Kit=15,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Blazing Speed","color":"#FFC300","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Increases your movement speed by 50% for 1.5s."}','{"text":"You leave behind small bombs as you run."}','{"text":"The bombs pop after 1s, dealing 4 damage and burning enemies in a small radius."}','{"text":"Can be used every 9s."}']},HideFlags:4,Unbreakable:1b,CustomModelData:187,blazingspeed:1b} 1
+loot give @p[distance=..8,team=Blue,scores={Kit=15,BlueKit=198}] loot commands:main_abilities/blazing_speed
 
 execute as @a[scores={BlueKit=198},tag=hadUltimate] run function commands:other/ultimate_charger
 
 execute as @a[scores={BlueKit=198}] run function commands:custom_deaths/reset_cooldowns
 
 scoreboard players set @a[scores={BlueKit=198..}] BlueKit 0
-
-
 

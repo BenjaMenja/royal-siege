@@ -1,0 +1,97 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:iron_axe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:custom_model_data": 153,
+                "minecraft:custom_data": {
+                  "warrioraxe": 1
+                },
+                "minecraft:attribute_modifiers": {
+                  "modifiers": [
+                    {
+                      "type": "generic.attack_damage",
+                      "name": "generic.attack_damage",
+                      "amount": 9.5,
+                      "operation": "add_value",
+                      "uuid": [
+                        -2082478476,
+                        1044466551,
+                        -2079507735,
+                        1982199517
+                      ],
+                      "slot": "mainhand"
+                    },
+                    {
+                      "type": "generic.attack_speed",
+                      "name": "generic.attack_speed",
+                      "amount": -3.1,
+                      "operation": "add_value",
+                      "uuid": [
+                        2094133199,
+                        -2042081662,
+                        -1079677246,
+                        -173773628
+                      ],
+                      "slot": "mainhand"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "italic": false,
+                  "text": "Warrior's Battleaxe"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "text": "Nothing fancy, but it gets the job done."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "color": "gray",
+                  "italic": false,
+                  "text": "When in Main Hand:"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 9.5 Attack Damage"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 0.9 Attack Speed"
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

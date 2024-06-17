@@ -1,4 +1,4 @@
-execute anchored eyes run particle minecraft:block honey_block ^ ^ ^3 0.5 0.5 0.5 1 1000
+execute anchored eyes run particle minecraft:block{block_state:"honey_block"} ^ ^ ^3 0.5 0.5 0.5 1 1000
 
 playsound minecraft:item.bucket.fill_lava master @a ~ ~ ~ 1 0.7
 

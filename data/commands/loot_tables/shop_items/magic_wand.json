@@ -1,0 +1,97 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Magic Wand",
+                "color": "#C300FF",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "A stronger version of the Angelic Staff."
+                },
+                {
+                  "text": "It grants regeneration II to nearby allies when you attack an enemy."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "When in Main Hand",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " 8 Attack Damage",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 1.5 Attack Speed",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": "+4 Max Health",
+                  "color": "blue",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{magicwand:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 59
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.max_health",
+                  "name": "generic.max_health",
+                  "amount": 4,
+                  "operation": "add_value",
+                  "id": "4c774a8a-a43e-4c0b-8c0d-7aa43fb2caf3",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "generic.attack_damage",
+                  "amount": 8,
+                  "operation": "add_value",
+                  "id": "fe548f99-6f08-47e9-99fd-4525a6441350",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "generic.attack_speed",
+                  "amount": -2.5,
+                  "operation": "add_value",
+                  "id": "7a630563-330d-4017-ab38-597a8368c9b8",
+                  "slot": "mainhand"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

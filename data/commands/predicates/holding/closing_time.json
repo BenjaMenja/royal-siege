@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{closingtime:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{closingtime:1b}"
+        }
       }
     }
   }

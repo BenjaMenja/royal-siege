@@ -1,4 +1,4 @@
-execute at @s run particle block water ~ ~ ~ 0.25 0.25 0.25 0.25 50 normal
+execute at @s run particle block{block_state:"minecraft:water"} ~ ~ ~ 0.25 0.25 0.25 0.25 50 normal
 
 execute at @s[tag=fishCannonRed] run loot spawn ~ ~ ~ loot commands:other/fish_cannon_red
 

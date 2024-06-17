@@ -1,6 +1,6 @@
-summon minecraft:area_effect_cloud ~ ~ ~ {Particle:"block obsidian",Tags:["mShowerPoint"],Radius:1f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:201,DurationOnUse:0f}
+summon minecraft:area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:"minecraft:obsidian"},Radius:1f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:201,DurationOnUse:0f,Tags:["mShowerPoint"]}
 
-summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["mShowerAbove"],Radius:1f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:201,DurationOnUse:0f}
+summon minecraft:area_effect_cloud ~ ~ ~ {Radius:1f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:201,DurationOnUse:0f,Tags:["mShowerAbove"]}
 
 playsound entity.ender_dragon.ambient master @a[distance=..20] ~ ~ ~ 1 0
 

@@ -30,9 +30,9 @@ tag @a remove readyUp
 
 loot spawn ~ -5 ~ loot commands:rng/match_id
 
-execute as @e[type=item,nbt={Item:{tag:{matchid:1b}}}] store result score @a matchID run data get entity @s Item.tag.AttributeModifiers.[{}].Amount
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{matchid:1b}}}}] store result score @a matchID run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
 
-execute as @e[type=item,nbt={Item:{tag:{matchid:1b}}}] store result score #matchID matchID run data get entity @s Item.tag.AttributeModifiers.[{}].Amount
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{matchid:1b}}}}] store result score #matchID matchID run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
 
-kill @e[type=item,nbt={Item:{tag:{matchid:1b}}}]
+kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{matchid:1b}}}}]
 

@@ -1,0 +1,62 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:bow",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Bow of Justice",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "One shots nearly anything."
+                  },
+                  {
+                    "text": "Can only be used once and can be deflected by shields."
+                  },
+                  {
+                    "text": "Also cannot be used near a king."
+                  },
+                  {
+                    "text": "If you kill a player with this, you will get the bow of justice back."
+                  }
+                ],
+                "mode": "insert"
+              },
+              {
+                "function": "minecraft:set_components",
+                "components": {
+                  "minecraft:custom_model_data": 73,
+                  "minecraft:damage": 384,
+                  "minecraft:enchantments": {
+                    "minecraft:power": 100,
+                    "minecraft:infinity": 1
+                  }
+                }
+              },
+              {
+                "function": "minecraft:set_custom_data",
+                "tag": "{bowofjustice:1b}"
+              },
+              {
+                "function": "minecraft:toggle_tooltips",
+                "toggles": {
+                  "minecraft:enchantments": false
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

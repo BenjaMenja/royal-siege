@@ -1,0 +1,97 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": 142,
+                "minecraft:custom_data": {
+                  "stylishcane": 1
+                },
+                "minecraft:attribute_modifiers": {
+                  "modifiers": [
+                    {
+                      "uuid": [
+                        -882984758,
+                        1829094,
+                        11153799,
+                        -178930
+                      ],
+                      "type": "generic.attack_speed",
+                      "name": "generic.attack_speed",
+                      "amount": -2.5,
+                      "operation": "add_value",
+                      "slot": "mainhand"
+                    },
+                    {
+                      "uuid": [
+                        -882984758,
+                        18290934,
+                        111533799,
+                        -1781168930
+                      ],
+                      "type": "generic.attack_damage",
+                      "name": "generic.attack_damage",
+                      "amount": 6,
+                      "operation": "add_value",
+                      "slot": "mainhand"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "dark_blue",
+                  "italic": false,
+                  "text": "Stylish Cane"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "text": "Cracking skulls or cracking champagne: this cane is perfect for any occasion."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "color": "gray",
+                  "italic": false,
+                  "text": "When in Main Hand:"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 6 Attack Damage"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 1.5 Attack Speed"
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

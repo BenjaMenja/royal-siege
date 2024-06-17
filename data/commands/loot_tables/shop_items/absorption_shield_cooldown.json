@@ -1,0 +1,65 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Absorption Shield",
+                "color": "yellow",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Projects a particle barrier around you."
+                },
+                {
+                  "text": "The particle barrier destroys enemy projectiles that come in contact with it."
+                },
+                {
+                  "text": "The shield runs on a resource, displayed above your hotbar."
+                },
+                {
+                  "text": "Not using it causes the resource to regenerate."
+                },
+                {
+                  "text": "You will also receive slowness while channeling the barrier."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
+                "minecraft:custom_model_data": 122
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{absorptionshield:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

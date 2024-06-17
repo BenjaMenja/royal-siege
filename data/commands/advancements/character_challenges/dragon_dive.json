@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:dragon_head"
+      "id": "minecraft:dragon_head"
     },
     "title": "Dragon Dive",
     "description": "As Dragon, get a kill with Dragon Rage while gliding.",

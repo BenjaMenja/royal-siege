@@ -8,8 +8,45 @@
           "name": "minecraft:carrot_on_a_stick",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Exp. Bomb Blaster\",\"color\":\"yellow\",\"italic\":false}',Lore:['{\"text\":\"Right-Click to use\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Shoots a spread of Exp. Bottles.\"}','{\"text\":\"Each bottle is loaded with explosives.\"}']},HideFlags:4,Unbreakable:1b,CustomModelData:140,expblaster:1b}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Exp. Bomb Blaster",
+                "color": "yellow",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Shoots a spread of Exp. Bottles."
+                },
+                {
+                  "text": "Each bottle is loaded with explosives."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{expblaster:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 140,
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": true
+                }
+              }
             }
           ]
         }

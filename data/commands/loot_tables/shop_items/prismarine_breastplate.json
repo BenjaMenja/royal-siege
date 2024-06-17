@@ -1,0 +1,60 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_chestplate",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Prismarine Breastplate",
+                "color": "dark_aqua",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:dyed_color": {
+                  "rgb": 370320
+                },
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 2,
+                  "minecraft:fire_protection": 2,
+                  "minecraft:blast_protection": 3
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "generic.armor",
+                  "amount": 6,
+                  "operation": "add_value",
+                  "id": "40da15b2-e183-4b83-bccf-e911d6a95c15",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.armor_toughness",
+                  "name": "generic.armor_toughness",
+                  "amount": 2,
+                  "operation": "add_value",
+                  "id": "d4194bc2-3a77-43cd-82e5-d20a2beec95f",
+                  "slot": "chest"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{redhealingfruit:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{redhealingfruit:1b}"
+            }
           }
         ]
       }
@@ -15,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{bluehealingfruit:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{bluehealingfruit:1b}"
+            }
           }
         ]
       }

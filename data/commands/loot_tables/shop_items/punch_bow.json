@@ -8,8 +8,36 @@
           "name": "minecraft:bow",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:62,display:{Name:'{\"text\":\"Punch Bow\"}',Lore:['{\"text\":\"A high knockback bow.\"}']},Unbreakable:1b,punchbow:1b,Enchantments:[{id:\"minecraft:punch\",lvl:4s},{id:\"minecraft:infinity\",lvl:1s}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Punch Bow"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "A high knockback bow."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 62,
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
+                "minecraft:enchantments": {
+                  "minecraft:punch": 4,
+                  "minecraft:infinity": 1
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{punchbow:1b}"
             }
           ]
         }

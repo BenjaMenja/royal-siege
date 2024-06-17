@@ -1,0 +1,62 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": 42,
+                "minecraft:custom_data": {
+                  "ironwall": 1
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "dark_gray",
+                  "italic": false,
+                  "text": "Iron Wall"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "color": "yellow",
+                  "italic": false,
+                  "text": "Right-Click to use"
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Gives you full knockback resistance and"
+                },
+                {
+                  "text": "high damage reduction, but slows your movement further."
+                },
+                {
+                  "text": "Lasts 5 Seconds."
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -28,5 +28,5 @@ tag @s[predicate=commands:armor/bouncy_boots] add hasBouncyBoots
 
 clear @s leather_boots
 
-clear @s carrot_on_a_stick{inviscloak:1b}
+clear @s carrot_on_a_stick[custom_data~{inviscloak:1b}]
 

@@ -6,7 +6,9 @@
         "player": {
           "equipment": {
             "mainhand": {
-              "nbt": "{mythtrident:1b}"
+              "predicates": {
+                "minecraft:custom_data": "{mythtrident:1b}"
+              }
             }
           }
         }

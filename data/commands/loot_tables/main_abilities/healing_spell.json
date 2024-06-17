@@ -1,0 +1,56 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": 18,
+                "minecraft:custom_data": {
+                  "HealingSpell": 1
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "#FF08FF",
+                  "italic": false,
+                  "text": "Healing Spell"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "color": "yellow",
+                  "italic": false,
+                  "text": "Right-Click to use"
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Gives nearby teammates instant health and regeneration."
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

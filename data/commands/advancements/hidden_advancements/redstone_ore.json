@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:redstone_ore"
+      "id": "minecraft:redstone_ore"
     },
     "title": "Redstoner",
     "description": "Activate one of the redstone ores in the underground area of Forest Glen.",

@@ -1,28 +1,29 @@
 {
     "criteria": {
-        "c1": {
-            "trigger": "minecraft:player_killed_entity",
-            "conditions": {
-                "entity": {
-                    "type": "minecraft:player"
-                },
-                "killing_blow": {
-                    "direct_entity": {
-                        "type": "minecraft:player",
-                        "equipment": {
-                            "mainhand": {
-                                "nbt": "{lifesteal:1b}",
-                                "items": [
-                                    "minecraft:iron_sword"
-                                ]
-                            }
-                        }
-                    }
+      "c1": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:player"
+          },
+          "killing_blow": {
+            "direct_entity": {
+              "type": "minecraft:player",
+              "equipment": {
+                "mainhand": {
+                  "items": "minecraft:iron_sword",
+                  "predicates": {
+                    "minecraft:custom_data": "{lifesteal:1b}"
+                  }
                 }
+              }
             }
+          }
         }
+      }
     },
     "rewards": {
-        "function": "commands:other/lifesteal"
+      "function": "commands:other/lifesteal"
     }
-}
+  }
+  

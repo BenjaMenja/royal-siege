@@ -6,7 +6,7 @@ execute if entity @s[tag=redProj] as @a[distance=..15,team=Blue] at @s run summo
 
 execute if entity @s[tag=blueProj] as @a[distance=..15,team=Red] at @s run summon small_fireball ~ ~2.1 ~ {Fire:20s,Motion:[0.0d,-1.0d,0.0d]}
 
-summon minecraft:firework_rocket ~ ~ ~ {LifeTime:1,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Explosions:[{Type:1,Colors:[I;16711680]}]}}}}
+summon minecraft:firework_rocket ~ ~ ~ {LifeTime:1,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"large_ball",colors:[I;16711680]}]}}}}
 
 particle flame ~ ~ ~ 1 1 1 1 100 force
 

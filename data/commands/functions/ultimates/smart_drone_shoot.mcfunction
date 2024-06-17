@@ -1,8 +1,8 @@
 function commands:other/line_of_sight
 
-execute if entity @s[tag=smartDroneRed] if entity @a[team=Blue,tag=inLOS] at @s anchored eyes run summon item ^ ^ ^ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["smartDroneLaserRed","smartDroneLaser","redProj"],Item:{id:"minecraft:redstone",Count:1b}}
+execute if entity @s[tag=smartDroneRed] if entity @a[team=Blue,tag=inLOS] at @s anchored eyes run summon item ^ ^ ^ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["smartDroneLaserRed","smartDroneLaser","redProj"],Item:{id:"minecraft:redstone",count:1}}
 
-execute if entity @s[tag=smartDroneBlue] if entity @a[team=Red,tag=inLOS] at @s anchored eyes run summon item ^ ^ ^ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["smartDroneLaserBlue","smartDroneLaser","blueProj"],Item:{id:"minecraft:redstone",Count:1b}}
+execute if entity @s[tag=smartDroneBlue] if entity @a[team=Red,tag=inLOS] at @s anchored eyes run summon item ^ ^ ^ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["smartDroneLaserBlue","smartDroneLaser","blueProj"],Item:{id:"minecraft:redstone",count:1}}
 
 execute as @e[type=item,tag=smartDroneLaserRed] run data modify entity @s Owner set from entity @a[team=Red,limit=1,scores={Kit=14}] UUID
 

@@ -8,8 +8,51 @@
           "name": "minecraft:bat_spawn_egg",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:16,CanPlaceOn:[\"#commands:can_place_on\"],display:{Name:'{\"text\":\"Poisonous Mushroom\",\"color\":\"#4F0FFF\",\"italic\":false}',Lore:['{\"text\":\"Placeable\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Creates a poison cloud when placed.\"}','{\"text\":\"The cloud grows in size if a player stands in it.\"}']},CustomModelData:33,poisonousmushroom:1b,EntityTag:{Tags:[\"mushroom\",\"redmushroom\"]}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Poisonous Mushroom",
+                "color": "#4F0FFF",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Placeable",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Creates a poison cloud when placed."
+                },
+                {
+                  "text": "The cloud grows in size if a player stands in it."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 33,
+                "minecraft:can_place_on": {
+                  "blocks": "#commands:can_place_on"
+                }
+              }
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:can_place_on": false
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{poisonousmushroom:1b,EntityTag:{Tags:[\"mushroom\",\"redmushroom\"]}}"
             }
           ]
         }

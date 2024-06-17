@@ -1,3 +1,3 @@
-give @s[scores={Money=500..}] potion{display:{Name:'{"text":"Tree Sap","italic":false}',Lore:['{"text":"A healthy drink for trees."}']},custom_potion_effects:[{id:"minecraft:instant_health",amplifier:0b,duration:1},{id:"minecraft:regeneration",amplifier:1b,duration:300},{id:"minecraft:absorption",amplifier:0b,duration:1200},{id:"minecraft:haste",amplifier:0b,duration:400}],CustomPotionColor:13958912} 1
+loot give @s[scores={Money=500..}] loot commands:shop_items/tree_sap
 
 scoreboard players remove @s[scores={Money=500..}] Money 500

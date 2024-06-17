@@ -8,14 +8,35 @@
           "name": "minecraft:ender_eye",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:27,display:{Name:'{\"text\":\"Corrupt Credit\"}',Lore:['{\"text\":\"Spend These in a Mysterious Place for Helpful Items\"}']},corruptcredit:1b}"
-            },
-            {
               "function": "minecraft:set_count",
               "count": {
                 "min": 2,
                 "max": 4
+              }
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Corrupt Credit"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Spend These in a Mysterious Place for Helpful Items"
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{corruptcredit:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 27
               }
             }
           ]

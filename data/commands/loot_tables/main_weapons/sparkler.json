@@ -1,0 +1,114 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Sparkler",
+                "color": "#FAFF70",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Fires a spread of 3 sparks in front of you."
+                },
+                {
+                  "text": "The sparks deal damage on contact and sets enemies on fire."
+                },
+                {
+                  "text": "Firing the projectiles puts out the sparks for 4s, causing the sparkler"
+                },
+                {
+                  "text": "to deal 1 less damage and no longer burn."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "When in Main Hand:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " 6.5 Attack Damage",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 1.8 Attack Speed",
+                  "italic": false
+                },
+                {
+                  "text": " 8.5 Projectile Damage",
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
+                "minecraft:custom_model_data": 184,
+                "minecraft:enchantments": {
+                  "minecraft:fire_aspect": 1
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{sparkler:1b}"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "generic.attack_damage",
+                  "amount": 6.5,
+                  "operation": "add_value",
+                  "id": "f5c296b2-c2e3-43a6-8011-d76cf1879eb8",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "generic.attack_speed",
+                  "amount": -2.2,
+                  "operation": "add_value",
+                  "id": "9feb42d3-c3c0-4fb8-9d7a-346993459777",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

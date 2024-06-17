@@ -1,0 +1,49 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:leather_leggings",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:enchantments": {
+                  "levels": {
+                    "minecraft:blast_protection": 2,
+                    "minecraft:fire_protection": 2,
+                    "minecraft:projectile_protection": 1
+                  }
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "uuid": [
+                      -83190301,
+                      78930103,
+                      41819195,
+                      1031859018
+                    ],
+                    "type": "generic.armor",
+                    "name": "generic.armor",
+                    "amount": 5,
+                    "operation": "add_value",
+                    "slot": "legs"
+                  }
+                ],
+                "minecraft:dyed_color": 2818303
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

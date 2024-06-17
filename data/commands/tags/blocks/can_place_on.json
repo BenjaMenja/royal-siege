@@ -2,7 +2,8 @@
   "replace": false,
   "values": [
     "minecraft:stone_bricks",
-    "minecraft:grass",
+    "minecraft:short_grass",
+    "minecraft:tall_grass",
     "minecraft:grass_block",
     "minecraft:red_nether_bricks",
     "minecraft:netherrack",

@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{absorptionshield:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{absorptionshield:1b}"
+        }
       }
     }
   }

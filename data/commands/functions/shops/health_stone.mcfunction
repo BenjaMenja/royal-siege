@@ -1,3 +1,3 @@
-give @s[scores={Money=700..}] quartz{CustomModelData:56,display:{Name:'{"text":"Health Stone","italic":false}',Lore:['{"text":"Grants you massively increased max health."}']},HideFlags:1,Enchantments:[{id:"minecraft:luck_of_the_sea",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.max_health",Name:"generic.max_health",Amount:6,Operation:0,UUID:[I;-3219051,-774194214,-124512136,8320],Slot:"offhand"}]} 1
+loot give @s[scores={Money=700..}] loot commands:shop_items/health_stone
 
 scoreboard players remove @s[scores={Money=700..}] Money 700

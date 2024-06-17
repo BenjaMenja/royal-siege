@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{ejectbutton:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{ejectbutton:1b}"
+        }
       }
     }
   }

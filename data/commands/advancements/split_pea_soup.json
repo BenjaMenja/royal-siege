@@ -9,7 +9,9 @@
             "type": "minecraft:player",
             "equipment": {
               "mainhand": {
-                "nbt": "{splitpeasoup:1b}"
+                "predicates": {
+                  "minecraft:custom_data": "{splitpeasoup:1b}"
+                }
               }
             }
           }

@@ -8,10 +8,10 @@
             "type": "minecraft:player",
             "equipment": {
               "mainhand": {
-                "nbt": "{lifesteal:1b}",
-                "items": [
-                  "minecraft:iron_sword"
-                ]
+                "items": "minecraft:iron_sword",
+                "predicates": {
+                  "minecraft:custom_data": "{lifesteal:1b}"
+                }
               }
             }
           }

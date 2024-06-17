@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{lavatrap:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{lavatrap:1b}"
+        }
       }
     }
   }

@@ -1,0 +1,42 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gunpowder",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Gunblade Ammo",
+                "color": "gray",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Ammo for the Gunblade."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 14
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gunbladeammo:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

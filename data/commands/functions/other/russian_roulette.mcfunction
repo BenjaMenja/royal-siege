@@ -1,6 +1,6 @@
 loot spawn ~ -5 ~ loot commands:rng/russian_roulette
-execute as @e[type=item,nbt={Item:{tag:{roulette:1b}}}] store result score #rng RNG run data get entity @s Item.tag.AttributeModifiers.[{}].Amount
-kill @e[type=item,nbt={Item:{tag:{roulette:1b}}}]
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{roulette:1b}}}}] store result score #rng RNG run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
+kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{roulette:1b}}}}]
 
 execute if score #rng RNG matches 1 run tag @s add rouletteFire
 

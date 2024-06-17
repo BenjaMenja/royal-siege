@@ -8,12 +8,46 @@
           "name": "minecraft:bat_spawn_egg",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": 1
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Minion Swarm"
+              }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:4,CanPlaceOn:[\"#commands:can_place_on\"],HideFlags:16,display:{Name:'{\"text\":\"Minion Swarm\"}',Lore:['{\"text\":\"Placeable\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Summons a swarm of wizard minions.\"}']},HideFlags:16,EntityTag:{Silent:1b,Invulnerable:1b,Tags:[\"RedMinionSwarm\",\"minionswarm\"]}}"
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Placeable",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Summons a swarm of wizard minions."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 4,
+                "minecraft:can_place_on": {
+                  "blocks": "#commands:can_place_on"
+                }
+              }
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:can_place_on": false
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{EntityTag:{Silent:1b,Invulnerable:1b,Tags:[\"RedMinionSwarm\",\"minionswarm\"]}}"
             }
           ]
         }

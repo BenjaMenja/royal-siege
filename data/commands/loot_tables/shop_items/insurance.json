@@ -1,0 +1,47 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Insurance",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "A proof of insurance."
+                },
+                {
+                  "text": "All team members will claim new money for 100 Siege Bucks each."
+                },
+                {
+                  "text": "Money that was in their inventory will still be dropped."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 144
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{insurance:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:custom_model_data": 171,
+                "minecraft:custom_data": {
+                  "spacewrench": 1
+                },
+                "minecraft:attribute_modifiers": {
+                  "modifiers": [
+                    {
+                      "type": "generic.attack_damage",
+                      "name": "generic.attack_damage",
+                      "amount": 6.5,
+                      "operation": "add_value",
+                      "uuid": [
+                        484403673,
+                        -1827978641,
+                        -1639929059,
+                        -345888667
+                      ],
+                      "slot": "mainhand"
+                    },
+                    {
+                      "type": "generic.attack_speed",
+                      "name": "generic.attack_speed",
+                      "amount": -2.6,
+                      "operation": "add_value",
+                      "uuid": [
+                        -309517503,
+                        -601012354,
+                        -1914837075,
+                        1150536937
+                      ],
+                      "slot": "mainhand"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "dark_purple",
+                  "italic": false,
+                  "text": "Space Wrench"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "color": "yellow",
+                  "italic": false,
+                  "text": "Right-Click to use Ability"
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "A multipurpose wrench, useful for bashing foes and augmenting things."
+                },
+                {
+                  "text": "Right-Clicking while aiming at a teammate will augment them."
+                },
+                {
+                  "text": "The augment varies based on their character choice."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "color": "gray",
+                  "italic": false,
+                  "text": "When in Main Hand:"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 6.5 Attack Damage"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 1.4 Attack Speed"
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

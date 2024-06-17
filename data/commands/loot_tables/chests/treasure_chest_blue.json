@@ -8,7 +8,7 @@
         "entries": [
           {
             "type": "minecraft:loot_table",
-            "name": "commands:chests/pirate_ult_blue"
+            "value": "commands:chests/pirate_ult_blue"
           }
         ]
       },
@@ -17,7 +17,7 @@
         "entries": [
           {
             "type": "minecraft:loot_table",
-            "name": "commands:shop_items/money"
+            "value": "commands:shop_items/money"
           }
         ]
       },
@@ -26,7 +26,7 @@
         "entries": [
           {
             "type": "minecraft:loot_table",
-            "name": "commands:shop_items/corrupt_credit"
+            "value": "commands:shop_items/corrupt_credit"
           }
         ]
       }

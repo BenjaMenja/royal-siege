@@ -1,5 +1,5 @@
-give @s[scores={Money=600..},team=Red] minecraft:bat_spawn_egg{CanPlaceOn:["#commands:can_place_on"],HideFlags:16,CustomModelData:134,display:{Name:'{"text":"Oven","color":"gray","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Places an oven sentry that shoots explosive pizzas."}']},chefoven:1b,EntityTag:{Silent:1b,Invulnerable:1b,Tags:["ovenred","oven"]}} 1
+loot give @s[scores={Money=600..},team=Red] loot commands:shop_items/oven_red
 
-give @s[scores={Money=600..},team=Blue] minecraft:bat_spawn_egg{CanPlaceOn:["#commands:can_place_on"],HideFlags:16,CustomModelData:134,display:{Name:'{"text":"Oven","color":"gray","italic":false}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Places an oven sentry that shoots explosive pizzas."}']},chefoven:1b,EntityTag:{Silent:1b,Invulnerable:1b,Tags:["ovenblue","oven"]}} 1
+loot give @s[scores={Money=600..},team=Blue] loot commands:shop_items/oven_blue
 
 scoreboard players remove @s[scores={Money=600..}] Money 600

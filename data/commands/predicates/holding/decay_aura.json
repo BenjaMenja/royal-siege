@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{decay:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{decay:1b}"
+        }
       }
     }
   }

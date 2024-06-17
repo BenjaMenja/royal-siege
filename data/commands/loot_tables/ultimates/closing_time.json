@@ -1,0 +1,51 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Closing Time",
+                  "color": "#4F3557",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Right-Click to use",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "text": "Closes off the throne room of the castle you are closest to."
+                  }
+                ],
+                "mode": "insert"
+              },
+              {
+                "function": "minecraft:set_custom_data",
+                "tag": "{ultimateitem:1b,closingtime:1b}"
+              },
+              {
+                "function": "minecraft:set_components",
+                "components": {
+                  "minecraft:custom_model_data": 105
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

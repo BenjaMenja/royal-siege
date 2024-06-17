@@ -1,0 +1,57 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:snowball",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Toxin Ball",
+                "color": "#045207",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Throwable",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Removes healing effects from nearby enemies when landed."
+                },
+                {
+                  "text": "Also inflicts Poison II for 5 seconds."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 107
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{toxinballblue:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

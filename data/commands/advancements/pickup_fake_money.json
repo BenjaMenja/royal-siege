@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{fakemoneyred:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{fakemoneyred:1b}"
+            }
           }
         ]
       }
@@ -15,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{fakemoneyblue:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{fakemoneyblue:1b}"
+            }
           }
         ]
       }

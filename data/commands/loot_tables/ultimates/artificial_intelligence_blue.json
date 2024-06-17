@@ -1,0 +1,76 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:bat_spawn_egg",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:can_place_on": {
+                  "predicates": [
+                    {
+                      "blocks": "#commands:can_place_on"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                },
+                "minecraft:custom_model_data": 83,
+                "minecraft:custom_data": {
+                  "ultimateitem": 1,
+                  "ai": 1
+                },
+                "minecraft:entity_data": {
+                  "id": "minecraft:bat",
+                  "Silent": 1,
+                  "Invulnerable": 1,
+                  "Tags": [
+                    "AIblue",
+                    "AI"
+                  ]
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "italic": false,
+                  "text": "Artificial Intelligence"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "color": "yellow",
+                  "italic": false,
+                  "text": "Placeable"
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Summons a strong robot ally."
+                },
+                {
+                  "text": "The robot chases after enemies and is tough to kill."
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

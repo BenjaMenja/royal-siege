@@ -2,8 +2,8 @@
 #Dungeon Villagers
 
 loot spawn ~ -5 ~ loot commands:rng/mysterious_man
-execute as @e[type=item,nbt={Item:{tag:{mysteriousman:1b}}}] store result score #rng RNG run data get entity @s Item.tag.AttributeModifiers.[{}].Amount
-kill @e[type=item,nbt={Item:{tag:{mysteriousman:1b}}}]
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{mysteriousman:1b}}}}] store result score #rng RNG run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
+kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{mysteriousman:1b}}}}]
 
 execute if score #rng RNG matches 1 run summon villager -1215 54 1260 {Team:"Red",PersistenceRequired:1b,Invulnerable:1b,CustomName:'{"text":"Mysterious Man"}',Attributes:[{Name:"generic.movement_speed",Base:-1.0}],VillagerData:{level:2,profession:"minecraft:farmer",type:"minecraft:plains"},Offers:{Recipes:[{rewardExp:0b,maxUses:2147483647,uses:0,buy:{id:"minecraft:ender_eye",Count:2b,tag:{CustomModelData:27,display:{Name:'{"text":"Corrupt Credit"}',Lore:['{"text":"Spend These in a Mysterious Place for Helpful Items"}']}}},sell:{id:"minecraft:lily_pad",Count:1b,tag:{CustomModelData:85,display:{Name:'{"text":"Slapper"}'},Enchantments:[{id:"minecraft:knockback",lvl:6s}]}}},{rewardExp:0b,maxUses:2147483647,uses:0,buy:{id:"minecraft:ender_eye",Count:1b,tag:{CustomModelData:27,display:{Name:'{"text":"Corrupt Credit"}',Lore:['{"text":"Spend These in a Mysterious Place for Helpful Items"}']}}},sell:{id:"minecraft:water_bucket",Count:1b,tag:{CustomModelData:84,display:{Name:'{"text":"Boiling Water"}'},Enchantments:[{id:"minecraft:fire_aspect",lvl:3s}]}}},{rewardExp:0b,maxUses:2147483647,uses:0,buy:{id:"minecraft:ender_eye",Count:1b,tag:{CustomModelData:27,display:{Name:'{"text":"Corrupt Credit"}',Lore:['{"text":"Spend These in a Mysterious Place for Helpful Items"}']}}},sell:{id:"minecraft:splash_potion",Count:1b,tag:{display:{Name:'{"text":"Mysterious Brew","color":"light_purple"}'},HideFlags:32,custom_potion_effects:[{id:"minecraft:blindness",amplifier:0b,duration:300}],CustomPotionColor:0}}}]}}
 

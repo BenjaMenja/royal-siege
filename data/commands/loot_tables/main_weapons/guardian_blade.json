@@ -1,0 +1,98 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:iron_sword",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:custom_model_data": 154,
+                "minecraft:custom_data": {
+                  "guardianblade": 1
+                },
+                "minecraft:attribute_modifiers": {
+                  "modifiers": [
+                    {
+                      "type": "generic.attack_damage",
+                      "name": "generic.attack_damage",
+                      "amount": 7,
+                      "operation": "add_value",
+                      "uuid": [
+                        670825943,
+                        482625286,
+                        -1101047838,
+                        849693587
+                      ],
+                      "slot": "mainhand"
+                    },
+                    {
+                      "type": "generic.attack_speed",
+                      "name": "generic.attack_speed",
+                      "amount": -2.9,
+                      "operation": "add_value",
+                      "uuid": [
+                        1925374039,
+                        1321419693,
+                        -1803808474,
+                        -1710265389
+                      ],
+                      "slot": "mainhand"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "dark_gray",
+                  "italic": false,
+                  "text": "Guardian's Blade"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "text": "The blade is so wide that the shield almost feels redundant."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "color": "gray",
+                  "italic": false,
+                  "text": "When in Main Hand:"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 7 Attack Damage"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 1.1 Attack Speed"
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

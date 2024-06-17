@@ -2,6 +2,6 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "nbt": "{Inventory:[{tag:{reddebris:1b}}]}"
+    "nbt": "{Inventory:[{components:{\"minecraft:custom_data\":{reddebris:1b}}}]}"
   }
 }

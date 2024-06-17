@@ -8,12 +8,39 @@
           "name": "minecraft:carrot_on_a_stick",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": 1
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Virus Detector",
+                "color": "#eec6a5",
+                "italic": false
+              }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Virus Detector\",\"italic\":false}',Lore:['{\"text\":\"Right-Click to use\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Incapacitates an enemy inside of your castle.\"}']},CustomModelData:44,virusdetector:1b}"
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Incapacitates an enemy inside of your castle."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{virusdetector:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 44
+              }
             }
           ]
         }

@@ -1,0 +1,63 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Lightning Staff",
+                "color": "aqua",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Shoots a beam that strikes lightning"
+                },
+                {
+                  "text": "onto enemy players and blocks."
+                },
+                {
+                  "text": "Gains a charge every 6 seconds,"
+                },
+                {
+                  "text": "and can hold up to 8 charges."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true,
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
+                "minecraft:custom_model_data": 2
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{lightningstaff:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

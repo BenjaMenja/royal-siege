@@ -1,0 +1,53 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Overcharge",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Right-Click to use",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "text": "Supercharges your active minions."
+                  },
+                  {
+                    "text": "All of them will receive strong buffs, regardless of where they are."
+                  }
+                ],
+                "mode": "insert"
+              },
+              {
+                "function": "minecraft:set_custom_data",
+                "tag": "{ultimateitem:1b,overcharge:1b}"
+              },
+              {
+                "function": "minecraft:set_components",
+                "components": {
+                  "minecraft:custom_model_data": 75
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

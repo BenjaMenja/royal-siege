@@ -1,4 +1,4 @@
-summon minecraft:snowball ~ ~ ~ {Motion:[0.0,1.1,0.0],Tags:["chrysanthemumlauncher","snowball"],Item:{id:"minecraft:air",Count:1b}}
+summon minecraft:snowball ~ ~ ~ {Motion:[0.0,1.1,0.0],Tags:["chrysanthemumlauncher","snowball"],Item:{id:"minecraft:air",count:1}}
 
 tag @s add chrysanthemumLaunch
 

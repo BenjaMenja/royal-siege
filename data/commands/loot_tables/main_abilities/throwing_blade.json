@@ -1,0 +1,102 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:trident",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:custom_data": {
+                  "throwingblade": 1
+                },
+                "minecraft:enchantments": {
+                  "levels": {
+                    "minecraft:impaling": 3,
+                    "minecraft:loyalty": 3
+                  },
+                  "show_in_tooltip": false
+                },
+                "minecraft:attribute_modifiers": {
+                  "modifiers": [
+                    {
+                      "uuid": [
+                        -3172894,
+                        5637193,
+                        1130300229,
+                        -1319199100
+                      ],
+                      "type": "generic.attack_damage",
+                      "name": "generic.attack_damage",
+                      "amount": 5,
+                      "operation": "add_value",
+                      "slot": "mainhand"
+                    },
+                    {
+                      "uuid": [
+                        -990210,
+                        13617838,
+                        111189401,
+                        -778897409
+                      ],
+                      "type": "generic.attack_speed",
+                      "name": "generic.attack_speed",
+                      "amount": -2,
+                      "operation": "add_value",
+                      "slot": "mainhand"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "text": "Throwing Blade"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "text": "A high damage ranged weapon that comes back to you."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "color": "gray",
+                  "italic": false,
+                  "text": "When in Main Hand:"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 5 Attack Damage"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 2 Attack Speed"
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,20 +1,20 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "criteria": {
-        "healer_stick": {
-            "trigger": "minecraft:entity_killed_player",
-            "conditions": {
-                "entity": {
-                    "type": "minecraft:player",
-                    "equipment": {
-                        "mainhand": {
-                            "items": [
-                                "minecraft:music_disc_chirp"
-                            ]
-                        }
-                    }
+      "requirement": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "killing_blow": {
+            "source_entity": {
+              "type": "minecraft:player",
+              "equipment": {
+                "mainhand": {
+                  "items": "minecraft:music_disc_chirp"
                 }
+              }
             }
+          }
         }
+      }
     }
-}
+  }
+  

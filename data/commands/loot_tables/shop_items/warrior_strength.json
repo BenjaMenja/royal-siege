@@ -8,12 +8,36 @@
           "name": "minecraft:potion",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": 1
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Warrior Strength",
+                "italic": false
+              }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Strength Potion\"}',Lore:['{\"text\":\"A long lasting strength potion.\"}']},custom_potion_effects:[{id:\"minecraft:strength\",amplifier:0b,duration:1000}],CustomPotionColor:8519680}"
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "A long lasting strength potion."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 8519680,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:strength",
+                      "amplifier": 0,
+                      "duration": 1000,
+                      "show_particles": false
+                    }
+                  ]
+                }
+              }
             }
           ]
         }

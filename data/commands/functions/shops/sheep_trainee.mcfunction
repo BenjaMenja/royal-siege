@@ -1,9 +1,5 @@
-tag @s add purchase
+loot give @s[team=Red,scores={Money=400..}] loot commands:shop_items/sheep_trainee_red
 
-give @s[team=Red,tag=purchase,scores={Money=400..}] minecraft:sheep_spawn_egg{HideFlags:16,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Sheep Trainee","color":"dark_aqua","italic":false}',Lore:['{"text":"A pet sheep that gives resistance to nearby teammates."}','{"text":"Moves very slowly and has decent health."}']},sheeptrainee:1b,EntityTag:{Team:"Red",Health:50f,Color:14b,Tags:["sheepred"],ArmorItems:[{},{},{id:"minecraft:acacia_fence",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-.75,Operation:1,UUID:[I;501896821,1792888229,-1165037337,-1977757348],Slot:"chest"}]}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],Attributes:[{Name:generic.max_health,Base:50},{Name:generic.knockback_resistance,Base:1.0}]}} 1
-
-give @s[team=Blue,tag=purchase,scores={Money=400..}] minecraft:sheep_spawn_egg{HideFlags:16,CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Sheep Trainee","color":"dark_aqua","italic":false}',Lore:['{"text":"A pet sheep that gives resistance to nearby teammates."}','{"text":"Moves very slowly and has decent health."}']},sheeptrainee:1b,EntityTag:{Team:"Blue",Health:50f,Color:11b,Tags:["sheepblue"],ArmorItems:[{},{},{id:"minecraft:acacia_fence",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-.75,Operation:1,UUID:[I;501896821,1792888229,-1165037337,-1977757348],Slot:"chest"}]}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],Attributes:[{Name:generic.max_health,Base:50},{Name:generic.knockback_resistance,Base:1.0}]}} 1
+loot give @s[team=Blue,scores={Money=400..}] loot commands:shop_items/sheep_trainee_blue
 
 scoreboard players remove @s[scores={Money=400..}] Money 400
-
-tag @s remove purchase

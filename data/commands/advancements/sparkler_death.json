@@ -7,10 +7,10 @@
           "type": "minecraft:player",
           "equipment": {
             "mainhand": {
-              "items": [
-                "minecraft:carrot_on_a_stick"
-              ],
-              "nbt": "{sparklerunlit:1b}"
+              "items": "minecraft:carrot_on_a_stick",
+              "predicates": {
+                "minecraft:custom_data": "{sparklerunlit:1b}"
+              }
             }
           }
         }
@@ -23,10 +23,10 @@
           "type": "minecraft:player",
           "equipment": {
             "mainhand": {
-              "items": [
-                "minecraft:carrot_on_a_stick"
-              ],
-              "nbt": "{sparkler:1b}"
+              "items": "minecraft:carrot_on_a_stick",
+              "predicates": {
+                "minecraft:custom_data": "{sparkler:1b}"
+              }
             }
           }
         }

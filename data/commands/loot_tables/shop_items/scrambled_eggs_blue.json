@@ -8,8 +8,45 @@
           "name": "minecraft:carrot_on_a_stick",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:102,display:{Name:'{\"text\":\"Scrambled Eggs\",\"color\":\"yellow\",\"italic\":false}',Lore:['{\"text\":\"Right-Click to use\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Shoots a scrambling egg.\"}','{\"text\":\"Scrambles up an enemy\\'s hotbar when hit.\"}']},Unbreakable:1b,scrambledeggs:1b,scrambledeggsblue:1b,Enchantments:[{}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Scrambled Eggs",
+                "color": "yellow",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Shoots a scrambling egg."
+                },
+                {
+                  "text": "Scrambles up an enemy's hotbar when hit."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{scrambledeggsblue:1b,scrambledeggs:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 102,
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                }
+              }
             }
           ]
         }

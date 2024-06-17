@@ -14,7 +14,7 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute unless entity @a[scores={castleChain=..600}] run tag @s add castleChain
 
-execute unless entity @a[scores={castleChain=..600}] run clear @s carrot_on_a_stick{castlechain:1b} 1
+execute unless entity @a[scores={castleChain=..600}] run clear @s carrot_on_a_stick[custom_data~{castlechain:1b}] 1
 
 execute unless entity @a[scores={castleChain=..600}] run tellraw @a {"text":"A mysterious chain has appeared on the battlefield!","color":"aqua"}
 

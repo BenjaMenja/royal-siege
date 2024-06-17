@@ -1,16 +1,15 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:entity_killed_player",
-        "conditions": {
-          "entity": {
-            "type": "minecraft:player",
-            "equipment": {
-              "mainhand": {
-                "items": [
-                  "minecraft:stick"
-                ],
-                "nbt": "{magicwand:1b}"
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player",
+          "equipment": {
+            "mainhand": {
+              "items": "minecraft:stick",
+              "predicates": {
+                "minecraft:custom_data": "{magicwand:1b}"
               }
             }
           }
@@ -18,4 +17,4 @@
       }
     }
   }
-  
+}

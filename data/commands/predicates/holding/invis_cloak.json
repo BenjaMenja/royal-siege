@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{inviscloak:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{inviscloak:1b}"
+        }
       }
     }
   }

@@ -2,6 +2,6 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "nbt": "{Inventory:[{tag:{DefensiveSpell:1b}}]}"
+    "nbt": "{Inventory:[{components:{\"minecraft:custom_data\":{DefensiveSpell:1b}}}]}"
   }
 }

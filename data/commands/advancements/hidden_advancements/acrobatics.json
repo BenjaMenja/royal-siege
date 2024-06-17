@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:chain"
+      "id": "minecraft:chain"
     },
     "title": "Acrobatics",
     "description": "Kill a player while standing on the castle chains.",

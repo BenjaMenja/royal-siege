@@ -1,0 +1,42 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Illegal Modifiers",
+                "color": "#7A1414",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Boosts the attack speed of your gunblade when in your offhand."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 45
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{illegalmodifiers:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

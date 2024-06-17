@@ -15,8 +15,19 @@
               }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Exp. Bomb\"}',Lore:['{\"text\":\"An experience bottle loaded with explosives.\"}']}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Exp. Bomb"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "An experience bottle loaded with explosives."
+                }
+              ],
+              "mode": "insert"
             }
           ]
         }

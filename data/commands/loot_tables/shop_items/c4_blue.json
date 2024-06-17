@@ -8,12 +8,39 @@
           "name": "minecraft:carrot_on_a_stick",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": 1
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Detonator",
+                "italic": false
+              }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:40,display:{Name:'{\"text\":\"Detonator\"}',Lore:['{\"text\":\"Right-Click to use\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Detonates all active C4.\"}']},HideFlags:1,Enchantments:[{}],detonatorBlue:1b}"
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Detonates all active C4."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{detonatorRed:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 40,
+                "minecraft:enchantment_glint_override": true
+              }
             }
           ]
         }
@@ -27,12 +54,57 @@
           "name": "minecraft:bat_spawn_egg",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": 1
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "C4",
+                "italic": false
+              }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:39,CanPlaceOn:[\"#commands:can_place_on\"],HideFlags:16,display:{Name:'{\"text\":\"C4\"}',Lore:['{\"text\":\"Placeable\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Plants a c4 explosive on the ground.\"}','{\"text\":\"The c4 can be detonated with the detonator.\"}','{\"text\":\"The explosion can damage everything, including teammates.\"}']},EntityTag:{Silent:1b,Invulnerable:1b,Tags:[\"c4blue\"]},cfourblue:1b}"
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Placeable",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Plants a c4 explosive on the ground."
+                },
+                {
+                  "text": "The c4 can be detonated with the detonator."
+                },
+                {
+                  "text": "The explosion can damage everything, including teammates."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 39,
+                "minecraft:can_place_on": {
+                  "blocks": "#commands:can_place_on"
+                },
+                "minecraft:entity_data": {
+                  "id": "minecraft:bat",
+                  "Silent": 1,
+                  "Invulnerable": 1,
+                  "Tags": [
+                    "c4blue"
+                  ]
+                }
+              }
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:can_place_on": false
+              }
             }
           ]
         }

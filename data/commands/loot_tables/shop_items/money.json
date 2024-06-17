@@ -8,15 +8,32 @@
           "name": "minecraft:gold_ingot",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 6
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Siege Coin",
+                "color": "#FFCC00",
+                "italic": false
               }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{moneyitem:1b,Enchantments:[{}],HideFlags:1,CustomModelData:148,display:{Name:'{\"text\":\"Siege Coin\",\"color\":\"#FFCC00\",\"italic\":false}',Lore:['{\"text\":\"Throw into the gold pit at your castle to convert into Siege Bucks.\"}']}}"
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Throw into the gold pit at your castle to convert into Siege Bucks."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 148,
+                "minecraft:enchantment_glint_override": true
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{moneyitem:1b}"
             }
           ]
         }

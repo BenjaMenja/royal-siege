@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{multibarrelattachment:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{multibarrelattachment:1b}"
+        }
       }
     }
   }

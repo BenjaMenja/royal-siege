@@ -8,8 +8,51 @@
           "name": "minecraft:bat_spawn_egg",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CanPlaceOn:[\"#commands:can_place_on\"],display:{Name:'{\"text\":\"Hatchlings\",\"color\":\"#4300A8\",\"italic\":false}',Lore:['{\"text\":\"Placeable\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Spawns 3 hatchling minions that chase enemies.\"}','{\"text\":\"Up to 10 can exist at once.\"}']},HideFlags:16,CustomModelData:112,hatchlingsblue:1b,EntityTag:{Tags:[\"hatchlingsblue\",\"hatchlings\"]}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Hatchlings",
+                "color": "#4300A8",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Placeable",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Spawns 3 hatchling minions that chase enemies."
+                },
+                {
+                  "text": "Up to 10 can exist at once."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 112,
+                "minecraft:can_place_on": {
+                  "blocks": "#commands:can_place_on"
+                }
+              }
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:can_place_on": false
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{hatchlingsblue:1b,EntityTag:{Tags:[\"hatchlingsblue\",\"hatchlings\"]}}"
             }
           ]
         }

@@ -8,12 +8,79 @@
           "name": "minecraft:iron_sword",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": 1
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Poison Dagger",
+                "color": "dark_green",
+                "italic": false
+              }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Poison Dagger\",\"color\":\"dark_green\"}',Lore:['{\"text\":\"Poisons enemies when you attack them.\"}','{\"text\":\" \"}','{\"text\":\"When in Main Hand:\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" 7 Attack Damage\",\"color\":\"dark_green\",\"italic\":false}','{\"text\":\" 2 Attack Speed\",\"color\":\"dark_green\",\"italic\":false}']},HideFlags:2,Unbreakable:1b,CustomModelData:61,poison:1b,Enchantments:[{}],AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:7,Operation:0,UUID:[I;601537025,-978695706,-1569640540,1471667248],Slot:\"mainhand\"},{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-2,Operation:0,UUID:[I;106708932,609960793,-1485232461,-1011000496],Slot:\"mainhand\"}]}"
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Poisons enemies when you attack them."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "When in Main Hand:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " 7 Attack Damage",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 2 Attack Speed",
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 61,
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "generic.attack_damage",
+                  "amount": 7,
+                  "operation": "add_value",
+                  "id": "f39bc6bb-fc9f-4c29-8f23-929fccf5ac37",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "generic.attack_speed",
+                  "amount": -2,
+                  "operation": "add_value",
+                  "id": "b7bd0fa1-1763-4988-b73c-d37787d9c05b",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{poison:1b}"
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
             }
           ]
         }

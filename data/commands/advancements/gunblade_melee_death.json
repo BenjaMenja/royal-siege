@@ -7,15 +7,20 @@
           "type": "minecraft:player",
           "equipment": {
             "mainhand": {
-              "nbt": "{gunblade:1b}",
-              "items": [
-                "minecraft:carrot_on_a_stick"
-              ]
+              "items": "minecraft:carrot_on_a_stick",
+              "predicates": {
+                "minecraft:custom_data": "{gunblade:1b}"
+              }
             }
           }
         },
         "killing_blow": {
-          "is_projectile": false
+          "tags": [
+            {
+              "id": "minecraft:is_projectile",
+              "expected": false
+            }
+          ]
         }
       }
     }

@@ -8,8 +8,42 @@
           "name": "minecraft:carrot_on_a_stick",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Outrage\",\"color\":\"#B74AFF\",\"italic\":false}',Lore:['{\"text\":\"Right-Click to use\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Fly into a rage, increasing your damage and speed for 8 seconds.\"}','{\"text\":\"Failure to land a killing blow for the duration will stun you, hindering your movement and damage.\"}']},CustomModelData:111,outrage:1b}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Outrage",
+                "color": "#B74AFF",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Fly into a rage, increasing your damage and speed for 8 seconds."
+                },
+                {
+                  "text": "Failure to land a killing blow for the duration will stun you, hindering your movement and damage."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{outrage:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 111
+              }
             }
           ]
         }

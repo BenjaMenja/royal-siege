@@ -8,8 +8,28 @@
           "name": "minecraft:rose_bush",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Thorn Bush\"}',Lore:['{\"text\":\"A thorny bush with very high thorns.\"}']},HideFlags:1,Enchantments:[{id:\"minecraft:thorns\",lvl:11s}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Thorn Bush",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "A thorny bush with very high thorns."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantments": {
+                  "minecraft:thorns": 11
+                }
+              }
             }
           ]
         }

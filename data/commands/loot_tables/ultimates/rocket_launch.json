@@ -1,0 +1,54 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Rocket Launch",
+                  "color": "dark_red",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Right-Click to use",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "text": "After a short delay, launches a rocket into the air."
+                  },
+                  {
+                    "text": "The rocket will come crashing down, creating a gigantic explosion."
+                  }
+                ],
+                "mode": "insert"
+              },
+              {
+                "function": "minecraft:set_custom_data",
+                "tag": "{ultimateitem:1b,rocketlaunch:1b}"
+              },
+              {
+                "function": "minecraft:set_components",
+                "components": {
+                  "minecraft:custom_model_data": 177
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

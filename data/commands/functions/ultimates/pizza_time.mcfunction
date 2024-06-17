@@ -6,4 +6,4 @@ execute if entity @s[team=Red] run tellraw @a [{"selector":"@a[limit=1,team=Red,
 
 execute if entity @s[team=Blue] run tellraw @a [{"selector":"@a[limit=1,team=Blue,scores={Ultimate=22}]"},{"text":"'s ovens are overloaded!"}]
 
-clear @s carrot_on_a_stick{pizzatime:1b} 1
+clear @s carrot_on_a_stick[custom_data~{pizzatime:1b}] 1

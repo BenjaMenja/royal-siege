@@ -1,4 +1,4 @@
-particle dust 0.000 0.000 0.000 1 ~ ~ ~ 2.5 1 2.5 1 100 normal
+particle dust{color:[0.000,0.000,0.000],scale:1} ~ ~ ~ 2.5 1 2.5 1 100 normal
 
 execute at @s[team=Red] run effect give @a[team=Blue,distance=..8] instant_damage 1 0 true
 

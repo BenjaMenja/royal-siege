@@ -15,8 +15,35 @@
               }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Chicken Bomb\"}',Lore:['{\"text\":\"If a chicken hatches from the egg,\"}','{\"text\":\"it will violently explode.\"}']},HideFlags:1,Enchantments:[{}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Chicken Bomb",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "If a chicken hatches from the egg,"
+                },
+                {
+                  "text": "it will violently explode."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true
+              }
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:enchantments": false
+              }
             }
           ]
         }

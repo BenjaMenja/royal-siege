@@ -1,0 +1,52 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_leggings",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantments": {
+                  "minecraft:protection": 1,
+                  "minecraft:projectile_protection": 1
+                },
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": true
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "generic.armor",
+                  "amount": 5,
+                  "operation": "add_value",
+                  "id": "b2fef085-660e-4e6d-b3ee-5b26378f0c72",
+                  "slot": "legs"
+                },
+                {
+                  "attribute": "minecraft:generic.knockback_resistance",
+                  "name": "generic.knockback_resistance",
+                  "amount": 1,
+                  "operation": "add_multiplied_base",
+                  "id": "9be125db-3004-4608-afa5-c7fd9ab4081e",
+                  "slot": "legs"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{ironwalllegs:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

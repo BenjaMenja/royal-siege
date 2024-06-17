@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{disable:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{disable:1b}"
+        }
       }
     }
   }

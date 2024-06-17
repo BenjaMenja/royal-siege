@@ -1,3 +1,3 @@
-give @s[scores={Money=400..}] stick{display:{Name:'{"text":"Knockback Stick","italic":false}',Lore:['{"text":"A simple stick with high knockback."}']},HideFlags:2,Enchantments:[{id:"minecraft:knockback",lvl:4s}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:2,Operation:0,UUID:[I;-3285911,271839051,37218214,-932101241],Slot:"mainhand"}]} 1
+loot give @s[scores={Money=400..}] loot commands:shop_items/knockback_stick
 
 scoreboard players remove @s[scores={Money=400..}] Money 400

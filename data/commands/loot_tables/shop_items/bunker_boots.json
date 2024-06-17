@@ -1,0 +1,79 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_boots",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Bunker Boots",
+                "color": "#224225",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "A sturdy pair of boots that increases your speed when near a burning enemy."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantments": {
+                  "minecraft:protection": 2,
+                  "minecraft:blast_protection": 3,
+                  "minecraft:projectile_protection": 2
+                },
+                "minecraft:dyed_color": {
+                  "rgb": 2245157
+                },
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{bunkerboots:1b}"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "generic.armor",
+                  "amount": 2,
+                  "operation": "add_value",
+                  "id": "527768e0-7ea8-4b61-8aab-474c3a1570b9",
+                  "slot": "feet"
+                },
+                {
+                  "attribute": "minecraft:generic.movement_speed",
+                  "name": "generic.movement_speed",
+                  "amount": 0.2,
+                  "operation": "add_multiplied_base",
+                  "id": "521aec61-b40b-456d-9f08-c91fd11c3099",
+                  "slot": "feet"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

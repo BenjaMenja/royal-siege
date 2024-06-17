@@ -8,12 +8,45 @@
           "name": "minecraft:guardian_spawn_egg",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": 1
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Guardian Minion"
+              }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CanPlaceOn:[\"#commands:can_place_on\"],HideFlags:16,display:{Name:'{\"text\":\"Guardian Minion\"}',Lore:['{\"text\":\"Placeable\",\"color\":\"yellow\",\"italic\":false}','{\"text\":\" \"}','{\"text\":\"Summons a guardian to fight for your team.\"}']},EntityTag:{Team:\"Red\",Health:35f,Attributes:[{Name:generic.max_health,Base:35},{Name:generic.attack_damage,Base:9}]}}"
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Placeable",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Summons a guardian to fight for your team."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:can_place_on": {
+                  "blocks": "#commands:can_place_on"
+                }
+              }
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:can_place_on": false
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{EntityTag:{Team:\"Red\",Health:35f,Attributes:[{Name:generic.max_health,Base:35},{Name:generic.attack_damage,Base:9}]}}"
             }
           ]
         }

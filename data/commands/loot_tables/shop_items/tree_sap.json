@@ -8,8 +8,51 @@
           "name": "minecraft:potion",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Tree Sap\"}',Lore:['{\"text\":\"A healthy drink for trees.\"}']},custom_potion_effects:[{id:\"minecraft:instant_health\",amplifier:0b,duration:1},{id:\"minecraft:regeneration\",amplifier:1b,duration:300},{id:\"minecraft:absorption\",amplifier:0b,duration:1200},{id:\"minecraft:strength\",amplifier:0b,duration:600}],CustomPotionColor:13958912}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Tree Sap",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "A healthy drink for trees."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 13958912,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:strength",
+                      "amplifier": 0,
+                      "duration": 600,
+                      "show_particles": false
+                    },
+                    {
+                      "id": "minecraft:regeneration",
+                      "amplifier": 1,
+                      "duration": 300
+                    },
+                    {
+                      "id": "minecraft:instant_health",
+                      "amplifier": 0,
+                      "duration": 1
+                    },
+                    {
+                      "id": "minecraft:absorption",
+                      "amplifier": 0,
+                      "duration": 1200
+                    }
+                  ]
+                }
+              }
             }
           ]
         }

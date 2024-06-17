@@ -1,0 +1,49 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:leather_boots",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:enchantments": {
+                  "levels": {
+                    "minecraft:blast_protection": 1,
+                    "minecraft:projectile_protection": 1,
+                    "minecraft:protection": 1
+                  }
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "uuid": [
+                      -381391,
+                      61789132,
+                      61893912,
+                      9010387
+                    ],
+                    "type": "generic.armor",
+                    "name": "generic.armor",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "feet"
+                  }
+                ],
+                "minecraft:dyed_color": 1644825
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

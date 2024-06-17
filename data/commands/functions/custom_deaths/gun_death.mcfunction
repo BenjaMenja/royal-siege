@@ -1,6 +1,6 @@
 loot spawn ~ -5 ~ loot commands:rng/gun_death
-execute as @e[type=item,nbt={Item:{tag:{gun_death:1b}}}] store result score #rng RNG run data get entity @s Item.tag.AttributeModifiers.[{}].Amount
-kill @e[type=item,nbt={Item:{tag:{gun_death:1b}}}]
+execute as @e[type=item] if data entity @s Item.components.minecraft:custom_data.gun_death store result score #rng RNG run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
+kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{gun_death:1b}}}}]
 
 execute if score #rng RNG matches 1 if entity @a[scores={Message=1..},team=Red] run tellraw @a [{"selector":"@s[team=Red] "},{"text":" was gunned down by ","color":"white"},{"selector":"@a[team=Blue,scores={Kit=10}]"}]
 

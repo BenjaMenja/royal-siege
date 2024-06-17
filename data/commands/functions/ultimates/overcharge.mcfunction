@@ -18,4 +18,4 @@ execute at @s run playsound minecraft:entity.zombie.ambient master @a ~ ~ ~ 1 0
 
 tellraw @a [{"selector":"@s"},{"text":"'s minions are pulsing with energy!"}]
 
-clear @s carrot_on_a_stick{overcharge:1b}
+clear @s carrot_on_a_stick[custom_data~{overcharge:1b}]

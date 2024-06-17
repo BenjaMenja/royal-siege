@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{rocketlaunch:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{rocketlaunch:1b}"
+        }
       }
     }
   }

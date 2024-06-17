@@ -8,10 +8,10 @@
             "type": "minecraft:player",
             "equipment": {
               "mainhand": {
-                "nbt": "{anchor:1b}",
-                "items": [
-                  "minecraft:iron_pickaxe"
-                ]
+                "items": "minecraft:iron_pickaxe",
+                "predicates": {
+                  "minecraft:custom_data": "{anchor:1b}"
+                }
               }
             }
           }

@@ -10,6 +10,6 @@ tag @e[type=boat,limit=1,tag=flyingdutchman,tag=!stop] add stop
 
 tellraw @a [{"selector":"@s"},{"text":" be pillaging the seven seas!"}]
 
-clear @s carrot_on_a_stick{flyingdutchman:1b}
+clear @s carrot_on_a_stick[custom_data~{flyingdutchman:1b}]
 
 

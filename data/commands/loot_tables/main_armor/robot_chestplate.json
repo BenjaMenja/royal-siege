@@ -1,0 +1,61 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:iron_chestplate",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:enchantments": {
+                  "levels": {
+                    "minecraft:blast_protection": 1,
+                    "minecraft:projectile_protection": 1,
+                    "minecraft:protection": 1
+                  }
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "uuid": [
+                      -99001035,
+                      31859531,
+                      889100059,
+                      -316787892
+                    ],
+                    "type": "generic.armor",
+                    "name": "generic.armor",
+                    "amount": 6,
+                    "operation": "add_value",
+                    "slot": "chest"
+                  },
+                  {
+                    "uuid": [
+                      557491,
+                      -65794190,
+                      312749215,
+                      84014151
+                    ],
+                    "type": "generic.movement_speed",
+                    "name": "generic.movement_speed",
+                    "amount": -0.1,
+                    "operation": "add_multiplied_base",
+                    "slot": "chest"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

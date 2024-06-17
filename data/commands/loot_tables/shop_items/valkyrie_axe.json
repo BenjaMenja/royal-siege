@@ -8,8 +8,80 @@
           "name": "minecraft:iron_axe",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Valkyrie Axe\"}',Lore:['{\"text\":\"A high damage axe with a slow attack speed.\"}','{\"text\":\" \"}','{\"text\":\"When in Main Hand:\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" 13 Attack Damage\",\"color\":\"dark_green\",\"italic\":false}','{\"text\":\" 0.65 Attack Speed\",\"color\":\"dark_green\",\"italic\":false}']},HideFlags:2,Unbreakable:1b,valkyrieaxe:1b,Enchantments:[{id:\"minecraft:knockback\",lvl:3s}],AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-3.35,Operation:0,UUID:[I;-1384332004,675103578,-1170628146,-1120017965],Slot:\"mainhand\"},{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:13,Operation:0,UUID:[I;747942962,523060152,-1530214356,842403582],Slot:\"mainhand\"}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Valkyrie Axe"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "A high damage axe with a slow attack speed."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "When in Main Hand:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " 13 Attack Damage",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 0.65 Attack Speed",
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 61,
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
+                "minecraft:enchantments": {
+                  "minecraft:knockback": 3
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "generic.attack_damage",
+                  "amount": 13,
+                  "operation": "add_value",
+                  "id": "2caedcb2-b0c8-4564-bcbc-0abb3eec5ad1",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "generic.attack_speed",
+                  "amount": -3.35,
+                  "operation": "add_value",
+                  "id": "d4b72c9e-7dfb-42e2-b667-ec381eec93e9",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{valkyrieaxe:1b}"
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
             }
           ]
         }

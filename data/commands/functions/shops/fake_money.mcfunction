@@ -1,7 +1,5 @@
-tag @s add purchase
+loot give @s[scores={Money=500..},team=Red] loot commands:shop_items/fake_money_pack_red
 
-give @s[scores={Money=500..},team=Red,tag=purchase] gold_ingot{CustomModelData:148,display:{Name:'{"text":"Fake Money","italic":false}',Lore:['{"text":"Throw onto the ground and watch an unsuspecting enemy explode!"}']},HideFlags:1,Enchantments:[{}],fakemoneyred:1b,fakemoney:1b} 3
-
-give @s[scores={Money=500..},team=Blue,tag=purchase] gold_ingot{CustomModelData:148,display:{Name:'{"text":"Fake Money","italic":false}',Lore:['{"text":"Throw onto the ground and watch an unsuspecting enemy explode!"}']},HideFlags:1,Enchantments:[{}],fakemoneyblue:1b,fakemoney:1b} 3
+loot give @s[scores={Money=500..},team=Blue] loot commands:shop_items/fake_money_pack_blue
 
 scoreboard players remove @s[scores={Money=500..}] Money 500

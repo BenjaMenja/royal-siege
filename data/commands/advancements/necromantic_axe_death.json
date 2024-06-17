@@ -8,10 +8,10 @@
             "type": "minecraft:player",
             "equipment": {
               "mainhand": {
-                "items": [
-                  "minecraft:stone_axe"
-                ],
-                "nbt": "{necroaxe:1b}"
+                "items": "minecraft:stone_axe",
+                "predicates": {
+                  "minecraft:custom_data": "{necroaxe:1b}"
+                }
               }
             }
           }

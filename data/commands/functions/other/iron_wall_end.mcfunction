@@ -1,6 +1,6 @@
-clear @s iron_leggings{ironwalllegs:1b}
+clear @s iron_leggings[custom_data~{ironwalllegs:1b}]
 
-item replace entity @s armor.legs with iron_leggings{Unbreakable:1b,Enchantments:[{id:"minecraft:protection",lvl:1s},{id:"minecraft:projectile_protection",lvl:1s}]} 1
+loot replace entity @s armor.legs loot commands:main_armor/robot_leggings
 
 tag @s remove iron_wall
 

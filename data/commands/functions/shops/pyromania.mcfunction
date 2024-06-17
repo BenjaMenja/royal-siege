@@ -1,3 +1,3 @@
-give @s[scores={Money=650..}] minecraft:carrot_on_a_stick{display:{Name:'{"text":"Pyromania","color":"#FF4F4F","italic":false}',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Deals 5 damage to yourself to increase your movement speed by 30%"}','{"text":"and attack damage by 1."}','{"text":"Effects are increased to +40% movement speed and +2 attack damage"}','{"text":"while you are on fire."}','{"text":"The increased stats persist even if you are no longer on fire before the buff expires."}','{"text":"Lasts 5s, and can be used every 24s."}']},HideFlags:4,Unbreakable:1b,CustomModelData:191,pyromania:1b} 1
+loot give @s[scores={Money=650..}] loot commands:shop_items/pyromania
 
 scoreboard players remove @s[scores={Money=650..}] Money 650

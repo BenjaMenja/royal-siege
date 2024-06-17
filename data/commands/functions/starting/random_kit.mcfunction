@@ -1,10 +1,10 @@
 loot spawn ~ -5 ~ loot commands:rng/random_kit
 
-execute as @e[type=item,nbt={Item:{tag:{randomkit:1b}}}] if entity @a[tag=randomKit,team=Red] store result score #rngRed RNG run data get entity @s Item.tag.AttributeModifiers.[{}].Amount
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{randomkit:1b}}}}] if entity @a[tag=randomKit,team=Red] store result score #rngRed RNG run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
 
-execute as @e[type=item,nbt={Item:{tag:{randomkit:1b}}}] if entity @a[tag=randomKit,team=Blue] store result score #rngBlue RNG run data get entity @s Item.tag.AttributeModifiers.[{}].Amount
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{randomkit:1b}}}}] if entity @a[tag=randomKit,team=Blue] store result score #rngBlue RNG run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
 
-kill @e[type=item,nbt={Item:{tag:{randomkit:1b}}}]
+kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{randomkit:1b}}}}]
 
 execute as @a[team=Red] if score #rngRed RNG = @s Kit run function commands:starting/random_kit
 

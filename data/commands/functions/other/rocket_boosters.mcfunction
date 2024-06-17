@@ -4,4 +4,4 @@ execute if entity @s[team=Blue] as @a[team=Blue,distance=..10] run function comm
 
 #Playsound goes here#
 
-clear @s carrot_on_a_stick{rocketboosters:1b}
+clear @s carrot_on_a_stick[custom_data~{rocketboosters:1b}]

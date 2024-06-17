@@ -1,0 +1,67 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:custom_model_data": 32,
+                "minecraft:custom_data": {
+                  "rootingspellblue": 1,
+                  "rootingspell": 1
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "#228A12",
+                  "italic": false,
+                  "text": "Rooting Spell"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "color": "yellow",
+                  "italic": false,
+                  "text": "Right-Click to use"
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Right click to shoot a rooting beam."
+                },
+                {
+                  "text": "Successful hits will root an enemy,"
+                },
+                {
+                  "text": "freezing them in place for a short time."
+                },
+                {
+                  "text": "Has a maximum range of 10 blocks."
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

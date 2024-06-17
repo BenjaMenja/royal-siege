@@ -1,0 +1,59 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bat_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Tree of Life",
+                "color": "#22FF00",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Placeable",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Sprouts a tree from the ground that provides healing to allies and damage to enemies."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 78,
+                "minecraft:can_place_on": {
+                  "blocks": "#commands:can_place_on"
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{EntityTag:{id:\"bat\",Silent:1b,Invulnerable:1b,Tags:[\"TreeBlue\",\"Tree\"]},ultimateitem:1b,treeoflifeblue:1b,treeoflife:2b}"
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:can_place_on": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

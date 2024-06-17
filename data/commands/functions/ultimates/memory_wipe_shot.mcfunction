@@ -1,6 +1,6 @@
-execute at @s[team=Red] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["mWipeRed","mWipe","redProj","ultimateProj"],Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:82}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["mWipeRed","mWipe","redProj","ultimateProj"],Item:{id:"minecraft:carrot_on_a_stick",count:1,components:{"minecraft:custom_model_data":82}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["mWipeBlue","mWipe","blueProj","ultimateProj"],Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:82}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["mWipeBlue","mWipe","blueProj","ultimateProj"],Item:{id:"minecraft:carrot_on_a_stick",count:1,components:{"minecraft:custom_model_data":82}}}
 
 execute as @e[tag=mWipe] run data modify entity @s Owner set from entity @s UUID
 
@@ -34,4 +34,4 @@ tag @e[tag=mWipe] add stop
 
 tag @s remove mWiper
 
-clear @s carrot_on_a_stick{memorywipe:1b} 1
+clear @s carrot_on_a_stick[custom_data~{memorywipe:1b}] 1

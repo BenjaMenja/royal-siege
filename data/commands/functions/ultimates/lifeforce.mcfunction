@@ -32,4 +32,4 @@ execute if entity @s[team=Blue] at @a[team=Blue] run particle happy_villager ~ ~
 
 tellraw @a [{"selector":"@s"},{"text":"'s team is full of life!"}]
 
-clear @s carrot_on_a_stick{lifeforce:1b}
+clear @s carrot_on_a_stick[custom_data~{lifeforce:1b}]

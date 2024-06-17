@@ -1,0 +1,100 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:iron_sword",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:custom_model_data": 155,
+                "minecraft:custom_data": {
+                  "lightdagger": 1
+                },
+                "minecraft:attribute_modifiers": {
+                  "modifiers": [
+                    {
+                      "type": "generic.attack_damage",
+                      "name": "generic.attack_damage",
+                      "amount": 7,
+                      "operation": "add_value",
+                      "uuid": [
+                        -203280780,
+                        -28228634,
+                        -1566550167,
+                        1776398043
+                      ],
+                      "slot": "mainhand"
+                    },
+                    {
+                      "type": "generic.attack_speed",
+                      "name": "generic.attack_speed",
+                      "amount": -2,
+                      "operation": "add_value",
+                      "uuid": [
+                        -1283380147,
+                        1761430834,
+                        -2085118708,
+                        -1818533977
+                      ],
+                      "slot": "mainhand"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "italic": false,
+                  "text": "Ninjato"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "text": "Sturdy and razor sharp, made the traditional way in Japan."
+                },
+                {
+                  "text": "You don’t want to know how many shifts at Taco Bell it took to get this."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "color": "gray",
+                  "italic": false,
+                  "text": "When in Main Hand:"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 7 Attack Damage"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 2 Attack Speed"
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

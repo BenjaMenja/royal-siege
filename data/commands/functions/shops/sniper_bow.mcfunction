@@ -1,3 +1,3 @@
-give @s[scores={Money=700..}] bow{CustomModelData:23,display:{Name:'{"text":"Sniper Bow","italic":false}',Lore:['{"text":"A powerful bow that slows your movement speed greatly."}']},Unbreakable:1b,Enchantments:[{id:"minecraft:power",lvl:7s},{id:"minecraft:punch",lvl:1s},{id:"minecraft:infinity",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.65,Operation:1,UUID:[I;-9312031,1231232151,102860313,185940820],Slot:"mainhand"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.65,Operation:1,UUID:[I;837183,-31920212,74,81932],Slot:"offhand"}],sniperbow:1b} 1
+loot give @s[scores={Money=700..}] loot commands:shop_items/sniper_bow
 
 scoreboard players remove @s[scores={Money=700..}] Money 700

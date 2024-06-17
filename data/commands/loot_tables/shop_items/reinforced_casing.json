@@ -8,8 +8,53 @@
           "name": "minecraft:iron_chestplate",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Reinforced Casing\"}'},Unbreakable:1b,Enchantments:[{id:\"minecraft:protection\",lvl:2s},{id:\"minecraft:blast_protection\",lvl:1s},{id:\"minecraft:projectile_protection\",lvl:3s}],AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:7,Operation:0,UUID:[I;-83901232,23821914,99012010,-1231232157],Slot:\"chest\"},{AttributeName:\"generic.armor_toughness\",Name:\"generic.armor_toughness\",Amount:2,Operation:0,UUID:[I;-77791239,5531278,55555,-39120145],Slot:\"chest\"}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Reinforced Casing"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Sturdier Casing = Sturdier Character!"
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 2,
+                  "minecraft:blast_protection": 1,
+                  "minecraft:projectile_protection": 3
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "generic.armor",
+                  "amount": 7,
+                  "operation": "add_value",
+                  "id": "01dec590-6551-4f92-8c38-f6d5447a6837",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.armor_toughness",
+                  "name": "generic.armor_toughness",
+                  "amount": 2,
+                  "operation": "add_value",
+                  "id": "02609a13-e953-45ad-83ef-bcfaa6e8529b",
+                  "slot": "chest"
+                }
+              ]
             }
           ]
         }

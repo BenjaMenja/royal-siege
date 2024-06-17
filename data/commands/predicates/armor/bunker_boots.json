@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "feet": {
-        "nbt": "{bunkerboots:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{bunkerboots:1b}"
+        }
       }
     }
   }

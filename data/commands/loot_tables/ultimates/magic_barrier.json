@@ -1,0 +1,59 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Magic Barrier",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Right-Click to use",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "text": "Surround everyone on you team with magical barriers."
+                  },
+                  {
+                    "text": "Anyone that attacks the barrier directly will become marked."
+                  },
+                  {
+                    "text": "The next attack a marked enemy suffers will deal much more damage."
+                  },
+                  {
+                    "text": "Shielded players have resistance III until their barrier is hit."
+                  }
+                ],
+                "mode": "insert"
+              },
+              {
+                "function": "minecraft:set_custom_data",
+                "tag": "{ultimateitem:1b,magicbarrier:1b}"
+              },
+              {
+                "function": "minecraft:set_components",
+                "components": {
+                  "minecraft:custom_model_data": 69
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

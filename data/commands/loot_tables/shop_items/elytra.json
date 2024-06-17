@@ -8,8 +8,28 @@
           "name": "minecraft:elytra",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{Unbreakable:1b,Enchantments:[{id:\"minecraft:protection\",lvl:1s},{id:\"minecraft:projectile_protection\",lvl:1s}],AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:3,Operation:0,UUID:[I;1343375569,-135052953,-1526275304,-750493210],Slot:\"chest\"}]}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 1,
+                  "minecraft:projectile_protection": 1
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "generic.armor",
+                  "amount": 3,
+                  "operation": "add_value",
+                  "slot": "chest"
+                }
+              ]
             }
           ]
         }

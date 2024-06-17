@@ -15,8 +15,27 @@
               }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Weakening Arrows\"}'},custom_potion_effects:[{id:\"minecraft:weakness\",amplifier:0b,duration:200}],CustomPotionColor:3355443}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Weakening Arrows",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 3355443,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:weakness",
+                      "amplifier": 0,
+                      "duration": 200,
+                      "show_particles": false
+                    }
+                  ]
+                }
+              }
             }
           ]
         }

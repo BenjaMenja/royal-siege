@@ -1,5 +1,5 @@
 scoreboard players set #hitentity ray.wrench 1
-execute at @s run particle dust 0.000 0.031 1.000 1 ~ ~ ~ 0.5 0.5 0.5 0 10 normal
+execute at @s run particle dust{color:[0.000,0.031,1.000],scale:1} ~ ~ ~ 0.5 0.5 0.5 0 10 normal
 tellraw @s [{"text":"You received an augment from ","color":"aqua"},{"selector":"@a[tag=wrenchUser]"},{"text":"!"}]
 tellraw @a[tag=wrenchUser] [{"text":"You augmented ","color":"aqua"},{"selector":"@s"},{"text":"!"}]
 scoreboard players set @a[tag=wrenchUser] wrenchTimer 600
@@ -29,9 +29,7 @@ tag @s[scores={Kit=8}] add wrenched
 
 execute if score @s Kit matches 9 run function commands:attributes/adds/add_poseidon_augment_atkdmg
 
-item replace entity @s[scores={Kit=10},tag=!upgraded] hotbar.8 with gunpowder{CustomModelData:14,display:{Name:'{"text":"Gunblade Ammo","color":"gray","italic":false}',Lore:['{"text":"Ammo for the Gunblade."}']},gunbladeammo:1b,Enchantments:[{}]} 15
-
-item replace entity @s[scores={Kit=10},tag=upgraded] hotbar.8 with gunpowder{CustomModelData:14,display:{Name:'{"text":"Gunblade Ammo","color":"gray","italic":false}',Lore:['{"text":"Ammo for the Gunblade."}']},gunbladeammo:1b,Enchantments:[{}]} 20
+execute if entity @s[scores={Kit=10}] run function commands:other/gunblade_reload
 
 scoreboard players set @s[scores={Kit=11}] damagePan 300
 

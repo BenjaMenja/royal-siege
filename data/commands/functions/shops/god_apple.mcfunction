@@ -1,3 +1,3 @@
-give @s[scores={Money=800..}] enchanted_golden_apple{display:{Name:'{"text":"God Apple","italic":false}'}} 1
+loot give @s[scores={Money=800..}] loot commands:shop_items/god_apple
 
 scoreboard players remove @s[scores={Money=800..}] Money 800

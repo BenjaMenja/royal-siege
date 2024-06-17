@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "feet": {
-        "nbt": "{jump:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{jump:1b}"
+        }
       }
     }
   }

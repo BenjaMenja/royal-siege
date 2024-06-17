@@ -1,0 +1,56 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Immortality",
+                "color": "#CEFF0A",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Enter a state of immortality for 7 seconds."
+                },
+                {
+                  "text": "All teammates in a 10 block radius below 10 Health will become immune to damage."
+                },
+                {
+                  "text": "Teammates can still die if they take fatal damage while above 10 Health."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{ultimateitem:1b,immortality:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 138
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

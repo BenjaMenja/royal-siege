@@ -1,0 +1,53 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:elder_guardian_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Terror of the Seas",
+                "color": "#0011FF",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Placeable",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Summons the terror of the seas."
+                },
+                {
+                  "text": "This elder guardian has increased stats and gives mining fatigue to all enemies."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{ultimateitem:1b,terroroftheseas:1b,terroroftheseasblue:1b,EntityTag:{Team:\"Blue\",Health:60f,Tags:[\"terrorBlue\",\"terror\"],Attributes:[{Name:\"minecraft:generic.max_health\",Base:60},{Name:\"minecraft:generic.attack_damage\",Base:25}]}}"
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:can_place_on": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

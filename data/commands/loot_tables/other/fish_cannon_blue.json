@@ -13,7 +13,7 @@
               "count": 1
             },
             {
-              "function": "set_nbt",
+              "function": "set_custom_data",
               "tag": "{fishcannonitemblue:1b,fishdamage:1b}"
             }
           ]
@@ -28,7 +28,7 @@
               "count": 1
             },
             {
-              "function": "set_nbt",
+              "function": "set_custom_data",
               "tag": "{fishcannonitemblue:1b,fishslow:1b}"
             }
           ]
@@ -43,7 +43,7 @@
               "count": 1
             },
             {
-              "function": "set_nbt",
+              "function": "set_custom_data",
               "tag": "{fishcannonitemblue:1b,fishpoison:1b}"
             }
           ]
@@ -58,7 +58,7 @@
               "count": 1
             },
             {
-              "function": "set_nbt",
+              "function": "set_custom_data",
               "tag": "{fishcannonitemblue:1b,fishexplode:1b}"
             }
           ]
@@ -66,14 +66,14 @@
         {
           "type": "item",
           "weight": 1,
-          "name": "minecraft:scute",
+          "name": "minecraft:turtle_scute",
           "functions": [
             {
               "function": "set_count",
               "count": 1
             },
             {
-              "function": "set_nbt",
+              "function": "set_custom_data",
               "tag": "{fishcannonitemblue:1b,fishnausea:1b}"
             }
           ]

@@ -8,8 +8,41 @@
           "name": "minecraft:quartz",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Health Stone\"}',Lore:['{\"text\":\"Grants you massively increased max health.\"}']},HideFlags:1,Enchantments:[{id:\"minecraft:luck_of_the_sea\",lvl:1s}],AttributeModifiers:[{AttributeName:\"generic.max_health\",Name:\"generic.max_health\",Amount:6,Operation:0,UUID:[I;-3219051,-774194214,-124512136,8320],Slot:\"offhand\"}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Health Stone",
+                "color": "#E6322F",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Grants you massively increased max health."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true,
+                "minecraft:custom_model_data": 56
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.max_health",
+                  "name": "generic.max_health",
+                  "amount": 6,
+                  "operation": "add_value",
+                  "id": "c686ce44-b521-4504-8bd0-6c49aa6b80eb",
+                  "slot": "offhand"
+                }
+              ]
             }
           ]
         }

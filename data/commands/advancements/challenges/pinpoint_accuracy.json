@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:bow"
+      "id": "minecraft:bow"
     },
     "title": "Pinpoint Accuracy",
     "description": "Kill a player from over 50 blocks away.",

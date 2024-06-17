@@ -8,8 +8,59 @@
           "name": "minecraft:shield",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Guarding Shield\"}',Lore:['{\"text\":\"Grants buffs to your allies when you deflect damage.\"}']},HideFlags:1,Unbreakable:1b,Enchantments:[{id:\"minecraft:unbreaking\",lvl:1s}],AttributeModifiers:[{AttributeName:\"generic.movement_speed\",Name:\"generic.movement_speed\",Amount:-0.1,Operation:1,UUID:[I;9002303,-73728229,-12449114,0],Slot:\"offhand\"},{AttributeName:\"generic.knockback_resistance\",Name:\"generic.knockback_resistance\",Amount:0.5,Operation:0,UUID:[I;83912021,-213891212,-73739103,131232115],Slot:\"offhand\"},{AttributeName:\"generic.max_health\",Name:\"generic.max_health\",Amount:6,Operation:0,UUID:[I;-83129231,730311414,213,-318931242],Slot:\"offhand\"}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Guarding Shield"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Grants buffs to your allies when you deflect damage."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantments": {
+                  "minecraft:unbreaking": 1
+                },
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.movement_speed",
+                  "name": "generic.movement_speed",
+                  "amount": -0.1,
+                  "operation": "add_multiplied_base",
+                  "id": "8b156f8a-4a17-451d-9a89-0d385ea99b51",
+                  "slot": "offhand"
+                },
+                {
+                  "attribute": "minecraft:generic.knockback_resistance",
+                  "name": "generic.knockback_resistance",
+                  "amount": 0.5,
+                  "operation": "add_multiplied_base",
+                  "id": "20fba788-7a0d-4939-9581-239312fc8c0a",
+                  "slot": "offhand"
+                },
+                {
+                  "attribute": "minecraft:generic.max_health",
+                  "name": "generic.max_health",
+                  "amount": 6,
+                  "operation": "add_value",
+                  "id": "0a2c8937-81b7-4bec-8595-84a6f70ca6ae",
+                  "slot": "offhand"
+                }
+              ]
             }
           ]
         }

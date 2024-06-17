@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:shield"
+      "id": "minecraft:shield"
     },
     "title": "S-Tier Defender",
     "description": "Deflect a bow of justice arrow with a shield.",

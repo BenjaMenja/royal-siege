@@ -1,0 +1,52 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_leggings",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:dyed_color": {
+                  "rgb": 3801175,
+                  "show_in_tooltip": false
+                },
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 1,
+                  "minecraft:blast_protection": 1
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "generic.armor",
+                  "amount": 3,
+                  "operation": "add_value",
+                  "id": "042556fb-4154-4234-a87b-1d96ce15bdd1",
+                  "slot": "legs"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "generic.attack_damage",
+                  "amount": 0.3,
+                  "operation": "add_multiplied_base",
+                  "id": "ec0b206c-fe14-4066-8c45-b1023eeb6c13",
+                  "slot": "legs"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

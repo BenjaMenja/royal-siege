@@ -8,12 +8,82 @@
           "name": "minecraft:iron_sword",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": 1
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Lifesteal Dagger",
+                "color": "red",
+                "italic": false
+              }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Lifesteal Dagger\",\"color\":\"red\"}',Lore:['{\"text\":\"Heals you if you get a kill with it.\"}','{\"text\":\" \"}','{\"text\":\" When in Main Hand:\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" 7 Attack Damage\",\"color\":\"dark_green\",\"italic\":false}','{\"text\":\" 2 Attack Speed\",\"color\":\"dark_green\",\"italic\":false}']},Unbreakable:1b,CustomModelData:58,lifesteal:1b,Enchantments:[{}],AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:7,Operation:0,UUID:[I;-695049456,1613449822,-1935804572,162341620],Slot:\"mainhand\"},{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-2,Operation:0,UUID:[I;-1797453144,-1203943838,-1910226769,1045822871],Slot:\"mainhand\"}]}"
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Heals you if you get a kill with it."
+                },
+                {
+                  "text": "Also grants Regeneration II for 1s on enemy hits."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "When in Main Hand:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " 7 Attack Damage",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 2 Attack Speed",
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 58,
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "generic.attack_damage",
+                  "amount": 7,
+                  "operation": "add_value",
+                  "id": "872fa6c1-731f-4324-929c-67e032d47b8a",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "generic.attack_speed",
+                  "amount": -2,
+                  "operation": "add_value",
+                  "id": "248574f2-bf56-4fc6-914d-ec03bdce99d2",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{lifesteal:1b}"
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
             }
           ]
         }

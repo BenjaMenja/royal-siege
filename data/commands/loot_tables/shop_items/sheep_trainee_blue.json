@@ -8,8 +8,28 @@
           "name": "minecraft:sheep_spawn_egg",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:16,CanPlaceOn:[\"#commands:can_place_on\"],display:{Name:'{\"text\":\"Sheep Trainee\",\"color\":\"dark_aqua\",\"italic\":false}',Lore:['{\"text\":\"A pet sheep that gives resistance to nearby teammates.\"}','{\"text\":\"Moves very slowly and has decent health.\"}']},sheeptrainee:1b,EntityTag:{Team:\"Blue\",Health:50f,Color:11b,Tags:[\"sheepblue\"],ArmorItems:[{},{},{id:\"minecraft:acacia_fence\",Count:1b,tag:{AttributeModifiers:[{AttributeName:\"generic.movement_speed\",Name:\"generic.movement_speed\",Amount:-.75,Operation:1,UUID:[I;501896821,1792888229,-1165037337,-1977757348],Slot:\"chest\"}]}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],Attributes:[{Name:generic.max_health,Base:50},{Name:generic.knockback_resistance,Base:1.0}]}}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Sheep Trainee",
+                "color": "dark_aqua",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "A pet sheep that gives resistance to nearby teammates."
+                },
+                {
+                  "text": "Moves very slowly and has decent health."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{sheeptrainee:1b,EntityTag:{Team:\"Blue\",Health:50f,Color:11b,Tags:[\"sheepblue\"],ArmorItems:[{},{},{id:\"minecraft:acacia_fence\",Count:1b,tag:{AttributeModifiers:[{AttributeName:\"generic.movement_speed\",Name:\"generic.movement_speed\",Amount:-.75,Operation:1,UUID:[I;501896821,1792888229,-1165037337,-1977757348],Slot:\"chest\"}]}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],Attributes:[{Name:generic.max_health,Base:50},{Name:generic.knockback_resistance,Base:1.0}]}}"
             }
           ]
         }

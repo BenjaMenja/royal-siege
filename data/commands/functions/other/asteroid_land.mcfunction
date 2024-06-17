@@ -8,7 +8,7 @@ loot spawn ~ ~1 ~0.25 loot commands:other/asteroid_shard
 
 loot spawn ~ ~1 ~-0.25 loot commands:other/asteroid_shard
 
-execute as @e[type=item,nbt={Item:{tag:{asteroidshard:1b}}}] run data merge entity @s {Health:1000,PickupDelay:32767,Tags:["asteroidshard"]}
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{asteroidshard:1b}}}}] run data merge entity @s {Health:1000,PickupDelay:32767,Tags:["asteroidshard"]}
 
 summon creeper ~ ~ ~ {ExplosionRadius:4b,ignited:1b,Fuse:2}
 

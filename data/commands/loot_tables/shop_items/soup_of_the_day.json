@@ -5,56 +5,393 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 1,
           "name": "minecraft:mushroom_stew",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:99,display:{Name:'{\"text\":\"Corn Chowder\",\"color\":\"yellow\",\"italic\":false}',Lore:['{\"text\":\" \"}','{\"text\":\"When in Main Hand:\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" 10 Attack Damage\",\"color\":\"dark_green\",\"italic\":false}','{\"text\":\" 1 Attack Speed\",\"color\":\"dark_green\",\"italic\":false}']},HideFlags:2,cornchowder:1b,soupoftheday:1b,Enchantments:[{id:\"minecraft:fire_aspect\",lvl:2s}],AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-3,Operation:0,UUID:[I;1281272503,1240024320,-1111182563,-2068492217],Slot:\"mainhand\"},{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:10,Operation:0,UUID:[I;768660085,-577091695,-1641940382,-1487671625],Slot:\"mainhand\"}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Corn Chowder",
+                "color": "yellow",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": " "
+                },
+                {
+                  "text": "When in Main Hand:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " 10 Attack Damage",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 1 Attack Speed",
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 99,
+                "minecraft:enchantments": {
+                  "minecraft:fire_aspect": 2
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{cornchowder:1b,soupoftheday:1b}"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "generic.attack_damage",
+                  "amount": 10,
+                  "operation": "add_value",
+                  "id": "5ff3d693-026f-446b-8893-6587edd668e6",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "generic.attack_speed",
+                  "amount": -3,
+                  "operation": "add_value",
+                  "id": "3f6bd0b7-ca43-4521-b269-6236f2bc5ec6",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "weight": 1,
           "name": "minecraft:mushroom_stew",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:98,display:{Name:'{\"text\":\"Split Pea Soup\",\"color\":\"yellow\",\"italic\":false}',Lore:['{\"text\":\" \"}','{\"text\":\"When in Main Hand:\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" 7 Attack Damage\",\"color\":\"dark_green\",\"italic\":false}','{\"text\":\" 0.9 Attack Speed\",\"color\":\"dark_green\",\"italic\":false}']},HideFlags:2,splitpeasoup:1b,soupoftheday:1b,Enchantments:[{}],AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-3.1,Operation:0,UUID:[I;584023540,-1199747720,-1595408439,1653362716],Slot:\"mainhand\"},{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:7,Operation:0,UUID:[I;1283699612,-335525616,-1521542759,2092170362],Slot:\"mainhand\"}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Split Pea Soup",
+                "color": "yellow",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": " "
+                },
+                {
+                  "text": "When in Main Hand:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " 7 Attack Damage",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 0.9 Attack Speed",
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 98,
+                "minecraft:enchantment_glint_override": true
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{splitpeasoup:1b,soupoftheday:1b}"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "generic.attack_damage",
+                  "amount": 7,
+                  "operation": "add_value",
+                  "id": "5ff3d693-026f-446b-8893-6587edd668e6",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "generic.attack_speed",
+                  "amount": -3.1,
+                  "operation": "add_value",
+                  "id": "3f6bd0b7-ca43-4521-b269-6236f2bc5ec6",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "weight": 1,
           "name": "minecraft:mushroom_stew",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:97,display:{Name:'{\"text\":\"Chicken Noodle Soup\",\"color\":\"yellow\",\"italic\":false}',Lore:['{\"text\":\" \"}','{\"text\":\"When in Main Hand:\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" 7 Attack Damage\",\"color\":\"dark_green\",\"italic\":false}','{\"text\":\" 0.9 Attack Speed\",\"color\":\"dark_green\",\"italic\":false}']},HideFlags:2,chickennoodlesoup:1b,soupoftheday:1b,Enchantments:[{}],AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-3.1,Operation:0,UUID:[I;-1432040149,-723496997,-1499749799,526429249],Slot:\"mainhand\"},{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:7,Operation:0,UUID:[I;1219465628,1524322270,-1514313073,1768532853],Slot:\"mainhand\"}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Chicken Noodle Soup",
+                "color": "yellow",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": " "
+                },
+                {
+                  "text": "When in Main Hand:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " 7 Attack Damage",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 0.9 Attack Speed",
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 97,
+                "minecraft:enchantment_glint_override": true
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chickennoodlesoup:1b,soupoftheday:1b}"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "generic.attack_damage",
+                  "amount": 7,
+                  "operation": "add_value",
+                  "id": "5ff3d693-026f-446b-8893-6587edd668e6",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "generic.attack_speed",
+                  "amount": -3.1,
+                  "operation": "add_value",
+                  "id": "3f6bd0b7-ca43-4521-b269-6236f2bc5ec6",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "weight": 1,
           "name": "minecraft:mushroom_stew",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:96,display:{Name:'{\"text\":\"Tomato Soup\",\"color\":\"yellow\",\"italic\":false}',Lore:['{\"text\":\" \"}','{\"text\":\"When in Main Hand:\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" 7 Attack Damage\",\"color\":\"dark_green\",\"italic\":false}','{\"text\":\" 1.2 Attack Speed\",\"color\":\"dark_green\",\"italic\":false}']},HideFlags:2,tomatosoup:1b,soupoftheday:1b,Enchantments:[{id:\"minecraft:knockback\",lvl:2s}],AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-2.8,Operation:0,UUID:[I;-1640737888,-889634516,-2097716013,1195345181],Slot:\"mainhand\"},{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:7,Operation:0,UUID:[I;-779428951,-1051049016,-1353976098,1114171347],Slot:\"mainhand\"}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Tomato Soup",
+                "color": "yellow",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": " "
+                },
+                {
+                  "text": "When in Main Hand:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " 7 Attack Damage",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 1.2 Attack Speed",
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 96,
+                "minecraft:enchantments": {
+                  "minecraft:knockback": 2
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{tomatosoup:1b,soupoftheday:1b}"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "generic.attack_damage",
+                  "amount": 7,
+                  "operation": "add_value",
+                  "id": "5ff3d693-026f-446b-8893-6587edd668e6",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "generic.attack_speed",
+                  "amount": -2.8,
+                  "operation": "add_value",
+                  "id": "3f6bd0b7-ca43-4521-b269-6236f2bc5ec6",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "weight": 1,
           "name": "minecraft:mushroom_stew",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:100,display:{Name:'{\"text\":\"French Onion Soup\",\"color\":\"yellow\",\"italic\":false}',Lore:['{\"text\":\" \"}','{\"text\":\"When in Main Hand:\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" 7 Attack Damage\",\"color\":\"dark_green\",\"italic\":false}','{\"text\":\" 1.2 Attack Speed\",\"color\":\"dark_green\",\"italic\":false}']},HideFlags:2,frenchonionsoup:1b,soupoftheday:1b,Enchantments:[{}],AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-2.8,Operation:0,UUID:[I;1311720461,1400979752,-1185359903,1322589229],Slot:\"mainhand\"},{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:7,Operation:0,UUID:[I;-391371024,-685814994,-1874247346,230281019],Slot:\"mainhand\"},{AttributeName:\"generic.max_health\",Name:\"generic.max_health\",Amount:2,Operation:0,UUID:[I;-671102991,244207439,-1486346871,2103566363],Slot:\"mainhand\"}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "French Onion Soup",
+                "color": "yellow",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": " "
+                },
+                {
+                  "text": "When in Main Hand:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " 7 Attack Damage",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 1.2 Attack Speed",
+                  "color": "dark_green",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 96,
+                "minecraft:enchantment_glint_override": true
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{frenchonionsoup:1b,soupoftheday:1b}"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "generic.attack_damage",
+                  "amount": 7,
+                  "operation": "add_value",
+                  "id": "5ff3d693-026f-446b-8893-6587edd668e6",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "generic.attack_speed",
+                  "amount": -2.8,
+                  "operation": "add_value",
+                  "id": "3f6bd0b7-ca43-4521-b269-6236f2bc5ec6",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.max_health",
+                  "name": "generic.max_health",
+                  "amount": 2,
+                  "operation": "add_value",
+                  "id": "5304a0df-8b0a-42a4-880a-7eb12f97577c",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
             }
           ]
         }

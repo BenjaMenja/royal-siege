@@ -1,16 +1,17 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:entity_killed_player",
-        "conditions": {
-          "entity": {
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "killing_blow": {
+          "source_entity": {
             "type": "minecraft:player",
             "equipment": {
               "mainhand": {
-                "items": [
-                  "minecraft:carrot_on_a_stick"
-                ],
-                "nbt": "{angelicstaff:1b}"
+                "items": "minecraft:carrot_on_a_stick",
+                "predicates": {
+                  "minecraft:custom_data": "{angelicstaff:1b}"
+                }
               }
             }
           }
@@ -18,4 +19,4 @@
       }
     }
   }
-  
+}

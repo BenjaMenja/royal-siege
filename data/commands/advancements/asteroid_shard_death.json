@@ -5,15 +5,9 @@
       "conditions": {
         "entity": {
           "type": "minecraft:creeper",
-          "nbt": "{Tags:[\"asteroidShard\"]}",
-          "equipment": {}
+          "nbt": "{Tags:[\"asteroidShard\"]}"
         }
       }
     }
-  },
-  "requirements": [
-    [
-      "requirement"
-    ]
-  ]
+  }
 }

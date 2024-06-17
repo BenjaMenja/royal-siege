@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{chaosbowtoken:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{chaosbowtoken:1b}"
+        }
       }
     }
   }

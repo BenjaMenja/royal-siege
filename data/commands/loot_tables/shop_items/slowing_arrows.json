@@ -15,8 +15,27 @@
               }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Slowing Arrows\"}'},custom_potion_effects:[{id:\"minecraft:slowness\",amplifier:2b,duration:260}],CustomPotionColor:397949}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Slowing Arrows",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 397949,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:slowness",
+                      "amplifier": 2,
+                      "duration": 260,
+                      "show_particles": false
+                    }
+                  ]
+                }
+              }
             }
           ]
         }

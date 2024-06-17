@@ -2,6 +2,6 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "nbt": "{Inventory:[{tag:{disable:1b}}]}"
+    "nbt": "{Inventory:[{components:{\"minecraft:custom_data\":{disable:1b}}}]}"
   }
 }

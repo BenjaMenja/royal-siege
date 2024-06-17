@@ -2,6 +2,6 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "nbt": "{Inventory:[{tag:{meteorshower:1b}}]}"
+    "nbt": "{Inventory:[{components:{\"minecraft:custom_data\":{meteorshower:1b}}}]}"
   }
 }

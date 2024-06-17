@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:leather_boots"
+      "id": "minecraft:leather_boots"
     },
     "title": "Parkour Master",
     "description": "Complete the lobby parkour course.",

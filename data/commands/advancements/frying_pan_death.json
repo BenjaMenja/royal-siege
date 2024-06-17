@@ -8,10 +8,10 @@
           "type": "minecraft:player",
           "equipment": {
             "mainhand": {
-              "nbt": "{fryingpan:1b}",
-              "items": [
-                "minecraft:iron_shovel"
-              ]
+              "items": "minecraft:iron_shovel",
+              "predicates": {
+                "minecraft:custom_data": "{fryingpan:1b}"
+              }
             }
           }
         }

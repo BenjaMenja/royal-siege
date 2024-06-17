@@ -5,13 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:enchanted_golden_apple",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"God Apple\"}'}}"
-            }
-          ]
+          "name": "minecraft:enchanted_golden_apple"
         }
       ]
     }

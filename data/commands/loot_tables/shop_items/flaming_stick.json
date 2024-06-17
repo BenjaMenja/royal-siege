@@ -8,8 +8,30 @@
           "name": "minecraft:stick",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:55,display:{Name:'{\"text\":\"Flaming Stick\"}',Lore:['{\"text\":\"Set your enemies ablaze.\"}']},Enchantments:[{id:\"minecraft:fire_aspect\",lvl:3s}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Flaming Stick",
+                "color": "#f0bc00",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Set your enemies ablaze."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantments": {
+                  "minecraft:fire_aspect": 3
+                },
+                "minecraft:custom_model_data": 55
+              }
             }
           ]
         }

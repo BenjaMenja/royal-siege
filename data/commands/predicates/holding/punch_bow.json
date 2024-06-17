@@ -7,7 +7,9 @@
       "predicate": {
         "equipment": {
           "mainhand": {
-            "nbt": "{punchbow:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{punchbow:1b}"
+            }
           }
         }
       }
@@ -18,7 +20,9 @@
       "predicate": {
         "equipment": {
           "offhand": {
-            "nbt": "{punchbow:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{punchbow:1b}"
+            }
           }
         }
       }

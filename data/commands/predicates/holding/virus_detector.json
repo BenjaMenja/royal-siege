@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{virusdetector:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{virusdetector:1b}"
+        }
       }
     }
   }

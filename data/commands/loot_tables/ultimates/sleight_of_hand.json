@@ -1,0 +1,60 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Sleight of Hand",
+                  "color": "yellow",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Right-Click to use",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "text": "Supercharges your Playing Cards."
+                  },
+                  {
+                    "text": "Reduces cooldown of playing cards to 2s."
+                  },
+                  {
+                    "text": "Also causes the last two cards to always have a value of 13."
+                  },
+                  {
+                    "text": "Lasts 15 seconds."
+                  }
+                ],
+                "mode": "insert"
+              },
+              {
+                "function": "minecraft:set_custom_data",
+                "tag": "{ultimateitem:1b,sleightofhand:1b}"
+              },
+              {
+                "function": "minecraft:set_components",
+                "components": {
+                  "minecraft:custom_model_data": 166
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

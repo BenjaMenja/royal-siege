@@ -1,0 +1,60 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:snowball",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Bang Snap",
+                "color": "#FF763B",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Throwable",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "A small snap that pops when coming in contact with a surface."
+                },
+                {
+                  "text": "The pop deals 4 damage to enemies in a 5 block radius and sets them on fire."
+                },
+                {
+                  "text": "Can have a max of 12 of these at once."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 189
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{bangsnap:1b,bangsnapblue:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

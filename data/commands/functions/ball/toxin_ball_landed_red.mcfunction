@@ -12,5 +12,5 @@ effect give @a[team=Blue,distance=..5] poison 5 1
 
 playsound block.grass.break master @a[distance=..5] ~ ~ ~ 1 2
 
-particle block grass ~ ~ ~ 0.5 0.5 0.5 1 50
+particle block{block_state:"tall_grass"} ~ ~ ~ 0.5 0.5 0.5 1 50
 

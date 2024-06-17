@@ -1,21 +1,21 @@
 execute store result score #switch activeHotbar run data get entity @s SelectedItemSlot
 
-execute if score #switch activeHotbar matches 0 run item replace entity @s hotbar.0 with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Blunderbuss","color":"yellow","italic":false}',Lore:['{"text":"Shoots a blast of 8 arrows in front of you, doing lots of damage."}','{"text":"Can be used every 2 seconds."}']},Unbreakable:1b,CustomModelData:118,blunderbuss:1b} 1
+execute if score #switch activeHotbar matches 0 run loot replace entity @s hotbar.0 loot commands:main_abilities/blunderbuss
 
-execute if score #switch activeHotbar matches 1 run item replace entity @s hotbar.1 with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Blunderbuss","color":"yellow","italic":false}',Lore:['{"text":"Shoots a blast of 8 arrows in front of you, doing lots of damage."}','{"text":"Can be used every 2 seconds."}']},Unbreakable:1b,CustomModelData:118,blunderbuss:1b} 1
+execute if score #switch activeHotbar matches 1 run loot replace entity @s hotbar.1 loot commands:main_abilities/blunderbuss
 
-execute if score #switch activeHotbar matches 2 run item replace entity @s hotbar.2 with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Blunderbuss","color":"yellow","italic":false}',Lore:['{"text":"Shoots a blast of 8 arrows in front of you, doing lots of damage."}','{"text":"Can be used every 2 seconds."}']},Unbreakable:1b,CustomModelData:118,blunderbuss:1b} 1
+execute if score #switch activeHotbar matches 2 run loot replace entity @s hotbar.2 loot commands:main_abilities/blunderbuss
 
-execute if score #switch activeHotbar matches 3 run item replace entity @s hotbar.3 with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Blunderbuss","color":"yellow","italic":false}',Lore:['{"text":"Shoots a blast of 8 arrows in front of you, doing lots of damage."}','{"text":"Can be used every 2 seconds."}']},Unbreakable:1b,CustomModelData:118,blunderbuss:1b} 1
+execute if score #switch activeHotbar matches 3 run loot replace entity @s hotbar.3 loot commands:main_abilities/blunderbuss
 
-execute if score #switch activeHotbar matches 4 run item replace entity @s hotbar.4 with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Blunderbuss","color":"yellow","italic":false}',Lore:['{"text":"Shoots a blast of 8 arrows in front of you, doing lots of damage."}','{"text":"Can be used every 2 seconds."}']},Unbreakable:1b,CustomModelData:118,blunderbuss:1b} 1
+execute if score #switch activeHotbar matches 4 run loot replace entity @s hotbar.4 loot commands:main_abilities/blunderbuss
 
-execute if score #switch activeHotbar matches 5 run item replace entity @s hotbar.5 with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Blunderbuss","color":"yellow","italic":false}',Lore:['{"text":"Shoots a blast of 8 arrows in front of you, doing lots of damage."}','{"text":"Can be used every 2 seconds."}']},Unbreakable:1b,CustomModelData:118,blunderbuss:1b} 1
+execute if score #switch activeHotbar matches 5 run loot replace entity @s hotbar.5 loot commands:main_abilities/blunderbuss
 
-execute if score #switch activeHotbar matches 6 run item replace entity @s hotbar.6 with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Blunderbuss","color":"yellow","italic":false}',Lore:['{"text":"Shoots a blast of 8 arrows in front of you, doing lots of damage."}','{"text":"Can be used every 2 seconds."}']},Unbreakable:1b,CustomModelData:118,blunderbuss:1b} 1
+execute if score #switch activeHotbar matches 6 run loot replace entity @s hotbar.6 loot commands:main_abilities/blunderbuss
 
-execute if score #switch activeHotbar matches 7 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Blunderbuss","color":"yellow","italic":false}',Lore:['{"text":"Shoots a blast of 8 arrows in front of you, doing lots of damage."}','{"text":"Can be used every 2 seconds."}']},Unbreakable:1b,CustomModelData:118,blunderbuss:1b} 1
+execute if score #switch activeHotbar matches 7 run loot replace entity @s hotbar.7 loot commands:main_abilities/blunderbuss
 
-execute if score #switch activeHotbar matches 8 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Blunderbuss","color":"yellow","italic":false}',Lore:['{"text":"Shoots a blast of 8 arrows in front of you, doing lots of damage."}','{"text":"Can be used every 2 seconds."}']},Unbreakable:1b,CustomModelData:118,blunderbuss:1b} 1
+execute if score #switch activeHotbar matches 8 run loot replace entity @s hotbar.8 loot commands:main_abilities/blunderbuss
 
 scoreboard players reset #switch activeHotbar

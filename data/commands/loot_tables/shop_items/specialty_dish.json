@@ -8,8 +8,74 @@
           "name": "minecraft:potion",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:101,display:{Name:'{\"text\":\"Specialty Dish\",\"color\":\"aqua\",\"italic\":false}',Lore:['{\"text\":\"A beautiful blend of luxury foods.\"}']},specialtydish:1b,custom_potion_effects:[{id:\"minecraft:haste\",amplifier:0b,duration:600,show_particles:0b},{id:\"minecraft:strength\",amplifier:0b,duration:600,show_particles:0b},{id:\"minecraft:regeneration\",amplifier:1b,duration:200,show_particles:0b},{id:\"minecraft:resistance\",amplifier:0b,duration:600,show_particles:0b},{id:\"minecraft:fire_resistance\",amplifier:0b,duration:600,show_particles:0b},{id:\"minecraft:health_boost\",amplifier:0b,duration:600,show_particles:0b},{id:\"minecraft:absorption\",amplifier:1b,duration:600,show_particles:0b}],CustomPotionColor:16758282}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Specialty Dish",
+                "color": "aqua",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "A beautiful blend of luxury foods."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 101,
+                "minecraft:potion_contents": {
+                  "custom_color": 16758282,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:strength",
+                      "amplifier": 0,
+                      "duration": 600,
+                      "show_particles": false
+                    },
+                    {
+                      "id": "minecraft:haste",
+                      "amplifier": 0,
+                      "duration": 600,
+                      "show_particles": false
+                    },
+                    {
+                      "id": "minecraft:regeneration",
+                      "amplifier": 1,
+                      "duration": 200
+                    },
+                    {
+                      "id": "minecraft:resistance",
+                      "amplifier": 0,
+                      "duration": 600
+                    },
+                    {
+                      "id": "minecraft:fire_resistance",
+                      "amplifier": 0,
+                      "duration": 600,
+                      "show_particles": false
+                    },
+                    {
+                      "id": "minecraft:health_boost",
+                      "amplifier": 0,
+                      "duration": 600
+                    },
+                    {
+                      "id": "minecraft:absorption",
+                      "amplifier": 0,
+                      "duration": 600
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{specialtydish:1b}"
             }
           ]
         }

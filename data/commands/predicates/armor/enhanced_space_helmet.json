@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "head": {
-        "nbt": "{enhancedspacehelmet:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{enhancedspacehelmet:1b}"
+        }
       }
     }
   }

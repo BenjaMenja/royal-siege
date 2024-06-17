@@ -8,10 +8,10 @@
           "type": "minecraft:player",
           "equipment": {
             "mainhand": {
-              "nbt": "{soupoftheday:1b}",
-              "items": [
-                "minecraft:mushroom_stew"
-              ]
+              "items": "minecraft:mushroom_stew",
+              "predicates": {
+                "minecraft:custom_data": "{soupoftheday:1b}"
+              }
             }
           }
         }

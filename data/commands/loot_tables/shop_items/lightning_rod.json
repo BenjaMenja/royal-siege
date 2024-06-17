@@ -8,8 +8,28 @@
           "name": "minecraft:fishing_rod",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Lightning Rod\"}',Lore:['{\"text\":\"Makes a lot of lightning.\"}']},HideFlags:1,Unbreakable:1b,Enchantments:[{id:\"minecraft:luck_of_the_sea\",lvl:1s}]} "
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Lightning Rod"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Makes a lot of lightning."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
+                "minecraft:enchantment_glint_override": true
+              }
             }
           ]
         }

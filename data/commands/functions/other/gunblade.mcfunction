@@ -112,15 +112,15 @@ execute at @s[tag=midas] run playsound entity.generic.explode master @a[distance
 
 execute at @s[tag=explosion] run playsound entity.generic.explode master @a[distance=..15] ~ ~ ~ 1 2
 
-execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:poison",amplifier:0b,duration:100}]}] run particle dust 0.631 0.000 1.000 1 ~ ~ ~ 0 0 0 1 0 force
+execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:poison",amplifier:0b,duration:100}]}] run particle dust{color:[0.631,0.000,1.000],scale:1} ~ ~ ~ 0 0 0 1 0 force
 
-execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:1}]}] run particle dust 0.047 0.361 0.000 1 ~ ~ ~ 0 0 0 1 0 force
+execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:1}]}] run particle dust{color:[0.047,0.361,0.000],scale:1} ~ ~ ~ 0 0 0 1 0 force
 
-execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:2}]}] run particle dust 0.000 1.000 1.000 1 ~ ~ ~ 0 0 0 1 0 force
+execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:2}]}] run particle dust{color:[0.000,1.000,1.000],scale:1} ~ ~ ~ 0 0 0 1 0 force
 
-execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:3}]}] run particle dust 0.749 0.702 0.000 1 ~ ~ ~ 0 0 0 1 0 force
+execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:3}]}] run particle dust{color:[0.749,0.702,0.000],scale:1} ~ ~ ~ 0 0 0 1 0 force
 
-execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:4}]}] run particle dust 1.000 0.110 0.110 1 ~ ~ ~ 0 0 0 1 0 force
+execute at @e[type=arrow,nbt={custom_potion_effects:[{id:"minecraft:luck",amplifier:0b,duration:4}]}] run particle dust{color:[1.000,0.110,0.110],scale:1} ~ ~ ~ 0 0 0 1 0 force
 
 execute as @e[type=arrow,tag=bullet,distance=..3,tag=!stop] run data modify entity @s Owner set from entity @a[tag=shoot,limit=1] UUID
 
@@ -166,17 +166,17 @@ scoreboard players set @s[scores={MidasTimer=280..},tag=shoot,tag=midas] MidasTi
 
 scoreboard players set @s[scores={ExplosionTimer=280..},tag=shoot,tag=explosion] ExplosionTimer 0
 
-clear @s[tag=burst] gunpowder{gunbladeammo:1b} 1
+clear @s[tag=burst] gunpowder[custom_data~{gunbladeammo:1b}] 1
 
-clear @s[tag=poison] gunpowder{gunbladeammo:1b} 4
+clear @s[tag=poison] gunpowder[custom_data~{gunbladeammo:1b}] 4
 
-clear @s[tag=toxin] gunpowder{gunbladeammo:1b} 4
+clear @s[tag=toxin] gunpowder[custom_data~{gunbladeammo:1b}] 4
 
-clear @s[tag=stasis] gunpowder{gunbladeammo:1b} 4
+clear @s[tag=stasis] gunpowder[custom_data~{gunbladeammo:1b}] 4
 
-clear @s[tag=midas] gunpowder{gunbladeammo:1b} 4
+clear @s[tag=midas] gunpowder[custom_data~{gunbladeammo:1b}] 4
 
-clear @s[tag=explosion] gunpowder{gunbladeammo:1b} 4
+clear @s[tag=explosion] gunpowder[custom_data~{gunbladeammo:1b}] 4
 
 tag @s remove shoot
 

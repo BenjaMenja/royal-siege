@@ -1,3 +1,3 @@
-give @s[scores={Money=150..}] tipped_arrow{display:{Name:'{"text":"Slowing Arrows","italic":false}'},custom_potion_effects:[{id:"minecraft:slowness",amplifier:2b,duration:100}],CustomPotionColor:397949} 8
+loot give @s[scores={Money=150..}] loot commands:shop_items/slowing_arrows
 
 scoreboard players remove @s[scores={Money=150..}] Money 150

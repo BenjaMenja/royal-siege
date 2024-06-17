@@ -1,6 +1,6 @@
 loot spawn ~ -5 ~ loot commands:rng/chrysanthemum_shell_death
-execute as @e[type=item,nbt={Item:{tag:{chrysanthemum_shell_death:1b}}}] store result score #rng RNG run data get entity @s Item.tag.AttributeModifiers.[{}].Amount
-kill @e[type=item,nbt={Item:{tag:{chrysanthemum_shell_death:1b}}}]
+execute as @e[type=item] if data entity @s Item.components.minecraft:custom_data.chrysanthemum_shell_death store result score #rng RNG run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
+kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{chrysanthemum_shell_death:1b}}}}]
 
 execute if score #rng RNG matches 1 run tellraw @a [{"selector":"@s "},{"text":" got front row tickets to the firework show.","color":"white"}]
 

@@ -1,0 +1,63 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "text": "Chrysanthemum Shell",
+                  "color": "#FF9900",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "text": "Right-Click to use",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "text": "Launch yourself into the air, receiving slow falling at the peak."
+                  },
+                  {
+                    "text": "Right-clicking again will fire a slow but powerful firework that explodes on contact."
+                  },
+                  {
+                    "text": "The explosion damages and burns enemies in a large radius."
+                  },
+                  {
+                    "text": "Your movement speed increases based on the number of enemy players hit."
+                  },
+                  {
+                    "text": "Failure to fire the rocket before landing will waste the ultimate."
+                  }
+                ],
+                "mode": "insert"
+              },
+              {
+                "function": "minecraft:set_custom_data",
+                "tag": "{ultimateitem:1b,chrysanthemumshell:1b}"
+              },
+              {
+                "function": "minecraft:set_components",
+                "components": {
+                  "minecraft:custom_model_data": 193
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:music_disc_chirp"
+      "id": "minecraft:music_disc_chirp"
     },
     "title": "Record Label",
     "description": "Play the CD-ROM.",

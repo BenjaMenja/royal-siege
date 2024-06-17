@@ -1,0 +1,138 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": 120,
+                "minecraft:custom_data": {
+                  "angelicstaff": 1,
+                  "regenstaff": 1
+                },
+                "minecraft:enchantments": {
+                  "levels": {
+                    "minecraft:knockback": 1
+                  }
+                },
+                "minecraft:attribute_modifiers": {
+                  "modifiers": [
+                    {
+                      "type": "generic.max_health",
+                      "name": "generic.max_health",
+                      "amount": 2,
+                      "operation": "add_value",
+                      "uuid": [
+                        -1202101099,
+                        -819314401,
+                        -2101694243,
+                        3186430
+                      ],
+                      "slot": "mainhand"
+                    },
+                    {
+                      "type": "generic.attack_damage",
+                      "name": "generic.attack_damage",
+                      "amount": 6,
+                      "operation": "add_value",
+                      "uuid": [
+                        -1508106476,
+                        -1623702529,
+                        -1493268433,
+                        1849482176
+                      ],
+                      "slot": "mainhand"
+                    },
+                    {
+                      "type": "generic.attack_speed",
+                      "name": "generic.attack_speed",
+                      "amount": -2.6,
+                      "operation": "add_value",
+                      "uuid": [
+                        42814175,
+                        1691961858,
+                        -1792550184,
+                        516941725
+                      ],
+                      "slot": "mainhand"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "yellow",
+                  "italic": false,
+                  "text": "Angelic Staff"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "color": "yellow",
+                  "italic": false,
+                  "text": "Right-Click to use"
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "color": "gray",
+                  "italic": false,
+                  "text": "When in Main Hand:"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 6 Attack Damage"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 1.4 Attack Speed"
+                },
+                {
+                  "color": "blue",
+                  "italic": false,
+                  "text": "+2 Max Health"
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "It looks like a battle axe from afar, but the blades"
+                },
+                {
+                  "text": "are actually decorative wings. What’s up with that?"
+                },
+                {
+                  "text": "Right-clicking fires a healing beam that heals 4 HP if it hits a teammate."
+                },
+                {
+                  "text": "Has a maximum range of 20 blocks."
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

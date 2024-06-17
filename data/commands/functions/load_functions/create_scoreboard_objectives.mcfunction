@@ -26,4 +26,5 @@ scoreboard objectives add nearbyPlayers dummy
 scoreboard objectives add RSAttr.ChrysanthemumSpeed dummy
 scoreboard objectives add popRocksTimer dummy
 scoreboard objectives add popRocksDur dummy
+scoreboard objectives add counter dummy
 scoreboard objectives remove dmDelay

@@ -8,8 +8,25 @@
           "name": "minecraft:poisonous_potato",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Rotting Potato\"}',Lore:['{\"text\":\"Poisons an enemy when you strike them with it.\"}']},HideFlags:1,Enchantments:[{id:\"minecraft:luck_of_the_sea\",lvl:1s}]}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Rotting Potato"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Poisons an enemy when you strike them with it."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true
+              }
             }
           ]
         }

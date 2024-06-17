@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:barrier"
+      "id": "minecraft:barrier"
     },
     "title": "Out of Bounds",
     "description": "Attempt to pass the Skybox.",

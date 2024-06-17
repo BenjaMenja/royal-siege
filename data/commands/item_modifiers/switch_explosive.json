@@ -8,7 +8,13 @@
     }
   },
   {
-    "function": "minecraft:set_nbt",
-    "tag": "{switch:6b,CustomModelData:163}"
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:custom_model_data": 16
+    }
+  },
+  {
+    "function": "minecraft:set_custom_data",
+    "tag": "{switch:6b}"
   }
 ]

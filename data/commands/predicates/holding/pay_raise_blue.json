@@ -4,7 +4,9 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{payraiseblue:1b}"
+        "predicates": {
+          "minecraft:custom_data": "{payraiseblue:1b}"
+        }
       }
     }
   }

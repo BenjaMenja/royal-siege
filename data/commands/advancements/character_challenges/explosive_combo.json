@@ -1,8 +1,23 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:player_head",
-      "nbt": "{Enchantments:[{id:\"minecraft:protection\",lvl:1s},{id:\"minecraft:projectile_protection\",lvl:1s}],AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:2,Operation:0,UUID:[I;-312894981,12910313,421124214,920],Slot:\"head\"}],SkullOwner:{id:[I;1875422177,577324483,-1208308071,1214094985],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTNmMzA4MjNlOTk3NGNhNWFhYTJjMDE5MzA4Yjg0MjQ5ODQ1ZjBiOWFjYTZhYTExMTkxY2UyN2RhYzcwZTk2OCJ9fX0=\"}]}}}"
+      "id": "minecraft:player_head",
+      "components": {
+        "minecraft:profile": {
+          "id": [
+            1875422177,
+            577324483,
+            -1208308071,
+            1214094985
+          ],
+          "properties": [
+            {
+              "name": "textures",
+              "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTNmMzA4MjNlOTk3NGNhNWFhYTJjMDE5MzA4Yjg0MjQ5ODQ1ZjBiOWFjYTZhYTExMTkxY2UyN2RhYzcwZTk2OCJ9fX0="
+            }
+          ]
+        }
+      }
     },
     "title": "Explosive Combo",
     "description": "As Robot, hit 2 people with a single use of explosive bullet.",

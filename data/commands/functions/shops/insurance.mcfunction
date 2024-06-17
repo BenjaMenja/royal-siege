@@ -1,4 +1,4 @@
-give @s[scores={Money=900..},tag=!insured] minecraft:paper{display:{Name:'{"text":"Insurance","italic":false}',Lore:['{"text":"A proof of insurance."}','{"text":"All team members will claim new money for 100 Siege Bucks each."}','{"text":"Money that was in their inventory will still be dropped."}']},CustomModelData:144,insurance:1b} 1
+loot give @s[scores={Money=900..},tag=!insured] loot commands:shop_items/insurance
 
 scoreboard players remove @s[scores={Money=900..},tag=!insured] Money 900
 

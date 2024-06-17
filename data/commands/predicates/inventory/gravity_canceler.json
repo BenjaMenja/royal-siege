@@ -2,6 +2,6 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "nbt": "{Inventory:[{tag:{gravitycanceler:1b}}]}"
+    "nbt": "{Inventory:[{components:{\"minecraft:custom_data\":{gravitycanceler:1b}}}]}"
   }
 }
