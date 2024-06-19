@@ -10,7 +10,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "Reveal Drone"
+                "text": "Reveal Drone",
+                "italic": false
               }
             },
             {
@@ -36,6 +37,14 @@
                 "minecraft:custom_model_data": 38,
                 "minecraft:can_place_on": {
                   "blocks": "#commands:can_place_on"
+                },
+                "minecraft:entity_data": {
+                  "id": "minecraft:bat",
+                  "Silent": 1,
+                  "Invulnerable": 1,
+                  "Tags": [
+                    "RevealBlue"
+                  ]
                 }
               }
             },
@@ -44,10 +53,6 @@
               "toggles": {
                 "minecraft:can_place_on": false
               }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{EntityTag:{Silent:1b,Invulnerable:1b,Tags:[\"RevealBlue\"]}}"
             }
           ]
         }

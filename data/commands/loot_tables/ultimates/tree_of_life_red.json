@@ -38,12 +38,21 @@
                 "minecraft:custom_model_data": 78,
                 "minecraft:can_place_on": {
                   "blocks": "#commands:can_place_on"
+                },
+                "minecraft:entity_data": {
+                  "id": "minecraft:bat",
+                  "Silent": 1,
+                  "Invulnerable": 1,
+                  "Tags": [
+                    "Tree",
+                    "TreeRed"
+                  ]
                 }
               }
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{EntityTag:{id:\"bat\",Silent:1b,Invulnerable:1b,Tags:[\"TreeRed\",\"Tree\"]},ultimateitem:1b,treeoflifered:1b,treeoflife:2b}"
+              "tag": "{ultimateitem:1b,treeoflifeblue:1b,treeoflife:2b}"
             },
             {
               "function": "minecraft:toggle_tooltips",

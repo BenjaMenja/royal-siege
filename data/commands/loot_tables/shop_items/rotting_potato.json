@@ -10,7 +10,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "Rotting Potato"
+                "text": "Rotting Potato",
+                "italic": false
               }
             },
             {

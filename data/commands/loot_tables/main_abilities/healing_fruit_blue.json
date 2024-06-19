@@ -5,13 +5,12 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:carrot_on_a_stick",
+          "name": "minecraft:golden_apple",
           "functions": [
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "Exp. Bomb Blaster",
-                "color": "yellow",
+                "text": "Healing Fruit",
                 "italic": false
               }
             },
@@ -19,32 +18,30 @@
               "function": "minecraft:set_lore",
               "lore": [
                 {
-                  "text": "Right-Click to use",
-                  "color": "yellow",
-                  "italic": false
+                  "text": "Can be thrown to allies from any distance."
                 },
                 {
-                  "text": " "
-                },
-                {
-                  "text": "Shoots a spread of Exp. Bottles."
-                },
-                {
-                  "text": "Each bottle is loaded with explosives."
+                  "text": "The maximum number fruits on your team is equal to the number of players on your team."
                 }
               ],
-              "mode": "insert"
+              "mode": "append"
+            },
+            {
+              "function": "minecraft:set_custom_model_data",
+              "value": 30
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{expblaster:1b}"
+              "tag": "{healingfruit:1b,bluehealingfruit:1b}"
             },
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 140,
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": false
+                "minecraft:entity_data": {
+                  "id": "minecraft:item",
+                  "Tags": [
+                    "spawn"
+                  ]
                 }
               }
             }

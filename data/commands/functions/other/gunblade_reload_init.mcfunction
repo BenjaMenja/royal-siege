@@ -1,4 +1,4 @@
-clear @s gunpowder[custom_data={gunbladeammo:1b}]
+clear @s gunpowder[custom_data~{gunbladeammo:1b}]
 
 loot give @s loot commands:main_weapons/gunblade_burst
 

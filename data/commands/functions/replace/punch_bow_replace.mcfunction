@@ -1,4 +1,4 @@
-execute store result score #switch activeHotbar run data get entity @s Inventory[{tag:{punchbow:1b}}].Slot
+execute store result score #switch activeHotbar run data get entity @s Inventory[{components:{"minecraft:custom_data":{punchbow:1b}}}].Slot
 
 execute if score #switch activeHotbar matches 0 run loot replace entity @s hotbar.0 loot commands:shop_items/punch_bow_placeholder
 

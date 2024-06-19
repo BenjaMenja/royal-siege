@@ -1,14 +1,14 @@
-tag @s[nbt={Inventory:[{id:"minecraft:carrot_on_a_stick",tag:{switch:1b}}]}] add switchpoison
+execute if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{switch:1b}] run tag @s add switchpoison
 
-tag @s[nbt={Inventory:[{id:"minecraft:carrot_on_a_stick",tag:{switch:2b}}]}] add switchtoxin
+execute if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{switch:2b}] run tag @s add switchtoxin
 
-tag @s[nbt={Inventory:[{id:"minecraft:carrot_on_a_stick",tag:{switch:3b}}]}] add switchstasis
+execute if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{switch:3b}] run tag @s add switchstasis
 
-tag @s[nbt={Inventory:[{id:"minecraft:carrot_on_a_stick",tag:{switch:4b}}]}] add switchmidas
+execute if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{switch:4b}] run tag @s add switchmidas
 
-tag @s[nbt={Inventory:[{id:"minecraft:carrot_on_a_stick",tag:{switch:5b}}]}] add switchexplode
+execute if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{switch:5b}] run tag @s add switchexplode
 
-tag @s[nbt={Inventory:[{id:"minecraft:carrot_on_a_stick",tag:{switch:6b}}]}] add switchburst
+execute if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{switch:6b}] run tag @s add switchburst
 
 execute store result score #switch activeHotbar run data get entity @s Inventory[{tag:{switchitem:1b}}].Slot
 

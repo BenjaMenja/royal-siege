@@ -27,7 +27,8 @@
               "name": [
                 {
                   "color": "green",
-                  "text": "Eject Button"
+                  "text": "Eject Button",
+                  "italic": false
                 }
               ]
             },

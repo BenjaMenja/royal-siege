@@ -35,6 +35,21 @@
               "components": {
                 "minecraft:can_place_on": {
                   "blocks": "#commands:can_place_on"
+                },
+                "minecraft:entity_data": {
+                  "id": "minecraft:guardian",
+                  "Health": 35,
+                  "attributes": [
+                    {
+                      "id": "generic.max_health",
+                      "base": 35
+                    },
+                    {
+                      "id": "generic.attack_damage",
+                      "base": 9
+                    }
+                  ],
+                  "Team": "Blue"
                 }
               }
             },
@@ -43,10 +58,6 @@
               "toggles": {
                 "minecraft:can_place_on": false
               }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{EntityTag:{Team:\"Blue\",Health:35f,Attributes:[{Name:generic.max_health,Base:35},{Name:generic.attack_damage,Base:9}]}}"
             }
           ]
         }

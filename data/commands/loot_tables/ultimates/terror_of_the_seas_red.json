@@ -4,24 +4,69 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
+          "type": "item",
+          "weight": 1,
           "name": "minecraft:elder_guardian_spawn_egg",
           "functions": [
             {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Terror of the Seas",
-                "color": "#0011FF",
-                "italic": false
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:can_place_on": {
+                  "predicates": [
+                    {
+                      "blocks": "#commands:can_place_on"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                },
+                "minecraft:custom_model_data": 81,
+                "minecraft:custom_data": {
+                  "ultimateitem": 1,
+                  "terroroftheseas": 1,
+                  "terroroftheseasred": 1
+                },
+                "minecraft:entity_data": {
+                  "id": "minecraft:elder_guardian",
+                  "Team": "Red",
+                  "Health": "60f",
+                  "Tags": [
+                    "terrorRed",
+                    "terror"
+                  ],
+                  "attributes": [
+                    {
+                      "id": "minecraft:generic.attack_damage",
+                      "base": 25
+                    },
+                    {
+                      "id": "minecraft:generic.max_health",
+                      "base": 60
+                    }
+                  ]
+                }
               }
             },
             {
-              "function": "minecraft:set_lore",
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "#0011FF",
+                  "italic": false,
+                  "text": "Terror of the Seas"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
               "lore": [
                 {
-                  "text": "Placeable",
                   "color": "yellow",
-                  "italic": false
+                  "italic": false,
+                  "text": "Placeable"
                 },
                 {
                   "text": " "
@@ -33,17 +78,7 @@
                   "text": "This elder guardian has increased stats and gives mining fatigue to all enemies."
                 }
               ],
-              "mode": "insert"
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{ultimateitem:1b,terroroftheseas:1b,terroroftheseasred:1b,EntityTag:{Team:\"Red\",Health:60f,Tags:[\"terrorRed\",\"terror\"],Attributes:[{Name:\"minecraft:generic.max_health\",Base:60},{Name:\"minecraft:generic.attack_damage\",Base:25}]}}"
-            },
-            {
-              "function": "minecraft:toggle_tooltips",
-              "toggles": {
-                "minecraft:can_place_on": false
-              }
+              "mode": "append"
             }
           ]
         }

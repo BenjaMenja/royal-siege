@@ -10,7 +10,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "Lightning Rod"
+                "text": "Lightning Rod",
+                "italic": false
               }
             },
             {

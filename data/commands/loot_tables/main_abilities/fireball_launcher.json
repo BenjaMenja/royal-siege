@@ -15,7 +15,9 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:unbreakable": {},
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
                 "minecraft:custom_model_data": 1,
                 "minecraft:custom_data": {
                   "fireballlauncher": 1

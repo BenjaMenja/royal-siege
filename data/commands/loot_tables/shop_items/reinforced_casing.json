@@ -10,7 +10,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "Reinforced Casing"
+                "text": "Reinforced Casing",
+                "italic": false
               }
             },
             {

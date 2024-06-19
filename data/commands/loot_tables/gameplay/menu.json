@@ -43,7 +43,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{ultimateitem:1b,menu:1b}"
+              "tag": "{menu:1b}"
             },
             {
               "function": "minecraft:set_components",

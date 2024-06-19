@@ -10,7 +10,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "Valkyrie Axe"
+                "text": "Valkyrie Axe",
+                "italic": false
               }
             },
             {

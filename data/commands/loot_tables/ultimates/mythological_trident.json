@@ -71,7 +71,7 @@
                   "attribute": "minecraft:generic.attack_speed",
                   "name": "generic.attack_speed",
                   "amount": -2.4,
-                  "operation": "add_multiplied_base",
+                  "operation": "add_value",
                   "id": "154cd657-ccbd-4398-9f33-8543314ae581",
                   "slot": "mainhand"
                 }

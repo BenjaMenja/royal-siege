@@ -38,9 +38,9 @@ scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:ender_eye"}}] ItemK
 
 scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:gold_ingot"}}] ItemKill 2
 
-scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:golden_apple",tag:{redhealingfruit:1b}}}] ItemKill 2
+scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:golden_apple",components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] ItemKill 2
 
-scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:golden_apple",tag:{bluehealingfruit:1b}}}] ItemKill 2
+scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:golden_apple",components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] ItemKill 2
 
 scoreboard players set @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{fishcannonitemred:1b}}}}] ItemKill 2
 
@@ -266,15 +266,15 @@ execute as @a[scores={Kit=12},tag=!upgraded] run function #commands:clear_streng
 
 effect give @a[scores={Kit=14}] jump_boost 1 3 true
 
-effect give @a[predicate=!commands:is_sneaking,scores={Kit=14}] slow_falling 2 0 true
+effect give @a[predicate=!commands:is_sneaking,tag=!astrogravity,scores={Kit=14}] slow_falling 2 0 true
 
-effect give @a[predicate=commands:is_sneaking,scores={Kit=14}] levitation 1 200 true
+execute as @a[predicate=commands:is_sneaking,scores={Kit=14},nbt={OnGround:0b}] run function commands:attributes/adds/add_astronaut_passive_gravity
 
-effect clear @a[predicate=!commands:is_sneaking,scores={Kit=14}] levitation
+execute as @a[scores={Kit=14},tag=astrogravity,nbt={OnGround:1b}] run function commands:attributes/clears/clear_astronaut_passive_gravity
 
 effect clear @a[predicate=commands:is_sneaking,scores={Kit=14}] slow_falling
 
-# effect give @a[scores={Kit=15}] fire_resistance 1 0 true
+effect give @a[scores={Kit=15}] fire_resistance 1 0 true
 
 #Gravity Canceler
 
@@ -384,13 +384,13 @@ scoreboard players add @e[type=zombie,tag=Minion] MinionDeath 1
 
 scoreboard players add @a[scores={Kit=6},predicate=commands:in_any_battlefield,tag=!notAlive] WizardMinion 1
 
-execute as @a[team=Red,tag=!upgraded,scores={WizardMinion=400..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Red",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:15},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
+execute as @a[team=Red,tag=!upgraded,scores={WizardMinion=400..}] at @s run function commands:entities/wizard_minion_red
 
-execute as @a[team=Blue,tag=!upgraded,scores={WizardMinion=400..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Blue",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:1184511}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:15},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
+execute as @a[team=Blue,tag=!upgraded,scores={WizardMinion=400..}] at @s run function commands:entities/wizard_minion_blue
 
-execute as @a[team=Red,tag=upgraded,scores={WizardMinion=320..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Red",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:16711680}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:15},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
+execute as @a[team=Red,tag=upgraded,scores={WizardMinion=320..}] at @s run function commands:entities/wizard_minion_red
 
-execute as @a[team=Blue,tag=upgraded,scores={WizardMinion=320..}] at @s run summon zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Blue",Health:15f,IsBaby:1b,Tags:["WM","Minion"],CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:2s}]}},{}],HandDropChances:[0.085F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:1184511}}},{}],ArmorDropChances:[0.085F,0.085F,0.085F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:15},{Name:"minecraft:generic.movement_speed",Base:0.2}]}
+execute as @a[team=Blue,tag=upgraded,scores={WizardMinion=320..}] at @s run function commands:entities/wizard_minion_blue
 
 scoreboard players set @a[tag=upgraded,scores={WizardMinion=320..}] WizardMinion 0
 
@@ -562,9 +562,9 @@ execute as @a[scores={Kit=8,blossomTimer=1..},predicate=commands:in_any_battlefi
 
 execute as @a[scores={Kit=8,rootingTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s rootingTimer 1
 
-execute at @a[team=Red,scores={hFruitTimer=..0}] run summon item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",Count:1b,tag:{display:{Name:'{"text":"Healing Fruit","italic":false}',Lore:['{"text":"Can be thrown to allies from any distance."}','{"text":"The maximum number fruits on your team is equal to the number of players on your team."}']},HideFlags:1,CustomModelData:30,redhealingfruit:1b,healingfruit:1b,Enchantments:[{}]}}}
+execute at @a[team=Red,scores={hFruitTimer=..0}] run summon minecraft:item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",count:1,components:{"minecraft:custom_name":'{"italic":false,"text":"Healing Fruit"}',"minecraft:lore":['{"text":"Can be thrown to allies from any distance."}','{"text":"The maximum number fruits on your team is equal to the number of players on your team."}'],"minecraft:custom_model_data":30,"minecraft:custom_data":{redhealingfruit:1b,healingfruit:1b}}}}
 
-execute at @a[team=Blue,scores={hFruitTimer=..0}] run summon item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",Count:1b,tag:{display:{Name:'{"text":"Healing Fruit","italic":false}',Lore:['{"text":"Can be thrown to allies from any distance."}','{"text":"The maximum number fruits on your team is equal to the number of players on your team."}']},HideFlags:1,CustomModelData:30,bluehealingfruit:1b,healingfruit:1b,Enchantments:[{}]}}}
+execute at @a[team=Blue,scores={hFruitTimer=..0}] run summon minecraft:item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",count:1,components:{"minecraft:custom_name":'{"italic":false,"text":"Healing Fruit"}',"minecraft:lore":['{"text":"Can be thrown to allies from any distance."}','{"text":"The maximum number fruits on your team is equal to the number of players on your team."}'],"minecraft:custom_model_data":30,"minecraft:custom_data":{bluehealingfruit:1b,healingfruit:1b}}}}
 
 scoreboard players set @a[scores={hFruitTimer=..0}] hFruitTimer 400
 
@@ -608,17 +608,17 @@ tp @e[type=item,scores={FruitRemove=100..}] ~ -100 ~
 
 #Max of team healing fruits
 
-execute as @a[team=Red] store result score @s hFruitNum run data get entity @s Inventory[{components:{"minecraft:custom_data":{redhealingfruit:1b}}}].Count
+execute as @a[team=Red] store result score @s hFruitNum run data get entity @s Inventory[{components:{"minecraft:custom_data":{redhealingfruit:1b}}}].count
 
 execute as @a[team=Red] run scoreboard players operation #redHFruit hFruitNum += @s hFruitNum
 
-execute if score #redHFruit hFruitNum > #numPlayersOnTeam multiItems run clear @a[team=Red,scores={Kit=8}] golden_apple[custom_data~{redhealingfruit:1b}] 1
+execute if score #redHFruit hFruitNum > #numPlayersOnTeam multiItems as @a[team=Red,scores={Kit=8}] if score @s matchID = #matchID matchID run clear @s golden_apple[custom_data~{redhealingfruit:1b}] 1
 
-execute as @a[team=Blue] store result score @s hFruitNum run data get entity @s Inventory[{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}].Count
+execute as @a[team=Blue] store result score @s hFruitNum run data get entity @s Inventory[{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}].count
 
 execute as @a[team=Blue] run scoreboard players operation #blueHFruit hFruitNum += @s hFruitNum
 
-execute if score #blueHFruit hFruitNum > #numPlayersOnTeam multiItems run clear @a[team=Blue,scores={Kit=8}] golden_apple[custom_data~{bluehealingfruit:1b}] 1
+execute if score #blueHFruit hFruitNum > #numPlayersOnTeam multiItems as @a[team=Blue,scores={Kit=8}] if score @s matchID = #matchID matchID run clear @s golden_apple[custom_data~{bluehealingfruit:1b}] 1
 
 scoreboard players reset #redHFruit hFruitNum
 
@@ -780,9 +780,9 @@ execute store result bossbar minecraft:blueking value run data get entity @e[typ
 
 #Reveal Drone
 
-execute as @e[type=bat,tag=Reveal] at @s run summon zombified_piglin ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4f,IsBaby:1b,Tags:["DroneRed","Drone"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
+execute as @e[type=bat,tag=RevealRed] at @s run summon zombified_piglin ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4f,IsBaby:1b,Tags:["DroneRed","Drone"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
 
-tp @e[type=bat,tag=Reveal] ~ -100 ~
+tp @e[type=bat,tag=RevealRed] ~ -100 ~
 
 execute as @e[type=zombified_piglin,tag=DroneRed] at @s run effect give @a[team=Blue,distance=..12] glowing 1 0 true
 
@@ -1348,8 +1348,8 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/overcharge] at @s
 
 tag @e[type=zombie,tag=overcharge] add OC
 
-execute as @e[type=zombie,tag=overcharge] at @s run data merge entity @s {CustomNameVisible:1b,Health:20f,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:7s},{id:"minecraft:knockback",lvl:2s},{id:"minecraft:fire_aspect",lvl:1s}]}},{}],HandDropChances:[0.000F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:100000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:20},{Name:"minecraft:generic.follow_range",Base:99},{Name:"minecraft:generic.movement_speed",Base:0.35}]}
- 
+execute as @e[type=zombie,tag=overcharge] at @s run data merge entity @s {CustomNameVisible:1b,Health:20f,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":16711680}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:generic.follow_range",base:99},{id:"minecraft:generic.max_health",base:20},{id:"minecraft:generic.movement_speed",base:0.35}]}
+
 tag @e[type=zombie,tag=OC] remove overcharge
 
 scoreboard players add @e[type=zombie,tag=OC] OCTimer 1
@@ -1986,7 +1986,7 @@ scoreboard players set @a[scores={died=1..}] dragonRageTimer 0
 
 execute as @e[tag=stop,type=dragon_fireball] store success entity @s Air short 1 if data entity @s {Air:0s}
 
-tag @e[type=area_effect_cloud,nbt={Particle:"minecraft:dragon_breath"},tag=!stop] add dRageCloud
+tag @e[type=area_effect_cloud,nbt={Particle:{type:"minecraft:dragon_breath"}},tag=!stop] add dRageCloud
 
 data merge entity @e[type=area_effect_cloud,tag=dRageCloud,tag=!stop,limit=1] {ReapplicationDelay:25,RadiusPerTick:-0.005f,RadiusOnUse:-0.005f,Duration:160}
 
@@ -2118,9 +2118,9 @@ execute if score #redHS healstreak matches 6.. run tag @a[team=Red,tag=!healstre
 
 execute if score #blueHS healstreak matches 6.. run tag @a[team=Blue,tag=!healstreak,limit=1,scores={Kit=4}] add HSinit
 
-execute as @a[team=Red,tag=HSinit,tag=!healstreak] at @s run summon minecraft:item ~1 ~1.5 ~ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["angelpassive","HSRed"],Item:{id:"minecraft:gold_ingot",Count:1b,tag:{CustomModelData:119,angelpassive:1b}}}
+execute as @a[team=Red,tag=HSinit,tag=!healstreak] at @s run summon minecraft:item ~1 ~1.5 ~ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["angelpassive","HSRed"],Item:{id:"minecraft:gold_ingot",Count:1b,components:{"minecraft:custom_model_data":119,"minecraft:custom_data":{angelpassive:1b}}}}
 
-execute as @a[team=Blue,tag=HSinit,tag=!healstreak] at @s run summon minecraft:item ~1 ~1.5 ~ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["angelpassive","HSBlue"],Item:{id:"minecraft:gold_ingot",Count:1b,tag:{CustomModelData:119,angelpassive:1b}}}
+execute as @a[team=Blue,tag=HSinit,tag=!healstreak] at @s run summon minecraft:item ~1 ~1.5 ~ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["angelpassive","HSBlue"],Item:{id:"minecraft:gold_ingot",Count:1b,components:{"minecraft:custom_model_data":119,"minecraft:custom_data":{angelpassive:1b}}}}
 
 tag @a[tag=HSinit] add healstreak
 
@@ -2334,7 +2334,7 @@ scoreboard players add @e[type=zombified_piglin,tag=oven] ovenDur 1
 
 execute as @e[type=item_frame,tag=oven] at @s unless entity @e[type=zombified_piglin,limit=1,sort=nearest,distance=..1] run function commands:other/destroy_oven
 
-execute as @e[type=zombified_piglin,tag=oven,scores={ovenTimer=30,ovenDur=1..}] at @s run data modify entity @e[type=item_frame,tag=oven,limit=1,sort=nearest] Item set value {id:"minecraft:stone_bricks",Count:1b,tag:{CustomModelData:134}}
+execute as @e[type=zombified_piglin,tag=oven,scores={ovenTimer=30,ovenDur=1..}] at @s run data modify entity @e[type=item_frame,tag=oven,limit=1,sort=nearest] Item set value {id:"minecraft:stone_bricks",Count:1b,components:{"minecraft:custom_model_data":134}}
 
 execute as @e[type=zombified_piglin,tag=oven,tag=pizzatime,scores={ovenTimer=20..}] at @s run function commands:other/shoot_pizza
 

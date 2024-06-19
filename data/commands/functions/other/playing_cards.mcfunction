@@ -1,30 +1,30 @@
-execute at @s[team=Red] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","card1","redProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Red] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","card1","redProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
-execute at @s[team=Red] anchored eyes run summon item ^0.04 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","card2","redProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Red] anchored eyes run summon item ^0.04 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","card2","redProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
-execute at @s[team=Red] anchored eyes run summon item ^-0.04 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","card3","redProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Red] anchored eyes run summon item ^-0.04 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","card3","redProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
-execute at @s[team=Red] anchored eyes run summon item ^0.08 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","card4","redProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Red] anchored eyes run summon item ^0.08 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","card4","redProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
-execute at @s[team=Red] anchored eyes run summon item ^-0.08 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","card5","redProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Red] anchored eyes run summon item ^-0.08 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","card5","redProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
-execute at @s[team=Red] anchored eyes run summon item ~ -5 ~ {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","pCardExtra","card6","redProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Red] anchored eyes run summon item ~ -5 ~ {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","pCardExtra","card6","redProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
-execute at @s[team=Red] anchored eyes run summon item ~ -5 ~ {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","pCardExtra","card7","redProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Red] anchored eyes run summon item ~ -5 ~ {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardRed","pCard","pCardExtra","card7","redProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","card1","blueProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Blue] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","card1","blueProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ^0.04 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","card2","blueProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Blue] anchored eyes run summon item ^0.04 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","card2","blueProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ^-0.04 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","card3","blueProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Blue] anchored eyes run summon item ^-0.04 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","card3","blueProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ^0.08 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","card4","blueProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Blue] anchored eyes run summon item ^0.08 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","card4","blueProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ^-0.08 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","card5","blueProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Blue] anchored eyes run summon item ^-0.08 ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","card5","blueProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ~ -5 ~ {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","pCardExtra","card6","blueProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Blue] anchored eyes run summon item ~ -5 ~ {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","pCardExtra","card6","blueProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ~ -5 ~ {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","pCardExtra","card7","blueProj"],Item:{id:"minecraft:map",Count:1b,tag:{CustomModelData:152}}}
+execute at @s[team=Blue] anchored eyes run summon item ~ -5 ~ {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["pCardBlue","pCard","pCardExtra","card7","blueProj"],Item:{id:"minecraft:map",Count:1b,components:{"minecraft:custom_model_data":152}}}
 
 execute as @e[tag=pCard] run data modify entity @s Owner set from entity @a[tag=cardShooter,limit=1] UUID
 

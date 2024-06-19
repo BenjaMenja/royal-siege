@@ -26,7 +26,8 @@
               "function": "set_name",
               "name": [
                 {
-                  "text": "Seismic Slam"
+                  "text": "Seismic Slam",
+                  "italic": false
                 }
               ]
             },

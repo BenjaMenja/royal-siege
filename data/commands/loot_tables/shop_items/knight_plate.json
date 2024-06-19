@@ -10,7 +10,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "Knight's Plate"
+                "text": "Knight's Plate",
+                "italic": false
               }
             },
             {

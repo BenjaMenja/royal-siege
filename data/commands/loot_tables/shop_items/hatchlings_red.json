@@ -41,6 +41,15 @@
                 "minecraft:custom_model_data": 112,
                 "minecraft:can_place_on": {
                   "blocks": "#commands:can_place_on"
+                },
+                "minecraft:entity_data": {
+                  "id": "minecraft:bat",
+                  "Silent": 1,
+                  "Invulnerable": 1,
+                  "Tags": [
+                    "hatchlings",
+                    "hatchlingsred"
+                  ]
                 }
               }
             },
@@ -52,7 +61,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{hatchlingsred:1b,EntityTag:{Tags:[\"hatchlingsred\",\"hatchlings\"]}}"
+              "tag": "{hatchlingsred:1b}"
             }
           ]
         }

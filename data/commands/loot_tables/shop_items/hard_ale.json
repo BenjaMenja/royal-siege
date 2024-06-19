@@ -10,7 +10,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "Hard Ale"
+                "text": "Hard Ale",
+                "italic": false
               }
             },
             {

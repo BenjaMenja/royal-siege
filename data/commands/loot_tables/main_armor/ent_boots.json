@@ -31,7 +31,8 @@
               "name": [
                 {
                   "color": "#8B4513",
-                  "text": "Wooden Boots"
+                  "text": "Wooden Boots",
+                  "italic": false
                 }
               ]
             }

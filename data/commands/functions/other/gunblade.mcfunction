@@ -1,16 +1,16 @@
-tag @s[scores={BurstTimer=20..},nbt={SelectedItem:{tag:{gunblade:1b,switch:1b}}}] add burst
+execute if items entity @s[scores={BurstTimer=20..}] weapon.mainhand carrot_on_a_stick[custom_data~{switch:1b}] run tag @s add burst
 
-tag @s[scores={BurstTimer=16..},nbt={SelectedItem:{tag:{gunblade:1b,switch:1b}}},predicate=commands:holding/illegal_modifiers] add burst
+execute if items entity @s[scores={BurstTimer=16..},predicate=commands:holding/illegal_modifiers] weapon.mainhand carrot_on_a_stick[custom_data~{switch:1b}] run tag @s add burst
 
-tag @s[scores={PoisonTimer=160..},nbt={SelectedItem:{tag:{gunblade:1b,switch:2b}}}] add poison
+execute if items entity @s[scores={PoisonTimer=160..}] weapon.mainhand carrot_on_a_stick[custom_data~{switch:2b}] run tag @s add poison
 
-tag @s[scores={ToxinTimer=200..},nbt={SelectedItem:{tag:{gunblade:1b,switch:3b}}}] add toxin
+execute if items entity @s[scores={ToxinTimer=200..}] weapon.mainhand carrot_on_a_stick[custom_data~{switch:3b}] run tag @s add toxin
 
-tag @s[scores={StasisTimer=240..},nbt={SelectedItem:{tag:{gunblade:1b,switch:4b}}}] add stasis
+execute if items entity @s[scores={StasisTimer=240..}] weapon.mainhand carrot_on_a_stick[custom_data~{switch:4b}] run tag @s add stasis
 
-tag @s[scores={MidasTimer=280..},nbt={SelectedItem:{tag:{gunblade:1b,switch:5b}}}] add midas
+execute if items entity @s[scores={MidasTimer=280..}] weapon.mainhand carrot_on_a_stick[custom_data~{switch:5b}] run tag @s add midas
 
-tag @s[scores={ExplosionTimer=280..},nbt={SelectedItem:{tag:{gunblade:1b,switch:6b}}}] add explosion
+execute if items entity @s[scores={ExplosionTimer=280..}] weapon.mainhand carrot_on_a_stick[custom_data~{switch:6b}] run tag @s add explosion
 
 scoreboard players reset @s eBulletHit
 

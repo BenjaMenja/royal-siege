@@ -10,7 +10,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "Punch Bow"
+                "text": "Punch Bow",
+                "italic": false
               }
             },
             {

@@ -93,6 +93,21 @@
                   "text": " "
                 },
                 {
+                  "text": "It looks like a battle axe from afar, but the blades"
+                },
+                {
+                  "text": "are actually decorative wings. What’s up with that?"
+                },
+                {
+                  "text": "Right-clicking fires a healing beam that heals 4 HP if it hits a teammate."
+                },
+                {
+                  "text": "Has a maximum range of 20 blocks."
+                },
+                {
+                  "text": " "
+                },
+                {
                   "color": "gray",
                   "italic": false,
                   "text": "When in Main Hand:"
@@ -111,21 +126,6 @@
                   "color": "blue",
                   "italic": false,
                   "text": "+2 Max Health"
-                },
-                {
-                  "text": " "
-                },
-                {
-                  "text": "It looks like a battle axe from afar, but the blades"
-                },
-                {
-                  "text": "are actually decorative wings. What’s up with that?"
-                },
-                {
-                  "text": "Right-clicking fires a healing beam that heals 4 HP if it hits a teammate."
-                },
-                {
-                  "text": "Has a maximum range of 20 blocks."
                 }
               ],
               "mode": "append"

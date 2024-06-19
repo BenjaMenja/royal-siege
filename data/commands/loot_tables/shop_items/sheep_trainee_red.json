@@ -4,19 +4,86 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
+          "type": "item",
+          "weight": 1,
           "name": "minecraft:sheep_spawn_egg",
           "functions": [
             {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Sheep Trainee",
-                "color": "dark_aqua",
-                "italic": false
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:can_place_on": {
+                  "predicates": [
+                    {
+                      "blocks": "#commands:can_place_on"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                },
+                "minecraft:custom_data": {
+                  "sheeptrainee": 1
+                },
+                "minecraft:entity_data": {
+                  "id": "minecraft:sheep",
+                  "Team": "Red",
+                  "Health": "50f",
+                  "Tags": [
+                    "sheepred"
+                  ],
+                  "ArmorItems": [
+                    {},
+                    {},
+                    {
+                      "id": "minecraft:acacia_fence",
+                      "count": 1,
+                      "components": {
+                        "minecraft:attribute_modifiers": [
+                          {
+                            "type": "generic.movement_speed",
+                            "name": "generic.movement_speed",
+                            "amount": -0.75,
+                            "operation": "add_multiplied_base",
+                            "uuid": [
+                              -718119152,
+                              -1279243792,
+                              -1395214775,
+                              522061349
+                            ],
+                            "slot": "chest"
+                          }
+                        ]
+                      }
+                    },
+                    {}
+                  ],
+                  "Attributes": [
+                    {
+                      "Name": "generic.knockback_resistance",
+                      "Base": 1
+                    },
+                    {
+                      "Name": "generic.max_health",
+                      "Base": 50
+                    }
+                  ]
+                }
               }
             },
             {
-              "function": "minecraft:set_lore",
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "dark_aqua",
+                  "italic": false,
+                  "text": "Sheep Trainee"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
               "lore": [
                 {
                   "text": "A pet sheep that gives resistance to nearby teammates."
@@ -25,11 +92,7 @@
                   "text": "Moves very slowly and has decent health."
                 }
               ],
-              "mode": "insert"
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{sheeptrainee:1b,EntityTag:{Team:\"Red\",Health:50f,Color:11b,Tags:[\"sheepred\"],ArmorItems:[{},{},{id:\"minecraft:acacia_fence\",Count:1b,tag:{AttributeModifiers:[{AttributeName:\"generic.movement_speed\",Name:\"generic.movement_speed\",Amount:-.75,Operation:1,UUID:[I;501896821,1792888229,-1165037337,-1977757348],Slot:\"chest\"}]}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],Attributes:[{Name:generic.max_health,Base:50},{Name:generic.knockback_resistance,Base:1.0}]}}"
+              "mode": "append"
             }
           ]
         }

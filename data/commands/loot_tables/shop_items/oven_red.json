@@ -38,6 +38,15 @@
                 "minecraft:custom_model_data": 134,
                 "minecraft:can_place_on": {
                   "blocks": "#commands:can_place_on"
+                },
+                "minecraft:entity_data": {
+                  "id": "minecraft:bat",
+                  "Silent": 1,
+                  "Invulnerable": 1,
+                  "Tags": [
+                    "oven",
+                    "ovenred"
+                  ]
                 }
               }
             },
@@ -49,7 +58,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{chefoven:1b,EntityTag:{Silent:1b,Invulnerable:1b,Tags:[\"ovenred\",\"oven\"]}}"
+              "tag": "{chefoven:1b}"
             }
           ]
         }

@@ -4,43 +4,92 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
+          "type": "item",
+          "weight": 1,
           "name": "minecraft:silverfish_spawn_egg",
           "functions": [
             {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "Land Fish",
-                "color": "#787577",
-                "italic": false
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:can_place_on": {
+                  "predicates": [
+                    {
+                      "blocks": "#commands:can_place_on"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                },
+                "minecraft:custom_data": {
+                  "landfishblue": 1
+                },
+                "minecraft:entity_data": {
+                  "id": "minecraft:silverfish",
+                  "Team": "Blue",
+                  "Tags": [
+                    "landfish"
+                  ],
+                  "CustomName": "{\"color\":\"blue\",\"italic\":false,\"text\":\"Land Fish\"",
+                  "HandItems": [
+                    {
+                      "id": "minecraft:stick",
+                      "count": 1,
+                      "components": {
+                        "minecraft:enchantments": {
+                          "levels": {
+                            "minecraft:knockback": 4
+                          }
+                        }
+                      }
+                    },
+                    {}
+                  ],
+                  "HandDropChances": [
+                    -327,
+                    0
+                  ],
+                  "Attributes": [
+                    {
+                      "id": "minecraft:generic.attack_damage",
+                      "base": 8
+                    },
+                    {
+                      "id": "minecraft:generic.follow_range",
+                      "base": 99
+                    },
+                    {
+                      "id": "minecraft:generic.knockback_resistance",
+                      "base": 0.5
+                    },
+                    {
+                      "id": "minecraft:generic.max_health",
+                      "base": 20
+                    }
+                  ]
+                }
               }
             },
             {
-              "function": "minecraft:set_lore",
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "#787577",
+                  "italic": false,
+                  "text": "Land Fish"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
               "lore": [
                 {
                   "text": "A simple land fish to annoy your enemies."
                 }
               ],
-              "mode": "insert"
-            },
-            {
-              "function": "minecraft:set_components",
-              "components": {
-                "minecraft:can_place_on": {
-                  "blocks": "#commands:can_place_on"
-                }
-              }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{landfishblue:1b,EntityTag:{CustomNameVisible:1b,Team:\"Blue\",Health:20f,Tags:[\"landfish\"],CustomName:'{\"text\":\"Land Fish\",\"color\":\"blue\"}',HandItems:[{id:\"minecraft:stick\",Count:1b,tag:{Enchantments:[{id:\"minecraft:knockback\",lvl:4s}]}},{}],HandDropChances:[-327.670F,0.085F],Attributes:[{Name:generic.max_health,Base:20},{Name:generic.follow_range,Base:99},{Name:generic.knockback_resistance,Base:0.5},{Name:generic.attack_damage,Base:8}]}}"
-            },
-            {
-              "function": "minecraft:toggle_tooltips",
-              "toggles": {
-                "minecraft:can_place_on": false
-              }
+              "mode": "append"
             }
           ]
         }

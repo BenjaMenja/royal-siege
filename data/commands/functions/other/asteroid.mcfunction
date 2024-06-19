@@ -1,6 +1,6 @@
-execute at @s[team=Red] anchored eyes run summon minecraft:fireball ^ ^ ^1 {HasVisualFire:0b,ExplosionPower:3b,Tags:["asteroid","redProj"],power:[0.0,0.0,0.0],Passengers:[{id:"minecraft:area_effect_cloud",Duration:2147483647,Age:-2147483647,WaitTime:-2147483647,Tags:["asteroidLand"]}],Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:172}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:fireball ^ ^ ^1 {HasVisualFire:0b,ExplosionPower:3b,Tags:["asteroid","redProj"],power:[0.0,0.0,0.0],Passengers:[{id:"minecraft:area_effect_cloud",Duration:2147483647,Age:-2147483647,WaitTime:-2147483647,Tags:["asteroidLand"]}],Item:{id:"minecraft:carrot_on_a_stick",Count:1b,components:{"minecraft:custom_model_data":172}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:fireball ^ ^ ^1 {HasVisualFire:0b,ExplosionPower:3b,Tags:["asteroid","blueProj"],power:[0.0,0.0,0.0],Passengers:[{id:"minecraft:area_effect_cloud",Duration:2147483647,Age:-2147483647,WaitTime:-2147483647,Tags:["asteroidLand"]}],Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:172}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:fireball ^ ^ ^1 {HasVisualFire:0b,ExplosionPower:3b,Tags:["asteroid","blueProj"],power:[0.0,0.0,0.0],Passengers:[{id:"minecraft:area_effect_cloud",Duration:2147483647,Age:-2147483647,WaitTime:-2147483647,Tags:["asteroidLand"]}],Item:{id:"minecraft:carrot_on_a_stick",Count:1b,components:{"minecraft:custom_model_data":172}}}
 
 execute as @e[tag=asteroid] run data modify entity @s Owner set from entity @a[tag=asteroidShooter,limit=1] UUID
 
