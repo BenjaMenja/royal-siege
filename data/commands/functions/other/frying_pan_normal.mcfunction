@@ -1,4 +1,4 @@
-execute if entity @s[nbt={Inventory:[{tag:{fryingpanburning:1b}}]}] run function commands:replace/frying_pan_normal
+execute if entity @s[nbt={Inventory:[{components:{"minecraft:custom_data":{fryingpanburning:1b}}}]}] run function commands:replace/frying_pan_normal
 
 execute at @s[team=Red] run effect give @a[team=Red,distance=..10] regeneration 3 2
 

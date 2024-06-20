@@ -28,4 +28,8 @@ scoreboard objectives add popRocksTimer dummy
 scoreboard objectives add popRocksDur dummy
 scoreboard objectives add counter dummy
 scoreboard objectives add RSAttr.AstroGravity dummy
+scoreboard objectives add RSAttr.SeismicSlamUpGravity dummy
+scoreboard objectives add RSAttr.SeismicSlamDownGravity dummy
+scoreboard objectives add RSAttr.SeismicSlamLaunchGravity dummy
+scoreboard objectives add RSAttr.SeismicSlamFallDist dummy
 scoreboard objectives remove dmDelay

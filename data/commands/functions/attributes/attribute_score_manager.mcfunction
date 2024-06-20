@@ -295,3 +295,17 @@ execute as @a[scores={RSAttr.PyromaniaAtkDmg=100..}] run function commands:attri
 scoreboard players add @a[scores={RSAttr.ChrysanthemumSpeed=0..}] RSAttr.ChrysanthemumSpeed 1
 
 execute as @a[scores={RSAttr.ChrysanthemumSpeed=160..}] run function commands:attributes/clears/clear_chrysanthemum_shell_speed
+
+#Seismic Slam
+
+scoreboard players add @a[scores={RSAttr.SeismicSlamUpGravity=0..}] RSAttr.SeismicSlamUpGravity 1
+
+execute as @a[scores={RSAttr.SeismicSlamUpGravity=8..}] run function commands:attributes/clears/clear_seismic_slam_up_gravity
+
+scoreboard players add @a[scores={RSAttr.SeismicSlamDownGravity=0..}] RSAttr.SeismicSlamDownGravity 1
+
+execute as @a[scores={RSAttr.SeismicSlamDownGravity=8..}] run function commands:attributes/clears/clear_seismic_slam_down_gravity
+
+scoreboard players add @a[scores={RSAttr.SeismicSlamLaunchGravity=0..}] RSAttr.SeismicSlamLaunchGravity 1
+
+execute as @a[scores={RSAttr.SeismicSlamLaunchGravity=5..}] run function commands:attributes/clears/clear_seismic_slam_launch_gravity

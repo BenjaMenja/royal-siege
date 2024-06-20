@@ -8,7 +8,7 @@
             "type": {
               "direct_entity": {
                 "type": "minecraft:arrow",
-                "nbt": "{custom_potion_effects:[{id:\"minecraft:luck\",amplifier:0b,duration:2}]}"
+                "nbt": "{item:{id:\"minecraft:tipped_arrow\",count:1,components:{\"minecraft:potion_contents\":{custom_effects:[{id:\"minecraft:luck\",amplifier:0,duration:2,show_particles:0b}]}}}}"
               }
             }
           }

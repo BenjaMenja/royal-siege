@@ -30,7 +30,7 @@
                   "text": "Projects a particle barrier around you."
                 },
                 {
-                  "text": "The particle barrier destroys enemy projectiles that come in contact with it.\"}','{\"text\":\"The shield runs on a resource, displayed above your hotbar.\"}','{\"text\":\"Not using it causes the resource to regenerate.\"}','{\"text\":\"You will also receive slowness while channeling the barrier.\"}']},Unbreakable:1b,CustomModelData:122,absorptionshield:1b,Enchantments:[{}]} 1"
+                  "text": "The particle barrier destroys enemy projectiles that come in contact with it."
                 },
                 {
                   "text": "The shield runs on a resource, displayed above your hotbar."

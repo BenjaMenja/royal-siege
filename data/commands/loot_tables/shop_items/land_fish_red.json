@@ -29,6 +29,7 @@
                 "minecraft:entity_data": {
                   "id": "minecraft:silverfish",
                   "Team": "Red",
+                  "Health": 20,
                   "Tags": [
                     "landfish"
                   ],
@@ -53,20 +54,20 @@
                   ],
                   "Attributes": [
                     {
-                      "name": "minecraft:generic.attack_damage",
-                      "base": 8
+                      "Name": "minecraft:generic.attack_damage",
+                      "Base": 8
                     },
                     {
-                      "name": "minecraft:generic.follow_range",
-                      "base": 99
+                      "Name": "minecraft:generic.follow_range",
+                      "Base": 99
                     },
                     {
-                      "name": "minecraft:generic.knockback_resistance",
-                      "base": 0.5
+                      "Name": "minecraft:generic.knockback_resistance",
+                      "Base": 0.5
                     },
                     {
-                      "name": "minecraft:generic.max_health",
-                      "base": 20
+                      "Name": "minecraft:generic.max_health",
+                      "Base": 20
                     }
                   ]
                 }

@@ -9,7 +9,7 @@ execute if entity @s[tag=!upgraded] if score #gunbladeammo counter matches ..14 
 
 execute if entity @s[tag=upgraded] if score #gunbladeammo counter matches ..19 run function commands:other/gunblade_reload
 
-playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 2
+playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 0.1 2
 
 tag @s remove reloading
 

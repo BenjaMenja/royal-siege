@@ -4,9 +4,9 @@ execute at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.
 
 #Dropping Money
 
-execute unless entity @a[team=Blue,predicate=commands:inventory/insurance] at @s[team=Blue] run summon minecraft:item ~ ~1 ~ {Health:1000,Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_name":'{"color":"#FFCC00","italic":false,"text":"Siege Coin"}',"minecraft:lore":['{"text":"Throw into the gold pit at your castle to convert into Siege Bucks."}'],"minecraft:custom_model_data":148,"minecraft:custom_data":{moneyitem:1b}}}}
+execute unless entity @a[team=Blue,predicate=commands:inventory/insurance] at @s[team=Blue] run function commands:entities/siege_coin
 
-execute unless entity @a[team=Red,predicate=commands:inventory/insurance] at @s[team=Red] run summon minecraft:item ~ ~1 ~ {Health:1000,Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_name":'{"color":"#FFCC00","italic":false,"text":"Siege Coin"}',"minecraft:lore":['{"text":"Throw into the gold pit at your castle to convert into Siege Bucks."}'],"minecraft:custom_model_data":148,"minecraft:custom_data":{moneyitem:1b}}}}
+execute unless entity @a[team=Red,predicate=commands:inventory/insurance] at @s[team=Red] run function commands:entities/siege_coin
 
 execute if entity @a[team=Red,predicate=commands:inventory/insurance] run scoreboard players add @s Money 100
 

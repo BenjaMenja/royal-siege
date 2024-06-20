@@ -1,18 +1,18 @@
 #Red Proj.
 
-execute at @s[team=Red] anchored eyes run summon experience_bottle ^0.1 ^ ^1 {NoGravity:1b,Tags:["expBottle","redProj"]}
+execute at @s[team=Red] anchored eyes run summon experience_bottle ^0.05 ^ ^1 {NoGravity:1b,Tags:["expBottle","redProj"]}
 
-execute at @s[team=Red] anchored eyes run summon experience_bottle ^-0.1 ^ ^1 {NoGravity:1b,Tags:["expBottle","redProj"]}
+execute at @s[team=Red] anchored eyes run summon experience_bottle ^-0.05 ^ ^1 {NoGravity:1b,Tags:["expBottle","redProj"]}
 
-execute at @s[team=Red] anchored eyes run summon experience_bottle ^ ^-0.1 ^1 {NoGravity:1b,Tags:["expBottle","redProj"]}
+execute at @s[team=Red] anchored eyes run summon experience_bottle ^ ^-0.05 ^1 {NoGravity:1b,Tags:["expBottle","redProj"]}
 
 #Blue Proj.
 
-execute at @s[team=Blue] anchored eyes run summon experience_bottle ^0.1 ^ ^1 {NoGravity:1b,Tags:["expBottle","blueProj"]}
+execute at @s[team=Blue] anchored eyes run summon experience_bottle ^0.05 ^ ^1 {NoGravity:1b,Tags:["expBottle","blueProj"]}
 
-execute at @s[team=Blue] anchored eyes run summon experience_bottle ^-0.1 ^ ^1 {NoGravity:1b,Tags:["expBottle","blueProj"]}
+execute at @s[team=Blue] anchored eyes run summon experience_bottle ^-0.05 ^ ^1 {NoGravity:1b,Tags:["expBottle","blueProj"]}
 
-execute at @s[team=Blue] anchored eyes run summon experience_bottle ^ ^-0.1 ^1 {NoGravity:1b,Tags:["expBottle","blueProj"]}
+execute at @s[team=Blue] anchored eyes run summon experience_bottle ^ ^-0.05 ^1 {NoGravity:1b,Tags:["expBottle","blueProj"]}
 
 #Other Proj stuff
 

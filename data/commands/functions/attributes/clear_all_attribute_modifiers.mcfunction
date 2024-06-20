@@ -115,3 +115,11 @@ function commands:attributes/clears/clear_pyromania_atkdmg
 function commands:attributes/clears/clear_chrysanthemum_shell_speed
 
 function commands:attributes/clears/clear_astronaut_passive_gravity
+
+function commands:attributes/clears/clear_seismic_slam_up_gravity
+
+function commands:attributes/clears/clear_seismic_slam_down_gravity
+
+function commands:attributes/clears/clear_seismic_slam_fall_dist
+
+function commands:attributes/clears/clear_seismic_slam_launch_gravity
