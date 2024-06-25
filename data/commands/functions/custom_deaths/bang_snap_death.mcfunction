@@ -8,6 +8,8 @@ execute if score #rng RNG matches 2 run tellraw @a [{"selector":"@s "},{"text":"
 
 execute if score #rng RNG matches 3 run tellraw @a [{"selector":"@s "},{"text":" went out with a bang.","color":"white"}]
 
+say died to bang snap
+
 scoreboard players reset #rng RNG
 
 function commands:custom_deaths/advancement_remove

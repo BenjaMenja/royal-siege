@@ -31,5 +31,9 @@ scoreboard objectives add RSAttr.AstroGravity dummy
 scoreboard objectives add RSAttr.SeismicSlamUpGravity dummy
 scoreboard objectives add RSAttr.SeismicSlamDownGravity dummy
 scoreboard objectives add RSAttr.SeismicSlamLaunchGravity dummy
-scoreboard objectives add RSAttr.SeismicSlamFallDist dummy
+scoreboard objectives add RSAttr.SafeFallDist dummy
+scoreboard objectives add RSAttr.CShellUpGravity dummy
+scoreboard objectives add RSAttr.CShellDownGravity dummy
+scoreboard objectives add RSAttr.Rooted dummy
+scoreboard objectives add siegeBank dummy
 scoreboard objectives remove dmDelay

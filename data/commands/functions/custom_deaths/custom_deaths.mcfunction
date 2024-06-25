@@ -14,6 +14,8 @@ execute if entity @a[team=Blue,predicate=commands:inventory/insurance] run score
 
 #Custom Death Messages
 
+say nothing
+
 execute if entity @s[advancements={commands:sword_death=true}] run function commands:custom_deaths/sword_death
 
 execute if entity @s[advancements={commands:axe_death=true}] run function commands:custom_deaths/axe_death

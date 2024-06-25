@@ -1,21 +1,20 @@
 {
-  "parent": "commands:root",
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:entity_hurt_player",
+      "trigger": "minecraft:entity_killed_player",
       "conditions": {
-        "player": {},
-        "damage": {
-          "type": {
-            "tags": [
-              {
-                "id": "commands:bang_snap",
-                "expected": true
-              }
-            ]
-          }
+        "killing_blow": {
+          "tags": [
+            {
+              "id": "commands:fire",
+              "expected": true
+            }
+          ]
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/bang_snap_death"
   }
 }

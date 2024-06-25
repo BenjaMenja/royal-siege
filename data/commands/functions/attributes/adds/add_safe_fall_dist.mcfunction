@@ -1,0 +1,1 @@
+attribute @s minecraft:generic.safe_fall_distance modifier add 14-0-100-0-0 "SafeFallDist" 100 add_value

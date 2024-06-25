@@ -126,7 +126,7 @@ execute if score @s textClick matches 63 run function commands:shops/passive
 
 execute if score @s textClick matches 64 run function commands:other/shops
 
-execute if score @s textClick matches 65 run function commands:other/withdraw
+execute if score @s textClick matches 65 run function commands:other/withdraw_text
 
 #Replace This one first
 
@@ -353,5 +353,23 @@ execute if score @s textClick matches 179 run function commands:starting/ultimat
 execute if score @s textClick matches 180 run function commands:practice_range/character/firecracker
 
 execute if score @s textClick matches 181 run function commands:books/firecracker
+
+execute if score @s textClick matches 182 run function commands:other/deposit_siege_bucks_to_bank {siege_bucks:100}
+
+execute if score @s textClick matches 183 run function commands:other/deposit_siege_bucks_to_bank {siege_bucks:250}
+
+execute if score @s textClick matches 184 run function commands:other/deposit_siege_bucks_to_bank {siege_bucks:500}
+
+execute if score @s textClick matches 185 run function commands:other/deposit_siege_bucks_to_bank {siege_bucks:1000}
+
+execute if score @s textClick matches 186 run function commands:other/deposit_siege_bucks_to_bank
+
+execute if score @s textClick matches 187 run function commands:other/withdraw_siege_bucks {siege_bucks:100}
+
+execute if score @s textClick matches 188 run function commands:other/withdraw_siege_bucks {siege_bucks:250}
+
+execute if score @s textClick matches 189 run function commands:other/withdraw_siege_bucks {siege_bucks:500}
+
+execute if score @s textClick matches 190 run function commands:other/withdraw_siege_bucks {siege_bucks:1000}
 
 scoreboard players reset @a[scores={textClick=1..}] textClick

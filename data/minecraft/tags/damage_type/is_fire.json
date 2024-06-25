@@ -1,0 +1,14 @@
+{
+  "values": [
+    "minecraft:in_fire",
+    "minecraft:on_fire",
+    "minecraft:lava",
+    "minecraft:hot_floor",
+    "minecraft:unattributed_fireball",
+    "minecraft:fireball",
+    "commands:sparkler",
+    "commands:bang_snap",
+    "commands:chrysanthemum_shell",
+    "commands:cinder_bomb"
+  ]
+}

@@ -88,6 +88,8 @@ advancement revoke @s only commands:sparkler_death
 
 advancement revoke @s only commands:c4_death
 
+tellraw @a {"text":"Advancement remove"}
+
 tag @s remove DIED
 
 tag @s remove DIED2

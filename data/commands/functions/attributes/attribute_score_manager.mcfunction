@@ -296,6 +296,14 @@ scoreboard players add @a[scores={RSAttr.ChrysanthemumSpeed=0..}] RSAttr.Chrysan
 
 execute as @a[scores={RSAttr.ChrysanthemumSpeed=160..}] run function commands:attributes/clears/clear_chrysanthemum_shell_speed
 
+scoreboard players add @a[scores={RSAttr.CShellUpGravity=0..}] RSAttr.CShellUpGravity 1
+
+execute as @a[scores={RSAttr.CShellUpGravity=6..}] run function commands:attributes/clears/clear_cshell_up_gravity
+
+scoreboard players remove @a[scores={RSAttr.CShellDownGravity=0..}] RSAttr.CShellDownGravity 1
+
+execute as @a[scores={RSAttr.CShellDownGravity=..0}] run function commands:attributes/clears/clear_cshell_down_gravity
+
 #Seismic Slam
 
 scoreboard players add @a[scores={RSAttr.SeismicSlamUpGravity=0..}] RSAttr.SeismicSlamUpGravity 1
@@ -309,3 +317,17 @@ execute as @a[scores={RSAttr.SeismicSlamDownGravity=8..}] run function commands:
 scoreboard players add @a[scores={RSAttr.SeismicSlamLaunchGravity=0..}] RSAttr.SeismicSlamLaunchGravity 1
 
 execute as @a[scores={RSAttr.SeismicSlamLaunchGravity=5..}] run function commands:attributes/clears/clear_seismic_slam_launch_gravity
+
+#Fall Distance
+
+scoreboard players remove @a[scores={RSAttr.SafeFallDist=0..}] RSAttr.SafeFallDist 1
+
+execute as @a[scores={RSAttr.SafeFallDist=..0}] run function commands:attributes/clears/clear_safe_fall_dist
+
+#Rooted Debuff
+
+scoreboard players remove @a[scores={RSAttr.Rooted=0..}] RSAttr.Rooted 1
+
+execute as @a[scores={RSAttr.Rooted=..0}] run function commands:attributes/clears/clear_rooted
+
+

@@ -1,6 +1,6 @@
-effect give @a[advancements={commands:stasis_bullet=true}] slowness 3 11 true
+scoreboard players set @a[advancements={commands:stasis_bullet=true}] RSAttr.Rooted 60
 
-effect give @a[advancements={commands:stasis_bullet=true}] jump_boost 3 129 true
+execute as @a[advancements={commands:stasis_bullet=true}] run function commands:attributes/adds/add_rooted
 
 execute at @a[advancements={commands:stasis_bullet=true}] run summon lightning_bolt
 

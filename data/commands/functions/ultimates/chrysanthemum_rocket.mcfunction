@@ -32,8 +32,6 @@ execute as @e[tag=chrysanthemum_projectile,tag=!stop] store result entity @s Mot
 
 tag @e[tag=chrysanthemum_projectile] add stop
 
-tag @s remove chrysanthemumLaunch
+scoreboard players set @s RSAttr.CShellDownGravity 0
 
 clear @s carrot_on_a_stick[custom_data~{chrysanthemumshell:1b}]
-
-effect clear @s slow_falling

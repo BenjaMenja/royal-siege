@@ -14,6 +14,10 @@ effect give @s resistance 15 1 true
 
 loot give @s loot commands:ultimates/mythological_trident
 
+scoreboard players set @s RSAttr.SafeFallDist 300
+
+function commands:attributes/adds/add_safe_fall_dist
+
 tellraw @a [{"selector":"@s"},{"text":" is unleashing the wrath of the sea!"}]
 
 tag @s add scourgeActive

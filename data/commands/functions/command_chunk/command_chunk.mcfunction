@@ -16,14 +16,6 @@ execute as @e[type=item,tag=CCDelete] run function commands:other/remove_extra_c
 
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{corruptcredit:1b}}}}] run data merge entity @s {Health:1000}
 
-#Disable movement abilities for people that are rooted
-
-scoreboard players add @a[tag=rooted] rootedTimer 1
-
-tag @a[scores={rootedTimer=61..}] remove rooted
-
-scoreboard players reset @a[scores={rootedTimer=61..}] rootedTimer
-
 #Assign Teams to Arrows shot by bows
 
 execute as @e[type=arrow,tag=!getTeam] run function commands:other/arrow_get_team
@@ -71,6 +63,8 @@ scoreboard players set @e[type=item,tag=smartDroneLaser] ItemKill 2
 scoreboard players set @e[type=item,tag=sparkleritem] ItemKill 2
 
 scoreboard players set @e[type=item,tag=blazingspeedbomb] ItemKill 2
+
+scoreboard players set @e[type=item,tag=chrysanthemum_projectile] ItemKill 2
 
 execute as @e[type=item,tag=!processed,scores={ItemKill=1}] run data modify entity @s Owner set from entity @s Thrower
 
@@ -742,9 +736,7 @@ execute as @a[scores={Kit=6}] store result score @s lightningStaffDis run scoreb
 
 #Menu Item Initial Text
 
-tellraw @p[team=Red,scores={usedCOAS=1..},predicate=commands:holding/menu] ["",{"text":"+","color":"green"},{"text":"=========================================================================","color":"yellow"},{"text":"\n"},{"text":"Welcome to the Menu!","color":"#5AF6F9"},{"text":"\n\n"},{"text":"[Shops]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger textClick set 64"},"hoverEvent":{"action":"show_text","contents":{"text":"Opens up the Shop.","color":"green"}}},{"text":"                       ","color":"gold"},{"text":"[Withdraw Siege Coin]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger textClick set 65"},"hoverEvent":{"action":"show_text","contents":{"text":"Withdraws 150 Siege Bucks into the Siege Coin form\n(200 if you are Pirate)","color":"green"}}},{"text":"\n\n\n\n","color":"gold"},{"text":"[Withdraw Corrupt Credit]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger textClick set 67"},"hoverEvent":{"action":"show_text","contents":{"text":"Withdraws 1 Corrupt Credit from your team's bank.","color":"green"}}},{"text":"\n\n\nAmount of Corrupt Credits in Bank: ","color":"gold"},{"score":{"name":"#red","objective":"corruptBank"},"color":"gold"},{"text":"\n\n"},{"text":"+","color":"green"},{"text":"=========================================================================\n","color":"yellow"}]
-
-tellraw @p[team=Blue,scores={usedCOAS=1..},predicate=commands:holding/menu] ["",{"text":"+","color":"green"},{"text":"=========================================================================","color":"yellow"},{"text":"\n"},{"text":"Welcome to the Menu!","color":"#5AF6F9"},{"text":"\n\n"},{"text":"[Shops]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger textClick set 64"},"hoverEvent":{"action":"show_text","contents":{"text":"Opens up the Shop.","color":"green"}}},{"text":"                       ","color":"gold"},{"text":"[Withdraw Siege Coin]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger textClick set 65"},"hoverEvent":{"action":"show_text","contents":{"text":"Withdraws 150 Siege Bucks into the Siege Coin form\n(200 if you are Pirate)","color":"green"}}},{"text":"\n\n\n\n","color":"gold"},{"text":"[Withdraw Corrupt Credit]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger textClick set 67"},"hoverEvent":{"action":"show_text","contents":{"text":"Withdraws 1 Corrupt Credit from your team's bank.","color":"green"}}},{"text":"\n\n\nAmount of Corrupt Credits in Bank: ","color":"gold"},{"score":{"name":"#blue","objective":"corruptBank"},"color":"gold"},{"text":"\n\n"},{"text":"+","color":"green"},{"text":"=========================================================================\n","color":"yellow"}]
+tellraw @a[scores={usedCOAS=1..},predicate=commands:holding/menu] [{"color":"green","text":"+"},{"color":"yellow","text":"===================================================="},{"text":"\n"},{"color":"#5AF6F9","text":"Welcome to the Menu!"},{"text":"\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 64"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Opens up your character's shop.","color":"green"}]},"text":"[Shops]"},{"text":"                       "},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 65"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Accesses your team's bank.\nYou can view your team's collective amount of Siege Bucks and Corrupt Credits\nas well as deposit and withdraw.","color":"green"}]},"text":"[Bank]"},{"text":"\n\n\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 67"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Warps you to your castle's respawn point.","color":"green"},{"text":"\nThis has a 3 second delay, and can be interrupted by taking damage.","color":"green"}]},"text":"[Warp to Castle]"},{"text":"\n\n"},{"color":"green","text":"+"},{"color":"yellow","text":"====================================================\n"}]
 
 #Give chaos bow users the arrow back
 
@@ -1308,7 +1300,7 @@ execute as @e[type=bat,tag=concoction] at @s run function commands:ultimates/que
 
 tp @e[type=bat,tag=concoction] ~ -100 ~
  
-#Arrow of Justice (Archer Alt. Ultimate)
+#Bow of Justice (Archer Alt. Ultimate)
 
 execute as @a[scores={Kit=5,Ultimate=15},tag=!notAlive,predicate=!commands:inventory/bow_of_justice] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s JusticeTimer 1
  
@@ -1944,13 +1936,13 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 scoreboard players add @e[type=wandering_trader,tag=wanderingKing] kingActive 1
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @e[type=wandering_trader,tag=wanderingKingRed,scores={kingActive=200}] run teleport @s 9 59 -215
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @e[type=wandering_trader,tag=wanderingKingRed,scores={kingActive=200..}] run teleport @s 9 59 -215
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @e[type=wandering_trader,tag=wanderingKingBlue,scores={kingActive=200}] run teleport @s 9 59 -48
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @e[type=wandering_trader,tag=wanderingKingBlue,scores={kingActive=200..}] run teleport @s 9 59 -48
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingRed,scores={kingActive=200}] run teleport @s 156 59 -1017
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingRed,scores={kingActive=200..}] run teleport @s 156 59 -1017
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingBlue,scores={kingActive=200}] run teleport @s 45 59 -1128
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingBlue,scores={kingActive=200..}] run teleport @s 45 59 -1128
 
 #Dragon Rush
 
@@ -2150,9 +2142,9 @@ execute as @a[tag=absShield,scores={absShieldCount=1..,absShieldCD=40..}] at @s 
 
 scoreboard players add @a[tag=!absShield,scores={absShieldCount=..79}] absShieldTimer 1
 
-scoreboard players add @a[scores={absShieldTimer=4..}] absShieldCount 1
+scoreboard players add @a[scores={absShieldTimer=3..}] absShieldCount 1
 
-scoreboard players reset @a[scores={absShieldTimer=4..}] absShieldTimer
+scoreboard players reset @a[scores={absShieldTimer=3..}] absShieldTimer
 
 scoreboard players reset @a[scores={died=1..}] absShieldCD
 
@@ -2260,13 +2252,13 @@ execute if score #redroyalguard royalguardCD matches 2400.. run scoreboard playe
 
 execute if score #blueroyalguard royalguardCD matches 2400.. run scoreboard players reset #blueroyalguard royalguardCD
 
-execute as @e[type=skeleton,tag=redroyalguard,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:-1.0d}]}] if entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.25d}]}
+execute as @e[type=skeleton,tag=redroyalguard,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.0d}]}] if entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.25d}]}
 
-execute as @e[type=skeleton,tag=redroyalguard,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.25d}]}] unless entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:-1.0d}]}
+execute as @e[type=skeleton,tag=redroyalguard,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.25d}]}] unless entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.0d}]}
 
-execute as @e[type=skeleton,tag=blueroyalguard,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:-1.0d}]}] if entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.25d}]}
+execute as @e[type=skeleton,tag=blueroyalguard,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.0d}]}] if entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.25d}]}
 
-execute as @e[type=skeleton,tag=blueroyalguard,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.25d}]}] unless entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:-1.0d}]}
+execute as @e[type=skeleton,tag=blueroyalguard,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.25d}]}] unless entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.0d}]}
 
 execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 0 run teleport @s ~ ~ ~-0.2
 
@@ -2710,15 +2702,9 @@ loot give @a[scores={chrysanthemumShellTimer=1600..}] loot commands:ultimates/ch
 
 scoreboard players reset @a[scores={chrysanthemumShellTimer=1600..}] chrysanthemumShellTimer
 
-execute as @a[scores={usedCOAS=1..},predicate=commands:holding/chrysanthemum_shell,tag=chrysanthemumLaunch] at @s run function commands:ultimates/chrysanthemum_rocket
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/chrysanthemum_shell,tag=chrysanthemumLaunch,tag=cshelldown] at @s run function commands:ultimates/chrysanthemum_rocket
 
 execute as @a[scores={usedCOAS=1..},predicate=commands:holding/chrysanthemum_shell,tag=!chrysanthemumLaunch] at @s run function commands:ultimates/chrysanthemum_init
-
-scoreboard players add @e[type=snowball,tag=chrysanthemumlauncher] chrysanthemumShellTimer 1
-
-kill @e[type=snowball,tag=chrysanthemumlauncher,scores={chrysanthemumShellTimer=25..}]
-
-execute as @a[tag=chrysanthemumLaunch] at @s unless data entity @s RootVehicle run effect give @s slow_falling 1 0 true
 
 scoreboard players add @e[type=item,tag=chrysanthemum_projectile] chrysanthemumShellTimer 1
 
@@ -2728,7 +2714,7 @@ execute as @e[type=item,tag=chrysanthemum_projectile,scores={nearbyBlocks=1..}] 
 
 execute as @e[type=item,tag=chrysanthemum_projectile,scores={chrysanthemumShellTimer=30..}] at @s run function commands:ultimates/chrysanthemum_explosion
 
-execute as @a[tag=chrysanthemumLaunch,predicate=commands:effects/slow_falling,nbt={OnGround:1b}] run function commands:ultimates/chrysanthemum_expire
+execute as @a[tag=cshelldown,nbt={OnGround:1b}] run function commands:ultimates/chrysanthemum_expire
 
 #Pop Rocks
 
@@ -2802,7 +2788,9 @@ scoreboard players reset @a[tag=!hasSmartDrone] droneDamage
 
 execute as @a[scores={died=1..}] at @s run tag @e[type=item,distance=..5,scores={ItemKill=1..}] add delete
 
-kill @e[type=item,scores={ItemKill=1,Timer=1..},tag=delete]
+# kill @e[type=item,scores={ItemKill=1,Timer=1..},tag=delete]
+
+kill @e[type=item,scores={ItemKill=1},tag=delete]
 
 scoreboard players set @a[scores={died=1..}] died 0
 
@@ -2814,7 +2802,7 @@ advancement revoke @a only commands:warrior_challenge_kill
 
 advancement revoke @a only commands:sparkler_damage
 
-advancement revoke @a only commands:bang_snap_damage
+# advancement revoke @a only commands:bang_snap_damage
 
 advancement revoke @a only commands:cinder_bomb_damage
 

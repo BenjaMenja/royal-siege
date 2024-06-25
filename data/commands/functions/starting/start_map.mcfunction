@@ -85,6 +85,10 @@ scoreboard players set #redHS HSValue 100
 
 scoreboard players set #blueHS HSValue 100
 
+scoreboard players set #red siegeBank 0
+
+scoreboard players set #blue siegeBank 0
+
 scoreboard objectives setdisplay sidebar Money
 
 scoreboard players reset @a[team=spectator] Money
