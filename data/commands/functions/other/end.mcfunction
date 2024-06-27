@@ -74,6 +74,8 @@ kill @e[type=zombified_piglin]
 
 gamemode adventure @a
 
+advancement revoke @a only commands:pickup_fake_money
+
 scoreboard players set #matchID matchID 0
 
 scoreboard players set #red corruptBank 0

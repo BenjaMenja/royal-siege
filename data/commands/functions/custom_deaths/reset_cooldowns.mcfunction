@@ -28,7 +28,7 @@ scoreboard players set @s dashcharge 0
 
 scoreboard players set @s ironTimer 1
 
-scoreboard players set @s disableTimer 1
+scoreboard players set @s shockGrenadeTimer 1
 
 scoreboard players set @s RegenTimer 1
 

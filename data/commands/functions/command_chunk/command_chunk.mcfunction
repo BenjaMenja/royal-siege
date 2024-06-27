@@ -66,6 +66,8 @@ scoreboard players set @e[type=item,tag=blazingspeedbomb] ItemKill 2
 
 scoreboard players set @e[type=item,tag=chrysanthemum_projectile] ItemKill 2
 
+scoreboard players set @e[type=item,tag=shockGrenade] ItemKill 2
+
 execute as @e[type=item,tag=!processed,scores={ItemKill=1}] run data modify entity @s Owner set from entity @s Thrower
 
 execute as @e[type=item,tag=!processed,scores={ItemKill=1}] run data modify entity @s PickupDelay set value 0
@@ -676,29 +678,17 @@ scoreboard players set @a[scores={fakeTimer=..0},tag=upgraded] fakeTimer 600
 
 #Home Warp
 
-# execute at @e[type=bat,tag=Home] run give @a[distance=..3,team=Red,tag=rooted] bat_spawn_egg{CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Home Warp"}',Lore:['{"text":"Teleports you back to your throne room."}','{"text":"If you are playing TDM, you will teleport to the Corrupt Credit generator."}']},HideFlags:16,EntityTag:{Tags:["Home"],Silent:1b,Invulnerable:1b,CustomNameVisible:0b,CustomName:'{"text":"Home"}'}}
+scoreboard players add @a[tag=homewarp] castleWarpTimer 1
 
-# execute at @e[type=bat,tag=HomeBlue] run give @a[distance=..3,team=Blue,tag=rooted] bat_spawn_egg{CanPlaceOn:["#commands:can_place_on"],display:{Name:'{"text":"Home Warp"}',Lore:['{"text":"Teleports you back to your throne room."}','{"text":"If you are playing TDM, you will teleport to the Corrupt Credit generator."}']},HideFlags:16,EntityTag:{Tags:["HomeBlue"],Silent:1b,Invulnerable:1b,CustomNameVisible:0b,CustomName:'{"text":"HomeBlue"}'}}
+tellraw @a[scores={damageTaken=1..},tag=homewarp] {"text":"Warp Canceled!","color":"red"}
 
-execute as @e[type=bat,tag=Home] at @s run effect give @p[team=Red,tag=!rooted] resistance 5 2 true
+scoreboard players reset @a[scores={damageTaken=1..},tag=homewarp] castleWarpTimer
 
-execute as @e[type=bat,tag=Home] at @s run effect give @p[team=Red,tag=!rooted] regeneration 5 2 true
+tag @a[scores={damageTaken=1..},tag=homewarp] remove homewarp
 
-execute if score #gamemode settings matches 0 as @e[type=bat,tag=Home] at @s run execute as @p[team=Red,tag=!rooted] at @s run teleport @s 6 53 -182
+tellraw @a[scores={castleWarpTimer=1}] {"text":"Warping back to spawnpoint...","color":"green"}
 
-execute if score #gamemode settings matches 1 as @e[type=bat,tag=Home] at @s run execute as @p[team=Red,tag=!rooted] at @s run teleport @s 1051 53 -76
-
-tp @e[type=bat,tag=Home] ~ -100 ~
-
-execute as @e[type=bat,tag=HomeBlue] at @s run effect give @p[team=Blue,tag=!rooted] resistance 5 2 true
-
-execute as @e[type=bat,tag=HomeBlue] at @s run effect give @p[team=Blue,tag=!rooted] regeneration 5 2 true
-
-execute if score #gamemode settings matches 0 as @e[type=bat,tag=HomeBlue] at @s run teleport @p[team=Blue,tag=!rooted] 12 53 -83
-
-execute if score #gamemode settings matches 0 as @e[type=bat,tag=HomeBlue] at @s run teleport @p[team=Blue,tag=!rooted] 1051 53 -76
-
-tp @e[type=bat,tag=HomeBlue] ~ -100 ~
+execute as @a[scores={castleWarpTimer=60..},tag=homewarp] run function commands:other/warp_to_castle
 
 #Shielding Spell
 
@@ -736,7 +726,7 @@ execute as @a[scores={Kit=6}] store result score @s lightningStaffDis run scoreb
 
 #Menu Item Initial Text
 
-tellraw @a[scores={usedCOAS=1..},predicate=commands:holding/menu] [{"color":"green","text":"+"},{"color":"yellow","text":"===================================================="},{"text":"\n"},{"color":"#5AF6F9","text":"Welcome to the Menu!"},{"text":"\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 64"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Opens up your character's shop.","color":"green"}]},"text":"[Shops]"},{"text":"                       "},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 65"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Accesses your team's bank.\nYou can view your team's collective amount of Siege Bucks and Corrupt Credits\nas well as deposit and withdraw.","color":"green"}]},"text":"[Bank]"},{"text":"\n\n\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 67"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Warps you to your castle's respawn point.","color":"green"},{"text":"\nThis has a 3 second delay, and can be interrupted by taking damage.","color":"green"}]},"text":"[Warp to Castle]"},{"text":"\n\n"},{"color":"green","text":"+"},{"color":"yellow","text":"====================================================\n"}]
+tellraw @a[scores={usedCOAS=1..},predicate=commands:holding/menu] [{"color":"green","text":"+"},{"color":"yellow","text":"===================================================="},{"text":"\n"},{"color":"#5AF6F9","text":"Welcome to the Menu!"},{"text":"\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 64"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Opens up your character's shop.","color":"green"}]},"text":"[Shops]"},{"text":"                       "},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 65"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Accesses your team's bank.\nYou can view your team's collective amount of Siege Bucks and Corrupt Credits\nas well as deposit and withdraw.","color":"green"}]},"text":"[Bank]"},{"text":"\n\n\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 191"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Warps you to your castle's respawn point.","color":"green"},{"text":"\nThis has a 3 second delay, and can be interrupted by taking damage.","color":"green"}]},"text":"[Warp to Castle]"},{"text":"\n\n"},{"color":"green","text":"+"},{"color":"yellow","text":"====================================================\n"}]
 
 #Give chaos bow users the arrow back
 
@@ -980,15 +970,15 @@ execute as @a[tag=switching] run function commands:other/robot_switch
 
 execute as @a[scores={Kit=10,ironTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s ironTimer 1
 
-execute as @a[scores={Kit=10,disableTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s disableTimer 1
+execute as @a[scores={Kit=10,shockGrenadeTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s shockGrenadeTimer 1
 
 execute as @a[scores={Kit=10}] run scoreboard players operation @s ironStore = @s ironTimer
 
 execute as @a[scores={Kit=10}] store result score @s ironDis run scoreboard players operation @s ironStore /= #ticks constant
 
-execute as @a[scores={Kit=10}] run scoreboard players operation @s disableStore = @s disableTimer
+execute as @a[scores={Kit=10}] run scoreboard players operation @s shockGrenadeStore = @s shockGrenadeTimer
 
-execute as @a[scores={Kit=10}] store result score @s disableDis run scoreboard players operation @s disableStore /= #ticks constant
+execute as @a[scores={Kit=10}] store result score @s shockGrenadeDis run scoreboard players operation @s shockGrenadeStore /= #ticks constant
 
 #Multi-Barrel Attachment
 
@@ -1006,9 +996,17 @@ scoreboard players add @a[tag=iron_wall] ironwall 1
 
 execute as @a[scores={ironwall=100..}] run function commands:other/iron_wall_end
 
-#Disable
+#Shock Grenade
 
-execute as @a[scores={usedCOAS=1..,disableTimer=..0},predicate=commands:holding/disable] run function commands:other/disable
+execute as @a[scores={usedCOAS=1..,shockGrenadeTimer=..0},predicate=commands:holding/shock_grenade] run function commands:other/shock_grenade
+
+execute as @e[type=item,tag=shockGrenade] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on_without_grass force
+
+execute as @e[type=item,tag=shockGrenadeRed] at @s if entity @a[team=Blue,distance=..3] run function commands:other/shock_grenade_explode
+
+execute as @e[type=item,tag=shockGrenadeBlue] at @s if entity @a[team=Red,distance=..3] run function commands:other/shock_grenade_explode
+
+execute as @e[type=item,tag=shockGrenade,scores={nearbyBlocks=1..}] at @s run function commands:other/shock_grenade_explode
 
 #Virus Detector
 
@@ -1082,7 +1080,7 @@ execute at @a[tag=slamming,nbt={OnGround:1b}] run playsound entity.generic.explo
 
 execute at @a[tag=slamming,nbt={OnGround:1b}] run particle dust{color:[0.239,0.239,0.239],scale:1} ~ ~ ~ 1.5 0 1.5 1 100 normal
 
-execute as @a[tag=slamming,nbt={OnGround:1b}] run function commands:attributes/clears/clear_seismic_slam_fall_dist
+execute as @a[tag=slamming,nbt={OnGround:1b}] run function commands:attributes/clears/clear_safe_fall_dist
 
 scoreboard players reset @a[tag=slamming,nbt={OnGround:1b}] slamSuspend
 
@@ -1307,6 +1305,8 @@ execute as @a[scores={Kit=5,Ultimate=15},tag=!notAlive,predicate=!commands:inven
 loot give @a[scores={JusticeTimer=3000..}] loot commands:ultimates/bow_of_justice
 
 scoreboard players set @a[scores={JusticeTimer=3000..}] JusticeTimer 0
+
+clear @a[scores={useBow=1..},predicate=commands:holding/bow_of_justice] bow[custom_data~{bowofjustice:1b}]
 
 execute as @a[advancements={commands:bow_of_justice=true}] run function commands:ultimates/bow_of_justice
 
@@ -1894,7 +1894,7 @@ scoreboard players remove @e[type=wither_skeleton,scores={kingActive=1..}] kingA
 
 tag @e[type=wither_skeleton,scores={kingActive=0}] add inactivated
 
-execute as @e[type=wither_skeleton,tag=inactivated] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:-1}]}
+execute as @e[type=wither_skeleton,tag=inactivated] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:0}]}
 
 execute at @e[type=wither_skeleton,team=Red,tag=inactivated] run summon minecraft:wandering_trader ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["wanderingKingRed","wanderingKing"],active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:100000,show_particles:0b}],Attributes:[{Name:"generic.knockback_resistance",Base:1.0},{Name:"generic.movement_speed",Base:0.8}],WanderTarget:{X:9,Y:59,Z:-216},Offers:{}}
 

@@ -16,7 +16,7 @@
               }
             },
             {
-              "function": "minecraft:set_name",
+              "function": "minecraft:set_lore",
               "name": {
                 "text": "Filters out blindness, poison, and wither debuffs."
               }

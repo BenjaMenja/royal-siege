@@ -5,7 +5,7 @@
     "equipment": {
       "mainhand": {
         "predicates": {
-          "minecraft:custom_data": "{disable:1b}"
+          "minecraft:custom_data": "{shockgrenade:1b}"
         }
       }
     }

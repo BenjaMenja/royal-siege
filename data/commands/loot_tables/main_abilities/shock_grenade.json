@@ -1,0 +1,65 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
+                "minecraft:custom_model_data": 43,
+                "minecraft:custom_data": {
+                  "shockgrenade": 1
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {
+                  "text": "Shock Grenade",
+                  "color": "aqua",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Fires a shock grenade that explodes on impact."
+                },
+                {
+                  "text": "The explosion roots enemies for 3 seconds in a 3 block radius."
+                },
+                {
+                  "text": "Can be used every 20 seconds."
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

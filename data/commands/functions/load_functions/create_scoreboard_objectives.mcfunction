@@ -36,4 +36,8 @@ scoreboard objectives add RSAttr.CShellUpGravity dummy
 scoreboard objectives add RSAttr.CShellDownGravity dummy
 scoreboard objectives add RSAttr.Rooted dummy
 scoreboard objectives add siegeBank dummy
+scoreboard objectives add castleWarpTimer dummy
+scoreboard objectives add shockGrenadeTimer dummy
+scoreboard objectives add shockGrenadeDis dummy
+scoreboard objectives add shockGrenadeStore dummy
 scoreboard objectives remove dmDelay

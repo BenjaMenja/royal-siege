@@ -18,7 +18,7 @@
                 "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
                   "levels": {
-                    "minecraft:blast_protection": 2,
+                    "minecraft:blast_protection": 1,
                     "minecraft:fire_protection": 3,
                     "minecraft:protection": 1
                   }

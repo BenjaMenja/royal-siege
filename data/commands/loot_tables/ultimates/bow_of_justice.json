@@ -36,7 +36,6 @@
                 "function": "minecraft:set_components",
                 "components": {
                   "minecraft:custom_model_data": 73,
-                  "minecraft:damage": 384,
                   "minecraft:enchantments": {
                     "minecraft:power": 100,
                     "minecraft:infinity": 1
@@ -45,7 +44,7 @@
               },
               {
                 "function": "minecraft:set_custom_data",
-                "tag": "{bowofjustice:1b}"
+                "tag": "{bowofjustice:1b,ultimateitem:1b}"
               },
               {
                 "function": "minecraft:toggle_tooltips",

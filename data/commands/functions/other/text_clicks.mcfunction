@@ -372,4 +372,6 @@ execute if score @s textClick matches 189 run function commands:other/withdraw_s
 
 execute if score @s textClick matches 190 run function commands:other/withdraw_siege_bucks {siege_bucks:1000}
 
+execute if score @s textClick matches 191 run tag @s add homewarp
+
 scoreboard players reset @a[scores={textClick=1..}] textClick

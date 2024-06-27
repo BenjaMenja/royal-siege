@@ -144,7 +144,7 @@ loot give @p[distance=..8,team=Blue,tag=!wipeKill,scores={Kit=10,BlueKit=198}] l
 
 loot give @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] loot commands:main_abilities/iron_wall
 
-# give @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] minecraft:carrot_on_a_stick{display:{Name:'[{"text":"D","color":"#7A0404","italic":false},{"text":"i","color":"#850303","italic":false},{"text":"s","color":"#900202","italic":false},{"text":"a","color":"#9C0202","italic":false},{"text":"b","color":"#A70101","italic":false},{"text":"l","color":"#B20000","italic":false},{"text":"e","color":"dark_blue","italic":false}]',Lore:['{"text":"Right-Click to use","color":"yellow","italic":false}','{"text":" "}','{"text":"Removes all abilities from nearby enemy inventories."}']},CustomModelData:43,disable:1b} 1
+loot give @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] loot commands:main_abilities/shock_grenade
 
 execute as @p[distance=..8,team=Blue,scores={Kit=10,BlueKit=198}] run function commands:other/gunblade_reload
 

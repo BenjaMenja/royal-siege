@@ -120,8 +120,6 @@ function commands:attributes/clears/clear_seismic_slam_up_gravity
 
 function commands:attributes/clears/clear_seismic_slam_down_gravity
 
-function commands:attributes/clears/clear_seismic_slam_fall_dist
-
 function commands:attributes/clears/clear_seismic_slam_launch_gravity
 
 function commands:attributes/clears/clear_safe_fall_dist
