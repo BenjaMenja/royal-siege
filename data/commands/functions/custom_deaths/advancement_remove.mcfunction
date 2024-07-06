@@ -88,13 +88,25 @@ advancement revoke @s only commands:sparkler_death
 
 advancement revoke @s only commands:c4_death
 
+advancement revoke @s only commands:bang_snap_death
+
+advancement revoke @s only commands:pop_rocks_death
+
+advancement revoke @s only commands:chrysanthemum_shell_death
+
+advancement revoke @s only commands:cinder_bomb_death
+
+advancement revoke @s only commands:sparkler_death
+
+advancement revoke @s only commands:sparkler_projectile_death
+
+advancement revoke @s only commands:shuriken_death
+
 tag @s remove DIED
 
 tag @s remove DIED2
 
 tag @s remove shadowdeath
-
-tag @s remove decaydeath
 
 tag @s remove tChestDeath
 

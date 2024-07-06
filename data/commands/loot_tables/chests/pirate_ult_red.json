@@ -129,7 +129,7 @@
           },
           {
             "type": "minecraft:loot_table",
-            "value": "commands:shop_items/reveal_drone_red"
+            "value": "commands:shop_items/high_performance_shoes"
           },
           {
             "type": "minecraft:loot_table",

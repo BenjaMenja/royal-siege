@@ -1,0 +1,1 @@
+attribute @s minecraft:generic.attack_damage modifier remove 3-0-100-0-0

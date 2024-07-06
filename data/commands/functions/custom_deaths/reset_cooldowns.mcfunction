@@ -8,13 +8,15 @@ scoreboard players set @s FireballTimer 0
 
 scoreboard players set @s LightningTimer 0
 
+scoreboard players set @s rootingTimer 1
+
 scoreboard players set @s blossomTimer 1
 
 scoreboard players set @s hFruitTimer 1
 
 scoreboard players set @s fakeTimer 1
 
-scoreboard players set @s lavaTrapTimer 1
+scoreboard players set @s coinGunTimer 1
 
 scoreboard players set @s expBombTimer 1
 
@@ -75,3 +77,7 @@ scoreboard players set @s blazingSpeedTimer 1
 scoreboard players set @s napalmBucketTimer 1
 
 scoreboard players set @s pyromaniaTimer 1
+
+scoreboard players set @s angelicBlessingTimer 1
+
+scoreboard players set @s jKillTimer 300

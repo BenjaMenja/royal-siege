@@ -32,6 +32,8 @@ execute as @a[scores={Kit=13}] run scoreboard players add #gamblertempTDM classI
 
 execute as @a[scores={Kit=14}] run scoreboard players add #astronauttempTDM classInfo 1
 
+execute as @a[scores={Kit=15}] run scoreboard players add #firecrackertempTDM classInfo 1
+
 #Add Ties
 
 execute if score #warriortempTDM classInfo matches 2.. run scoreboard players add #warriortiesTDM classInfo 1
@@ -62,65 +64,71 @@ execute if score #gamblertempTDM classInfo matches 2.. run scoreboard players ad
 
 execute if score #astronauttempTDM classInfo matches 2.. run scoreboard players add #astronauttiesTDM classInfo 1
 
+execute if score #firecrackertempTDM classInfo matches 2.. run scoreboard players add #firecrackertiesTDM classInfo 1
+
 #Add Wins
 
-execute if score #warriortempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=1}] run scoreboard players add #warriorwinsTDM classInfo 1
+execute if score #warriortempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=1}] run scoreboard players add #warriorwinsTDM classInfo 1
 
-execute if score #ninjatempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=2}] run scoreboard players add #ninjawinsTDM classInfo 1
+execute if score #ninjatempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=2}] run scoreboard players add #ninjawinsTDM classInfo 1
 
-execute if score #guardiantempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=3}] run scoreboard players add #guardianwinsTDM classInfo 1
+execute if score #guardiantempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=3}] run scoreboard players add #guardianwinsTDM classInfo 1
 
-execute if score #angeltempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=4}] run scoreboard players add #angelwinsTDM classInfo 1
+execute if score #angeltempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=4}] run scoreboard players add #angelwinsTDM classInfo 1
 
-execute if score #archertempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=5}] run scoreboard players add #archerwinsTDM classInfo 1
+execute if score #archertempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=5}] run scoreboard players add #archerwinsTDM classInfo 1
 
-execute if score #wizardtempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=6}] run scoreboard players add #wizardwinsTDM classInfo 1
+execute if score #wizardtempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=6}] run scoreboard players add #wizardwinsTDM classInfo 1
 
-execute if score #piratetempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=7}] run scoreboard players add #piratewinsTDM classInfo 1
+execute if score #piratetempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=7}] run scoreboard players add #piratewinsTDM classInfo 1
 
-execute if score #enttempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=8}] run scoreboard players add #entwinsTDM classInfo 1
+execute if score #enttempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=8}] run scoreboard players add #entwinsTDM classInfo 1
 
-execute if score #poseidontempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=9}] run scoreboard players add #poseidonwinsTDM classInfo 1
+execute if score #poseidontempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=9}] run scoreboard players add #poseidonwinsTDM classInfo 1
 
-execute if score #robottempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=10}] run scoreboard players add #robotwinsTDM classInfo 1
+execute if score #robottempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=10}] run scoreboard players add #robotwinsTDM classInfo 1
 
-execute if score #cheftempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=11}] run scoreboard players add #chefwinsTDM classInfo 1
+execute if score #cheftempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=11}] run scoreboard players add #chefwinsTDM classInfo 1
 
-execute if score #dragontempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=12}] run scoreboard players add #dragonwinsTDM classInfo 1
+execute if score #dragontempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=12}] run scoreboard players add #dragonwinsTDM classInfo 1
 
-execute if score #gamblertempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=13}] run scoreboard players add #gamblerwinsTDM classInfo 1
+execute if score #gamblertempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=13}] run scoreboard players add #gamblerwinsTDM classInfo 1
 
-execute if score #astronauttempTDM classInfo matches 1 if entity @a[tag=End,scores={Kit=14}] run scoreboard players add #astronautwinsTDM classInfo 1
+execute if score #astronauttempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=14}] run scoreboard players add #astronautwinsTDM classInfo 1
+
+execute if score #firecrackertempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=15}] run scoreboard players add #firecrackerwinsTDM classInfo 1
 
 #Add Losses
 
-execute if score #warriortempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=1}] run scoreboard players add #warriorlossesTDM classInfo 1
+execute if score #warriortempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=1}] run scoreboard players add #warriorlossesTDM classInfo 1
 
-execute if score #ninjatempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=2}] run scoreboard players add #ninjalossesTDM classInfo 1
+execute if score #ninjatempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=2}] run scoreboard players add #ninjalossesTDM classInfo 1
 
-execute if score #guardiantempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=3}] run scoreboard players add #guardianlossesTDM classInfo 1
+execute if score #guardiantempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=3}] run scoreboard players add #guardianlossesTDM classInfo 1
 
-execute if score #angeltempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=4}] run scoreboard players add #angellossesTDM classInfo 1
+execute if score #angeltempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=4}] run scoreboard players add #angellossesTDM classInfo 1
 
-execute if score #archertempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=5}] run scoreboard players add #archerlossesTDM classInfo 1
+execute if score #archertempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=5}] run scoreboard players add #archerlossesTDM classInfo 1
 
-execute if score #wizardtempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=6}] run scoreboard players add #wizardlossesTDM classInfo 1
+execute if score #wizardtempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=6}] run scoreboard players add #wizardlossesTDM classInfo 1
 
-execute if score #piratetempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=7}] run scoreboard players add #piratelossesTDM classInfo 1
+execute if score #piratetempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=7}] run scoreboard players add #piratelossesTDM classInfo 1
 
-execute if score #enttempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=8}] run scoreboard players add #entlossesTDM classInfo 1
+execute if score #enttempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=8}] run scoreboard players add #entlossesTDM classInfo 1
 
-execute if score #poseidontempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=9}] run scoreboard players add #poseidonlossesTDM classInfo 1
+execute if score #poseidontempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=9}] run scoreboard players add #poseidonlossesTDM classInfo 1
 
-execute if score #robottempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=10}] run scoreboard players add #robotlossesTDM classInfo 1
+execute if score #robottempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=10}] run scoreboard players add #robotlossesTDM classInfo 1
 
-execute if score #cheftempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=11}] run scoreboard players add #cheflossesTDM classInfo 1
+execute if score #cheftempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=11}] run scoreboard players add #cheflossesTDM classInfo 1
 
-execute if score #dragontempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=12}] run scoreboard players add #dragonlossesTDM classInfo 1
+execute if score #dragontempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=12}] run scoreboard players add #dragonlossesTDM classInfo 1
 
-execute if score #gamblertempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=13}] run scoreboard players add #gamblerlossesTDM classInfo 1
+execute if score #gamblertempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=13}] run scoreboard players add #gamblerlossesTDM classInfo 1
 
-execute if score #astronauttempTDM classInfo matches 1 unless entity @a[tag=End,scores={Kit=14}] run scoreboard players add #astronautlossesTDM classInfo 1
+execute if score #astronauttempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=14}] run scoreboard players add #astronautlossesTDM classInfo 1
+
+execute if score #firecrackertempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=15}] run scoreboard players add #firecrackerlossesTDM classInfo 1
 
 #Player Scores
 
@@ -155,3 +163,5 @@ scoreboard players reset #dragontempTDM classInfo
 scoreboard players reset #gamblertempTDM classInfo
 
 scoreboard players reset #astronauttempTDM classInfo
+
+scoreboard players reset #firecrackertempTDM classInfo

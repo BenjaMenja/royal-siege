@@ -10,4 +10,6 @@ execute if entity @s[tag=shockGrenadeBlue] as @a[team=Red,distance=..3] run func
 
 particle minecraft:electric_spark ~ ~ ~ 1 1 1 1 100
 
+execute at @s run playsound entity.bee.death master @a[distance=..5] ~ ~ ~ 1 2 0.1
+
 kill @s

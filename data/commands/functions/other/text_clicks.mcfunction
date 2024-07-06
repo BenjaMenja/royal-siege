@@ -38,7 +38,7 @@ execute if score @s textClick matches 19 run function commands:shops/health_ston
 
 execute if score @s textClick matches 20 run function commands:shops/shielding_spell
 
-execute if score @s textClick matches 21 run function commands:shops/invincibility
+execute if score @s textClick matches 21 run function commands:shops/angelic_blessing
 
 execute if score @s textClick matches 22 run function commands:shops/vigor_spell
 
@@ -54,7 +54,7 @@ execute if score @s textClick matches 27 run function commands:shops/slowing_arr
 
 execute if score @s textClick matches 28 run function commands:shops/weak_arrows
 
-execute if score @s textClick matches 29 run function commands:shops/reveal_drone
+execute if score @s textClick matches 29 run function commands:shops/high_performance_shoes
 
 execute if score @s textClick matches 30 run function commands:shops/lightning_rod
 
@@ -92,7 +92,7 @@ execute if score @s textClick matches 46 run function commands:shops/fish_slappe
 
 execute if score @s textClick matches 47 run function commands:shops/fish_cannon
 
-execute if score @s textClick matches 48 run function commands:shops/land_fish 
+execute if score @s textClick matches 48 run function commands:shops/land_fish
 
 execute if score @s textClick matches 49 run function commands:shops/squidzooka
 
@@ -140,7 +140,7 @@ execute if score @s textClick matches 69 run function commands:starting/ultimate
 
 execute if score @s textClick matches 70 run function commands:starting/ultimate_select/dinners_ready
 
-execute if score @s textClick matches 71 run function commands:starting/ultimate_select/closing_time
+# execute if score @s textClick matches 71 run function commands:starting/ultimate_select/
 
 execute if score @s textClick matches 72 run function commands:starting/ultimate_select/tree_of_life
 
@@ -152,7 +152,7 @@ execute if score @s textClick matches 75 run function commands:starting/ultimate
 
 execute if score @s textClick matches 76 run function commands:starting/ultimate_select/lifeforce
 
-execute if score @s textClick matches 77 run function commands:starting/ultimate_select/questionable_concoction
+execute if score @s textClick matches 77 run function commands:starting/ultimate_select/resurrection
 
 execute if score @s textClick matches 78 run function commands:starting/ultimate_select/shadow_step
 
@@ -170,7 +170,7 @@ execute if score @s textClick matches 84 run function commands:starting/ultimate
 
 execute if score @s textClick matches 85 run function commands:starting/ultimate_select/random_choose_right
 
-execute if score @s textClick matches 86 run function commands:starting/ultimate_select/memory_wipe
+execute if score @s textClick matches 86 run function commands:starting/ultimate_select/system_reboot
 
 execute if score @s textClick matches 87 run function commands:starting/ultimate_select/artificial_intelligence
 
@@ -190,7 +190,7 @@ execute if score @s textClick matches 94 run function commands:settings/night
 
 execute if score @s textClick matches 95 run function commands:settings/enable_underground
 
-execute if score @s textClick matches 96 run function commands:settings/disable_underground 
+execute if score @s textClick matches 96 run function commands:settings/disable_underground
 
 execute if score @s textClick matches 97 run function commands:settings/enable_corrupt
 
@@ -330,7 +330,7 @@ execute if score @s textClick matches 168 run function commands:practice_range/t
 
 execute if score @s textClick matches 169 run function commands:practice_range/team/blue
 
-execute if score @s textClick matches 170 run function commands:shops/olympic_vault
+execute if score @s textClick matches 170 run function commands:shops/polearm
 
 execute if score @s textClick matches 171 run function commands:settings/colosseum
 

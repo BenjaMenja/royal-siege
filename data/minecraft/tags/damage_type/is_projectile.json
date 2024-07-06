@@ -1,0 +1,15 @@
+{
+  "values": [
+    "minecraft:arrow",
+    "minecraft:trident",
+    "minecraft:mob_projectile",
+    "minecraft:unattributed_fireball",
+    "minecraft:fireball",
+    "minecraft:wither_skull",
+    "minecraft:thrown",
+    "commands:sparkler",
+    "commands:bang_snap",
+    "commands:chrysanthemum_shell",
+    "commands:shuriken"
+  ]
+}

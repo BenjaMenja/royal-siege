@@ -4,4 +4,4 @@ execute if entity @s[tag=ovenred] run summon minecraft:zombified_piglin ~ ~ ~ {N
 
 execute if entity @s[tag=ovenblue] run summon minecraft:zombified_piglin ~ ~ ~ {NoAI:1b,Silent:1b,Health:25f,Tags:["ovenblue","oven"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],Attributes:[{Name:"generic.max_health",Base:25}]}
 
-tp @s ~ -100 ~
+tp @s ~ -200 ~

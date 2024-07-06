@@ -14,4 +14,4 @@ execute at @s[tag=AIblue] run summon lightning_bolt ~ ~ ~
 
 execute at @s[tag=AIblue] run tellraw @a [{"selector":"@a[team=Blue,scores={Kit=10,Ultimate=20}]"},{"text":" has constructed artificial intelligence!","color":"white"}]
 
-tp @s ~ -100 ~
+tp @s ~ -200 ~

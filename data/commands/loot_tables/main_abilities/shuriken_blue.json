@@ -1,0 +1,57 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:snowball",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Shuriken",
+                "color": "#CECECE",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Throwable",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "A simple shuriken that deals 5 damage."
+                },
+                {
+                  "text": "Can have a max of 8 at once."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 95
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{shurikenblue:1b,shuriken:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -5,13 +5,13 @@ function commands:starting/spawn_dungeon_villagers
 
 #Rest of the Start of the Map
 
-teleport @e[type=skeleton] ~ -100 ~
+teleport @e[type=skeleton] ~ -200 ~
 
-teleport @e[type=zombie] ~ -100 ~
+teleport @e[type=zombie] ~ -200 ~
 
-teleport @e[type=item] ~ -100 ~
+teleport @e[type=item] ~ -200 ~
 
-teleport @e[type=horse] ~ -100 ~
+teleport @e[type=horse] ~ -200 ~
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 positioned 9 59 -216 run function commands:entities/king_red
 
@@ -136,6 +136,12 @@ tag @a[team=spectator] add spectator
 team leave @a[team=spectator]
 
 tag @a remove teamSwitch
+
+tag @a remove blessed
+
+tag @a remove resurrecting
+
+kill @e[type=marker,tag=resSoul]
 
 tellraw @a {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
 

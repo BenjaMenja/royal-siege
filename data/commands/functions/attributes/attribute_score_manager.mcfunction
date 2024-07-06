@@ -252,6 +252,14 @@ scoreboard players add @a[scores={RSAttr.DecayAuraAtkDmg=0..}] RSAttr.DecayAuraA
 
 execute as @a[scores={RSAttr.DecayAuraAtkDmg=60..}] run function commands:attributes/clears/clear_decay_aura_atkdmg
 
+scoreboard players add @a[scores={RSAttr.DecayAuraSlow=0..}] RSAttr.DecayAuraSlow 1
+
+execute as @a[scores={RSAttr.DecayAuraSlow=10..}] run function commands:attributes/clears/clear_decay_aura_slow
+
+scoreboard players add @a[scores={RSAttr.DecayAuraArmorShred=0..}] RSAttr.DecayAuraArmorShred 1
+
+execute as @a[scores={RSAttr.DecayAuraArmorShred=10..}] run function commands:attributes/clears/clear_decay_aura_armor_shred
+
 #Lifeforce
 
 scoreboard players add @a[scores={RSAttr.LifeforceMaxHP=0..}] RSAttr.LifeforceMaxHP 1
@@ -329,5 +337,21 @@ execute as @a[scores={RSAttr.SafeFallDist=..0}] run function commands:attributes
 scoreboard players remove @a[scores={RSAttr.Rooted=0..}] RSAttr.Rooted 1
 
 execute as @a[scores={RSAttr.Rooted=..0}] run function commands:attributes/clears/clear_rooted
+
+#No Melee Damage Debuff
+
+scoreboard players remove @a[scores={RSAttr.NoAtkDmg=0..}] RSAttr.NoAtkDmg 1
+
+execute as @a[scores={RSAttr.NoAtkDmg=..0}] run function commands:attributes/clears/clear_no_melee_damage
+
+#Resurrection
+
+scoreboard players add @a[scores={RSAttr.ResurrectionJump=0..}] RSAttr.ResurrectionJump 1
+
+execute as @a[scores={RSAttr.ResurrectionJump=60..}] run function commands:attributes/clears/clear_resurrection_jump
+
+scoreboard players add @a[scores={RSAttr.ResurrectionSlow=0..}] RSAttr.ResurrectionSlow 1
+
+execute as @a[scores={RSAttr.ResurrectionSlow=60..}] run function commands:attributes/clears/clear_resurrection_slow
 
 

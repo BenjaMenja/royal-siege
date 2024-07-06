@@ -17,9 +17,10 @@
             },
             {
               "function": "minecraft:set_lore",
-              "name": {
+              "lore": [{
                 "text": "Filters out blindness, poison, and wither debuffs."
-              }
+              }],
+              "mode": "insert"
             },
             {
               "function": "minecraft:set_custom_data",

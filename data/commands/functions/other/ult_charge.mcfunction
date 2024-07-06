@@ -28,7 +28,7 @@ execute as @s[scores={Ultimate=12,Kit=1}] run scoreboard players operation @s Ra
 
 execute as @s[scores={Ultimate=13,Kit=3}] run scoreboard players operation @s BarrierTimer += @s Ultcharge
 
-execute as @s[scores={Ultimate=14,Kit=4}] run scoreboard players operation @s PotionTimer += @s Ultcharge
+execute as @s[scores={Ultimate=14,Kit=4}] run scoreboard players operation @s resurrectionTimer += @s Ultcharge
 
 execute as @s[scores={Ultimate=15,Kit=5}] run scoreboard players operation @s JusticeTimer += @s Ultcharge
 
@@ -44,9 +44,7 @@ execute as @s[scores={Ultimate=20,Kit=10}] run scoreboard players operation @s R
 
 execute as @s[scores={Ultimate=21,Kit=11}] run scoreboard players operation @s dinnerTimer += @s Ultcharge
 
-execute if score #gamemode settings matches 0 as @s[scores={Ultimate=22,Kit=11}] run scoreboard players operation @s closingTimer += @s Ultcharge
-
-execute if score #gamemode settings matches 1 as @s[scores={Ultimate=22,Kit=11}] run scoreboard players operation @s pizzaTimer += @s Ultcharge
+execute as @s[scores={Ultimate=22,Kit=11}] run scoreboard players operation @s pizzaTimer += @s Ultcharge
 
 execute as @s[scores={Ultimate=23,Kit=12}] run scoreboard players operation @s mShowerTimer += @s Ultcharge
 

@@ -1,0 +1,104 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_boots",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "High Performance Shoes",
+                "color": "#43722B",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Sports ready shoes that give movement speed and step height."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "When on Feet:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "+1 Armor",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+1 Step Height",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "+10% Movement Speed",
+                  "color": "blue",
+                  "italic": false
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "generic.armor",
+                  "amount": 1,
+                  "operation": "add_value",
+                  "id": "091c988e-78af-4222-bfd3-967b515dd07d",
+                  "slot": "feet"
+                },
+                {
+                  "attribute": "minecraft:generic.step_height",
+                  "name": "generic.step_height",
+                  "amount": 1,
+                  "operation": "add_value",
+                  "id": "da577ce1-e747-4eec-98ff-9b3c80b457e5",
+                  "slot": "feet"
+                },
+                {
+                  "attribute": "minecraft:generic.movement_speed",
+                  "name": "generic.movement_speed",
+                  "amount": 0.1,
+                  "operation": "add_multiplied_base",
+                  "id": "284685ab-fe3d-406e-be1c-c247a527b416",
+                  "slot": "feet"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantments": {
+                  "minecraft:protection": 2,
+                  "minecraft:blast_protection": 1,
+                  "minecraft:projectile_protection": 1
+                },
+                "minecraft:unbreakable": {},
+                "minecraft:dyed_color": {
+                  "rgb": 4420139
+                }
+              }
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

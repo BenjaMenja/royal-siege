@@ -26,10 +26,13 @@
                     "text": " "
                   },
                   {
-                    "text": "Damages everything around you, including non-players."
+                    "text": "Inflicts Wither III to nearby enemies."
                   },
                   {
-                    "text": "Also heals your king if it is nearby."
+                    "text": "Also reduces nearby enemies' attack damage by 3, movement speed by 15%, and armor points by 6."
+                  },
+                  {
+                    "text": "Lasts 6 seconds."
                   }
                 ],
                 "mode": "insert"

@@ -10,7 +10,7 @@ execute if entity @s[tag=kingPurchase,team=Red] run scoreboard players add @e[ta
 
 execute if entity @s[tag=kingPurchase,team=Blue] run scoreboard players add @e[tag=King,team=Blue] kingActive 100
 
-execute at @e[tag=activated] run playsound entity.ravager.roar master @a[distance=..10] ~ ~ ~ 1 0.5 
+execute at @e[tag=activated] run playsound entity.ravager.roar master @a[distance=..10] ~ ~ ~ 1 0.5
 
 execute if entity @s[tag=kingPurchase,team=Red] as @e[tag=King,team=Red] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.3}]}
 

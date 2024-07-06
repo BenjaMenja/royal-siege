@@ -43,13 +43,13 @@
                   "text": " "
                 },
                 {
-                  "text": "Gives you strong jump boost for a very brief amount of time. "
+                  "text": "Launches you into the air, granting you fall damage immunity in the process."
                 },
                 {
-                  "text": "It is advised to jump as soon as you use the item."
+                  "text": "Afterwards, quickly slam onto the ground, launching nearby enemies into the air."
                 },
                 {
-                  "text": "When you land, all nearby enemies are lifted into the air and will take fall damage."
+                  "text": "Can be used every 30 seconds."
                 }
               ],
               "mode": "append"

@@ -58,6 +58,8 @@ execute if score #gamemode settings matches 1 if score #tdmMap settings matches 
 
 title @a[scores={Respawn=200..},team=Blue] times 10 40 20
 
+execute as @e[type=marker,tag=resSoulBlue] if score @a[team=Blue,scores={Respawn=200..},limit=1] UUID = @s UUID run kill @s
+
 scoreboard players set @a[team=Blue,scores={Respawn=200..}] Respawn 0
 
 

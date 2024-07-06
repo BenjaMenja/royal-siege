@@ -20,67 +20,13 @@ execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{corruptc
 
 execute as @e[type=arrow,tag=!getTeam] run function commands:other/arrow_get_team
 
+#Rebooting players can't use right clicks
+
+scoreboard players set @a[tag=rebooting] usedCOAS 0
+
 #Kill Items and prevent players from dropping
 
-execute as @e[type=item] store result entity @s Air short 1 run time query gametime
-
-scoreboard players set @e[type=item] ItemKill 1
-
-scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:ender_eye"}}] ItemKill 2
-
-scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:gold_ingot"}}] ItemKill 2
-
-scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:golden_apple",components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] ItemKill 2
-
-scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:golden_apple",components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] ItemKill 2
-
-scoreboard players set @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{fishcannonitemred:1b}}}}] ItemKill 2
-
-scoreboard players set @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{fishcannonitemblue:1b}}}}] ItemKill 2
-
-scoreboard players set @e[type=item,tag=fishCannon] ItemKill 2
-
-scoreboard players set @e[type=item,tag=squidzooka] ItemKill 2
-
-scoreboard players set @e[type=item,tag=egg] ItemKill 2
-
-scoreboard players set @e[type=item,tag=dinnerItemRed] ItemKill 2
-
-scoreboard players set @e[type=item,tag=dinnerItemBlue] ItemKill 2
-
-scoreboard players set @e[type=item,tag=cCannonItem] ItemKill 2
-
-scoreboard players set @e[type=item,tag=mWipe] ItemKill 2
-
-scoreboard players set @e[type=item,tag=hook] ItemKill 2
-
-scoreboard players set @e[type=item,tag=pCard] ItemKill 2
-
-scoreboard players set @e[type=item,tag=smartDrone] ItemKill 2
-
-scoreboard players set @e[type=item,tag=smartDroneLaser] ItemKill 2
-
-scoreboard players set @e[type=item,tag=sparkleritem] ItemKill 2
-
-scoreboard players set @e[type=item,tag=blazingspeedbomb] ItemKill 2
-
-scoreboard players set @e[type=item,tag=chrysanthemum_projectile] ItemKill 2
-
-scoreboard players set @e[type=item,tag=shockGrenade] ItemKill 2
-
-execute as @e[type=item,tag=!processed,scores={ItemKill=1}] run data modify entity @s Owner set from entity @s Thrower
-
-execute as @e[type=item,tag=!processed,scores={ItemKill=1}] run data modify entity @s PickupDelay set value 0
-
-tag @e[type=item] add processed
-
-kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{gunblade:1b}}}}]
-
-kill @e[type=item,nbt={Item:{id:"minecraft:saddle"}}]
-
-kill @e[type=item,nbt={Item:{id:"minecraft:diamond_horse_armor"}}]
-
-scoreboard players add @e[type=item,scores={ItemKill=1}] Timer 1
+function commands:command_chunk/item_clear_filter
 
 #Cavalry Charge (Warrior Ultimate)
 
@@ -96,9 +42,9 @@ scoreboard players set @a[scores={Horse1=1..}] Horse1 0
 
 scoreboard players set @a[scores={Horse=3000..}] Horse 0
 
-execute as @a[team=Red,tag=cavalryAlive] unless entity @e[tag=RedHorse] run function commands:ultimates/cavalry_dead 
+execute as @a[team=Red,tag=cavalryAlive] unless entity @e[tag=RedHorse] run function commands:ultimates/cavalry_dead
 
-execute as @a[team=Blue,tag=cavalryAlive] unless entity @e[tag=BlueHorse] run function commands:ultimates/cavalry_dead 
+execute as @a[team=Blue,tag=cavalryAlive] unless entity @e[tag=BlueHorse] run function commands:ultimates/cavalry_dead
 
 execute as @a[team=Red,scores={Ultimate=2}] at @s if data entity @s RootVehicle.Attach if entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest,nbt={Attributes:[{Name:"minecraft:generic.movement_speed",Base:-1.0}]}] run data merge entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest] {Attributes:[{Name:"minecraft:generic.movement_speed",Base:0.35}]}
 
@@ -156,9 +102,9 @@ execute as @e[type=bat,name="Redmimic"] at @s run summon armor_stand ~ ~ ~ {Cust
 
 execute as @e[type=bat,name="Bluemimic"] at @s run summon armor_stand ~ ~ ~ {CustomName:'{"text":"Bluemimic"}',Invisible:1,Invulnerable:1,NoBasePlate:1}
 
-tp @e[type=bat,name="Redmimic"] ~ -100 ~
+tp @e[type=bat,name="Redmimic"] ~ -200 ~
 
-tp @e[type=bat,name="Bluemimic"] ~ -100 ~
+tp @e[type=bat,name="Bluemimic"] ~ -200 ~
 
 scoreboard players add @e[type=armor_stand,name="Redmimic"] mimicdeath 1
 
@@ -182,9 +128,9 @@ execute as @e[type=bat,name="RedFlyingSkeleton"] at @s run summon bat ~ ~1 ~ {Si
 
 execute as @e[type=bat,name="BlueFlyingSkeleton"] at @s run summon bat ~ ~1 ~ {Silent:1b,Invulnerable:1b,Tags:["FS"],Passengers:[{id:"minecraft:skeleton",Team:"Blue",Health:50f,HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:5s}]}},{id:"minecraft:tipped_arrow",Count:64b,tag:{custom_potion_effects:[{id:"minecraft:slowness",amplifier:3b,duration:100}]}}],HandDropChances:[0.000F,0.000F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000}]}]}
 
-tp @e[type=bat,name="RedFlyingSkeleton"] ~ -100 ~
+tp @e[type=bat,name="RedFlyingSkeleton"] ~ -200 ~
 
-tp @e[type=bat,name="BlueFlyingSkeleton"] ~ -100 ~
+tp @e[type=bat,name="BlueFlyingSkeleton"] ~ -200 ~
 
 scoreboard players add @e[type=bat,tag=FS] Timer 1
 
@@ -224,7 +170,7 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/kerfuffle] run fu
 
 execute as @e[type=bat,name="Wall"] at @s run summon armor_stand ~ ~ ~ {CustomName:'{"text":"Wall"}',Invisible:1,Invulnerable:1,NoBasePlate:1}
 
-tp @e[type=bat,name="Wall"] ~ -100 ~
+tp @e[type=bat,name="Wall"] ~ -200 ~
 
 execute as @e[type=armor_stand,name="Wall"] at @s run fill ~-3 ~ ~ ~4 ~4 ~1 bricks replace air
 
@@ -314,25 +260,33 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/lifeforce] run fu
 
 scoreboard players add @a[predicate=commands:in_any_battlefield] End 1
 
-execute if entity @a[team=Red,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Blue,tag=King] if score #gamemode settings matches 0 run tag @a[team=Red] add End
+execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Blue,tag=King] if score #gamemode settings matches 0 run tag @a[team=Red] add win
 
-execute if entity @a[team=Blue,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Red,tag=King] if score #gamemode settings matches 0 run tag @a[team=Blue] add End
+execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Blue,tag=King] if score #gamemode settings matches 0 run tag @a[team=Blue] add lose
+
+execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Red,tag=King] if score #gamemode settings matches 0 run tag @a[team=Blue] add win
+
+execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Red,tag=King] if score #gamemode settings matches 0 run tag @a[team=Red] add lose
 
 #End of the Game (TDM)
 
-execute if entity @a[team=Red,scores={End=100..}] if score #redkills tdmKills >= #tdmreqkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Red] add End
+execute if entity @a[team=!,scores={End=100..}] if score #redkills tdmKills >= #tdmreqkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Red] add win
 
-execute if entity @a[team=Blue,scores={End=100..}] if score #bluekills tdmKills >= #tdmreqkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Blue] add End
+execute if entity @a[team=!,scores={End=100..}] if score #redkills tdmKills >= #tdmreqkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Blue] add lose
+
+execute if entity @a[team=!,scores={End=100..}] if score #bluekills tdmKills >= #tdmreqkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Blue] add win
+
+execute if entity @a[team=!,scores={End=100..}] if score #bluekills tdmKills >= #tdmreqkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Red] add lose
 
 #Other end of game stuff
 
-execute if entity @a[team=Red,tag=End] run title @a title ["",{"text":"Red Team Has Won!","color":"red"}]
+execute if entity @a[team=Red,tag=win] run title @a title ["",{"text":"Red Team Has Won!","color":"red"}]
 
-execute if entity @a[team=Blue,tag=End] run title @a title ["",{"text":"Blue Team Has Won!","color":"blue"}]
+execute if entity @a[team=Blue,tag=win] run title @a title ["",{"text":"Blue Team Has Won!","color":"blue"}]
 
-execute if entity @a[tag=End] as @a run function commands:starting/end_score_tag_reset
+execute if entity @a[tag=win] as @a run function commands:starting/end_score_tag_reset
 
-execute as @a[tag=End,limit=1] run function commands:other/end
+execute if entity @a[tag=win] run function commands:other/end
 
 #TDM Display kills timer
 
@@ -346,7 +300,7 @@ execute if score #TDMTimer tdmTimer matches 400.. if score #gamemode settings ma
 
 execute as @e[type=bat,tag=xpspawner] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["xpspawner"]}
 
-tp @e[type=bat,tag=xpspawner] ~ -100 ~
+tp @e[type=bat,tag=xpspawner] ~ -200 ~
 
 execute as @e[type=armor_stand,tag=xpspawner] at @s run fill ~ ~ ~ ~ ~ ~ spawner{SpawnCount:3,SpawnRange:10,Delay:0,MinSpawnDelay:10,MaxSpawnDelay:40,MaxNearbyEntities:100,RequiredPlayerRange:100,SpawnData:{entity:{id:"minecraft:experience_bottle",Motion:[0.0,1.0,0.0]}}} replace air
 
@@ -392,7 +346,7 @@ scoreboard players set @a[tag=upgraded,scores={WizardMinion=320..}] WizardMinion
 
 scoreboard players set @a[tag=!upgraded,scores={WizardMinion=400..}] WizardMinion 0
 
-tp @e[type=zombie,scores={MinionDeath=1800..}] ~ -100 ~
+tp @e[type=zombie,scores={MinionDeath=1800..}] ~ -200 ~
 
 #Invincible Money
 
@@ -415,34 +369,6 @@ execute as @e[type=wither_skeleton,tag=King,scores={Defend=1..}] run function co
 execute as @a[scores={Kit=5,glowingEffectCD=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s glowingEffectCD 1
 
 execute as @a[scores={usedCOAS=1..,glowingEffectCD=..0},predicate=commands:holding/glowing_effect] run function commands:other/glowing_effect
-
-#Olympic Vault
-
-scoreboard players remove @a[scores={olympicVaultTimer=1..},predicate=commands:inventory/olympic_vault,predicate=commands:in_any_battlefield,tag=!notAlive] olympicVaultTimer 1
-
-execute as @a[scores={usedCOAS=1..,olympicVaultTimer=..0},predicate=commands:holding/olympic_vault] at @s run function commands:other/olympic_vault
-
-tag @a[predicate=commands:is_sneaking,tag=olympicVault] add vaultCrouchInit
-
-effect give @a[tag=vaultCrouchInit,tag=!vaultCrouch] slow_falling 5 0 true
-
-tag @a[predicate=commands:is_sneaking,tag=olympicVault] add vaultCrouch
-
-tag @a[tag=olympicVault,nbt={OnGround:1b},scores={olympicVaultTimer=..299}] remove olympicVault
-
-tag @a[predicate=!commands:effects/slow_falling,tag=vaultCrouch] remove olympicVault
-
-tag @a[predicate=!commands:effects/slow_falling,tag=vaultCrouch] remove vaultCrouchInit
-
-tag @a[predicate=!commands:effects/slow_falling,tag=vaultCrouch] remove vaultCrouch
-
-tag @a[predicate=!commands:is_sneaking,tag=vaultCrouch] remove olympicVault
-
-tag @a[predicate=!commands:is_sneaking,tag=vaultCrouch] remove vaultCrouchInit
-
-effect clear @a[predicate=!commands:is_sneaking,tag=vaultCrouch] slow_falling
-
-tag @a[predicate=!commands:is_sneaking,tag=vaultCrouch] remove vaultCrouch
 
 #Archer Cooldown Display
 
@@ -468,33 +394,13 @@ scoreboard players add @e[type=item,tag=fakeMoney] Timer 1
 
 kill @e[type=item,tag=fakeMoney,scores={Timer=2400..}]
 
-#Lava Trap
+#Powder Keg
 
-execute as @a[scores={usedCOAS=1..},predicate=commands:holding/lava_trap] run function commands:other/lava_trap_init
+execute as @e[type=bat,tag=powderKeg] at @s run function commands:other/place_powder_keg
 
-scoreboard players add @a[tag=lavatrap] Lava 1
+execute as @e[type=item_frame,tag=powderKeg] at @s unless entity @e[type=piglin,limit=1,sort=nearest,distance=..1,tag=powderKeg] run function commands:other/destroy_powder_keg
 
-execute as @a[scores={Lava=200..}] run function commands:other/lava_trap_end
-
-#Davy Jones' Locker
-
-execute as @e[type=bat,tag=Locker] at @s run function commands:other/davy_jones_locker_init
-
-execute as @e[type=armor_stand,name="Locker"] at @s run tag @p[team=Blue,distance=..3] add locked
-
-execute as @e[type=armor_stand,name="LockerBlue"] at @s run tag @p[team=Red,distance=..3] add locked
-
-execute as @a[tag=locked] at @s run function commands:other/davy_jones_locker
-
-scoreboard players add @e[type=armor_stand,name="Locker"] lockerdeath 1
-
-scoreboard players add @e[type=armor_stand,name="LockerBlue"] lockerdeath 1
-
-execute as @e[type=armor_stand,scores={lockerdeath=1200..}] at @s run kill @e[type=armor_stand,tag=davyLocker,distance=..2]
-
-kill @e[type=armor_stand,scores={lockerdeath=1200..}]
-
-execute as @e[type=falling_block,tag=davyLocker] run data merge entity @s {Time:1}
+execute as @e[type=piglin,tag=powderKeg,nbt=!{Fire:0s}] at @s run function commands:other/destroy_powder_keg
 
 #Chain Hook
 
@@ -548,7 +454,7 @@ execute as @e[type=armor_stand,scores={TreasureDelete=300..}] at @s run fill ~ ~
 
 execute as @e[type=armor_stand,scores={TreasureDelete=300..}] at @s run kill @e[type=item,scores={ItemKill=1},distance=..4]
 
-tp @e[type=armor_stand,scores={TreasureDelete=301..}] ~ -100 ~
+tp @e[type=armor_stand,scores={TreasureDelete=301..}] ~ -200 ~
 
 #Ent Items
 
@@ -584,6 +490,10 @@ scoreboard players add @e[type=item,nbt={Item:{components:{"minecraft:custom_dat
 
 scoreboard players add @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] FruitRemove 1
 
+execute as @e[type=item,tag=spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] run data modify entity @s Owner set from entity @p[team=Red,scores={Kit=8}]
+
+execute as @e[type=item,tag=spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] run data modify entity @s Owner set from entity @p[team=Blue,scores={Kit=8}]
+
 execute as @e[type=item,scores={FruitRemove=1}] run data merge entity @s {PickupDelay:1}
 
 execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s if entity @p[scores={Kit=8},dx=0] as @a[team=Red,distance=..100] unless score @s Kit matches 8 run tag @s add closest
@@ -600,7 +510,7 @@ execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{component
 
 tag @a[tag=closest] remove closest
 
-tp @e[type=item,scores={FruitRemove=100..}] ~ -100 ~
+tp @e[type=item,scores={FruitRemove=100..}] ~ -200 ~
 
 #Max of team healing fruits
 
@@ -664,8 +574,6 @@ kill @e[type=armor_stand,scores={Treeremove=200..}]
 
 scoreboard players remove @a[scores={Kit=7},predicate=commands:in_any_battlefield,tag=!notAlive] fakeTimer 1
 
-execute as @a[scores={Kit=7,lavaTrapTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s lavaTrapTimer 1
-
 loot give @a[team=Red,scores={fakeTimer=..0}] loot commands:main_abilities/fake_money_red
 
 loot give @a[team=Blue,scores={fakeTimer=..0}] loot commands:main_abilities/fake_money_blue
@@ -701,6 +609,14 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/rejuvenating_spel
 #Vigor Spell
 
 execute as @a[scores={usedCOAS=1..},predicate=commands:holding/vigor_spell] at @s run function commands:other/vigor_spell
+
+#Angelic Blessing
+
+execute as @a[scores={angelicBlessingTimer=1..},predicate=commands:inventory/angelic_blessing,predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s angelicBlessingTimer 1
+
+execute as @a[scores={usedCOAS=1..,angelicBlessingTimer=..0},predicate=commands:holding/angelic_blessing] at @s anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/angelic_blessing_start_ray
+
+execute at @a[tag=blessed] run particle dust{color:[0.0,1.0,0.0],scale:1} ~ ~2.5 ~ 0 0 0 1 1
 
 #Wizard Fireballs
 
@@ -760,32 +676,6 @@ execute store result bossbar minecraft:redking value run data get entity @e[type
 
 execute store result bossbar minecraft:blueking value run data get entity @e[type=wither_skeleton,team=Blue,tag=King,limit=1] Health
 
-#Reveal Drone
-
-execute as @e[type=bat,tag=RevealRed] at @s run summon zombified_piglin ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4f,IsBaby:1b,Tags:["DroneRed","Drone"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
-
-tp @e[type=bat,tag=RevealRed] ~ -100 ~
-
-execute as @e[type=zombified_piglin,tag=DroneRed] at @s run effect give @a[team=Blue,distance=..12] glowing 1 0 true
-
-execute as @e[type=zombified_piglin,tag=DroneRed] at @s run effect give @a[team=Blue,distance=..12] slowness 1 0 true
-
-execute as @e[type=bat,tag=RevealBlue] at @s run summon zombified_piglin ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4f,IsBaby:1b,Tags:["DroneBlue","Drone"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
-
-tp @e[type=bat,tag=RevealBlue] ~ -100 ~
-
-execute as @e[type=zombified_piglin,tag=DroneBlue] at @s run effect give @a[team=Red,distance=..12] glowing 1 0 true
-
-execute as @e[type=zombified_piglin,tag=DroneBlue] at @s run effect give @a[team=Red,distance=..12] slowness 1 0 true
-
-execute as @e[type=zombified_piglin,tag=Drone] at @s run particle dust{color:[1.000,1.000,0.000],scale:1} ~ ~ ~ 0 0 0 1 10 normal
-
-execute as @e[type=zombified_piglin,tag=Drone] at @s run effect give @e[type=wither_skeleton,tag=dummy,distance=..12] glowing 1 0 true
-
-scoreboard players add @e[type=zombified_piglin,tag=Drone] DroneDeath 1
-
-kill @e[type=zombified_piglin,scores={DroneDeath=600..}]
-
 #Clear absorption from people with no absorption hearts
 
 execute as @a[nbt={AbsorptionAmount:0.0f}] run effect clear @s absorption
@@ -822,10 +712,6 @@ loot give @a[team=Blue,scores={NinjaItems=..0}] loot commands:main_abilities/smo
 
 scoreboard players set @a[scores={NinjaItems=..0}] NinjaItems 900
 
-execute as @a[scores={Kit=2}] run scoreboard players operation @s smokeStore = @s NinjaItems
-
-execute as @a[scores={Kit=2}] store result score @s smokeDis run scoreboard players operation @s smokeStore /= #ticks constant
-
 #Ninja Dash
 
 scoreboard players add #ninjavoicered voicelineCD 1
@@ -858,6 +744,20 @@ execute at @e[type=area_effect_cloud,tag=smokered] run effect give @a[team=Blue,
 
 execute at @e[type=area_effect_cloud,tag=smokeblue] run effect give @a[team=Red,predicate=!commands:armor/enhanced_space_helmet,distance=..5] blindness 2 0 true
 
+#Shuriken
+
+execute as @a[scores={Kit=2,shurikenTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s shurikenTimer 1
+
+execute as @a[scores={Kit=2,shurikenTimer=..0}] run function commands:other/get_shurikens
+
+execute as @e[type=snowball,tag=!shurikenred,nbt={Item:{components:{"minecraft:custom_data":{shurikenred:1b}}}}] at @s run function commands:ball/shuriken_found_red
+
+execute as @e[type=snowball,tag=!shurikenblue,nbt={Item:{components:{"minecraft:custom_data":{shurikenblue:1b}}}}] at @s run function commands:ball/shuriken_found_blue
+
+execute as @e[type=area_effect_cloud,tag=shurikenred] unless predicate commands:is_riding_shuriken_red at @s run function commands:ball/shuriken_landed_red
+
+execute as @e[type=area_effect_cloud,tag=shurikenblue] unless predicate commands:is_riding_shuriken_blue at @s run function commands:ball/shuriken_landed_blue
+
 #Ninja Strength passive
 
 execute as @a[scores={Ninjakill=1..,Kit=2}] run function commands:attributes/adds/add_ninja_passive_atkdmg
@@ -866,13 +766,13 @@ scoreboard players add @a[scores={Ninjakill=1..,Kit=2}] dashcharge 120
 
 #Display amount of dash charges
 
-execute if entity @a[scores={Kit=2}] run function commands:other/display_dash_charges
+execute if entity @a[scores={Kit=2}] run function commands:cooldowns/ninja_display
 
 #C4
 
 execute at @e[type=bat,tag=c4red] run summon villager ~ ~ ~ {Age:-32767,NoGravity:1b,Silent:1b,NoAI:1b,Health:4.0f,Tags:["c4red"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
 
-tp @e[type=bat,tag=c4red] ~ -100 ~
+tp @e[type=bat,tag=c4red] ~ -200 ~
 
 execute at @e[type=villager,tag=c4red] run particle dust{color:[0.271,0.271,0.271],scale:1} ~ ~0.5 ~ 0 0 0 0 5 force
 
@@ -884,7 +784,7 @@ execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/d
 
 execute at @e[type=bat,tag=c4blue] run summon villager ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4.0f,Tags:["c4blue"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
 
-tp @e[type=bat,tag=c4blue] ~ -100 ~
+tp @e[type=bat,tag=c4blue] ~ -200 ~
 
 execute at @e[type=villager,tag=c4blue] run particle dust{color:[0.271,0.271,0.271],scale:1} ~ ~0.5 ~ 0 0 0 0 5 force
 
@@ -934,7 +834,7 @@ scoreboard players add @a[scores={Kit=10}] PoisonTimer 1
 
 scoreboard players add @a[scores={Kit=10}] ToxinTimer 1
 
-scoreboard players add @a[scores={Kit=10}] StasisTimer 1
+scoreboard players add @a[scores={Kit=10}] DarknessTimer 1
 
 scoreboard players add @a[scores={Kit=10}] MidasTimer 1
 
@@ -1016,31 +916,29 @@ execute if entity @a[scores={usedCOAS=1..},predicate=commands:holding/virus_dete
 
 clear @a[scores={usedCOAS=1..},predicate=commands:holding/virus_detector] carrot_on_a_stick[custom_data~{virusdetector:1b}] 1
 
-#Memory Wipe (Robot Ultimate)
+#System Reboot (Robot Ultimate)
 
-execute as @a[scores={Ultimate=10},tag=!notAlive,predicate=!commands:inventory/memory_wipe] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s RobotUlt 1
+execute as @a[scores={Ultimate=10},tag=!notAlive,predicate=!commands:inventory/system_reboot] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s RobotUlt 1
 
-#REWORK give @a[scores={RobotUlt=3000..}] carrot_on_a_stick{display:{Name:'[{"text":"M","color":"dark_red","italic":false},{"text":"e","color":"#930000","italic":false},{"text":"m","color":"#690000","italic":false},{"text":"o","color":"#3F0000","italic":false},{"text":"ry ","color":"#150000","italic":false},{"text":"W","color":"#3F0000","italic":false},{"text":"i","color":"#690000","italic":false},{"text":"p","color":"#930000","italic":false},{"text":"e","color":"dark_red","italic":false}]',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Clears the inventory of a random player on the enemy team."}']},Unbreakable:1b,CustomModelData:82,ultimateitem:1b,memorywipe:1b,Enchantments:[{}]} 1
+loot give @a[scores={RobotUlt=3600..}] loot commands:ultimates/system_reboot
 
-scoreboard players set @a[scores={RobotUlt=3000..}] RobotUlt 0
+scoreboard players set @a[scores={RobotUlt=3600..}] RobotUlt 0
 
-execute as @a[scores={usedCOAS=1..},predicate=commands:holding/memory_wipe] run tag @s add mWiper
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/system_reboot] run function commands:ultimates/system_reboot_shot
 
-execute as @a[tag=mWiper] at @s run function commands:ultimates/memory_wipe_shot
+execute as @e[type=item,tag=systemReboot] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on_without_grass force
 
-execute as @e[type=item,tag=mWipeRed] at @s run tag @p[team=Blue,distance=..3] add mWiped
+execute as @e[type=item,tag=systemRebootRed] at @s if entity @a[team=Blue,distance=..4] run function commands:ultimates/system_reboot
 
-execute as @e[type=item,tag=mWipeBlue] at @s run tag @p[team=Red,distance=..3] add mWiped
+execute as @e[type=item,tag=systemRebootBlue] at @s if entity @a[team=Red,distance=..4] run function commands:ultimates/system_reboot
 
-execute as @a[tag=mWiped] at @s run function commands:ultimates/memory_wipe
+execute as @e[type=item,tag=systemReboot,scores={nearbyBlocks=1..}] at @s run function commands:ultimates/system_reboot
 
-kill @e[type=item,tag=mWipe,nbt={OnGround:1b}]
+scoreboard players add @a[tag=rebooting] Rebooting 1
 
-execute as @a[tag=wipeKill,scores={mWipeKill=1..}] run function commands:ultimates/memory_wipe_kill
+execute as @a[tag=rebooting,scores={damageTaken=1..}] run function commands:ultimates/system_reboot_interrupt
 
-scoreboard players reset @a[scores={mWipeKill=1..}] mWipeKill
-
-tag @a[scores={died=1..}] remove wipeKill
+execute as @a[scores={Rebooting=100..}] run function commands:ultimates/system_reboot_teleport
 
 #Damage gives ultimate charge
 
@@ -1110,21 +1008,15 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/decay_aura] at @s
 
 scoreboard players set @a[scores={DecayTimer=3200..}] DecayTimer 0
 
-scoreboard players add @a[tag=decay] DecayD 1
-
 scoreboard players add @a[tag=decay] Decay 1
 
 execute as @a[tag=decay] run function commands:ultimates/decay_aura
 
-scoreboard players set @a[scores={DecayD=22..}] DecayD 0
+scoreboard players set @a[scores={died=1..}] Decay 120
 
-scoreboard players set @a[scores={died=1..}] Decay 100
+tag @a[scores={Decay=120..}] remove decay
 
-tag @a[scores={Decay=100..}] remove decay
-
-scoreboard players set @a[scores={Decay=100..}] DecayD 0
-
-scoreboard players set @a[scores={Decay=100..}] Decay 0
+scoreboard players set @a[scores={Decay=120..}] Decay 0
 
 #Custom Death messages
 
@@ -1210,9 +1102,9 @@ execute as @e[type=horse,tag=RedHorse] run scoreboard players add Horse horsed 1
 
 execute as @e[type=horse,tag=BlueHorse] run scoreboard players add HorseB horsed 1
 
-execute if score Horse horsed matches 2.. run tp @e[type=horse,tag=RedHorse,limit=1] ~ -100 ~
+execute if score Horse horsed matches 2.. run tp @e[type=horse,tag=RedHorse,limit=1] ~ -200 ~
 
-execute if score HorseB horsed matches 2.. run tp @e[type=horse,tag=BlueHorse,limit=1] ~ -100 ~
+execute if score HorseB horsed matches 2.. run tp @e[type=horse,tag=BlueHorse,limit=1] ~ -200 ~
 
 execute if score Horse horsed matches 2.. run kill @e[type=horse,tag=RedHorse,limit=1]
 
@@ -1284,20 +1176,30 @@ tag @a[scores={Marked=1..}] remove marked
 
 scoreboard players set @a[scores={Marked=1..}] Marked 0
 
-#Questionable Concoction (Healer Alt. Ultimate)
+#Resurrection (Healer Alt. Ultimate)
 
-execute as @a[scores={Kit=4,Ultimate=14},tag=!notAlive,predicate=!commands:inventory/questionable_concoction] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s PotionTimer 1
+execute as @a[scores={Kit=4,Ultimate=14},tag=!notAlive,predicate=!commands:inventory/resurrection] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s resurrectionTimer 1
 
-# give @a[team=Red,scores={PotionTimer=3000..}] bat_spawn_egg{CustomModelData:71,CanPlaceOn:["#commands:can_place_on"],ultimateitem:1b,concoction:1b,HideFlags:16,display:{Name:'{"text":"Questionable Concoction"}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Use to either heal your own king or damage the enemy king."}','{"text":"You must be within close range of your target to use it!"}']},EntityTag:{Silent:1b,Invulnerable:1b,Tags:["concoctionred","concoction"]},Enchantments:[{}]} 1
-
-# give @a[team=Blue,scores={PotionTimer=3000..}] bat_spawn_egg{CustomModelData:71,CanPlaceOn:["#commands:can_place_on"],ultimateitem:1b,concoction:1b,HideFlags:16,display:{Name:'{"text":"Questionable Concoction"}',Lore:['{"text":"Placeable","color":"yellow","italic":false}','{"text":" "}','{"text":"Use to either heal your own king or damage the enemy king."}','{"text":"You must be within close range of your target to use it!"}']},EntityTag:{Silent:1b,Invulnerable:1b,Tags:["concoctionblue","concoction"]},Enchantments:[{}]} 1
-
-scoreboard players set @a[scores={PotionTimer=3000..}] PotionTimer 0
-
-execute as @e[type=bat,tag=concoction] at @s run function commands:ultimates/questionable_concoction
-
-tp @e[type=bat,tag=concoction] ~ -100 ~
+loot give @a[scores={resurrectionTimer=3600..}] loot commands:ultimates/resurrection
  
+scoreboard players set @a[scores={resurrectionTimer=3600..}] resurrectionTimer 0
+
+execute as @a[predicate=commands:holding/resurrection,scores={usedCOAS=1..},team=Red] at @s if entity @e[type=marker,tag=resSoulRed,distance=..3] run function commands:ultimates/resurrection_init
+
+execute as @a[predicate=commands:holding/resurrection,scores={usedCOAS=1..},team=Blue] at @s if entity @e[type=marker,tag=resSoulBlue,distance=..3] run function commands:ultimates/resurrection_init
+
+execute as @e[type=marker,tag=resSoul] at @s run particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.01 3 force @a[scores={Kit=4,Ultimate=14}]
+
+scoreboard players add @a[tag=resurrecting] resurrectionDur 1
+
+execute as @a[tag=resurrecting,team=Red] at @s unless entity @e[type=marker,tag=resSoulRed,distance=..6] run function commands:ultimates/resurrection_interrupt
+
+execute as @a[tag=resurrecting,team=Blue] at @s unless entity @e[type=marker,tag=resSoulBlue,distance=..6] run function commands:ultimates/resurrection_interrupt
+
+execute as @a[scores={resurrectionDur=60..}] at @s run function commands:ultimates/resurrection_succeed
+
+execute as @a[tag=resurrecting,predicate=!commands:holding/resurrection] at @s run function commands:ultimates/resurrection_interrupt
+
 #Bow of Justice (Archer Alt. Ultimate)
 
 execute as @a[scores={Kit=5,Ultimate=15},tag=!notAlive,predicate=!commands:inventory/bow_of_justice] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s JusticeTimer 1
@@ -1326,7 +1228,9 @@ execute as @a[scores={usedCOAS=1..},predicate=commands:holding/overcharge] at @s
 
 tag @e[type=zombie,tag=overcharge] add OC
 
-execute as @e[type=zombie,tag=overcharge] at @s run data merge entity @s {CustomNameVisible:1b,Health:20f,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":16711680}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.follow_range",Base:99},{Name:"minecraft:generic.max_health",Base:20},{Name:"minecraft:generic.movement_speed",Base:0.35}]}
+execute as @e[type=zombie,tag=overcharge,team=Red] at @s run data merge entity @s {CustomNameVisible:1b,Health:20f,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":16711680}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.follow_range",Base:99},{Name:"minecraft:generic.max_health",Base:20},{Name:"minecraft:generic.movement_speed",Base:0.35}]}
+
+execute as @e[type=zombie,tag=overcharge,team=Blue] at @s run data merge entity @s {CustomNameVisible:1b,Health:20f,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":255}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],Attributes:[{Name:"minecraft:generic.follow_range",Base:99},{Name:"minecraft:generic.max_health",Base:20},{Name:"minecraft:generic.movement_speed",Base:0.35}]}
 
 tag @e[type=zombie,tag=OC] remove overcharge
 
@@ -1372,7 +1276,7 @@ execute as @e[tag=AI,type=bat] run function commands:ultimates/artificial_intell
 
 scoreboard players add @e[type=zombie,tag=AI] timeLimit 1
 
-tp @e[type=zombie,tag=AI,scores={timeLimit=900..}] ~ -100 ~
+tp @e[type=zombie,tag=AI,scores={timeLimit=900..}] ~ -200 ~
 
 execute if entity @e[type=zombie,team=Red,tag=AI,scores={timeLimit=900}] run tellraw @a {"text":"The Artificial Intelligence faded away...","color":"red"}
 
@@ -1466,7 +1370,7 @@ advancement grant @a[scores={Health=20..}] only commands:full_hp
 
 advancement revoke @a[scores={Health=..19}] only commands:full_hp
 
-advancement grant @a[advancements={commands:warrior_challenge_damage=true,commands:warrior_challenge_kill=true},scores={Kit=1}] only commands:character_challenges/pure_destruction 
+advancement grant @a[advancements={commands:warrior_challenge_damage=true,commands:warrior_challenge_kill=true},scores={Kit=1}] only commands:character_challenges/pure_destruction
 
 advancement grant @a[scores={Kit=9,scourgeKills=3..}] only commands:character_challenges/wrath_of_the_gods
 
@@ -1672,7 +1576,7 @@ execute if entity @e[type=elder_guardian,tag=terrorBlue] as @a[team=Red,predicat
 
 scoreboard players add @e[type=elder_guardian,tag=terror] timeLimit 1
 
-tp @e[type=elder_guardian,tag=terror,scores={timeLimit=900..}] ~ -100 ~
+tp @e[type=elder_guardian,tag=terror,scores={timeLimit=900..}] ~ -200 ~
 
 execute if entity @e[type=elder_guardian,team=Red,tag=terror,scores={timeLimit=900}] run tellraw @a {"text":"The Terror of the Seas faded away...","color":"red"}
 
@@ -1690,7 +1594,7 @@ scoreboard players reset @a[scores={Kit=8,entPassive=1..}] entPassive
 
 execute at @e[type=bat,tag=ultimatecharger] as @a[distance=..5,limit=1,scores={Ultimate=1..30}] run function commands:other/ultimate_charger
 
-teleport @e[type=bat,tag=ultimatecharger] ~ -100 ~
+teleport @e[type=bat,tag=ultimatecharger] ~ -200 ~
 
 #The Watcher
 
@@ -1706,9 +1610,9 @@ execute at @e[type=zombie,tag=watcherred] run tag @a[team=Blue,distance=..10] ad
 
 execute at @e[type=zombie,tag=watcherblue] run tag @a[team=Red,distance=..10] add watchBlue
 
-execute if entity @a[tag=watchRed,tag=!watched] run tellraw @a[team=Red] [{"selector":"@a[tag=watchRed,tag=!watched] "},{"text":" has been spotted by a watcher!"}]
+execute if entity @a[tag=watchRed,tag=!watched] run tellraw @a[team=Red] [{"selector":"@a[tag=watchRed,tag=!watched]"},{"text":" has been spotted by a watcher!"}]
 
-execute if entity @a[tag=watchBlue,tag=!watched] run tellraw @a[team=Blue] [{"selector":"@a[tag=watchBlue,tag=!watched] "},{"text":" has been spotted by a watcher!"}]
+execute if entity @a[tag=watchBlue,tag=!watched] run tellraw @a[team=Blue] [{"selector":"@a[tag=watchBlue,tag=!watched]"},{"text":" has been spotted by a watcher!"}]
 
 execute at @e[type=zombie,tag=watcherred] run tag @a[team=Blue,distance=..10] add watched
 
@@ -1722,7 +1626,7 @@ execute at @e[type=zombie,tag=watcherred] run tag @a[team=Blue,distance=10.1..] 
 
 execute at @e[type=zombie,tag=watcherblue] run tag @a[team=Red,distance=10.1..] remove watched
 
-teleport @e[type=zombie,scores={watcherTimer=1200..}] ~ -100 ~
+teleport @e[type=zombie,scores={watcherTimer=1200..}] ~ -200 ~
 
 #The attractor
 
@@ -1738,7 +1642,7 @@ execute at @e[type=zombie,tag=attractorred] as @a[team=Blue,distance=..10] at @s
 
 execute at @e[type=zombie,tag=attractorblue] as @a[team=Red,distance=..10] at @s run teleport @s ~ ~ ~ facing entity @e[type=zombie,tag=attractorblue,limit=1,sort=nearest,distance=..10]
 
-teleport @e[type=zombie,scores={attractorTimer=1200..}] ~ -100 ~
+teleport @e[type=zombie,scores={attractorTimer=1200..}] ~ -200 ~
 
 #Spectator boundaries
 
@@ -1844,22 +1748,6 @@ scoreboard players add @a[tag=dinnerTargetBlue] dinnerEnd 1
 
 execute as @a[scores={dinnerEnd=300..}] run function commands:ultimates/dinners_end
 
-#Closing Time (Chef Alt. Ultimate Classic Mode)
-
-execute if score #gamemode settings matches 0 as @a[scores={Ultimate=22},tag=!notAlive,predicate=!commands:inventory/closing_time] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s closingTimer 1
-
-loot give @a[scores={closingTimer=3400..}] loot commands:ultimates/closing_time
-
-scoreboard players set @a[scores={closingTimer=3400..}] closingTimer 0
-
-execute as @a[scores={usedCOAS=1..},predicate=commands:holding/closing_time] run function commands:ultimates/closing_time
-
-scoreboard players add @a[tag=closingRed] closingEnd 1
-
-scoreboard players add @a[tag=closingBlue] closingEnd 1
-
-execute as @a[scores={closingEnd=200..}] run function commands:ultimates/closing_end
-
 #Explosive Charge (Warrior Ability)
 
 scoreboard players remove @a[scores={exCharge=1..},predicate=commands:in_any_battlefield,tag=!notAlive] exCharge 1
@@ -1892,13 +1780,15 @@ scoreboard players operation #global visfix *= #-1 visfix
 
 scoreboard players remove @e[type=wither_skeleton,scores={kingActive=1..}] kingActive 1
 
+scoreboard players add @e[type=wandering_trader,tag=wanderingKing] kingActive 1
+
 tag @e[type=wither_skeleton,scores={kingActive=0}] add inactivated
 
 execute as @e[type=wither_skeleton,tag=inactivated] run data merge entity @s {Attributes:[{Name:"minecraft:generic.movement_speed",Base:0}]}
 
-execute at @e[type=wither_skeleton,team=Red,tag=inactivated] run summon minecraft:wandering_trader ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["wanderingKingRed","wanderingKing"],active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:100000,show_particles:0b}],Attributes:[{Name:"generic.knockback_resistance",Base:1.0},{Name:"generic.movement_speed",Base:0.8}],WanderTarget:{X:9,Y:59,Z:-216},Offers:{}}
+execute at @e[type=wither_skeleton,team=Red,tag=inactivated] run summon minecraft:wandering_trader ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["wanderingKingRed","wanderingKing"],active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:100000,show_particles:0b}],Attributes:[{Name:"generic.knockback_resistance",Base:1.0},{Name:"generic.movement_speed",Base:0.8}],wander_target:[I;9,59,-216],Offers:{}}
 
-execute at @e[type=wither_skeleton,team=Blue,tag=inactivated] run summon minecraft:wandering_trader ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["wanderingKingBlue","wanderingKing"],active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:100000,show_particles:0b}],Attributes:[{Name:"generic.knockback_resistance",Base:1.0},{Name:"generic.movement_speed",Base:0.8}],WanderTarget:{X:9,Y:59,Z:-48},Offers:{}}
+execute at @e[type=wither_skeleton,team=Blue,tag=inactivated] run summon minecraft:wandering_trader ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["wanderingKingBlue","wanderingKing"],active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:100000,show_particles:0b}],Attributes:[{Name:"generic.knockback_resistance",Base:1.0},{Name:"generic.movement_speed",Base:0.8}],wander_target:[I;9,59,-48],Offers:{}}
 
 scoreboard players set @e[type=wither_skeleton,tag=inactivated] kingActive -1
 
@@ -1916,33 +1806,25 @@ execute positioned 9 59 -216 if entity @e[type=wandering_trader,tag=wanderingKin
 
 execute positioned 9 59 -48 if entity @e[type=wandering_trader,tag=wanderingKingBlue,distance=..2] run teleport @e[type=wither_skeleton,team=Blue,tag=King] 9 59 -48
 
-execute if score @e[type=wither_skeleton,team=Red,tag=King,limit=1] kingActive matches -2 run teleport @e[type=wandering_trader,tag=wanderingKingRed] ~ -100 ~
+execute if score @e[type=wither_skeleton,team=Red,tag=King,limit=1] kingActive matches -2 run teleport @e[type=wandering_trader,tag=wanderingKingRed] ~ -200 ~
 
-execute if score @e[type=wither_skeleton,team=Blue,tag=King,limit=1] kingActive matches -2 run teleport @e[type=wandering_trader,tag=wanderingKingBlue] ~ -100 ~
+execute if score @e[type=wither_skeleton,team=Blue,tag=King,limit=1] kingActive matches -2 run teleport @e[type=wandering_trader,tag=wanderingKingBlue] ~ -200 ~
 
-execute if score @e[type=wither_skeleton,team=Red,tag=King,limit=1] kingActive matches 1.. run teleport @e[type=wandering_trader,tag=wanderingKingRed] ~ -100 ~
+execute if score @e[type=wither_skeleton,team=Red,tag=King,limit=1] kingActive matches 1.. run teleport @e[type=wandering_trader,tag=wanderingKingRed] ~ -200 ~
 
-execute if score @e[type=wither_skeleton,team=Blue,tag=King,limit=1] kingActive matches 1.. run teleport @e[type=wandering_trader,tag=wanderingKingBlue] ~ -100 ~
+execute if score @e[type=wither_skeleton,team=Blue,tag=King,limit=1] kingActive matches 1.. run teleport @e[type=wandering_trader,tag=wanderingKingBlue] ~ -200 ~
 
 execute as @e[type=wandering_trader,tag=wanderingKing] run data remove entity @s HandItems[0]
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @e[type=wandering_trader,tag=wanderingKingRed] run data merge entity @s {WanderTarget:{X:9,Y:59,Z:-216}}
+execute as @e[type=wandering_trader,tag=wanderingKing,scores={kingActive=200..}] run function commands:other/wandering_king_end
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @e[type=wandering_trader,tag=wanderingKingBlue] run data merge entity @s {WanderTarget:{X:9,Y:59,Z:-48}}
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @e[type=wandering_trader,tag=wanderingKingRed] run data merge entity @s {wander_target:[I;9,59,-216]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingRed] run data merge entity @s {WanderTarget:{X:156,Y:59,Z:-1017}}
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @e[type=wandering_trader,tag=wanderingKingBlue] run data merge entity @s {wander_target:[I;9,59,-48]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingBlue] run data merge entity @s {WanderTarget:{X:45,Y:59,Z:-1128}}
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingRed] run data merge entity @s {wander_target:[I;156,59,-1017]}
 
-scoreboard players add @e[type=wandering_trader,tag=wanderingKing] kingActive 1
-
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @e[type=wandering_trader,tag=wanderingKingRed,scores={kingActive=200..}] run teleport @s 9 59 -215
-
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @e[type=wandering_trader,tag=wanderingKingBlue,scores={kingActive=200..}] run teleport @s 9 59 -48
-
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingRed,scores={kingActive=200..}] run teleport @s 156 59 -1017
-
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingBlue,scores={kingActive=200..}] run teleport @s 45 59 -1128
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingBlue] run data merge entity @s {wander_target:[I;45,59,-1128]}
 
 #Dragon Rush
 
@@ -2320,9 +2202,9 @@ execute as @e[type=zombified_piglin,tag=oven,scores={ovenTimer=160..}] at @s run
 
 execute as @e[type=zombified_piglin,tag=oven,scores={ovenDur=1600..}] at @s run function commands:other/destroy_oven
 
-#Pizza Time (Chef Alt. Ultimate TDM)
+#Pizza Time (Chef Alt. Ultimate)
 
-execute if score #gamemode settings matches 1 as @a[scores={Ultimate=22},tag=!notAlive,predicate=!commands:inventory/pizza_time] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s pizzaTimer 1
+execute as @a[scores={Ultimate=22},tag=!notAlive,predicate=!commands:inventory/pizza_time] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s pizzaTimer 1
 
 loot give @a[scores={pizzaTimer=3000..}] loot commands:ultimates/pizza_time
 
@@ -2504,7 +2386,7 @@ execute as @a[tag=asteroidShooter] at @s run function commands:other/asteroid
 
 execute as @e[type=area_effect_cloud,tag=asteroidLand] unless predicate commands:is_riding_asteroid at @s run function commands:other/asteroid_land
 
-execute as @e[type=item,tag=asteroidshard,nbt={OnGround:1b}] at @s run function commands:other/asteroid_shard 
+execute as @e[type=item,tag=asteroidshard,nbt={OnGround:1b}] at @s run function commands:other/asteroid_shard
 
 #Rocket Boosters
 
@@ -2534,7 +2416,7 @@ execute as @e[type=area_effect_cloud,tag=redTether] at @s unless entity @a[team=
 
 execute as @e[type=area_effect_cloud,tag=blueTether] at @s unless entity @a[team=Blue,distance=..30,tag=tethered] run function commands:other/destroy_tether
 
-execute as @e[type=area_effect_cloud,tag=tetherSpot,scores={tetherTimer=200..}] at @s run function commands:other/destroy_tether 
+execute as @e[type=area_effect_cloud,tag=tetherSpot,scores={tetherTimer=200..}] at @s run function commands:other/destroy_tether
 
 scoreboard players add @e[type=area_effect_cloud,tag=tetherSpot] tetherTimer 1
 
@@ -2628,11 +2510,15 @@ execute as @a[scores={Kit=15,sparklerTimer=1}] run function commands:replace/spa
 
 execute as @a[scores={usedCOAS=1..,sparklerTimer=..0},predicate=commands:holding/sparkler] at @s run function commands:other/sparkler
 
-kill @e[type=item,tag=sparkleritem,nbt={OnGround:1b}]
+scoreboard players add @e[type=item,tag=sparkleritem] sparklerTimer 1
+
+kill @e[type=item,tag=sparkleritem,scores={sparklerTimer=4..}]
 
 execute as @e[type=item,tag=sparklerred] at @s as @a[team=Blue,distance=..3] at @s run function commands:other/sparkler_hit
 
 execute as @e[type=item,tag=sparklerblue] at @s as @a[team=Red,distance=..3] at @s run function commands:other/sparkler_hit
+
+tag @a[tag=sparkled] remove sparkled
 
 #Blazing Speed
 
@@ -2786,9 +2672,9 @@ scoreboard players reset @a[scores={damageTaken=1..}] damageTaken
 
 scoreboard players reset @a[tag=!hasSmartDrone] droneDamage
 
-execute as @a[scores={died=1..}] at @s run tag @e[type=item,distance=..5,scores={ItemKill=1..}] add delete
+execute as @a[scores={died=1..}] at @s run function commands:command_chunk/item_clear_filter
 
-# kill @e[type=item,scores={ItemKill=1,Timer=1..},tag=delete]
+execute as @a[scores={died=1..}] at @s run tag @e[type=item,distance=..5,scores={ItemKill=1..}] add delete
 
 kill @e[type=item,scores={ItemKill=1},tag=delete]
 
@@ -2801,8 +2687,6 @@ advancement revoke @a only commands:warrior_challenge_damage
 advancement revoke @a only commands:warrior_challenge_kill
 
 advancement revoke @a only commands:sparkler_damage
-
-# advancement revoke @a only commands:bang_snap_damage
 
 advancement revoke @a only commands:cinder_bomb_damage
 

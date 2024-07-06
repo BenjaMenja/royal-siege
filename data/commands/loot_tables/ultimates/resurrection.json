@@ -1,0 +1,62 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Resurrection",
+                "color": "#4FFE74",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Resurrects a fallen ally, skipping the respawn timer and spawning them at their previous death location."
+                },
+                {
+                  "text": "The angel must be within 3 blocks to start the resurrection."
+                },
+                {
+                  "text": "Resurrection takes 3 seconds to complete."
+                },
+                {
+                  "text": "Resurrection can be interrupted if the angel is moved 6 blocks away from the body after starting."
+                },
+                {
+                  "text": "If it is interrupted, the angel is refunded 20% of their ultimate."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{ultimateitem:1b,resurrection:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 71
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

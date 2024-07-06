@@ -26,6 +26,8 @@ scoreboard players operation #var13 temp = @s gamWins
 
 scoreboard players operation #var81 temp = @s astWins
 
+scoreboard players operation #var87 temp = @s firWins
+
 scoreboard players operation #var14 temp = @s warLosses
 
 scoreboard players operation #var15 temp = @s ninLosses
@@ -53,6 +55,8 @@ scoreboard players operation #var25 temp = @s draLosses
 scoreboard players operation #var26 temp = @s gamLosses
 
 scoreboard players operation #var82 temp = @s astLosses
+
+scoreboard players operation #var88 temp = @s firLosses
 
 scoreboard players operation #var27 temp = @s warTies
 
@@ -82,6 +86,8 @@ scoreboard players operation #var39 temp = @s gamTies
 
 scoreboard players operation #var83 temp = @s astTies
 
+scoreboard players operation #var89 temp = @s firTies
+
 scoreboard players operation #var40 temp = @s warWinsTDM
 
 scoreboard players operation #var41 temp = @s ninWinsTDM
@@ -109,6 +115,8 @@ scoreboard players operation #var51 temp = @s draWinsTDM
 scoreboard players operation #var52 temp = @s gamWinsTDM
 
 scoreboard players operation #var84 temp = @s astWinsTDM
+
+scoreboard players operation #var90 temp = @s firWinsTDM
 
 scoreboard players operation #var53 temp = @s warLossesTDM
 
@@ -138,6 +146,8 @@ scoreboard players operation #var65 temp = @s gamLossesTDM
 
 scoreboard players operation #var85 temp = @s astLossesTDM
 
+scoreboard players operation #var91 temp = @s firLossesTDM
+
 scoreboard players operation #var66 temp = @s warTiesTDM
 
 scoreboard players operation #var67 temp = @s ninTiesTDM
@@ -163,6 +173,10 @@ scoreboard players operation #var76 temp = @s chefTiesTDM
 scoreboard players operation #var77 temp = @s draTiesTDM
 
 scoreboard players operation #var78 temp = @s gamTiesTDM
+
+scoreboard players operation #var86 temp = @s astTiesTDM
+
+scoreboard players operation #var92 temp = @s firTiesTDM
 
 scoreboard players operation #var79 temp = @s gamesPlayed
 
@@ -343,3 +357,17 @@ scoreboard players operation @s astTies = #var83 temp
 scoreboard players operation @s astWinsTDM = #var84 temp
 
 scoreboard players operation @s astLossesTDM = #var85 temp
+
+scoreboard players operation @s astTiesTDM = #var86 temp
+
+scoreboard players operation @s firWins = #var87 temp
+
+scoreboard players operation @s firLosses = #var88 temp
+
+scoreboard players operation @s firTies = #var89 temp
+
+scoreboard players operation @s firWinsTDM = #var90 temp
+
+scoreboard players operation @s firLossesTDM = #var91 temp
+
+scoreboard players operation @s firTiesTDM = #var92 temp

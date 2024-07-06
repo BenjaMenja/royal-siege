@@ -2,6 +2,7 @@
     "replace": false,
     "values": [
         "commands:load_functions/create_scoreboard_objectives",
-        "commands:load_functions/create_bossbars"
+        "commands:load_functions/create_bossbars",
+        "commands:admin/create_player_scoreboards"
     ]
 }

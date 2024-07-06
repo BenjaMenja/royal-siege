@@ -110,21 +110,17 @@ execute if entity @s[advancements={commands:smart_drone_death=true}] run functio
 
 execute if entity @s[advancements={commands:sparkler_death=true}] run function commands:custom_deaths/sparkler_death
 
-execute if entity @s[advancements={commands:sparkler_damage=true}] run function commands:custom_deaths/sparkler_death
-
-execute if entity @s[advancements={commands:bang_snap_damage=true}] run function commands:custom_deaths/bang_snap_death
+execute if entity @s[advancements={commands:sparkler_projectile_death=true}] run function commands:custom_deaths/sparkler_death
 
 execute if entity @s[advancements={commands:pyromania_damage=true}] run function commands:custom_deaths/pyromania_death
 
-execute if entity @s[advancements={commands:cinder_bomb_damage=true}] run function commands:custom_deaths/cinder_bomb_death
+execute if entity @s[advancements={commands:cinder_bomb_death=true}] run function commands:custom_deaths/cinder_bomb_death
 
-execute if entity @s[advancements={commands:chrysanthemum_shell_damage=true}] run function commands:custom_deaths/chrysanthemum_shell_death
+execute if entity @s[advancements={commands:chrysanthemum_shell_death=true}] run function commands:custom_deaths/chrysanthemum_shell_death
 
-execute if entity @s[advancements={commands:pop_rocks_damage=true}] run function commands:custom_deaths/pop_rocks_death
+execute if entity @s[advancements={commands:pop_rocks_death=true}] run function commands:custom_deaths/pop_rocks_death
 
 execute if entity @s[tag=shadowdeath] run function commands:custom_deaths/shadow_death
-
-execute if entity @s[tag=decaydeath] run function commands:custom_deaths/decay_death
 
 execute if entity @s[tag=tChestDeath] run function commands:custom_deaths/treasure_chest_death
 
@@ -142,6 +138,14 @@ execute if entity @s[team=Blue] if score #gamemode settings matches 1 run scoreb
 
 execute if entity @s[tag=hasBounty] run function commands:other/betting_chip_kill
 
+#Resurrection Soul
+
+execute at @s[team=Red] if entity @a[team=Red,scores={Kit=4,Ultimate=14}] run summon minecraft:marker ~ ~ ~ {Tags:["resSoulRed","resSoul"]}
+
+execute at @s[team=Blue] if entity @a[team=Blue,scores={Kit=4,Ultimate=14}] run summon minecraft:marker ~ ~ ~ {Tags:["resSoulBlue","resSoul"]}
+
+execute at @s run scoreboard players operation @e[type=marker,tag=resSoul,limit=1,sort=nearest] UUID = @s UUID
+
 #Score Removals
 
 function commands:custom_deaths/reset_cooldowns
@@ -156,7 +160,11 @@ scoreboard players reset @s InvisDur
 
 execute if entity @s[team=Red,scores={Kit=4}] run scoreboard players set #redHS healstreak 0
 
+tag @s[team=Red,tag=blessed] remove blessed
+
 execute if entity @s[team=Blue,scores={Kit=4}] run scoreboard players set #blueHS healstreak 0
+
+tag @s[team=Blue,tag=blessed] remove blessed
 
 #Attribute Removal
 
@@ -179,6 +187,8 @@ tag @s remove hasGasVacuum
 tag @s remove cloaked
 
 tag @s remove justiceKill
+
+tag @s remove blessed
 
 #Reset scores and run function again
 

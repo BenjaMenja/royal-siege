@@ -8,17 +8,11 @@ tag @s remove reloading
 
 tag @s remove spectator
 
-tag @s remove wipeKill
+tag @s remove rebooting
 
 tag @s remove upgraded
 
-scoreboard players set @s Kit 0
-
 effect clear @s
-
-scoreboard players set @s Ultimate 0
-
-scoreboard players set @s ultCheck 0
 
 tag @s remove protected
 

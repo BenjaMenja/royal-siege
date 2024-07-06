@@ -1,4 +1,4 @@
-execute store result score #fryingPan activeHotbar run data get entity @s SelectedItemSlot
+execute store result score #fryingPan activeHotbar run data get entity @s Inventory[{components:{"minecraft:custom_data":{fryingpan:1b}}}].Slot
 
 execute if score #fryingPan activeHotbar matches 0 run loot replace entity @s hotbar.0 loot commands:main_weapons/frying_pan_burning
 

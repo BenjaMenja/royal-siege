@@ -1,10 +1,18 @@
 execute at @s[team=Red] as @a[team=Red,distance=..10] run function commands:attributes/adds/add_vigor_spell_atkdmg
 
+execute at @s[team=Red] as @a[team=Red,tag=blessed] run function commands:attributes/adds/add_vigor_spell_atkdmg
+
 execute at @s[team=Red] as @a[team=Red,distance=..10] run function commands:attributes/adds/add_vigor_spell_speed
+
+execute at @s[team=Red] as @a[team=Red,tag=blessed] run function commands:attributes/adds/add_vigor_spell_speed
 
 execute at @s[team=Red] run effect give @a[team=Red,distance=..10] jump_boost 20 0 true
 
+execute at @s[team=Red] run effect give @a[team=Red,tag=blessed] jump_boost 20 0 true
+
 execute at @s[team=Red] run effect give @a[team=Red,distance=..10] fire_resistance 20 0 true
+
+execute at @s[team=Red] run effect give @a[team=Red,tag=blessed] fire_resistance 20 0 true
 
 execute at @s[team=Red] if score #angelspellsred voicelineCD matches 60.. run playsound block.anvil.use master @a[team=Red,distance=..15] ~ ~ ~ 0.3 2
 
@@ -16,11 +24,19 @@ execute if entity @s[team=Red] at @a[team=Red,distance=..10] run particle dust{c
 
 execute at @s[team=Blue] as @a[team=Blue,distance=..10] run function commands:attributes/adds/add_vigor_spell_atkdmg
 
+execute at @s[team=Blue] as @a[team=Blue,tag=blessed] run function commands:attributes/adds/add_vigor_spell_atkdmg
+
 execute at @s[team=Blue] as @a[team=Blue,distance=..10] run function commands:attributes/adds/add_vigor_spell_speed
+
+execute at @s[team=Blue] as @a[team=Blue,tag=blessed] run function commands:attributes/adds/add_vigor_spell_speed
 
 execute at @s[team=Blue] run effect give @a[team=Blue,distance=..10] jump_boost 20 0 true
 
+execute at @s[team=Blue] run effect give @a[team=Blue,tag=blessed] jump_boost 20 0 true
+
 execute at @s[team=Blue] run effect give @a[team=Blue,distance=..10] fire_resistance 20 0 true
+
+execute at @s[team=Blue] run effect give @a[team=Blue,tag=blessed] fire_resistance 20 0 true
 
 execute at @s[team=Blue] run playsound block.anvil.use master @a[team=Blue,distance=..15] ~ ~ ~ 1 2
 

@@ -1,0 +1,67 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
+                "minecraft:custom_model_data": 38,
+                "minecraft:custom_data": {
+                  "angelicblessing": 1
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {
+                  "text": "Angelic Blessing",
+                  "color": "green",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Blesses a targeted ally upon use."
+                },
+                {
+                  "text": "Blessed allies receive your spell effects from any distance."
+                },
+                {
+                  "text": "They also receive an additional Regeneration II effect for 3 seconds "
+                },
+                {
+                  "text": "when targeted by Angelic Staff's right-click ability."
+                },
+                {
+                  "text": "Has a cooldown of 6 seconds to switch targets."
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

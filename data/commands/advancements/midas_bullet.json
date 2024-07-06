@@ -1,22 +1,21 @@
 {
-    "criteria": {
-      "c1": {
-        "trigger": "minecraft:entity_hurt_player",
-        "conditions": {
-          "damage": {
-            "blocked": false,
-            "type": {
-              "direct_entity": {
-                "type": "minecraft:arrow",
-                "nbt": "{item:{id:\"minecraft:tipped_arrow\",count:1,components:{\"minecraft:potion_contents\":{custom_effects:[{id:\"minecraft:luck\",amplifier:0,duration:4,show_particles:0b}]}}}}"
-              }
+  "criteria": {
+    "c1": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "blocked": false,
+          "type": {
+            "direct_entity": {
+              "type": "minecraft:arrow",
+              "nbt": "{Tags:[\"midasBullet\"]}"
             }
           }
         }
       }
-    },
-    "rewards": {
-      "function": "commands:other/midas_bullet"
     }
+  },
+  "rewards": {
+    "function": "commands:other/midas_bullet"
   }
-  
+}

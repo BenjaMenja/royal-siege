@@ -6,3 +6,5 @@ bossbar set commands:red_ult29 max 1600
 bossbar set commands:red_ult30 max 2000
 bossbar set commands:blue_ult29 max 1600
 bossbar set commands:blue_ult30 max 2000
+bossbar set commands:red_ult14 max 3600
+bossbar set commands:blue_ult14 max 3600

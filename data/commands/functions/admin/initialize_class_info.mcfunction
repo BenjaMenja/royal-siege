@@ -28,6 +28,9 @@ scoreboard players add #gamblerwins classInfo 0
 
 scoreboard players add #astronautwins classInfo 0
 
+scoreboard players add #firecrackerwins classInfo 0
+
+
 #Init Losses
 
 scoreboard players add #warriorlosses classInfo 0
@@ -57,6 +60,8 @@ scoreboard players add #dragonlosses classInfo 0
 scoreboard players add #gamblerlosses classInfo 0
 
 scoreboard players add #astronautlosses classInfo 0
+
+scoreboard players add #firecrackerlosses classInfo 0
 
 #Init Ties
 
@@ -88,6 +93,8 @@ scoreboard players add #gamblerties classInfo 0
 
 scoreboard players add #astronautties classInfo 0
 
+scoreboard players add #firecrackerties classInfo 0
+
 #Init Wins TDM
 
 scoreboard players add #warriorwinsTDM classInfo 0
@@ -117,6 +124,8 @@ scoreboard players add #dragonwinsTDM classInfo 0
 scoreboard players add #gamblerwinsTDM classInfo 0
 
 scoreboard players add #astronautwinsTDM classInfo 0
+
+scoreboard players add #firecrackerwinsTDM classInfo 0
 
 #Init Losses TDM
 
@@ -148,6 +157,8 @@ scoreboard players add #gamblerlossesTDM classInfo 0
 
 scoreboard players add #astronautlossesTDM classInfo 0
 
+scoreboard players add #firecrackerlossesTDM classInfo 0
+
 #Init Ties TDM
 
 scoreboard players add #warriortiesTDM classInfo 0
@@ -177,6 +188,8 @@ scoreboard players add #dragontiesTDM classInfo 0
 scoreboard players add #gamblertiesTDM classInfo 0
 
 scoreboard players add #astronauttiesTDM classInfo 0
+
+scoreboard players add #firecrackertiesTDM classInfo 0
 
 #Init Games Played
 
@@ -214,6 +227,8 @@ scoreboard players add @s gamWins 0
 
 scoreboard players add @s astWins 0
 
+scoreboard players add @s firWins 0
+
 scoreboard players add @s warLosses 0
 
 scoreboard players add @s ninLosses 0
@@ -242,6 +257,8 @@ scoreboard players add @s gamLosses 0
 
 scoreboard players add @s astLosses 0
 
+scoreboard players add @s firLosses 0
+
 scoreboard players add @s warTies 0
 
 scoreboard players add @s ninTies 0
@@ -267,6 +284,10 @@ scoreboard players add @s chefTies 0
 scoreboard players add @s draTies 0
 
 scoreboard players add @s gamTies 0
+
+scoreboard players add @s astTies 0
+
+scoreboard players add @s firTies 0
 
 scoreboard players add @s warWinsTDM 0
 
@@ -296,6 +317,8 @@ scoreboard players add @s gamWinsTDM 0
 
 scoreboard players add @s astWinsTDM 0
 
+scoreboard players add @s firWinsTDM 0
+
 scoreboard players add @s warLossesTDM 0
 
 scoreboard players add @s ninLossesTDM 0
@@ -324,6 +347,8 @@ scoreboard players add @s gamLossesTDM 0
 
 scoreboard players add @s astLossesTDM 0
 
+scoreboard players add @s firLossesTDM 0
+
 scoreboard players add @s warTiesTDM 0
 
 scoreboard players add @s ninTiesTDM 0
@@ -349,6 +374,10 @@ scoreboard players add @s chefTiesTDM 0
 scoreboard players add @s draTiesTDM 0
 
 scoreboard players add @s gamTiesTDM 0
+
+scoreboard players add @s astTiesTDM 0
+
+scoreboard players add @s firTiesTDM 0
 
 scoreboard players add @s gamesPlayed 0
 

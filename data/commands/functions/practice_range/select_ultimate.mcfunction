@@ -4,7 +4,7 @@ tellraw @s[scores={Kit=2}] [{"text":"Which ultimate would you like to use?\n","c
 
 tellraw @s[scores={Kit=3}] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Immortality]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 74"}},{"text":" "},{"text":"[Magic Barrier]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 75"}}]
 
-tellraw @s[scores={Kit=4}] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Lifeforce]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 76"}},{"text":" "},{"text":"[Questionable Concoction]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 77"}}]
+tellraw @s[scores={Kit=4}] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Lifeforce]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 76"}},{"text":" "},{"text":"[Resurrection]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 77"}}]
 
 tellraw @s[scores={Kit=5}] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Chaos Bow]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 68"}},{"text":" "},{"text":"[Bow of Justice]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 69"}}]
 
@@ -16,9 +16,9 @@ tellraw @s[scores={Kit=8}] [{"text":"Which ultimate would you like to use?\n","c
 
 tellraw @s[scores={Kit=9}] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Scourge of the Seas]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 82"}},{"text":" "},{"text":"[Terror of the Seas]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 83"}}]
 
-tellraw @s[scores={Kit=10}] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Memory Wipe]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 86"}},{"text":" "},{"text":"[Artificial Intelligence]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 87"}}]
+tellraw @s[scores={Kit=10}] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[System Reboot]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 86"}},{"text":" "},{"text":"[Artificial Intelligence]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 87"}}]
 
-tellraw @s[scores={Kit=11}] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Dinner's Ready]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 70"}},{"text":" "},{"text":"[Closing Time]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 71"}}]
+tellraw @s[scores={Kit=11}] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Dinner's Ready]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 70"}},{"text":" "},{"text":"[Pizza Time]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 112"}}]
 
 tellraw @s[scores={Kit=12}] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Meteor Shower]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 102"}},{"text":" "},{"text":"[Evolution]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 103"}}]
 

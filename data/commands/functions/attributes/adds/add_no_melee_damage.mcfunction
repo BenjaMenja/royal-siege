@@ -1,0 +1,1 @@
+attribute @s minecraft:generic.attack_damage modifier add 3-0-100-0-0 "NoAtkDmg" -100 add_value

@@ -24,7 +24,7 @@ execute if entity @s[team=Blue,scores={Ultimate=12}] store result bossbar comman
 
 execute if entity @s[team=Blue,scores={Ultimate=13}] store result bossbar commands:blue_ult13 value run scoreboard players get @s[team=Blue,scores={Ultimate=13}] BarrierTimer
 
-execute if entity @s[team=Blue,scores={Ultimate=14}] store result bossbar commands:blue_ult14 value run scoreboard players get @s[team=Blue,scores={Ultimate=14}] PotionTimer
+execute if entity @s[team=Blue,scores={Ultimate=14}] store result bossbar commands:blue_ult14 value run scoreboard players get @s[team=Blue,scores={Ultimate=14}] resurrectionTimer
 
 execute if entity @s[team=Blue,scores={Ultimate=15}] store result bossbar commands:blue_ult15 value run scoreboard players get @s[team=Blue,scores={Ultimate=15}] JusticeTimer
 
@@ -40,9 +40,7 @@ execute if entity @s[team=Blue,scores={Ultimate=20}] store result bossbar comman
 
 execute if entity @s[team=Blue,scores={Ultimate=21}] store result bossbar commands:blue_ult21 value run scoreboard players get @s[team=Blue,scores={Ultimate=21}] dinnerTimer
 
-execute if score #gamemode settings matches 0 if entity @s[team=Blue,scores={Ultimate=22}] store result bossbar commands:blue_ult22 value run scoreboard players get @s[team=Blue,scores={Ultimate=22}] closingTimer
-
-execute if score #gamemode settings matches 1 if entity @s[team=Blue,scores={Ultimate=22}] store result bossbar commands:blue_ult22 value run scoreboard players get @s[team=Blue,scores={Ultimate=22}] pizzaTimer
+execute if entity @s[team=Blue,scores={Ultimate=22}] store result bossbar commands:blue_ult22 value run scoreboard players get @s[team=Blue,scores={Ultimate=22}] pizzaTimer
 
 execute if entity @s[team=Blue,scores={Ultimate=23}] store result bossbar commands:blue_ult23 value run scoreboard players get @s[team=Blue,scores={Ultimate=23}] mShowerTimer
 
@@ -86,7 +84,7 @@ execute if entity @s[team=Red,scores={Ultimate=12}] store result bossbar command
 
 execute if entity @s[team=Red,scores={Ultimate=13}] store result bossbar commands:red_ult13 value run scoreboard players get @s[team=Red,scores={Ultimate=13}] BarrierTimer
 
-execute if entity @s[team=Red,scores={Ultimate=14}] store result bossbar commands:red_ult14 value run scoreboard players get @s[team=Red,scores={Ultimate=14}] PotionTimer
+execute if entity @s[team=Red,scores={Ultimate=14}] store result bossbar commands:red_ult14 value run scoreboard players get @s[team=Red,scores={Ultimate=14}] resurrectionTimer
 
 execute if entity @s[team=Red,scores={Ultimate=15}] store result bossbar commands:red_ult15 value run scoreboard players get @s[team=Red,scores={Ultimate=15}] JusticeTimer
 
@@ -102,9 +100,7 @@ execute if entity @s[team=Red,scores={Ultimate=20}] store result bossbar command
 
 execute if entity @s[team=Red,scores={Ultimate=21}] store result bossbar commands:red_ult21 value run scoreboard players get @s[team=Red,scores={Ultimate=21}] dinnerTimer
 
-execute if score #gamemode settings matches 0 if entity @s[team=Red,scores={Ultimate=22}] store result bossbar commands:red_ult22 value run scoreboard players get @s[team=Red,scores={Ultimate=22}] closingTimer
-
-execute if score #gamemode settings matches 1 if entity @s[team=Red,scores={Ultimate=22}] store result bossbar commands:red_ult22 value run scoreboard players get @s[team=Red,scores={Ultimate=22}] pizzaTimer
+execute if entity @s[team=Red,scores={Ultimate=22}] store result bossbar commands:red_ult22 value run scoreboard players get @s[team=Red,scores={Ultimate=22}] pizzaTimer
 
 execute if entity @s[team=Red,scores={Ultimate=23}] store result bossbar commands:red_ult23 value run scoreboard players get @s[team=Red,scores={Ultimate=23}] mShowerTimer
 

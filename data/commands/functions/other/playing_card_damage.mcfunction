@@ -10,9 +10,9 @@ execute if entity @s[team=Red] store result entity @e[type=arrow,tag=cardArrow,t
 
 execute if entity @s[team=Blue] store result entity @e[type=arrow,tag=cardArrow,tag=!stop,limit=1] damage double 1 as @e[type=item,sort=nearest,tag=pCardRed] run scoreboard players get @s cardDamage
 
-execute if entity @s[team=Blue] run kill @e[type=item,sort=nearest,tag=pCardRed]
+execute if entity @s[team=Blue] run kill @e[type=item,sort=nearest,tag=pCardRed,limit=1]
 
-execute if entity @s[team=Red] run kill @e[type=item,sort=nearest,tag=pCardBlue]
+execute if entity @s[team=Red] run kill @e[type=item,sort=nearest,tag=pCardBlue,limit=1]
 
 tag @e[type=arrow,tag=cardArrow,tag=!stop] add stop
 

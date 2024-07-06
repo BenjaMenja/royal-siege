@@ -10,4 +10,4 @@ execute if entity @s[tag=bluemushroom] if score #entvoiceblue voicelineCD matche
 
 execute if entity @s[tag=bluemushroom] if score #entvoiceblue voicelineCD matches 40.. run scoreboard players reset #entvoiceblue voicelineCD 
 
-teleport @s ~ -100 ~
+teleport @s ~ -200 ~

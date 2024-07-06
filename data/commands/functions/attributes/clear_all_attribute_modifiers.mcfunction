@@ -88,6 +88,10 @@ function commands:attributes/clears/clear_outrage_atkdmg
 
 function commands:attributes/clears/clear_decay_aura_atkdmg
 
+function commands:attributes/clears/clear_decay_aura_slow
+
+function commands:attributes/clears/clear_decay_aura_armor_shred
+
 function commands:attributes/clears/clear_mystery_basket_atkspd
 
 function commands:attributes/clears/clear_dinner_effect_atkspd
@@ -129,3 +133,9 @@ function commands:attributes/clears/clear_cshell_up_gravity
 function commands:attributes/clears/clear_cshell_down_gravity
 
 function commands:attributes/clears/clear_rooted
+
+function commands:attributes/clears/clear_no_melee_damage
+
+function commands:attributes/clears/clear_resurrection_jump
+
+function commands:attributes/clears/clear_resurrection_slow

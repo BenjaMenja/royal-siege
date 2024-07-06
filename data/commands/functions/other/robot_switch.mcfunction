@@ -2,7 +2,7 @@ execute if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{switch
 
 execute if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{switch:2b}] run tag @s add switchtoxin
 
-execute if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{switch:3b}] run tag @s add switchstasis
+execute if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{switch:3b}] run tag @s add switchdarkness
 
 execute if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{switch:4b}] run tag @s add switchmidas
 
@@ -16,7 +16,7 @@ execute as @s[tag=switchpoison] run item modify entity @s weapon.mainhand comman
 
 execute as @s[tag=switchtoxin] run item modify entity @s weapon.mainhand commands:switch_toxin
 
-execute as @s[tag=switchstasis] run item modify entity @s weapon.mainhand commands:switch_stasis
+execute as @s[tag=switchdarkness] run item modify entity @s weapon.mainhand commands:switch_darkness
 
 execute as @s[tag=switchmidas] run item modify entity @s weapon.mainhand commands:switch_midas
 
@@ -32,7 +32,7 @@ tag @s remove switchpoison
 
 tag @s remove switchtoxin
 
-tag @s remove switchstasis
+tag @s remove switchdarkness
 
 tag @s remove switchmidas
 

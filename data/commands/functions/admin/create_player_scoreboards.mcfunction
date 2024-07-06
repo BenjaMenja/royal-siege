@@ -24,6 +24,10 @@ scoreboard objectives add draWins dummy
 
 scoreboard objectives add gamWins dummy
 
+scoreboard objectives add astWins dummy
+
+scoreboard objectives add firWins dummy
+
 scoreboard objectives add warLosses dummy
 
 scoreboard objectives add ninLosses dummy
@@ -49,6 +53,10 @@ scoreboard objectives add chefLosses dummy
 scoreboard objectives add draLosses dummy
 
 scoreboard objectives add gamLosses dummy
+
+scoreboard objectives add astLosses dummy
+
+scoreboard objectives add firLosses dummy
 
 scoreboard objectives add warTies dummy
 
@@ -76,6 +84,10 @@ scoreboard objectives add draTies dummy
 
 scoreboard objectives add gamTies dummy
 
+scoreboard objectives add astTies dummy
+
+scoreboard objectives add firTies dummy
+
 scoreboard objectives add warWinsTDM dummy
 
 scoreboard objectives add ninWinsTDM dummy
@@ -101,6 +113,10 @@ scoreboard objectives add chefWinsTDM dummy
 scoreboard objectives add draWinsTDM dummy
 
 scoreboard objectives add gamWinsTDM dummy
+
+scoreboard objectives add astWinsTDM dummy
+
+scoreboard objectives add firWinsTDM dummy
 
 scoreboard objectives add warLossesTDM dummy
 
@@ -128,6 +144,10 @@ scoreboard objectives add draLossesTDM dummy
 
 scoreboard objectives add gamLossesTDM dummy
 
+scoreboard objectives add astLossesTDM dummy
+
+scoreboard objectives add firLossesTDM dummy
+
 scoreboard objectives add warTiesTDM dummy
 
 scoreboard objectives add ninTiesTDM dummy
@@ -153,6 +173,10 @@ scoreboard objectives add chefTiesTDM dummy
 scoreboard objectives add draTiesTDM dummy
 
 scoreboard objectives add gamTiesTDM dummy
+
+scoreboard objectives add astTiesTDM dummy
+
+scoreboard objectives add firTiesTDM dummy
 
 scoreboard objectives add gamesPlayed dummy
 

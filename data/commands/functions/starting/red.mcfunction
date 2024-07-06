@@ -10,7 +10,7 @@ loot replace entity @a[distance=..8,team=Red,scores={Kit=1,RedKit=198}] armor.le
 
 loot replace entity @a[distance=..8,team=Red,scores={Kit=1,RedKit=198}] armor.feet loot commands:main_armor/warrior_boots
 
-loot give @a[distance=..8,team=Red,tag=!wipeKill,scores={Kit=1,RedKit=198}] loot commands:main_weapons/warrior_battleaxe
+loot give @a[distance=..8,team=Red,scores={Kit=1,RedKit=198}] loot commands:main_weapons/warrior_battleaxe
 
 loot give @a[distance=..8,team=Red,scores={Kit=1,RedKit=198}] loot commands:main_abilities/seismic_slam
 
@@ -22,7 +22,7 @@ loot replace entity @a[distance=..8,team=Red,scores={Kit=2,RedKit=198}] armor.he
 
 loot replace entity @p[distance=..8,team=Red,scores={Kit=2,RedKit=198}] armor.chest loot commands:main_armor/ninja_chestplate
 
-loot give @p[distance=..8,team=Red,tag=!wipeKill,scores={Kit=2,RedKit=198}] loot commands:main_weapons/ninjato
+loot give @p[distance=..8,team=Red,scores={Kit=2,RedKit=198}] loot commands:main_weapons/ninjato
 
 loot give @p[distance=..8,team=Red,scores={Kit=2,RedKit=198}] loot commands:main_abilities/dash
 
@@ -38,7 +38,7 @@ loot replace entity @a[distance=..8,team=Red,scores={Kit=3,RedKit=198}] armor.le
 
 loot replace entity @a[distance=..8,team=Red,scores={Kit=3,RedKit=198}] armor.feet loot commands:main_armor/guardian_boots
 
-loot give @a[distance=..8,team=Red,tag=!wipeKill,scores={Kit=3,RedKit=198}] loot commands:main_weapons/guardian_blade
+loot give @a[distance=..8,team=Red,scores={Kit=3,RedKit=198}] loot commands:main_weapons/guardian_blade
 
 loot give @a[distance=..8,team=Red,scores={Kit=3,RedKit=198}] loot commands:main_abilities/defensive_spell
 
@@ -52,7 +52,7 @@ loot replace entity @a[distance=..8,team=Red,scores={Kit=4,RedKit=198}] armor.le
 
 loot replace entity @a[distance=..8,team=Red,scores={Kit=4,RedKit=198}] armor.feet loot commands:main_armor/angel_boots
 
-loot give @a[distance=..8,team=Red,tag=!wipeKill,scores={Kit=4,RedKit=198}] loot commands:main_weapons/angelic_staff
+loot give @a[distance=..8,team=Red,scores={Kit=4,RedKit=198}] loot commands:main_weapons/angelic_staff
 
 loot give @a[distance=..8,team=Red,scores={Kit=4,RedKit=198}] loot commands:main_abilities/healing_spell
 
@@ -60,7 +60,7 @@ loot give @a[distance=..8,team=Red,scores={Kit=4,RedKit=198}] loot commands:main
 
 loot give @a[distance=..8,team=Red,scores={Kit=4,RedKit=198}] loot commands:main_abilities/assault_spell
 
-loot give @a[distance=..8,team=Red,tag=!wipeKill,scores={Kit=5,RedKit=198}] loot commands:main_weapons/archers_bow
+loot give @a[distance=..8,team=Red,scores={Kit=5,RedKit=198}] loot commands:main_weapons/archers_bow
 
 loot give @a[distance=..8,team=Red,scores={Kit=5,RedKit=198}] loot commands:main_weapons/shield_buster
 
@@ -76,7 +76,7 @@ loot replace entity @a[distance=..8,team=Red,scores={Kit=5,RedKit=198}] armor.le
 
 loot replace entity @a[distance=..8,team=Red,scores={Kit=5,RedKit=198}] armor.feet loot commands:main_armor/archer_boots
 
-loot give @a[distance=..8,team=Red,tag=!wipeKill,scores={Kit=6,RedKit=198}] loot commands:main_weapons/worn_out_staff
+loot give @a[distance=..8,team=Red,scores={Kit=6,RedKit=198}] loot commands:main_weapons/worn_out_staff
 
 loot give @a[distance=..8,team=Red,scores={Kit=6,RedKit=198}] loot commands:main_abilities/lightning_staff
 
@@ -100,11 +100,9 @@ loot replace entity @a[distance=..8,team=Red,scores={Kit=7,RedKit=198}] armor.le
 
 loot replace entity @a[distance=..8,team=Red,scores={Kit=7,RedKit=198}] armor.feet loot commands:main_armor/pirate_boots
 
-loot give @a[distance=..8,team=Red,tag=!wipeKill,scores={Kit=7,RedKit=198}] loot commands:main_weapons/golden_cutlass
+loot give @a[distance=..8,team=Red,scores={Kit=7,RedKit=198}] loot commands:main_weapons/golden_cutlass
 
 loot give @a[distance=..8,team=Red,scores={Kit=7,RedKit=198}] loot commands:main_abilities/blunderbuss
-
-loot give @a[distance=..8,team=Red,scores={Kit=7,RedKit=198}] loot commands:main_abilities/lava_trap
 
 loot give @a[distance=..8,team=Red,scores={Kit=7,RedKit=198}] loot commands:main_abilities/fake_money_red
 
@@ -116,7 +114,7 @@ loot replace entity @a[distance=..8,team=Red,scores={Kit=8,RedKit=198}] armor.le
 
 loot replace entity @a[distance=..8,team=Red,scores={Kit=8,RedKit=198}] armor.feet loot commands:main_armor/ent_boots
 
-loot give @a[distance=..8,team=Red,tag=!wipeKill,scores={Kit=8,RedKit=198}] loot commands:main_weapons/lumberjaxe
+loot give @a[distance=..8,team=Red,scores={Kit=8,RedKit=198}] loot commands:main_weapons/lumberjaxe
 
 loot give @a[distance=..8,team=Red,scores={Kit=8,RedKit=198}] loot commands:main_abilities/blossom
 
@@ -130,7 +128,7 @@ loot replace entity @a[distance=..8,team=Red,scores={Kit=9,RedKit=198}] armor.le
 
 loot replace entity @a[distance=..8,team=Red,scores={Kit=9,RedKit=198}] armor.feet loot commands:main_armor/poseidon_boots
 
-loot give @a[distance=..8,team=Red,tag=!wipeKill,scores={Kit=9,RedKit=198}] loot commands:main_weapons/poseidon_trident
+loot give @a[distance=..8,team=Red,scores={Kit=9,RedKit=198}] loot commands:main_weapons/poseidon_trident
 
 loot replace entity @p[distance=..8,team=Red,scores={Kit=10,RedKit=198}] armor.head loot commands:heads/robot
 
@@ -140,7 +138,7 @@ loot replace entity @p[distance=..8,team=Red,scores={Kit=10,RedKit=198}] armor.l
 
 loot replace entity @p[distance=..8,team=Red,scores={Kit=10,RedKit=198}] armor.feet loot commands:main_armor/robot_boots
 
-loot give @p[distance=..8,team=Red,tag=!wipeKill,scores={Kit=10,RedKit=198}] loot commands:main_weapons/gunblade_burst
+loot give @p[distance=..8,team=Red,scores={Kit=10,RedKit=198}] loot commands:main_weapons/gunblade_burst
 
 loot give @p[distance=..8,team=Red,scores={Kit=10,RedKit=198}] loot commands:main_abilities/iron_wall
 
@@ -156,7 +154,7 @@ loot replace entity @p[distance=..8,team=Red,scores={Kit=11,RedKit=198}] armor.l
 
 loot replace entity @p[distance=..8,team=Red,scores={Kit=11,RedKit=198}] armor.feet loot commands:main_armor/chef_boots
 
-loot give @p[distance=..8,team=Red,tag=!wipeKill,scores={Kit=11,RedKit=198}] loot commands:main_weapons/frying_pan
+loot give @p[distance=..8,team=Red,scores={Kit=11,RedKit=198}] loot commands:main_weapons/frying_pan
 
 loot give @p[distance=..8,team=Red,scores={Kit=11,RedKit=198}] loot commands:main_abilities/mystery_basket
 
@@ -168,7 +166,7 @@ loot replace entity @p[distance=..8,team=Red,scores={Kit=12,RedKit=198}] armor.c
 
 loot replace entity @p[distance=..8,team=Red,scores={Kit=12,RedKit=198}] armor.head loot commands:heads/dragon
 
-loot give @p[distance=..8,team=Red,tag=!wipeKill,scores={Kit=12,RedKit=198}] loot commands:main_weapons/dragon_claw
+loot give @p[distance=..8,team=Red,scores={Kit=12,RedKit=198}] loot commands:main_weapons/dragon_claw
 
 loot give @p[distance=..8,team=Red,scores={Kit=12,RedKit=198}] loot commands:main_abilities/dragon_rush
 
@@ -182,7 +180,7 @@ loot replace entity @p[distance=..8,team=Red,scores={Kit=13,RedKit=198}] armor.l
 
 loot replace entity @p[distance=..8,team=Red,scores={Kit=13,RedKit=198}] armor.feet loot commands:main_armor/gambler_boots
 
-loot give @p[distance=..8,team=Red,tag=!wipeKill,scores={Kit=13,RedKit=198}] loot commands:main_weapons/stylish_cane
+loot give @p[distance=..8,team=Red,scores={Kit=13,RedKit=198}] loot commands:main_weapons/stylish_cane
 
 loot give @p[distance=..8,team=Red,scores={Kit=13,RedKit=198}] loot commands:main_abilities/playing_cards
 

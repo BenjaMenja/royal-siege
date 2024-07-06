@@ -10,4 +10,4 @@ execute as @e[type=bat,tag=TreeBlue] at @s run playsound entity.player.levelup m
 
 execute if entity @e[type=bat,tag=TreeBlue] run tellraw @a [{"selector":"@a[team=Blue,scores={Ultimate=8}]"},{"text":" has grown a tree!"}]
 
-tp @s ~ -100 ~
+tp @s ~ -200 ~

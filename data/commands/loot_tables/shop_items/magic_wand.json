@@ -19,10 +19,7 @@
               "function": "minecraft:set_lore",
               "lore": [
                 {
-                  "text": "A stronger version of the Angelic Staff."
-                },
-                {
-                  "text": "It grants regeneration II to nearby allies when you attack an enemy."
+                  "text": "A stronger melee weapon that grants regeneration II to nearby allies when you attack an enemy."
                 },
                 {
                   "text": " "
