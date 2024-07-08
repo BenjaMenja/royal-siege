@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Health:0.0f}"
+            }
+          }
+        ],
+        "damage": {
+          "type": {
+            "direct_entity": {
+              "type": "minecraft:fireball",
+              "nbt": "{Tags:[\"fmm\"]}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/fake_money_death"
+  }
+}

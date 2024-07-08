@@ -40,5 +40,8 @@
     [
       "lit"
     ]
-  ]
+  ],
+  "rewards": {
+    "function": "commands:custom_deaths/sparkler_death"
+  }
 }

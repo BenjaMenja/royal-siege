@@ -10,6 +10,8 @@ scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:golden_apple",compo
 
 scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:golden_apple",components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] ItemKill 2
 
+scoreboard players set @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{growthinjection:1b}}}}] ItemKill 2
+
 scoreboard players set @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{fishcannonitemred:1b}}}}] ItemKill 2
 
 scoreboard players set @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{fishcannonitemblue:1b}}}}] ItemKill 2
@@ -43,6 +45,8 @@ scoreboard players set @e[type=item,tag=blazingspeedbomb] ItemKill 2
 scoreboard players set @e[type=item,tag=chrysanthemum_projectile] ItemKill 2
 
 scoreboard players set @e[type=item,tag=shockGrenade] ItemKill 2
+
+scoreboard players set @e[type=item,tag=mysteriousbrew] ItemKill 2
 
 execute as @e[type=item,tag=!processed,scores={ItemKill=1}] run data modify entity @s Owner set from entity @s Thrower
 

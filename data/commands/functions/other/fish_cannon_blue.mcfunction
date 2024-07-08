@@ -1,4 +1,4 @@
-execute at @s anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["fishCannon","fishCannonBlue"],Item:{id:"minecraft:cod",Count:1b}}
+execute at @s anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["fishCannon","fishCannonBlue","blueProj"],Item:{id:"minecraft:cod",Count:1b}}
 
 execute at @s run playsound entity.generic.explode master @s ~ ~ ~ 1 1.5
 

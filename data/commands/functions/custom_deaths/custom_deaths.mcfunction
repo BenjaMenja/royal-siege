@@ -30,10 +30,6 @@ execute if entity @s[advancements={commands:angelic_staff_death=true}] run funct
 
 execute if entity @s[advancements={commands:lightning_damage=true}] run function commands:custom_deaths/lightning_death
 
-execute if entity @s[tag=DIED] run function commands:custom_deaths/fireball_death
-
-execute if entity @s[tag=DIED2] run function commands:custom_deaths/fake_money_death
-
 execute if entity @s[advancements={commands:trident_death=true}] run function commands:custom_deaths/trident_death
 
 execute if entity @s[advancements={commands:chicken_death=true}] run function commands:custom_deaths/chicken_death
@@ -61,8 +57,6 @@ execute if entity @s[advancements={commands:squidzooka_death=true}] run function
 execute if entity @s[advancements={commands:terror_death=true}] run function commands:custom_deaths/terror_death
 
 execute if entity @s[advancements={commands:gunblade_melee_death=true}] run function commands:custom_deaths/gunblade_melee_death
-
-execute if entity @s[advancements={commands:fireball_death=true}] run function commands:custom_deaths/fireball_death
 
 execute if entity @s[advancements={commands:frying_pan_death=true}] run function commands:custom_deaths/pan_death
 
@@ -107,10 +101,6 @@ execute if entity @s[advancements={commands:asteroid_shard_death=true}] run func
 execute if entity @s[advancements={commands:rocket_death=true}] run function commands:custom_deaths/rocket_death
 
 execute if entity @s[advancements={commands:smart_drone_death=true}] run function commands:custom_deaths/smart_drone_death
-
-execute if entity @s[advancements={commands:sparkler_death=true}] run function commands:custom_deaths/sparkler_death
-
-execute if entity @s[advancements={commands:sparkler_projectile_death=true}] run function commands:custom_deaths/sparkler_death
 
 execute if entity @s[advancements={commands:pyromania_damage=true}] run function commands:custom_deaths/pyromania_death
 
@@ -189,6 +179,8 @@ tag @s remove cloaked
 tag @s remove justiceKill
 
 tag @s remove blessed
+
+tag @s remove mimiceat
 
 #Reset scores and run function again
 

@@ -1,6 +1,6 @@
 execute at @s[team=Red] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["hookRed","hook","redProj"],Item:{id:"minecraft:carrot_on_a_stick",count:1,components:{"minecraft:custom_model_data":29}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["hookBlue","hook","bluewProj"],Item:{id:"minecraft:carrot_on_a_stick",count:1,components:{"minecraft:custom_model_data":29}}}
+execute at @s[team=Blue] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["hookBlue","hook","blueProj"],Item:{id:"minecraft:carrot_on_a_stick",count:1,components:{"minecraft:custom_model_data":29}}}
 
 execute as @e[tag=hook] run data modify entity @s Owner set from entity @a[tag=chain,limit=1] UUID
 

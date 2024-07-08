@@ -68,17 +68,17 @@ kill @e[type=fishing_bobber,scores={LightningRod=100..}]
 
 #Mimics
 
-execute as @e[type=armor_stand,name="Redmimic",scores={mimicdeath=1}] at @s run setblock ~ ~ ~ chest[facing=north]{Lock:"mrdoordash"}
+execute as @e[type=bat,tag=mimic] at @s run function commands:other/spawn_mimic
 
-execute as @e[type=armor_stand,name="Redmimic",scores={mimicdeath=100..}] at @s run scoreboard players set @a[team=Blue,distance=..4,limit=1] Death 1
+scoreboard players add @e[type=piglin,tag=mimic] mimicdeath 1
 
-execute as @a[team=Blue,scores={Death=1..}] at @s as @e[type=armor_stand,name="Redmimic",distance=..5] at @s run fill ~ ~-2 ~ ~ ~2 ~ air replace chest
+execute as @e[type=piglin,tag=mimic,scores={mimicdeath=100..}] at @s run particle dust{color:[1.0,0.0,0.0],scale:1} ~ ~1 ~ 0 0 0 0 1 force
 
-execute as @a[team=Blue,scores={Death=1..}] at @s run kill @e[type=armor_stand,name="Redmimic",distance=..5]
+execute as @e[type=piglin,tag=mimicred,scores={mimicdeath=100..}] at @s if entity @p[team=Blue,distance=..4] run function commands:other/mimic_eat
 
-teleport @a[scores={Death=1..}] -488 56 -120
+execute as @e[type=piglin,tag=mimicblue,scores={mimicdeath=100..}] at @s if entity @p[team=Red,distance=..4] run function commands:other/mimic_eat
 
-scoreboard players add @a[x=-488,y=54,z=-120,distance=..10,gamemode=!spectator,gamemode=!creative,tag=!notAlive] Mimic 1
+scoreboard players add @a[tag=mimiceat] Mimic 1
 
 execute if entity @a[scores={Mimic=120..}] run tellraw @a [{"selector":"@a[scores={Mimic=120..}]"},{"text":" was eaten by a Mimic.","color":"white"}]
 
@@ -86,55 +86,26 @@ kill @a[scores={Mimic=120..}]
 
 scoreboard players set @a[scores={Mimic=120..}] Mimic 0
 
-scoreboard players set @a[scores={Death=1..}] Death 0
+execute as @e[type=marker,tag=mimic] at @s unless entity @e[type=piglin,tag=mimic,distance=..1] run function commands:other/mimic_eat
 
-execute as @e[type=armor_stand,name="Bluemimic",scores={mimicdeath=1}] at @s run setblock ~ ~ ~ chest[facing=north]{Lock:"mrdoordash"}
+execute as @e[type=piglin,tag=mimic,scores={mimicdeath=1200..}] at @s run function commands:other/mimic_eat
 
-execute as @e[type=armor_stand,name="Bluemimic",scores={mimicdeath=100..}] at @s run scoreboard players set @a[team=Red,distance=..4,limit=1] Death 1
+#Grounding Spell
 
-execute as @a[team=Red,scores={Death=1..}] at @s as @e[type=armor_stand,name="Bluemimic",distance=..5] at @s run fill ~ ~-2 ~ ~ ~2 ~ air replace chest
+execute as @e[type=snowball,tag=!groundingspellred,nbt={Item:{components:{"minecraft:custom_data":{groundingspellred:1b}}}}] at @s run function commands:ball/grounding_spell_found_red
 
-execute as @a[team=Red,scores={Death=1..}] at @s run kill @e[type=armor_stand,name="Bluemimic",distance=..5]
+execute as @e[type=area_effect_cloud,tag=groundingspellred] unless predicate commands:is_riding_grounding_spell_red at @s run function commands:ball/grounding_spell_landed_red
 
-execute as @a[scores={Mimic=1}] at @s run playsound royalsiege:misc.mimic master @s ~ ~ ~ 100 1
+execute as @e[type=snowball,tag=!groundingspellblue,nbt={Item:{components:{"minecraft:custom_data":{groundingspellblue:1b}}}}] at @s run function commands:ball/grounding_spell_found_blue
 
-execute as @e[type=bat,name="Redmimic"] at @s run summon armor_stand ~ ~ ~ {CustomName:'{"text":"Redmimic"}',Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=area_effect_cloud,tag=groundingspellblue] unless predicate commands:is_riding_grounding_spell_blue at @s run function commands:ball/grounding_spell_landed_blue
 
-execute as @e[type=bat,name="Bluemimic"] at @s run summon armor_stand ~ ~ ~ {CustomName:'{"text":"Bluemimic"}',Invisible:1,Invulnerable:1,NoBasePlate:1}
-
-tp @e[type=bat,name="Redmimic"] ~ -200 ~
-
-tp @e[type=bat,name="Bluemimic"] ~ -200 ~
-
-scoreboard players add @e[type=armor_stand,name="Redmimic"] mimicdeath 1
-
-scoreboard players add @e[type=armor_stand,name="Bluemimic"] mimicdeath 1
-
-execute at @e[type=armor_stand,scores={mimicdeath=100..}] run particle dust{color:[1.000,0.000,0.000],scale:1} ~ ~ ~ 0 0 0 0 1 force
-
-execute as @e[scores={mimicdeath=1200..}] at @s run fill ~ ~-2 ~ ~ ~1 ~ air replace chest
-
-kill @e[type=armor_stand,scores={mimicdeath=1200..}] 
 
 #Kick other people off of cavalry charge
 
 execute as @a[scores={HorseDie=1..,Kit=2..}] at @s run tp @s ~ ~ ~
 
 scoreboard players set @a[scores={HorseDie=1..}] HorseDie 0
-
-#Flying Skeleton
-
-execute as @e[type=bat,name="RedFlyingSkeleton"] at @s run summon bat ~ ~1 ~ {Silent:1b,Invulnerable:1b,Tags:["FS"],Passengers:[{id:"minecraft:skeleton",Team:"Red",Health:50f,Tags:["S"],HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:5s}]}},{id:"minecraft:tipped_arrow",Count:64b,tag:{custom_potion_effects:[{id:"minecraft:slowness",amplifier:3b,duration:100}]}}],HandDropChances:[0.000F,-327.670F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000}]}]}
-
-execute as @e[type=bat,name="BlueFlyingSkeleton"] at @s run summon bat ~ ~1 ~ {Silent:1b,Invulnerable:1b,Tags:["FS"],Passengers:[{id:"minecraft:skeleton",Team:"Blue",Health:50f,HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:5s}]}},{id:"minecraft:tipped_arrow",Count:64b,tag:{custom_potion_effects:[{id:"minecraft:slowness",amplifier:3b,duration:100}]}}],HandDropChances:[0.000F,0.000F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0b,duration:10000}]}]}
-
-tp @e[type=bat,name="RedFlyingSkeleton"] ~ -200 ~
-
-tp @e[type=bat,name="BlueFlyingSkeleton"] ~ -200 ~
-
-scoreboard players add @e[type=bat,tag=FS] Timer 1
-
-kill @e[type=bat,scores={Timer=200..}]
 
 #Sniper Bow No Gravity
 
@@ -166,19 +137,19 @@ scoreboard players set @a[scores={Kerfuffle=2800..}] Kerfuffle 0
 
 execute as @a[scores={usedCOAS=1..},predicate=commands:holding/kerfuffle] run function commands:ultimates/kerfuffle
 
-#The Wall Spell
+#Temporary Wall
 
-execute as @e[type=bat,name="Wall"] at @s run summon armor_stand ~ ~ ~ {CustomName:'{"text":"Wall"}',Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=bat,tag=wall] at @s run summon minecraft:marker ~ ~ ~ {Tags:["wall"]}
 
-tp @e[type=bat,name="Wall"] ~ -200 ~
+tp @e[type=bat,tag=wall] ~ -200 ~
 
-execute as @e[type=armor_stand,name="Wall"] at @s run fill ~-3 ~ ~ ~4 ~4 ~1 bricks replace air
+execute as @e[type=marker,tag=wall] at @s run fill ~-4 ~ ~ ~4 ~4 ~1 bricks replace air
 
-scoreboard players add @e[type=armor_stand,name="Wall"] Wall 1
+scoreboard players add @e[type=marker,tag=wall] Wall 1
 
-execute as @e[type=armor_stand,name="Wall",scores={Wall=160..}] at @s run fill ~-3 ~ ~ ~4 ~5 ~1 air replace bricks
+execute as @e[type=marker,tag=wall,scores={Wall=160..}] at @s run fill ~-4 ~ ~ ~4 ~4 ~1 air replace bricks
 
-kill @e[type=armor_stand,name="Wall",scores={Wall=160..}]
+kill @e[type=marker,tag=wall,scores={Wall=160..}]
 
 #Perma-Buffs (Buff Passives)
 
@@ -298,17 +269,17 @@ execute if score #TDMTimer tdmTimer matches 400.. if score #gamemode settings ma
 
 #Experience Spawner
 
-execute as @e[type=bat,tag=xpspawner] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["xpspawner"]}
+execute as @e[type=bat,tag=xpspawner] at @s run summon marker ~ ~ ~ {Tags:["xpspawner"]}
 
 tp @e[type=bat,tag=xpspawner] ~ -200 ~
 
-execute as @e[type=armor_stand,tag=xpspawner] at @s run fill ~ ~ ~ ~ ~ ~ spawner{SpawnCount:3,SpawnRange:10,Delay:0,MinSpawnDelay:10,MaxSpawnDelay:40,MaxNearbyEntities:100,RequiredPlayerRange:100,SpawnData:{entity:{id:"minecraft:experience_bottle",Motion:[0.0,1.0,0.0]}}} replace air
+execute as @e[type=marker,tag=xpspawner] at @s run fill ~ ~ ~ ~ ~ ~ spawner{SpawnCount:3,SpawnRange:10,Delay:0,MinSpawnDelay:10,MaxSpawnDelay:40,MaxNearbyEntities:100,RequiredPlayerRange:100,SpawnData:{entity:{id:"minecraft:experience_bottle",Motion:[0.0,1.0,0.0]}}} replace air
 
-scoreboard players add @e[type=armor_stand,tag=xpspawner] xpspawner 1
+scoreboard players add @e[type=marker,tag=xpspawner] xpspawner 1
 
-execute as @e[type=armor_stand,tag=xpspawner,scores={xpspawner=300..}] at @s run fill ~ ~ ~ ~ ~ ~ air replace spawner
+execute as @e[type=marker,tag=xpspawner,scores={xpspawner=300..}] at @s run fill ~ ~ ~ ~ ~ ~ air replace spawner
 
-kill @e[type=armor_stand,tag=xpspawner,scores={xpspawner=300..}]
+kill @e[type=marker,tag=xpspawner,scores={xpspawner=300..}]
 
 #Convert Gold Ingots to Siege Bucks
 
@@ -597,6 +568,22 @@ tag @a[scores={damageTaken=1..},tag=homewarp] remove homewarp
 tellraw @a[scores={castleWarpTimer=1}] {"text":"Warping back to spawnpoint...","color":"green"}
 
 execute as @a[scores={castleWarpTimer=60..},tag=homewarp] run function commands:other/warp_to_castle
+
+#Growth Injection
+
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{growthinjection:1b}}}}] at @s if entity @e[type=#commands:growth_injection_targetable,distance=..3] run function commands:other/growth_injection
+
+#Cryo Skeleton
+
+execute as @e[type=bat,tag=cryoskeleton] at @s run function commands:other/spawn_cryo_skeleton
+
+#Mysterious Brew
+
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/mysterious_brew] at @s run function commands:other/mysterious_brew
+
+execute as @e[type=item,tag=mysteriousbrew] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on_without_grass force
+
+execute as @e[type=item,tag=mysteriousbrew,scores={nearbyBlocks=1..}] at @s run function commands:other/mysterious_brew_land
 
 #Shielding Spell
 
@@ -1020,22 +1007,6 @@ scoreboard players set @a[scores={Decay=120..}] Decay 0
 
 #Custom Death messages
 
-execute as @e[type=fireball,tag=fm,tag=!no] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["f_message"]}
-
-execute as @e[type=fireball,tag=fm] at @s run teleport @e[type=armor_stand,tag=f_message] @s
-
-tag @e[type=fireball,tag=fm,tag=!no] add no
-
-execute as @e[type=armor_stand,tag=f_message] at @s if entity @a[distance=..4,scores={Message=1..}] unless entity @e[type=fireball,tag=fm,tag=no,distance=..3] run tag @a[distance=..3,scores={Message=1..}] add DIED
-
-execute as @e[type=fireball,tag=fmm,tag=!no] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["fm_message"]}
-
-execute as @e[type=fireball,tag=fmm] at @s run teleport @e[type=armor_stand,tag=fm_message] @s
-
-tag @e[type=fireball,tag=fmm,tag=!no] add no
-
-execute as @e[type=armor_stand,tag=fm_message] at @s if entity @a[distance=..4,scores={Message=1..}] unless entity @e[type=fireball,tag=fmm,tag=no,distance=..3] run tag @a[distance=..3,scores={Message=1..}] add DIED2
-
 execute as @a[scores={Message=1..}] at @s if entity @e[type=armor_stand,tag=Chest,distance=..2] run tag @s add tChestDeath 
 
 execute as @a[scores={Message=1..},limit=1] run function commands:custom_deaths/custom_deaths
@@ -1050,7 +1021,7 @@ scoreboard players set @a[scores={KillP=1..}] KillP 0
 
 scoreboard players set @a[scores={Message=1..}] Message 0
 
-# Ultimate Checker
+#Ultimate Checker
 
 scoreboard players add #ultChecker Timer 1
 
@@ -1592,9 +1563,7 @@ scoreboard players reset @a[scores={Kit=8,entPassive=1..}] entPassive
 
 #Ultimate Charger
 
-execute at @e[type=bat,tag=ultimatecharger] as @a[distance=..5,limit=1,scores={Ultimate=1..30}] run function commands:other/ultimate_charger
-
-teleport @e[type=bat,tag=ultimatecharger] ~ -200 ~
+execute as @a[scores={usedCOAS=1..,Ultimate=1..30},predicate=commands:holding/ultimate_charger] run function commands:other/ultimate_charger
 
 #The Watcher
 

@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": {},
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:skeleton",
+            "nbt": "{Tags:[\"cryoskeleton\"]}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "commands:other/cryo_skeleton_hit"
+  }
+}

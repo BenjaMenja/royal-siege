@@ -1,4 +1,6 @@
-execute at @s anchored eyes run summon minecraft:item ^ ^ ^1 {Health:1000,Tags:["cCannonItem"],Item:{id:"minecraft:end_crystal",Count:1b},PickupDelay:32767}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:1000,Tags:["cCannonItem","redProj"],Item:{id:"minecraft:end_crystal",count:1},PickupDelay:32767}
+
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:1000,Tags:["cCannonItem","blueProj"],Item:{id:"minecraft:end_crystal",count:1},PickupDelay:32767}
 
 execute at @s run playsound block.glass.break master @s ~ ~ ~ 1 0
 

@@ -1,13 +1,29 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:entity_killed_player",
+      "trigger": "minecraft:entity_hurt_player",
       "conditions": {
-        "entity": {
-          "type": "minecraft:fireball",
-          "nbt": "{Tags:[\"WF\"]}"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Health:0.0f}"
+            }
+          }
+        ],
+        "damage": {
+          "type": {
+            "direct_entity": {
+              "type": "minecraft:fireball",
+              "nbt": "{Tags:[\"fm\"]}"
+            }
+          }
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/fireball_death"
   }
 }

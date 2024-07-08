@@ -354,4 +354,19 @@ scoreboard players add @a[scores={RSAttr.ResurrectionSlow=0..}] RSAttr.Resurrect
 
 execute as @a[scores={RSAttr.ResurrectionSlow=60..}] run function commands:attributes/clears/clear_resurrection_slow
 
+#Grounding Spell
+
+scoreboard players add @a[scores={RSAttr.GroundingSpellJump=0..}] RSAttr.GroundingSpellJump 1
+
+execute as @a[scores={RSAttr.GroundingSpellJump=80..}] run function commands:attributes/clears/clear_grounding_spell_jump
+
+#Cryo Skeleton
+
+scoreboard players add @a[scores={RSAttr.CryoSkeletonSlow=0..}] RSAttr.CryoSkeletonSlow 1
+
+execute as @a[scores={RSAttr.CryoSkeletonSlow=50..}] run function commands:attributes/clears/clear_cryo_skeleton_slow
+
+scoreboard players add @a[scores={RSAttr.CryoSkeletonJump=0..}] RSAttr.CryoSkeletonJump 1
+
+execute as @a[scores={RSAttr.CryoSkeletonJump=50..}] run function commands:attributes/clears/clear_cryo_skeleton_jump
 

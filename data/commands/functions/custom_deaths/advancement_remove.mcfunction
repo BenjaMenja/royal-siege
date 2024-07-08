@@ -8,6 +8,8 @@ advancement revoke @s only commands:sniper_death
 
 advancement revoke @s only commands:gun_death
 
+advancement revoke @s only commands:fake_money_death
+
 advancement revoke @s only commands:magic_death
 
 advancement revoke @s only commands:angelic_staff_death
@@ -101,10 +103,6 @@ advancement revoke @s only commands:sparkler_death
 advancement revoke @s only commands:sparkler_projectile_death
 
 advancement revoke @s only commands:shuriken_death
-
-tag @s remove DIED
-
-tag @s remove DIED2
 
 tag @s remove shadowdeath
 

@@ -139,3 +139,9 @@ function commands:attributes/clears/clear_no_melee_damage
 function commands:attributes/clears/clear_resurrection_jump
 
 function commands:attributes/clears/clear_resurrection_slow
+
+function commands:attributes/clears/clear_grounding_spell_jump
+
+function commands:attributes/clears/clear_cryo_skeleton_jump
+
+function commands:attributes/clears/clear_cryo_skeleton_slow

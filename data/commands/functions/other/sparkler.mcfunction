@@ -1,18 +1,20 @@
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Invulnerable:1b,Tags:["sparkleritem","sparklerred"],Item:{id:"minecraft:yellow_dye",Count:1b,components:{"minecraft:custom_model_data":186}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Invulnerable:1b,Tags:["sparkleritem","sparklerred","redProj"],Item:{id:"minecraft:yellow_dye",Count:1b,components:{"minecraft:custom_model_data":186}}}
 
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^0.05 ^ ^1 {PickupDelay:32767,Invulnerable:1b,Tags:["sparkleritem","sparklerred"],Item:{id:"minecraft:yellow_dye",Count:1b,components:{"minecraft:custom_model_data":186}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^0.05 ^ ^1 {PickupDelay:32767,Invulnerable:1b,Tags:["sparkleritem","sparklerred","redProj"],Item:{id:"minecraft:yellow_dye",Count:1b,components:{"minecraft:custom_model_data":186}}}
 
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^-0.05 ^ ^1 {PickupDelay:32767,Invulnerable:1b,Tags:["sparkleritem","sparklerred"],Item:{id:"minecraft:yellow_dye",Count:1b,components:{"minecraft:custom_model_data":186}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^-0.05 ^ ^1 {PickupDelay:32767,Invulnerable:1b,Tags:["sparkleritem","sparklerred","redProj"],Item:{id:"minecraft:yellow_dye",Count:1b,components:{"minecraft:custom_model_data":186}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Invulnerable:1b,Tags:["sparkleritem","sparklerblue"],Item:{id:"minecraft:yellow_dye",Count:1b,components:{"minecraft:custom_model_data":186}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Invulnerable:1b,Tags:["sparkleritem","sparklerblue","blueProj"],Item:{id:"minecraft:yellow_dye",Count:1b,components:{"minecraft:custom_model_data":186}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^0.05 ^ ^1 {PickupDelay:32767,Invulnerable:1b,Tags:["sparkleritem","sparklerblue"],Item:{id:"minecraft:yellow_dye",Count:1b,components:{"minecraft:custom_model_data":186}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^0.05 ^ ^1 {PickupDelay:32767,Invulnerable:1b,Tags:["sparkleritem","sparklerblue","blueProj"],Item:{id:"minecraft:yellow_dye",Count:1b,components:{"minecraft:custom_model_data":186}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^-0.05 ^ ^1 {PickupDelay:32767,Invulnerable:1b,Tags:["sparkleritem","sparklerblue"],Item:{id:"minecraft:yellow_dye",Count:1b,components:{"minecraft:custom_model_data":186}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^-0.05 ^ ^1 {PickupDelay:32767,Invulnerable:1b,Tags:["sparkleritem","sparklerblue","blueProj"],Item:{id:"minecraft:yellow_dye",Count:1b,components:{"minecraft:custom_model_data":186}}}
+
+execute if entity @s[tag=sparklerupgrade] run tag @e[type=item,tag=sparkleritem,limit=3,sort=nearest] add sparklerupgrade
+
+execute if entity @s[tag=sparklerbigupgrade] run tag @e[type=item,tag=sparkleritem,limit=3,sort=nearest] add sparklerbigupgrade
 
 execute at @s run playsound minecraft:entity.blaze.shoot master @s ~ ~ ~ 1 1.9
-
-# execute at @s run playsound royalsiege:abilities.squidzooka master @a[distance=..10] ~ ~ ~ 1 1
 
 execute anchored eyes run execute store result score @s posX run data get entity @s Pos[0] 1000
 
@@ -43,6 +45,10 @@ execute as @e[type=item,sort=nearest,tag=sparkleritem,tag=!stop] store result en
 tag @e[type=item,tag=sparkleritem] add stop
 
 scoreboard players set @s sparklerTimer 80
+
+tag @s remove sparklerupgrade
+
+tag @s remove sparklerbigupgrade
 
 function commands:replace/sparkler_replace
 

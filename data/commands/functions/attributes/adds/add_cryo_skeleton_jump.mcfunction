@@ -1,0 +1,3 @@
+attribute @s minecraft:generic.jump_strength modifier add 16-1-40-50-0 "CryoSkeletonJump" -0.4 add_multiplied_base
+
+scoreboard players set @s RSAttr.CryoSkeletonJump 0

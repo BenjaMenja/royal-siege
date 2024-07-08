@@ -1,6 +1,6 @@
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {NoGravity:1b,HasVisualFire:1b,Health:1000,PickupDelay:32767,Invulnerable:1b,Tags:["chrysanthemum_projectile","redProj"],Item:{id:"minecraft:firework_star",count:1,components:{"minecraft:firework_explosion":{shape:"large_ball",colors:[I;16711680,16753152]}}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {NoGravity:1b,HasVisualFire:1b,Health:1000,PickupDelay:32767,Invulnerable:1b,Tags:["chrysanthemum_projectile","redProj","ultimateProj"],Item:{id:"minecraft:firework_star",count:1,components:{"minecraft:firework_explosion":{shape:"large_ball",colors:[I;16711680,16753152]}}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {NoGravity:1b,HasVisualFire:1b,Health:1000,PickupDelay:32767,Invulnerable:1b,Tags:["chrysanthemum_projectile","blueProj"],Item:{id:"minecraft:firework_star",count:1,components:{"minecraft:firework_explosion":{shape:"large_ball",colors:[I;16711680,16753152]}}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {NoGravity:1b,HasVisualFire:1b,Health:1000,PickupDelay:32767,Invulnerable:1b,Tags:["chrysanthemum_projectile","blueProj","ultimateProj"],Item:{id:"minecraft:firework_star",count:1,components:{"minecraft:firework_explosion":{shape:"large_ball",colors:[I;16711680,16753152]}}}}
 
 execute at @s run playsound minecraft:entity.firework_rocket.large_blast master @s ~ ~ ~ 1 1.2
 

@@ -2,8 +2,15 @@
 
 execute as @a run function commands:admin/initialize_class_info
 
+#Teams
+
+team add Blue
+
+team add Red
+
 #Actual Scoreboards
 
+scoreboard objectives add Kit dummy
 scoreboard objectives add payRaiseStore dummy
 scoreboard objectives add payRaiseDis dummy
 scoreboard objectives add scrambleStore dummy
@@ -62,6 +69,9 @@ scoreboard objectives add RSAttr.ResurrectionJump dummy
 scoreboard objectives add shurikenTimer dummy
 scoreboard objectives add shurikenStore dummy
 scoreboard objectives add shurikenDis dummy
+scoreboard objectives add RSAttr.GroundingSpellJump dummy
+scoreboard objectives add RSAttr.CryoSkeletonSlow dummy
+scoreboard objectives add RSAttr.CryoSkeletonJump dummy
 
 scoreboard objectives remove dmDelay
 scoreboard objectives remove olympicVaultTimer

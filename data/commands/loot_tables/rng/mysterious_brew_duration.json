@@ -1,0 +1,35 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_custom_data",
+                "tag": "{mysteriousbrewduration:1b}"
+              },
+              {
+                "function": "minecraft:set_attributes",
+                "modifiers": [
+                  {
+                    "attribute": "minecraft:generic.follow_range",
+                    "name": "RNG",
+                    "amount": {
+                      "min": 3,
+                      "max": 21
+                    },
+                    "operation": "add_value",
+                    "slot": "chest"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

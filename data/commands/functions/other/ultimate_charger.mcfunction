@@ -61,3 +61,5 @@ scoreboard players add @s[scores={Ultimate=30}] popRocksTimer 5000
 tag @s remove hadUltimate
 
 tag @s remove ultimateInv
+
+clear @s carrot_on_a_stick[custom_data~{ultimatecharger:1b}]
