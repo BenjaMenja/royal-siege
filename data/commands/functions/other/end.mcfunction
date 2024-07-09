@@ -1,3 +1,7 @@
+#Post game summary
+
+function commands:other/post_game_summary
+
 #Adding Stuff to Class Info
 
 execute if score #gamemode settings matches 0 run function commands:admin/add_to_class_info

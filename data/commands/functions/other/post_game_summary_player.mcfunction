@@ -1,0 +1,33 @@
+tag @s add summarized
+
+execute if entity @s[scores={Kit=1}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Warrior"},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=2}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Ninja"},{"color":"dark_gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=3}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Guardian"},{"color":"gold","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=4}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Angel"},{"color":"light_purple","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=5}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Archer"},{"color":"dark_green","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=6}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Wizard"},{"color":"blue","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=7}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Pirate"},{"color":"yellow","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=8}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Ent"},{"color":"green","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=9}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Poseidon"},{"color":"aqua","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=10}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Robot"},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=11}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Chef"},{"color":"red","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=12}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Dragon"},{"color":"#5A027A","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=13}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Gambler"},{"color":"#FFD60A","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=14}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Astronaut"},{"color":"#BAAEA2","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+execute if entity @s[scores={Kit=15}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"gray","text":"Firecracker"},{"color":"#FFAD08","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"Money"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
+$execute if entity @a[tag=!summarized,team=$(team),limit=1,sort=nearest] run function commands:other/post_game_summary_player {team:$(team)}

@@ -20,4 +20,6 @@ execute if entity @s[team=Blue] run tellraw @a [{"selector":"@s"},{"text":" has 
 
 execute as @a[scores={customDamage=1..}] run function pd:damage
 
+scoreboard players add @s ultsUsed 1
+
 clear @s carrot_on_a_stick[custom_data~{busted:1b}]

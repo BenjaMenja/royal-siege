@@ -8,4 +8,6 @@ execute if entity @s[team=Blue] at @s run playsound royalsiege:ultimates.rally_e
 
 tellraw @a [{"selector":"@s"},{"text":" is rallying his team together!","color":"white"}]
 
+scoreboard players add @s ultsUsed 1
+
 clear @s carrot_on_a_stick[custom_data~{rally:1b}]

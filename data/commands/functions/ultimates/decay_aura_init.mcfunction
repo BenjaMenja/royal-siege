@@ -10,4 +10,6 @@ execute if entity @s[team=Blue] run playsound royalsiege:ultimates.decay_aura_fr
 
 execute if entity @s[team=Blue] run playsound royalsiege:ultimates.decay_aura_enemy master @a[team=Red] ~ ~ ~ 100 1
 
+scoreboard players add @s ultsUsed 1
+
 clear @s carrot_on_a_stick[custom_data~{decay:1b}]

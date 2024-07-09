@@ -12,4 +12,6 @@ tellraw @a [{"selector":"@s"},{"text":" has melted into the shadows!"}]
 
 loot replace entity @s armor.chest loot commands:main_armor/ninja_shadow_step_chestplate
 
+scoreboard players add @s ultsUsed 1
+
 clear @s carrot_on_a_stick[custom_data~{shadowstep:1b}]

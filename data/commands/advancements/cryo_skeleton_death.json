@@ -1,0 +1,17 @@
+{
+    "criteria": {
+      "c4_death": {
+        "trigger": "minecraft:entity_killed_player",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:skeleton",
+            "nbt": "{Tags:[\"cryoskeleton\"]}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "commands:custom_deaths/cryo_skeleton_death"
+    }
+  }
+  

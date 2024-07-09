@@ -11,6 +11,12 @@ team add Red
 #Actual Scoreboards
 
 scoreboard objectives add Kit dummy
+scoreboard objectives add textClick dummy
+scoreboard objectives add ultCheck dummy
+scoreboard objectives add RNG dummy
+scoreboard objectives add Ultimate dummy
+scoreboard objectives add spawnStuff dummy
+scoreboard objectives add classInfo dummy
 scoreboard objectives add payRaiseStore dummy
 scoreboard objectives add payRaiseDis dummy
 scoreboard objectives add scrambleStore dummy
@@ -72,6 +78,12 @@ scoreboard objectives add shurikenDis dummy
 scoreboard objectives add RSAttr.GroundingSpellJump dummy
 scoreboard objectives add RSAttr.CryoSkeletonSlow dummy
 scoreboard objectives add RSAttr.CryoSkeletonJump dummy
+scoreboard players set #minuteconst gameDuration 1200
+scoreboard players set #secondconst gameDuration 20
+scoreboard objectives add ultsUsed dummy
+scoreboard objectives add entSelfishness dummy
+scoreboard objectives add firCharChallenge dummy
+scoreboard objectives add numDrones dummy
 
 scoreboard objectives remove dmDelay
 scoreboard objectives remove olympicVaultTimer

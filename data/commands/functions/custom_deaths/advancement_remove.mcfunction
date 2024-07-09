@@ -104,6 +104,8 @@ advancement revoke @s only commands:sparkler_projectile_death
 
 advancement revoke @s only commands:shuriken_death
 
+advancement revoke @s only commands:cryo_skeleton_death
+
 tag @s remove shadowdeath
 
 tag @s remove tChestDeath

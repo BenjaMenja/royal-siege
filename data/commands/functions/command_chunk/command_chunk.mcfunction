@@ -119,9 +119,7 @@ loot give @a[scores={ChaosTimer=4000..}] loot commands:ultimates/chaos_bow_token
 
 scoreboard players reset @a[scores={ChaosTimer=4000..}] ChaosTimer
 
-execute as @a[scores={usedCOAS=1..},predicate=commands:holding/chaos_bow_token] run tellraw @a [{"selector":"@s"},{"text":" is going chaotic!"}]
-
-loot replace entity @a[scores={usedCOAS=1..},predicate=commands:holding/chaos_bow_token] weapon.mainhand loot commands:ultimates/chaos_bow
+execute as @a[scores={usedCOAS=1..},predicate=commands:holding/chaos_bow_token] run function commands:ultimates/chaos_bow_init
 
 scoreboard players add @a[predicate=commands:inventory/chaos_bow] chaosBowDur 1
 
@@ -1179,6 +1177,8 @@ loot give @a[scores={JusticeTimer=3000..}] loot commands:ultimates/bow_of_justic
 
 scoreboard players set @a[scores={JusticeTimer=3000..}] JusticeTimer 0
 
+scoreboard players add @a[scores={useBow=1..},predicate=commands:holding/bow_of_justice] ultsUsed 1
+
 clear @a[scores={useBow=1..},predicate=commands:holding/bow_of_justice] bow[custom_data~{bowofjustice:1b}]
 
 execute as @a[advancements={commands:bow_of_justice=true}] run function commands:ultimates/bow_of_justice
@@ -1521,21 +1521,7 @@ loot give @a[team=Blue,scores={terrorTimer=3200..}] loot commands:ultimates/terr
 
 scoreboard players set @a[scores={terrorTimer=3200..}] terrorTimer 0
 
-execute as @e[type=elder_guardian,tag=terrorRed,tag=!stop] run tellraw @a [{"selector":"@a[team=Red,scores={Ultimate=19}]"},{"text":" has awoken the Terror of the Seas!"}]
-
-execute as @e[type=elder_guardian,tag=terrorBlue,tag=!stop] run tellraw @a [{"selector":"@a[team=Blue,scores={Ultimate=19}]"},{"text":" has awoken the Terror of the Seas!"}]
-
-execute if entity @e[type=elder_guardian,tag=terrorRed,tag=!stop] run playsound royalsiege:ultimates.terror_of_the_seas_friendly master @a[team=Red] ~ ~ ~ 100 1
-
-execute if entity @e[type=elder_guardian,tag=terrorRed,tag=!stop] run playsound royalsiege:ultimates.terror_of_the_seas_enemy master @a[team=Blue] ~ ~ ~ 100 1
-
-execute if entity @e[type=elder_guardian,tag=terrorBlue,tag=!stop] run playsound royalsiege:ultimates.terror_of_the_seas_friendly master @a[team=Blue] ~ ~ ~ 100 1
-
-execute if entity @e[type=elder_guardian,tag=terrorBlue,tag=!stop] run playsound royalsiege:ultimates.terror_of_the_seas_enemy master @a[team=Red] ~ ~ ~ 100 1
-
-tag @e[type=elder_guardian,tag=terrorRed] add stop
-
-tag @e[type=elder_guardian,tag=terrorBlue] add stop
+execute as @e[type=elder_guardian,tag=terror,tag=!stop] run function commands:ultimates/terror_of_the_seas_init
 
 execute if entity @e[type=elder_guardian,tag=terrorRed] as @a[team=Red] run function #commands:clear_mining_fatigue_attributes
 
@@ -2588,6 +2574,18 @@ execute as @a[scores={popRocksDur=200..}] run function commands:ultimates/pop_ro
 #Firecracker Cooldown Display
 
 execute as @a[scores={Kit=15}] run function commands:cooldowns/firecracker_display
+
+#Firecracker Character Challenge
+
+execute as @a[team=Red,predicate=commands:effects/on_fire] run scoreboard players add #numPlayersOnFireRed firCharChallenge 1
+
+execute as @a[team=Blue,predicate=commands:effects/on_fire] run scoreboard players add #numPlayersOnFireBlue firCharChallenge 1
+
+execute if score #numPlayersOnFireRed firCharChallenge >= #numPlayersOnTeam multiItems run scoreboard players add @a[scores={Kit=15},team=Blue,tag=inCurrentMatch] firCharChallenge 1
+
+execute if score #numPlayersOnFireBlue firCharChallenge >= #numPlayersOnTeam multiItems run scoreboard players add @a[scores={Kit=15},team=Red,tag=inCurrentMatch] firCharChallenge 1
+
+execute as @a[scores={Kit=15,firCharChallenge=600..}] run advancement grant @s only commands:character_challenges/pot_roast_party
 
 #Give menu item to people w/out it
 

@@ -34,4 +34,6 @@ tag @e[tag=systemReboot] add stop
 
 tellraw @a [{"selector":"@s"},{"text":" has initiated a system reboot!"}]
 
+scoreboard players add @s ultsUsed 1
+
 clear @s carrot_on_a_stick[custom_data~{systemreboot:1b}] 1

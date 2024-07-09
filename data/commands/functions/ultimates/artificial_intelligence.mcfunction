@@ -14,4 +14,8 @@ execute at @s[tag=AIblue] run summon lightning_bolt ~ ~ ~
 
 execute at @s[tag=AIblue] run tellraw @a [{"selector":"@a[team=Blue,scores={Kit=10,Ultimate=20}]"},{"text":" has constructed artificial intelligence!","color":"white"}]
 
+execute if entity @s[tag=AIred] run scoreboard players add @a[team=Red,scores={Kit=10,Ultimate=20}] ultsUsed 1
+
+execute if entity @s[tag=AIblue] run scoreboard players add @a[team=Blue,scores={Kit=10,Ultimate=20}] ultsUsed 1
+
 tp @s ~ -200 ~

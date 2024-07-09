@@ -8,4 +8,6 @@ execute if entity @s[tag=TRed] run tellraw @a [{"selector":"@a[team=Red,scores={
 
 execute if entity @s[tag=TBlue] run tellraw @a [{"selector":"@a[team=Blue,scores={Ultimate=7}]"},{"text":" uncovered a Treasure Chest!"}]
 
+scoreboard players add @s ultsUsed 1
+
 tp @s ~ -200 ~

@@ -6,4 +6,6 @@ summon minecraft:item_frame ~ ~ ~ {Facing:1b,Invulnerable:1b,Invisible:1b,Fixed:
 
 scoreboard players set @s rocLaunchTimer 0
 
+scoreboard players add @s ultsUsed 1
+
 clear @s carrot_on_a_stick[custom_data~{rocketlaunch:1b}]

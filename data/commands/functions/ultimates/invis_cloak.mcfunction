@@ -30,3 +30,5 @@ clear @s leather_boots
 
 clear @s carrot_on_a_stick[custom_data~{inviscloak:1b}]
 
+scoreboard players add @s ultsUsed 1
+

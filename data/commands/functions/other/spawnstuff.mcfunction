@@ -22,11 +22,11 @@ execute if entity @a[limit=1,tag=teamSwitch,team=Red] if entity @a[limit=1,tag=t
 
 #Starting the game
 
-execute if score #characterselect spawnStuff matches 1 as @a[team=!spectator,tag=startToReady,tag=readyUp] run scoreboard players add #readyplayers spawnStuff 1
+execute if score #characterselect spawnStuff matches 1 as @a[team=!spectator,tag=readyUp] run scoreboard players add #readyplayers spawnStuff 1
 
 execute if score #characterselect spawnStuff matches 1 if entity @a[limit=1,tag=readyUp] run scoreboard players add #readytimer spawnStuff 1
 
-execute if score #readytimer spawnStuff matches 200.. run tellraw @a[team=!spectator,tag=!readyUp] [{"text":"You need to ready yourself up! ","color":"aqua"},{"text":"[Click Here]","color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to ready yourself up!","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger textClick set 127"}},{"text":" to ready up!"}]
+execute if score #readytimer spawnStuff matches 200.. run tellraw @a[team=!spectator,scores={ultCheck=1..30},tag=!readyUp] [{"text":"You need to ready yourself up! ","color":"aqua"},{"text":"[Click Here]","color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to ready yourself up!","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger textClick set 127"}},{"text":" to ready up!"}]
 
 execute if score #readytimer spawnStuff matches 200.. run scoreboard players reset #readytimer spawnStuff
 

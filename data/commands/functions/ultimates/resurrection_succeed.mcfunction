@@ -34,6 +34,8 @@ tellraw @a [{"selector": "@a[tag=resurrected]"},{"text": " has been resurrected!
 
 scoreboard players set @s resurrectionDur 0
 
+scoreboard players add @s ultsUsed 1
+
 tag @a remove resurrected
 
 

@@ -22,4 +22,6 @@ tellraw @a [{"selector":"@s"},{"text":" is unleashing the wrath of the sea!"}]
 
 tag @s add scourgeActive
 
+scoreboard players add @s ultsUsed 1
+
 clear @s carrot_on_a_stick[custom_data~{scourge:1b}]
