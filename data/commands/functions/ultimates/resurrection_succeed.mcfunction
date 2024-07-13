@@ -36,6 +36,8 @@ scoreboard players set @s resurrectionDur 0
 
 scoreboard players add @s ultsUsed 1
 
+advancement grant @s[predicate=commands:in_ncs_hospital] only commands:hidden_advancements/miracle_worker
+
 tag @a remove resurrected
 
 

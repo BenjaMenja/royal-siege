@@ -1,8 +1,8 @@
 teleport @s @a[tag=hookUser,limit=1]
 
-playsound royalsiege:abilities.chain_hook_retract master @s ~ ~ ~ 
+playsound royalsiege:abilities.chain_hook_retract master @s ~ ~ ~
 
-execute at @s run playsound royalsiege:abilities.chain_hook_retract master @a[tag=hookUser,distance=..2] ~ ~ ~ 
+execute at @s run playsound royalsiege:abilities.chain_hook_retract master @a[tag=hookUser,distance=..2] ~ ~ ~
 
 execute at @s run teleport @s ^ ^ ^1
 

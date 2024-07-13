@@ -15,5 +15,8 @@
     [
       "requirement"
     ]
-  ]
+  ],
+  "rewards": {
+    "function": "commands:custom_deaths/rocket_death"
+  }
 }

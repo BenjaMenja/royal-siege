@@ -1,4 +1,4 @@
-summon minecraft:snowball ^ ^ ^1 {Motion:[0.0,0.0,0.0],Tags:["snowball","launcher"],Item:{id:"minecraft:poppy",Count:1b}}
+summon minecraft:snowball ^ ^ ^1 {Motion:[0.0,0.0,0.0],Tags:["snowball","launcher"],Item:{id:"minecraft:poppy",count:1}}
 
 execute store result score @s posX run data get entity @s Pos[0] 1000
 

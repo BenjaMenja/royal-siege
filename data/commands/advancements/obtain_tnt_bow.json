@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "inventory": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:bow",
+            "predicates": {
+              "minecraft:custom_data": "{tntbow:1b}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "commands:other/obtain_tnt_bow"
+  }
+}

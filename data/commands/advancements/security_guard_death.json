@@ -1,15 +1,18 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:entity_killed_player",
-        "conditions": {
-          "killing_blow": {
-            "direct_entity": {
-              "type": "minecraft:zombified_piglin",
-              "nbt": "{Tags:[\"security\"]}"
-            }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "killing_blow": {
+          "direct_entity": {
+            "type": "minecraft:zombified_piglin",
+            "nbt": "{Tags:[\"security\"]}"
           }
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/security_guard_death"
   }
+}

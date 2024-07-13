@@ -6,10 +6,12 @@
       "conditions": {
         "entity": {
           "type": "minecraft:skeleton",
-          "nbt": "{Tags:[\"turret\"]}",
-          "equipment": {}
+          "nbt": "{Tags:[\"turret\"]}"
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/turret_death"
   }
 }

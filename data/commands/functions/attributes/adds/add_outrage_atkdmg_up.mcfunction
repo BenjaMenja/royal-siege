@@ -1,0 +1,1 @@
+attribute @s minecraft:generic.attack_damage modifier add 2-1-30-160-0 "OutrageAtkDmgUp" 0.3 add_multiplied_base

@@ -11,5 +11,8 @@
                 }
             }
         }
+    },
+    "rewards": {
+        "function": "commands:custom_deaths/sniper_death"
     }
 }

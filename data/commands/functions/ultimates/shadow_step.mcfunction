@@ -10,7 +10,9 @@ execute if entity @s[team=Blue] run playsound royalsiege:ultimates.shadow_step_e
 
 tellraw @a [{"selector":"@s"},{"text":" has melted into the shadows!"}]
 
-loot replace entity @s armor.chest loot commands:main_armor/ninja_shadow_step_chestplate
+function commands:attributes/adds/add_shadow_step_slow
+
+function commands:attributes/adds/add_shadow_step_kb_resist
 
 scoreboard players add @s ultsUsed 1
 

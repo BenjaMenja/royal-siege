@@ -8,8 +8,9 @@ team add Blue
 
 team add Red
 
-#Actual Scoreboards
+team add spectator
 
+#Old Scoreboards that were made before this file existed
 scoreboard objectives add Kit dummy
 scoreboard objectives add textClick dummy
 scoreboard objectives add ultCheck dummy
@@ -17,6 +18,25 @@ scoreboard objectives add RNG dummy
 scoreboard objectives add Ultimate dummy
 scoreboard objectives add spawnStuff dummy
 scoreboard objectives add classInfo dummy
+scoreboard objectives add Money dummy
+scoreboard objectives add settings dummy
+scoreboard objectives add secret dummy
+scoreboard objectives add usedCOAS dummy
+scoreboard objectives add KillP dummy
+scoreboard objectives add Message dummy
+scoreboard objectives add Timer dummy
+scoreboard objectives add multiItems dummy
+scoreboard objectives add posX dummy
+scoreboard objectives add posY dummy
+scoreboard objectives add posZ dummy
+scoreboard objectives add constant dummy
+scoreboard objectives add gameDuration dummy
+scoreboard objectives add totalDeaths dummy
+scoreboard objectives add UUID dummy
+scoreboard objectives add voicelineCD dummy
+
+#New Scoreboards
+
 scoreboard objectives add payRaiseStore dummy
 scoreboard objectives add payRaiseDis dummy
 scoreboard objectives add scrambleStore dummy
@@ -84,6 +104,7 @@ scoreboard objectives add ultsUsed dummy
 scoreboard objectives add entSelfishness dummy
 scoreboard objectives add firCharChallenge dummy
 scoreboard objectives add numDrones dummy
+scoreboard objectives add totalSiegeBucks dummy
 
 scoreboard objectives remove dmDelay
 scoreboard objectives remove olympicVaultTimer
@@ -95,3 +116,4 @@ scoreboard objectives remove closingEnd
 scoreboard objectives remove DecayD
 scoreboard objectives remove PotionTimer
 scoreboard objectives remove lockerdeath
+scoreboard objectives remove fall

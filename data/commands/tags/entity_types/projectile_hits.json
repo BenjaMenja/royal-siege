@@ -3,6 +3,7 @@
   "values": [
     "minecraft:player",
     "minecraft:wither_skeleton",
-    "minecraft:skeleton"
+    "minecraft:skeleton",
+    "minecraft:piglin"
   ]
 }

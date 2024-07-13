@@ -1,0 +1,1 @@
+attribute @s minecraft:generic.movement_speed modifier add 1-1-35-90-0 "ShadowStepSlow" -0.35 add_multiplied_base

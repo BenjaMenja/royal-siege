@@ -14,7 +14,7 @@ execute at @s[team=Red] at @a[distance=..15,team=Red] run particle happy_village
 
 execute at @s[team=Red] run playsound block.grass.break master @a[distance=..15,team=Red] ~ ~ ~ 1 0
 
-execute at @s[team=Red] if score #entvoicered voicelineCD matches 40.. run playsound royalsiege:abilities.blossom master @a[distance=..15] ~ ~ ~ 1 
+execute at @s[team=Red] if score #entvoicered voicelineCD matches 40.. run playsound royalsiege:abilities.blossom master @a[distance=..15] ~ ~ ~ 1 1
 
 execute at @s[team=Red] if score #entvoicered voicelineCD matches 40.. run scoreboard players reset #entvoicered voicelineCD
 

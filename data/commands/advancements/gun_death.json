@@ -10,5 +10,8 @@
                 }
             }
         }
+    },
+    "rewards": {
+        "function": "commands:custom_deaths/gun_death"
     }
 }

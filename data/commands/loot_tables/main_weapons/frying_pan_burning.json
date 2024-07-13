@@ -46,8 +46,8 @@
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:enchantments": {
-                  "minecraft:knockback": 3,
-                  "minecraft:fire_aspect": 3
+                  "minecraft:knockback": 2,
+                  "minecraft:fire_aspect": 2
                 },
                 "minecraft:custom_model_data": 93,
                 "minecraft:unbreakable": {

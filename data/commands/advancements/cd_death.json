@@ -1,20 +1,23 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:player_killed_entity",
-        "conditions": {
-          "killing_blow": {
-            "source_entity": {
-              "type": "minecraft:player",
-              "equipment": {
-                "mainhand": {
-                  "items": "minecraft:music_disc_chirp"
-                }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "killing_blow": {
+          "source_entity": {
+            "type": "minecraft:player",
+            "equipment": {
+              "mainhand": {
+                "items": "minecraft:music_disc_chirp"
               }
             }
           }
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/cd_death"
   }
+}
   

@@ -1,6 +1,6 @@
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["mysteriousbrew","redProj"],Item:{id:"minecraft:splash_potion",count:1b,components:{potion_contents:{custom_color:0}}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["mysteriousbrew","redProj"],Item:{id:"minecraft:splash_potion",count:1,components:{potion_contents:{custom_color:0}}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["mysteriousbrew","blueProj"],Item:{id:"minecraft:splash_potion",count:1b,components:{potion_contents:{custom_color:0}}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["mysteriousbrew","blueProj"],Item:{id:"minecraft:splash_potion",count:1,components:{potion_contents:{custom_color:0}}}}
 
 execute at @s run playsound minecraft:entity.splash_potion.throw master @s ~ ~ ~ 1 1
 

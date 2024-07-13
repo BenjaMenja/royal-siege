@@ -37,3 +37,5 @@ tag @s remove highestmoneyblue
 tag @s remove inCurrentMatch
 
 tag @s remove notAlive
+
+tag @s remove gamblerMoneyStolen

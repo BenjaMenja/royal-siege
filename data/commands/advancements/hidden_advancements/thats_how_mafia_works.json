@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:gold_ingot"
+    },
+    "title": "That's How Mafia Works",
+    "description": "As Gambler, successfully claim a betting chip bounty on a Robot that has stolen Siege Bucks from you with Midas Bullet during your current life.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "commands:hidden_advancements/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

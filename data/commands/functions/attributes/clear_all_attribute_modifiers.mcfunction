@@ -74,6 +74,8 @@ function commands:attributes/clears/clear_fish_cannon_slow
 
 function commands:attributes/clears/clear_iron_wall_slow
 
+function commands:attributes/clears/clear_iron_wall_kb_resist
+
 function commands:attributes/clears/clear_outrage_slow
 
 function commands:attributes/clears/clear_kerfuffle_slow
@@ -85,6 +87,8 @@ function commands:attributes/clears/clear_tree_of_life_slow
 function commands:attributes/clears/clear_absorption_shield_atkdmg
 
 function commands:attributes/clears/clear_outrage_atkdmg
+
+function commands:attributes/clears/clear_outrage_atkdmg_up
 
 function commands:attributes/clears/clear_decay_aura_atkdmg
 
@@ -145,3 +149,7 @@ function commands:attributes/clears/clear_grounding_spell_jump
 function commands:attributes/clears/clear_cryo_skeleton_jump
 
 function commands:attributes/clears/clear_cryo_skeleton_slow
+
+function commands:attributes/clears/clear_shadow_step_kb_resist
+
+function commands:attributes/clears/clear_shadow_step_slow

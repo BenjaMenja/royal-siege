@@ -9,5 +9,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/asteroid_shard_death"
   }
 }

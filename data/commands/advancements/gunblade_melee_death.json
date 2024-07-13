@@ -24,5 +24,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/gunblade_melee_death"
   }
 }

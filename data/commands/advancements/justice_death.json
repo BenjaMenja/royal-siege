@@ -14,5 +14,8 @@
                 }
             }
         }
+    },
+    "rewards": {
+        "function": "commands:custom_deaths/justice_death"
     }
 }

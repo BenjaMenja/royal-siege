@@ -36,8 +36,26 @@
             "value": "commands:shop_items/strength_stone"
           },
           {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/sniper_bow"
+            "type": "minecraft:group",
+            "children": [
+              {
+                "type": "minecraft:loot_table",
+                "value": "commands:shop_items/sniper_bow"
+              },
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:arrow",
+                "functions": [
+                  {
+                    "function": "minecraft:set_name",
+                    "name": {
+                      "text": "Multi-Purpose Ammunition",
+                      "italic": false
+                    }
+                  }
+                ]
+              }
+            ]
           },
           {
             "type": "minecraft:loot_table",
@@ -60,8 +78,26 @@
             "value": "commands:shop_items/reinforced_casing"
           },
           {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/punch_bow"
+            "type": "minecraft:group",
+            "children": [
+              {
+                "type": "minecraft:loot_table",
+                "value": "commands:shop_items/punch_bow"
+              },
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:arrow",
+                "functions": [
+                  {
+                    "function": "minecraft:set_name",
+                    "name": {
+                      "text": "Multi-Purpose Ammunition",
+                      "italic": false
+                    }
+                  }
+                ]
+              }
+            ]
           },
           {
             "type": "minecraft:loot_table",

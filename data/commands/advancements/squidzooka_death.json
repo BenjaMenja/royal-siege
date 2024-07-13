@@ -9,5 +9,8 @@
                 }
             }
         }
+    },
+    "rewards": {
+        "function": "commands:custom_deaths/squidzooka_death"
     }
 }

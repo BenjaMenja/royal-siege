@@ -1,6 +1,6 @@
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["eggred","egg","redProj"],Item:{id:"minecraft:egg",Count:1b,components:{"minecraft:custom_model_data":106}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["eggred","egg","redProj"],Item:{id:"minecraft:egg",count:1,components:{"minecraft:custom_model_data":106}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["eggblue","egg","blueProj"],Item:{id:"minecraft:egg",Count:1b,components:{"minecraft:custom_model_data":106}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["eggblue","egg","blueProj"],Item:{id:"minecraft:egg",count:1,components:{"minecraft:custom_model_data":106}}}
 
 execute at @s run playsound minecraft:block.slime_block.hit master @s ~ ~ ~ 1 0
 

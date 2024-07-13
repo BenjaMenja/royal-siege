@@ -40,5 +40,8 @@
             "normalarrow",
             "dueltntarrow"
         ]
-    ]
+    ],
+    "rewards": {
+        "function": "commands:custom_deaths/bow_death"
+    }
 }

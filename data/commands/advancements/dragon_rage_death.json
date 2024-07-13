@@ -5,8 +5,7 @@
       "conditions": {
         "entity": {
           "type": "minecraft:creeper",
-          "nbt": "{Tags:[\"dRageCreeper\"]}",
-          "equipment": {}
+          "nbt": "{Tags:[\"dRageCreeper\"]}"
         }
       }
     }
@@ -15,5 +14,8 @@
     [
       "requirement"
     ]
-  ]
+  ],
+  "rewards": {
+    "function": "commands:custom_deaths/dragon_rage_death"
+  }
 }

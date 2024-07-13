@@ -32,6 +32,8 @@ advancement revoke @s only commands:justice_death
 
 advancement revoke @s only commands:ai_death
 
+advancement revoke @s only commands:fall_death
+
 advancement revoke @s only commands:anchor_death
 
 advancement revoke @s only commands:landfish_death
@@ -86,8 +88,6 @@ advancement revoke @s only commands:rocket_death
 
 advancement revoke @s only commands:smart_drone_death
 
-advancement revoke @s only commands:sparkler_death
-
 advancement revoke @s only commands:c4_death
 
 advancement revoke @s only commands:bang_snap_death
@@ -106,10 +106,14 @@ advancement revoke @s only commands:shuriken_death
 
 advancement revoke @s only commands:cryo_skeleton_death
 
-tag @s remove shadowdeath
+advancement revoke @s only commands:shadow_step_death
+
+advancement revoke @s only commands:fire_death
+
+advancement revoke @s only commands:lava_death
+
+advancement revoke @s only commands:cactus_death
+
+advancement revoke @s only commands:drowning_death
 
 tag @s remove tChestDeath
-
-scoreboard players reset @s nearbyBlocks
-
-scoreboard players reset @s fall

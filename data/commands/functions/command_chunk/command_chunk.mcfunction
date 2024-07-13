@@ -100,7 +100,6 @@ execute as @e[type=snowball,tag=!groundingspellblue,nbt={Item:{components:{"mine
 
 execute as @e[type=area_effect_cloud,tag=groundingspellblue] unless predicate commands:is_riding_grounding_spell_blue at @s run function commands:ball/grounding_spell_landed_blue
 
-
 #Kick other people off of cavalry charge
 
 execute as @a[scores={HorseDie=1..,Kit=2..}] at @s run tp @s ~ ~ ~
@@ -169,8 +168,6 @@ execute as @a[team=Blue,scores={Kit=1},tag=upgraded] at @s as @a[team=Red,distan
 
 execute as @a[team=Blue,scores={Kit=3},tag=upgraded] at @s run effect give @a[team=Blue,distance=..5] resistance 8 0 true
 
-effect give @a[scores={Kit=5}] strength 1 0 true
-
 effect clear @a[scores={Kit=12},tag=!upgraded] resistance
 
 execute as @a[scores={Kit=12},tag=!upgraded] run function #commands:clear_strength_attributes
@@ -186,6 +183,12 @@ execute as @a[scores={Kit=14},tag=astrogravity,nbt={OnGround:1b}] run function c
 effect clear @a[predicate=commands:is_sneaking,scores={Kit=14}] slow_falling
 
 effect give @a[scores={Kit=15}] fire_resistance 1 0 true
+
+#King Bossbar
+
+execute store result bossbar minecraft:redking value run data get entity @e[type=wither_skeleton,team=Red,tag=King,limit=1] Health
+
+execute store result bossbar minecraft:blueking value run data get entity @e[type=wither_skeleton,team=Blue,tag=King,limit=1] Health
 
 #Gravity Canceler
 
@@ -647,19 +650,13 @@ execute as @a[scores={Kit=6}] store result score @s expBombDis run scoreboard pl
 
 execute as @e[tag=stop,type=experience_bottle] store success entity @s Air short 1 if data entity @s {Air:0s}
 
-execute as @e[type=experience_orb] at @s run summon fireball ~ ~ ~ {CustomNameVisible:0b,ExplosionPower:3,power:[0.0,-2.0,0.0],CustomName:'{"text":"Experience Bomb","color":"green"}',Item:{id:"minecraft:experience_bottle",Count:1b},Tags:["fm"]}
+execute as @e[type=experience_orb] at @s run summon fireball ~ ~ ~ {CustomNameVisible:0b,ExplosionPower:3,power:[0.0,-2.0,0.0],CustomName:'{"text":"Experience Bomb","color":"green"}',Item:{id:"minecraft:experience_bottle",count:1},Tags:["fm"]}
 
 kill @e[type=experience_orb]
 
 #Wizard Cooldown Display
 
 execute as @a[scores={Kit=6}] run function commands:cooldowns/wizard_display
-
-#King Bossbar
-
-execute store result bossbar minecraft:redking value run data get entity @e[type=wither_skeleton,team=Red,tag=King,limit=1] Health
-
-execute store result bossbar minecraft:blueking value run data get entity @e[type=wither_skeleton,team=Blue,tag=King,limit=1] Health
 
 #Clear absorption from people with no absorption hearts
 
@@ -791,7 +788,7 @@ effect give @a[predicate=commands:armor/bouncy_boots] jump_boost 2 1 true
 
 #Chicken Bombs
 
-execute at @e[type=chicken] run summon creeper ~ ~ ~ {CustomNameVisible:0b,ExplosionRadius:4b,Fuse:1,ignited:1b,CustomName:'{"text":"Chicken Bomb"}'}
+execute at @e[type=chicken] run summon creeper ~ ~ ~ {CustomNameVisible:0b,ExplosionRadius:4b,Fuse:1,ignited:1b,Tags:["chickenbomb"]}
 
 #Shadow Step (Ninja Ultimate)
 
@@ -1009,12 +1006,6 @@ execute as @a[scores={Message=1..}] at @s if entity @e[type=armor_stand,tag=Ches
 
 execute as @a[scores={Message=1..},limit=1] run function commands:custom_deaths/custom_deaths
 
-execute as @e[type=armor_stand,tag=f_message] at @s unless entity @e[type=fireball,tag=fm,tag=no,distance=..2] run kill @s
-
-execute as @e[type=armor_stand,tag=fm_message] at @s unless entity @e[type=fireball,tag=fmm,tag=no,distance=..2] run kill @s
-
-scoreboard players set @a[nbt={OnGround:1b}] fall 0
-
 scoreboard players set @a[scores={KillP=1..}] KillP 0
 
 scoreboard players set @a[scores={Message=1..}] Message 0
@@ -1059,11 +1050,21 @@ scoreboard players add @e[type=arrow] Timer 1
 
 kill @e[type=arrow,scores={Timer=80..}]
 
-#more money from defending
+#Passive Money
+
+execute if score #gamemode settings matches 0 run scoreboard players add @a[team=!,predicate=commands:in_any_battlefield] Timer 1
+
+execute if score #gamemode settings matches 1 run scoreboard players add @a[team=!,predicate=commands:in_any_battlefield] Timer 2
 
 execute as @a[team=Red,predicate=commands:in_any_red_castle] run scoreboard players add @s Timer 1
 
 execute as @a[team=Blue,predicate=commands:in_any_blue_castle] run scoreboard players add @s Timer 1
+
+scoreboard players add @a[scores={Timer=80..}] Money 10
+
+scoreboard players add @a[scores={Timer=80..}] totalSiegeBucks 10
+
+scoreboard players set @a[scores={Timer=80..}] Timer 0
 
 #kill multiple cavalry horses
 
@@ -1933,9 +1934,9 @@ execute if score #redHS healstreak matches 6.. run tag @a[team=Red,tag=!healstre
 
 execute if score #blueHS healstreak matches 6.. run tag @a[team=Blue,tag=!healstreak,limit=1,scores={Kit=4}] add HSinit
 
-execute as @a[team=Red,tag=HSinit,tag=!healstreak] at @s run summon minecraft:item ~1 ~1.5 ~ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["angelpassive","HSRed"],Item:{id:"minecraft:gold_ingot",Count:1b,components:{"minecraft:custom_model_data":119,"minecraft:custom_data":{angelpassive:1b}}}}
+execute as @a[team=Red,tag=HSinit,tag=!healstreak] at @s run summon minecraft:item ~1 ~1.5 ~ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["angelpassive","HSRed"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":119,"minecraft:custom_data":{angelpassive:1b}}}}
 
-execute as @a[team=Blue,tag=HSinit,tag=!healstreak] at @s run summon minecraft:item ~1 ~1.5 ~ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["angelpassive","HSBlue"],Item:{id:"minecraft:gold_ingot",Count:1b,components:{"minecraft:custom_model_data":119,"minecraft:custom_data":{angelpassive:1b}}}}
+execute as @a[team=Blue,tag=HSinit,tag=!healstreak] at @s run summon minecraft:item ~1 ~1.5 ~ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["angelpassive","HSBlue"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":119,"minecraft:custom_data":{angelpassive:1b}}}}
 
 tag @a[tag=HSinit] add healstreak
 
@@ -2149,7 +2150,7 @@ scoreboard players add @e[type=zombified_piglin,tag=oven] ovenDur 1
 
 execute as @e[type=item_frame,tag=oven] at @s unless entity @e[type=zombified_piglin,limit=1,sort=nearest,distance=..1] run function commands:other/destroy_oven
 
-execute as @e[type=zombified_piglin,tag=oven,scores={ovenTimer=30,ovenDur=1..}] at @s run data modify entity @e[type=item_frame,tag=oven,limit=1,sort=nearest] Item set value {id:"minecraft:stone_bricks",Count:1b,components:{"minecraft:custom_model_data":134}}
+execute as @e[type=zombified_piglin,tag=oven,scores={ovenTimer=30,ovenDur=1..}] at @s run data modify entity @e[type=item_frame,tag=oven,limit=1,sort=nearest] Item set value {id:"minecraft:stone_bricks",count:1,components:{"minecraft:custom_model_data":134}}
 
 execute as @e[type=zombified_piglin,tag=oven,tag=pizzatime,scores={ovenTimer=20..}] at @s run function commands:other/shoot_pizza
 
@@ -2586,6 +2587,10 @@ execute if score #numPlayersOnFireRed firCharChallenge >= #numPlayersOnTeam mult
 execute if score #numPlayersOnFireBlue firCharChallenge >= #numPlayersOnTeam multiItems run scoreboard players add @a[scores={Kit=15},team=Red,tag=inCurrentMatch] firCharChallenge 1
 
 execute as @a[scores={Kit=15,firCharChallenge=600..}] run advancement grant @s only commands:character_challenges/pot_roast_party
+
+scoreboard players set #numPlayersOnFireRed firCharChallenge 0
+
+scoreboard players set #numPlayersOnFireBlue firCharChallenge 0
 
 #Give menu item to people w/out it
 

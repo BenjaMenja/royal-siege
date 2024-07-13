@@ -36,5 +36,8 @@
             "ironaxe",
             "woodenaxe"
         ]
-    ]
+    ],
+    "rewards": {
+        "function": "commands:custom_deaths/axe_death"
+    }
 }

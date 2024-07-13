@@ -17,5 +17,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/space_wrench_death"
   }
 }

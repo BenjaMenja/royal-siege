@@ -16,5 +16,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/stylish_cane_death"
   }
 }

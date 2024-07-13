@@ -17,5 +17,8 @@
     [
       "requirement"
     ]
-  ]
+  ],
+  "rewards": {
+    "function": "commands:custom_deaths/blunderbuss_death"
+  }
 }

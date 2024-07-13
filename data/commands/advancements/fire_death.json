@@ -4,7 +4,15 @@
     "requirement": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
-        "player": {},
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Health:0.0f}"
+            }
+          }
+        ],
         "damage": {
           "type": {
             "tags": [
@@ -17,5 +25,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/fire_death"
   }
 }

@@ -25,5 +25,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/pop_rocks_death"
   }
 }

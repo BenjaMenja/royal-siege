@@ -25,6 +25,6 @@
     ]
   ],
   "rewards": {
-    "function": "commands:other/necromantic_axe"
+    "function": "commands:custom_deaths/necromantic_axe_death"
   }
 }

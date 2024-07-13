@@ -1,0 +1,64 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:trident"
+    },
+    "title": "Natural Habitat",
+    "description": "As Poseidon, kill a player with Poseidon's Trident or Mythological Trident while swimming.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "commands:hidden_advancements/root",
+  "criteria": {
+      "poseidon": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "player": {
+            "flags": {
+              "is_swimming": true
+            },
+            "equipment": {
+              "mainhand": {
+                "items": "minecraft:trident",
+                "predicates": {
+                  "minecraft:custom_data": "{poseidontrident:1b}"
+                }
+              }
+            }
+          },
+          "entity": {
+            "type": "minecraft:player"
+          }
+        }
+      },
+      "myth": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "player": {
+            "flags": {
+              "is_swimming": true
+            },
+            "equipment": {
+              "mainhand": {
+                "items": "minecraft:trident",
+                "predicates": {
+                  "minecraft:custom_data": "{mythtrident:1b}"
+                }
+              }
+            }
+          },
+          "entity": {
+            "type": "minecraft:player"
+          }
+        }
+      }
+    },
+    "requirements": [
+      [
+        "myth",
+        "poseidon"
+      ]
+    ]
+}

@@ -5,8 +5,7 @@
       "conditions": {
         "entity": {
           "type": "minecraft:creeper",
-          "nbt": "{Tags:[\"dragonRush\"]}",
-          "equipment": {}
+          "nbt": "{Tags:[\"dragonRush\"]}"
         }
       }
     }
@@ -15,5 +14,8 @@
     [
       "requirement"
     ]
-  ]
+  ],
+  "rewards": {
+    "function": "commands:custom_deaths/dragon_rush_death"
+  }
 }

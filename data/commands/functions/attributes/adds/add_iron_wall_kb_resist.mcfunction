@@ -1,0 +1,1 @@
+attribute @s minecraft:generic.knockback_resistance modifier add 19-1-100-100-0 "IronWallKBResist" 1 add_multiplied_base

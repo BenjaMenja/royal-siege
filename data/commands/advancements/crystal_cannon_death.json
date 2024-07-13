@@ -15,5 +15,8 @@
     [
       "requirement"
     ]
-  ]
+  ],
+  "rewards": {
+    "function": "commands:custom_deaths/crystal_cannon_death"
+  }
 }

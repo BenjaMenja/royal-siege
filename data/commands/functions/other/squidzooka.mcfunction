@@ -1,6 +1,6 @@
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["squidzooka","redProj"],Passengers:[{id:"minecraft:squid",Invulnerable:1b,Tags:["squidzooka","redProj"]}],Item:{id:"minecraft:ink_sac",Count:1b}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["squidzooka","redProj"],Passengers:[{id:"minecraft:squid",Invulnerable:1b,Tags:["squidzooka","redProj"]}],Item:{id:"minecraft:ink_sac",count:1}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["squidzooka","blueProj"],Passengers:[{id:"minecraft:squid",Invulnerable:1b,Tags:["squidzooka","blueProj"]}],Item:{id:"minecraft:ink_sac",Count:1b}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["squidzooka","blueProj"],Passengers:[{id:"minecraft:squid",Invulnerable:1b,Tags:["squidzooka","blueProj"]}],Item:{id:"minecraft:ink_sac",count:1}}
 
 execute at @s run playsound entity.generic.explode master @s ~ ~ ~ 1 1.5
 

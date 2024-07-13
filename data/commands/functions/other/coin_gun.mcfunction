@@ -1,14 +1,14 @@
-execute at @s[team=Red] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["coinBulletRed","coinBullet","redProj"],Item:{id:"minecraft:gold_ingot",Count:1b,components:{"minecraft:custom_model_data":148}}}
+execute at @s[team=Red] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["coinBulletRed","coinBullet","redProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":148}}}
 
-execute at @s[team=Red] anchored eyes run summon item ^0.05 ^ ^1 {Health:1000,PickupDelay:32767,Tags:["coinBulletRed","coinBullet","redProj"],Item:{id:"minecraft:gold_ingot",Count:1b,components:{"minecraft:custom_model_data":148}}}
+execute at @s[team=Red] anchored eyes run summon item ^0.05 ^ ^1 {Health:1000,PickupDelay:32767,Tags:["coinBulletRed","coinBullet","redProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":148}}}
 
-execute at @s[team=Red] anchored eyes run summon item ^-0.05 ^ ^1 {Health:1000,PickupDelay:32767,Tags:["coinBulletRed","coinBullet","redProj"],Item:{id:"minecraft:gold_ingot",Count:1b,components:{"minecraft:custom_model_data":148}}}
+execute at @s[team=Red] anchored eyes run summon item ^-0.05 ^ ^1 {Health:1000,PickupDelay:32767,Tags:["coinBulletRed","coinBullet","redProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":148}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["coinBulletBlue","coinBullet","blueProj"],Item:{id:"minecraft:gold_ingot",Count:1b,components:{"minecraft:custom_model_data":148}}}
+execute at @s[team=Blue] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["coinBulletBlue","coinBullet","blueProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":148}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ^0.05 ^ ^1 {Health:1000,PickupDelay:32767,Tags:["coinBulletBlue","coinBullet","blueProj"],Item:{id:"minecraft:gold_ingot",Count:1b,components:{"minecraft:custom_model_data":148}}}
+execute at @s[team=Blue] anchored eyes run summon item ^0.05 ^ ^1 {Health:1000,PickupDelay:32767,Tags:["coinBulletBlue","coinBullet","blueProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":148}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ^-0.05 ^ ^1 {Health:1000,PickupDelay:32767,Tags:["coinBulletBlue","coinBullet","blueProj"],Item:{id:"minecraft:gold_ingot",Count:1b,components:{"minecraft:custom_model_data":148}}}
+execute at @s[team=Blue] anchored eyes run summon item ^-0.05 ^ ^1 {Health:1000,PickupDelay:32767,Tags:["coinBulletBlue","coinBullet","blueProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":148}}}
 
 execute as @e[tag=coinBullet] run data modify entity @s Owner set from entity @a[tag=coinGun,limit=1] UUID
 

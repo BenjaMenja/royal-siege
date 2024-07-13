@@ -2,7 +2,7 @@ execute unless score @s outrageKill matches 1.. run function commands:attributes
 
 execute unless score @s outrageKill matches 1.. run function commands:attributes/adds/add_outrage_atkdmg
 
-loot replace entity @s armor.legs loot commands:main_armor/dragon_leggings
+function commands:attributes/clears/clear_outrage_atkdmg_up
 
 tag @s remove outrage
 

@@ -1,7 +1,3 @@
-#Checking multiple classes on the same team
-
-execute if entity @a[predicate=commands:in_character_select_area] run function commands:spawn/classes_on_same_team
-
 #Guidebook
 
 tag @a[tag=!newPlayer] add newPlayer
@@ -55,14 +51,6 @@ execute if score #charSelectSong spawnStuff matches 1480 run scoreboard players 
 execute if score #charSelectSong spawnStuff matches 1481 run scoreboard players set #charSelectSong spawnStuff 2
 
 execute if score #charSelectSong spawnStuff matches 1401 if score #charSelectIntro spawnStuff matches 1 run scoreboard players set #charSelectSong spawnStuff 2
-
-#Checking if players need to choose classes
-
-execute if entity @a[predicate=commands:in_character_select_area] if score #characterselect spawnStuff matches 0 run scoreboard players add #startbutton spawnStuff 1
-
-execute if score #startbutton spawnStuff matches 300.. run function commands:starting/start_button
-
-execute if entity @a[predicate=commands:in_character_select_area] if score #characterselect spawnStuff matches 0 unless entity @a[scores={Kit=0},team=!spectator] unless entity @a[scores={ultCheck=0},team=!spectator] run function commands:starting/start_button
 
 #Other Spawnstuff
 

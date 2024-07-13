@@ -5,8 +5,7 @@
       "conditions": {
         "entity": {
           "type": "minecraft:zombie",
-          "nbt": "{Tags:[\"hatchling\"]}",
-          "equipment": {}
+          "nbt": "{Tags:[\"hatchling\"]}"
         }
       }
     }
@@ -15,5 +14,8 @@
     [
       "requirement"
     ]
-  ]
+  ],
+  "rewards": {
+    "function": "commands:custom_deaths/hatchling_death"
+  }
 }

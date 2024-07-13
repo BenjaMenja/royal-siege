@@ -362,7 +362,7 @@ execute if score @s textClick matches 184 run function commands:other/deposit_si
 
 execute if score @s textClick matches 185 run function commands:other/deposit_siege_bucks_to_bank {siege_bucks:1000}
 
-execute if score @s textClick matches 186 run function commands:other/deposit_siege_bucks_to_bank
+execute if score @s textClick matches 186 run function commands:other/deposit_siege_bucks_to_bank {siege_bucks:0}
 
 execute if score @s textClick matches 187 run function commands:other/withdraw_siege_bucks {siege_bucks:100}
 

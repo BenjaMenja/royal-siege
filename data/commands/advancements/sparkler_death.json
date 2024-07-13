@@ -35,9 +35,7 @@
   },
   "requirements": [
     [
-      "unlit"
-    ],
-    [
+      "unlit",
       "lit"
     ]
   ],

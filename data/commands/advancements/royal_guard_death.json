@@ -1,15 +1,18 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:entity_killed_player",
-        "conditions": {
-          "killing_blow": {
-            "direct_entity": {
-              "type": "minecraft:skeleton",
-              "nbt": "{Tags:[\"royalguard\"]}"
-            }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "killing_blow": {
+          "direct_entity": {
+            "type": "minecraft:skeleton",
+            "nbt": "{Tags:[\"royalguard\"]}"
           }
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/royal_guard_death"
   }
+}

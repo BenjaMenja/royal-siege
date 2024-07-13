@@ -25,5 +25,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/chrysanthemum_shell_death"
   }
 }

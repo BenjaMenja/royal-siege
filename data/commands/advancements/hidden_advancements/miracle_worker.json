@@ -1,0 +1,22 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:carrot_on_a_stick",
+      "components": {
+        "custom_model_data": 71
+      }
+    },
+    "title": "Miracle Worker",
+    "description": "As Angel, successfully resurrect a teammate while in the hospital of New Chicago Skyline.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "commands:hidden_advancements/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

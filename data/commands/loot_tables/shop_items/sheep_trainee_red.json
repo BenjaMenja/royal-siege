@@ -29,9 +29,10 @@
                 "minecraft:entity_data": {
                   "id": "minecraft:sheep",
                   "Team": "Red",
-                  "Health": "50f",
+                  "Health": 50.0,
                   "Tags": [
-                    "sheepred"
+                    "sheepred",
+                    "sheeptrainee"
                   ],
                   "ArmorItems": [
                     {},

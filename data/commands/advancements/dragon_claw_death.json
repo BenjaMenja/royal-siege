@@ -21,5 +21,8 @@
     [
       "requirement"
     ]
-  ]
+  ],
+  "rewards": {
+    "function": "commands:custom_deaths/dragon_claw_death"
+  }
 }

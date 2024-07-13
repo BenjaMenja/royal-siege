@@ -5,7 +5,6 @@
       "trigger": "minecraft:entity_killed_player",
       "conditions": {
         "killing_blow": {
-          "is_projectile": true,
           "direct_entity": {
             "type": "minecraft:arrow",
             "nbt": "{Tags:[\"royalFlush\"]}"
@@ -18,5 +17,8 @@
     [
       "requirement"
     ]
-  ]
+  ],
+  "rewards": {
+    "function": "commands:custom_deaths/royal_flush_death"
+  }
 }

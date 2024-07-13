@@ -1,3 +1,17 @@
+#Checks if this character exists on the team
+
+execute if entity @s[team=Red] if entity @a[team=Red,scores={Kit=12}] run tellraw @s [{"text":"You already have this character on your team! (","color": "white"},{"selector":"@a[team=Red,scores={Kit=12},limit=1]"},{"text":")","color":"white"}]
+
+execute if entity @s[team=Blue] if entity @a[team=Blue,scores={Kit=12}] run tellraw @s [{"text":"You already have this character on your team! (","color": "white"},{"selector":"@a[team=Blue,scores={Kit=12},limit=1]"},{"text":")","color":"white"}]
+
+execute if entity @s[team=Red] if entity @a[team=Red,scores={Kit=12}] run return -1
+
+execute if entity @s[team=Blue] if entity @a[team=Blue,scores={Kit=12}] run return -1
+
+execute if entity @s[tag=startDelay] run return -1
+
+#Proceed if there isn't
+
 tag @s[predicate=commands:dababy_chance] add dababy
 
 execute unless score @s Kit matches 100 run tag @s add nonspec

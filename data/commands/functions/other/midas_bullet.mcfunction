@@ -8,11 +8,17 @@ scoreboard players remove @a[tag=moneystealblue] Money 100
 
 execute if entity @a[tag=moneysteal] run scoreboard players add @a[team=Blue,scores={Kit=10}] Money 100
 
+execute if entity @a[tag=moneysteal] run scoreboard players add @a[team=Blue,scores={Kit=10}] totalSiegeBucks 100
+
 execute if entity @a[tag=moneystealblue] run scoreboard players add @a[team=Red,scores={Kit=10}] Money 100
+
+execute if entity @a[tag=moneystealblue] run scoreboard players add @a[team=Red,scores={Kit=10}] totalSiegeBucks 100
 
 tag @a remove moneysteal
 
 tag @a remove moneystealblue
+
+execute if entity @s[scores={Kit=13}] run tag @s add gamblerMoneyStolen
 
 advancement revoke @a[advancements={commands:midas_bullet=true}] only commands:midas_bullet
 

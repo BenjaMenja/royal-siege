@@ -25,5 +25,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/cinder_bomb_death"
   }
 }

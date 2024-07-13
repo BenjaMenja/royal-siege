@@ -9,5 +9,8 @@
                 }
             }
         }
+    },
+    "rewards": {
+        "function": "commands:custom_deaths/ai_death"
     }
 }

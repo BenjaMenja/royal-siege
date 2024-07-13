@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:firework_rocket"
+    },
+    "title": "Patrolling The Skies",
+    "description": "Press the button on top of the helicopter above the map in New Chicago Skyline",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "commands:hidden_advancements/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ]
+}

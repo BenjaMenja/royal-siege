@@ -9,10 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": {
-                "min": 4,
-                "max": 12
-              }
+              "count": 8
             },
             {
               "function": "minecraft:set_name",

@@ -68,5 +68,8 @@
             "diamondsword",
             "ironsword"
         ]
-    ]
+    ],
+    "rewards": {
+        "function": "commands:custom_deaths/sword_death"
+    }
 }

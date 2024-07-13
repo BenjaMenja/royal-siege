@@ -18,5 +18,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/anchor_death"
   }
 }

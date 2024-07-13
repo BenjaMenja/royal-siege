@@ -48,6 +48,8 @@ scoreboard players set #characterselect spawnStuff 1
 
 scoreboard players set #playercount spawnStuff 0
 
+tag @a add randomized
+
 tag @s remove randomTeams
 
 
