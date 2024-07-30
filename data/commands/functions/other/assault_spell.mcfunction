@@ -1,6 +1,6 @@
-execute at @s[team=Red,tag=!wrenched] as @a[team=Red,distance=..10] run function commands:attributes/adds/add_assault_spell_speed 
+execute at @s[team=Red,tag=!wrenched] as @a[team=Red,distance=..10] run function commands:attributes/adds/add_assault_spell_speed
 
-execute if entity @s[team=Red,tag=!wrenched] as @a[team=Red,tag=blessed] run function commands:attributes/adds/add_assault_spell_speed 
+execute if entity @s[team=Red,tag=!wrenched] as @a[team=Red,tag=blessed] run function commands:attributes/adds/add_assault_spell_speed
 
 execute at @s[team=Red,tag=wrenched] run function commands:attributes/adds/add_assault_spell_speed_wrench
 
@@ -10,9 +10,9 @@ execute at @s[team=Red] as @a[team=Red,distance=..10] unless score @s Kit matche
 
 execute if entity @s[team=Red] as @a[team=Red,tag=blessed] run function commands:attributes/adds/add_assault_spell_atkdmg
 
-execute at @s[team=Blue,tag=!wrenched] as @a[team=Blue,distance=..10] run function commands:attributes/adds/add_assault_spell_speed 
+execute at @s[team=Blue,tag=!wrenched] as @a[team=Blue,distance=..10] run function commands:attributes/adds/add_assault_spell_speed
 
-execute if entity @s[team=Blue,tag=!wrenched] as @a[team=Blue,tag=blessed] run function commands:attributes/adds/add_assault_spell_speed 
+execute if entity @s[team=Blue,tag=!wrenched] as @a[team=Blue,tag=blessed] run function commands:attributes/adds/add_assault_spell_speed
 
 execute at @s[team=Blue,tag=wrenched] run function commands:attributes/adds/add_assault_spell_speed_wrench
 

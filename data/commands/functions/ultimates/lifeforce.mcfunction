@@ -34,4 +34,4 @@ tellraw @a [{"selector":"@s"},{"text":"'s team is full of life!"}]
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{lifeforce:1b}]
+clear @s carrot[custom_data~{lifeforce:1b}]

@@ -1,3 +1,7 @@
+execute if entity @s[tag=custom_death] run return -1
+
+tag @s add custom_death
+
 loot spawn ~ -5 ~ loot commands:rng/fall_death
 execute as @e[type=item] if data entity @s Item.components.minecraft:custom_data.fall_death store result score #rng RNG run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
 kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{fall_death:1b}}}}]

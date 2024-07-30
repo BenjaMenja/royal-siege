@@ -6,4 +6,4 @@ execute at @s run playsound minecraft:ui.toast.challenge_complete master @a ~ ~ 
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{immortality:1b}]
+clear @s carrot[custom_data~{immortality:1b}]

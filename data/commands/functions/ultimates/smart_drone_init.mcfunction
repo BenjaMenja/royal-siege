@@ -10,4 +10,4 @@ execute if score @s numDrones matches 3.. run advancement grant @s only commands
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{smartdrone:1b}]
+clear @s carrot[custom_data~{smartdrone:1b}]

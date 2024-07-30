@@ -6,4 +6,4 @@ scoreboard players set @s pCardsTimer 1
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{sleightofhand:1b}]
+clear @s carrot[custom_data~{sleightofhand:1b}]

@@ -1,16 +1,16 @@
-execute if items entity @s[scores={BurstTimer=20..}] weapon.mainhand carrot_on_a_stick[custom_data~{switch:1b}] run tag @s add burst
+execute if entity @s[scores={BurstTimer=20..},predicate=commands:holding/gunblade_burst] run tag @s add burst
 
-execute if items entity @s[scores={BurstTimer=16..},predicate=commands:holding/illegal_modifiers] weapon.mainhand carrot_on_a_stick[custom_data~{switch:1b}] run tag @s add burst
+execute if entity @s[scores={BurstTimer=16..},predicate=commands:holding/illegal_modifiers,predicate=commands:holding/gunblade_burst] run tag @s add burst
 
-execute if items entity @s[scores={PoisonTimer=160..}] weapon.mainhand carrot_on_a_stick[custom_data~{switch:2b}] run tag @s add poison
+execute if entity @s[scores={PoisonTimer=160..},predicate=commands:holding/gunblade_poison] run tag @s add poison
 
-execute if items entity @s[scores={ToxinTimer=200..}] weapon.mainhand carrot_on_a_stick[custom_data~{switch:3b}] run tag @s add toxin
+execute if entity @s[scores={ToxinTimer=200..},predicate=commands:holding/gunblade_toxin] run tag @s add toxin
 
-execute if items entity @s[scores={DarknessTimer=280..}] weapon.mainhand carrot_on_a_stick[custom_data~{switch:4b}] run tag @s add darkness
+execute if entity @s[scores={DarknessTimer=280..},predicate=commands:holding/gunblade_darkness] run tag @s add darkness
 
-execute if items entity @s[scores={MidasTimer=280..}] weapon.mainhand carrot_on_a_stick[custom_data~{switch:5b}] run tag @s add midas
+execute if entity @s[scores={MidasTimer=280..},predicate=commands:holding/gunblade_midas] run tag @s add midas
 
-execute if items entity @s[scores={ExplosionTimer=280..}] weapon.mainhand carrot_on_a_stick[custom_data~{switch:6b}] run tag @s add explosion
+execute if entity @s[scores={ExplosionTimer=280..},predicate=commands:holding/gunblade_explosive] run tag @s add explosion
 
 scoreboard players reset @s eBulletHit
 

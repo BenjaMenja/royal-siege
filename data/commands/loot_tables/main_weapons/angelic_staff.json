@@ -6,7 +6,7 @@
         {
           "type": "item",
           "weight": 1,
-          "name": "minecraft:carrot_on_a_stick",
+          "name": "minecraft:carrot",
           "functions": [
             {
               "function": "set_count",
@@ -19,6 +19,12 @@
                 "minecraft:custom_data": {
                   "angelicstaff": 1,
                   "regenstaff": 1
+                },
+                "minecraft:food": {
+                  "nutrition": 0,
+                  "saturation": 0,
+                  "can_always_eat": true,
+                  "eat_seconds": 1000000
                 },
                 "minecraft:enchantments": {
                   "levels": {
@@ -39,6 +45,19 @@
                         3186430
                       ],
                       "slot": "mainhand"
+                    },
+                    {
+                      "type": "generic.max_health",
+                      "name": "generic.max_health",
+                      "amount": 2,
+                      "operation": "add_value",
+                      "uuid": [
+                        -120210109,
+                        -819314401,
+                        -2101694243,
+                        3186430
+                      ],
+                      "slot": "offhand"
                     },
                     {
                       "type": "generic.attack_damage",
@@ -121,6 +140,14 @@
                   "color": "dark_green",
                   "italic": false,
                   "text": " 1.4 Attack Speed"
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "color": "gray",
+                  "italic": false,
+                  "text": "When in Either Hand:"
                 },
                 {
                   "color": "blue",

@@ -1,6 +1,6 @@
-execute if entity @s[team=Red] if entity @e[type=wither_skeleton,team=Red,tag=King,tag=!killerking] run clear @s carrot_on_a_stick[custom_data~{killerking:1b}]
+execute if entity @s[team=Red] if entity @e[type=wither_skeleton,team=Red,tag=King,tag=!killerking] run clear @s carrot[custom_data~{killerking:1b}]
 
-execute if entity @s[team=Blue] if entity @e[type=wither_skeleton,team=Blue,tag=King,tag=!killerking] run clear @s carrot_on_a_stick[custom_data~{killerking:1b}]
+execute if entity @s[team=Blue] if entity @e[type=wither_skeleton,team=Blue,tag=King,tag=!killerking] run clear @s carrot[custom_data~{killerking:1b}]
 
 execute if entity @s[team=Red] if entity @e[type=wither_skeleton,team=Red,tag=King,tag=!killerking] run tellraw @s {"text":"You powered your king up!","color":"aqua"}
 

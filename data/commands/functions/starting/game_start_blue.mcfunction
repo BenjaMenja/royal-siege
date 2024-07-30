@@ -1,4 +1,10 @@
-spawnpoint @a[team=Blue] -1402 59 1230
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 run spawnpoint @a[team=Blue] 9 126 -103
+
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 run spawnpoint @a[team=Blue] 45 126 -1071
+
+execute if score #gamemode settings matches 1 if score #classicMap settings matches 0 run spawnpoint @a[team=Blue] 1015 53 -61
+
+execute if score #gamemode settings matches 1 if score #classicMap settings matches 1 run spawnpoint @a[team=Blue] 1971 106 33
 
 execute as @a[team=Blue] at @s run teleport @s -1402 59 1230
 

@@ -10,7 +10,7 @@ execute as @s[scores={Ultimate=3,Kit=3}] run scoreboard players operation @s imm
 
 execute as @s[scores={Ultimate=4,Kit=4}] run scoreboard players operation @s LifeForce += @s Ultcharge
 
-execute as @s[scores={Ultimate=5,Kit=5}] run scoreboard players operation @s Barrage += @s Ultcharge
+execute as @s[scores={Ultimate=5,Kit=5}] run scoreboard players operation @s ChaosTimer += @s Ultcharge
 
 execute as @s[scores={Ultimate=6,Kit=6}] run scoreboard players operation @s Kerfuffle += @s Ultcharge
 

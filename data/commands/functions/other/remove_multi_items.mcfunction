@@ -1,4 +1,4 @@
-clear @s[scores={Kit=10}] carrot_on_a_stick[custom_data~{switchitem:1b}] 1
+clear @s[scores={Kit=10}] carrot[custom_data~{switchitem:1b}] 1
 
 clear @s[scores={Kit=9}] bat_spawn_egg[custom_data~{lightningspell:1b}] 1
 

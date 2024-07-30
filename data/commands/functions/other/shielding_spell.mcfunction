@@ -18,4 +18,4 @@ execute if entity @s[team=Blue] run playsound royalsiege:abilities.shielding_spe
 
 execute if entity @e[team=Blue] if score #angelspellsblue voicelineCD matches 60.. run scoreboard players reset #angelspellsblue voicelineCD
 
-clear @s carrot_on_a_stick[custom_data~{shieldingspell:1b}]
+clear @s carrot[custom_data~{shieldingspell:1b}]

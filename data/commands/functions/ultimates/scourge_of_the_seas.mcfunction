@@ -24,4 +24,4 @@ tag @s add scourgeActive
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{scourge:1b}]
+clear @s carrot[custom_data~{scourge:1b}]

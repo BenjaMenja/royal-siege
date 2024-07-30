@@ -1,6 +1,6 @@
 tag @s remove resurrecting
 
-clear @s carrot_on_a_stick[custom_data~{resurrection:1b}]
+clear @s carrot[custom_data~{resurrection:1b}]
 
 execute if entity @s[team=Red] as @a[team=Red] if score @s UUID = @e[type=marker,limit=1,sort=nearest,tag=resSoulRed] UUID run tag @s add resurrected
 
@@ -15,6 +15,10 @@ tp @a[tag=resurrected,team=Blue] @e[type=marker,limit=1,sort=nearest,tag=resSoul
 scoreboard players set @a[team=Red,tag=resurrected] RedKit 197
 
 scoreboard players set @a[team=Blue,tag=resurrected] BlueKit 197
+
+execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players set @a[tag=resurrected] Respawn -101
+
+execute if score #gameDuration gameDuration matches ..18000 if score #gamemode settings matches 0 run scoreboard players set @a[tag=resurrected] Respawn 0
 
 execute as @a[team=Red,tag=resurrected] run function commands:starting/red
 

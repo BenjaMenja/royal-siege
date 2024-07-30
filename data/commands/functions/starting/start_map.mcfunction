@@ -153,6 +153,8 @@ execute if score #gamemode settings matches 0 run scoreboard players set @e[tag=
 
 execute as @a run scoreboard players operation @s Ultimate = @s ultCheck
 
+scoreboard players set @a ultsUsed 0
+
 bossbar set commands:blue_ult1 players @a[scores={Ultimate=1},team=Blue]
 
 bossbar set commands:blue_ult2 players @a[scores={Ultimate=2},team=Blue]

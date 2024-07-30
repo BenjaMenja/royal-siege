@@ -8,7 +8,7 @@
             "type": "minecraft:player",
             "equipment": {
               "mainhand": {
-                "items": "minecraft:carrot_on_a_stick",
+                "items": "minecraft:carrot",
                 "predicates": {
                   "minecraft:custom_data": "{angelicstaff:1b}"
                 }

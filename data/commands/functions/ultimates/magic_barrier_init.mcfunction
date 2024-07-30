@@ -6,4 +6,4 @@ tellraw @a [{"selector":"@s"},{"text":" shrouded their team in magical barriers!
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{magicbarrier:1b}]
+clear @s carrot[custom_data~{magicbarrier:1b}]

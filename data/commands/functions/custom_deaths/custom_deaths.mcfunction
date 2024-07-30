@@ -38,6 +38,8 @@ execute if entity @s[tag=hasBounty] run function commands:other/betting_chip_kil
 
 function commands:custom_deaths/reset_cooldowns
 
+scoreboard players set @s[predicate=commands:in_practice_range] totalDeaths 0
+
 execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players set @s Respawn -101
 
 execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players set @s RedKit -101
@@ -65,6 +67,8 @@ tag @s[tag=ultimateInv] add hadUltimate
 tag @s add notAlive
 
 #Other Tag removals
+
+tag @s remove custom_death
 
 tag @s remove hasDebrisCannon
 

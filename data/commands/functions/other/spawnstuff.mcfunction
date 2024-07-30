@@ -56,6 +56,10 @@ execute if score #charSelectSong spawnStuff matches 1401 if score #charSelectInt
 
 execute as @a[predicate=commands:in_practice_range] run scoreboard players operation @s Ultimate = @s ultCheck
 
+execute as @a[predicate=commands:in_practice_range] run tag @s remove notAlive
+
+execute as @a[tag=practiceRangePVP] at @s run particle dust{color:[1.0,0.0,0.0],scale:1} ~ ~2 ~ 0 0 0 0 1 force @a[tag=practiceRangePVP]
+
 effect give @a[predicate=commands:on_character_select_bridge] speed 1 9 true
 
 advancement grant @a[scores={secret=23}] only commands:hidden_advancements/secret

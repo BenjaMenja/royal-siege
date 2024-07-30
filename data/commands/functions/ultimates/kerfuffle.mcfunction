@@ -14,4 +14,4 @@ tellraw @a [{"selector":"@s"},{"text":" is scrambling up the enemy team!"}]
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{kerfuffle:1b}]
+clear @s carrot[custom_data~{kerfuffle:1b}]

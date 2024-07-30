@@ -18,7 +18,7 @@ execute if score #redUlts multiItems matches 0 run tellraw @s[team=Blue] [{"text
 
 execute if score #blueUlts multiItems matches 0 run tellraw @s[team=Blue] [{"text":"No teammates have their ults ready!","color":"aqua"}]
 
-clear @s carrot_on_a_stick[custom_data~{inspection:1b}] 1
+clear @s carrot[custom_data~{inspection:1b}] 1
 
 scoreboard players set #redUlts multiItems 0
 

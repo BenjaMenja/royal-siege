@@ -6,4 +6,4 @@ scoreboard players set @s blazingSpeedTimer 1
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{poprocks:1b}]
+clear @s carrot[custom_data~{poprocks:1b}]

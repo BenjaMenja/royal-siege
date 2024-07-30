@@ -41,7 +41,7 @@
                 {
                   "attribute": "minecraft:generic.max_health",
                   "name": "generic.max_health",
-                  "amount": 6,
+                  "amount": 4,
                   "operation": "add_value",
                   "id": "ddf3f095-c386-4ec5-a693-a701ef0516b3",
                   "slot": "offhand"

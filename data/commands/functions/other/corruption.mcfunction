@@ -6,4 +6,4 @@ effect give @a[nbt={Inventory:[{components:{"minecraft:custom_data":{corruptcred
 
 tag @a[nbt={Inventory:[{components:{"minecraft:custom_data":{corruptcredit:1b}}}]}] add corrupted
 
-clear @s carrot_on_a_stick[custom_data~{corruption:1b}]
+clear @s carrot[custom_data~{corruption:1b}]

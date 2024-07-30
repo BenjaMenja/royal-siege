@@ -30,4 +30,4 @@ execute if entity @s[scores={Kit=15}] run tellraw @a [{"selector":"@s"},{"color"
 
 tag @s add summarized
 
-execute as @a[team=Blue,tag=!summarized,limit=1] run function commands:other/post_game_summary_player_red
+execute as @a[team=Blue,tag=!summarized,limit=1] run function commands:other/post_game_summary_player_blue

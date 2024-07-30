@@ -12,4 +12,4 @@ scoreboard players add @s resurrectionTimer 720
 
 tag @s remove resurrecting
 
-clear @s carrot_on_a_stick[custom_data~{resurrection:1b}]
+clear @s carrot[custom_data~{resurrection:1b}]

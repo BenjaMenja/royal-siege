@@ -10,4 +10,4 @@ tellraw @a [{"selector":"@s"},{"text":" is rallying his team together!","color":
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{rally:1b}]
+clear @s carrot[custom_data~{rally:1b}]

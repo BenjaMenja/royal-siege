@@ -12,6 +12,6 @@ tellraw @a [{"selector":"@s"},{"text":" be pillaging the seven seas!"}]
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{flyingdutchman:1b}]
+clear @s carrot[custom_data~{flyingdutchman:1b}]
 
 

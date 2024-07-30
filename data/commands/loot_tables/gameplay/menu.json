@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:carrot_on_a_stick",
+          "name": "minecraft:carrot",
           "functions": [
             {
               "function": "minecraft:set_name",
@@ -33,10 +33,10 @@
                   "text": "can purchase items pertaining"
                 },
                 {
-                  "text": "to your class. You can also withdraw money and corrupt credits."
+                  "text": "to your class. You can also deposit Siege Bucks and withdraw Siege Bucks and corrupt credits."
                 },
                 {
-                  "text": "You can also see how many corrupt credits your team's bank has."
+                  "text": "You can also access your team's bank."
                 }
               ],
               "mode": "insert"
@@ -49,7 +49,13 @@
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": 5,
-                "minecraft:enchantment_glint_override": true
+                "minecraft:enchantment_glint_override": true,
+                "minecraft:food": {
+                  "nutrition": 0,
+                  "saturation": 0,
+                  "can_always_eat": true,
+                  "eat_seconds": 1000000
+                }
               }
             }
           ]

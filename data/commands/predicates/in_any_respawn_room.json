@@ -1,0 +1,25 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:in_red_respawn_forest_glen"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:in_red_respawn_winterland"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:in_blue_respawn_forest_glen"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:in_blue_respawn_winterland"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:in_tdm_gates"
+    }
+  ]
+}

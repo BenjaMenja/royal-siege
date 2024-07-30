@@ -10,6 +10,8 @@ team add Red
 
 team add spectator
 
+team add parkour
+
 #Old Scoreboards that were made before this file existed
 scoreboard objectives add Kit dummy
 scoreboard objectives add textClick dummy
@@ -22,7 +24,7 @@ scoreboard objectives add Money dummy
 scoreboard objectives add settings dummy
 scoreboard objectives add secret dummy
 scoreboard objectives add usedCOAS dummy
-scoreboard objectives add KillP dummy
+scoreboard objectives add KillP playerKillCount
 scoreboard objectives add Message dummy
 scoreboard objectives add Timer dummy
 scoreboard objectives add multiItems dummy
@@ -34,6 +36,26 @@ scoreboard objectives add gameDuration dummy
 scoreboard objectives add totalDeaths dummy
 scoreboard objectives add UUID dummy
 scoreboard objectives add voicelineCD dummy
+scoreboard objectives add nearbyBlocks dummy
+scoreboard objectives add players dummy
+scoreboard objectives add healthVar dummy
+scoreboard objectives add temp dummy
+scoreboard objectives add PPainSong dummy
+scoreboard objectives add parkourTime dummy
+scoreboard objectives add matchID dummy
+scoreboard objectives add Ultcharge dummy
+scoreboard objectives add RedKit dummy
+scoreboard objectives add BlueKit dummy
+scoreboard objectives add ray.LOS dummy
+scoreboard objectives add activeHotbar dummy
+scoreboard objectives add Respawn dummy
+scoreboard objectives add Health health
+scoreboard objectives add dashcharge dummy
+scoreboard objectives add Mimic dummy
+scoreboard objectives add Start dummy
+scoreboard objectives add End dummy
+scoreboard objectives add shadow dummy
+scoreboard objectives add ItemKill dummy
 
 #New Scoreboards
 
@@ -105,6 +127,8 @@ scoreboard objectives add entSelfishness dummy
 scoreboard objectives add firCharChallenge dummy
 scoreboard objectives add numDrones dummy
 scoreboard objectives add totalSiegeBucks dummy
+scoreboard objectives add blunderDis dummy
+scoreboard objectives add blunderStore dummy
 
 scoreboard objectives remove dmDelay
 scoreboard objectives remove olympicVaultTimer
@@ -117,3 +141,6 @@ scoreboard objectives remove DecayD
 scoreboard objectives remove PotionTimer
 scoreboard objectives remove lockerdeath
 scoreboard objectives remove fall
+scoreboard objectives remove usedCOAS
+scoreboard objectives remove JBFix
+scoreboard objectives remove JBTime

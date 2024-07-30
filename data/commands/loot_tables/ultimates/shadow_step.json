@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:carrot_on_a_stick",
+          "name": "minecraft:carrot",
           "functions": [
             {
               "function": "minecraft:set_name",
@@ -30,7 +30,7 @@
                   "text": "Transform into a shadowy blob for 5 seconds."
                 },
                 {
-                  "text": "you deal high damage to every enemy nearby"
+                  "text": "You deal high damage to every enemy nearby"
                 },
                 {
                   "text": "(including the enemy king)."
@@ -45,7 +45,13 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 66
+                "minecraft:custom_model_data": 66,
+                "minecraft:food": {
+                  "nutrition": 0,
+                  "saturation": 0,
+                  "can_always_eat": true,
+                  "eat_seconds": 1000000
+                }
               }
             }
           ]

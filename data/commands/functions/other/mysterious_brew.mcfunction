@@ -32,4 +32,4 @@ execute as @e[type=item,sort=nearest,limit=1,tag=mysteriousbrew,tag=!stop] store
 
 tag @e[type=item,tag=mysteriousbrew] add stop
 
-clear @s carrot_on_a_stick[custom_data~{mysteriousbrew:1b}] 1
+clear @s carrot[custom_data~{mysteriousbrew:1b}] 1

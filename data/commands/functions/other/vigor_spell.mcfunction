@@ -46,4 +46,4 @@ execute at @s[team=Blue] if score #angelspellsred voicelineCD matches 60.. run p
 
 execute if entity @s[team=Blue] if score #angelspellsblue voicelineCD matches 60.. run scoreboard players reset #angelspellsblue voicelineCD
 
-clear @s carrot_on_a_stick[custom_data~{vigorspell:1b}]
+clear @s carrot[custom_data~{vigorspell:1b}]

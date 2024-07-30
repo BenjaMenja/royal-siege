@@ -81,3 +81,5 @@ scoreboard players set @s pyromaniaTimer 1
 scoreboard players set @s angelicBlessingTimer 1
 
 scoreboard players set @s jKillTimer 300
+
+scoreboard players set @s blunderTimer 1

@@ -34,4 +34,4 @@ tag @e[tag=chrysanthemum_projectile] add stop
 
 scoreboard players set @s RSAttr.CShellDownGravity 0
 
-clear @s carrot_on_a_stick[custom_data~{chrysanthemumshell:1b}]
+clear @s carrot[custom_data~{chrysanthemumshell:1b}]

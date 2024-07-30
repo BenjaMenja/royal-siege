@@ -62,4 +62,4 @@ tag @s remove hadUltimate
 
 tag @s remove ultimateInv
 
-clear @s carrot_on_a_stick[custom_data~{ultimatecharger:1b}]
+clear @s carrot[custom_data~{ultimatecharger:1b}]

@@ -12,4 +12,4 @@ tellraw @a [{"selector":"@s"},{"text":" has evolved!"}]
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{evolutionUlt:1b}]
+clear @s carrot[custom_data~{evolutionUlt:1b}]

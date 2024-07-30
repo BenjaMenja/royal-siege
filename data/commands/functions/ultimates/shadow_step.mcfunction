@@ -16,4 +16,4 @@ function commands:attributes/adds/add_shadow_step_kb_resist
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{shadowstep:1b}]
+clear @s carrot[custom_data~{shadowstep:1b}]

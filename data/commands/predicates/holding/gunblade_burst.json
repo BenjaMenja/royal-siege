@@ -1,15 +1,14 @@
 {
-  "condition": "minecraft:any_of",
+  "condition": "any_of",
   "terms": [
     {
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
-        "effects": {
-          "minecraft:levitation": {
-            "amplifier": {
-              "min": 129,
-              "max": 255
+        "equipment": {
+          "mainhand": {
+            "predicates": {
+              "minecraft:custom_data": "{switch:1b}"
             }
           }
         }
@@ -19,11 +18,10 @@
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
-        "effects": {
-          "minecraft:jump_boost": {
-            "amplifier": {
-              "min": 129,
-              "max": 255
+        "equipment": {
+          "offhand": {
+            "predicates": {
+              "minecraft:custom_data": "{switch:1b}"
             }
           }
         }

@@ -8,4 +8,4 @@ execute if entity @s[team=Blue] run tellraw @a [{"selector":"@a[limit=1,team=Blu
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{pizzatime:1b}] 1
+clear @s carrot[custom_data~{pizzatime:1b}] 1

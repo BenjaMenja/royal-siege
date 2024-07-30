@@ -24,4 +24,4 @@ execute at @s run playsound minecraft:entity.generic.eat master @a ~ ~ ~ 1 0
 
 scoreboard players add @s ultsUsed 1
 
-clear @s carrot_on_a_stick[custom_data~{dinnersready:1b}]
+clear @s carrot[custom_data~{dinnersready:1b}]

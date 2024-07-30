@@ -1,13 +1,31 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "equipment": {
-      "mainhand": {
-        "predicates": {
-          "minecraft:custom_data": "{DefensiveSpell:1b}"
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "mainhand": {
+            "predicates": {
+              "minecraft:custom_data": "{DefensiveSpell:1b}"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "offhand": {
+            "predicates": {
+              "minecraft:custom_data": "{DefensiveSpell:1b}"
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

@@ -6,4 +6,4 @@ tag @s add countering
 
 function commands:attributes/adds/add_counter_slow
 
-clear @s carrot_on_a_stick[custom_data~{counter:1b}] 1
+clear @s carrot[custom_data~{counter:1b}] 1
