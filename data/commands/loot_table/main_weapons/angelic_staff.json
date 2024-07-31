@@ -35,54 +35,30 @@
                   "modifiers": [
                     {
                       "type": "generic.max_health",
-                      "name": "generic.max_health",
+                      "id": "e7849b6f-e526-4d6a-9bf1-1aa56bdc0f50",
                       "amount": 2,
                       "operation": "add_value",
-                      "uuid": [
-                        -1202101099,
-                        -819314401,
-                        -2101694243,
-                        3186430
-                      ],
                       "slot": "mainhand"
                     },
                     {
                       "type": "generic.max_health",
-                      "name": "generic.max_health",
+                      "id": "fa975054-75ee-4eba-b17b-16a46469fa5c",
                       "amount": 2,
                       "operation": "add_value",
-                      "uuid": [
-                        -120210109,
-                        -819314401,
-                        -2101694243,
-                        3186430
-                      ],
                       "slot": "offhand"
                     },
                     {
                       "type": "generic.attack_damage",
-                      "name": "generic.attack_damage",
+                      "id": "ffae960a-ce47-4a60-9f2e-2e51e54ec1d2",
                       "amount": 6,
                       "operation": "add_value",
-                      "uuid": [
-                        -1508106476,
-                        -1623702529,
-                        -1493268433,
-                        1849482176
-                      ],
                       "slot": "mainhand"
                     },
                     {
                       "type": "generic.attack_speed",
-                      "name": "generic.attack_speed",
+                      "id": "b5394c61-d558-4e4d-9854-e048f8704073",
                       "amount": -2.6,
                       "operation": "add_value",
-                      "uuid": [
-                        42814175,
-                        1691961858,
-                        -1792550184,
-                        516941725
-                      ],
                       "slot": "mainhand"
                     }
                   ],

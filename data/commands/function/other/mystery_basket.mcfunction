@@ -1,6 +1,4 @@
-loot spawn ~ -5 ~ loot commands:rng/mystery_basket
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{mysteryFood:1b}}}}] store result score #mysteryfood RNG run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
-kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{mysteryFood:1b}}}}]
+execute store result score #mysteryfood RNG run random roll 1..6
 
 #Red Team
 

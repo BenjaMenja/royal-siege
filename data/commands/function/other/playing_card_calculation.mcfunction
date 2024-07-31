@@ -1,18 +1,14 @@
 #Give values to cards
 
-loot spawn ~ -5 ~ loot commands:rng/card_value
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{cardvalue:1b}}}}] store result score #rng RNG run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
+execute store result score #rng RNG run random roll 1..13
 scoreboard players operation @s cardValue = #rng RNG
 execute at @s[tag=card6,tag=redProj] if entity @a[tag=cardShooter,tag=sleightofhand,team=Red] run scoreboard players set @s cardValue 13
 execute at @s[tag=card7,tag=redProj] if entity @a[tag=cardShooter,tag=sleightofhand,team=Red] run scoreboard players set @s cardValue 13
 execute at @s[tag=card6,tag=blueProj] if entity @a[tag=cardShooter,tag=sleightofhand,team=Blue] run scoreboard players set @s cardValue 13
 execute at @s[tag=card7,tag=blueProj] if entity @a[tag=cardShooter,tag=sleightofhand,team=Blue] run scoreboard players set @s cardValue 13
-kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{cardvalue:1b}}}}]
 
-loot spawn ~ -5 ~ loot commands:rng/card_suite
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{cardsuite:1b}}}}] store result score #rng RNG run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
+execute store result score #rng RNG run random roll 1..4
 scoreboard players operation @s cardSuite = #rng RNG
-kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{cardsuite:1b}}}}]
 scoreboard players reset #rng RNG
 
 #Average Card Value

@@ -1,4 +1,4 @@
-attribute @s minecraft:generic.gravity modifier add 12-1-500-8-0 "SeismicSlamUpGravity" -5 add_multiplied_base
+attribute @s minecraft:generic.gravity modifier add 12-1-500-8-0 -5 add_multiplied_base
 
 scoreboard players set @s WarriorItem 600
 

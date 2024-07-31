@@ -2,9 +2,7 @@ execute if entity @s[tag=custom_death] run return -1
 
 tag @s add custom_death
 
-loot spawn ~ -5 ~ loot commands:rng/fake_money_death
-execute as @e[type=item] if data entity @s Item.components.minecraft:custom_data.fake_money_death store result score #rng RNG run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
-kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{fake_money_death:1b}}}}]
+execute store result score #rng RNG run random roll 1..5
 
 execute if score #rng RNG matches 1 run tellraw @a [{"selector":"@s"},{"text":" fell for the simplest of tricks.","color":"white"}]
 

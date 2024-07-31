@@ -1,6 +1,4 @@
-loot spawn ~ -5 ~ loot commands:rng/corrupt_side_effects
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{corruptsideeffect:1b}}}}] store result score #rng RNG run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[{name:"RNG"}].amount
-kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{corruptsideeffect:1b}}}}]
+execute store result score #rng RNG run random roll 1..10
 
 execute if score #rng RNG matches 1 run effect give @s nausea 4 0 true
 

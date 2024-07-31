@@ -26,14 +26,8 @@
                 },
                 "minecraft:attribute_modifiers": [
                   {
-                    "uuid": [
-                      -88910001,
-                      1231985571,
-                      -55513424,
-                      990900192
-                    ],
                     "type": "generic.armor",
-                    "name": "generic.armor",
+                    "id": "d95ee0cb-bd64-467e-ac1d-05c72ed8d221",
                     "amount": 6,
                     "operation": "add_value",
                     "slot": "chest"

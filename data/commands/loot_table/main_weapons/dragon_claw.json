@@ -24,28 +24,16 @@
                   "modifiers": [
                     {
                       "type": "generic.attack_damage",
-                      "name": "generic.attack_damage",
+                      "id": "b5394c61-d558-4e4d-9854-e048f8704072",
                       "amount": 9,
                       "operation": "add_value",
-                      "uuid": [
-                        310231424,
-                        1660243810,
-                        -1883195533,
-                        450408612
-                      ],
                       "slot": "mainhand"
                     },
                     {
                       "type": "generic.attack_speed",
-                      "name": "generic.attack_speed",
+                      "id": "b5394c61-d558-4bcd-9854-e048f8704073",
                       "amount": -2.4,
                       "operation": "add_value",
-                      "uuid": [
-                        -638199575,
-                        -104118525,
-                        -1186215928,
-                        1428042095
-                      ],
                       "slot": "mainhand"
                     }
                   ],

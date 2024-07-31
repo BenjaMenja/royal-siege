@@ -24,27 +24,15 @@
                 },
                 "minecraft:attribute_modifiers": [
                   {
-                    "uuid": [
-                      -18391,
-                      -1902024,
-                      1811185049,
-                      1829854767
-                    ],
                     "type": "generic.armor",
-                    "name": "generic.armor",
+                    "id": "85626ae5-6ace-472d-9e05-c53492df0bef",
                     "amount": 3,
                     "operation": "add_value",
                     "slot": "feet"
                   },
                   {
-                    "uuid": [
-                      173923821,
-                      -657839465,
-                      -199029738,
-                      -1029099451
-                    ],
                     "type": "generic.movement_speed",
-                    "name": "generic.movement_speed",
+                    "id": "b124ebc8-82ee-40db-9cee-e31008d2ce1d",
                     "amount": 0.1,
                     "operation": "add_multiplied_base",
                     "slot": "feet"

@@ -79,33 +79,31 @@
                   "saturation": 0,
                   "can_always_eat": true,
                   "eat_seconds": 1000000
+                },
+                "minecraft:attribute_modifiers": {
+                  "modifiers": [
+                    {
+                      "type": "minecraft:generic.attack_damage",
+                      "amount": 6.5,
+                      "operation": "add_value",
+                      "id": "9fee31ab-9d7f-4afd-a46c-f170328ac9b2",
+                      "slot": "mainhand"
+                    },
+                    {
+                      "type": "minecraft:generic.attack_speed",
+                      "amount": -2.2,
+                      "operation": "add_value",
+                      "id": "09e6d8e9-b680-4d2e-b084-b9bb52ece42c",
+                      "slot": "mainhand"
+                    }
+                  ],
+                  "show_in_tooltip": false
                 }
               }
             },
             {
               "function": "minecraft:set_custom_data",
               "tag": "{sparkler:1b}"
-            },
-            {
-              "function": "minecraft:set_attributes",
-              "modifiers": [
-                {
-                  "attribute": "minecraft:generic.attack_damage",
-                  "name": "generic.attack_damage",
-                  "amount": 6.5,
-                  "operation": "add_value",
-                  "id": "f5c296b2-c2e3-43a6-8011-d76cf1879eb8",
-                  "slot": "mainhand"
-                },
-                {
-                  "attribute": "minecraft:generic.attack_speed",
-                  "name": "generic.attack_speed",
-                  "amount": -2.2,
-                  "operation": "add_value",
-                  "id": "9feb42d3-c3c0-4fb8-9d7a-346993459777",
-                  "slot": "mainhand"
-                }
-              ]
             },
             {
               "function": "minecraft:toggle_tooltips",

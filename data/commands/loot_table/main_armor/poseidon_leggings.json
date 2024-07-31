@@ -25,14 +25,8 @@
                 },
                 "minecraft:attribute_modifiers": [
                   {
-                    "uuid": [
-                      -83190301,
-                      78930103,
-                      41819195,
-                      1031859018
-                    ],
                     "type": "generic.armor",
-                    "name": "generic.armor",
+                    "id": "6e47caba-356d-4766-be86-a4d3e90e42c9",
                     "amount": 5,
                     "operation": "add_value",
                     "slot": "legs"

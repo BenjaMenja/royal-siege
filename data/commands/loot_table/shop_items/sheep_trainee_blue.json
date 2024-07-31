@@ -44,15 +44,9 @@
                         "minecraft:attribute_modifiers": [
                           {
                             "type": "generic.movement_speed",
-                            "name": "generic.movement_speed",
+                            "id": "6e47caba-356d-4766-be86-a4d3e000c8c9",
                             "amount": -0.75,
                             "operation": "add_multiplied_base",
-                            "uuid": [
-                              -718119152,
-                              -1279243792,
-                              -1395214775,
-                              522061349
-                            ],
                             "slot": "chest"
                           }
                         ]
