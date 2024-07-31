@@ -14,7 +14,7 @@ loot give @s[scores={Kit=1,RedKit=198}] loot commands:main_weapons/warrior_battl
 
 loot give @s[scores={Kit=1,RedKit=198}] loot commands:main_abilities/seismic_slam
 
-give @s[scores={Kit=1,RedKit=198}] minecraft:shield[unbreakable={}] 1
+item replace entity @s[scores={Kit=1,RedKit=198}] weapon.offhand with minecraft:shield[unbreakable={}] 1
 
 give @s[scores={Kit=1,RedKit=198}] golden_apple 2
 
@@ -40,7 +40,7 @@ loot give @s[scores={Kit=3,RedKit=198}] loot commands:main_weapons/guardian_blad
 
 loot give @s[scores={Kit=3,RedKit=198}] loot commands:main_abilities/defensive_spell
 
-give @s[scores={Kit=3,RedKit=198}] minecraft:shield[unbreakable={}] 1
+item replace entity @s[scores={Kit=3,RedKit=198}] weapon.offhand with minecraft:shield[unbreakable={}] 1
 
 loot replace entity @s[scores={Kit=4,RedKit=198}] armor.head loot commands:heads/angel 
 

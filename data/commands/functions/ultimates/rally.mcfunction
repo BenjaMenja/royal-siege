@@ -1,6 +1,6 @@
-execute at @s[team=Red] run teleport @a[team=Red,predicate=commands:in_any_battlefield] ~ ~ ~
+execute at @s[team=Red] run teleport @a[team=Red,predicate=commands:in_any_battlefield,distance=..25] ~ ~ ~
 
-execute at @s[team=Blue] run teleport @a[team=Blue,predicate=commands:in_any_battlefield] ~ ~ ~
+execute at @s[team=Blue] run teleport @a[team=Blue,predicate=commands:in_any_battlefield,distance=..25] ~ ~ ~
 
 execute at @s[team=Red] as @a[team=Red,predicate=commands:in_any_battlefield] run function commands:attributes/adds/add_rally_atkdmg
 

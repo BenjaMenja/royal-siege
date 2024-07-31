@@ -129,6 +129,7 @@ scoreboard objectives add numDrones dummy
 scoreboard objectives add totalSiegeBucks dummy
 scoreboard objectives add blunderDis dummy
 scoreboard objectives add blunderStore dummy
+scoreboard objectives add abilityCD dummy
 
 scoreboard objectives remove dmDelay
 scoreboard objectives remove olympicVaultTimer

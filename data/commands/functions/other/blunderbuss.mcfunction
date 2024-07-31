@@ -101,7 +101,7 @@ execute as @e[tag=blunderArrow,tag=!stop] store result entity @s Motion[2] doubl
 
 tag @e[tag=blunderArrow] add stop
 
-scoreboard players set @s blunderTimer 100
+scoreboard players set @s blunderTimer 120
 
 tag @s remove blunderShoot
 

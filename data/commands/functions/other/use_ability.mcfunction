@@ -4,6 +4,12 @@ advancement revoke @s only commands:use_ability
 
 execute if entity @s[tag=rebooting] run return -1
 
+#Internal Cooldown
+
+execute if score @s abilityCD matches ..3 run return -1
+
+execute if score @s abilityCD matches 4.. run scoreboard players set @s abilityCD 0
+
 #Seismic Slam
 
 execute if entity @s[scores={WarriorItem=..0},predicate=commands:holding/seismic_slam,tag=!rooted] at @s run function commands:attributes/adds/add_seismic_slam_up_gravity

@@ -24,6 +24,10 @@ execute as @e[type=arrow,tag=!getTeam] run function commands:other/arrow_get_tea
 
 function commands:command_chunk/item_clear_filter
 
+#Internal Ability Cooldown
+
+scoreboard players add @a[predicate=commands:in_any_battlefield] abilityCD 1
+
 #Cavalry Charge (Warrior Ultimate)
 
 execute as @a[scores={Ultimate=2},tag=!notAlive,predicate=!commands:inventory/cavalry_charge] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s Horse 1

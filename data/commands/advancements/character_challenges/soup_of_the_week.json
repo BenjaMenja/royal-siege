@@ -34,8 +34,9 @@
         "player": {
           "equipment": {
             "mainhand": {
-              "nbt": "{cornchowder:1b}",
-              "enchantments": []
+              "predicates": {
+                "minecraft:custom_data": "{cornchowder:1b}"
+              }
             }
           }
         },
@@ -50,7 +51,9 @@
         "player": {
           "equipment": {
             "mainhand": {
-              "nbt": "{splitpeasoup:1b}"
+              "predicates": {
+                "minecraft:custom_data": "{splitpeasoup:1b}"
+              }
             }
           }
         },
@@ -65,7 +68,9 @@
         "player": {
           "equipment": {
             "mainhand": {
-              "nbt": "{chickennoodlesoup:1b}"
+              "predicates": {
+                "minecraft:custom_data": "{chickennoodlesoup:1b}"
+              }
             }
           }
         },
@@ -80,7 +85,9 @@
         "player": {
           "equipment": {
             "mainhand": {
-              "nbt": "{frenchonionsoup:1b}"
+              "predicates": {
+                "minecraft:custom_data": "{frenchonionsoup:1b}"
+              }
             }
           }
         },
@@ -95,7 +102,9 @@
         "player": {
           "equipment": {
             "mainhand": {
-              "nbt": "{tomatosoup:1b}"
+              "predicates": {
+                "minecraft:custom_data": "{tomatosoup:1b}"
+              }
             }
           }
         },
