@@ -1,13 +1,13 @@
 {
   "pack": {
-    "pack_format": 41,
+    "pack_format": 48,
     "description": "Royal Siege Datapack"
   },
   "filter": {
     "block": [
       {
         "namespace": "minecraft",
-        "path": "advancements/.*"
+        "path": "advancement/.*"
       }
     ]
   }

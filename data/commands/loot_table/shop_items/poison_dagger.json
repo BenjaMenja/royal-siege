@@ -48,6 +48,9 @@
                 "minecraft:custom_model_data": 61,
                 "minecraft:unbreakable": {
                   "show_in_tooltip": false
+                },
+                "minecraft:enchantments": {
+                  "commands:poison_dagger": 1
                 }
               }
             },

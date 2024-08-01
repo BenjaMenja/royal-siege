@@ -54,14 +54,14 @@
                     },
                     {}
                   ],
-                  "Attributes": [
+                  "attributes": [
                     {
-                      "Name": "generic.knockback_resistance",
-                      "Base": 1
+                      "id": "generic.knockback_resistance",
+                      "base": 1
                     },
                     {
-                      "Name": "generic.max_health",
-                      "Base": 50
+                      "id": "generic.max_health",
+                      "base": 50
                     }
                   ]
                 }

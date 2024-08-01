@@ -1,0 +1,42 @@
+{
+    "description": {
+        "text": "Multi-Bow",
+        "color": "gray",
+        "italic": false
+    },
+    "weight": 1,
+    "min_cost": {
+        "base": 1,
+        "per_level_above_first": 1
+    },
+    "max_cost": {
+        "base": 20,
+        "per_level_above_first": 1
+    },
+    "max_level": 1,
+    "slots": [
+        "any"
+    ],
+    "supported_items": [
+        "bow"
+    ],
+    "anvil_cost": 1,
+    "effects": {
+        "projectile_count": [
+            {
+                "effect": {
+                    "type": "set",
+                    "value": 5
+                }
+            }
+        ],
+        "projectile_spread": [
+            {
+                "effect": {
+                    "type": "set",
+                    "value": 10
+                }
+            }
+        ]
+    }
+}
