@@ -24,6 +24,12 @@ execute at @s[team=Blue] if entity @a[team=Blue,scores={Kit=4,Ultimate=14}] run 
 
 execute at @s run scoreboard players operation @e[type=marker,tag=resSoul,sort=nearest,limit=1] UUID = @s UUID
 
+#Kill Wizard Minions
+
+execute if entity @s[team=Red,scores={Kit=6}] run kill @e[type=zombie,team=Red,tag=WM]
+
+execute if entity @s[team=Blue,scores={Kit=6}] run kill @e[type=zombie,team=Blue,tag=WM]
+
 #TDM Kill Counter
 
 execute if entity @s[team=Red] if score #gamemode settings matches 1 run scoreboard players add #bluekills tdmKills 1

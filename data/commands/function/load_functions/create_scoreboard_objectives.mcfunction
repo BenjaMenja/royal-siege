@@ -24,7 +24,6 @@ scoreboard objectives add Money dummy
 scoreboard objectives add settings dummy
 scoreboard objectives add secret dummy
 scoreboard objectives add usedCOAS dummy
-scoreboard objectives add KillP playerKillCount
 scoreboard objectives add Message dummy
 scoreboard objectives add Timer dummy
 scoreboard objectives add multiItems dummy
@@ -56,6 +55,7 @@ scoreboard objectives add Start dummy
 scoreboard objectives add End dummy
 scoreboard objectives add shadow dummy
 scoreboard objectives add ItemKill dummy
+scoreboard objectives add WarriorItem dummy
 
 #New Scoreboards
 
@@ -145,3 +145,4 @@ scoreboard objectives remove fall
 scoreboard objectives remove usedCOAS
 scoreboard objectives remove JBFix
 scoreboard objectives remove JBTime
+scoreboard objectives remove KillP

@@ -24,8 +24,6 @@ tag @s remove justiceKill
 
 tag @s remove randomized
 
-tag @s remove noWarp
-
 tag @s remove found
 
 tag @s remove STOP

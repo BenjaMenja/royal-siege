@@ -6,7 +6,7 @@ effect give @s[nbt={Inventory:[{components:{"minecraft:custom_data":{fishnausea:
 
 execute if entity @s[nbt={Inventory:[{components:{"minecraft:custom_data":{fishslow:1b}}}]}] run function commands:attributes/adds/add_fish_cannon_slow
 
-execute at @s[nbt={Inventory:[{components:{"minecraft:custom_data":{fishexplode:1b}}}]}] run summon minecraft:fireball ~ ~ ~ {ExplosionPower:2,power:[0.0,-1.0,0.0],Tags:["fm"]}
+execute at @s[nbt={Inventory:[{components:{"minecraft:custom_data":{fishexplode:1b}}}]}] run summon minecraft:fireball ~ ~ ~ {ExplosionPower:2,Motion:[0.0,-1.0,0.0],Tags:["fm"]}
 
 clear @s cod[custom_data~{fishdamage:1b}]
 

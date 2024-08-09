@@ -33,7 +33,8 @@
                 "minecraft:enchantments": {
                   "minecraft:infinity": 1,
                   "minecraft:punch": 1,
-                  "minecraft:power": 7
+                  "minecraft:power": 7,
+                  "commands:sniper_bow": 1
                 }
               }
             },

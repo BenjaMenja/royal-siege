@@ -4,6 +4,8 @@ execute if items entity @s armor.chest leather_chestplate[custom_data~{dragonsca
 
 loot replace entity @a[tag=noElytra] armor.chest loot commands:shop_items/elytra
 
+function commands:attributes/adds/add_safe_fall_dist
+
 playsound entity.ender_dragon.ambient master @a[distance=..20] ~ ~ ~ 1 0
 
 give @s firework_rocket 64

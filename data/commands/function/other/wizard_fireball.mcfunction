@@ -30,11 +30,11 @@ scoreboard players operation @e[type=fireball,tag=WF,limit=1,tag=!stop] posY -= 
 
 scoreboard players operation @e[type=fireball,tag=WF,limit=1,tag=!stop] posZ -= @s posZ
 
-execute store result entity @e[type=fireball,tag=WF,limit=1,tag=!stop] power[0] double 0.0008 run scoreboard players get @e[type=fireball,tag=WF,limit=1,tag=!stop] posX
+execute store result entity @e[type=fireball,tag=WF,limit=1,tag=!stop] Motion[0] double 0.0008 run scoreboard players get @e[type=fireball,tag=WF,limit=1,tag=!stop] posX
 
-execute store result entity @e[type=fireball,tag=WF,limit=1,tag=!stop] power[1] double 0.0008 run scoreboard players get @e[type=fireball,tag=WF,limit=1,tag=!stop] posY
+execute store result entity @e[type=fireball,tag=WF,limit=1,tag=!stop] Motion[1] double 0.0008 run scoreboard players get @e[type=fireball,tag=WF,limit=1,tag=!stop] posY
 
-execute store result entity @e[type=fireball,tag=WF,limit=1,tag=!stop] power[2] double 0.0008 run scoreboard players get @e[type=fireball,tag=WF,limit=1,tag=!stop] posZ
+execute store result entity @e[type=fireball,tag=WF,limit=1,tag=!stop] Motion[2] double 0.0008 run scoreboard players get @e[type=fireball,tag=WF,limit=1,tag=!stop] posZ
 
 tag @e[type=fireball,tag=WF] add stop
 

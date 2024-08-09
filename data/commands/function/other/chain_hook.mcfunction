@@ -1,6 +1,6 @@
 
 
-kill @e[type=item,tag=hook,distance=..2]
+execute at @s run kill @e[type=item,tag=hook,distance=..2]
 
 execute at @s run teleport @s ~ ~ ~ facing entity @a[limit=1,scores={Kit=7}]
 

@@ -106,10 +106,6 @@ execute as @a[scores={HorseDie=1..,Kit=2..}] at @s run tp @s ~ ~ ~
 
 scoreboard players set @a[scores={HorseDie=1..}] HorseDie 0
 
-#Sniper Bow No Gravity
-
-execute as @e[type=arrow,nbt={damage:6.0d}] run data merge entity @s {NoGravity:1b} 
-
 #Chaos Bow (Archer Ultimate)
 
 execute as @a[scores={Kit=5,Ultimate=5},tag=!notAlive,predicate=!commands:inventory/chaos_bow_token] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s ChaosTimer 1
@@ -404,7 +400,7 @@ execute as @e[type=falling_block,tag=FallingChest] at @s run particle happy_vill
 
 scoreboard players add @e[type=armor_stand,tag=Chest] TreasureDelete 1
 
-execute as @e[type=armor_stand,scores={TreasureDelete=299}] at @s run summon fireball ~ ~ ~ {power:[0.0,-1.0,0.0],ExplosionPower:0}
+execute as @e[type=armor_stand,scores={TreasureDelete=299}] at @s run summon fireball ~ ~ ~ {Motion:[0.0,-1.0,0.0],ExplosionPower:0}
 
 execute as @e[type=armor_stand,scores={TreasureDelete=300..}] at @s run fill ~ ~ ~ ~ ~1 ~ air replace chest
 
@@ -584,7 +580,7 @@ execute as @a[scores={expBombTimer=1..},predicate=commands:inventory/exp_blaster
 
 execute as @e[tag=stop,type=experience_bottle] store success entity @s Air short 1 if data entity @s {Air:0s}
 
-execute as @e[type=experience_orb] at @s run summon fireball ~ ~ ~ {CustomNameVisible:0b,ExplosionPower:3,power:[0.0,-2.0,0.0],CustomName:'{"text":"Experience Bomb","color":"green"}',Item:{id:"minecraft:experience_bottle",count:1},Tags:["fm"]}
+execute as @e[type=experience_orb] at @s run summon fireball ~ ~ ~ {CustomNameVisible:0b,ExplosionPower:3,Motion:[0.0,-2.0,0.0],CustomName:'{"text":"Experience Bomb","color":"green"}',Item:{id:"minecraft:experience_bottle",count:1},Tags:["fm"]}
 
 kill @e[type=experience_orb]
 
@@ -720,8 +716,6 @@ execute as @a[scores={shadow=10..89}] at @s run function commands:ultimates/shad
 
 execute as @a[scores={shadow=90..}] run function commands:ultimates/shadow_step_end
 
-scoreboard players set @a[scores={died=1..}] shadow 90
-
 #Gunblade
 
 scoreboard players add @a[scores={Kit=10}] BurstTimer 1
@@ -788,10 +782,6 @@ execute as @e[type=item,tag=shockGrenadeBlue] at @s if entity @a[team=Red,distan
 
 execute as @e[type=item,tag=shockGrenade,scores={nearbyBlocks=1..}] at @s run function commands:other/shock_grenade_explode
 
-#Virus Detector
-
-clear @a[scores={usedCOAS=1..},predicate=commands:holding/virus_detector] carrot_on_a_stick[custom_data~{virusdetector:1b}] 1
-
 #System Reboot (Robot Ultimate)
 
 execute as @a[scores={Ultimate=10},tag=!notAlive,predicate=!commands:inventory/system_reboot] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s RobotUlt 1
@@ -824,19 +814,13 @@ scoreboard players set @a[scores={Ultcharge=1..}] Ultcharge 0
 
 execute as @a[scores={Ultimate=1..30}] run function commands:other/ultimate_bossbars
 
+#Warrior Cooldown Display
+
+execute as @a[scores={Kit=1}] run function commands:cooldowns/warrior_display
+
 #Seismic Slam
 
 execute as @a[scores={Kit=1,WarriorItem=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s WarriorItem 1
-
-execute as @a[scores={Kit=1}] run scoreboard players operation @s slamStore = @s WarriorItem
-
-execute as @a[scores={Kit=1}] run scoreboard players operation @s exChargeStore = @s exCharge
-
-execute as @a[scores={Kit=1}] store result score @s slamDis run scoreboard players operation @s slamStore /= #ticks constant
-
-execute as @a[scores={Kit=1}] store result score @s exChargeDis run scoreboard players operation @s exChargeStore /= #ticks constant
-
-title @a[scores={Kit=1}] actionbar [{"text":"Seismic Slam: ","color":"green"},{"score":{"name":"*","objective":"slamDis"},"color":"aqua"},{"text":"     "},{"text":"Explosive Charge: ","color":"green"},{"score":{"name":"*","objective":"exChargeDis"},"color":"aqua"}]
 
 effect give @a[tag=slamming,nbt={OnGround:0b}] resistance 1 2 true
 
@@ -892,7 +876,7 @@ execute as @a[scores={Message=1..}] at @s if entity @e[type=armor_stand,tag=Ches
 
 execute as @a[scores={Message=1..},limit=1] run function commands:custom_deaths/custom_deaths
 
-scoreboard players set @a[scores={KillP=1..}] KillP 0
+advancement revoke @a[advancements={commands:player_kill=true}] only commands:player_kill
 
 scoreboard players set @a[scores={Message=1..}] Message 0
 
@@ -1086,7 +1070,7 @@ scoreboard players add @e[type=boat,tag=flyingdutchman] fDutchmanDur 1
 
 execute as @a[predicate=commands:vehicle/flying_dutchman] run effect give @s resistance 1 2 true
 
-execute as @e[type=boat,tag=flyingdutchman,scores={fDutchmanTimer=16..}] at @s run summon fireball ~ ~-1 ~ {ExplosionPower:4,Tags:["WF","fm"],power:[0.0,-1.0,0.0]}
+execute as @e[type=boat,tag=flyingdutchman,scores={fDutchmanTimer=16..}] at @s run summon fireball ~ ~-1 ~ {ExplosionPower:4,Tags:["WF","fm"],Motion:[0.0,-1.0,0.0]}
 
 scoreboard players reset @e[type=boat,tag=flyingdutchman,scores={fDutchmanTimer=16..}] fDutchmanTimer
 
@@ -1172,11 +1156,11 @@ advancement grant @a[scores={craftQuartzBlock=1..}] only commands:hidden_advance
 
 scoreboard players add @a[tag=slamming,nbt={OnGround:0b}] slamSuspend 1
 
-advancement grant @a[scores={slamSuspend=300..}] only commands:hidden_advancements/seismic_suspension
+advancement grant @a[scores={slamSuspend=300..},predicate=!commands:in_practice_range] only commands:hidden_advancements/seismic_suspension
 
 advancement grant @a[scores={useAnvil=1..}] only commands:hidden_advancements/rename_item
 
-advancement grant @a[scores={totalDeaths=25..}] only commands:challenges/death_wish
+advancement grant @a[scores={totalDeaths=25..},predicate=!commands:in_practice_range] only commands:challenges/death_wish
 
 execute if score #red corruptBank matches 25.. run advancement grant @a[team=Red] only commands:challenges/corrupt_hoarder
 
@@ -1184,25 +1168,25 @@ execute if score #blue corruptBank matches 25.. run advancement grant @a[team=Bl
 
 advancement grant @a[scores={useJukebox=1..}] only commands:hidden_advancements/record_label
 
-advancement grant @a[scores={Ninjakill=1..,ePearlTimer=..40,Kit=2}] only commands:character_challenges/translocator
+advancement grant @a[scores={Ninjakill=1..,ePearlTimer=..40,Kit=2},predicate=!commands:in_practice_range] only commands:character_challenges/translocator
 
-advancement grant @a[scores={ultsEaten=2..,Kit=3}] only commands:character_challenges/buffet
+advancement grant @a[scores={ultsEaten=2..,Kit=3},predicate=!commands:in_practice_range] only commands:character_challenges/buffet
 
 execute if score #redHS healstreak matches 20.. run advancement grant @a[scores={Kit=4},team=Red,predicate=commands:in_any_battlefield,predicate=!commands:in_practice_range] only commands:character_challenges/angelic_presence
 
 execute if score #blueHS healstreak matches 20.. run advancement grant @a[scores={Kit=4},team=Blue,predicate=commands:in_any_battlefield,predicate=!commands:in_practice_range] only commands:character_challenges/angelic_presence
 
-advancement grant @a[scores={boatDistance=25000..,Kit=7}] only commands:character_challenges/pirates_journey
+advancement grant @a[scores={boatDistance=25000..,Kit=7},predicate=!commands:in_practice_range] only commands:character_challenges/pirates_journey
 
 advancement grant @a[scores={Health=20..}] only commands:full_hp
 
 advancement revoke @a[scores={Health=..19}] only commands:full_hp
 
-advancement grant @a[advancements={commands:warrior_challenge_damage=true,commands:warrior_challenge_kill=true},scores={Kit=1}] only commands:character_challenges/pure_destruction
+advancement grant @a[advancements={commands:warrior_challenge_damage=true,commands:warrior_challenge_kill=true},scores={Kit=1},predicate=!commands:in_practice_range] only commands:character_challenges/pure_destruction
 
-advancement grant @a[scores={Kit=9,scourgeKills=3..}] only commands:character_challenges/wrath_of_the_gods
+advancement grant @a[scores={Kit=9,scourgeKills=3..},predicate=!commands:in_practice_range] only commands:character_challenges/wrath_of_the_gods
 
-advancement grant @a[scores={eBulletHit=2..,Kit=10}] only commands:character_challenges/explosive_combo
+advancement grant @a[scores={eBulletHit=2..,Kit=10},predicate=!commands:in_practice_range] only commands:character_challenges/explosive_combo
 
 execute if entity @e[type=area_effect_cloud,tag=redmushroom,scores={mushroomRadius=15..}] run advancement grant @a[scores={Kit=8},team=Red,predicate=commands:in_any_battlefield,predicate=!commands:in_practice_range] only commands:character_challenges/fungus_amongus
 
@@ -1808,47 +1792,47 @@ execute if score #redking bossHP = #blueking bossHP if score #classicMap setting
 
 #Castle Throne Room Warps (Forest Glen)
 
-execute positioned 19 60 -65 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 18.4 60 -65
+execute positioned 19 60 -65 as @a[distance=..1,gamemode=!spectator] run teleport @s 18.4 60 -65
 
-execute positioned 15 60 -65 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 14.4 60 -65
+execute positioned 15 60 -65 as @a[distance=..1,gamemode=!spectator] run teleport @s 14.4 60 -65
 
-execute positioned -1 60 -65 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 0.6 60 -65
+execute positioned -1 60 -65 as @a[distance=..1,gamemode=!spectator] run teleport @s 0.6 60 -65
 
-execute positioned 3 60 -65 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 4.6 60 -65
+execute positioned 3 60 -65 as @a[distance=..1,gamemode=!spectator] run teleport @s 4.6 60 -65
 
-execute positioned 2 57 -65 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 1.6 60 -65
+execute positioned 2 57 -65 as @a[distance=..1,gamemode=!spectator] run teleport @s 1.6 60 -65
 
-execute positioned 19 60 -199 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 18.4 60 -199
+execute positioned 19 60 -199 as @a[distance=..1,gamemode=!spectator] run teleport @s 18.4 60 -199
 
-execute positioned 15 60 -199 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 14.4 60 -199
+execute positioned 15 60 -199 as @a[distance=..1,gamemode=!spectator] run teleport @s 14.4 60 -199
 
-execute positioned -1 60 -199 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 0.6 60 -199
+execute positioned -1 60 -199 as @a[distance=..1,gamemode=!spectator] run teleport @s 0.6 60 -199
 
-execute positioned 3 60 -199 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 4.6 60 -199
+execute positioned 3 60 -199 as @a[distance=..1,gamemode=!spectator] run teleport @s 4.6 60 -199
 
-execute positioned 16 57 -199 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 17.4 60 -199
+execute positioned 16 57 -199 as @a[distance=..1,gamemode=!spectator] run teleport @s 17.4 60 -199
 
 #Castle Throne Room Warps (Winterland)
 
-execute positioned 52 57 -1111 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 54.4 60 -1111
+execute positioned 52 57 -1111 as @a[distance=..1,gamemode=!spectator] run teleport @s 54.4 60 -1111
 
-execute positioned 56 60 -1111 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 54.4 60 -1111
+execute positioned 56 60 -1111 as @a[distance=..1,gamemode=!spectator] run teleport @s 54.4 60 -1111
 
-execute positioned 51 60 -1111 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 49.4 60 -1111
+execute positioned 51 60 -1111 as @a[distance=..1,gamemode=!spectator] run teleport @s 49.4 60 -1111
 
-execute positioned 35 60 -1111 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 36.6 60 -1111
+execute positioned 35 60 -1111 as @a[distance=..1,gamemode=!spectator] run teleport @s 36.6 60 -1111
 
-execute positioned 39 60 -1111 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 40.6 60 -1111
+execute positioned 39 60 -1111 as @a[distance=..1,gamemode=!spectator] run teleport @s 40.6 60 -1111
 
-execute positioned 139 60 -1027 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 139 60 -1025.4
+execute positioned 139 60 -1027 as @a[distance=..1,gamemode=!spectator] run teleport @s 139 60 -1025.4
 
-execute positioned 139 60 -1023 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 139 60 -1021.4
+execute positioned 139 60 -1023 as @a[distance=..1,gamemode=!spectator] run teleport @s 139 60 -1021.4
 
-execute positioned 139 60 -1006 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 139 60 -1007.6
+execute positioned 139 60 -1006 as @a[distance=..1,gamemode=!spectator] run teleport @s 139 60 -1007.6
 
-execute positioned 139 60 -1011 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 139 60 -1012.6
+execute positioned 139 60 -1011 as @a[distance=..1,gamemode=!spectator] run teleport @s 139 60 -1012.6
 
-execute positioned 139 57 -1010 as @a[distance=..1,tag=!noWarp,gamemode=!spectator] run teleport @s 139 60 -1007.6
+execute positioned 139 57 -1010 as @a[distance=..1,gamemode=!spectator] run teleport @s 139 60 -1007.6
 
 #Castle Healing Stations
 
@@ -1916,12 +1900,6 @@ execute as @e[type=wither_skeleton,team=Red,tag=King] if entity @a[team=Blue,pre
 
 execute as @e[type=wither_skeleton,team=Blue,tag=King] if entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {Invulnerable:0b}
 
-#Wizard minions die when wizard dies
-
-execute if entity @a[team=Red,scores={Kit=6,died=1..}] run kill @e[type=zombie,team=Red,tag=WM]
-
-execute if entity @a[team=Blue,scores={Kit=6,died=1..}] run kill @e[type=zombie,team=Blue,tag=WM]
-
 #Castle Chain
 
 execute as @a[scores={usedCOAS=1..},predicate=commands:holding/castle_chain] run function commands:other/castle_chain
@@ -1968,7 +1946,11 @@ scoreboard players reset @a[scores={pizzaTimer=3000..}] pizzaTimer
 
 scoreboard players add @e[type=zombified_piglin,tag=pizzatime,tag=oven] pizzaTimer 1
 
-execute as @e[type=zombified_piglin,tag=pizzatime,tag=oven,scores={pizzaTimer=200..},limit=1] run function commands:ultimates/pizza_time_end
+execute if entity @e[type=zombified_piglin,tag=pizzatime,tag=ovenred,scores={pizzaTimer=200..}] run tellraw @a [{"selector":"@a[limit=1,team=Red,scores={Ultimate=22}]"},{"text":"'s ovens slowed down!"}]
+
+execute if entity @e[type=zombified_piglin,tag=pizzatime,tag=ovenblue,scores={pizzaTimer=200..}] run tellraw @a [{"selector":"@a[limit=1,team=Blue,scores={Ultimate=22}]"},{"text":"'s ovens slowed down!"}]
+
+execute as @e[type=zombified_piglin,tag=pizzatime,tag=oven,scores={pizzaTimer=200..}] run function commands:ultimates/pizza_time_end
 
 #Respawning
 
@@ -1999,6 +1981,7 @@ execute if score #gamemode settings matches 1 run scoreboard players reset @a[pr
 #Russian Roulette
 
 scoreboard players remove @a[scores={rouletteTimer=1..},predicate=commands:inventory/russian_roulette] rouletteTimer 1
+
 #Betting Chips
 
 execute as @a[tag=!chipbet,scores={chipBet=1..5}] run function commands:other/betting_chips
@@ -2367,10 +2350,6 @@ scoreboard players reset @a[scores={died=1..}] scourgeKills
 
 scoreboard players reset @a[scores={gliding=1..}] gliding
 
-scoreboard players reset @a[scores={died=1..}] JBTime
-
-scoreboard players reset @a[scores={died=1..}] JBFix
-
 scoreboard players set @a[scores={Ninjakill=1..}] Ninjakill 0
 
 scoreboard players reset @a[scores={damage=1..}] damage
@@ -2396,24 +2375,4 @@ scoreboard players set @a[scores={died=1..}] died 0
 advancement revoke @a only commands:warrior_challenge_damage
 
 advancement revoke @a only commands:warrior_challenge_kill
-
-advancement revoke @a only commands:sparkler_damage
-
-advancement revoke @a only commands:cinder_bomb_damage
-
-advancement revoke @a only commands:pyromania_damage
-
-advancement revoke @a only commands:chrysanthemum_shell_damage
-
-advancement revoke @a only commands:pop_rocks_damage
-
-advancement revoke @a only commands:lightning_damage
-
-advancement revoke @a only commands:lava_damage
-
-advancement revoke @a only commands:drowning_damage
-
-advancement revoke @a only commands:cactus_damage
-
-advancement revoke @a only commands:fire_damage
 

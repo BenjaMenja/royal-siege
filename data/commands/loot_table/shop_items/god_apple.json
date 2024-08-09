@@ -5,7 +5,54 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:enchanted_golden_apple"
+          "name": "minecraft:enchanted_golden_apple",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:food": {
+                  "can_always_eat": true,
+                  "nutrition": 4,
+                  "saturation": 9.6,
+                  "eat_seconds": 2.5,
+                  "effects": [
+                    {
+                      "effect": {
+                        "id": "minecraft:regeneration",
+                        "amplifier": 1,
+                        "duration": 400,
+                        "show_particles": false
+                      }
+                    },
+                    {
+                      "effect": {
+                        "id": "minecraft:absorption",
+                        "amplifier": 3,
+                        "duration": 2400,
+                        "show_particles": false
+                      }
+                    },
+                    {
+                      "effect": {
+                        "id": "minecraft:resistance",
+                        "amplifier": 0,
+                        "duration": 6000,
+                        "show_particles": false
+                      }
+                    },
+                    {
+                      "effect": {
+                        "id": "minecraft:fire_resistance",
+                        "amplifier": 0,
+                        "duration": 600,
+                        "show_particles": false
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
         }
       ]
     }

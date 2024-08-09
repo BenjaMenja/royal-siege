@@ -1,6 +1,6 @@
 {
     "description": {
-        "text": "Multi-Bow",
+        "text": "Sniper",
         "color": "gray",
         "italic": false
     },
@@ -22,19 +22,11 @@
     ],
     "anvil_cost": 1,
     "effects": {
-        "projectile_count": [
+        "projectile_spawned": [
             {
                 "effect": {
-                    "type": "set",
-                    "value": 5
-                }
-            }
-        ],
-        "projectile_spread": [
-            {
-                "effect": {
-                    "type": "set",
-                    "value": 10
+                    "type": "run_function",
+                    "function": "commands:other/sniper_enchant"
                 }
             }
         ]

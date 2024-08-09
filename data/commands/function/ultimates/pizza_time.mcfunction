@@ -1,6 +1,10 @@
 execute if entity @s[team=Red] run tag @e[type=zombified_piglin,tag=ovenred] add pizzatime
 
+execute if entity @s[team=Red] as @e[type=zombified_piglin,tag=ovenred] run data merge entity @s {Invulnerable:1b}
+
 execute if entity @s[team=Blue] run tag @e[type=zombified_piglin,tag=ovenblue] add pizzatime
+
+execute if entity @s[team=Blue] as @e[type=zombified_piglin,tag=ovenblue] run data merge entity @s {Invulnerable:1b}
 
 execute if entity @s[team=Red] run tellraw @a [{"selector":"@a[limit=1,team=Red,scores={Ultimate=22}]"},{"text":"'s ovens are overloaded!"}]
 

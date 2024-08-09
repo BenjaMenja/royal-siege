@@ -1,14 +1,14 @@
-execute at @s[team=Red] anchored eyes run summon minecraft:dragon_fireball ^ ^ ^1 {power:[0.0,0.0,0.0],Tags:["dRageFireball","redProj"]}
+execute at @s[team=Red] anchored eyes run summon minecraft:dragon_fireball ^ ^ ^1 {Motion:[0.0,0.0,0.0],Tags:["dRageFireball","redProj"]}
 
-execute at @s[team=Red,tag=wrenched] anchored eyes run summon minecraft:dragon_fireball ^0.075 ^ ^1 {power:[0.0,0.0,0.0],Tags:["dRageFireball","redProj"]}
+execute at @s[team=Red,tag=wrenched] anchored eyes run summon minecraft:dragon_fireball ^0.075 ^ ^1 {Motion:[0.0,0.0,0.0],Tags:["dRageFireball","redProj"]}
 
-execute at @s[team=Red,tag=wrenched] anchored eyes run summon minecraft:dragon_fireball ^-0.075 ^ ^1 {power:[0.0,0.0,0.0],Tags:["dRageFireball","redProj"]}
+execute at @s[team=Red,tag=wrenched] anchored eyes run summon minecraft:dragon_fireball ^-0.075 ^ ^1 {Motion:[0.0,0.0,0.0],Tags:["dRageFireball","redProj"]}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:dragon_fireball ^ ^ ^1 {power:[0.0,0.0,0.0],Tags:["dRageFireball","blueProj"]}
+execute at @s[team=Blue] anchored eyes run summon minecraft:dragon_fireball ^ ^ ^1 {Motion:[0.0,0.0,0.0],Tags:["dRageFireball","blueProj"]}
 
-execute at @s[team=Blue,tag=wrenched] anchored eyes run summon minecraft:dragon_fireball ^0.075 ^ ^1 {power:[0.0,0.0,0.0],Tags:["dRageFireball","blueProj"]}
+execute at @s[team=Blue,tag=wrenched] anchored eyes run summon minecraft:dragon_fireball ^0.075 ^ ^1 {Motion:[0.0,0.0,0.0],Tags:["dRageFireball","blueProj"]}
 
-execute at @s[team=Blue,tag=wrenched] anchored eyes run summon minecraft:dragon_fireball ^-0.075 ^ ^1 {power:[0.0,0.0,0.0],Tags:["dRageFireball","blueProj"]}
+execute at @s[team=Blue,tag=wrenched] anchored eyes run summon minecraft:dragon_fireball ^-0.075 ^ ^1 {Motion:[0.0,0.0,0.0],Tags:["dRageFireball","blueProj"]}
 
 execute as @e[tag=dRageFireball] run data modify entity @s Owner set from entity @a[tag=dRage,limit=1] UUID
 
@@ -32,11 +32,11 @@ execute as @e[tag=dRageFireball,tag=!stop] run scoreboard players operation @s p
 
 execute as @e[tag=dRageFireball,tag=!stop] run scoreboard players operation @s posZ -= @a[limit=1,tag=dRage] posZ
 
-execute as @e[tag=dRageFireball,tag=!stop] store result entity @s power[0] double 0.0008 run scoreboard players get @s posX
+execute as @e[tag=dRageFireball,tag=!stop] store result entity @s Motion[0] double 0.0008 run scoreboard players get @s posX
 
-execute as @e[tag=dRageFireball,tag=!stop] store result entity @s power[1] double 0.0008 run scoreboard players get @s posY
+execute as @e[tag=dRageFireball,tag=!stop] store result entity @s Motion[1] double 0.0008 run scoreboard players get @s posY
 
-execute as @e[tag=dRageFireball,tag=!stop] store result entity @s power[2] double 0.0008 run scoreboard players get @s posZ
+execute as @e[tag=dRageFireball,tag=!stop] store result entity @s Motion[2] double 0.0008 run scoreboard players get @s posZ
 
 tag @e[tag=dRageFireball] add stop
 

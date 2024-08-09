@@ -1,4 +1,4 @@
-execute at @a[advancements={commands:explosive_bullet=true}] run summon fireball ~ ~ ~ {CustomNameVisible:0b,ExplosionPower:3,power:[0.0,-10.0,0.0],CustomName:'{"text":"Explosive Bullet"}'}
+execute at @a[advancements={commands:explosive_bullet=true}] run summon fireball ~ ~ ~ {CustomNameVisible:0b,ExplosionPower:3,Motion:[0.0,-10.0,0.0],CustomName:'{"text":"Explosive Bullet"}'}
 
 advancement revoke @a[advancements={commands:explosive_bullet=true}] only commands:explosive_bullet
 

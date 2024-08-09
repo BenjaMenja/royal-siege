@@ -52,11 +52,11 @@ scoreboard players operation @e[tag=pizza,limit=1,tag=!stop] posY *= #-1 constan
 
 scoreboard players operation @e[tag=pizza,limit=1,tag=!stop] posZ *= #-1 constant
 
-execute as @e[tag=pizza,limit=1,tag=!stop] store result entity @s power[0] double 0.00007 run scoreboard players get @s posX
+execute as @e[tag=pizza,limit=1,tag=!stop] store result entity @s Motion[0] double 0.00007 run scoreboard players get @s posX
 
-execute as @e[tag=pizza,limit=1,tag=!stop] store result entity @s power[1] double 0.00007 run scoreboard players get @s posY
+execute as @e[tag=pizza,limit=1,tag=!stop] store result entity @s Motion[1] double 0.00007 run scoreboard players get @s posY
 
-execute as @e[tag=pizza,limit=1,tag=!stop] store result entity @s power[2] double 0.00007 run scoreboard players get @s posZ
+execute as @e[tag=pizza,limit=1,tag=!stop] store result entity @s Motion[2] double 0.00007 run scoreboard players get @s posZ
 
 tag @e[tag=pizza] add stop
 

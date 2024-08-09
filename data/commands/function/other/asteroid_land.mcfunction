@@ -12,6 +12,4 @@ execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{asteroid
 
 summon creeper ~ ~ ~ {ExplosionRadius:4b,ignited:1b,Fuse:2}
 
-tag @a[distance=..5,scores={Message=1..}] add asteroiddeath
-
 kill @s

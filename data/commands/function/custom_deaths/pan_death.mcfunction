@@ -4,11 +4,11 @@ tag @s add custom_death
 
 execute store result score #rng RNG run random roll 1..4
 
-execute if score #rng RNG matches 1 run tellraw @a [{"selector":"@s"},{"text":" was deep fried by ","color":"white"},{"selector":"@a[scores={KillP=1..}]"}]
+execute if score #rng RNG matches 1 on attacker run tellraw @a [{"selector":"@a[advancements={commands:custom_deaths/frying_pan_death=true}]"},{"text":" was deep fried by ","color":"white"},{"selector":"@s"}]
 
-execute if score #rng RNG matches 2 run tellraw @a [{"selector":"@s"},{"text":" was spanked by ","color":"white"},{"selector":"@a[scores={KillP=1..}]"}]
+execute if score #rng RNG matches 2 on attacker run tellraw @a [{"selector":"@a[advancements={commands:custom_deaths/frying_pan_death=true}]"},{"text":" was spanked by ","color":"white"},{"selector":"@s"}]
 
-execute if score #rng RNG matches 3 run tellraw @a [{"selector":"@s"},{"text":" was served up by ","color":"white"},{"selector":"@a[scores={KillP=1..}]"}]
+execute if score #rng RNG matches 3 on attacker run tellraw @a [{"selector":"@a[advancements={commands:custom_deaths/frying_pan_death=true}]"},{"text":" was served up by ","color":"white"},{"selector":"@s"}]
 
 execute if score #rng RNG matches 4 run tellraw @a [{"selector":"@s"},{"text":" was overcooked.","color":"white"}]
 
