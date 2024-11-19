@@ -24,14 +24,14 @@
                 },
                 "minecraft:attribute_modifiers": [
                   {
-                    "type": "generic.armor",
+                    "type": "armor",
                     "id": "85626ae5-6ace-472d-9e05-c53492df0bef",
                     "amount": 3,
                     "operation": "add_value",
                     "slot": "feet"
                   },
                   {
-                    "type": "generic.movement_speed",
+                    "type": "movement_speed",
                     "id": "b124ebc8-82ee-40db-9cee-e31008d2ce1d",
                     "amount": 0.1,
                     "operation": "add_multiplied_base",

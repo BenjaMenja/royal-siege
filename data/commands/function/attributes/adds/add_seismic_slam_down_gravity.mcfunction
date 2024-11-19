@@ -1,4 +1,4 @@
-attribute @s minecraft:generic.gravity modifier add 13-1-500-8-0 5 add_multiplied_base
+attribute @s minecraft:gravity modifier add 13-1-500-8-0 5 add_multiplied_base
 
 scoreboard players set @s RSAttr.SafeFallDist 2147483647
 

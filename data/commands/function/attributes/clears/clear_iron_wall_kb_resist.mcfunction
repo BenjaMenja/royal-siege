@@ -1,1 +1,1 @@
-attribute @s minecraft:generic.knockback_resistance modifier remove 19-1-100-100-0
+attribute @s minecraft:knockback_resistance modifier remove 19-1-100-100-0

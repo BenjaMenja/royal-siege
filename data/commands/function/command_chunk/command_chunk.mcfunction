@@ -48,13 +48,13 @@ execute as @a[team=Red,tag=cavalryAlive] unless entity @e[tag=RedHorse] run func
 
 execute as @a[team=Blue,tag=cavalryAlive] unless entity @e[tag=BlueHorse] run function commands:ultimates/cavalry_dead
 
-execute as @a[team=Red,scores={Ultimate=2}] at @s if data entity @s RootVehicle.Attach if entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest,nbt={attributes:[{id:"minecraft:generic.movement_speed",base:-1.0}]}] run data merge entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest] {attributes:[{id:"minecraft:generic.movement_speed",base:0.35}]}
+execute as @a[team=Red,scores={Ultimate=2}] at @s if data entity @s RootVehicle.Attach if entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest,nbt={attributes:[{id:"minecraft:movement_speed",base:-1.0}]}] run data merge entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest] {attributes:[{id:"minecraft:movement_speed",base:0.35}]}
 
-execute as @a[team=Blue,scores={Ultimate=2}] at @s if data entity @s RootVehicle.Attach if entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest,nbt={attributes:[{id:"minecraft:generic.movement_speed",base:-1.0}]}] run data merge entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest] {attributes:[{id:"minecraft:generic.movement_speed",base:0.35}]}
+execute as @a[team=Blue,scores={Ultimate=2}] at @s if data entity @s RootVehicle.Attach if entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest,nbt={attributes:[{id:"minecraft:movement_speed",base:-1.0}]}] run data merge entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest] {attributes:[{id:"minecraft:movement_speed",base:0.35}]}
 
-execute as @a[team=Red,scores={Ultimate=2}] at @s unless data entity @s RootVehicle.Attach if entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest,nbt={attributes:[{id:"minecraft:generic.movement_speed",base:0.35}]}] run data merge entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest] {attributes:[{id:"minecraft:generic.movement_speed",base:-1.0}]}
+execute as @a[team=Red,scores={Ultimate=2}] at @s unless data entity @s RootVehicle.Attach if entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest,nbt={attributes:[{id:"minecraft:movement_speed",base:0.35}]}] run data merge entity @e[type=horse,tag=RedHorse,limit=1,sort=nearest] {attributes:[{id:"minecraft:movement_speed",base:-1.0}]}
 
-execute as @a[team=Blue,scores={Ultimate=2}] at @s unless data entity @s RootVehicle.Attach if entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest,nbt={attributes:[{id:"minecraft:generic.movement_speed",base:0.35}]}] run data merge entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest] {attributes:[{id:"minecraft:generic.movement_speed",base:-1.0}]}
+execute as @a[team=Blue,scores={Ultimate=2}] at @s unless data entity @s RootVehicle.Attach if entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest,nbt={attributes:[{id:"minecraft:movement_speed",base:0.35}]}] run data merge entity @e[type=horse,tag=BlueHorse,limit=1,sort=nearest] {attributes:[{id:"minecraft:movement_speed",base:-1.0}]}
 
 #Minion Swarm
 
@@ -666,7 +666,7 @@ execute if entity @a[scores={Kit=2}] run function commands:cooldowns/ninja_displ
 
 #C4
 
-execute at @e[type=bat,tag=c4red] run summon villager ~ ~ ~ {Age:-32767,NoGravity:1b,Silent:1b,NoAI:1b,Health:4.0f,Tags:["c4red"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
+execute at @e[type=bat,tag=c4red] run summon villager ~ ~ ~ {Age:-32767,NoGravity:1b,Silent:1b,NoAI:1b,Health:4.0f,Tags:["c4red"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],attributes:[{Name:"minecraft:max_health",Base:4}]}
 
 tp @e[type=bat,tag=c4red] ~ -200 ~
 
@@ -678,7 +678,7 @@ execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/d
 
 execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/detonator_red] run clear @a[scores={usedCOAS=1..}] carrot_on_a_stick[custom_data~{detonatorRed:1b}] 1
 
-execute at @e[type=bat,tag=c4blue] run summon villager ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4.0f,Tags:["c4blue"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],attributes:[{Name:"minecraft:generic.max_health",Base:4}]}
+execute at @e[type=bat,tag=c4blue] run summon villager ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4.0f,Tags:["c4blue"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],attributes:[{Name:"minecraft:max_health",Base:4}]}
 
 tp @e[type=bat,tag=c4blue] ~ -200 ~
 
@@ -956,9 +956,9 @@ execute as @a[scores={Kit=3,defensiveSpell=1..},predicate=commands:in_any_battle
 
 scoreboard players remove @a[scores={Kit=3},predicate=commands:in_any_battlefield,tag=!notAlive] turretTimer 1
 
-give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','{"text":" "}'],custom_model_data=68,custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},{id:"minecraft:dispenser",count:1,components:{"minecraft:attribute_modifiers":[{type:"generic.movement_speed",amount:-1,operation:"add_multiplied_base",id:"5791e254-ecfa-4177-8b19-5ee15c8e30a0",slot:"head"}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}]}] 1
+give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','{"text":" "}'],custom_model_data=68,custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},{id:"minecraft:dispenser",count:1,components:{"minecraft:attribute_modifiers":[{type:"movement_speed",amount:-1,operation:"add_multiplied_base",id:"5791e254-ecfa-4177-8b19-5ee15c8e30a0",slot:"head"}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}]}] 1
 
-give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','{"text":" "}'],custom_model_data=68,custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":255}},{id:"minecraft:dispenser",count:1,components:{"minecraft:attribute_modifiers":[{type:"generic.movement_speed",amount:-1,operation:"add_multiplied_base",id:"5791e254-00c4-4177-8b19-5ee15c8e30a0",slot:"head"}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}]}] 1
+give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','{"text":" "}'],custom_model_data=68,custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":255}},{id:"minecraft:dispenser",count:1,components:{"minecraft:attribute_modifiers":[{type:"movement_speed",amount:-1,operation:"add_multiplied_base",id:"5791e254-00c4-4177-8b19-5ee15c8e30a0",slot:"head"}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}]}] 1
 
 scoreboard players set @a[scores={turretTimer=..0}] turretTimer 600
 
@@ -1048,9 +1048,9 @@ scoreboard players set @a[scores={MinionTimer=3600..}] MinionTimer 0
 
 tag @e[type=zombie,tag=overcharge] add OC
 
-execute as @e[type=zombie,tag=overcharge,team=Red] at @s run data merge entity @s {CustomNameVisible:1b,Health:20f,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":16711680}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:generic.follow_range",base:99},{id:"minecraft:generic.max_health",base:20},{id:"minecraft:generic.movement_speed",base:0.35}]}
+execute as @e[type=zombie,tag=overcharge,team=Red] at @s run data merge entity @s {CustomNameVisible:1b,Health:20f,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":16711680}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:max_health",base:20},{id:"minecraft:movement_speed",base:0.35}]}
 
-execute as @e[type=zombie,tag=overcharge,team=Blue] at @s run data merge entity @s {CustomNameVisible:1b,Health:20f,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":255}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:generic.follow_range",base:99},{id:"minecraft:generic.max_health",base:20},{id:"minecraft:generic.movement_speed",base:0.35}]}
+execute as @e[type=zombie,tag=overcharge,team=Blue] at @s run data merge entity @s {CustomNameVisible:1b,Health:20f,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":255}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:max_health",base:20},{id:"minecraft:movement_speed",base:0.35}]}
 
 tag @e[type=zombie,tag=OC] remove overcharge
 
@@ -1066,19 +1066,19 @@ loot give @a[scores={fDutchmanTimer=3000..}] loot commands:ultimates/flying_dutc
 
 scoreboard players reset @a[scores={fDutchmanTimer=3000..}] fDutchmanTimer
 
-scoreboard players add @e[type=boat,tag=flyingdutchman] fDutchmanTimer 1
+scoreboard players add @e[type=spruce_boat,tag=flyingdutchman] fDutchmanTimer 1
 
-scoreboard players add @e[type=boat,tag=flyingdutchman] fDutchmanDur 1
+scoreboard players add @e[type=spruce_boat,tag=flyingdutchman] fDutchmanDur 1
 
 execute as @a[predicate=commands:vehicle/flying_dutchman] run effect give @s resistance 1 2 true
 
-execute as @e[type=boat,tag=flyingdutchman,scores={fDutchmanTimer=16..}] at @s run summon fireball ~ ~-1 ~ {ExplosionPower:4,Tags:["WF","fm"],Motion:[0.0,-1.0,0.0]}
+execute as @e[type=spruce_boat,tag=flyingdutchman,scores={fDutchmanTimer=16..}] at @s run summon fireball ~ ~-1 ~ {ExplosionPower:4,Tags:["WF","fm"],Motion:[0.0,-1.0,0.0]}
 
-scoreboard players reset @e[type=boat,tag=flyingdutchman,scores={fDutchmanTimer=16..}] fDutchmanTimer
+scoreboard players reset @e[type=spruce_boat,tag=flyingdutchman,scores={fDutchmanTimer=16..}] fDutchmanTimer
 
-execute as @e[type=boat,scores={fDutchmanDur=220}] at @s run tellraw @a[distance=..2,predicate=commands:vehicle/flying_dutchman] {"text":"Your boat is falling apart!","color":"green"}
+execute as @e[type=spruce_boat,scores={fDutchmanDur=220}] at @s run tellraw @a[distance=..2,predicate=commands:vehicle/flying_dutchman] {"text":"Your boat is falling apart!","color":"green"}
 
-execute as @e[type=boat,scores={fDutchmanDur=280..}] run function commands:ultimates/flying_dutchman_end
+execute as @e[type=spruce_boat,scores={fDutchmanDur=280..}] run function commands:ultimates/flying_dutchman_end
 
 #Artificial Intelligence (Robot Alt. Ultimate)
 
@@ -1568,11 +1568,11 @@ scoreboard players add @e[type=wandering_trader,tag=wanderingKing] kingActive 1
 
 tag @e[type=wither_skeleton,scores={kingActive=0}] add inactivated
 
-execute as @e[type=wither_skeleton,tag=inactivated] run data merge entity @s {attributes:[{id:"minecraft:generic.movement_speed",base:0}]}
+execute as @e[type=wither_skeleton,tag=inactivated] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0}]}
 
-execute at @e[type=wither_skeleton,team=Red,tag=inactivated] run summon minecraft:wandering_trader ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["wanderingKingRed","wanderingKing"],active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:100000,show_particles:0b}],attributes:[{id:"generic.knockback_resistance",base:1.0},{id:"generic.movement_speed",base:0.8}],wander_target:[I;9,59,-216],Offers:{}}
+execute at @e[type=wither_skeleton,team=Red,tag=inactivated] run summon minecraft:wandering_trader ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["wanderingKingRed","wanderingKing"],active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:100000,show_particles:0b}],attributes:[{id:"knockback_resistance",base:1.0},{id:"movement_speed",base:0.8}],wander_target:[I;9,59,-216],Offers:{}}
 
-execute at @e[type=wither_skeleton,team=Blue,tag=inactivated] run summon minecraft:wandering_trader ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["wanderingKingBlue","wanderingKing"],active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:100000,show_particles:0b}],attributes:[{id:"generic.knockback_resistance",base:1.0},{id:"generic.movement_speed",base:0.8}],wander_target:[I;9,59,-48],Offers:{}}
+execute at @e[type=wither_skeleton,team=Blue,tag=inactivated] run summon minecraft:wandering_trader ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["wanderingKingBlue","wanderingKing"],active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:100000,show_particles:0b}],attributes:[{id:"knockback_resistance",base:1.0},{id:"movement_speed",base:0.8}],wander_target:[I;9,59,-48],Offers:{}}
 
 scoreboard players set @e[type=wither_skeleton,tag=inactivated] kingActive -1
 
@@ -1898,13 +1898,13 @@ execute if score #redroyalguard royalguardCD matches 2400.. run scoreboard playe
 
 execute if score #blueroyalguard royalguardCD matches 2400.. run scoreboard players reset #blueroyalguard royalguardCD
 
-execute as @e[type=skeleton,tag=redroyalguard,nbt={attributes:[{id:"minecraft:generic.movement_speed",base:0.0d}]}] if entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {attributes:[{id:"minecraft:generic.movement_speed",base:0.25d}]}
+execute as @e[type=skeleton,tag=redroyalguard,nbt={attributes:[{id:"minecraft:movement_speed",base:0.0d}]}] if entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0.25d}]}
 
-execute as @e[type=skeleton,tag=redroyalguard,nbt={attributes:[{id:"minecraft:generic.movement_speed",base:0.25d}]}] unless entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {attributes:[{id:"minecraft:generic.movement_speed",base:0.0d}]}
+execute as @e[type=skeleton,tag=redroyalguard,nbt={attributes:[{id:"minecraft:movement_speed",base:0.25d}]}] unless entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0.0d}]}
 
-execute as @e[type=skeleton,tag=blueroyalguard,nbt={attributes:[{id:"minecraft:generic.movement_speed",base:0.0d}]}] if entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {attributes:[{id:"minecraft:generic.movement_speed",base:0.25d}]}
+execute as @e[type=skeleton,tag=blueroyalguard,nbt={attributes:[{id:"minecraft:movement_speed",base:0.0d}]}] if entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0.25d}]}
 
-execute as @e[type=skeleton,tag=blueroyalguard,nbt={attributes:[{id:"minecraft:generic.movement_speed",base:0.25d}]}] unless entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {attributes:[{id:"minecraft:generic.movement_speed",base:0.0d}]}
+execute as @e[type=skeleton,tag=blueroyalguard,nbt={attributes:[{id:"minecraft:movement_speed",base:0.25d}]}] unless entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0.0d}]}
 
 execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 0 run teleport @s ~ ~ ~-0.2
 
@@ -2122,9 +2122,9 @@ effect clear @a[predicate=commands:on_ncs_roof,predicate=commands:effects/speed_
 
 #Winterland Boats
 
-scoreboard players add @e[type=boat,tag=winterBoat] Timer 1
+scoreboard players add @e[type=oak_boat,tag=winterBoat] Timer 1
 
-kill @e[type=boat,tag=winterBoat,scores={Timer=400..}]
+kill @e[type=oak_boat,tag=winterBoat,scores={Timer=400..}]
 
 #Asteroid
 

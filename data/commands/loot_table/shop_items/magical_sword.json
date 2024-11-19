@@ -66,24 +66,24 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.movement_speed",
-                  "name": "generic.movement_speed",
+                  "attribute": "minecraft:movement_speed",
+                  "name": "movement_speed",
                   "amount": -0.25,
                   "operation": "add_multiplied_base",
                   "id": "522dcbb2-cc0e-4811-83ca-533225e37e97",
                   "slot": "mainhand"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_damage",
-                  "name": "generic.attack_damage",
+                  "attribute": "minecraft:attack_damage",
+                  "name": "attack_damage",
                   "amount": 10.5,
                   "operation": "add_value",
                   "id": "b111b219-d889-4cd5-b4ed-9092948e2569",
                   "slot": "mainhand"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_speed",
-                  "name": "generic.attack_speed",
+                  "attribute": "minecraft:attack_speed",
+                  "name": "attack_speed",
                   "amount": -2.9,
                   "operation": "add_value",
                   "id": "66192292-e171-482d-8760-d1bea6c4c39e",

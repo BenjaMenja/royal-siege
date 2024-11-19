@@ -43,7 +43,7 @@
                       "components": {
                         "minecraft:attribute_modifiers": [
                           {
-                            "type": "generic.movement_speed",
+                            "type": "movement_speed",
                             "id": "bbf29555-ac4e-46db-8129-2829e3a0579a",
                             "amount": -0.75,
                             "operation": "add_multiplied_base",
@@ -56,11 +56,11 @@
                   ],
                   "attributes": [
                     {
-                      "id": "generic.knockback_resistance",
+                      "id": "knockback_resistance",
                       "base": 1
                     },
                     {
-                      "id": "generic.max_health",
+                      "id": "max_health",
                       "base": 50
                     }
                   ]

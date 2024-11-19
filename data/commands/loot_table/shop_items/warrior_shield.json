@@ -39,16 +39,16 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.max_health",
-                  "name": "generic.max_health",
+                  "attribute": "minecraft:max_health",
+                  "name": "max_health",
                   "amount": 4,
                   "operation": "add_value",
                   "id": "ddf3f095-c386-4ec5-a693-a701ef0516b3",
                   "slot": "offhand"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_damage",
-                  "name": "generic.attack_damage",
+                  "attribute": "minecraft:attack_damage",
+                  "name": "attack_damage",
                   "amount": 0.1,
                   "operation": "add_multiplied_base",
                   "id": "225c60a3-c647-4a45-b8e0-2ffc27198538",

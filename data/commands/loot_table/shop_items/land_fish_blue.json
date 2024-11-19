@@ -54,19 +54,19 @@
                   ],
                   "attributes": [
                     {
-                      "id": "minecraft:generic.attack_damage",
+                      "id": "minecraft:attack_damage",
                       "base": 8
                     },
                     {
-                      "id": "minecraft:generic.follow_range",
+                      "id": "minecraft:follow_range",
                       "base": 99
                     },
                     {
-                      "id": "minecraft:generic.knockback_resistance",
+                      "id": "minecraft:knockback_resistance",
                       "base": 0.5
                     },
                     {
-                      "id": "minecraft:generic.max_health",
+                      "id": "minecraft:max_health",
                       "base": 20
                     }
                   ]

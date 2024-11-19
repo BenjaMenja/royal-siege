@@ -1,4 +1,4 @@
-attribute @s minecraft:generic.armor modifier add 7-0-4-100-0 -4 add_value
+attribute @s minecraft:armor modifier add 7-0-4-100-0 -4 add_value
 
 tellraw @s {"text": "You got napalm all over you!","color": "yellow"}
 

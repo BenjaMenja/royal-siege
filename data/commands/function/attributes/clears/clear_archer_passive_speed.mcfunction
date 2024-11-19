@@ -1,4 +1,4 @@
-attribute @s minecraft:generic.movement_speed modifier remove 0-1-1200-60-0
+attribute @s minecraft:movement_speed modifier remove 0-1-1200-60-0
 
 tag @s[tag=archerpassiveexpire] remove hitandrun1
 

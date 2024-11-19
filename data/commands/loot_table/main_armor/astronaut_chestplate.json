@@ -24,7 +24,7 @@
                 },
                 "minecraft:attribute_modifiers": [
                   {
-                    "type": "minecraft:generic.armor",
+                    "type": "minecraft:armor",
                     "id": "9e85abba-4320-48ac-bae5-c41de87f164e",
                     "amount": 4,
                     "operation": "add_value",

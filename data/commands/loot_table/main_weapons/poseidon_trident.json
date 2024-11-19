@@ -58,14 +58,14 @@
                 "minecraft:attribute_modifiers": {
                   "modifiers": [
                     {
-                      "type": "minecraft:generic.attack_damage",
+                      "type": "minecraft:attack_damage",
                       "amount": 8,
                       "operation": "add_value",
                       "id": "901b7aa0-1b23-47aa-8c9e-41ad383ea41b",
                       "slot": "mainhand"
                     },
                     {
-                      "type": "minecraft:generic.attack_speed",
+                      "type": "minecraft:attack_speed",
                       "amount": -2.4,
                       "operation": "add_value",
                       "id": "27e50835-4cde-4090-8bd4-0a1ae2709580",

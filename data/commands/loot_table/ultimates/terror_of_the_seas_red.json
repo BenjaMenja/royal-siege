@@ -32,18 +32,18 @@
                 "minecraft:entity_data": {
                   "id": "minecraft:elder_guardian",
                   "Team": "Red",
-                  "Health": "60f",
+                  "Health": 60.0,
                   "Tags": [
                     "terrorRed",
                     "terror"
                   ],
                   "attributes": [
                     {
-                      "id": "minecraft:generic.attack_damage",
+                      "id": "minecraft:attack_damage",
                       "base": 25
                     },
                     {
-                      "id": "minecraft:generic.max_health",
+                      "id": "minecraft:max_health",
                       "base": 60
                     }
                   ]

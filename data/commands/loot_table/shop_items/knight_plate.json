@@ -40,16 +40,16 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.max_health",
-                  "name": "generic.max_health",
+                  "attribute": "minecraft:max_health",
+                  "name": "max_health",
                   "amount": 2,
                   "operation": "add_value",
                   "id": "62d5aa21-4069-4e9a-9704-9af0a860dd43",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.armor",
-                  "name": "generic.armor",
+                  "attribute": "minecraft:armor",
+                  "name": "armor",
                   "amount": 6,
                   "operation": "add_value",
                   "id": "aa3ca9d4-175f-4582-ab36-2e9be0cc6e21",

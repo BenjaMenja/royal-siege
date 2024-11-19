@@ -35,8 +35,8 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.max_health",
-                  "name": "generic.max_health",
+                  "attribute": "minecraft:max_health",
+                  "name": "max_health",
                   "amount": 6,
                   "operation": "add_value",
                   "id": "c686ce44-b521-4504-8bd0-6c49aa6b80eb",

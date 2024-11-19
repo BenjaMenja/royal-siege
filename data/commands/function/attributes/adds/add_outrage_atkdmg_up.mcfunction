@@ -1,1 +1,1 @@
-attribute @s minecraft:generic.attack_damage modifier add 2-1-30-160-0 0.3 add_multiplied_base
+attribute @s minecraft:attack_damage modifier add 2-1-30-160-0 0.3 add_multiplied_base

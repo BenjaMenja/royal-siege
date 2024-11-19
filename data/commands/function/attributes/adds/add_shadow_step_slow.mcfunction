@@ -1,1 +1,1 @@
-attribute @s minecraft:generic.movement_speed modifier add 1-1-35-90-0 -0.35 add_multiplied_base
+attribute @s minecraft:movement_speed modifier add 1-1-35-90-0 -0.35 add_multiplied_base

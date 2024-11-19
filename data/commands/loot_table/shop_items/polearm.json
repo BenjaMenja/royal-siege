@@ -63,24 +63,21 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.attack_damage",
-                  "name": "generic.attack_damage",
+                  "attribute": "minecraft:attack_damage",
                   "amount": 8,
                   "operation": "add_value",
                   "id": "49463572-13c5-4a9a-81d6-de53bc04894c",
                   "slot": "mainhand"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_speed",
-                  "name": "generic.attack_speed",
+                  "attribute": "minecraft:attack_speed",
                   "amount": -3,
                   "operation": "add_value",
                   "id": "b821ff00-0a8d-4640-9f17-07493228fb6b",
                   "slot": "mainhand"
                 },
                 {
-                  "attribute": "minecraft:player.entity_interaction_range",
-                  "name": "player.entity_interaction_range",
+                  "attribute": "minecraft:entity_interaction_range",
                   "amount": 1,
                   "operation": "add_value",
                   "id": "25891bcf-c110-40bb-98e4-35c33d0f7b66",

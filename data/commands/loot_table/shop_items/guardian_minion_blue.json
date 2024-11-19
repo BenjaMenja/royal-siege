@@ -41,11 +41,11 @@
                   "Health": 35,
                   "attributes": [
                     {
-                      "id": "generic.max_health",
+                      "id": "max_health",
                       "base": 35
                     },
                     {
-                      "id": "generic.attack_damage",
+                      "id": "attack_damage",
                       "base": 9
                     }
                   ],

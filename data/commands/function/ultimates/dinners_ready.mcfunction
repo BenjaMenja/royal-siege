@@ -20,7 +20,7 @@ execute as @a[tag=dinnerTargetBlue] at @s run summon minecraft:item ~ ~1.5 ~-1 {
 
 tellraw @a [{"selector":"@s"},{"text":" is serving up dinner!"}]
 
-execute at @s run playsound minecraft:entity.generic.eat master @a ~ ~ ~ 1 0
+execute at @s run playsound minecraft:entity.eat master @a ~ ~ ~ 1 0
 
 scoreboard players add @s ultsUsed 1
 

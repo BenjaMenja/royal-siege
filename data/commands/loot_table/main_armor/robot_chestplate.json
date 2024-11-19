@@ -25,14 +25,14 @@
                 },
                 "minecraft:attribute_modifiers": [
                   {
-                    "type": "generic.armor",
+                    "type": "armor",
                     "id": "6990caba-356d-4766-be86-a4d3e90e42c9",
                     "amount": 6,
                     "operation": "add_value",
                     "slot": "chest"
                   },
                   {
-                    "type": "generic.movement_speed",
+                    "type": "movement_speed",
                     "id": "63c71ea8-356d-4766-be86-a4d3e90e42c9",
                     "amount": -0.1,
                     "operation": "add_multiplied_base",

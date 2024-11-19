@@ -20,8 +20,8 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.armor",
-                  "name": "generic.armor",
+                  "attribute": "minecraft:armor",
+                  "name": "armor",
                   "amount": 3,
                   "operation": "add_value",
                   "id": "b4cc3642-1ece-47df-832d-78b4dc55740d",
