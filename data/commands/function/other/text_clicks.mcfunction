@@ -128,9 +128,7 @@ execute if score @s textClick matches 64 run function commands:other/shops
 
 execute if score @s textClick matches 65 run function commands:other/withdraw_text
 
-#Replace This one first
-
-execute if score @s textClick matches 66 run function commands:shops/arrows
+execute if score @s textClick matches 66 run function commands:settings/colliding_tides
 
 execute if score @s textClick matches 67 run function commands:other/withdraw_credit
 
@@ -373,5 +371,19 @@ execute if score @s textClick matches 189 run function commands:other/withdraw_s
 execute if score @s textClick matches 190 run function commands:other/withdraw_siege_bucks {siege_bucks:1000}
 
 execute if score @s textClick matches 191 run tag @s add homewarp
+
+execute if score @s textClick matches 192 run function commands:books/character_menu
+
+execute if score @s textClick matches 193 run function commands:books/map_menu
+
+execute if score @s textClick matches 194 run function commands:books/forest_glen
+
+execute if score @s textClick matches 195 run function commands:books/winterland
+
+execute if score @s textClick matches 196 run function commands:books/colliding_tides
+
+execute if score @s textClick matches 197 run function commands:books/colosseum
+
+execute if score @s textClick matches 198 run function commands:books/new_chicago_skyline
 
 scoreboard players reset @a[scores={textClick=1..}] textClick

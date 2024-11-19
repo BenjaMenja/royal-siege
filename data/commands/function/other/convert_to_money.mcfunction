@@ -1,17 +1,9 @@
-execute at @s run tag @p add moneyr
+execute store result score @p moneyToAdd if score @p Kit matches 7 run data get entity @s Item.count 200
 
-execute at @s run scoreboard players add @p[distance=..4,scores={Kit=1..6},tag=moneyr] Money 150
+execute store result score @p moneyToAdd unless score @p Kit matches 7 run data get entity @s Item.count 150
 
-execute at @s run scoreboard players add @p[distance=..4,scores={Kit=1..6},tag=moneyr] totalSiegeBucks 150
+scoreboard players operation @p Money += @p moneyToAdd
 
-execute at @s run scoreboard players add @p[distance=..4,scores={Kit=7},tag=moneyr] Money 200
-
-execute at @s run scoreboard players add @p[distance=..4,scores={Kit=7},tag=moneyr] totalSiegeBucks 200
-
-execute at @s run scoreboard players add @p[distance=..4,scores={Kit=8..50},tag=moneyr] Money 150
-
-execute at @s run scoreboard players add @p[distance=..4,scores={Kit=8..50},tag=moneyr] totalSiegeBucks 150
+scoreboard players reset @p moneyToAdd
 
 kill @s
-
-tag @a remove moneyr

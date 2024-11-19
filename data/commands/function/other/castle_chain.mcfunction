@@ -10,6 +10,12 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 unless entity @a[scores={castleChain=..600}] run fill 55 68 -1076 55 68 -1032 chain[axis=z] replace air
 
+#Colliding Tides
+
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 unless entity @a[scores={castleChain=..600}] run fill 29 59 -1986 29 59 -1956 chain[axis=z] replace air
+
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 unless entity @a[scores={castleChain=..600}] run fill 9 59 -1986 9 59 -1956 chain[axis=z] replace air
+
 #Other
 
 execute unless entity @a[scores={castleChain=..600}] run tag @s add castleChain

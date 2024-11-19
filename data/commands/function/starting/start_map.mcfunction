@@ -21,21 +21,13 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 positioned 45 59 -1128 run function commands:entities/king_blue
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 positioned 12 57 -209 run function commands:entities/royal_guard_red
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 positioned 19 55 -1908 run function commands:entities/king_red
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 positioned 6 57 -209 run function commands:entities/royal_guard_red
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 positioned 19 55 -2034 run function commands:entities/king_blue
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 positioned 12 57 -55 run function commands:entities/royal_guard_blue
+scoreboard players set #redroyalguard royalguardCD 2399
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 positioned 6 57 -55 run function commands:entities/royal_guard_blue
-
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 positioned 150 57 -1020 run function commands:entities/royal_guard_red
-
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 positioned 150 57 -1014 run function commands:entities/royal_guard_red
-
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 positioned 42 57 -1122 run function commands:entities/royal_guard_blue
-
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 positioned 48 57 -1122 run function commands:entities/royal_guard_blue
+scoreboard players set #blueroyalguard royalguardCD 2399
 
 execute as @p[scores={Start=1..}] run bossbar set minecraft:redking max 1024
 
@@ -333,5 +325,5 @@ advancement grant @a[scores={Ultimate=26}] only commands:challenges/ultimate_ext
 
 scoreboard players set @a players 0
 
-scoreboard players set @a[predicate=commands:in_any_battlefield,scores={Start=1..}] Start 0
+scoreboard players set @a[scores={Start=1..}] Start 0
 

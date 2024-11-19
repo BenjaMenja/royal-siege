@@ -12,6 +12,10 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if entity @s[team=Red] run teleport @s 137 60 -1004
 
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 if entity @s[team=Blue] run teleport @s 19 64 -2041
+
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 if entity @s[team=Red] run teleport @s 19 64 -1901
+
 execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 if entity @s[team=Red] run teleport @s 1086 53 -61
 
 execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 if entity @s[team=Blue] run teleport @s 1015 53 -61

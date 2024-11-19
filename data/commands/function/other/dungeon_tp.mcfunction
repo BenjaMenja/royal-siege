@@ -6,7 +6,11 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 run tp @s[team=Red] 107 53 -1056 135 0
 
-clear @s[team=Blue] carrot[custom_data~{lightningstaff:1b}]
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 run tp @s[team=Blue] -54 56 -1971
+
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 run tp @s[team=Red] 92 56 -1971
+
+clear @s carrot[custom_data~{lightningstaff:1b}]
 
 tag @s remove dungeonTP
 

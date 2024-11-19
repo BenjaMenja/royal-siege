@@ -11,6 +11,10 @@
     },
     {
       "condition": "minecraft:reference",
+      "name": "commands:in_colliding_tides"
+    },
+    {
+      "condition": "minecraft:reference",
       "name": "commands:in_colosseum"
     },
     {

@@ -8,6 +8,10 @@
     {
       "condition": "minecraft:reference",
       "name": "commands:in_blue_throne_room_winterland"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:in_blue_throne_room_colliding_tides"
     }
   ]
 }

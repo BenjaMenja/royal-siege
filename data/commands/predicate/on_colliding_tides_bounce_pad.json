@@ -1,0 +1,115 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "position": {
+            "x": {
+              "min": 28,
+              "max": 30
+            },
+            "y": {
+              "min": 53,
+              "max": 54
+            },
+            "z": {
+              "min": -1966,
+              "max": -1964
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "position": {
+            "x": {
+              "min": 9,
+              "max": 11
+            },
+            "y": {
+              "min": 53,
+              "max": 54
+            },
+            "z": {
+              "min": -1964,
+              "max": -1962
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "position": {
+            "x": {
+              "min": 11,
+              "max": 13
+            },
+            "y": {
+              "min": 53,
+              "max": 54
+            },
+            "z": {
+              "min": -1980,
+              "max": -1978
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "position": {
+            "x": {
+              "min": 26,
+              "max": 28
+            },
+            "y": {
+              "min": 53,
+              "max": 54
+            },
+            "z": {
+              "min": -1980,
+              "max": -1978
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "position": {
+            "x": {
+              "min": 19,
+              "max": 20
+            },
+            "y": {
+              "min": 56,
+              "max": 57
+            },
+            "z": {
+              "min": -1971,
+              "max": -1970
+            }
+          }
+        }
+      }
+    }
+  ]
+}

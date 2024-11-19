@@ -8,6 +8,10 @@
     {
       "condition": "minecraft:reference",
       "name": "commands:in_blue_castle_winterland"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:in_blue_ship_colliding_tides"
     }
   ]
 }

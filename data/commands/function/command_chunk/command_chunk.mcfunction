@@ -8,6 +8,8 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 run tag @e[type=item,x=58,y=52,z=-1030,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
 
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 run tag @e[type=item,x=19,y=56,z=-1971,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
+
 execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 run tag @e[type=item,x=1051,y=53,z=-76,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
 
 execute if score #gamemode settings matches 1 if score #tdmMap settings matches 1 run tag @e[type=item,x=2017,y=52,z=0,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
@@ -272,13 +274,13 @@ kill @e[type=marker,tag=xpspawner,scores={xpspawner=300..}]
 
 #Convert Gold Ingots to Siege Bucks
 
-tag @e[type=item,predicate=commands:in_gold_pit,nbt={Item:{count:1,components:{"minecraft:custom_data":{moneyitem:1b}}}},limit=1] add convertToMoney
+tag @e[type=item,predicate=commands:in_gold_pit,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},limit=1] add convertToMoney
 
 execute as @e[type=item,tag=convertToMoney] at @s run function commands:other/convert_to_money
 
 #Convert Corrupt Credits to Bank
 
-tag @e[type=item,predicate=commands:in_gold_pit,nbt={Item:{count:1,components:{"minecraft:custom_data":{corruptcredit:1b}}}},limit=1] add convertToBank
+tag @e[type=item,predicate=commands:in_gold_pit,nbt={Item:{components:{"minecraft:custom_data":{corruptcredit:1b}}}},limit=1] add convertToBank
 
 execute as @e[type=item,tag=convertToBank] at @s if entity @p[team=Red,distance=..4] run function commands:other/convert_to_bank_red
 
@@ -1442,6 +1444,10 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @a[tag=spectator,predicate=!commands:in_winterland] run teleport @s 57 72 -1031
 
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 as @a[tag=spectator,predicate=!commands:in_colliding_tides] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
+
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 as @a[tag=spectator,predicate=!commands:in_colliding_tides] run teleport @s 19 80 -1971
+
 execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 as @a[tag=spectator,predicate=!commands:in_colosseum] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
 execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 as @a[tag=spectator,predicate=!commands:in_colosseum] run teleport @s 1051 69 -61
@@ -1603,6 +1609,10 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingRed] run data merge entity @s {wander_target:[I;156,59,-1017]}
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingBlue] run data merge entity @s {wander_target:[I;45,59,-1128]}
+
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 as @e[type=wandering_trader,tag=wanderingKingRed] run data merge entity @s {wander_target:[I;19,55,-1908]}
+
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 as @e[type=wandering_trader,tag=wanderingKingBlue] run data merge entity @s {wander_target:[I;19,55,-2034]}
 
 #Dragon Rush
 
@@ -1790,6 +1800,12 @@ execute if score #redking bossHP > #blueking bossHP if score #classicMap setting
 
 execute if score #redking bossHP = #blueking bossHP if score #classicMap settings matches 1 run setblock 58 51 -1030 white_stained_glass
 
+execute if score #redking bossHP < #blueking bossHP if score #classicMap settings matches 2 run setblock 19 55 -1971 blue_stained_glass
+
+execute if score #redking bossHP > #blueking bossHP if score #classicMap settings matches 2 run setblock 19 55 -1971 red_stained_glass
+
+execute if score #redking bossHP = #blueking bossHP if score #classicMap settings matches 2 run setblock 19 55 -1971 white_stained_glass
+
 #Castle Throne Room Warps (Forest Glen)
 
 execute positioned 19 60 -65 as @a[distance=..1,gamemode=!spectator] run teleport @s 18.4 60 -65
@@ -1870,6 +1886,14 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if score #blueroyalguard royalguardCD matches 2400 positioned 48 57 -1122 run function commands:entities/royal_guard_blue
 
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 if score #redroyalguard royalguardCD matches 2400 positioned 15 53 -1911 run function commands:entities/royal_guard_red
+
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 if score #redroyalguard royalguardCD matches 2400 positioned 23 53 -1911 run function commands:entities/royal_guard_red
+
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 if score #blueroyalguard royalguardCD matches 2400 positioned 23 53 -2031 run function commands:entities/royal_guard_blue
+
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 if score #blueroyalguard royalguardCD matches 2400 positioned 15 53 -2031 run function commands:entities/royal_guard_blue
+
 execute if score #redroyalguard royalguardCD matches 2400.. run scoreboard players reset #redroyalguard royalguardCD
 
 execute if score #blueroyalguard royalguardCD matches 2400.. run scoreboard players reset #blueroyalguard royalguardCD
@@ -1886,9 +1910,13 @@ execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_thr
 
 execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 1 run teleport @s ~0.2 ~ ~
 
+execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 2 run teleport @s ~ ~ ~0.2
+
 execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 0 run teleport @s ~ ~ ~0.2
 
 execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 1 run teleport @s ~ ~ ~-0.2
+
+execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 2 run teleport @s ~ ~ ~-0.2
 
 #King Invulnerable when no one is in the throne room
 
@@ -2085,6 +2113,8 @@ execute as @a[tag=dungeonTP,scores={damageTaken=1..}] run function commands:othe
 #Slime block jump boost and Speed Pads
 
 execute as @a[predicate=commands:on_launch_pads] at @s if block ~ ~-0.5 ~ slime_block run effect give @s jump_boost 1 13 true
+
+execute as @a[predicate=commands:on_colliding_tides_bounce_pad] at @s run effect give @s jump_boost 1 13 true
 
 execute as @a[predicate=commands:on_ncs_speed_pad] at @s if block ~ ~-0.5 ~ magenta_glazed_terracotta run effect give @s speed 1 40 true
 
@@ -2315,6 +2345,10 @@ execute as @a[scores={Kit=15,firCharChallenge=600..}] run advancement grant @s o
 scoreboard players set #numPlayersOnFireRed firCharChallenge 0
 
 scoreboard players set #numPlayersOnFireBlue firCharChallenge 0
+
+#Pirates Map Stuff
+
+execute if score #classicMap settings matches 2 run function commands:other/pirate_map
 
 #Give menu item to people w/out it
 

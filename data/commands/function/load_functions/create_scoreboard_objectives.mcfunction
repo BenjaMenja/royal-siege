@@ -56,6 +56,8 @@ scoreboard objectives add End dummy
 scoreboard objectives add shadow dummy
 scoreboard objectives add ItemKill dummy
 scoreboard objectives add WarriorItem dummy
+scoreboard objectives add Defend dummy
+scoreboard objectives add corruptBank dummy
 
 #New Scoreboards
 
@@ -130,6 +132,7 @@ scoreboard objectives add totalSiegeBucks dummy
 scoreboard objectives add blunderDis dummy
 scoreboard objectives add blunderStore dummy
 scoreboard objectives add abilityCD dummy
+scoreboard objectives add moneyToAdd dummy
 
 scoreboard objectives remove dmDelay
 scoreboard objectives remove olympicVaultTimer

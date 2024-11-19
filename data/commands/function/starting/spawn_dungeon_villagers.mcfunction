@@ -43,6 +43,10 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 run tp @e[type=villager,team=Blue] 83 53 -1080
 
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 run tp @e[type=villager,team=Red] 96 56 -1971
+
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 run tp @e[type=villager,team=Blue] -58 56 1971
+
 execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 run tp @e[type=villager,team=Red] 1086 53 -59
 
 execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 run tp @e[type=villager,team=Blue] 1015 53 -63

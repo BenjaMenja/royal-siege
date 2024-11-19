@@ -28,7 +28,7 @@ tag @a remove readyUp
 
 #Getting match ID
 
-execute store result score @a matchID run random roll -2147483648..2147483647
+execute store result score #matchID matchID run random roll -1000000000..1000000000
 
-execute store result score #matchID matchID run random roll -2147483648..2147483647
+execute as @a store result score @s matchID run scoreboard players get #matchID matchID
 
