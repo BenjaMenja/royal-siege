@@ -29,8 +29,8 @@
                 },
                 "minecraft:entity_data": {
                   "id": "minecraft:bat",
-                  "Silent": 1,
-                  "Invulnerable": 1,
+                  "Silent": true,
+                  "Invulnerable": true,
                   "Tags": [
                     "powderKegBlue",
                     "powderKeg"

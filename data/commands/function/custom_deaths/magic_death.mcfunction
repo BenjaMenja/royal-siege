@@ -2,7 +2,7 @@ execute if entity @s[tag=custom_death] run return -1
 
 tag @s add custom_death
 
-execute store result score #rng RNG run random roll 1..5
+execute store result score #rng RNG run random value 1..5
 
 execute if score #rng RNG matches 1 run tellraw @a [{"selector":"@s"},{"text":" shriveled up and died.","color":"white"}]
 

@@ -1,13 +1,13 @@
 #Give values to cards
 
-execute store result score #rng RNG run random roll 1..13
+execute store result score #rng RNG run random value 1..13
 scoreboard players operation @s cardValue = #rng RNG
 execute at @s[tag=card6,tag=redProj] if entity @a[tag=cardShooter,tag=sleightofhand,team=Red] run scoreboard players set @s cardValue 13
 execute at @s[tag=card7,tag=redProj] if entity @a[tag=cardShooter,tag=sleightofhand,team=Red] run scoreboard players set @s cardValue 13
 execute at @s[tag=card6,tag=blueProj] if entity @a[tag=cardShooter,tag=sleightofhand,team=Blue] run scoreboard players set @s cardValue 13
 execute at @s[tag=card7,tag=blueProj] if entity @a[tag=cardShooter,tag=sleightofhand,team=Blue] run scoreboard players set @s cardValue 13
 
-execute store result score #rng RNG run random roll 1..4
+execute store result score #rng RNG run random value 1..4
 scoreboard players operation @s cardSuite = #rng RNG
 scoreboard players reset #rng RNG
 

@@ -38,7 +38,6 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:movement_speed",
-                  "name": "movement_speed",
                   "amount": -0.1,
                   "operation": "add_multiplied_base",
                   "id": "8b156f8a-4a17-451d-9a89-0d385ea99b51",
@@ -46,7 +45,6 @@
                 },
                 {
                   "attribute": "minecraft:knockback_resistance",
-                  "name": "knockback_resistance",
                   "amount": 0.5,
                   "operation": "add_multiplied_base",
                   "id": "20fba788-7a0d-4939-9581-239312fc8c0a",
@@ -54,7 +52,6 @@
                 },
                 {
                   "attribute": "minecraft:max_health",
-                  "name": "max_health",
                   "amount": 6,
                   "operation": "add_value",
                   "id": "0a2c8937-81b7-4bec-8595-84a6f70ca6ae",

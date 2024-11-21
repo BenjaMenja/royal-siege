@@ -1,6 +1,6 @@
 tag @s add purchase
 
-execute store result score #soup RNG run random roll 1..12
+execute store result score #soup RNG run random value 1..12
 
 execute if score #soup RNG matches 1 run loot give @s[tag=purchase,scores={Money=400..}] loot commands:shop_items/corn_chowder
 

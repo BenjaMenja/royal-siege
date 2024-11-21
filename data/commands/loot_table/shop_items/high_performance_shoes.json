@@ -52,7 +52,6 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:armor",
-                  "name": "armor",
                   "amount": 1,
                   "operation": "add_value",
                   "id": "091c988e-78af-4222-bfd3-967b515dd07d",
@@ -60,7 +59,6 @@
                 },
                 {
                   "attribute": "minecraft:step_height",
-                  "name": "step_height",
                   "amount": 1,
                   "operation": "add_value",
                   "id": "da577ce1-e747-4eec-98ff-9b3c80b457e5",
@@ -68,7 +66,6 @@
                 },
                 {
                   "attribute": "minecraft:movement_speed",
-                  "name": "movement_speed",
                   "amount": 0.1,
                   "operation": "add_multiplied_base",
                   "id": "284685ab-fe3d-406e-be1c-c247a527b416",

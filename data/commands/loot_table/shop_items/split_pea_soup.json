@@ -55,7 +55,6 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:attack_damage",
-                  "name": "attack_damage",
                   "amount": 7,
                   "operation": "add_value",
                   "id": "5ff3d693-026f-446b-8893-6587edd668e6",
@@ -63,7 +62,6 @@
                 },
                 {
                   "attribute": "minecraft:attack_speed",
-                  "name": "attack_speed",
                   "amount": -3.1,
                   "operation": "add_value",
                   "id": "3f6bd0b7-ca43-4521-b269-6236f2bc5ec6",

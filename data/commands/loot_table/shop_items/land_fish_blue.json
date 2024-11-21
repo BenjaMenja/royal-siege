@@ -33,7 +33,7 @@
                   "Tags": [
                     "landfish"
                   ],
-                  "CustomName": "{\"color\":\"blue\",\"italic\":false,\"text\":\"Land Fish\"",
+                  "CustomName": "{\"color\":\"blue\",\"italic\":false,\"text\":\"Land Fish\"}",
                   "HandItems": [
                     {
                       "id": "minecraft:stick",

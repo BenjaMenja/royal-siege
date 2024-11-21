@@ -1,4 +1,4 @@
-execute store result score #rng RNG run random roll 1..10
+execute store result score #rng RNG run random value 1..10
 
 execute if score #rng RNG matches 1 run effect give @s nausea 4 0 true
 

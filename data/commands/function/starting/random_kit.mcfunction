@@ -1,6 +1,6 @@
-execute if entity @a[tag=randomKit,team=Red] store result score #rngRed RNG run random roll 1..15
+execute if entity @a[tag=randomKit,team=Red] store result score #rngRed RNG run random value 1..15
 
-execute if entity @a[tag=randomKit,team=Blue] store result score #rngBlue RNG run random roll 1..15
+execute if entity @a[tag=randomKit,team=Blue] store result score #rngBlue RNG run random value 1..15
 
 execute as @a[team=Red] if score #rngRed RNG = @s Kit run function commands:starting/random_kit
 

@@ -36,7 +36,6 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:armor",
-                  "name": "armor",
                   "amount": 6,
                   "operation": "add_value",
                   "id": "40da15b2-e183-4b83-bccf-e911d6a95c15",
@@ -44,7 +43,6 @@
                 },
                 {
                   "attribute": "minecraft:armor_toughness",
-                  "name": "armor_toughness",
                   "amount": 2,
                   "operation": "add_value",
                   "id": "d4194bc2-3a77-43cd-82e5-d20a2beec95f",

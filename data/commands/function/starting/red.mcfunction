@@ -206,6 +206,8 @@ loot give @s[scores={Kit=15,RedKit=198}] loot commands:main_weapons/sparkler
 
 loot give @s[scores={Kit=15,RedKit=198}] loot commands:main_abilities/blazing_speed
 
+loot give @s[scores={Kit=16,RedKit=198}] loot commands:main_weapons/thermometer
+
 execute if entity @s[scores={RedKit=198},tag=hadUltimate] run function commands:other/ultimate_charger
 
 execute if entity @s[scores={RedKit=198}] run function commands:custom_deaths/reset_cooldowns

@@ -44,12 +44,14 @@
                 "minecraft:unbreakable": {
                   "show_in_tooltip": false
                 },
+                "consumable": {
+                  "consume_seconds": 1000000
+                },
                 "minecraft:custom_model_data": 147,
                 "minecraft:food": {
                   "nutrition": 0,
                   "saturation": 0,
-                  "can_always_eat": true,
-                  "eat_seconds": 1000000
+                  "can_always_eat": true
                 }
               }
             },

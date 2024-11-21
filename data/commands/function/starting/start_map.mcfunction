@@ -69,7 +69,9 @@ execute if score @s players matches 8 if score #gamemode settings matches 1 run 
 
 execute if score @s players matches 10 if score #gamemode settings matches 1 run scoreboard players set #tdmreqkills tdmKills 30
 
-execute as @a run function commands:other/player_get_uuid
+execute as @a store result score @s UUID run data get entity @s UUID[0]
+
+execute as @a at @s run function commands:starting/spawn_health_displays
 
 scoreboard players set #redHS healstreak 0
 

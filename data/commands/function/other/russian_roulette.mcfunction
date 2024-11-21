@@ -1,4 +1,4 @@
-execute store result score #rng RNG run random roll 1..6
+execute store result score #rng RNG run random value 1..6
 
 execute if score #rng RNG matches 1 run tag @s add rouletteFire
 

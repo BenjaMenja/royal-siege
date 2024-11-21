@@ -6,7 +6,7 @@
         {
           "type": "item",
           "weight": 1,
-          "name": "minecraft:carrot",
+          "name": "minecraft:stick",
           "functions": [
             {
               "function": "set_count",
@@ -15,47 +15,38 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:unbreakable": {},
-                "minecraft:custom_model_data": 171,
-                "minecraft:custom_data": {
-                  "spacewrench": 1
-                },
-                "consumable": {
-                  "consume_seconds": 1000000
-                },
-                "minecraft:food": {
-                  "nutrition": 0,
-                  "saturation": 0,
-                  "can_always_eat": true
-                },
                 "minecraft:attribute_modifiers": {
                   "modifiers": [
                     {
+                      "id": "6fbc0ff7-93ea-496f-880a-f63957f23b39",
                       "type": "attack_damage",
-                      "id": "5b3e5041-217b-421e-8c57-01ecea07c446",
-                      "amount": 6.5,
+                      "amount": 6,
                       "operation": "add_value",
                       "slot": "mainhand"
                     },
                     {
+                      "id": "56534746-da61-401f-8a23-76fdc3229b3c",
                       "type": "attack_speed",
-                      "id": "c3fe1e37-a9d1-492f-8468-a3f4a1755c34",
-                      "amount": -2.6,
+                      "amount": -2.8,
                       "operation": "add_value",
                       "slot": "mainhand"
                     }
                   ],
                   "show_in_tooltip": false
-                }
+                },
+                "minecraft:custom_data": {
+                  "thermometer": true
+                },
+                "minecraft:custom_model_data": 198
               }
             },
             {
               "function": "set_name",
               "name": [
                 {
-                  "color": "dark_purple",
+                  "color": "red",
                   "italic": false,
-                  "text": "Space Wrench"
+                  "text": "Thermometer"
                 }
               ]
             },
@@ -63,21 +54,7 @@
               "function": "set_lore",
               "lore": [
                 {
-                  "color": "yellow",
-                  "italic": false,
-                  "text": "Right-Click to use Ability"
-                },
-                {
-                  "text": " "
-                },
-                {
-                  "text": "A multipurpose wrench, useful for bashing foes and augmenting things."
-                },
-                {
-                  "text": "Right-Clicking while aiming at a teammate will augment them."
-                },
-                {
-                  "text": "The augment varies based on their character choice."
+                  "text": "Sometimes, you just can't get them kids to behave..."
                 },
                 {
                   "text": " "
@@ -90,12 +67,12 @@
                 {
                   "color": "dark_green",
                   "italic": false,
-                  "text": " 6.5 Attack Damage"
+                  "text": " 6 Attack Damage"
                 },
                 {
                   "color": "dark_green",
                   "italic": false,
-                  "text": " 1.4 Attack Speed"
+                  "text": " 1.2 Attack Speed"
                 }
               ],
               "mode": "append"

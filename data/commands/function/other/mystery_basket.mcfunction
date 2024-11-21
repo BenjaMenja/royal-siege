@@ -1,4 +1,4 @@
-execute store result score #mysteryfood RNG run random roll 1..6
+execute store result score #mysteryfood RNG run random value 1..6
 
 #Red Team
 

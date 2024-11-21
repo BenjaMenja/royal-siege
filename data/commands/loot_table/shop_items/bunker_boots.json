@@ -49,7 +49,6 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:armor",
-                  "name": "armor",
                   "amount": 2,
                   "operation": "add_value",
                   "id": "527768e0-7ea8-4b61-8aab-474c3a1570b9",
@@ -57,7 +56,6 @@
                 },
                 {
                   "attribute": "minecraft:movement_speed",
-                  "name": "movement_speed",
                   "amount": 0.2,
                   "operation": "add_multiplied_base",
                   "id": "521aec61-b40b-456d-9f08-c91fd11c3099",

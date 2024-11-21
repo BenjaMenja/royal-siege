@@ -2350,6 +2350,10 @@ scoreboard players set #numPlayersOnFireBlue firCharChallenge 0
 
 execute if score #classicMap settings matches 2 run function commands:other/pirate_map
 
+#Text Health Display
+
+execute as @e[type=text_display,tag=healthDisplay] run function commands:other/update_health_display
+
 #Give menu item to people w/out it
 
 execute as @a[predicate=commands:in_any_battlefield,predicate=!commands:inventory/menu] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run loot give @s loot commands:gameplay/menu

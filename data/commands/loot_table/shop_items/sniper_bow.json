@@ -47,7 +47,6 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:movement_speed",
-                  "name": "movement_speed",
                   "amount": -0.65,
                   "operation": "add_multiplied_base",
                   "id": "b92fe99e-2296-40c5-b76e-b8dde2c58457",
@@ -55,7 +54,6 @@
                 },
                 {
                   "attribute": "minecraft:movement_speed",
-                  "name": "movement_speed",
                   "amount": -0.65,
                   "operation": "add_multiplied_base",
                   "id": "b92fe49e-2296-40c5-b76e-b8dde2c58457",
