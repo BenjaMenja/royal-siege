@@ -2,6 +2,7 @@
     "values": [
         "minecraft:fireball",
         "minecraft:unattributed_fireball",
-        "commands:bypass_cooldown"
+        "commands:bypass_cooldown",
+        "commands:bleed"
     ]
 }

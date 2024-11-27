@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "commands:attributes/clears/clear_absorption_shield_atkdmg",
+    "commands:attributes/clears/clear_outrage_atkdmg",
+    "commands:attributes/clears/clear_decay_aura_atkdmg",
+    "commands:attributes/clears/clear_vaccine_debuffs"
+  ]
+}

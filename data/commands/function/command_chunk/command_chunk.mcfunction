@@ -62,11 +62,13 @@ execute as @e[type=bat,tag=minionswarm] run function commands:other/minion_swarm
 
 #Lightning Rod
 
-scoreboard players add @e[type=fishing_bobber] LightningRod 1
+execute as @a[scores={useFishingRod=1..},predicate=commands:holding/lightning_rod] at @s run tag @n[type=fishing_bobber] add lightningrod
 
-execute as @e[type=fishing_bobber,scores={LightningRod=20..}] at @s run summon lightning_bolt
+scoreboard players add @e[type=fishing_bobber,tag=lightningrod] LightningRod 1
 
-kill @e[type=fishing_bobber,scores={LightningRod=100..}]
+execute as @e[type=fishing_bobber,tag=lightningrod,scores={LightningRod=20..}] at @s run summon lightning_bolt
+
+kill @e[type=fishing_bobber,tag=lightningrod,scores={LightningRod=100..}]
 
 #Mimics
 
@@ -814,7 +816,7 @@ scoreboard players set @a[scores={Ultcharge=1..}] Ultcharge 0
 
 #Ultimate Charge Bossbars
 
-execute as @a[scores={Ultimate=1..30}] run function commands:other/ultimate_bossbars
+execute as @a[scores={Ultimate=1..32}] run function commands:other/ultimate_bossbars
 
 #Warrior Cooldown Display
 
@@ -1200,6 +1202,8 @@ execute as @a[scores={Kit=9}] store result score @s multiItems run clear @s snow
 
 execute as @a[scores={Kit=3}] store result score @s multiItems run clear @s skeleton_spawn_egg[custom_data~{turret:1b}] 0
 
+execute as @a[scores={Kit=16}] store result score @s multiItems run clear @s snowball[custom_data~{icepack:1b}] 0
+
 execute as @e[team=Red,tag=turret] run scoreboard players add @a[limit=1,team=Red,scores={Kit=3}] multiItems 1
 
 execute as @e[team=Blue,tag=turret] run scoreboard players add @a[limit=1,team=Blue,scores={Kit=3}] multiItems 1
@@ -1384,7 +1388,7 @@ scoreboard players reset @a[scores={Kit=8,entPassive=1..}] entPassive
 
 #Ultimate Charger
 
-execute as @a[scores={usedCOAS=1..,Ultimate=1..30},predicate=commands:holding/ultimate_charger] run function commands:other/ultimate_charger
+execute as @a[scores={usedCOAS=1..,Ultimate=1..32},predicate=commands:holding/ultimate_charger] run function commands:other/ultimate_charger
 
 #The Watcher
 
@@ -2354,6 +2358,124 @@ execute if score #classicMap settings matches 2 run function commands:other/pira
 
 execute as @e[type=text_display,tag=healthDisplay] run function commands:other/update_health_display
 
+#School Nurse Cooldown Display
+
+execute as @a[scores={Kit=16}] run function commands:cooldowns/school_nurse_display
+
+#IV Drip
+
+scoreboard players remove @a[scores={Kit=16,ivDripTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] ivDripTimer 1
+
+execute as @a[scores={useFishingRod=1..},predicate=commands:holding/iv_drip] at @s run function commands:other/initialize_iv_drip
+
+execute as @e[type=fishing_bobber,tag=ivdrip] at @s if entity @a[distance=..1.5] run function commands:other/iv_drip_healing
+
+execute as @a[tag=ivAttached] at @s unless entity @n[type=fishing_bobber,tag=ivdrip,distance=..1.5] run function commands:other/iv_detach
+
+#Ice Packs
+
+scoreboard players remove @a[scores={Kit=16,multiItems=..1},predicate=commands:in_any_battlefield,tag=!notAlive] icePackTimer 1
+
+loot give @a[team=Red,scores={icePackTimer=..0}] loot commands:main_abilities/ice_pack_red
+
+loot give @a[team=Blue,scores={icePackTimer=..0}] loot commands:main_abilities/ice_pack_blue
+
+scoreboard players set @a[scores={icePackTimer=..0}] icePackTimer 200
+
+execute as @a[scores={icePackPassive=8..},tag=!upgraded] run function commands:other/ice_pack_passive
+
+execute as @a[scores={icePackPassive=6..},tag=upgraded] run function commands:other/ice_pack_passive
+
+execute as @e[type=snowball,tag=!icepackred,nbt={Item:{components:{"minecraft:custom_data":{icepackred:1b}}}}] at @s run function commands:ball/ice_pack_found_red
+
+execute as @e[type=area_effect_cloud,tag=icepackred] unless predicate commands:is_riding_ice_pack_red at @s run function commands:ball/ice_pack_landed_red
+
+execute as @e[type=snowball,tag=!icepackblue,nbt={Item:{components:{"minecraft:custom_data":{icepackblue:1b}}}}] at @s run function commands:ball/ice_pack_found_blue
+
+execute as @e[type=area_effect_cloud,tag=icepackblue] unless predicate commands:is_riding_ice_pack_blue at @s run function commands:ball/ice_pack_landed_blue
+
+#Defibrillator
+
+scoreboard players remove @a[scores={Kit=16,defibrillatorTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] defibrillatorTimer 1
+
+scoreboard players add @e[type=item,tag=defib] defibrillatorTimer 1
+
+execute as @e[type=item,scores={defibrillatorTimer=5..}] at @s run function commands:other/defibrillator_kill
+
+execute as @e[type=item,tag=defibRed] at @s as @p[distance=..2,team=Red] unless score @s Kit matches 16 run function commands:other/defibrillator_hit
+
+execute as @e[type=item,tag=defibBlue] at @s as @p[distance=..2,team=Blue] unless score @s Kit matches 16 run function commands:other/defibrillator_hit
+
+#Light Up Shoes
+
+scoreboard players add @a[predicate=commands:armor/light_up_shoes] lightUpTimer 1
+
+execute as @a[team=Red,predicate=commands:armor/light_up_shoes] at @s run effect give @a[team=Blue,distance=..10] glowing 2 0 true
+
+execute as @a[team=Blue,predicate=commands:armor/light_up_shoes] at @s run effect give @a[team=Red,distance=..10] glowing 2 0 true
+
+execute as @a[scores={lightUpTimer=20..}] run function commands:other/light_up_shoes
+
+#First Aid Kit
+
+scoreboard players add @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{firstaid:1b}}}},limit=1] firstAidTimer 1
+
+execute as @e[type=item,scores={firstAidTimer=60..}] at @s run particle dust{color:[0.133,1.000,0.000],scale:1} ~ ~1 ~ 0 0 0 1 0
+
+execute as @e[type=item,scores={firstAidTimer=60..},nbt={Item:{components:{"minecraft:custom_data":{firstaidred:1b}}}}] at @s as @p[distance=..2,team=Red] run function commands:other/first_aid_kit
+
+execute as @e[type=item,scores={firstAidTimer=60..},nbt={Item:{components:{"minecraft:custom_data":{firstaidblue:1b}}}}] at @s as @p[distance=..2,team=Blue] run function commands:other/first_aid_kit
+
+#Bleed Damage
+
+scoreboard players remove @a[scores={bleedTimer=0..}] bleedTimer 1
+
+scoreboard players add @a[scores={bleedTimer=0..}] bleedEffect 1
+
+execute as @a[scores={bleedEffect=20..}] run damage @s 1 commands:bleed
+
+scoreboard players set @a[scores={bleedEffect=20..}] bleedEffect 0
+
+scoreboard players set @a[scores={bleedTimer=..-1}] bleedEffect 0
+
+#Live-Attenuated Vaccine
+
+effect clear @a[tag=vaccinated] nausea
+
+effect clear @a[tag=vaccinated] slowness
+
+effect clear @a[tag=vaccinated] weakness
+
+execute as @a[tag=vaccinated] run function #commands:clear_slowness_attributes
+
+execute as @a[tag=vaccinated] run function #commands:clear_weakness_attributes
+
+#Inhaler
+
+execute as @a[predicate=commands:holding/inhaler] run function commands:attributes/adds/add_inhaler_buffs
+
+execute as @e[nbt={Item:{components:{"minecraft:custom_data":{inhaler:1b}}}}] at @s run function commands:other/pass_inhaler
+
+#Universal Health Care (School Nurse Ultimate)
+
+execute as @a[scores={Ultimate=31},tag=!notAlive,predicate=!commands:inventory/universal_health_care] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s UHCTimer 1
+
+loot give @a[scores={UHCTimer=2800..}] loot commands:ultimates/universal_health_care
+
+scoreboard players set @a[scores={UHCTimer=2800..}] UHCTimer 0
+
+scoreboard players add @a[tag=UHC] UHCDur 1
+
+execute as @a[tag=UHC,scores={UHCDur=200..}] run function commands:ultimates/universal_health_care_end
+
+#10 Hour Energy (School Nurse Alt. Ultimate)
+
+execute as @a[scores={Ultimate=32},tag=!notAlive,predicate=!commands:inventory/ten_hour_energy] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s 10HourTimer 1
+
+loot give @a[scores={10HourTimer=1800..}] loot commands:ultimates/ten_hour_energy
+
+scoreboard players set @a[scores={10HourTimer=1800..}] 10HourTimer 0
+
 #Give menu item to people w/out it
 
 execute as @a[predicate=commands:in_any_battlefield,predicate=!commands:inventory/menu] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run loot give @s loot commands:gameplay/menu
@@ -2370,7 +2492,7 @@ function commands:attributes/attribute_score_manager
 
 kill @e[type=arrow,nbt={inGround:1b}]
 
-kill @e[type=trident,nbt={inGround:1b},nbt=!{Trident:{tag:{throwingblade:1b}}}]
+kill @e[type=trident,nbt={inGround:1b}]
 
 #Score Reset
 
@@ -2397,6 +2519,8 @@ scoreboard players reset @a[scores={died=1..}] killStreak
 scoreboard players reset @a[scores={died=1..}] Mimic
 
 scoreboard players reset @a[scores={damageTaken=1..}] damageTaken
+
+scoreboard players reset @a[scores={useFishingRod=1..}] useFishingRod
 
 scoreboard players reset @a[tag=!hasSmartDrone] droneDamage
 

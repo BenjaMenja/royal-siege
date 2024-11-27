@@ -386,4 +386,24 @@ execute if score @s textClick matches 197 run function commands:books/colosseum
 
 execute if score @s textClick matches 198 run function commands:books/new_chicago_skyline
 
+execute if score @s textClick matches 199 run function commands:shops/defibrillator
+
+execute if score @s textClick matches 200 run function commands:shops/light_up_shoes
+
+execute if score @s textClick matches 201 run function commands:shops/first_aid_kit
+
+execute if score @s textClick matches 202 run function commands:shops/inhaler
+
+execute if score @s textClick matches 203 run function commands:shops/trauma_shears
+
+execute if score @s textClick matches 204 run function commands:shops/live_attenuated_vaccine
+
+execute if score @s textClick matches 205 run function commands:starting/ultimate_select/universal_health_care
+
+execute if score @s textClick matches 206 run function commands:starting/ultimate_select/ten_hour_energy
+
+execute if score @s textClick matches 207 run function commands:practice_range/character/school_nurse
+
+execute if score @s textClick matches 208 run function commands:books/school_nurse
+
 scoreboard players reset @a[scores={textClick=1..}] textClick

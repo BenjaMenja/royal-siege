@@ -62,4 +62,8 @@ execute as @s[scores={Ultimate=29,Kit=15}] run scoreboard players operation @s c
 
 execute as @s[scores={Ultimate=30,Kit=15}] run scoreboard players operation @s popRocksTimer += @s Ultcharge
 
+execute as @s[scores={Ultimate=31,Kit=16}] run scoreboard players operation @s UHCTimer += @s Ultcharge
+
+execute as @s[scores={Ultimate=32,Kit=16}] run scoreboard players operation @s 10HourTimer += @s Ultcharge
+
 advancement revoke @s only commands:ult_charge_entities

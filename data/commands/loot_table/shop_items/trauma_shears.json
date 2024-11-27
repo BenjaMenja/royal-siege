@@ -1,0 +1,91 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:shears",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:attribute_modifiers": {
+                  "modifiers": [
+                    {
+                      "id": "e3ae6ceb-95b4-42a1-be3e-02a970cd7701",
+                      "type": "attack_damage",
+                      "amount": 6.5,
+                      "operation": "add_value",
+                      "slot": "mainhand"
+                    },
+                    {
+                      "id": "12264d68-ed0c-4ee4-8bf2-4ea4c2df317b",
+                      "type": "attack_speed",
+                      "amount": -2.7,
+                      "operation": "add_value",
+                      "slot": "mainhand"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                },
+                "minecraft:custom_model_data": 203,
+                "minecraft:custom_data": {
+                  "traumashears": true
+                },
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "gray",
+                  "italic": false,
+                  "text": "Trauma Shears"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "text": "Inflicts Bleed I on enemies for 3s."
+                },
+                {
+                  "text": "Additional hits refresh this bleed effect."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "color": "gray",
+                  "italic": false,
+                  "text": "When in Main Hand:"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 6.5 Attack Damage"
+                },
+                {
+                  "color": "dark_green",
+                  "italic": false,
+                  "text": " 1.3 Attack Speed"
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

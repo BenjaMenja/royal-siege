@@ -358,6 +358,22 @@ execute at @s[predicate=commands:holding/chrysanthemum_shell,tag=!chrysanthemumL
 
 execute at @s[predicate=commands:holding/pop_rocks] run function commands:ultimates/pop_rocks_init
 
+#Defibrillator
+
+execute at @s[predicate=commands:holding/defibrillator,scores={defibrillatorTimer=..0}] run function commands:other/defibrillator_shot
+
+#Live-Attenuated Vaccine
+
+execute at @s[predicate=commands:holding/live_attenuated_vaccine] anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/vaccine_start_ray
+
+#Universal Health Care
+
+execute at @s[predicate=commands:holding/universal_health_care] anchored eyes positioned ^ ^ ^ anchored feet run function commands:ultimates/universal_health_care_init
+
+#10 Hour Energy
+
+execute at @s[predicate=commands:holding/ten_hour_energy] anchored eyes positioned ^ ^ ^ anchored feet run function commands:attributes/adds/add_ten_hour_energy_speed
+
 #Menu
 
 execute if entity @s[predicate=commands:holding/menu] run tellraw @s [{"color":"green","text":"+"},{"color":"yellow","text":"===================================================="},{"text":"\n"},{"color":"#5AF6F9","text":"Welcome to the Menu!"},{"text":"\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 64"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Opens up your character's shop.","color":"green"}]},"text":"[Shops]"},{"text":"                       "},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 65"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Accesses your team's bank.\nYou can view your team's collective amount of Siege Bucks and Corrupt Credits\nas well as deposit and withdraw.","color":"green"}]},"text":"[Bank]"},{"text":"\n\n\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 191"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Warps you to your castle's respawn point.","color":"green"},{"text":"\nThis has a 3 second delay, and can be interrupted by taking damage.","color":"green"}]},"text":"[Warp to Castle]"},{"text":"\n\n"},{"color":"green","text":"+"},{"color":"yellow","text":"====================================================\n"}]

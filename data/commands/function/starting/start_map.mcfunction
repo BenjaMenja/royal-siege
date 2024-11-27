@@ -137,6 +137,8 @@ tag @a remove resurrecting
 
 tag @s remove gamblerMoneyStolen
 
+tag @s remove vaccinated
+
 kill @e[type=marker,tag=resSoul]
 
 tellraw @a {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
@@ -209,6 +211,10 @@ bossbar set commands:blue_ult29 players @a[scores={Ultimate=29},team=Blue]
 
 bossbar set commands:blue_ult30 players @a[scores={Ultimate=30},team=Blue]
 
+bossbar set commands:blue_ult31 players @a[scores={Ultimate=31},team=Blue]
+
+bossbar set commands:blue_ult32 players @a[scores={Ultimate=32},team=Blue]
+
 bossbar set commands:red_ult1 players @a[scores={Ultimate=1},team=Red]
 
 bossbar set commands:red_ult2 players @a[scores={Ultimate=2},team=Red]
@@ -268,6 +274,10 @@ bossbar set commands:red_ult28 players @a[scores={Ultimate=28},team=Red]
 bossbar set commands:red_ult29 players @a[scores={Ultimate=29},team=Red]
 
 bossbar set commands:red_ult30 players @a[scores={Ultimate=30},team=Red]
+
+bossbar set commands:red_ult31 players @a[scores={Ultimate=31},team=Red]
+
+bossbar set commands:red_ult32 players @a[scores={Ultimate=32},team=Red]
 
 #Advancement Grants for ultimates
 

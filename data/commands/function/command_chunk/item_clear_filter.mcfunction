@@ -48,6 +48,8 @@ scoreboard players set @e[type=item,tag=shockGrenade] ItemKill 2
 
 scoreboard players set @e[type=item,tag=mysteriousbrew] ItemKill 2
 
+scoreboard players set @e[type=item,tag=defib] ItemKill 2
+
 execute as @e[type=item,tag=!processed,scores={ItemKill=1}] run data modify entity @s Owner set from entity @s Thrower
 
 execute as @e[type=item,tag=!processed,scores={ItemKill=1}] run data modify entity @s PickupDelay set value 0

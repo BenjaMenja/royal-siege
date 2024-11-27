@@ -64,6 +64,8 @@ execute if entity @s[team=Red] if entity @a[tag=hasBounty,tag=!foundBounty,limit
 
 execute if entity @s[team=Red] if entity @a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive,scores={Kit=15}] run tellraw @a[team=Red] [{"text":"Your gambler has placed a bounty on: ","color":"aqua"},{"selector":"@a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive]"},{"text":" (Firecracker)\nHelp your gambler kill them for a cash reward!","color":"aqua"}]
 
+execute if entity @s[team=Red] if entity @a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive,scores={Kit=16}] run tellraw @a[team=Red] [{"text":"Your gambler has placed a bounty on: ","color":"aqua"},{"selector":"@a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive]"},{"text":" (School Nurse)\nHelp your gambler kill them for a cash reward!","color":"aqua"}]
+
 execute if entity @s[team=Blue] if entity @a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive,scores={Kit=1}] run tellraw @a[team=Blue] [{"text":"Your gambler has placed a bounty on: ","color":"aqua"},{"selector":"@a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive]"},{"text":" (Warrior)\nHelp your gambler kill them for a cash reward!","color":"aqua"}]
 
 execute if entity @s[team=Blue] if entity @a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive,scores={Kit=2}] run tellraw @a[team=Blue] [{"text":"Your gambler has placed a bounty on: ","color":"aqua"},{"selector":"@a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive]"},{"text":" (Ninja)\nHelp your gambler kill them for a cash reward!","color":"aqua"}]
@@ -93,6 +95,8 @@ execute if entity @s[team=Blue] if entity @a[tag=hasBounty,tag=!foundBounty,limi
 execute if entity @s[team=Blue] if entity @a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive,scores={Kit=14}] run tellraw @a[team=Blue] [{"text":"Your gambler has placed a bounty on: ","color":"aqua"},{"selector":"@a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive]"},{"text":" (Astronaut)\nHelp your gambler kill them for a cash reward!","color":"aqua"}]
 
 execute if entity @s[team=Blue] if entity @a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive,scores={Kit=15}] run tellraw @a[team=Blue] [{"text":"Your gambler has placed a bounty on: ","color":"aqua"},{"selector":"@a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive]"},{"text":" (Firecracker)\nHelp your gambler kill them for a cash reward!","color":"aqua"}]
+
+execute if entity @s[team=Blue] if entity @a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive,scores={Kit=16}] run tellraw @a[team=Blue] [{"text":"Your gambler has placed a bounty on: ","color":"aqua"},{"selector":"@a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive]"},{"text":" (School Nurse)\nHelp your gambler kill them for a cash reward!","color":"aqua"}]
 
 tellraw @a[tag=hasBounty,tag=!foundBounty,limit=1,tag=!notAlive] [{"text":"An enemy Gambler has placed a bounty on you!","color":"aqua"}]
 

@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "commands:attributes/clears/clear_counter_slow",
+    "commands:attributes/clears/clear_outrage_slow",
+    "commands:attributes/clears/clear_ice_pack_slow",
+    "commands:attributes/clears/clear_iron_wall_slow",
+    "commands:attributes/clears/clear_kerfuffle_slow",
+    "commands:attributes/clears/clear_corruption_slow",
+    "commands:attributes/clears/clear_decay_aura_slow",
+    "commands:attributes/clears/clear_toxin_ball_slow",
+    "commands:attributes/clears/clear_fish_cannon_slow",
+    "commands:attributes/clears/clear_shadow_step_slow",
+    "commands:attributes/clears/clear_resurrection_slow",
+    "commands:attributes/clears/clear_tree_of_life_slow",
+    "commands:attributes/clears/clear_cryo_skeleton_slow",
+    "commands:attributes/clears/clear_debris_cannon_slow",
+    "commands:attributes/clears/clear_defibrillator_slow",
+    "commands:attributes/clears/clear_napalm_bucket_slow",
+    "commands:attributes/clears/clear_split_pea_soup_slow",
+    "commands:attributes/clears/clear_cavalry_charge_slow",
+    "commands:attributes/clears/clear_warrior_passive_slow",
+    "commands:attributes/clears/clear_absorption_shield_slow",
+    "commands:attributes/clears/clear_terror_of_the_seas_slow"
+  ]
+}

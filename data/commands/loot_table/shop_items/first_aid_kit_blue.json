@@ -1,0 +1,54 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "First Aid Kit",
+                "italic": false,
+                "color": "red"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Drop to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "A health pack that can be picked up by teammates, restoring 4 HP."
+                },
+                {
+                  "text": "Takes 3s to arm itself before teammates can use it."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 202,
+                "max_stack_size": 1
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{firstaidblue:1b,firstaid:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

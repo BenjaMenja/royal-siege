@@ -1,0 +1,55 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:white_dye",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "inhaler": true,
+                  "inhalerred": true
+                },
+                "custom_model_data": 207
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "#FF5757",
+                  "italic": false,
+                  "text": "Inhaler"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "text": "Gives +40% movement and -5 armor when held."
+                },
+                {
+                  "text": "Can be passed to teammates by throwing the item."
+                },
+                {
+                  "text": "Buff only activates if the inhaler is the only item being held."
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

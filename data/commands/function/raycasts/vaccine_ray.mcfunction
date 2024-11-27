@@ -1,0 +1,4 @@
+execute if entity @s[team=Red] if score #hit rayVar matches 0 unless score #hitentity rayVar matches 1 positioned ~-0.05 ~-0.05 ~-0.05 as @a[tag=!vaccineUser,sort=nearest,distance=..4,team=Red] if score #hit rayVar matches 0 positioned ~-0.85 ~-0.85 ~-0.85 if entity @s[dx=0] at @s run function commands:raycasts/vaccine_hit_entity
+execute if entity @s[team=Blue] if score #hit rayVar matches 0 unless score #hitentity rayVar matches 1 positioned ~-0.05 ~-0.05 ~-0.05 as @a[tag=!vaccineUser,sort=nearest,distance=..4,team=Blue] if score #hit rayVar matches 0 positioned ~-0.85 ~-0.85 ~-0.85 if entity @s[dx=0] at @s run function commands:raycasts/vaccine_hit_entity
+scoreboard players add #distance rayVar 1
+execute if score #hitentity rayVar matches 0 if score #hit rayVar matches 0 if score #distance rayVar matches ..20 positioned ^ ^ ^0.1 run function commands:raycasts/vaccine_ray

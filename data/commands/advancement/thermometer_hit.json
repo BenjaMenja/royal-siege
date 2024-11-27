@@ -1,0 +1,30 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:entity_hurt_player",
+        "conditions": {
+          "player": {
+            "flags": {
+              "is_on_fire": true
+            }
+          },
+          "damage": {
+            "source_entity": {
+              "equipment": {
+                "mainhand": {
+                  "items": "minecraft:stick",
+                  "predicates": {
+                    "minecraft:custom_data": "{thermometer:1b}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "commands:other/thermometer_damage"
+    }
+  }
+  

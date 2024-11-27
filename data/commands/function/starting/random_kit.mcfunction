@@ -1,6 +1,6 @@
-execute if entity @a[tag=randomKit,team=Red] store result score #rngRed RNG run random value 1..15
+execute if entity @a[tag=randomKit,team=Red] store result score #rngRed RNG run random value 1..16
 
-execute if entity @a[tag=randomKit,team=Blue] store result score #rngBlue RNG run random value 1..15
+execute if entity @a[tag=randomKit,team=Blue] store result score #rngBlue RNG run random value 1..16
 
 execute as @a[team=Red] if score #rngRed RNG = @s Kit run function commands:starting/random_kit
 
@@ -36,6 +36,8 @@ execute as @a[team=Red] if score #rngRed RNG matches 14 unless score #rngRed RNG
 
 execute as @a[team=Red] if score #rngRed RNG matches 15 unless score #rngRed RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Red] Kit 15
 
+execute as @a[team=Red] if score #rngRed RNG matches 16 unless score #rngRed RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Red] Kit 16
+
 execute as @a[team=Blue] if score #rngBlue RNG matches 1 unless score #rngBlue RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Blue] Kit 1
 
 execute as @a[team=Blue] if score #rngBlue RNG matches 2 unless score #rngBlue RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Blue] Kit 2
@@ -65,6 +67,8 @@ execute as @a[team=Blue] if score #rngBlue RNG matches 13 unless score #rngBlue 
 execute as @a[team=Blue] if score #rngBlue RNG matches 14 unless score #rngBlue RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Blue] Kit 14
 
 execute as @a[team=Blue] if score #rngBlue RNG matches 15 unless score #rngBlue RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Blue] Kit 15
+
+execute as @a[team=Blue] if score #rngBlue RNG matches 16 unless score #rngBlue RNG = @s Kit run scoreboard players set @a[tag=randomKit,team=Blue] Kit 16
 
 scoreboard players reset #rngRed RNG
 

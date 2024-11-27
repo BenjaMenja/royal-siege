@@ -153,3 +153,13 @@ function commands:attributes/clears/clear_cryo_skeleton_slow
 function commands:attributes/clears/clear_shadow_step_kb_resist
 
 function commands:attributes/clears/clear_shadow_step_slow
+
+function commands:attributes/clears/clear_ice_pack_speed
+
+function commands:attributes/clears/clear_ice_pack_slow
+
+function commands:attributes/clears/clear_defibrillator_slow
+
+function commands:attributes/clears/clear_ten_hour_energy_speed
+
+function commands:attributes/clears/clear_inhaler_buffs

@@ -1,5 +1,5 @@
-execute if entity @s[team=Red] if score #hit ray.angelicBlessing matches 0 positioned ~-0.05 ~-0.05 ~-0.05 as @a[tag=!angelicblessing,sort=nearest,team=Red,distance=..4] if score #hit ray.angelicBlessing matches 0 positioned ~-0.85 ~-0.85 ~-0.85 if entity @s[dx=0] at @s run function commands:raycasts/angelic_blessing_hit_entity
-execute if entity @s[team=Blue] if score #hit ray.angelicBlessing matches 0 positioned ~-0.05 ~-0.05 ~-0.05 as @a[tag=!angelicblessing,sort=nearest,team=Blue,distance=..4] if score #hit ray.angelicBlessing matches 0 positioned ~-0.85 ~-0.85 ~-0.85 if entity @s[dx=0] at @s run function commands:raycasts/angelic_blessing_hit_entity
-execute if block ~ ~ ~ #commands:can_place_on_without_grass run scoreboard players set #distance ray.angelicBlessing 201
-scoreboard players add #distance ray.angelicBlessing 1
-execute if score #hit ray.angelicBlessing matches 0 if score #distance ray.angelicBlessing matches ..200 positioned ^ ^ ^0.1 run function commands:raycasts/angelic_blessing_ray
+execute if entity @s[team=Red] if score #hit rayVar matches 0 positioned ~-0.05 ~-0.05 ~-0.05 as @a[tag=!angelicblessing,sort=nearest,team=Red,distance=..4] if score #hit rayVar matches 0 positioned ~-0.85 ~-0.85 ~-0.85 if entity @s[dx=0] at @s run function commands:raycasts/angelic_blessing_hit_entity
+execute if entity @s[team=Blue] if score #hit rayVar matches 0 positioned ~-0.05 ~-0.05 ~-0.05 as @a[tag=!angelicblessing,sort=nearest,team=Blue,distance=..4] if score #hit rayVar matches 0 positioned ~-0.85 ~-0.85 ~-0.85 if entity @s[dx=0] at @s run function commands:raycasts/angelic_blessing_hit_entity
+execute if block ~ ~ ~ #commands:can_place_on_without_grass run scoreboard players set #distance rayVar 201
+scoreboard players add #distance rayVar 1
+execute if score #hit rayVar matches 0 if score #distance rayVar matches ..200 positioned ^ ^ ^0.1 run function commands:raycasts/angelic_blessing_ray

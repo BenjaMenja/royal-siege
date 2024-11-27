@@ -370,3 +370,39 @@ scoreboard players add @a[scores={RSAttr.CryoSkeletonJump=0..}] RSAttr.CryoSkele
 
 execute as @a[scores={RSAttr.CryoSkeletonJump=50..}] run function commands:attributes/clears/clear_cryo_skeleton_jump
 
+#Ice Pack
+
+scoreboard players add @a[scores={RSAttr.IcePackSpeed=0..}] RSAttr.IcePackSpeed 1
+
+execute as @a[scores={RSAttr.IcePackSpeed=100..}] run function commands:attributes/clears/clear_ice_pack_speed
+
+scoreboard players add @a[scores={RSAttr.IcePackSlow=0..}] RSAttr.IcePackSlow 1
+
+execute as @a[scores={RSAttr.IcePackSlow=100..}] run function commands:attributes/clears/clear_ice_pack_slow
+
+#Defibrillator
+
+scoreboard players add @a[scores={RSAttr.DefibrillatorSlow=0..}] RSAttr.DefibrillatorSlow 1
+
+execute as @a[scores={RSAttr.DefibrillatorSlow=60..}] run function commands:attributes/clears/clear_defibrillator_slow
+
+#Live-Attenuated Vaccine
+
+scoreboard players add @a[scores={RSAttr.VaccineDebuffs=0..}] RSAttr.VaccineDebuffs 1
+
+execute as @a[scores={RSAttr.VaccineDebuffs=80..}] run function commands:attributes/clears/clear_vaccine_debuffs
+
+#10 Hour Energy
+
+scoreboard players add @a[scores={RSAttr.TenHourEnergySpeed=0..}] RSAttr.TenHourEnergySpeed 1
+
+execute as @a[scores={RSAttr.TenHourEnergySpeed=120..}] run function commands:attributes/clears/clear_ten_hour_energy_speed
+
+#Inhaler Buffs
+
+scoreboard players add @a[scores={RSAttr.InhalerBuffs=0..}] RSAttr.InhalerBuffs 1
+
+execute as @a[scores={RSAttr.InhalerBuffs=2..}] run function commands:attributes/clears/clear_inhaler_buffs
+
+
+

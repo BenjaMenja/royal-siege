@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:player_head",
+      "components": {
+        "minecraft:profile": {
+          "id": [
+            -238284530,
+            1919240605,
+            -1546129992,
+            1798622527
+          ],
+          "properties": [
+            {
+              "name": "textures",
+              "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI1OTUwOTk0ZWFhOTUzNGM0ZWVlMmNmN2IxZThjNjAxOGZlYTEzOWYyZDIwNTNkNDE4NTE4MTAyNzYyNzE3YSJ9fX0="
+            }
+          ]
+        }
+      }
+    },
+    "title": "No Pack Wasted",
+    "description": "As School Nurse, receive an ice pack from passive after only 2 ice pack uses.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "commands:character_challenges/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

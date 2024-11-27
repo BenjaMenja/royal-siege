@@ -29,7 +29,6 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:armor",
-                  "name": "armor",
                   "amount": 6,
                   "operation": "add_value",
                   "id": "4c592883-a6ba-4c79-9517-ab27db3ebd34",

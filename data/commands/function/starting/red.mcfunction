@@ -208,6 +208,16 @@ loot give @s[scores={Kit=15,RedKit=198}] loot commands:main_abilities/blazing_sp
 
 loot give @s[scores={Kit=16,RedKit=198}] loot commands:main_weapons/thermometer
 
+loot give @s[scores={Kit=16,RedKit=198}] loot commands:main_abilities/iv_drip
+
+loot replace entity @s[scores={Kit=16,RedKit=198}] armor.head loot commands:heads/school_nurse
+
+loot replace entity @s[scores={Kit=16,RedKit=198}] armor.chest loot commands:main_armor/school_nurse_chestplate
+
+loot replace entity @s[scores={Kit=16,RedKit=198}] armor.legs loot commands:main_armor/school_nurse_leggings
+
+loot replace entity @s[scores={Kit=16,RedKit=198}] armor.feet loot commands:main_armor/school_nurse_boots
+
 execute if entity @s[scores={RedKit=198},tag=hadUltimate] run function commands:other/ultimate_charger
 
 execute if entity @s[scores={RedKit=198}] run function commands:custom_deaths/reset_cooldowns

@@ -1,4 +1,4 @@
-scoreboard players set #hit ray.angelicBlessing 1
+scoreboard players set #hit rayVar 1
 execute if entity @s[team=Red] run tag @a[team=Red] remove blessed
 execute if entity @s[team=Blue] run tag @a[team=Blue] remove blessed
 tag @s add blessed

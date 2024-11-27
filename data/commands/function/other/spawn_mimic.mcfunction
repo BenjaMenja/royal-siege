@@ -6,6 +6,6 @@ execute if entity @s[tag=mimicred] run summon marker ~ ~ ~ {Tags:["mimic","mimic
 
 execute if entity @s[tag=mimicblue] run summon marker ~ ~ ~ {Tags:["mimic","mimicblue"]}
 
-setblock ~ ~ ~ chest[facing=north]{Lock:"mrdoordash"}
+setblock ~ ~ ~ minecraft:chest[facing=north]{lock:{id:"minecraft:tnt",count:1,components:{"minecraft:custom_name":'"mrdoordash"'}}} replace
 
 kill @s

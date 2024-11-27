@@ -92,6 +92,10 @@ tag @s remove mimiceat
 
 tag @s remove gamblerMoneyStolen
 
+tag @s remove vaccinated
+
+tag @s remove UHC
+
 #Reset scores and run function again
 
 scoreboard players set @s Message 0

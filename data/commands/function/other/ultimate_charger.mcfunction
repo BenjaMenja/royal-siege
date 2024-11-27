@@ -58,6 +58,10 @@ scoreboard players add @s[scores={Ultimate=29}] chrysanthemumShellTimer 5000
 
 scoreboard players add @s[scores={Ultimate=30}] popRocksTimer 5000
 
+scoreboard players add @s[scores={Ultimate=31}] UHCTimer 5000
+
+scoreboard players add @s[scores={Ultimate=32}] 10HourTimer 5000
+
 tag @s remove hadUltimate
 
 tag @s remove ultimateInv

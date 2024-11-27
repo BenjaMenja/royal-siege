@@ -58,6 +58,10 @@ execute if entity @s[team=Blue,scores={Ultimate=29}] store result bossbar comman
 
 execute if entity @s[team=Blue,scores={Ultimate=30}] store result bossbar commands:blue_ult30 value run scoreboard players get @s[team=Blue,scores={Ultimate=30}] popRocksTimer
 
+execute if entity @s[team=Blue,scores={Ultimate=31}] store result bossbar commands:blue_ult31 value run scoreboard players get @s[team=Blue,scores={Ultimate=31}] UHCTimer
+
+execute if entity @s[team=Blue,scores={Ultimate=32}] store result bossbar commands:blue_ult32 value run scoreboard players get @s[team=Blue,scores={Ultimate=32}] 10HourTimer
+
 execute if entity @s[team=Red,scores={Ultimate=1}] store result bossbar commands:red_ult1 value run scoreboard players get @s[team=Red,scores={Ultimate=1}] Ninjault
 
 execute if entity @s[team=Red,scores={Ultimate=2}] store result bossbar commands:red_ult2 value run scoreboard players get @s[team=Red,scores={Ultimate=2}] Horse
@@ -117,3 +121,7 @@ execute if entity @s[team=Red,scores={Ultimate=28}] store result bossbar command
 execute if entity @s[team=Red,scores={Ultimate=29}] store result bossbar commands:red_ult29 value run scoreboard players get @s[team=Red,scores={Ultimate=29}] chrysanthemumShellTimer
 
 execute if entity @s[team=Red,scores={Ultimate=30}] store result bossbar commands:red_ult30 value run scoreboard players get @s[team=Red,scores={Ultimate=30}] popRocksTimer
+
+execute if entity @s[team=Red,scores={Ultimate=31}] store result bossbar commands:red_ult31 value run scoreboard players get @s[team=Red,scores={Ultimate=31}] UHCTimer
+
+execute if entity @s[team=Red,scores={Ultimate=32}] store result bossbar commands:red_ult32 value run scoreboard players get @s[team=Red,scores={Ultimate=32}] 10HourTimer

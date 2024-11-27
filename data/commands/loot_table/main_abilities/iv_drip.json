@@ -1,0 +1,68 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:fishing_rod",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_data": {
+                  "ivdrip": true
+                },
+                "minecraft:custom_model_data": 199,
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "yellow",
+                  "italic": false,
+                  "text": "IV Drip"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "color": "yellow",
+                  "italic": false,
+                  "text": "Right-Click to use"
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Fires an IV needle that latches onto a teammate."
+                },
+                {
+                  "text": "The needle provides regeneration II to the attached teammate."
+                },
+                {
+                  "text": "The drip breaks over long distance, and cooldown is 8s if broken."
+                },
+                {
+                  "text": "The drip can be retracted, and cooldown is reduced to 4s."
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

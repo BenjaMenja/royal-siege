@@ -50,11 +50,13 @@
               "components": {
                 "minecraft:custom_model_data": 5,
                 "minecraft:enchantment_glint_override": true,
+                "consumable": {
+                  "consume_seconds": 1000000
+                },
                 "minecraft:food": {
                   "nutrition": 0,
                   "saturation": 0,
-                  "can_always_eat": true,
-                  "eat_seconds": 1000000
+                  "can_always_eat": true
                 }
               }
             }

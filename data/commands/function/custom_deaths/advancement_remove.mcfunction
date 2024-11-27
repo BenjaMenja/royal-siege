@@ -118,4 +118,6 @@ advancement revoke @s only commands:custom_deaths/drowning_death
 
 advancement revoke @s only commands:custom_deaths/powder_keg_death
 
+advancement revoke @s only commands:custom_deaths/ice_pack_death
+
 tag @s remove tChestDeath

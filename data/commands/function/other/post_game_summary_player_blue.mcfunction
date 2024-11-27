@@ -28,6 +28,8 @@ execute if entity @s[scores={Kit=14}] run tellraw @a [{"selector":"@s"},{"color"
 
 execute if entity @s[scores={Kit=15}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"#FFAD08","text":"Firecracker"},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalSiegeBucks"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
 
+execute if entity @s[scores={Kit=16}] run tellraw @a [{"selector":"@s"},{"color":"gray","text":" / "},{"color":"#da5a5a","text":"School Nurse"},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalDeaths"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"totalSiegeBucks"}},{"color":"gray","text":" / "},{"color":"aqua","score":{"name":"@s","objective":"ultsUsed"}},{"text":"\n"}]
+
 tag @s add summarized
 
 execute as @a[team=Blue,tag=!summarized,limit=1] run function commands:other/post_game_summary_player_blue

@@ -318,6 +318,30 @@
           {
             "type": "minecraft:loot_table",
             "value": "commands:shop_items/cinder_bombs_red"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/cinder_bombs_blue"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/defibrillator"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/inhaler_red"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/live_attenuated_vaccine"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/light_up_shoes"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/first_aid_kit_red"
           }
         ]
       }

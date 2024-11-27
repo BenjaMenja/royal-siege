@@ -3,6 +3,7 @@
     "minecraft:explosion",
     "minecraft:player_explosion",
     "minecraft:bad_respawn_point",
-    "minecraft:unattributed_fireball"
+    "minecraft:unattributed_fireball",
+    "commands:bleed"
   ]
 }
