@@ -18,4 +18,6 @@ execute if entity @s[team=Red] run scoreboard players set @p[team=Red,tag=ivAtta
 
 execute if entity @s[team=Blue] run scoreboard players set @p[team=Blue,tag=ivAttached] RSAttr.TenHourEnergySpeed 0
 
+scoreboard players add @s ultsUsed 1
+
 clear @s carrot[custom_data~{tenhourenergy:1b}]

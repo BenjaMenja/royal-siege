@@ -1,0 +1,90 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:leather_boots",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                },
+                "minecraft:dyed_color": {
+                  "rgb": 2697513,
+                  "show_in_tooltip": false
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "id": "4fdb7d86-3e9d-4b4c-9e80-2d716e31e7ca",
+                    "type": "armor",
+                    "amount": 4,
+                    "operation": "add_value",
+                    "slot": "feet"
+                  },
+                  {
+                    "id": "96429bd6-bd99-4cc3-98e0-3a416f2d5169",
+                    "type": "movement_speed",
+                    "amount": 0.1,
+                    "operation": "add_multiplied_base",
+                    "slot": "feet"
+                  },
+                  {
+                    "id": "bb3b6fd4-0d16-4bc5-a675-af31055eaa09",
+                    "type": "knockback_resistance",
+                    "amount": 0.6,
+                    "operation": "add_value",
+                    "slot": "feet"
+                  },
+                  {
+                    "id": "c154867f-8486-4de3-8e81-a0670f0c3cef",
+                    "type": "gravity",
+                    "amount": 0.2,
+                    "operation": "add_multiplied_base",
+                    "slot": "feet"
+                  }
+                ],
+                "minecraft:enchantments": {
+                  "levels": {
+                    "minecraft:blast_protection": 1,
+                    "minecraft:protection": 2
+                  }
+                },
+                "minecraft:custom_data": {
+                  "steelboots": true
+                }
+              }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "dark_gray",
+                  "text": "Steel Boots",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "text": "Gives high knockback resistance and increased gravity when worn."
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

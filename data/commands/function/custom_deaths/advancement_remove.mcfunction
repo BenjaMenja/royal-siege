@@ -88,8 +88,6 @@ advancement revoke @s only commands:custom_deaths/rocket_death
 
 advancement revoke @s only commands:custom_deaths/smart_drone_death
 
-advancement revoke @s only commands:custom_deaths/c4_death
-
 advancement revoke @s only commands:custom_deaths/bang_snap_death
 
 advancement revoke @s only commands:custom_deaths/pop_rocks_death
@@ -119,5 +117,9 @@ advancement revoke @s only commands:custom_deaths/drowning_death
 advancement revoke @s only commands:custom_deaths/powder_keg_death
 
 advancement revoke @s only commands:custom_deaths/ice_pack_death
+
+advancement revoke @s only commands:custom_deaths/thermometer_death
+
+advancement revoke @s only commands:custom_deaths/trauma_shears_death
 
 tag @s remove tChestDeath

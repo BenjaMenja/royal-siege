@@ -1,6 +1,6 @@
-scoreboard players set @s c.heal 40000
+execute if entity @s[team=Red] run function commands:other/custom_heal {health:4,ult_charge_receiver:"@a[team=Red,scores={Kit=16}]"}
 
-function custom_heal:apply_heal
+execute if entity @s[team=Blue] run function commands:other/custom_heal {health:4,ult_charge_receiver:"@a[team=Blue,scores={Kit=16}]"}
 
 execute at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~ 1 1.2
 

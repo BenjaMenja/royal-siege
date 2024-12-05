@@ -1,0 +1,2 @@
+execute store result storage royalsiege:custom_heal Health.amount int 10 run scoreboard players get #healthdifference healthVar
+function commands:other/ult_charge_variable with storage royalsiege:custom_heal Health

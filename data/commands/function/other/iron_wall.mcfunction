@@ -8,4 +8,4 @@ function commands:attributes/adds/add_iron_wall_slow
 
 effect give @s resistance 5 1 true
 
-scoreboard players set @s ironTimer 1200
+scoreboard players set @s ironTimer 600

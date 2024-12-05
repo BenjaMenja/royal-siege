@@ -6,4 +6,6 @@ tellraw @a [{"selector": "@s"},{"text": " is giving out free health care!"}]
 
 playsound item.book.page_turn master @a ~ ~ ~ 1 1
 
+scoreboard players add @s ultsUsed 1
+
 clear @s carrot[custom_data~{uhc:1b}]

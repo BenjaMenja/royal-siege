@@ -1,18 +1,20 @@
+tag @s add healingspelluser
+
 execute at @s[team=Red,tag=!wrenched] run effect give @a[team=Red,distance=..10] regeneration 6 1 true
 
 execute at @s[team=Red,tag=!wrenched] run effect give @a[team=Red,tag=blessed] regeneration 6 1 true
 
-execute at @s[team=Red,tag=!wrenched] run effect give @a[team=Red,distance=..10] instant_health 1 0 true
+execute at @s[team=Red,tag=!wrenched] as @a[team=Red,distance=..10] run function commands:other/custom_heal {health:4,ult_charge_receiver:"@a[tag=healingspelluser]"}
 
-execute at @s[team=Red,tag=!wrenched] run effect give @a[team=Red,tag=blessed] instant_health 1 0 true
+execute at @s[team=Red,tag=!wrenched] as @a[team=Red,tag=blessed] run function commands:other/custom_heal {health:4,ult_charge_receiver:"@a[tag=healingspelluser]"}
 
 execute at @s[team=Red,tag=wrenched] run effect give @a[team=Red,distance=..10] regeneration 8 1 true
 
 execute at @s[team=Red,tag=wrenched] run effect give @a[team=Red,tag=blessed] regeneration 8 1 true
 
-execute at @s[team=Red,tag=wrenched] run effect give @a[team=Red,distance=..10] instant_health 1 1 true
+execute at @s[team=Red,tag=wrenched] as @a[team=Red,distance=..10] run function commands:other/custom_heal {health:8,ult_charge_receiver:"@a[tag=healingspelluser]"}
 
-execute at @s[team=Red,tag=wrenched] run effect give @a[team=Red,tag=blessed] instant_health 1 1 true
+execute at @s[team=Red,tag=wrenched] as @a[team=Red,tag=blessed] run function commands:other/custom_heal {health:8,ult_charge_receiver:"@a[tag=healingspelluser]"}
 
 execute at @s[team=Red] as @a[team=Red,distance=..10] unless score @s Kit matches 4 run scoreboard players add #redHS healstreak 1
 
@@ -22,17 +24,17 @@ execute at @s[team=Blue,tag=!wrenched] run effect give @a[team=Blue,distance=..1
 
 execute at @s[team=Blue,tag=!wrenched] run effect give @a[team=Blue,tag=blessed] regeneration 6 1 true
 
-execute at @s[team=Blue,tag=!wrenched] run effect give @a[team=Blue,distance=..10] instant_health 1 0 true
+execute at @s[team=Blue,tag=!wrenched] as @a[team=Blue,distance=..10] run function commands:other/custom_heal {health:4,ult_charge_receiver:"@a[tag=healingspelluser]"}
 
-execute at @s[team=Blue,tag=!wrenched] run effect give @a[team=Blue,tag=blessed] instant_health 1 0 true
+execute at @s[team=Blue,tag=!wrenched] as @a[team=Blue,tag=blessed] run function commands:other/custom_heal {health:4,ult_charge_receiver:"@a[tag=healingspelluser]"}
 
 execute at @s[team=Blue,tag=wrenched] run effect give @a[team=Blue,distance=..10] regeneration 8 1 true
 
 execute at @s[team=Blue,tag=wrenched] run effect give @a[team=Blue,tag=blessed] regeneration 8 1 true
 
-execute at @s[team=Blue,tag=wrenched] run effect give @a[team=Blue,distance=..10] instant_health 1 1 true
+execute at @s[team=Blue,tag=wrenched] as @a[team=Blue,distance=..10] run function commands:other/custom_heal {health:8,ult_charge_receiver:"@a[tag=healingspelluser]"}
 
-execute at @s[team=Blue,tag=wrenched] run effect give @a[team=Blue,tag=blessed] instant_health 1 1 true
+execute at @s[team=Blue,tag=wrenched] as @a[team=Blue,tag=blessed] run function commands:other/custom_heal {health:8,ult_charge_receiver:"@a[tag=healingspelluser]"}
 
 execute at @s[team=Blue] as @a[team=Blue,distance=..10] unless score @s Kit matches 4 run scoreboard players add #blueHS healstreak 1
 
@@ -51,3 +53,5 @@ execute if entity @s[team=Blue] if score #angelspellsblue voicelineCD matches 60
 scoreboard players set @s healSpell 300
 
 tag @s remove wrenched
+
+tag @s add healingspelluser

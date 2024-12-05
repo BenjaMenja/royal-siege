@@ -170,13 +170,9 @@ execute as @a[scores={Kit=12},tag=!upgraded] run function #commands:clear_streng
 
 effect give @a[scores={Kit=14}] jump_boost 1 3 true
 
-effect give @a[predicate=!commands:is_sneaking,tag=!astrogravity,scores={Kit=14}] slow_falling 2 0 true
-
 execute as @a[predicate=commands:is_sneaking,scores={Kit=14},nbt={OnGround:0b}] run function commands:attributes/adds/add_astronaut_passive_gravity
 
 execute as @a[scores={Kit=14},tag=astrogravity,nbt={OnGround:1b}] run function commands:attributes/clears/clear_astronaut_passive_gravity
-
-effect clear @a[predicate=commands:is_sneaking,scores={Kit=14}] slow_falling
 
 effect give @a[scores={Kit=15}] fire_resistance 1 0 true
 
@@ -360,9 +356,9 @@ kill @e[type=item,tag=fakeMoney,scores={Timer=2400..}]
 
 execute as @e[type=bat,tag=powderKeg] at @s run function commands:other/place_powder_keg
 
-execute as @e[type=item_frame,tag=powderKeg] at @s unless entity @e[type=piglin,limit=1,sort=nearest,distance=..1,tag=powderKeg] run function commands:other/destroy_powder_keg
+execute as @e[type=item_frame,tag=powderKeg] at @s unless entity @e[type=piglin,limit=1,sort=nearest,distance=..1.5,tag=powderKeg] run function commands:other/destroy_powder_keg
 
-execute as @e[type=piglin,tag=powderKeg,nbt=!{Fire:0s}] at @s run function commands:other/destroy_powder_keg
+execute as @e[type=piglin,tag=powderKeg,nbt=!{Fire:-1s}] at @s run function commands:other/destroy_powder_keg
 
 #Chain Hook
 
@@ -411,6 +407,12 @@ execute as @e[type=armor_stand,scores={TreasureDelete=300..}] at @s run fill ~ ~
 execute as @e[type=armor_stand,scores={TreasureDelete=300..}] at @s run kill @e[type=item,scores={ItemKill=1},distance=..4]
 
 tp @e[type=armor_stand,scores={TreasureDelete=301..}] ~ -200 ~
+
+#Give arrows to pirate if he got a bow
+
+execute as @a[scores={Kit=7},predicate=commands:inventory/sniper_bow,predicate=!commands:inventory/bottomless_quiver] run loot give @s loot commands:main_weapons/bottomless_quiver
+
+execute as @a[scores={Kit=7},predicate=commands:inventory/punch_bow,predicate=!commands:inventory/bottomless_quiver] run loot give @s loot commands:main_weapons/bottomless_quiver
 
 #Ent Items
 
@@ -550,8 +552,6 @@ execute as @e[type=bat,tag=cryoskeleton] at @s run function commands:other/spawn
 
 #Mysterious Brew
 
-execute as @a[scores={usedCOAS=1..},predicate=commands:holding/mysterious_brew] at @s run function commands:other/mysterious_brew
-
 execute as @e[type=item,tag=mysteriousbrew] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on_without_grass force
 
 execute as @e[type=item,tag=mysteriousbrew,scores={nearbyBlocks=1..}] at @s run function commands:other/mysterious_brew_land
@@ -666,41 +666,15 @@ scoreboard players add @a[scores={Ninjakill=1..,Kit=2}] dashcharge 120
 
 execute if entity @a[scores={Kit=2}] run function commands:cooldowns/ninja_display
 
-#C4
-
-execute at @e[type=bat,tag=c4red] run summon villager ~ ~ ~ {Age:-32767,NoGravity:1b,Silent:1b,NoAI:1b,Health:4.0f,Tags:["c4red"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],attributes:[{Name:"minecraft:max_health",Base:4}]}
-
-tp @e[type=bat,tag=c4red] ~ -200 ~
-
-execute at @e[type=villager,tag=c4red] run particle dust{color:[0.271,0.271,0.271],scale:1} ~ ~0.5 ~ 0 0 0 0 5 force
-
-execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/detonator_red] at @e[type=villager,tag=c4red] run summon creeper ~ ~0.5 ~ {ExplosionRadius:4b,Invulnerable:1b,Fuse:1,Tags:["c4m"],ignited:1b}
-
-execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/detonator_red] run kill @e[type=bat,tag=c4red]
-
-execute if entity @a[team=Red,scores={usedCOAS=1..},predicate=commands:holding/detonator_red] run clear @a[scores={usedCOAS=1..}] carrot_on_a_stick[custom_data~{detonatorRed:1b}] 1
-
-execute at @e[type=bat,tag=c4blue] run summon villager ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:4.0f,Tags:["c4blue"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],attributes:[{Name:"minecraft:max_health",Base:4}]}
-
-tp @e[type=bat,tag=c4blue] ~ -200 ~
-
-execute at @e[type=villager,tag=c4blue] run particle dust{color:[0.271,0.271,0.271],scale:1} ~ ~0.5 ~ 0 0 0 0 5 force
-
-execute if entity @a[team=Blue,scores={usedCOAS=1..},predicate=commands:holding/detonator_blue] at @e[type=villager,tag=c4blue] run summon creeper ~ ~0.5 ~ {ExplosionRadius:4b,Invulnerable:1b,Fuse:1,Tags:["c4m"],ignited:1b}
-
-execute if entity @a[team=Blue,scores={usedCOAS=1..},predicate=commands:holding/detonator_blue] run kill @e[type=bat,tag=c4blue]
-
-execute if entity @a[team=Blue,scores={usedCOAS=1..},predicate=commands:holding/detonator_blue] run clear @a[scores={usedCOAS=1..}] carrot_on_a_stick[custom_data~{detonatorBlue:1b}] 1
-
-execute as @a[team=Red,scores={ninjaDeath=1..,Kit=2}] run kill @e[type=bat,tag=c4red]
-
-execute as @a[team=Blue,scores={ninjaDeath=1..,Kit=2}] run kill @e[type=bat,tag=c4blue]
-
-scoreboard players reset @a[scores={ninjaDeath=1..}] ninjaDeath
-
 #Bouncy Boots
 
 effect give @a[predicate=commands:armor/bouncy_boots] jump_boost 2 1 true
+
+#Sticky Boots
+
+execute as @a[predicate=commands:armor/sticky_boots] at @s store result score @s nearbyBlocks run clone ~-0.5 ~0.01 ~-0.5 ~0.5 ~0.1 ~0.5 ~-0.5 ~ ~-0.5 filtered #commands:can_place_on_without_grass force
+
+execute as @a[scores={nearbyBlocks=1..},predicate=commands:armor/sticky_boots,predicate=commands:is_sneaking] run function commands:attributes/adds/add_sticky_boots_gravity
 
 #Chicken Bombs
 
@@ -958,9 +932,9 @@ execute as @a[scores={Kit=3,defensiveSpell=1..},predicate=commands:in_any_battle
 
 scoreboard players remove @a[scores={Kit=3},predicate=commands:in_any_battlefield,tag=!notAlive] turretTimer 1
 
-give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','{"text":" "}'],custom_model_data=68,custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},{id:"minecraft:dispenser",count:1,components:{"minecraft:attribute_modifiers":[{type:"movement_speed",amount:-1,operation:"add_multiplied_base",id:"5791e254-ecfa-4177-8b19-5ee15c8e30a0",slot:"head"}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}]}] 1
+give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','{"text":" "}'],custom_model_data=68,custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},{id:"minecraft:dispenser",count:1,components:{"minecraft:attribute_modifiers":[{type:"movement_speed",amount:-1,operation:"add_multiplied_base",id:"5791e254-ecfa-4177-8b19-5ee15c8e30a0",slot:"head"},{type:"knockback_resistance",amount:1,operation:"add_multiplied_base",id:"588107f4-ecfa-4177-8b19-5ee15c8e30a0",slot:"head"}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}]}] 1
 
-give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','{"text":" "}'],custom_model_data=68,custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":255}},{id:"minecraft:dispenser",count:1,components:{"minecraft:attribute_modifiers":[{type:"movement_speed",amount:-1,operation:"add_multiplied_base",id:"5791e254-00c4-4177-8b19-5ee15c8e30a0",slot:"head"}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}]}] 1
+give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','{"text":" "}'],custom_model_data=68,custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":255}},{id:"minecraft:dispenser",count:1,components:{"minecraft:attribute_modifiers":[{type:"movement_speed",amount:-1,operation:"add_multiplied_base",id:"5791e254-00c4-4177-8b19-5ee15c8e30a0",slot:"head"},{type:"knockback_resistance",amount:1,operation:"add_multiplied_base",id:"588107f4-ecfa-4177-8b19-5ee15c8e30a0",slot:"head"}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}]}] 1
 
 scoreboard players set @a[scores={turretTimer=..0}] turretTimer 600
 
@@ -1386,10 +1360,6 @@ execute as @a[team=Blue,scores={Kit=8,entPassive=1..}] at @s run effect give @a[
 
 scoreboard players reset @a[scores={Kit=8,entPassive=1..}] entPassive
 
-#Ultimate Charger
-
-execute as @a[scores={usedCOAS=1..,Ultimate=1..32},predicate=commands:holding/ultimate_charger] run function commands:other/ultimate_charger
-
 #The Watcher
 
 scoreboard players add @e[type=zombie,tag=watcherred] watcherTimer 1
@@ -1486,7 +1456,7 @@ execute at @e[type=sheep,tag=sheepblue] run effect give @a[team=Blue,distance=..
 
 #Pay Raise
 
-scoreboard players remove @a[scores={Kit=11,payRaiseTimer=1..},predicate=commands:in_any_battlefield,predicate=commands:inventory/pay_raise,tag=!notAlive] payRaiseTimer 1
+scoreboard players remove @a[scores={payRaiseTimer=1..},predicate=commands:in_any_battlefield,predicate=commands:inventory/pay_raise,tag=!notAlive] payRaiseTimer 1
 
 scoreboard players add @a[tag=needsmoney] ray.payRaise 1
 
@@ -1498,7 +1468,7 @@ scoreboard players reset @a[scores={ray.payRaise=10..}] ray.payRaise
 
 #Scrambled Eggs
 
-scoreboard players remove @a[scores={Kit=11,scrambleTimer=1..},predicate=commands:in_any_battlefield,predicate=commands:inventory/scrambled_eggs,tag=!notAlive] scrambleTimer 1
+scoreboard players remove @a[scores={scrambleTimer=1..},predicate=commands:in_any_battlefield,predicate=commands:inventory/scrambled_eggs,tag=!notAlive] scrambleTimer 1
 
 execute as @e[type=item,tag=eggred] at @s run tag @p[distance=..4,team=Blue] add scrambled
 
@@ -1934,8 +1904,6 @@ execute as @e[type=wither_skeleton,team=Blue,tag=King] if entity @a[team=Red,pre
 
 #Castle Chain
 
-execute as @a[scores={usedCOAS=1..},predicate=commands:holding/castle_chain] run function commands:other/castle_chain
-
 scoreboard players add @a[tag=castleChain] castleChain 1
 
 execute as @a[scores={castleChain=600..}] run function commands:other/castle_chain_end
@@ -1945,8 +1913,6 @@ execute as @a[scores={castleChain=600..}] run function commands:other/castle_cha
 execute as @a[predicate=commands:inventory/gold_magnet] at @s run teleport @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},distance=..5] @s
 
 #Killer King
-
-execute as @a[scores={usedCOAS=1..},predicate=commands:holding/killer_king] run function commands:other/killer_king
 
 execute at @e[type=wither_skeleton,tag=King,tag=killerking] run particle minecraft:angry_villager ~ ~2 ~ 0 0.25 0 0 1
 
@@ -2118,11 +2084,21 @@ execute as @a[tag=dungeonTP,scores={damageTaken=1..}] run function commands:othe
 
 execute as @a[predicate=commands:on_launch_pads] at @s if block ~ ~-0.5 ~ slime_block run effect give @s jump_boost 1 13 true
 
-execute as @a[predicate=commands:on_colliding_tides_bounce_pad] at @s run effect give @s jump_boost 1 13 true
+execute as @a[predicate=commands:on_colliding_tides_bounce_pad] at @s run effect give @s jump_boost 1 10 true
+
+tag @a[predicate=commands:on_colliding_tides_bounce_pad] add onPirateBouncePad
+
+scoreboard players set @a[predicate=commands:on_colliding_tides_bounce_pad] RSAttr.SafeFallDist 2147483647
+
+execute as @a[predicate=commands:on_colliding_tides_bounce_pad] at @s run function commands:attributes/adds/add_safe_fall_dist
 
 execute as @a[predicate=commands:on_ncs_speed_pad] at @s if block ~ ~-0.5 ~ magenta_glazed_terracotta run effect give @s speed 1 40 true
 
 effect clear @a[predicate=commands:on_ncs_roof,predicate=commands:effects/speed_pad] speed
+
+execute as @a[tag=onPirateBouncePad,predicate=!commands:on_colliding_tides_bounce_pad,nbt={OnGround:1b}] run function commands:attributes/clears/clear_safe_fall_dist
+
+tag @a[tag=onPirateBouncePad,predicate=!commands:on_colliding_tides_bounce_pad,nbt={OnGround:1b}] remove onPirateBouncePad
 
 #Winterland Boats
 
@@ -2145,10 +2121,6 @@ effect clear @a[predicate=commands:armor/enhanced_space_helmet] blindness
 effect clear @a[predicate=commands:armor/enhanced_space_helmet] wither
 
 effect clear @a[predicate=commands:armor/enhanced_space_helmet] poison
-
-#Gas Vacuum
-
-scoreboard players remove @a[scores={gasVacTimer=1..},predicate=commands:inventory/gas_vacuum,predicate=commands:in_any_battlefield,tag=!notAlive] gasVacTimer 1
 
 #Safety Tether
 
@@ -2268,7 +2240,7 @@ execute as @e[type=area_effect_cloud,tag=bangsnapblue] unless predicate commands
 
 #Bucket of Homemade Napalm
 
-scoreboard players remove @a[scores={Kit=15,napalmBucketTimer=1..},predicate=commands:inventory/napalm_bucket,tag=!notAlive] napalmBucketTimer 1
+scoreboard players remove @a[scores={napalmBucketTimer=1..},predicate=commands:inventory/napalm_bucket,tag=!notAlive] napalmBucketTimer 1
 
 #Bunker Boots
 
@@ -2278,7 +2250,7 @@ execute as @a[team=Blue,predicate=commands:armor/bunker_boots] at @s if entity @
 
 #Pyromania
 
-scoreboard players remove @a[scores={Kit=15,pyromaniaTimer=1..},predicate=commands:inventory/pyromania,tag=!notAlive] pyromaniaTimer 1
+scoreboard players remove @a[scores={pyromaniaTimer=1..},predicate=commands:inventory/pyromania,tag=!notAlive] pyromaniaTimer 1
 
 #Cinder Bombs
 
@@ -2340,9 +2312,9 @@ execute as @a[team=Red,predicate=commands:effects/on_fire] run scoreboard player
 
 execute as @a[team=Blue,predicate=commands:effects/on_fire] run scoreboard players add #numPlayersOnFireBlue firCharChallenge 1
 
-execute if score #numPlayersOnFireRed firCharChallenge >= #numPlayersOnTeam multiItems run scoreboard players add @a[scores={Kit=15},team=Blue,tag=inCurrentMatch] firCharChallenge 1
+execute if score #numPlayersOnFireRed firCharChallenge >= #numPlayersOnTeam multiItems run scoreboard players add @a[scores={Kit=15},team=Blue,tag=inCurrentMatch,predicate=!commands:in_practice_range] firCharChallenge 1
 
-execute if score #numPlayersOnFireBlue firCharChallenge >= #numPlayersOnTeam multiItems run scoreboard players add @a[scores={Kit=15},team=Red,tag=inCurrentMatch] firCharChallenge 1
+execute if score #numPlayersOnFireBlue firCharChallenge >= #numPlayersOnTeam multiItems run scoreboard players add @a[scores={Kit=15},team=Red,tag=inCurrentMatch,predicate=!commands:in_practice_range] firCharChallenge 1
 
 execute as @a[scores={Kit=15,firCharChallenge=600..}] run advancement grant @s only commands:character_challenges/pot_roast_party
 
@@ -2354,10 +2326,6 @@ scoreboard players set #numPlayersOnFireBlue firCharChallenge 0
 
 execute if score #classicMap settings matches 2 run function commands:other/pirate_map
 
-#Text Health Display
-
-execute as @e[type=text_display,tag=healthDisplay] run function commands:other/update_health_display
-
 #School Nurse Cooldown Display
 
 execute as @a[scores={Kit=16}] run function commands:cooldowns/school_nurse_display
@@ -2366,11 +2334,21 @@ execute as @a[scores={Kit=16}] run function commands:cooldowns/school_nurse_disp
 
 scoreboard players remove @a[scores={Kit=16,ivDripTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] ivDripTimer 1
 
-execute as @a[scores={useFishingRod=1..},predicate=commands:holding/iv_drip] at @s run function commands:other/initialize_iv_drip
+scoreboard players add @e[type=item,tag=ivNeedle] ivDripTimer 1
 
-execute as @e[type=fishing_bobber,tag=ivdrip] at @s if entity @a[distance=..1.5] run function commands:other/iv_drip_healing
+kill @e[type=item,tag=ivNeedle,tag=!attached,scores={ivDripTimer=10..}]
 
-execute as @a[tag=ivAttached] at @s unless entity @n[type=fishing_bobber,tag=ivdrip,distance=..1.5] run function commands:other/iv_detach
+execute as @e[type=item,tag=ivRed,tag=!attached] at @s as @p[team=Red,tag=!ivAttached,distance=..2] unless score @s Kit matches 16 run function commands:other/initialize_iv_drip
+
+execute as @e[type=item,tag=ivBlue,tag=!attached] at @s as @p[team=Blue,tag=!ivAttached,distance=..2] unless score @s Kit matches 16 run function commands:other/initialize_iv_drip
+
+execute as @a[team=Red,tag=ivAttached] at @s unless entity @a[team=Red,predicate=commands:holding/iv_drip,distance=..32] run function commands:other/iv_detach
+
+execute as @a[team=Blue,tag=ivAttached] at @s unless entity @a[team=Blue,predicate=commands:holding/iv_drip,distance=..32] run function commands:other/iv_detach
+
+execute as @a[team=Red,tag=ivAttached] at @s positioned ~ ~1.5 ~ as @n[type=armor_stand,tag=ivRed] run tp @s ~ ~ ~
+
+execute as @a[team=Blue,tag=ivAttached] at @s positioned ~ ~1.5 ~ as @n[type=armor_stand,tag=ivBlue] run tp @s ~ ~ ~
 
 #Ice Packs
 
@@ -2396,7 +2374,7 @@ execute as @e[type=area_effect_cloud,tag=icepackblue] unless predicate commands:
 
 #Defibrillator
 
-scoreboard players remove @a[scores={Kit=16,defibrillatorTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] defibrillatorTimer 1
+scoreboard players remove @a[scores={defibrillatorTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] defibrillatorTimer 1
 
 scoreboard players add @e[type=item,tag=defib] defibrillatorTimer 1
 

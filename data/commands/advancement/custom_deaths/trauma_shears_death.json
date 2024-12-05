@@ -1,0 +1,24 @@
+{
+  "parent": "commands:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player",
+          "equipment": {
+            "mainhand": {
+              "items": "minecraft:shears",
+              "predicates": {
+                "minecraft:custom_data": "{traumashears:1b}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/trauma_shears_death"
+  }
+}

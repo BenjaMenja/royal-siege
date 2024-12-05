@@ -34,6 +34,12 @@ scoreboard players add @a[scores={RSAttr.NinjaDashSpeed=0..}] RSAttr.NinjaDashSp
 
 execute as @a[scores={RSAttr.NinjaDashSpeed=40..}] run function commands:attributes/clears/clear_ninja_dash_speed
 
+#Sticky Boots
+
+scoreboard players add @a[scores={RSAttr.StickyBootsGravity=0..}] RSAttr.StickyBootsGravity 1
+
+execute as @a[scores={RSAttr.StickyBootsGravity=2..}] run function commands:attributes/clears/clear_sticky_boots_gravity
+
 #Corruption
 
 scoreboard players add @a[scores={RSAttr.CorruptionAtkDmg=0..}] RSAttr.CorruptionAtkDmg 1

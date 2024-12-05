@@ -1,0 +1,2 @@
+execute store result score #healthsubtractor healthVar run scoreboard players operation #currenthealth healthVar -= #maxhealth healthVar
+execute store result score #healthdifference healthVar run scoreboard players operation #healingamount healthVar -= #healthsubtractor healthVar

@@ -1,3 +1,4 @@
 tag @s remove protected
-effect give @s instant_health 1 1 true
+scoreboard players set @s c.heal 80000
+function custom_heal:apply_heal
 advancement revoke @s only commands:barrier_take

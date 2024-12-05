@@ -36,26 +36,8 @@
             "value": "commands:shop_items/strength_stone"
           },
           {
-            "type": "minecraft:group",
-            "children": [
-              {
-                "type": "minecraft:loot_table",
-                "value": "commands:shop_items/sniper_bow"
-              },
-              {
-                "type": "minecraft:item",
-                "name": "minecraft:arrow",
-                "functions": [
-                  {
-                    "function": "minecraft:set_name",
-                    "name": {
-                      "text": "Multi-Purpose Ammunition",
-                      "italic": false
-                    }
-                  }
-                ]
-              }
-            ]
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/sniper_bow"
           },
           {
             "type": "minecraft:loot_table",
@@ -78,26 +60,8 @@
             "value": "commands:shop_items/reinforced_casing"
           },
           {
-            "type": "minecraft:group",
-            "children": [
-              {
-                "type": "minecraft:loot_table",
-                "value": "commands:shop_items/punch_bow"
-              },
-              {
-                "type": "minecraft:item",
-                "name": "minecraft:arrow",
-                "functions": [
-                  {
-                    "function": "minecraft:set_name",
-                    "name": {
-                      "text": "Multi-Purpose Ammunition",
-                      "italic": false
-                    }
-                  }
-                ]
-              }
-            ]
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/punch_bow"
           },
           {
             "type": "minecraft:loot_table",
@@ -189,7 +153,7 @@
           },
           {
             "type": "minecraft:loot_table",
-            "value": "commands:shop_items/c4_red"
+            "value": "commands:shop_items/sticky_boots"
           },
           {
             "type": "minecraft:loot_table",
@@ -293,7 +257,7 @@
           },
           {
             "type": "minecraft:loot_table",
-            "value": "commands:shop_items/gas_vacuum"
+            "value": "commands:shop_items/steel_boots"
           },
           {
             "type": "minecraft:loot_table",

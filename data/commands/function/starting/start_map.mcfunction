@@ -71,7 +71,7 @@ execute if score @s players matches 10 if score #gamemode settings matches 1 run
 
 execute as @a store result score @s UUID run data get entity @s UUID[0]
 
-execute as @a at @s run function commands:starting/spawn_health_displays
+# execute as @a at @s run function commands:starting/spawn_health_displays
 
 scoreboard players set #redHS healstreak 0
 
@@ -84,6 +84,8 @@ scoreboard players set #blueHS HSValue 100
 scoreboard players set #red siegeBank 0
 
 scoreboard players set #blue siegeBank 0
+
+scoreboard players add @a[scores={Kit=16}] icePackPassive 0
 
 scoreboard objectives setdisplay sidebar Money
 

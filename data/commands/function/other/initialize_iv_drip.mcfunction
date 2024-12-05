@@ -1,8 +1,15 @@
-execute if score @s ivDripTimer matches 1.. run kill @n[type=fishing_bobber,tag=]
+execute at @s[team=Red] run summon minecraft:armor_stand ~ ~1 ~ {NoGravity:1b,Invulnerable:1b,Small:1b,Invisible:1b,Health:1000f,Tags:["ivRed","ivBase"]}
 
-tag @n[type=fishing_bobber,tag=] add ivdrip
+execute at @s[team=Blue] run summon minecraft:armor_stand ~ ~1 ~ {NoGravity:1b,Invulnerable:1b,Small:1b,Invisible:1b,Health:1000f,Tags:["ivBlue","ivBase"]}
 
-execute if entity @s[team=Red] run tag @n[type=fishing_bobber,tag=ivdrip] add ivRed
+effect give @s regeneration infinite 1 true
 
-execute if entity @s[team=Blue] run tag @n[type=fishing_bobber,tag=ivdrip] add ivBlue
+tag @s add ivAttached
+
+tag @n[type=item,tag=ivNeedle] add attached
+
+ride @n[type=item,tag=ivRed] mount @n[type=armor_stand,tag=ivRed]
+
+ride @n[type=item,tag=ivBlue] mount @n[type=armor_stand,tag=ivBlue]
+
 

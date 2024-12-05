@@ -1,6 +1,8 @@
 execute at @s[team=Red] as @a[team=Red] run function commands:attributes/adds/add_lifeforce_maxhp
 
-execute at @s[team=Red] run effect give @a[team=Red] instant_health 1 1 true
+execute at @s[team=Red] as @a[team=Red] run scoreboard players set @s c.heal 80000
+
+execute at @s[team=Red] as @a[team=Red] run function custom_heal:apply_heal
 
 execute at @s[team=Red] run effect give @a[team=Red] regeneration 10 1 true
 
@@ -14,7 +16,9 @@ execute if entity @s[team=Red] run scoreboard players reset #angelspellsred voic
 
 execute at @s[team=Blue] as @a[team=Blue] run function commands:attributes/adds/add_lifeforce_maxhp
 
-execute at @s[team=Blue] run effect give @a[team=Blue] instant_health 1 1 true
+execute at @s[team=Blue] as @a[team=Blue] run scoreboard players set @s c.heal 80000
+
+execute at @s[team=Blue] as @a[team=Blue] run function custom_heal:apply_heal
 
 execute at @s[team=Blue] run effect give @a[team=Blue] regeneration 10 1 true
 

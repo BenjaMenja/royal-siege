@@ -106,5 +106,3 @@ scoreboard players set @s blunderTimer 120
 tag @s remove blunderShoot
 
 tag @s remove wrenched
-
-function commands:replace/blunderbuss_replace

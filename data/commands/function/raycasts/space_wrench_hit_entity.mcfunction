@@ -41,10 +41,6 @@ scoreboard players set @s[scores={Kit=15}] blazingSpeedTimer 1
 
 scoreboard players set @s[scores={Kit=15}] sparklerTimer 1
 
-execute if entity @s[team=Red,scores={Kit=16}] run scoreboard players set @a[team=Red,tag=ivAttached] c.heal 30000
+execute if entity @s[team=Red,scores={Kit=16}] as @a[team=Red,tag=ivAttached] run function commands:other/custom_heal {health:3,ult_charge_received:"@a[team=Red,scores={Kit=16}]"}
 
-execute if entity @s[team=Red,scores={Kit=16}] as @a[team=Red,tag=ivAttached] run function custom_heal:apply_heal
-
-execute if entity @s[team=Blue,scores={Kit=16}] run scoreboard players set @a[team=Blue,tag=ivAttached] c.heal 30000
-
-execute if entity @s[team=Blue,scores={Kit=16}] as @a[team=Blue,tag=ivAttached] run function custom_heal:apply_heal
+execute if entity @s[team=Blue,scores={Kit=16}] as @a[team=Blue,tag=ivAttached] run function commands:other/custom_heal {health:3,ult_charge_received:"@a[team=Blue,scores={Kit=16}]"}

@@ -17,3 +17,5 @@ execute at @s[team=Red] run function commands:starting/red
 scoreboard players set @s[team=Blue] BlueKit 197
 
 execute at @s[team=Blue] run function commands:starting/blue
+
+scoreboard players add @s icePackPassive 0

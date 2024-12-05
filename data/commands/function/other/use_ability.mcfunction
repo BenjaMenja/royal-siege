@@ -212,9 +212,25 @@ execute if entity @s[predicate=commands:holding/virus_detector,team=Red] as @r[t
 
 execute if entity @s[predicate=commands:holding/system_reboot] run function commands:ultimates/system_reboot_shot
 
+#Mysterious Brew
+
+execute if entity @s[predicate=commands:holding/mysterious_brew] run function commands:other/mysterious_brew
+
 #Mystery Basket
 
 execute if entity @s[scores={basketTimer=..0},predicate=commands:holding/mystery_basket] at @s run function commands:other/mystery_basket
+
+#Ultimate Charger
+
+execute if entity @s[predicate=commands:holding/ultimate_charger] run function commands:other/ultimate_charger
+
+#Castle Chain
+
+execute if entity @s[predicate=commands:holding/castle_chain] run function commands:other/castle_chain
+
+#Killer King
+
+execute if entity @s[predicate=commands:holding/killer_king] run function commands:other/killer_king
 
 #Pay Raise
 
@@ -306,10 +322,6 @@ tag @s[scores={debrisTimer=..0},predicate=commands:holding/debris_cannon] add de
 
 execute at @s[tag=debrisShooter] run function commands:other/debris_cannon
 
-#Gas Vacuum
-
-execute at @s[scores={gasVacTimer=..0},predicate=commands:holding/gas_vacuum] run function commands:other/gas_vacuum
-
 #Safety Tether
 
 execute at @s[predicate=commands:holding/safety_tether,tag=tethered] run function commands:other/warp_to_tether
@@ -357,6 +369,10 @@ execute at @s[predicate=commands:holding/chrysanthemum_shell,tag=!chrysanthemumL
 #Pop Rocks
 
 execute at @s[predicate=commands:holding/pop_rocks] run function commands:ultimates/pop_rocks_init
+
+#IV Drip
+
+execute at @s[predicate=commands:holding/iv_drip,scores={ivDripTimer=..0}] run function commands:other/iv_drip_shot
 
 #Defibrillator
 

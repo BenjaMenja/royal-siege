@@ -80,8 +80,6 @@ tag @s remove hasDebrisCannon
 
 tag @s remove hasGravityCanceler
 
-tag @s remove hasGasVacuum
-
 tag @s remove cloaked
 
 tag @s remove justiceKill

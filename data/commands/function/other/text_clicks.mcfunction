@@ -10,7 +10,7 @@ execute if score @s textClick matches 5 run function commands:shops/strength_sto
 
 execute if score @s textClick matches 6 run function commands:shops/golden_apples
 
-execute if score @s textClick matches 7 run function commands:shops/c4
+execute if score @s textClick matches 7 run function commands:shops/sticky_boots
 
 execute if score @s textClick matches 8 run function commands:shops/ender_pearls
 
@@ -286,7 +286,7 @@ execute if score @s textClick matches 147 run function commands:shops/rocket_boo
 
 execute if score @s textClick matches 148 run function commands:shops/safety_tether
 
-execute if score @s textClick matches 149 run function commands:shops/gas_vacuum
+execute if score @s textClick matches 149 run function commands:shops/steel_boots
 
 execute if score @s textClick matches 150 run function commands:shops/enhanced_space_helmet
 

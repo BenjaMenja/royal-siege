@@ -32,6 +32,8 @@ execute as @e[tag=hook,limit=1,tag=!stop] store result entity @s Motion[1] doubl
 
 execute as @e[tag=hook,limit=1,tag=!stop] store result entity @s Motion[2] double 0.0015 run scoreboard players get @s posZ
 
+execute as @e[tag=hook,tag=!stop] at @s store result score @s chainHookUUID run scoreboard players get @p[tag=chain] UUID
+
 tag @e[tag=hook] add stop
 
 tag @s remove chain

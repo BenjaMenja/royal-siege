@@ -31,6 +31,7 @@ scoreboard objectives add posX dummy
 scoreboard objectives add posY dummy
 scoreboard objectives add posZ dummy
 scoreboard objectives add constant dummy
+scoreboard players set #10000 constant 10000
 scoreboard objectives add gameDuration dummy
 scoreboard objectives add totalDeaths dummy
 scoreboard objectives add UUID dummy
@@ -349,6 +350,13 @@ scoreboard objectives add cardValue dummy
 scoreboard objectives add cardTemp dummy
 scoreboard objectives add cardDamage dummy
 scoreboard objectives add outrageKill playerKillCount
+scoreboard objectives add ray.regen dummy
+scoreboard objectives add ray.wrench dummy
+scoreboard objectives add ray.lightning dummy
+scoreboard objectives add ray.dash dummy
+scoreboard objectives add ray.root dummy
+scoreboard objectives add mBarrierDur dummy
+scoreboard objectives add mMarkDur dummy
 
 
 #New Scoreboards
@@ -456,6 +464,9 @@ scoreboard objectives add nurLosses dummy
 scoreboard objectives add nurWinsTDM dummy
 scoreboard objectives add nurLossesTDM dummy
 scoreboard objectives add RSAttr.InhalerBuffs dummy
+scoreboard objectives add ray.dRush dummy
+scoreboard objectives add chainHookUUID dummy
+scoreboard objectives add RSAttr.StickyBootsGravity dummy
 function custom_heal:load
 
 scoreboard objectives remove dmDelay
@@ -474,4 +485,6 @@ scoreboard objectives remove JBFix
 scoreboard objectives remove JBTime
 scoreboard objectives remove KillP
 scoreboard objectives remove ray.angelicBlessing
-scoreboard objectives remove ray.dRush
+scoreboard objectives remove gasVacDis
+scoreboard objectives remove gasVacStore
+scoreboard objectives remove gasVacTimer

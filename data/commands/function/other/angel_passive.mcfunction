@@ -14,9 +14,9 @@ execute if entity @s[tag=HSBlue] if entity @a[limit=1,team=Blue,tag=!HSfound] ru
 
 #Apply Healing
 
-execute if entity @s[tag=HSRed] as @a[team=Red] if score @s Health = #redHS HSValue run effect give @s instant_health
+execute if entity @s[tag=HSRed] as @a[team=Red] if score @s Health = #redHS HSValue run function commands:other/custom_heal {health:4,ult_charge_receiver:"@a[team=Red,tag=healstreak]"}
 
-execute if entity @s[tag=HSBlue] as @a[team=Blue] if score @s Health = #blueHS HSValue run effect give @s instant_health
+execute if entity @s[tag=HSBlue] as @a[team=Blue] if score @s Health = #redHS HSValue run function commands:other/custom_heal {health:4,ult_charge_receiver:"@a[team=Blue,tag=healstreak]"}
 
 #Reset Variables
 

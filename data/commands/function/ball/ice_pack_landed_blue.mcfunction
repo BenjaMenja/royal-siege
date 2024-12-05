@@ -1,8 +1,6 @@
 kill @s
 
-scoreboard players set @a[team=Blue,distance=..5] c.heal 20000
-
-execute as @a[team=Blue,distance=..5] run function custom_heal:apply_heal
+execute as @a[team=Blue,distance=..5] run function commands:other/custom_heal {health:2,ult_charge_receiver:"@a[team=Blue,scores={Kit=16}]"}
 
 execute as @a[team=Blue,distance=..5] run function commands:attributes/adds/add_ice_pack_speed
 

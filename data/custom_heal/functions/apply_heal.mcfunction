@@ -1,7 +1,7 @@
 # get max health and current health
 scoreboard players operation @s c.actual_heal += @s c.heal
-attribute @s minecraft:generic.max_health modifier remove custom_heal:108158379
-execute store result score #c.max_health c.heal run attribute @s minecraft:generic.max_health get 10000
+attribute @s minecraft:max_health modifier remove custom_heal:108158379
+execute store result score #c.max_health c.heal run attribute @s minecraft:max_health get 10000
 execute store result score #c.current_health c.heal run data get entity @s Health 10000
 
 # if your current health is at your max health (or greater somehow), exit the function as there is no need to heal

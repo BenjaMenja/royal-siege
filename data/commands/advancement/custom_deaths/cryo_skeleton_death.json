@@ -1,6 +1,6 @@
 {
     "criteria": {
-      "c4_death": {
+      "cryo_death": {
         "trigger": "minecraft:entity_killed_player",
         "conditions": {
           "entity": {

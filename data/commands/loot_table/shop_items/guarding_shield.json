@@ -52,7 +52,7 @@
                 },
                 {
                   "attribute": "minecraft:max_health",
-                  "amount": 6,
+                  "amount": 2,
                   "operation": "add_value",
                   "id": "0a2c8937-81b7-4bec-8595-84a6f70ca6ae",
                   "slot": "offhand"

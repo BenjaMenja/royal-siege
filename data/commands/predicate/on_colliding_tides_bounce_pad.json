@@ -8,16 +8,16 @@
         "location": {
           "position": {
             "x": {
-              "min": 28,
-              "max": 30
+              "min": 18.75,
+              "max": 20.25
             },
             "y": {
-              "min": 53,
-              "max": 54
+              "min": 62,
+              "max": 62.5
             },
             "z": {
-              "min": -1966,
-              "max": -1964
+              "min": -1971.25,
+              "max": -1969.75
             }
           }
         }
@@ -30,16 +30,16 @@
         "location": {
           "position": {
             "x": {
-              "min": 9,
-              "max": 11
+              "min": 1.75,
+              "max": 3.25
             },
             "y": {
               "min": 53,
-              "max": 54
+              "max": 53.5
             },
             "z": {
-              "min": -1964,
-              "max": -1962
+              "min": -1992.25,
+              "max": -1990.75
             }
           }
         }
@@ -52,60 +52,16 @@
         "location": {
           "position": {
             "x": {
-              "min": 11,
-              "max": 13
+              "min": 35.75,
+              "max": 37.25
             },
             "y": {
               "min": 53,
-              "max": 54
+              "max": 53.5
             },
             "z": {
-              "min": -1980,
-              "max": -1978
-            }
-          }
-        }
-      }
-    },
-    {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "position": {
-            "x": {
-              "min": 26,
-              "max": 28
-            },
-            "y": {
-              "min": 53,
-              "max": 54
-            },
-            "z": {
-              "min": -1980,
-              "max": -1978
-            }
-          }
-        }
-      }
-    },
-    {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "location": {
-          "position": {
-            "x": {
-              "min": 19,
-              "max": 20
-            },
-            "y": {
-              "min": 56,
-              "max": 57
-            },
-            "z": {
-              "min": -1971,
-              "max": -1970
+              "min": -1950.25,
+              "max": -1948.75
             }
           }
         }

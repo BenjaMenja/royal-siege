@@ -1,8 +1,10 @@
 execute store result score #mysteryfood RNG run random value 1..6
 
+tag @s add basketuser
+
 #Red Team
 
-execute if score #mysteryfood RNG matches 1..6 if entity @s[team=Red] run effect give @a[distance=..10,team=Red] instant_health 1 0
+execute if score #mysteryfood RNG matches 1..6 if entity @s[team=Red] as @a[distance=..10,team=Red] run function commands:other/custom_heal {health:4,ult_charge_receiver:"@a[tag=basketuser]"}
 
 execute if score #mysteryfood RNG matches 1..6 if entity @s[team=Red] run effect give @a[distance=..10,team=Red] saturation 1 3
 
@@ -46,7 +48,7 @@ execute if score #mysteryfood RNG matches 6 if entity @s[team=Red] as @a[distanc
 
 #Blue Team
 
-execute if score #mysteryfood RNG matches 1..6 if entity @s[team=Blue] run effect give @a[distance=..10,team=Blue] instant_health 1 0
+execute if score #mysteryfood RNG matches 1..6 if entity @s[team=Blue] as @a[distance=..10,team=Blue] run function commands:other/custom_heal {health:4,ult_charge_receiver:"@a[tag=basketuser]"}
 
 execute if score #mysteryfood RNG matches 1..6 if entity @s[team=Blue] run effect give @a[distance=..10,team=Blue] saturation 1 3
 
@@ -101,3 +103,7 @@ scoreboard players reset #mysteryfood RNG
 scoreboard players set @s[tag=!upgraded] basketTimer 280
 
 scoreboard players set @s[tag=upgraded] basketTimer 200
+
+#Remove tag
+
+tag @s remove basketuser

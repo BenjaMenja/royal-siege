@@ -1,10 +1,10 @@
-execute at @s[team=Red] run effect give @a[distance=..15,team=Red] instant_health 1 0 true
+tag @s add blossoming
+
+execute at @s[team=Red] as @a[distance=..15,team=Red] run function commands:other/custom_heal {health:4,ult_charge_receiver:"@a[tag=blossoming]"}
 
 execute at @s[team=Red] run effect give @a[distance=..15,team=Red] regeneration 8 1 true
 
 execute at @s[team=Red] as @a[distance=..15,team=Red] run function commands:attributes/adds/add_blossom_speed
-
-execute at @s[team=Red,tag=upgraded] run effect give @a[distance=..15,team=Red] instant_health 1 0 true
 
 execute at @s[team=Red,tag=upgraded] run effect give @a[distance=..15,team=Red] regeneration 12 1 true
 
@@ -18,13 +18,11 @@ execute at @s[team=Red] if score #entvoicered voicelineCD matches 40.. run plays
 
 execute at @s[team=Red] if score #entvoicered voicelineCD matches 40.. run scoreboard players reset #entvoicered voicelineCD
 
-execute at @s[team=Blue] run effect give @a[distance=..15,team=Blue] instant_health 1 0 true
+execute at @s[team=Blue] as @a[distance=..15,team=Blue] run function commands:other/custom_heal {health:4,ult_charge_receiver:"@a[tag=blossoming]"}
 
 execute at @s[team=Blue] run effect give @a[distance=..15,team=Blue] regeneration 8 1 true
 
 execute at @s[team=Blue] as @a[distance=..15,team=Blue] run function commands:attributes/adds/add_blossom_speed
-
-execute at @s[team=Blue,tag=upgraded] run effect give @a[distance=..15,team=Blue] instant_health 1 0 true
 
 execute at @s[team=Blue,tag=upgraded] run effect give @a[distance=..15,team=Blue] regeneration 12 1 true
 
@@ -39,3 +37,5 @@ execute at @s[team=Blue] if score #entvoiceblue voicelineCD matches 40.. run pla
 execute at @s[team=Blue] if score #entvoiceblue voicelineCD matches 40.. run scoreboard players reset #entvoiceblue voicelineCD
 
 scoreboard players set @s blossomTimer 400
+
+tag @s remove blossoming

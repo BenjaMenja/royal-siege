@@ -36,6 +36,13 @@
                     "amount": 0.1,
                     "operation": "add_multiplied_base",
                     "slot": "feet"
+                  },
+                  {
+                    "type": "gravity",
+                    "id": "b124ebc8-82ee-40db-9cee-e31008d2ce1d",
+                    "amount": -0.25,
+                    "operation": "add_multiplied_base",
+                    "slot": "feet"
                   }
                 ],
                 "minecraft:dyed_color": 13617866
