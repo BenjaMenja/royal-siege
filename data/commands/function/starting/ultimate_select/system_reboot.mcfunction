@@ -1,3 +1,5 @@
+scoreboard players set @s[predicate=commands:in_practice_range] ultCheck 10
+
 scoreboard players set @s[scores={ultCheck=0}] ultCheck 10
 
 tellraw @s[scores={ultCheck=10}] {"text":"You chose to use System Reboot!","color":"aqua"}

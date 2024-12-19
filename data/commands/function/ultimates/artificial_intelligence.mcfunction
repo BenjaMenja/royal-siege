@@ -2,7 +2,7 @@ execute at @s[tag=AIred] run summon minecraft:zombie ~ ~ ~ {Silent:1b,CustomName
 
 execute at @s[tag=AIred] run summon minecraft:firework_rocket ~ ~ ~ {FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"large_ball",colors:[I;0]}]}}}}
 
-execute at @s[tag=AIred] run summon lightning_bolt ~ ~ ~
+execute at @s[tag=AIred] unless entity @n[type=villager,distance=..5] run summon lightning_bolt ~ ~ ~
 
 execute at @s[tag=AIred] run tellraw @a [{"selector":"@a[team=Red,scores={Kit=10,Ultimate=20}]"},{"text":" has constructed artificial intelligence!","color":"white"}]
 
@@ -10,7 +10,7 @@ execute at @s[tag=AIblue] run summon minecraft:zombie ~ ~ ~ {Silent:1b,CustomNam
 
 execute at @s[tag=AIblue] run summon minecraft:firework_rocket ~ ~ ~ {FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"large_ball",colors:[I;0]}]}}}}
 
-execute at @s[tag=AIblue] run summon lightning_bolt ~ ~ ~
+execute at @s[tag=AIblue] unless entity @n[type=villager,distance=..5] run summon lightning_bolt ~ ~ ~
 
 execute at @s[tag=AIblue] run tellraw @a [{"selector":"@a[team=Blue,scores={Kit=10,Ultimate=20}]"},{"text":" has constructed artificial intelligence!","color":"white"}]
 

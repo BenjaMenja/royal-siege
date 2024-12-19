@@ -49,7 +49,11 @@
                   "minecraft:knockback": 2,
                   "minecraft:fire_aspect": 2
                 },
-                "minecraft:custom_model_data": 93,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    93
+                  ]
+                },
                 "minecraft:unbreakable": {
                   "show_in_tooltip": false
                 }

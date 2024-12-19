@@ -1,6 +1,6 @@
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["systemRebootRed","systemReboot","redProj","ultimateProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_model_data":82}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["systemRebootRed","systemReboot","redProj","ultimateProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_model_data":{floats:[82]}}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["systemRebootBlue","systemReboot","blueProj","ultimateProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_model_data":82}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["systemRebootBlue","systemReboot","blueProj","ultimateProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_model_data":{floats:[82]}}}}
 
 execute as @e[tag=systemReboot] run data modify entity @s Owner set from entity @s UUID
 

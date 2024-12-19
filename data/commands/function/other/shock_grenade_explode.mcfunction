@@ -1,4 +1,4 @@
-summon lightning_bolt
+execute if entity @s[predicate=!commands:in_tdm_gates] run summon lightning_bolt
 
 execute if entity @s[tag=shockGrenadeRed] run scoreboard players set @a[team=Blue,distance=..3] RSAttr.Rooted 60
 

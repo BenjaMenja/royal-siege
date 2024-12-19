@@ -18,7 +18,11 @@
                 "minecraft:custom_data": {
                   "ivdrip": true
                 },
-                "minecraft:custom_model_data": 199,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    199
+                  ]
+                },
                 "minecraft:food": {
                   "nutrition": 0,
                   "saturation": 0,

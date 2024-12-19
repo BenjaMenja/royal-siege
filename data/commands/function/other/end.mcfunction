@@ -76,6 +76,14 @@ tag @a remove blessed
 
 tag @a remove resurrecting
 
+tag @a remove custom_death
+
+tag @a remove slamming
+
+tag @a remove spectator
+
+tag @a remove cshelldown
+
 advancement revoke @a only commands:pickup_fake_money
 
 scoreboard players set #matchID matchID 0
@@ -87,6 +95,8 @@ scoreboard players set #blue corruptBank 0
 scoreboard players set #gameDuration gameDuration 0
 
 scoreboard players set #numPlayersOnTeam multiItems 0
+
+execute as @a[scores={Kit=14}] run function commands:attributes/clears/clear_safe_fall_dist
 
 advancement grant @a[tag=win,advancements={commands:challenges/consecutive_wins={win4=true}}] only commands:challenges/consecutive_wins win5
 

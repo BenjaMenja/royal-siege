@@ -1,6 +1,6 @@
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["shockGrenade","shockGrenadeRed","redProj"],Item:{id:"minecraft:snowball",count:1,components:{"minecraft:custom_model_data":43}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["shockGrenade","shockGrenadeRed","redProj"],Item:{id:"minecraft:snowball",count:1,components:{"minecraft:custom_model_data":{floats:[43]}}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["shockGrenade","shockGrenadeBlue","blueProj"],Item:{id:"minecraft:snowball",count:1,components:{"minecraft:custom_model_data":43}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {PickupDelay:32767,Tags:["shockGrenade","shockGrenadeBlue","blueProj"],Item:{id:"minecraft:snowball",count:1,components:{"minecraft:custom_model_data":{floats:[43]}}}}
 
 execute at @s run playsound entity.bee.death master @s ~ ~ ~ 1 2
 

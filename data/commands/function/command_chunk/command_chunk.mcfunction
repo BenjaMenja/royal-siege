@@ -20,7 +20,7 @@ execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{corruptc
 
 #Assign Teams to Arrows shot by bows
 
-execute as @e[type=arrow,tag=!getTeam] run function commands:other/arrow_get_team
+execute as @e[type=arrow,tag=!getTeam] at @s run function commands:other/arrow_get_team
 
 #Kill Items and prevent players from dropping
 
@@ -66,7 +66,7 @@ execute as @a[scores={useFishingRod=1..},predicate=commands:holding/lightning_ro
 
 scoreboard players add @e[type=fishing_bobber,tag=lightningrod] LightningRod 1
 
-execute as @e[type=fishing_bobber,tag=lightningrod,scores={LightningRod=20..}] at @s run summon lightning_bolt
+execute as @e[type=fishing_bobber,tag=lightningrod,scores={LightningRod=20..},predicate=!commands:in_tdm_gates] at @s run summon lightning_bolt
 
 kill @e[type=fishing_bobber,tag=lightningrod,scores={LightningRod=100..}]
 
@@ -396,9 +396,11 @@ scoreboard players set @a[scores={Treasure=3200..}] Treasure 0
 
 execute as @e[type=bat,tag=Treasure] at @s run function commands:ultimates/treasure_chest_init
 
-execute as @e[type=falling_block,tag=FallingChest] at @s run particle happy_villager ~ ~ ~ 0 0 0 1 10
+execute as @e[type=armor_stand,tag=Chest] at @s run particle happy_villager ~ ~ ~ 0 0 0 1 10
 
 scoreboard players add @e[type=armor_stand,tag=Chest] TreasureDelete 1
+
+execute as @e[type=armor_stand,tag=Chest,nbt={OnGround:1b},tag=!placed] at @s run function commands:ultimates/treasure_chest_place
 
 execute as @e[type=armor_stand,scores={TreasureDelete=299}] at @s run summon fireball ~ ~ ~ {Motion:[0.0,-1.0,0.0],ExplosionPower:0}
 
@@ -422,9 +424,9 @@ execute as @a[scores={Kit=8,blossomTimer=1..},predicate=commands:in_any_battlefi
 
 execute as @a[scores={Kit=8,rootingTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s rootingTimer 1
 
-execute at @a[team=Red,scores={hFruitTimer=..0}] run summon minecraft:item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",count:1,components:{"minecraft:custom_name":'{"italic":false,"text":"Healing Fruit"}',"minecraft:lore":['{"text":"Can be thrown to allies from any distance."}','{"text":"The maximum number fruits on your team is equal to the number of players on your team."}'],"minecraft:custom_model_data":30,"minecraft:custom_data":{redhealingfruit:1b,healingfruit:1b}}}}
+execute at @a[team=Red,scores={hFruitTimer=..0}] run summon minecraft:item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",count:1,components:{"minecraft:custom_name":'{"italic":false,"text":"Healing Fruit"}',"minecraft:lore":['{"text":"Can be thrown to allies from any distance."}','{"text":"The maximum number fruits on your team is equal to the number of players on your team."}'],"minecraft:custom_model_data":{floats:[30]},"minecraft:custom_data":{redhealingfruit:1b,healingfruit:1b}}}}
 
-execute at @a[team=Blue,scores={hFruitTimer=..0}] run summon minecraft:item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",count:1,components:{"minecraft:custom_name":'{"italic":false,"text":"Healing Fruit"}',"minecraft:lore":['{"text":"Can be thrown to allies from any distance."}','{"text":"The maximum number fruits on your team is equal to the number of players on your team."}'],"minecraft:custom_model_data":30,"minecraft:custom_data":{bluehealingfruit:1b,healingfruit:1b}}}}
+execute at @a[team=Blue,scores={hFruitTimer=..0}] run summon minecraft:item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",count:1,components:{"minecraft:custom_name":'{"italic":false,"text":"Healing Fruit"}',"minecraft:lore":['{"text":"Can be thrown to allies from any distance."}','{"text":"The maximum number fruits on your team is equal to the number of players on your team."}'],"minecraft:custom_model_data":{floats:[30]},"minecraft:custom_data":{bluehealingfruit:1b,healingfruit:1b}}}}
 
 scoreboard players set @a[scores={hFruitTimer=..0}] hFruitTimer 400
 
@@ -932,9 +934,9 @@ execute as @a[scores={Kit=3,defensiveSpell=1..},predicate=commands:in_any_battle
 
 scoreboard players remove @a[scores={Kit=3},predicate=commands:in_any_battlefield,tag=!notAlive] turretTimer 1
 
-give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','{"text":" "}'],custom_model_data=68,custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},{id:"minecraft:dispenser",count:1,components:{"minecraft:attribute_modifiers":[{type:"movement_speed",amount:-1,operation:"add_multiplied_base",id:"5791e254-ecfa-4177-8b19-5ee15c8e30a0",slot:"head"},{type:"knockback_resistance",amount:1,operation:"add_multiplied_base",id:"588107f4-ecfa-4177-8b19-5ee15c8e30a0",slot:"head"}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}]}] 1
+give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','" "'],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},{id:"minecraft:dispenser",count:1}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
 
-give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','{"text":" "}'],custom_model_data=68,custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":255}},{id:"minecraft:dispenser",count:1,components:{"minecraft:attribute_modifiers":[{type:"movement_speed",amount:-1,operation:"add_multiplied_base",id:"5791e254-00c4-4177-8b19-5ee15c8e30a0",slot:"head"},{type:"knockback_resistance",amount:1,operation:"add_multiplied_base",id:"588107f4-ecfa-4177-8b19-5ee15c8e30a0",slot:"head"}]}}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}]}] 1
+give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','" "'],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":1638655}},{id:"minecraft:dispenser",count:1}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
 
 scoreboard players set @a[scores={turretTimer=..0}] turretTimer 600
 
@@ -958,7 +960,7 @@ execute as @a[scores={RallyDelay=10}] run function commands:ultimates/rally
 
 scoreboard players set @a[scores={RallyDelay=10..}] RallyDelay 0
 
-#Magic Barrier (Guardian Alt. Ultimate)
+#Magic Barrier (Guardian Alt. Ultimate) 
 
 execute as @a[scores={Kit=3,Ultimate=13},tag=!notAlive,predicate=!commands:inventory/magic_barrier] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s BarrierTimer 1
 
@@ -1082,9 +1084,9 @@ execute as @a[scores={Kit=4,RegenTimer=1..},predicate=commands:in_any_battlefiel
 
 #Give Weapons to players that dropped their weapon
 
-execute as @a[scores={Kit=9},predicate=!commands:inventory/poseidon_trident,predicate=commands:in_any_battlefield] run function commands:replace/poseidon_trident_replace
+execute as @a[scores={Kit=9},predicate=!commands:inventory/poseidon_trident,predicate=commands:in_any_battlefield,tag=!notAlive] run function commands:replace/poseidon_trident_replace
 
-execute as @a[scores={Kit=10},predicate=!commands:inventory/gunblade,predicate=commands:in_any_battlefield] run function commands:other/gunblade_reload_init
+execute as @a[scores={Kit=10},predicate=!commands:inventory/gunblade,predicate=commands:in_any_battlefield,tag=!notAlive] run function commands:other/gunblade_reload_init
 
 scoreboard players add @a[tag=reloading] reload 1
 
@@ -1706,9 +1708,9 @@ execute if score #redHS healstreak matches 6.. run tag @a[team=Red,tag=!healstre
 
 execute if score #blueHS healstreak matches 6.. run tag @a[team=Blue,tag=!healstreak,limit=1,scores={Kit=4}] add HSinit
 
-execute as @a[team=Red,tag=HSinit,tag=!healstreak] at @s run summon minecraft:item ~1 ~1.5 ~ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["angelpassive","HSRed"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":119,"minecraft:custom_data":{angelpassive:1b}}}}
+execute as @a[team=Red,tag=HSinit,tag=!healstreak] at @s run summon minecraft:item ~1 ~1.5 ~ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["angelpassive","HSRed"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":{floats:[119]},"minecraft:custom_data":{angelpassive:1b}}}}
 
-execute as @a[team=Blue,tag=HSinit,tag=!healstreak] at @s run summon minecraft:item ~1 ~1.5 ~ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["angelpassive","HSBlue"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":119,"minecraft:custom_data":{angelpassive:1b}}}}
+execute as @a[team=Blue,tag=HSinit,tag=!healstreak] at @s run summon minecraft:item ~1 ~1.5 ~ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["angelpassive","HSBlue"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":{floats:[119]},"minecraft:custom_data":{angelpassive:1b}}}}
 
 tag @a[tag=HSinit] add healstreak
 
@@ -1725,6 +1727,10 @@ execute as @e[type=item,tag=angelpassive,scores={HSTimer=120..}] at @s if entity
 scoreboard players reset @a[tag=!healstreak] HSdamage
 
 execute as @a[scores={HSdamage=200..}] run function commands:other/angel_passive_end
+
+execute as @e[type=item,tag=HSRed] at @s unless entity @p[team=Red,distance=..3,scores={Kit=4}] run kill @s
+
+execute as @e[type=item,tag=HSBlue] at @s unless entity @p[team=Blue,distance=..3,scores={Kit=4}] run kill @s
 
 #Guardian Counter
 
@@ -1926,7 +1932,7 @@ scoreboard players add @e[type=zombified_piglin,tag=oven] ovenDur 1
 
 execute as @e[type=item_frame,tag=oven] at @s unless entity @e[type=zombified_piglin,limit=1,sort=nearest,distance=..1] run function commands:other/destroy_oven
 
-execute as @e[type=zombified_piglin,tag=oven,scores={ovenTimer=30,ovenDur=1..}] at @s run data modify entity @e[type=item_frame,tag=oven,limit=1,sort=nearest] Item set value {id:"minecraft:stone_bricks",count:1,components:{"minecraft:custom_model_data":134}}
+execute as @e[type=zombified_piglin,tag=oven,scores={ovenTimer=30,ovenDur=1..}] at @s run data modify entity @e[type=item_frame,tag=oven,limit=1,sort=nearest] Item set value {id:"minecraft:stone_bricks",count:1,components:{"minecraft:custom_model_data":{floats:[134]}}}
 
 execute as @e[type=zombified_piglin,tag=oven,tag=pizzatime,scores={ovenTimer=20..}] at @s run function commands:other/shoot_pizza
 
@@ -1972,7 +1978,7 @@ execute as @a[predicate=commands:on_tdm_gates,tag=!notAlive] at @s run function 
 
 execute if score #gamemode settings matches 1 run scoreboard players add @a[predicate=commands:in_tdm_gates] tdmSpawnTime 1
 
-execute as @a[scores={tdmSpawnTime=300..}] at @s run function commands:starting/tdm_spawn
+execute as @a[scores={tdmSpawnTime=400..}] at @s run function commands:starting/tdm_spawn
 
 execute if score #gamemode settings matches 1 run scoreboard players reset @a[predicate=!commands:in_tdm_gates] tdmSpawnTime
 
@@ -2456,7 +2462,7 @@ scoreboard players set @a[scores={10HourTimer=1800..}] 10HourTimer 0
 
 #Give menu item to people w/out it
 
-execute as @a[predicate=commands:in_any_battlefield,predicate=!commands:inventory/menu] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run loot give @s loot commands:gameplay/menu
+execute as @a[predicate=commands:in_any_battlefield,predicate=!commands:inventory/menu,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run loot give @s loot commands:gameplay/menu
 
 #Match ID Check for people returning while a game is over
 

@@ -16,7 +16,11 @@
               "function": "set_components",
               "components": {
                 "minecraft:unbreakable": {},
-                "minecraft:custom_model_data": 154,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    154
+                  ]
+                },
                 "minecraft:custom_data": {
                   "guardianblade": 1
                 },

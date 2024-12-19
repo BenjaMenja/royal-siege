@@ -1,3 +1,5 @@
+scoreboard players set @s[predicate=commands:in_practice_range] ultCheck 24
+
 scoreboard players set @s[scores={ultCheck=0}] ultCheck 24
 
 tellraw @s[scores={ultCheck=24}] {"text":"You chose to use Evolution!","color":"aqua"}

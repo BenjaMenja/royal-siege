@@ -45,7 +45,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 53,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    53
+                  ]
+                },
                 "minecraft:enchantment_glint_override": true,
                 "minecraft:can_place_on": {
                   "blocks": "minecraft:jukebox"

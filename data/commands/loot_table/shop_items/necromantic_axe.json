@@ -48,7 +48,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 115,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    115
+                  ]
+                },
                 "minecraft:unbreakable": {
                   "show_in_tooltip": false
                 },
@@ -69,7 +73,7 @@
                 },
                 {
                   "attribute": "minecraft:attack_speed",
-                  "amount": -2,
+                  "amount": -2.9,
                   "operation": "add_value",
                   "id": "7f0b7baa-0a16-4371-ac14-784d9cb2abde",
                   "slot": "mainhand"

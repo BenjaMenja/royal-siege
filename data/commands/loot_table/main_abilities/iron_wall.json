@@ -15,7 +15,11 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": 42,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    42
+                  ]
+                },
                 "minecraft:custom_data": {
                   "ironwall": 1
                 },

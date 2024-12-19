@@ -1,3 +1,5 @@
+scoreboard players set @s[predicate=commands:in_practice_range] ultCheck 31
+
 scoreboard players set @s[scores={ultCheck=0}] ultCheck 31
 
 tellraw @s[scores={ultCheck=31}] {"text":"You chose to use Universal Health Care!","color":"aqua"}

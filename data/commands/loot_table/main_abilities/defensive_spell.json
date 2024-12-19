@@ -18,7 +18,11 @@
                 "minecraft:unbreakable": {
                   "show_in_tooltip": false
                 },
-                "minecraft:custom_model_data": 19,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    19
+                  ]
+                },
                 "minecraft:custom_data": {
                   "DefensiveSpell": 1
                 },

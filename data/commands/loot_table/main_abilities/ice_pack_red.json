@@ -19,7 +19,11 @@
                   "icepack": true,
                   "icepackred": true
                 },
-                "minecraft:custom_model_data": 200
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    200
+                  ]
+                }
               }
             },
             {

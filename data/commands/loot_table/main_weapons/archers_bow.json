@@ -16,7 +16,11 @@
               "function": "set_components",
               "components": {
                 "minecraft:unbreakable": {},
-                "minecraft:custom_model_data": 158,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    158
+                  ]
+                },
                 "minecraft:custom_data": {
                   "archerbow": 1
                 },

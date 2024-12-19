@@ -16,7 +16,11 @@
               "function": "set_components",
               "components": {
                 "minecraft:unbreakable": {},
-                "minecraft:custom_model_data": 110,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    110
+                  ]
+                },
                 "minecraft:custom_data": {
                   "dragonrage": 1
                 },

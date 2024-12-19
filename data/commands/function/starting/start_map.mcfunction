@@ -13,6 +13,8 @@ teleport @e[type=item] ~ -200 ~
 
 teleport @e[type=horse] ~ -200 ~
 
+teleport @e[type=witch] ~ -200 ~
+
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 positioned 9 59 -216 run function commands:entities/king_red
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 positioned 9 59 -48 run function commands:entities/king_blue
@@ -53,6 +55,12 @@ scoreboard players set @a[scores={Kit=4}] healstreak 0
 
 scoreboard players set @a[scores={Kit=3}] absShieldCount 0
 
+scoreboard players set @a[scores={Kit=14}] RSAttr.SafeFallDist 2147483647
+
+execute as @a[scores={Kit=14}] run function commands:attributes/adds/add_safe_fall_dist
+
+scoreboard players set @a totalDeaths 0
+
 advancement revoke @a only commands:pickup_fake_money
 
 execute as @a[team=Red] run scoreboard players add #numPlayersOnTeam multiItems 1
@@ -70,8 +78,6 @@ execute if score @s players matches 8 if score #gamemode settings matches 1 run 
 execute if score @s players matches 10 if score #gamemode settings matches 1 run scoreboard players set #tdmreqkills tdmKills 30
 
 execute as @a store result score @s UUID run data get entity @s UUID[0]
-
-# execute as @a at @s run function commands:starting/spawn_health_displays
 
 scoreboard players set #redHS healstreak 0
 

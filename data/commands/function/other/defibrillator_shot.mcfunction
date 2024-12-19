@@ -1,8 +1,8 @@
 tag @s add defibShot
 
-execute at @s[team=Red] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["defibRed","defib","redProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_model_data":201}}}
+execute at @s[team=Red] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["defibRed","defib","redProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_model_data":{floats:[201]}}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["defibBlue","defib","blueProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_model_data":201}}}
+execute at @s[team=Blue] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["defibBlue","defib","blueProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_model_data":{floats:[201]}}}}
 
 execute as @e[type=item,tag=defib] run data modify entity @s Owner set from entity @a[tag=defibShot,limit=1] UUID
 

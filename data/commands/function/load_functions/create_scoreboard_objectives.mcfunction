@@ -467,6 +467,7 @@ scoreboard objectives add RSAttr.InhalerBuffs dummy
 scoreboard objectives add ray.dRush dummy
 scoreboard objectives add chainHookUUID dummy
 scoreboard objectives add RSAttr.StickyBootsGravity dummy
+scoreboard objectives add RSAttr.GuardingShieldBuff dummy
 function custom_heal:load
 
 scoreboard objectives remove dmDelay
@@ -488,3 +489,4 @@ scoreboard objectives remove ray.angelicBlessing
 scoreboard objectives remove gasVacDis
 scoreboard objectives remove gasVacStore
 scoreboard objectives remove gasVacTimer
+scoreboard objectives remove useCrossbow

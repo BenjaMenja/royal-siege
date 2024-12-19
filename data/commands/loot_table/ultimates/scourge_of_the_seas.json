@@ -45,7 +45,11 @@
               {
                 "function": "minecraft:set_components",
                 "components": {
-                  "minecraft:custom_model_data": 80,
+                  "minecraft:custom_model_data": {
+                    "floats": [
+                      80
+                    ]
+                  },
                   "consumable": {
                     "consume_seconds": 1000000
                   },

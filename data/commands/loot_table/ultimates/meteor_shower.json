@@ -23,7 +23,11 @@
                   ],
                   "show_in_tooltip": false
                 },
-                "minecraft:custom_model_data": 116,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    116
+                  ]
+                },
                 "minecraft:custom_data": {
                   "ultimateitem": 1,
                   "meteorshower": 1

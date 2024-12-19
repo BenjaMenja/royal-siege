@@ -3,7 +3,11 @@
     "icon": {
       "id": "minecraft:carrot",
       "components": {
-        "custom_model_data": 71
+        "custom_model_data": {
+          "floats": [
+            71
+          ]
+        }
       }
     },
     "title": "Miracle Worker",

@@ -19,7 +19,11 @@
                   "inhaler": true,
                   "inhalerred": true
                 },
-                "custom_model_data": 207
+                "custom_model_data": {
+                  "floats": [
+                    207
+                  ]
+                }
               }
             },
             {

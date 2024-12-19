@@ -12,4 +12,4 @@ scoreboard players set @s RSAttr.Rooted 100
 
 function commands:attributes/adds/add_rooted
 
-execute at @s run summon lightning_bolt
+execute at @s[predicate=!commands:in_tdm_gates] run summon lightning_bolt

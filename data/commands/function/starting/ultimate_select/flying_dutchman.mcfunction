@@ -1,3 +1,5 @@
+scoreboard players set @s[predicate=commands:in_practice_range] ultCheck 17
+
 scoreboard players set @s[scores={ultCheck=0}] ultCheck 17
 
 tellraw @s[scores={ultCheck=17}] {"text":"You chose to use Flying Dutchman!","color":"aqua"}

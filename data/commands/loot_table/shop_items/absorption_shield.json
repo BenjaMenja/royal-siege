@@ -50,7 +50,11 @@
                 "minecraft:unbreakable": {
                   "show_in_tooltip": false
                 },
-                "minecraft:custom_model_data": 122,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    122
+                  ]
+                },
                 "minecraft:enchantment_glint_override": true,
                 "consumable": {
                   "consume_seconds": 1000000

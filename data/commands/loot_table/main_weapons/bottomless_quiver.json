@@ -17,7 +17,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 12,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    12
+                  ]
+                },
                 "minecraft:custom_data": {
                   "bottomlessquiver": 1
                 }

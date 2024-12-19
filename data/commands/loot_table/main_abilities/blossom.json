@@ -15,7 +15,11 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": 31,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    31
+                  ]
+                },
                 "minecraft:custom_data": {
                   "blossom": 1
                 },

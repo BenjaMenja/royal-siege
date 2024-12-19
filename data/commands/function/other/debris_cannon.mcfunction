@@ -1,22 +1,22 @@
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","redDebris","redProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":180,"minecraft:custom_data":{debrisitem:1b,reddebris:1b,a:1}}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","redDebris","redProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":{floats:[180]},"minecraft:custom_data":{debrisitem:1b,reddebris:1b,a:1}}}}
 
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^-0.075 ^0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","redDebris","redProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":180,"minecraft:custom_data":{debrisitem:1b,reddebris:1b,a:2}}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^-0.075 ^0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","redDebris","redProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":{floats:[180]},"minecraft:custom_data":{debrisitem:1b,reddebris:1b,a:2}}}}
 
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^0.075 ^0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","redDebris","redProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":180,"minecraft:custom_data":{debrisitem:1b,reddebris:1b,a:3}}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^0.075 ^0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","redDebris","redProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":{floats:[180]},"minecraft:custom_data":{debrisitem:1b,reddebris:1b,a:3}}}}
 
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^-0.075 ^-0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","redDebris","redProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":180,"minecraft:custom_data":{debrisitem:1b,reddebris:1b,a:4}}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^-0.075 ^-0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","redDebris","redProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":{floats:[180]},"minecraft:custom_data":{debrisitem:1b,reddebris:1b,a:4}}}}
 
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^0.075 ^-0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","redDebris","redProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":180,"minecraft:custom_data":{debrisitem:1b,reddebris:1b,a:5}}}}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^0.075 ^-0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","redDebris","redProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":{floats:[180]},"minecraft:custom_data":{debrisitem:1b,reddebris:1b,a:5}}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","blueDebris","blueProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":180,"minecraft:custom_data":{debrisitem:1b,bluedebris:1b,a:1}}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","blueDebris","blueProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":{floats:[180]},"minecraft:custom_data":{debrisitem:1b,bluedebris:1b,a:1}}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^-0.075 ^0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","blueDebris","blueProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":180,"minecraft:custom_data":{debrisitem:1b,bluedebris:1b,a:1}}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^-0.075 ^0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","blueDebris","blueProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":{floats:[180]},"minecraft:custom_data":{debrisitem:1b,bluedebris:1b,a:1}}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^0.075 ^0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","blueDebris","blueProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":180,"minecraft:custom_data":{debrisitem:1b,bluedebris:1b,a:1}}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^0.075 ^0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","blueDebris","blueProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":{floats:[180]},"minecraft:custom_data":{debrisitem:1b,bluedebris:1b,a:1}}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^-0.075 ^-0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","blueDebris","blueProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":180,"minecraft:custom_data":{debrisitem:1b,bluedebris:1b,a:1}}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^-0.075 ^-0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","blueDebris","blueProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":{floats:[180]},"minecraft:custom_data":{debrisitem:1b,bluedebris:1b,a:1}}}}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^0.075 ^-0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","blueDebris","blueProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":180,"minecraft:custom_data":{debrisitem:1b,bluedebris:1b,a:1}}}}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^0.075 ^-0.05 ^1 {Health:20,PickupDelay:2,Tags:["debrisitem","blueDebris","blueProj"],Item:{id:"minecraft:gold_ingot",count:1,components:{"minecraft:custom_model_data":{floats:[180]},"minecraft:custom_data":{debrisitem:1b,bluedebris:1b,a:1}}}}
 
 playsound entity.generic.explode master @s ~ ~ ~ 1 1.5
 

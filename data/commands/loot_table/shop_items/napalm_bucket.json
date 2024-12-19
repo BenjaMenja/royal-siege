@@ -47,7 +47,11 @@
                 "minecraft:unbreakable": {
                   "show_in_tooltip": false
                 },
-                "minecraft:custom_model_data": 190,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    190
+                  ]
+                },
                 "consumable": {
                   "consume_seconds": 1000000
                 },

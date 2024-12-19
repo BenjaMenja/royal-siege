@@ -47,7 +47,11 @@
                 "consumable": {
                   "consume_seconds": 1000000
                 },
-                "minecraft:custom_model_data": 147,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    147
+                  ]
+                },
                 "minecraft:food": {
                   "nutrition": 0,
                   "saturation": 0,

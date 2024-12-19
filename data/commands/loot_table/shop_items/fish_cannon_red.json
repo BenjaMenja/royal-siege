@@ -45,7 +45,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 46,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    46
+                  ]
+                },
                 "minecraft:unbreakable": {
                   "show_in_tooltip": true
                 },

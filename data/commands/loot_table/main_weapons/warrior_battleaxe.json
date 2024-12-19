@@ -16,7 +16,11 @@
               "function": "set_components",
               "components": {
                 "minecraft:unbreakable": {},
-                "minecraft:custom_model_data": 153,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    153
+                  ]
+                },
                 "minecraft:custom_data": {
                   "warrioraxe": 1
                 },

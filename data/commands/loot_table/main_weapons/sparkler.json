@@ -70,7 +70,11 @@
                 "minecraft:unbreakable": {
                   "show_in_tooltip": false
                 },
-                "minecraft:custom_model_data": 184,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    184
+                  ]
+                },
                 "minecraft:enchantments": {
                   "minecraft:fire_aspect": 1
                 },

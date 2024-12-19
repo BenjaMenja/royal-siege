@@ -3,7 +3,11 @@
     "icon": {
       "id": "minecraft:iron_shovel",
       "components": {
-        "minecraft:custom_model_data": 93
+        "minecraft:custom_model_data": {
+          "floats": [
+            93
+          ]
+        }
       }
     },
     "title": "Dinner Is Served",

@@ -30,7 +30,11 @@
                 "minecraft:enchantments": {
                   "minecraft:fire_aspect": 3
                 },
-                "minecraft:custom_model_data": 55
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    55
+                  ]
+                }
               }
             }
           ]

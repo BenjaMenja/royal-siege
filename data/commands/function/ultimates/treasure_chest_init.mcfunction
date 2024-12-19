@@ -1,8 +1,6 @@
-summon armor_stand ~ ~29 ~ {Invulnerable:1b,Invisible:1b,Tags:["Chest"]}
+execute if entity @s[tag=TRed] run summon armor_stand ~ ~29 ~ {Invulnerable:1b,Invisible:1b,Tags:["Chest","RedChest"]}
 
-execute if entity @s[tag=TRed] run summon falling_block ~ ~30 ~ {BlockState:{Name:"minecraft:chest",Properties:{facing:"north"}},TileEntityData:{Lock:"Golden Cutlass",LootTable:"commands:chests/treasure_chest_red"},Time:1,HurtEntities:1b,FallHurtMax:60,FallHurtAmount:2f,Tags:["FallingChest"]}
-
-execute if entity @s[tag=TBlue] run summon falling_block ~ ~30 ~ {BlockState:{Name:"minecraft:chest",Properties:{facing:"north"}},TileEntityData:{Lock:"Golden Cutlass",LootTable:"commands:chests/treasure_chest_blue"},Time:1,HurtEntities:1b,FallHurtMax:60,FallHurtAmount:2f,Tags:["FallingChest"]}
+execute if entity @s[tag=TBlue] run summon armor_stand ~ ~29 ~ {Invulnerable:1b,Invisible:1b,Tags:["Chest","BlueChest"]}
 
 execute if entity @s[tag=TRed] run tellraw @a [{"selector":"@a[team=Red,scores={Ultimate=7}]"},{"text":" uncovered a Treasure Chest!"}]
 

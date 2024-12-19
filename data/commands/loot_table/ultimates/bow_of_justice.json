@@ -35,7 +35,11 @@
               {
                 "function": "minecraft:set_components",
                 "components": {
-                  "minecraft:custom_model_data": 73,
+                  "minecraft:custom_model_data": {
+                    "floats": [
+                      73
+                    ]
+                  },
                   "minecraft:enchantments": {
                     "minecraft:power": 100,
                     "minecraft:infinity": 1

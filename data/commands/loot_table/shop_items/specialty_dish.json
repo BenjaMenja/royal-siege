@@ -27,7 +27,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 101,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    101
+                  ]
+                },
                 "consumable": {
                   "consume_seconds": 1.6,
                   "animation": "eat",

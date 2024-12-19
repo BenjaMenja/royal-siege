@@ -8,9 +8,9 @@ execute if score @s ivDripTimer matches 1.. run return -1
 
 tag @s add ivShot
 
-execute at @s[team=Red] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["ivRed","ivNeedle","redProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_model_data":199}}}
+execute at @s[team=Red] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["ivRed","ivNeedle","redProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_model_data":{floats:[199]}}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["ivBlue","ivNeedle","blueProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_model_data":199}}}
+execute at @s[team=Blue] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,NoGravity:1b,Tags:["ivBlue","ivNeedle","blueProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_model_data":{floats:[199]}}}}
 
 execute as @e[type=item,tag=ivNeedle,tag=!stop] run data modify entity @s Owner set from entity @a[tag=ivShot,limit=1] UUID
 

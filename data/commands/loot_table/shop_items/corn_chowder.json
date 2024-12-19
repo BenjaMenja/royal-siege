@@ -42,7 +42,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 99,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    99
+                  ]
+                },
                 "minecraft:enchantments": {
                   "minecraft:fire_aspect": 2
                 }

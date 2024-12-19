@@ -37,7 +37,11 @@
                 "minecraft:custom_data": {
                   "thermometer": true
                 },
-                "minecraft:custom_model_data": 198
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    198
+                  ]
+                }
               }
             },
             {

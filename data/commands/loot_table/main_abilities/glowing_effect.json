@@ -15,7 +15,11 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": 13,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    13
+                  ]
+                },
                 "minecraft:custom_data": {
                   "glowingeffect": 1
                 },

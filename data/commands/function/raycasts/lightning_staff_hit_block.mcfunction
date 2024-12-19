@@ -1,5 +1,5 @@
 scoreboard players set #hit ray.lightning 1
-summon lightning_bolt
+execute unless entity @n[type=villager,distance=..5] run summon lightning_bolt
 
 
 

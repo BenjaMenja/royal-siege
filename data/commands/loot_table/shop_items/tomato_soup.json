@@ -42,7 +42,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 96,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    96
+                  ]
+                },
                 "minecraft:enchantments": {
                   "minecraft:knockback": 2
                 }

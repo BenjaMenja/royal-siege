@@ -1,20 +1,29 @@
 {
-    "parent": "commands:root",
-    "criteria": {
-      "guarding_shield": {
-        "trigger": "minecraft:entity_hurt_player",
-        "conditions": {
-          "damage": {
-            "blocked": true,
-            "source_entity": {
-              "type": "minecraft:player"
+  "parent": "commands:root",
+  "criteria": {
+    "guarding_shield": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "offhand": {
+              "items": "minecraft:shield",
+              "predicates": {
+                "minecraft:custom_data": "{guardingshield:1b}"
+              }
             }
+          }
+        },
+        "damage": {
+          "blocked": true,
+          "source_entity": {
+            "type": "minecraft:player"
           }
         }
       }
-    },
-    "rewards": {
-      "function": "commands:other/guarding_shield"
     }
+  },
+  "rewards": {
+    "function": "commands:other/guarding_shield"
   }
-  
+}

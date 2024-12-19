@@ -18,7 +18,11 @@
                 "minecraft:unbreakable": {
                   "show_in_tooltip": false
                 },
-                "minecraft:custom_model_data": 18,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    18
+                  ]
+                },
                 "minecraft:custom_data": {
                   "HealingSpell": 1
                 },

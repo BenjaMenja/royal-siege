@@ -19,7 +19,7 @@
                 "minecraft:enchantments": {
                   "levels": {
                     "minecraft:blast_protection": 2,
-                    "minecraft:fire_protection": 3,
+                    "minecraft:fire_protection": 1,
                     "minecraft:protection": 2
                   }
                 }

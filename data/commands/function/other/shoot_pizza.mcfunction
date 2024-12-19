@@ -1,8 +1,8 @@
 function commands:other/line_of_sight
 
-execute if entity @s[tag=ovenred] if entity @a[tag=inLOS,team=Blue] at @s anchored eyes run summon minecraft:fireball ^ ^ ^ {ExplosionPower:4b,Tags:["pizzared","pizza","redProj"],Item:{id:"minecraft:pumpkin_pie",count:1,components:{"minecraft:custom_model_data":136}}}
+execute if entity @s[tag=ovenred] if entity @a[tag=inLOS,team=Blue] at @s anchored eyes run summon minecraft:fireball ^ ^ ^ {ExplosionPower:4b,Tags:["pizzared","pizza","redProj"],Item:{id:"minecraft:pumpkin_pie",count:1,components:{"minecraft:custom_model_data":{floats:[136]}}}}
 
-execute if entity @s[tag=ovenblue] if entity @a[tag=inLOS,team=Red] at @s anchored eyes run summon minecraft:fireball ^ ^ ^ {ExplosionPower:4b,Tags:["pizzablue","pizza","blueProj"],Item:{id:"minecraft:pumpkin_pie",count:1,components:{"minecraft:custom_model_data":136}}}
+execute if entity @s[tag=ovenblue] if entity @a[tag=inLOS,team=Red] at @s anchored eyes run summon minecraft:fireball ^ ^ ^ {ExplosionPower:4b,Tags:["pizzablue","pizza","blueProj"],Item:{id:"minecraft:pumpkin_pie",count:1,components:{"minecraft:custom_model_data":{floats:[136]}}}}
 
 execute if entity @s[tag=ovenred] unless entity @a[tag=inLOS,team=Blue] at @s run playsound minecraft:block.lava.extinguish master @a ~ ~ ~ 1 2
 
@@ -60,7 +60,7 @@ execute as @e[tag=pizza,limit=1,tag=!stop] store result entity @s Motion[2] doub
 
 tag @e[tag=pizza] add stop
 
-data modify entity @e[type=item_frame,limit=1,sort=nearest] Item set value {id:"minecraft:stone_bricks",count:1,components:{"minecraft:custom_model_data":135}}
+data modify entity @e[type=item_frame,limit=1,sort=nearest] Item set value {id:"minecraft:stone_bricks",count:1,components:{"minecraft:custom_model_data":{floats:[135]}}}
 
 scoreboard players reset @s ovenTimer
 

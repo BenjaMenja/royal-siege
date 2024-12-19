@@ -165,3 +165,5 @@ function commands:attributes/clears/clear_ten_hour_energy_speed
 function commands:attributes/clears/clear_inhaler_buffs
 
 function commands:attributes/clears/clear_sticky_boots_gravity
+
+function commands:attributes/clears/clear_guarding_shield_buffs

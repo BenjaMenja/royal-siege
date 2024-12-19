@@ -15,7 +15,11 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": 108,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    108
+                  ]
+                },
                 "minecraft:custom_data": {
                   "dragonclaw": 1
                 },

@@ -18,7 +18,11 @@
                 "minecraft:unbreakable": {
                   "show_in_tooltip": false
                 },
-                "minecraft:custom_model_data": 82,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    82
+                  ]
+                },
                 "minecraft:custom_data": {
                   "systemreboot": 1,
                   "ultimateitem": 1

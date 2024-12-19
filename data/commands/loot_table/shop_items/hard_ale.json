@@ -29,7 +29,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 56,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    56
+                  ]
+                },
                 "minecraft:potion_contents": {
                   "custom_color": 16756257,
                   "custom_effects": [

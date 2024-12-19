@@ -3,7 +3,11 @@
     "icon": {
       "id": "minecraft:golden_sword",
       "components": {
-        "minecraft:custom_model_data": 156
+        "minecraft:custom_model_data": {
+          "floats": [
+            156
+          ]
+        }
       }
     },
     "title": "Lockpicker",

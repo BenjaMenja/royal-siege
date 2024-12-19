@@ -34,7 +34,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 4,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    4
+                  ]
+                },
                 "minecraft:can_place_on": {
                   "blocks": "#commands:can_place_on"
                 },

@@ -38,7 +38,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 202,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    202
+                  ]
+                },
                 "max_stack_size": 1
               }
             },

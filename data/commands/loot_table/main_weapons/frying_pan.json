@@ -48,7 +48,11 @@
                 "minecraft:enchantments": {
                   "minecraft:knockback": 1
                 },
-                "minecraft:custom_model_data": 92,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    92
+                  ]
+                },
                 "minecraft:unbreakable": {
                   "show_in_tooltip": false
                 }

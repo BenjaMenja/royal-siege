@@ -410,5 +410,11 @@ scoreboard players add @a[scores={RSAttr.InhalerBuffs=0..}] RSAttr.InhalerBuffs 
 
 execute as @a[scores={RSAttr.InhalerBuffs=2..}] run function commands:attributes/clears/clear_inhaler_buffs
 
+#Guarding Shield Buffs
+
+scoreboard players add @a[scores={RSAttr.GuardingShieldBuff=0..}] RSAttr.GuardingShieldBuff 1
+
+execute as @a[scores={RSAttr.GuardingShieldBuff=60..}] run function commands:attributes/clears/clear_guarding_shield_buffs
+
 
 

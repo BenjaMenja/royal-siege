@@ -54,9 +54,9 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 run teleport @s[scores={Respawn=200..}] 19 64 -2041
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 run teleport @s[scores={Respawn=200..}] 1086 53 -61
+execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 run teleport @s[scores={Respawn=200..},predicate=!commands:in_tdm_gates] 1015 53 -61
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 1 run teleport @s[scores={Respawn=200..}] 2046 106 -33
+execute if score #gamemode settings matches 1 if score #tdmMap settings matches 1 run teleport @s[scores={Respawn=200..},predicate=!commands:in_tdm_gates] 1968 106 33
 
 title @s[scores={Respawn=200..}] times 10 40 20
 

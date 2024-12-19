@@ -16,7 +16,11 @@
               "function": "set_components",
               "components": {
                 "minecraft:unbreakable": {},
-                "minecraft:custom_model_data": 164,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    164
+                  ]
+                },
                 "minecraft:custom_data": {
                   "lumberjaxe": 1
                 },

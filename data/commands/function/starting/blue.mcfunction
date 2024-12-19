@@ -194,6 +194,10 @@ loot give @s[scores={Kit=14,BlueKit=198}] loot commands:main_weapons/space_wrenc
 
 loot give @s[scores={Kit=14,BlueKit=198}] loot commands:main_abilities/asteroid
 
+scoreboard players set @s[scores={Kit=14}] RSAttr.SafeFallDist 2147483647
+
+execute if score @s Kit matches 14 run function commands:attributes/adds/add_safe_fall_dist
+
 loot replace entity @s[scores={Kit=15,BlueKit=198}] armor.head loot commands:heads/firecracker
 
 loot replace entity @s[scores={Kit=15,BlueKit=198}] armor.chest loot commands:main_armor/firecracker_chestplate

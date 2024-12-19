@@ -42,7 +42,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 99,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    99
+                  ]
+                },
                 "minecraft:enchantments": {
                   "minecraft:fire_aspect": 2
                 }
@@ -118,7 +122,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 98,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    98
+                  ]
+                },
                 "minecraft:enchantment_glint_override": true
               }
             },
@@ -192,7 +200,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 97,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    97
+                  ]
+                },
                 "minecraft:enchantment_glint_override": true
               }
             },
@@ -266,7 +278,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 96,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    96
+                  ]
+                },
                 "minecraft:enchantments": {
                   "minecraft:knockback": 2
                 }
@@ -342,7 +358,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 100,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    100
+                  ]
+                },
                 "minecraft:enchantment_glint_override": true
               }
             },

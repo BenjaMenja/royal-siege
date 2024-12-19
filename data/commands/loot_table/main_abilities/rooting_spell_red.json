@@ -16,7 +16,11 @@
               "function": "set_components",
               "components": {
                 "minecraft:unbreakable": {},
-                "minecraft:custom_model_data": 32,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    32
+                  ]
+                },
                 "minecraft:custom_data": {
                   "rootingspellred": 1,
                   "rootingspell": 1
