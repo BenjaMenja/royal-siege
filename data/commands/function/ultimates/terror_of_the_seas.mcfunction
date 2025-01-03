@@ -1,3 +1,4 @@
 function #commands:clear_mining_fatigue_attributes
+effect clear @s mining_fatigue
 function commands:attributes/adds/add_terror_of_the_seas_atkspd
 function commands:attributes/adds/add_terror_of_the_seas_slow

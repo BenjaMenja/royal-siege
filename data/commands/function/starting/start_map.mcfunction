@@ -95,6 +95,10 @@ scoreboard players add @a[scores={Kit=16}] icePackPassive 0
 
 scoreboard objectives setdisplay sidebar Money
 
+scoreboard objectives setdisplay sidebar.team.red Money
+
+scoreboard objectives setdisplay sidebar.team.blue Money
+
 scoreboard players reset @a[team=spectator] Money
 
 execute if score #underground settings matches 1 if score #classicMap settings matches 0 run fill 4 52 -103 2 52 -105 minecraft:mossy_cobblestone replace air

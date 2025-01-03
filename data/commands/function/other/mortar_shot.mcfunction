@@ -8,8 +8,8 @@ execute if entity @a[team=Red,predicate=commands:in_mortar_red] run playsound en
 
 execute if entity @a[team=Red,predicate=commands:in_mortar_red] run particle smoke 25.5 73 -1950.5 0 0.5 -0.5 1 100
 
-execute as @a[team=Blue,predicate=commands:in_mortar_blue,limit=1,sort=random] at @s run ride @s mount @e[type=snowball,distance=..2,tag=mortarshell,limit=1]
+execute as @a[team=Blue,predicate=commands:in_mortar_blue,limit=1,sort=random] at @s run ride @s mount @n[type=snowball,distance=..2,tag=mortarshell]
 
-execute as @a[team=Red,predicate=commands:in_mortar_red,limit=1,sort=random] at @s run ride @s mount @e[type=snowball,distance=..2,tag=mortarshell,limit=1]
+execute as @a[team=Red,predicate=commands:in_mortar_red,limit=1,sort=random] at @s run ride @s mount @n[type=snowball,distance=..2,tag=mortarshell]
 
 data remove entity @s interaction

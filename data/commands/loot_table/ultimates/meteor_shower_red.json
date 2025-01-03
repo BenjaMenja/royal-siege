@@ -35,7 +35,8 @@
                 "minecraft:entity_data": {
                   "id": "minecraft:bat",
                   "Tags": [
-                    "meteorshower"
+                    "meteorshower",
+                    "mShowerRed"
                   ]
                 }
               }

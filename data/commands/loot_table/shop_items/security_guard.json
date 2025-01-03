@@ -28,6 +28,9 @@
                 },
                 {
                   "text": "Spawns a security guard that chases the enemy with the highest amount of money."
+                },
+                {
+                  "text": "You can have a max of 2 guards in your inventory and on the field at once."
                 }
               ],
               "mode": "insert"

@@ -1,3 +1,5 @@
+execute if entity @s[predicate=commands:holding/invalid_iv_drip_config] run return -1
+
 execute if entity @s[team=Red] if entity @e[type=item,tag=ivRed] as @p[team=Red,tag=ivAttached] at @s run function commands:other/iv_detach
 
 execute if entity @s[team=Blue] if entity @e[type=item,tag=ivBlue] as @p[team=Blue,tag=ivAttached] at @s run function commands:other/iv_detach

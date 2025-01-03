@@ -2,7 +2,7 @@ execute as @e[type=item] store result entity @s Air short 1 run time query gamet
 
 scoreboard players set @e[type=item] ItemKill 1
 
-scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:ender_eye"}}] ItemKill 2
+scoreboard players set @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{corruptcredit:1b}}}}] ItemKill 2
 
 scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:gold_ingot"}}] ItemKill 2
 

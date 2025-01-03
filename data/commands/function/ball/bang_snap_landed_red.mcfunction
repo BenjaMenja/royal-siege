@@ -4,6 +4,6 @@ playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ 1 2
 
 execute as @a[team=Blue,distance=..4] at @s run damage @s 5 commands:bang_snap
 
-execute at @a[team=Blue,distance=..4] run summon small_fireball ~ ~2.1 ~ {Fire:20s,Motion:[0.0d,-1.0d,0.0d],Owner:[I;1,1,1,1]}
+execute at @a[team=Blue,distance=..4] run summon small_fireball ~ ~2.1 ~ {Fire:20s,Motion:[0.0d,-1.0d,0.0d],Tags:["smf"]}
 
 kill @s

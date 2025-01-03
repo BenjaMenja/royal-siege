@@ -1,18 +1,18 @@
 {
-    "criteria": {
-      "justice_death": {
-        "trigger": "minecraft:player_killed_entity",
-        "conditions": {
-          "entity": {
-            "type": "minecraft:player"
-          },
-          "killing_blow": {
-            "direct_entity": {
-              "type": "minecraft:arrow",
-              "nbt": "{damage:52.5d}"
-            }
+  "criteria": {
+    "justice_death": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player"
+        },
+        "killing_blow": {
+          "direct_entity": {
+            "type": "minecraft:arrow",
+            "nbt": "{weapon:{components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":100}}}}}"
           }
         }
       }
     }
   }
+}

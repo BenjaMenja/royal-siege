@@ -1,10 +1,14 @@
 execute if entity @s[tag=redProj] as @a[distance=..15,team=Blue] run damage @s 8 commands:chrysanthemum_shell
 
+execute if entity @s[tag=redProj] as @a[distance=..15,team=Blue] run function commands:attributes/adds/add_chrysanthemum_shell_armor_shred
+
 execute if entity @s[tag=blueProj] as @a[distance=..15,team=Red] run damage @s 8 commands:chrysanthemum_shell
 
-execute if entity @s[tag=redProj] as @a[distance=..15,team=Blue] at @s run summon small_fireball ~ ~2.1 ~ {Fire:20s,Motion:[0.0d,-1.0d,0.0d]}
+execute if entity @s[tag=blueProj] as @a[distance=..15,team=Red] run function commands:attributes/adds/add_chrysanthemum_shell_armor_shred
 
-execute if entity @s[tag=blueProj] as @a[distance=..15,team=Red] at @s run summon small_fireball ~ ~2.1 ~ {Fire:20s,Motion:[0.0d,-1.0d,0.0d]}
+execute if entity @s[tag=redProj] as @a[distance=..15,team=Blue] at @s run summon small_fireball ~ ~2.1 ~ {Fire:20s,Motion:[0.0d,-1.0d,0.0d],Tags:["smf"]}
+
+execute if entity @s[tag=blueProj] as @a[distance=..15,team=Red] at @s run summon small_fireball ~ ~2.1 ~ {Fire:20s,Motion:[0.0d,-1.0d,0.0d],Tags:["smf"]}
 
 summon minecraft:firework_rocket ~ ~ ~ {LifeTime:1,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"large_ball",colors:[I;16711680]}]}}}}
 

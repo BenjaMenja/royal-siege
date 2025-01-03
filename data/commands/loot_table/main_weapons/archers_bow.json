@@ -26,7 +26,6 @@
                 },
                 "minecraft:enchantments": {
                   "levels": {
-                    "minecraft:sharpness": 4,
                     "minecraft:power": 3,
                     "minecraft:punch": 1,
                     "minecraft:infinity": 1

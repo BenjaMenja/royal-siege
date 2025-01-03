@@ -37,3 +37,9 @@ tag @s remove inCurrentMatch
 tag @s remove notAlive
 
 tag @s remove gamblerMoneyStolen
+
+tag @s remove cshelldown
+
+tag @s remove slamming
+
+tag @s remove inCastleSpawnRoom

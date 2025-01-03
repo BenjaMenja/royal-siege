@@ -27,10 +27,10 @@
                   "text": " "
                 },
                 {
-                  "text": "Inverts the enemy team's gravity for a short time."
+                  "text": "Creates an inverted gravity field around the user that lifts the user and enemies with 15 blocks in the air."
                 },
                 {
-                  "text": "Consumed upon use, but can only be used every 15 seconds."
+                  "text": "Lasts 6s and has a cooldown of 30s."
                 }
               ],
               "mode": "insert"

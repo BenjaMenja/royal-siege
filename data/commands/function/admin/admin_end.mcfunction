@@ -1,5 +1,3 @@
-#Adding Stuff to Class Info
-
 execute as @a run function commands:other/reset_scores
 
 #Other end of game stuff
@@ -64,18 +62,6 @@ spawnpoint @a -1215 54 1260
 
 gamemode adventure @a
 
-tag @a remove blessed
-
-tag @a remove resurrecting
-
-tag @a remove custom_death
-
-tag @a remove slamming
-
-tag @a remove spectator
-
-tag @a remove cshelldown
-
 advancement revoke @a only commands:pickup_fake_money
 
 scoreboard players set #matchID matchID 0
@@ -105,6 +91,8 @@ advancement revoke @a[advancements={commands:character_challenges/soup_of_the_we
 function commands:other/remove_bossbar_display
 
 execute as @a run function commands:attributes/clear_all_attribute_modifiers
+
+function commands:starting/end_score_tag_reset
 
 weather clear 1000000
 

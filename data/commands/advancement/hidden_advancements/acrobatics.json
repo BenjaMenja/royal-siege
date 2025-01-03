@@ -4,7 +4,7 @@
       "id": "minecraft:chain"
     },
     "title": "Acrobatics",
-    "description": "Kill a player while standing on the castle chains.",
+    "description": "Kill a player while standing on the castle chains on Forest Glen.",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,

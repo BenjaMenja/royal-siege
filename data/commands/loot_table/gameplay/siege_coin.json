@@ -19,7 +19,7 @@
                 "function": "minecraft:set_lore",
                 "lore": [
                   {
-                    "text": "Throw into the gold pit at your castle to convert into Siege Bucks."
+                    "text": "Throw into the gold pit at your castle or the center beacon to convert into Siege Bucks."
                   }
                 ],
                 "mode": "insert"

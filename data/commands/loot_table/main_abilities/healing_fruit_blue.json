@@ -22,6 +22,9 @@
                 },
                 {
                   "text": "The maximum number fruits on your team is equal to the number of players on your team."
+                },
+                {
+                  "text": "The fruit takes 1s to consume."
                 }
               ],
               "mode": "append"

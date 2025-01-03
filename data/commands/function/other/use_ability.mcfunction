@@ -6,9 +6,15 @@ execute if entity @s[tag=rebooting] run return -1
 
 #Internal Cooldown
 
-execute if score @s abilityCD matches ..3 run return -1
+execute if score @s abilityCD matches ..3 unless score @s Kit matches 10 run return -1
 
-execute if score @s abilityCD matches 4.. run scoreboard players set @s abilityCD 0
+execute if score @s abilityCD matches 4.. unless score @s Kit matches 10 run scoreboard players set @s abilityCD 0
+
+#Internal Cooldown (Robot cause switching is messed up)
+
+execute if score @s abilityCD matches ..1 if score @s Kit matches 10 run return -1
+
+execute if score @s abilityCD matches 2.. if score @s Kit matches 10 run scoreboard players set @s abilityCD 0
 
 #Seismic Slam
 
@@ -392,4 +398,8 @@ execute at @s[predicate=commands:holding/ten_hour_energy] anchored eyes position
 
 #Menu
 
-execute if entity @s[predicate=commands:holding/menu] run tellraw @s [{"color":"green","text":"+"},{"color":"yellow","text":"===================================================="},{"text":"\n"},{"color":"#5AF6F9","text":"Welcome to the Menu!"},{"text":"\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 64"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Opens up your character's shop.","color":"green"}]},"text":"[Shops]"},{"text":"                       "},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 65"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Accesses your team's bank.\nYou can view your team's collective amount of Siege Bucks and Corrupt Credits\nas well as deposit and withdraw.","color":"green"}]},"text":"[Bank]"},{"text":"\n\n\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 191"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Warps you to your castle's respawn point.","color":"green"},{"text":"\nThis has a 3 second delay, and can be interrupted by taking damage.","color":"green"}]},"text":"[Warp to Castle]"},{"text":"\n\n"},{"color":"green","text":"+"},{"color":"yellow","text":"====================================================\n"}]
+execute if entity @s[predicate=!commands:is_sneaking,predicate=commands:holding/menu] run tellraw @s [{"color":"green","text":"+"},{"color":"yellow","text":"===================================================="},{"text":"\n"},{"color":"#5AF6F9","text":"Welcome to the Menu!"},{"text":"\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 64"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Opens up your character's shop.","color":"green"}]},"text":"[Shops]"},{"text":"                       "},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 65"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Accesses your team's bank.\nYou can view your team's collective amount of Siege Bucks and Corrupt Credits\nas well as deposit and withdraw.","color":"green"}]},"text":"[Bank]"},{"text":"\n\n\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 191"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Warps you to your castle's respawn point.","color":"green"},{"text":"\nThis has a 3 second delay, and can be interrupted by taking damage.","color":"green"}]},"text":"[Warp to Castle]"},{"text":"\n\n"},{"color":"green","text":"+"},{"color":"yellow","text":"====================================================\n"}]
+
+#Menu (Crouching opens shop)
+
+execute if entity @s[predicate=commands:is_sneaking,predicate=commands:holding/menu] run scoreboard players set @s textClick 64

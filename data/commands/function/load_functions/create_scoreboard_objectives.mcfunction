@@ -12,6 +12,10 @@ team add spectator
 
 team add parkour
 
+#Gamerules
+
+gamerule doImmediateRespawn true
+
 #Old Scoreboards that were made before this file existed
 scoreboard objectives add Kit dummy
 scoreboard objectives add textClick dummy
@@ -50,6 +54,7 @@ scoreboard objectives add ray.LOS dummy
 scoreboard objectives add activeHotbar dummy
 scoreboard objectives add Respawn dummy
 scoreboard objectives add Health health
+scoreboard objectives modify Health displayname {"text":""}
 scoreboard objectives add dashcharge dummy
 scoreboard objectives add Mimic dummy
 scoreboard objectives add Start dummy
@@ -468,6 +473,13 @@ scoreboard objectives add ray.dRush dummy
 scoreboard objectives add chainHookUUID dummy
 scoreboard objectives add RSAttr.StickyBootsGravity dummy
 scoreboard objectives add RSAttr.GuardingShieldBuff dummy
+scoreboard objectives add RSAttr.CShellArmorShred dummy
+scoreboard objectives add readyStatus dummy
+scoreboard objectives modify readyStatus displayname {"text":"Ready Status","color":"aqua"}
+scoreboard objectives add gravityDur dummy
+scoreboard objectives add deathScreen dummy
+scoreboard objectives add nurTies dummy
+scoreboard objectives add nurTiesTDM dummy
 function custom_heal:load
 
 scoreboard objectives remove dmDelay

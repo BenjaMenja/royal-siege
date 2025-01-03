@@ -14,10 +14,8 @@ playsound royalsiege:abilities.chain_hook_hit master @s[scores={chainHook=1}] ~ 
 
 execute as @a[limit=1,scores={Kit=7}] at @s if entity @e[type=wither_skeleton,tag=dummy,tag=hooked] run teleport @s ~ ~ ~ facing entity @e[limit=1,type=wither_skeleton,tag=dummy,tag=hooked,sort=nearest]
 
-effect give @s slowness 1 6 true
+effect give @s slowness 2 6 true
 
 execute at @s[team=Red] as @a[team=Blue] if score @s UUID = @p[tag=hooked] chainHookUUID run effect give @s slowness 1 6 true
 
 effect give @s weakness 1 100 true
-
-execute at @s[team=Red] as @a[team=Blue] if score @s UUID = @p[tag=hooked] chainHookUUID run effect give @s weakness 1 100 true

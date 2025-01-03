@@ -123,3 +123,5 @@ advancement revoke @s only commands:custom_deaths/thermometer_death
 advancement revoke @s only commands:custom_deaths/trauma_shears_death
 
 tag @s remove tChestDeath
+
+tag @s remove custom_death

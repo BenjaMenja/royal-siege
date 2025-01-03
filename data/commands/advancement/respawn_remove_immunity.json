@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "e": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "nbt": "{Tags:[\"inCastleSpawnRoom\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "commands:other/respawn_remove_immunity"
+  }
+}

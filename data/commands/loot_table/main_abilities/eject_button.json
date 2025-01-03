@@ -56,13 +56,10 @@
                   "text": " "
                 },
                 {
-                  "text": "Ejects you in the direction you're looking in."
+                  "text": "Ejects you in the direction you are looking in, knocking back anyone near you."
                 },
                 {
-                  "text": "You also receive brief damage resistance when using it."
-                },
-                {
-                  "text": "You are required to jump before using it."
+                  "text": "Can be used every 25s."
                 }
               ],
               "mode": "append"

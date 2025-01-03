@@ -16,7 +16,9 @@ execute as @a unless score @s textClick = @s textClick run scoreboard players en
 
 execute if entity @a[limit=1,tag=teamSwitch,team=Red] if entity @a[limit=1,tag=teamSwitch,team=Blue] run function commands:spawn/team_switch
 
-#Starting the game
+#Starting the game (Including ready system)
+
+execute if entity @a[predicate=commands:in_character_select_area] run function commands:starting/ready_status
 
 execute if score #characterselect spawnStuff matches 1 as @a[team=!spectator,tag=readyUp] run scoreboard players add #readyplayers spawnStuff 1
 
@@ -57,6 +59,12 @@ execute if score #charSelectSong spawnStuff matches 1401 if score #charSelectInt
 execute as @a[predicate=commands:in_practice_range] run scoreboard players operation @s Ultimate = @s ultCheck
 
 execute as @a[predicate=commands:in_practice_range] run tag @s remove notAlive
+
+execute unless entity @a[predicate=commands:in_any_battlefield] run scoreboard objectives modify Health numberformat blank
+
+execute unless entity @a[predicate=commands:in_any_battlefield] run scoreboard objectives setdisplay sidebar
+
+execute if entity @a[predicate=commands:in_any_battlefield] run scoreboard objectives modify Health numberformat
 
 execute as @a[tag=practiceRangePVP] at @s run particle dust{color:[1.0,0.0,0.0],scale:1} ~ ~2 ~ 0 0 0 0 1 force @a[tag=practiceRangePVP]
 

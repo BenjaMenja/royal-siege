@@ -8,7 +8,7 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 run tag @e[type=item,x=58,y=52,z=-1030,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 run tag @e[type=item,x=19,y=56,z=-1971,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
+execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 run tag @e[type=item,x=19,y=62,z=-1971,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
 
 execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 run tag @e[type=item,x=1051,y=53,z=-76,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
 
@@ -176,6 +176,10 @@ execute as @a[scores={Kit=14},tag=astrogravity,nbt={OnGround:1b}] run function c
 
 effect give @a[scores={Kit=15}] fire_resistance 1 0 true
 
+effect give @a[tag=inCastleSpawnRoom] resistance 1 4 true
+
+tag @a[predicate=!commands:in_any_castle_spawn_room] remove inCastleSpawnRoom
+
 #King Bossbar
 
 execute store result bossbar minecraft:redking value run data get entity @e[type=wither_skeleton,team=Red,tag=King,limit=1] Health
@@ -185,6 +189,18 @@ execute store result bossbar minecraft:blueking value run data get entity @e[typ
 #Gravity Canceler
 
 scoreboard players remove @a[scores={gravityTimer=1..},predicate=commands:inventory/gravity_canceler,predicate=commands:in_any_battlefield,tag=!notAlive] gravityTimer 1
+
+scoreboard players add @a[tag=gravCancel] gravityDur 1
+
+execute as @a[tag=gravCancel,team=Red] at @s run effect give @a[team=Blue,distance=..15] levitation 1 1 true
+
+execute as @a[tag=gravCancel,team=Blue] at @s run effect give @a[team=Red,distance=..15] levitation 1 1 true
+
+effect give @a[tag=gravCancel] levitation 1 1 true
+
+tag @a[scores={gravityDur=120..}] remove gravCancel
+
+scoreboard players reset @a[scores={gravityDur=120..}] gravityDur
 
 #Cavalry Slowing
 
@@ -278,7 +294,7 @@ execute as @e[type=item,tag=convertToMoney] at @s run function commands:other/co
 
 #Convert Corrupt Credits to Bank
 
-tag @e[type=item,predicate=commands:in_gold_pit,nbt={Item:{components:{"minecraft:custom_data":{corruptcredit:1b}}}},limit=1] add convertToBank
+tag @e[type=item,predicate=commands:in_gold_pit,nbt={Item:{components:{"minecraft:custom_data":{corruptcredit:1b}}}},tag=!ccspawn,limit=1] add convertToBank
 
 execute as @e[type=item,tag=convertToBank] at @s if entity @p[team=Red,distance=..4] run function commands:other/convert_to_bank_red
 
@@ -356,7 +372,7 @@ kill @e[type=item,tag=fakeMoney,scores={Timer=2400..}]
 
 execute as @e[type=bat,tag=powderKeg] at @s run function commands:other/place_powder_keg
 
-execute as @e[type=item_frame,tag=powderKeg] at @s unless entity @e[type=piglin,limit=1,sort=nearest,distance=..1.5,tag=powderKeg] run function commands:other/destroy_powder_keg
+execute as @e[type=item_frame,tag=powderKeg] at @s unless entity @e[type=piglin,limit=1,sort=nearest,distance=..0.75,tag=powderKeg] run function commands:other/destroy_powder_keg
 
 execute as @e[type=piglin,tag=powderKeg,nbt=!{Fire:-1s}] at @s run function commands:other/destroy_powder_keg
 
@@ -424,9 +440,9 @@ execute as @a[scores={Kit=8,blossomTimer=1..},predicate=commands:in_any_battlefi
 
 execute as @a[scores={Kit=8,rootingTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s rootingTimer 1
 
-execute at @a[team=Red,scores={hFruitTimer=..0}] run summon minecraft:item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",count:1,components:{"minecraft:custom_name":'{"italic":false,"text":"Healing Fruit"}',"minecraft:lore":['{"text":"Can be thrown to allies from any distance."}','{"text":"The maximum number fruits on your team is equal to the number of players on your team."}'],"minecraft:custom_model_data":{floats:[30]},"minecraft:custom_data":{redhealingfruit:1b,healingfruit:1b}}}}
+execute at @a[team=Red,scores={hFruitTimer=..0}] run summon minecraft:item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",count:1,components:{"minecraft:custom_name":'{"italic":false,"text":"Healing Fruit"}',"minecraft:lore":['"Can be thrown to allies from any distance."','"The maximum number fruits on your team is equal to the number of players on your team."','"The fruit takes 1s to consume."'],"minecraft:custom_model_data":{floats:[30]},"minecraft:custom_data":{redhealingfruit:1b,healingfruit:1b},"minecraft:consumable":{consume_seconds:1,on_consume_effects:[{type:"minecraft:apply_effects",effects:[{id:"minecraft:regeneration",amplifier:1,duration:100,show_particles:0b,show_icon:1b},{id:"minecraft:absorption",amplifier:0,duration:2400,show_particles:0b,show_icon:1b}]}]},"minecraft:food":{nutrition:4,saturation:9.6,can_always_eat:true}}}}
 
-execute at @a[team=Blue,scores={hFruitTimer=..0}] run summon minecraft:item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",count:1,components:{"minecraft:custom_name":'{"italic":false,"text":"Healing Fruit"}',"minecraft:lore":['{"text":"Can be thrown to allies from any distance."}','{"text":"The maximum number fruits on your team is equal to the number of players on your team."}'],"minecraft:custom_model_data":{floats:[30]},"minecraft:custom_data":{bluehealingfruit:1b,healingfruit:1b}}}}
+execute at @a[team=Blue,scores={hFruitTimer=..0}] run summon minecraft:item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",count:1,components:{"minecraft:custom_name":'{"italic":false,"text":"Healing Fruit"}',"minecraft:lore":['{"text":"Can be thrown to allies from any distance."}','{"text":"The maximum number fruits on your team is equal to the number of players on your team."}','"The fruit takes 1s to consume."'],"minecraft:custom_model_data":{floats:[30]},"minecraft:custom_data":{bluehealingfruit:1b,healingfruit:1b},"minecraft:consumable":{consume_seconds:1,on_consume_effects:[{type:"minecraft:apply_effects",effects:[{id:"minecraft:regeneration",amplifier:1,duration:100,show_particles:0b,show_icon:1b},{id:"minecraft:absorption",amplifier:0,duration:2400,show_particles:0b,show_icon:1b}]}]},"minecraft:food":{nutrition:4,saturation:9.6,can_always_eat:true}}}}
 
 scoreboard players set @a[scores={hFruitTimer=..0}] hFruitTimer 400
 
@@ -446,15 +462,15 @@ scoreboard players add @e[type=item,nbt={Item:{components:{"minecraft:custom_dat
 
 scoreboard players add @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] FruitRemove 1
 
-execute as @e[type=item,tag=spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] run data modify entity @s Owner set from entity @p[team=Red,scores={Kit=8}]
+execute as @e[type=item,tag=spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s run data modify entity @s Owner set from entity @p[team=Red,scores={Kit=8}]
 
-execute as @e[type=item,tag=spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] run data modify entity @s Owner set from entity @p[team=Blue,scores={Kit=8}]
+execute as @e[type=item,tag=spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] at @s run data modify entity @s Owner set from entity @p[team=Blue,scores={Kit=8}]
 
 execute as @e[type=item,scores={FruitRemove=1}] run data merge entity @s {PickupDelay:1}
 
-execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s if entity @p[scores={Kit=8},dx=0] as @a[team=Red,distance=..100] unless score @s Kit matches 8 run tag @s add closest
+execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s if entity @p[scores={Kit=8},dx=0] as @a[team=Red,distance=..100,predicate=commands:in_any_battlefield] unless score @s Kit matches 8 run tag @s add closest
 
-execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] at @s if entity @p[scores={Kit=8},dx=0] as @a[team=Blue,distance=..100] unless score @s Kit matches 8 run tag @s add closest
+execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] at @s if entity @p[scores={Kit=8},dx=0] as @a[team=Blue,distance=..100,predicate=commands:in_any_battlefield] unless score @s Kit matches 8 run tag @s add closest
 
 execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s if entity @p[scores={Kit=8},dx=0] run tellraw @a[team=Red,scores={Kit=8}] [{"text":"You gave a healing fruit to: ","color":"green"},{"selector":"@p[team=Red,tag=closest,distance=..100]"}]
 
@@ -463,6 +479,8 @@ execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{component
 execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s run tp @s @p[team=Red,tag=closest]
 
 execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] at @s run tp @s @p[team=Blue,tag=closest]
+
+execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..}] unless data entity @s Thrower run kill @s
 
 tag @a[tag=closest] remove closest
 
@@ -609,6 +627,8 @@ scoreboard players set @a[scores={witherTimer=..0}] witherTimer 900
 #Eject Button
 
 execute as @a[scores={Kit=6,ejectTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s ejectTimer 1
+
+execute as @a[scores={Kit=6},predicate=commands:in_any_battlefield,tag=!notAlive] at @s run ride @s mount @n[type=snowball,distance=..1.5,tag=ejectitem]
 
 #Ninja Dash
 
@@ -853,8 +873,6 @@ scoreboard players set @a[scores={Decay=120..}] Decay 0
 #Custom Death messages
 
 execute as @a[scores={Message=1..}] at @s if entity @e[type=armor_stand,tag=Chest,distance=..2] run tag @s add tChestDeath 
-
-execute as @a[scores={Message=1..},limit=1] run function commands:custom_deaths/custom_deaths
 
 advancement revoke @a[advancements={commands:player_kill=true}] only commands:player_kill
 
@@ -1102,6 +1120,10 @@ execute if score #displayDeaths totalDeaths matches 700 run scoreboard objective
 
 execute if score #displayDeaths totalDeaths matches 700 run scoreboard players set #displayDeaths totalDeaths 0
 
+#Display class name and health
+
+execute as @a[predicate=commands:in_any_battlefield] run function commands:other/health_display_prep
+
 #Ender Pearl checks for advancement
 
 execute as @a[scores={Kit=2}] if entity @e[type=ender_pearl,tag=!found] run function commands:other/link_projectile
@@ -1208,7 +1230,7 @@ execute if score #redhatchlings multiItems matches 11.. run function commands:ot
 
 execute if score #bluehatchlings multiItems matches 11.. run function commands:other/remove_multi_items
 
-execute as @a[predicate=commands:in_any_battlefield] run scoreboard players add #playersalive multiItems 1
+execute as @a[predicate=commands:in_any_battlefield,team=!] run scoreboard players add #playersalive multiItems 1
 
 execute if score #playersalive multiItems matches 1 run advancement grant @p[predicate=commands:in_any_battlefield,predicate=!commands:in_practice_range] only commands:hidden_advancements/last_man_standing
 
@@ -1660,7 +1682,9 @@ execute as @e[type=armor_stand,tag=cCannonMarker,scores={cCannonTimer=60..}] at 
 
 execute as @a[scores={Ultimate=23},tag=!notAlive,predicate=!commands:inventory/meteor_shower] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s mShowerTimer 1
 
-loot give @a[scores={mShowerTimer=3600..}] loot commands:ultimates/meteor_shower
+loot give @a[scores={mShowerTimer=3600..},team=Red] loot commands:ultimates/meteor_shower_red
+
+loot give @a[scores={mShowerTimer=3600..},team=Blue] loot commands:ultimates/meteor_shower_blue
 
 scoreboard players reset @a[scores={mShowerTimer=3600..}] mShowerTimer
 
@@ -1675,6 +1699,10 @@ execute at @e[type=area_effect_cloud,tag=mShowerPoint,scores={mShowerTimer=20..}
 execute as @e[type=area_effect_cloud,tag=mShowerAbove,scores={mShowerTimer=10..}] at @s run function commands:ultimates/meteor_shower_drop
 
 execute as @e[type=area_effect_cloud,tag=mShowerPoint,scores={mShowerTimer=200..}] at @s run function commands:ultimates/meteor_shower_end
+
+execute as @e[type=fireball,tag=meteorRed] at @s run data modify entity @s Owner set from entity @p[team=Red] UUID
+
+execute as @e[type=fireball,tag=meteorBlue] at @s run data modify entity @s Owner set from entity @p[team=Blue] UUID
 
 #Evolution (Dragon Alt. Ultimate)
 
@@ -2224,6 +2252,12 @@ execute as @e[type=item,tag=sparklerblue] at @s as @a[team=Red,distance=..3] at 
 
 tag @a[tag=sparkled] remove sparkled
 
+#Small Fireball Delete
+
+scoreboard players add @e[type=small_fireball,tag=smf] Timer 1
+
+kill @e[type=small_fireball,scores={Timer=2..}]
+
 #Blazing Speed
 
 scoreboard players remove @a[scores={Kit=15,blazingSpeedTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] blazingSpeedTimer 1
@@ -2509,6 +2543,10 @@ scoreboard players reset @a[scores={useFishingRod=1..}] useFishingRod
 scoreboard players reset @a[tag=!hasSmartDrone] droneDamage
 
 execute as @a[scores={died=1..}] at @s run function commands:command_chunk/item_clear_filter
+
+execute as @e[type=item,scores={ItemKill=1}] unless data entity @s Thrower run scoreboard players add @s Timer 1
+
+kill @e[type=item,scores={ItemKill=1,Timer=2..}]
 
 execute as @a[scores={died=1..}] at @s run tag @e[type=item,distance=..5,scores={ItemKill=1..}] add delete
 

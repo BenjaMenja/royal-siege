@@ -54,4 +54,4 @@ scoreboard players set @s healSpell 300
 
 tag @s remove wrenched
 
-tag @s add healingspelluser
+tag @s remove healingspelluser

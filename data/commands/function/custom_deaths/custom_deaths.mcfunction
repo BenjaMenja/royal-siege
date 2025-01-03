@@ -1,3 +1,7 @@
+#Check if the player is actually dead
+
+advancement revoke @s only commands:custom_deaths/any_death
+
 #Dropping Money
 
 execute unless entity @a[team=Blue,predicate=commands:inventory/insurance] at @s[team=Blue] run function commands:entities/siege_coin
@@ -22,7 +26,7 @@ execute at @s[team=Red] if entity @a[team=Red,scores={Kit=4,Ultimate=14}] run su
 
 execute at @s[team=Blue] if entity @a[team=Blue,scores={Kit=4,Ultimate=14}] run summon minecraft:marker ~ ~ ~ {Tags:["resSoulBlue","resSoul"]}
 
-execute at @s run scoreboard players operation @e[type=marker,tag=resSoul,sort=nearest,limit=1] UUID = @s UUID
+execute at @s run scoreboard players operation @n[type=marker,tag=resSoul] UUID = @s UUID
 
 #Kill Wizard Minions
 
@@ -62,6 +66,14 @@ execute if entity @s[team=Blue,scores={Kit=4}] run scoreboard players set #blueH
 
 tag @s[team=Blue,tag=blessed] remove blessed
 
+#Practice range players get their items back
+
+scoreboard players set @s[team=Red,predicate=commands:in_practice_range] RedKit 196
+
+scoreboard players set @s[team=Blue,predicate=commands:in_practice_range] BlueKit 196
+
+tag @s[team=Blue,predicate=commands:in_practice_range] add practiceRangeRespawn
+
 #Attribute Removal
 
 function commands:attributes/clear_all_attribute_modifiers
@@ -73,12 +85,6 @@ tag @s[tag=ultimateInv] add hadUltimate
 tag @s add notAlive
 
 #Other Tag removals
-
-tag @s remove custom_death
-
-tag @s remove hasDebrisCannon
-
-tag @s remove hasGravityCanceler
 
 tag @s remove cloaked
 
@@ -97,5 +103,3 @@ tag @s remove UHC
 #Reset scores and run function again
 
 scoreboard players set @s Message 0
-
-execute as @a[scores={Message=1..},limit=1] run function commands:custom_deaths/custom_deaths

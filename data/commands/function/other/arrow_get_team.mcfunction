@@ -8,7 +8,7 @@ execute as @a[team=Blue] if score @s UUID = @n[type=arrow,tag=arrowTeam] UUID ru
 
 execute if score @a[scores={Kit=5,useBow=1..},limit=1,tag=wrenched] UUID = @s UUID run data merge entity @s {PierceLevel:99b}
 
-tag @s[nbt={damage:52.5d}] add ultimateProj
+tag @s[nbt={weapon:{components:{"minecraft:enchantments":{levels:{"minecraft:power":100}}}}}] add ultimateProj
 
 scoreboard players reset #uuid1 UUID
 

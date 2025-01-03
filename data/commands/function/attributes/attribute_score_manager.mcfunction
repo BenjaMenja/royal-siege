@@ -318,6 +318,10 @@ scoreboard players remove @a[scores={RSAttr.CShellDownGravity=0..}] RSAttr.CShel
 
 execute as @a[scores={RSAttr.CShellDownGravity=..0}] run function commands:attributes/clears/clear_cshell_down_gravity
 
+scoreboard players add @a[scores={RSAttr.CShellArmorShred=0..}] RSAttr.CShellArmorShred 1
+
+execute as @a[scores={RSAttr.CShellArmorShred=60..}] run function commands:attributes/clears/clear_chrysanthemum_shell_armor_shred
+
 #Seismic Slam
 
 scoreboard players add @a[scores={RSAttr.SeismicSlamUpGravity=0..}] RSAttr.SeismicSlamUpGravity 1

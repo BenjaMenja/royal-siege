@@ -1,0 +1,71 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "minecraft:all_of",
+      "terms": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "offhand": {
+                "components": {
+                  "minecraft:consumable": {
+                    "consume_seconds": 1000000
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "predicates": {
+                  "minecraft:custom_data": "{ivdrip:1b}"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "condition": "minecraft:all_of",
+      "terms": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "components": {
+                  "minecraft:consumable": {
+                    "consume_seconds": 1000000
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "offhand": {
+                "predicates": {
+                  "minecraft:custom_data": "{ivdrip:1b}"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

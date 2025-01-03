@@ -30,10 +30,10 @@
                     "text": "Launch yourself into the air, receiving slow falling at the peak."
                   },
                   {
-                    "text": "Right-clicking again will fire a slow but powerful firework that explodes on contact."
+                    "text": "Right-clicking again will fire a firework that explodes on contact."
                   },
                   {
-                    "text": "The explosion damages and burns enemies in a large radius."
+                    "text": "The explosion deals 8 damage, inflicts 50% armor reduction, and burns enemies within 15 blocks."
                   },
                   {
                     "text": "Your movement speed increases based on the number of enemy players hit."

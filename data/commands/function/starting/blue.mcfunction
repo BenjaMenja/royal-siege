@@ -166,9 +166,9 @@ loot replace entity @s[scores={Kit=12,BlueKit=198}] armor.head loot commands:hea
 
 loot give @s[scores={Kit=12,BlueKit=198}] loot commands:main_weapons/dragon_claw
 
-loot give @s[scores={Kit=12,BlueKit=198}] loot commands:main_abilities/dragon_rush
-
 loot give @s[scores={Kit=12,BlueKit=198}] loot commands:main_abilities/dragon_rage
+
+loot give @s[scores={Kit=12,BlueKit=198}] loot commands:main_abilities/dragon_rush
 
 loot replace entity @s[scores={Kit=13,BlueKit=198}] armor.head loot commands:heads/gambler
 

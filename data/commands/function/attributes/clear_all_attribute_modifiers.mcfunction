@@ -122,6 +122,8 @@ function commands:attributes/clears/clear_pyromania_atkdmg
 
 function commands:attributes/clears/clear_chrysanthemum_shell_speed
 
+function commands:attributes/clears/clear_chrysanthemum_shell_armor_shred
+
 function commands:attributes/clears/clear_astronaut_passive_gravity
 
 function commands:attributes/clears/clear_seismic_slam_up_gravity

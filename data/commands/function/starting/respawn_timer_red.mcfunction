@@ -1,6 +1,18 @@
-scoreboard players add @s Respawn 1
+effect give @s[tag=!respawning,predicate=commands:in_any_respawn_room] blindness 1 0 true
 
-function commands:starting/red
+scoreboard players add @s[tag=!respawning,predicate=commands:in_any_respawn_room] deathScreen 1
+
+title @s[scores={deathScreen=1},predicate=commands:in_any_respawn_room] title {"text":"You Died!","color":"red"}
+
+tag @s[scores={deathScreen=40..},predicate=commands:in_any_respawn_room] add respawning
+
+tag @s[predicate=!commands:in_any_respawn_room] add respawning
+
+scoreboard players reset @s[tag=respawning] deathScreen
+
+scoreboard players add @s[tag=respawning] Respawn 1
+
+execute if entity @s[tag=respawning] run function commands:starting/red
 
 tag @s remove rodeHorse
 
@@ -14,7 +26,9 @@ execute if score #gamemode settings matches 0 run title @s[scores={Respawn=1}] t
 
 execute if score #gamemode settings matches 1 run title @s[scores={Respawn=91}] times 10 80 20
 
-execute if score #gamemode settings matches 0 run title @s[scores={Respawn=11}] title ["",{"text":"Spawning in...","color":"blue"}]
+execute if score #gamemode settings matches 0 if score #gameDuration gameDuration matches ..18000 run title @s[scores={Respawn=1}] title ["",{"text":"Spawning in...","color":"blue"}]
+
+execute if score #gamemode settings matches 0 if score #gameDuration gameDuration matches 18000.. run title @s[scores={Respawn=-100}] title ["",{"text":"Spawning in...","color":"blue"}]
 
 execute if score #gamemode settings matches 1 run title @s[scores={Respawn=101}] title ["",{"text":"Spawning in...","color":"blue"}]
 
@@ -48,6 +62,8 @@ title @s[scores={Respawn=160}] subtitle ["",{"text":"2","color":"green"}]
 
 title @s[scores={Respawn=180}] subtitle ["",{"text":"1","color":"green"}]
 
+tag @s[scores={Respawn=200..}] add inCastleSpawnRoom
+
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 run teleport @s[scores={Respawn=200..}] 22 60 -198
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 run teleport @s[scores={Respawn=200..}] 139 60 -1004
@@ -65,6 +81,8 @@ title @s[scores={Respawn=200..}] clear
 tag @s[scores={Respawn=200..}] remove notAlive
 
 execute as @e[type=marker,tag=resSoulRed] if score @a[team=Red,scores={Respawn=200..},limit=1] UUID = @s UUID run kill @s
+
+tag @s[scores={Respawn=200..}] remove respawning
 
 scoreboard players set @s[scores={Respawn=200..}] Respawn 0
 
