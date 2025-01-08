@@ -1808,11 +1808,11 @@ execute if score #redking bossHP > #blueking bossHP if score #classicMap setting
 
 execute if score #redking bossHP = #blueking bossHP if score #classicMap settings matches 1 run setblock 58 51 -1030 white_stained_glass
 
-execute if score #redking bossHP < #blueking bossHP if score #classicMap settings matches 2 run setblock 19 55 -1971 blue_stained_glass
+execute if score #redking bossHP < #blueking bossHP if score #classicMap settings matches 2 run setblock 19 62 -1971 blue_stained_glass
 
-execute if score #redking bossHP > #blueking bossHP if score #classicMap settings matches 2 run setblock 19 55 -1971 red_stained_glass
+execute if score #redking bossHP > #blueking bossHP if score #classicMap settings matches 2 run setblock 19 62 -1971 red_stained_glass
 
-execute if score #redking bossHP = #blueking bossHP if score #classicMap settings matches 2 run setblock 19 55 -1971 white_stained_glass
+execute if score #redking bossHP = #blueking bossHP if score #classicMap settings matches 2 run setblock 19 62 -1971 white_stained_glass
 
 #Castle Throne Room Warps (Forest Glen)
 

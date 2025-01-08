@@ -2,6 +2,10 @@
 
 function commands:other/post_game_summary
 
+#Give pacifists the advancement
+
+execute as @a[tag=!spectator] unless score @s damageKing matches 1.. run advancement grant @s only commands:hidden_advancements/pacifist
+
 #Adding Stuff to Class Info
 
 execute if score #gamemode settings matches 0 run function commands:admin/add_to_class_info

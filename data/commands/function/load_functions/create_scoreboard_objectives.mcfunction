@@ -259,6 +259,7 @@ scoreboard objectives add absShieldTimer dummy
 scoreboard objectives add bossHP dummy
 scoreboard objectives add royalguardCD dummy
 scoreboard objectives add castleChain dummy
+scoreboard objectives add damageKing dummy
 scoreboard objectives add ovenTimer dummy
 scoreboard objectives add ovenDur dummy
 scoreboard objectives add tdmSpawnTime dummy
