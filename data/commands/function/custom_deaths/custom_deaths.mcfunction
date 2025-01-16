@@ -44,6 +44,16 @@ execute if entity @s[team=Blue] if score #gamemode settings matches 1 run scoreb
 
 execute if entity @s[tag=hasBounty] run function commands:other/betting_chip_kill
 
+#Kill Undead Summons
+
+execute if entity @s[team=Red,scores={Kit=17}] run kill @e[tag=undeadsummon,team=Red]
+
+execute if entity @s[team=Red,scores={Kit=17}] run kill @e[tag=undeadSpawn,team=Red]
+
+execute if entity @s[team=Blue,scores={Kit=17}] run kill @e[tag=undeadsummon,team=Blue]
+
+execute if entity @s[team=Blue,scores={Kit=17}] run kill @e[tag=undeadSpawn,team=Blue]
+
 #Score Removals
 
 function commands:custom_deaths/reset_cooldowns
@@ -71,6 +81,8 @@ tag @s[team=Blue,tag=blessed] remove blessed
 scoreboard players set @s[team=Red,predicate=commands:in_practice_range] RedKit 196
 
 scoreboard players set @s[team=Blue,predicate=commands:in_practice_range] BlueKit 196
+
+tag @s[team=Red,predicate=commands:in_practice_range] add practiceRangeRespawn
 
 tag @s[team=Blue,predicate=commands:in_practice_range] add practiceRangeRespawn
 

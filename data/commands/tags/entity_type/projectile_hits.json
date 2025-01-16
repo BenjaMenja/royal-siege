@@ -4,6 +4,7 @@
     "minecraft:player",
     "minecraft:wither_skeleton",
     "minecraft:skeleton",
-    "minecraft:piglin"
+    "minecraft:piglin",
+    "minecraft:zombie"
   ]
 }

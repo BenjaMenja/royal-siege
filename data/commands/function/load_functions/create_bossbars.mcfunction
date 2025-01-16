@@ -32,6 +32,8 @@ bossbar add commands:red_ult29 {"text":"Ultimate Charge","color":"green"}
 bossbar add commands:red_ult30 {"text":"Ultimate Charge","color":"green"}
 bossbar add commands:red_ult31 {"text":"Ultimate Charge","color":"green"}
 bossbar add commands:red_ult32 {"text":"Ultimate Charge","color":"green"}
+bossbar add commands:red_ult33 {"text":"Ultimate Charge","color":"green"}
+bossbar add commands:red_ult34 {"text":"Ultimate Charge","color":"green"}
 bossbar add commands:blue_ult1 {"text":"Ultimate Charge","color":"green"}
 bossbar add commands:blue_ult2 {"text":"Ultimate Charge","color":"green"}
 bossbar add commands:blue_ult3 {"text":"Ultimate Charge","color":"green"}
@@ -64,13 +66,29 @@ bossbar add commands:blue_ult29 {"text":"Ultimate Charge","color":"green"}
 bossbar add commands:blue_ult30 {"text":"Ultimate Charge","color":"green"}
 bossbar add commands:blue_ult31 {"text":"Ultimate Charge","color":"green"}
 bossbar add commands:blue_ult32 {"text":"Ultimate Charge","color":"green"}
+bossbar add commands:blue_ult33 {"text":"Ultimate Charge","color":"green"}
+bossbar add commands:blue_ult34 {"text":"Ultimate Charge","color":"green"}
+
 bossbar set commands:red_ult29 max 1600
 bossbar set commands:red_ult30 max 2000
 bossbar set commands:red_ult31 max 2800
 bossbar set commands:red_ult32 max 1800
+bossbar set commands:red_ult33 max 2600
+bossbar set commands:red_ult34 max 3300
 bossbar set commands:blue_ult29 max 1600
 bossbar set commands:blue_ult30 max 2000
 bossbar set commands:blue_ult31 max 2800
 bossbar set commands:blue_ult32 max 1800
+bossbar set commands:blue_ult33 max 2600
+bossbar set commands:blue_ult34 max 3300
 bossbar set commands:red_ult14 max 3600
 bossbar set commands:blue_ult14 max 3600
+
+bossbar set commands:red_ult31 color green
+bossbar set commands:red_ult32 color green
+bossbar set commands:red_ult33 color green
+bossbar set commands:red_ult34 color green
+bossbar set commands:blue_ult31 color green
+bossbar set commands:blue_ult32 color green
+bossbar set commands:blue_ult33 color green
+bossbar set commands:blue_ult34 color green

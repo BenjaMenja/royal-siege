@@ -122,6 +122,14 @@ advancement revoke @s only commands:custom_deaths/thermometer_death
 
 advancement revoke @s only commands:custom_deaths/trauma_shears_death
 
+advancement revoke @s only commands:custom_deaths/necro_bone_death
+
+advancement revoke @s only commands:custom_deaths/necro_staff_death
+
+advancement revoke @s only commands:custom_deaths/necromancer_summon_death
+
+advancement revoke @s only commands:custom_deaths/broodmother_spider_death
+
 tag @s remove tChestDeath
 
 tag @s remove custom_death

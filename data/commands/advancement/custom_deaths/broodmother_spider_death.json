@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "spider": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "killing_blow": {
+          "direct_entity": {
+            "type": "minecraft:spider",
+            "nbt": "{Tags:[\"broodmotherspider\"]}"
+          }
+        }
+      }
+    },
+    "cavespider": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "killing_blow": {
+          "direct_entity": {
+            "type": "minecraft:cave_spider",
+            "nbt": "{Tags:[\"broodmotherspawn\"]}"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cavespider",
+      "spider"
+    ]
+  ],
+  "rewards": {
+    "function": "commands:custom_deaths/broodmother_spider_death"
+  }
+}

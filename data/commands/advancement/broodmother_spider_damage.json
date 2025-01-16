@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "spider": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": {},
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:spider",
+            "nbt": "{Tags:[\"broodmotherspider\"]}"
+          }
+        }
+      }
+    },
+    "cavespider": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": {},
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:cave_spider",
+            "nbt": "{Tags:[\"broodmotherspawn\"]}"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cavespider",
+      "spider"
+    ]
+  ],
+  "rewards": {
+    "function": "commands:other/broodmother_spider_hit"
+  }
+}

@@ -1,3 +1,5 @@
+scoreboard players set #secGuardCount counter 0
+
 execute if entity @s[team=Red] as @e[type=zombified_piglin,team=Red,tag=security] run scoreboard players add #secGuardCount counter 1
 
 execute if entity @s[team=Blue] as @e[type=zombified_piglin,team=Blue,tag=security] run scoreboard players add #secGuardCount counter 1

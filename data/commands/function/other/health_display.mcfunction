@@ -14,3 +14,4 @@ $execute if score @s Kit matches 13 run scoreboard players display numberformat 
 $execute if score @s Kit matches 14 run scoreboard players display numberformat @s Health fixed [{"text":"[Astronaut] "},{"text":"$(health) HP","color":"yellow"}]
 $execute if score @s Kit matches 15 run scoreboard players display numberformat @s Health fixed [{"text":"[Firecracker] "},{"text":"$(health) HP","color":"yellow"}]
 $execute if score @s Kit matches 16 run scoreboard players display numberformat @s Health fixed [{"text":"[School Nurse] "},{"text":"$(health) HP","color":"yellow"}]
+$execute if score @s Kit matches 17 run scoreboard players display numberformat @s Health fixed [{"text":"[Necromancer] "},{"text":"$(health) HP","color":"yellow"}]

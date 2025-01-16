@@ -420,5 +420,17 @@ scoreboard players add @a[scores={RSAttr.GuardingShieldBuff=0..}] RSAttr.Guardin
 
 execute as @a[scores={RSAttr.GuardingShieldBuff=60..}] run function commands:attributes/clears/clear_guarding_shield_buffs
 
+#Bone Shield
+
+scoreboard players add @a[scores={boneShieldDur=0..}] boneShieldDur 1
+
+execute as @a[scores={boneShieldDur=120..}] run function commands:attributes/clears/clear_bone_shield_armor
+
+#Soul Reaper
+
+scoreboard players add @a[scores={soulReaperDur=0..}] soulReaperDur 1
+
+execute as @a[scores={soulReaperDur=120..}] run function commands:attributes/clears/clear_soul_reaper_atkdmg
+
 
 

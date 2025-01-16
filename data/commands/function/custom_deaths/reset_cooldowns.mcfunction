@@ -86,6 +86,18 @@ scoreboard players set @s ivDripTimer 1
 
 scoreboard players set @s icePackTimer 1
 
+scoreboard players set @s reanimationTimer 1
+
+scoreboard players set @s boneShieldTimer 1
+
+scoreboard players set @s undeadWhistleTimer 1
+
+scoreboard players set @s vengeanceTimer 1
+
+scoreboard players set @s necroStaffTimer 1
+
+scoreboard players set @s darkWarpTimer 1
+
 #Auto End Ultimates
 
 scoreboard players set @s shadow 90

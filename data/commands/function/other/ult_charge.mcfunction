@@ -66,4 +66,8 @@ execute as @s[scores={Ultimate=31,Kit=16}] run scoreboard players operation @s U
 
 execute as @s[scores={Ultimate=32,Kit=16}] run scoreboard players operation @s 10HourTimer += @s Ultcharge
 
+execute as @s[scores={Ultimate=33,Kit=17}] run scoreboard players operation @s undeadArmyTimer += @s Ultcharge
+
+execute as @s[scores={Ultimate=34,Kit=17}] run scoreboard players operation @s soulReaperTimer += @s Ultcharge
+
 advancement revoke @s only commands:ult_charge_entities

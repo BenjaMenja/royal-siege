@@ -1,0 +1,55 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:profile": {
+                  "id": [
+                    176185138,
+                    -1752612576,
+                    -1724563900,
+                    2041804660
+                  ],
+                  "properties": [
+                    {
+                      "name": "textures",
+                      "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjk1NWZjYjE2ZjE1YTQ2MGMwMTA5YWZiOTc1Yzc5ZDkzOWE2ODdhYWUzZjhjMzdiNDM4OGU0YTViZjgwMjJmZCJ9fX0="
+                    }
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "levels": {
+                    "minecraft:blast_protection": 1,
+                    "minecraft:projectile_protection": 1,
+                    "minecraft:protection": 1
+                  }
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "id": "4620ecdc-e0fa-45b3-9a1d-0aa8d1513406",
+                    "type": "armor",
+                    "amount": 2,
+                    "operation": "add_value",
+                    "slot": "head"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

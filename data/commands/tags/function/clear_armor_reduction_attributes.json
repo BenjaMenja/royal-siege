@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "commands:attributes/clears/clear_decay_aura_armor_shred",
+    "commands:attributes/clears/clear_napalm_bucket_armor_shred",
+    "commands:attributes/clears/clear_chrysanthemum_shell_armor_shred"
+  ]
+}

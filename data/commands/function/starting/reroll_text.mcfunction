@@ -1,0 +1,1 @@
+tellraw @s [{"text":"[Click Here]","clickEvent":{"action": "run_command", "value": "/function commands:starting/reroll_teams"},"color":"green"},{"text":" to reroll teams! (Requires Admin to use)","color":"aqua"}]

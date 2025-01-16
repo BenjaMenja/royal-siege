@@ -24,7 +24,7 @@ execute if score #characterselect spawnStuff matches 1 as @a[team=!spectator,tag
 
 execute if score #characterselect spawnStuff matches 1 if entity @a[limit=1,tag=readyUp] run scoreboard players add #readytimer spawnStuff 1
 
-execute if score #readytimer spawnStuff matches 200.. run tellraw @a[team=!spectator,scores={ultCheck=1..32},tag=!readyUp] [{"text":"You need to ready yourself up! ","color":"aqua"},{"text":"[Click Here]","color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to ready yourself up!","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger textClick set 127"}},{"text":" to ready up!"}]
+execute if score #readytimer spawnStuff matches 200.. run tellraw @a[team=!spectator,scores={ultCheck=1..34},tag=!readyUp] [{"text":"You need to ready yourself up! ","color":"aqua"},{"text":"[Click Here]","color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to ready yourself up!","color":"green"}]},"clickEvent":{"action":"run_command","value":"/trigger textClick set 127"}},{"text":" to ready up!"}]
 
 execute if score #readytimer spawnStuff matches 200.. run scoreboard players reset #readytimer spawnStuff
 

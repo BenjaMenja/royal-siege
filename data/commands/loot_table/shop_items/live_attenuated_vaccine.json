@@ -30,7 +30,7 @@
                   "text": "Injects a weak virus into a teammate, inflicting slowness, weakness, and nausea for 4s."
                 },
                 {
-                  "text": "After the debuffs expire, the teammate becomes immune to them for the rest of the current life."
+                  "text": "After the debuffs expire, the teammate becomes immune to them as well as armor reduction for the rest of the current life."
                 },
                 {
                   "text": "Has a max range of 2 blocks."

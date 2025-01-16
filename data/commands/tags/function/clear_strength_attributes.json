@@ -11,6 +11,7 @@
     "commands:attributes/clears/clear_ninja_passive_atkdmg",
     "commands:attributes/clears/clear_mystery_basket_atkdmg",
     "commands:attributes/clears/clear_poseidon_augment_atkdmg",
-    "commands:attributes/clears/clear_guarding_shield_buffs"
+    "commands:attributes/clears/clear_guarding_shield_buffs",
+    "commands:attributes/clears/clear_soul_reaper_atkdmg"
   ]
 }

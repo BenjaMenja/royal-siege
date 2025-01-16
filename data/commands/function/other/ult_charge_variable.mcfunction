@@ -63,3 +63,7 @@ execute as @s[scores={Ultimate=30,Kit=15}] run scoreboard players operation @s p
 execute as @s[scores={Ultimate=31,Kit=16}] run scoreboard players operation @s UHCTimer += #ultchargevar Ultcharge
 
 execute as @s[scores={Ultimate=32,Kit=16}] run scoreboard players operation @s 10HourTimer += #ultchargevar Ultcharge
+
+execute as @s[scores={Ultimate=33,Kit=17}] run scoreboard players operation @s undeadArmyTimer += #ultchargevar Ultcharge
+
+execute as @s[scores={Ultimate=34,Kit=17}] run scoreboard players operation @s soulReaperTimer += #ultchargevar Ultcharge

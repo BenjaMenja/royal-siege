@@ -36,6 +36,8 @@ execute as @a[scores={Kit=15}] run scoreboard players add #firecrackertempTDM cl
 
 execute as @a[scores={Kit=16}] run scoreboard players add #schoolnursetempTDM classInfo 1
 
+execute as @a[scores={Kit=17}] run scoreboard players add #necromancertempTDM classInfo 1
+
 #Add Ties
 
 execute if score #warriortempTDM classInfo matches 2.. run scoreboard players add #warriortiesTDM classInfo 1
@@ -69,6 +71,8 @@ execute if score #astronauttempTDM classInfo matches 2.. run scoreboard players 
 execute if score #firecrackertempTDM classInfo matches 2.. run scoreboard players add #firecrackertiesTDM classInfo 1
 
 execute if score #schoolnursetempTDM classInfo matches 2.. run scoreboard players add #schoolnursetiesTDM classInfo 1
+
+execute if score #necromancertempTDM classInfo matches 2.. run scoreboard players add #necromancertiesTDM classInfo 1
 
 #Add Wins
 
@@ -104,6 +108,8 @@ execute if score #firecrackertempTDM classInfo matches 1 if entity @a[tag=win,sc
 
 execute if score #schoolnursetempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=16}] run scoreboard players add #schoolnursewinsTDM classInfo 1
 
+execute if score #necromancertempTDM classInfo matches 1 if entity @a[tag=win,scores={Kit=17}] run scoreboard players add #necromancerwinsTDM classInfo 1
+
 #Add Losses
 
 execute if score #warriortempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=1}] run scoreboard players add #warriorlossesTDM classInfo 1
@@ -137,6 +143,8 @@ execute if score #astronauttempTDM classInfo matches 1 unless entity @a[tag=win,
 execute if score #firecrackertempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=15}] run scoreboard players add #firecrackerlossesTDM classInfo 1
 
 execute if score #schoolnursetempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=16}] run scoreboard players add #schoolnurselossesTDM classInfo 1
+
+execute if score #necromancertempTDM classInfo matches 1 unless entity @a[tag=win,scores={Kit=17}] run scoreboard players add #necromancerlossesTDM classInfo 1
 
 #Player Scores
 
@@ -175,3 +183,5 @@ scoreboard players reset #astronauttempTDM classInfo
 scoreboard players reset #firecrackertempTDM classInfo
 
 scoreboard players reset #schoolnursetempTDM classInfo
+
+scoreboard players reset #necromancertempTDM classInfo

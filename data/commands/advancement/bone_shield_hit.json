@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "e": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{Tags:[\"boneShielded\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "commands:other/bone_shield_hit"
+  }
+}

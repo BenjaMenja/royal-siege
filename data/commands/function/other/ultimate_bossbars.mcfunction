@@ -62,6 +62,10 @@ execute if entity @s[team=Blue,scores={Ultimate=31}] store result bossbar comman
 
 execute if entity @s[team=Blue,scores={Ultimate=32}] store result bossbar commands:blue_ult32 value run scoreboard players get @s[team=Blue,scores={Ultimate=32}] 10HourTimer
 
+execute if entity @s[team=Blue,scores={Ultimate=33}] store result bossbar commands:blue_ult33 value run scoreboard players get @s[team=Blue,scores={Ultimate=33}] undeadArmyTimer
+
+execute if entity @s[team=Blue,scores={Ultimate=34}] store result bossbar commands:blue_ult34 value run scoreboard players get @s[team=Blue,scores={Ultimate=34}] soulReaperTimer
+
 execute if entity @s[team=Red,scores={Ultimate=1}] store result bossbar commands:red_ult1 value run scoreboard players get @s[team=Red,scores={Ultimate=1}] Ninjault
 
 execute if entity @s[team=Red,scores={Ultimate=2}] store result bossbar commands:red_ult2 value run scoreboard players get @s[team=Red,scores={Ultimate=2}] Horse
@@ -125,3 +129,7 @@ execute if entity @s[team=Red,scores={Ultimate=30}] store result bossbar command
 execute if entity @s[team=Red,scores={Ultimate=31}] store result bossbar commands:red_ult31 value run scoreboard players get @s[team=Red,scores={Ultimate=31}] UHCTimer
 
 execute if entity @s[team=Red,scores={Ultimate=32}] store result bossbar commands:red_ult32 value run scoreboard players get @s[team=Red,scores={Ultimate=32}] 10HourTimer
+
+execute if entity @s[team=Red,scores={Ultimate=33}] store result bossbar commands:red_ult33 value run scoreboard players get @s[team=Red,scores={Ultimate=33}] undeadArmyTimer
+
+execute if entity @s[team=Red,scores={Ultimate=34}] store result bossbar commands:red_ult34 value run scoreboard players get @s[team=Red,scores={Ultimate=34}] soulReaperTimer

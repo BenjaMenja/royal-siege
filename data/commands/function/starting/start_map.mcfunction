@@ -5,6 +5,8 @@ function commands:starting/spawn_dungeon_villagers
 
 #Rest of the Start of the Map
 
+scoreboard players set #gameDuration gameDuration 0
+
 teleport @e[type=skeleton] ~ -200 ~
 
 teleport @e[type=zombie] ~ -200 ~
@@ -227,6 +229,10 @@ bossbar set commands:blue_ult31 players @a[scores={Ultimate=31},team=Blue]
 
 bossbar set commands:blue_ult32 players @a[scores={Ultimate=32},team=Blue]
 
+bossbar set commands:blue_ult33 players @a[scores={Ultimate=33},team=Blue]
+
+bossbar set commands:blue_ult34 players @a[scores={Ultimate=34},team=Blue]
+
 bossbar set commands:red_ult1 players @a[scores={Ultimate=1},team=Red]
 
 bossbar set commands:red_ult2 players @a[scores={Ultimate=2},team=Red]
@@ -291,59 +297,9 @@ bossbar set commands:red_ult31 players @a[scores={Ultimate=31},team=Red]
 
 bossbar set commands:red_ult32 players @a[scores={Ultimate=32},team=Red]
 
-#Advancement Grants for ultimates
+bossbar set commands:red_ult33 players @a[scores={Ultimate=33},team=Red]
 
-advancement grant @a[scores={Ultimate=1}] only commands:challenges/ultimate_extraordinaire ultimate1
-
-advancement grant @a[scores={Ultimate=2}] only commands:challenges/ultimate_extraordinaire ultimate2
-
-advancement grant @a[scores={Ultimate=3}] only commands:challenges/ultimate_extraordinaire ultimate3
-
-advancement grant @a[scores={Ultimate=4}] only commands:challenges/ultimate_extraordinaire ultimate4
-
-advancement grant @a[scores={Ultimate=5}] only commands:challenges/ultimate_extraordinaire ultimate5
-
-advancement grant @a[scores={Ultimate=6}] only commands:challenges/ultimate_extraordinaire ultimate6
-
-advancement grant @a[scores={Ultimate=7}] only commands:challenges/ultimate_extraordinaire ultimate7
-
-advancement grant @a[scores={Ultimate=8}] only commands:challenges/ultimate_extraordinaire ultimate8
-
-advancement grant @a[scores={Ultimate=9}] only commands:challenges/ultimate_extraordinaire ultimate9
-
-advancement grant @a[scores={Ultimate=10}] only commands:challenges/ultimate_extraordinaire ultimate10
-
-advancement grant @a[scores={Ultimate=11}] only commands:challenges/ultimate_extraordinaire ultimate11
-
-advancement grant @a[scores={Ultimate=12}] only commands:challenges/ultimate_extraordinaire ultimate12
-
-advancement grant @a[scores={Ultimate=13}] only commands:challenges/ultimate_extraordinaire ultimate13
-
-advancement grant @a[scores={Ultimate=14}] only commands:challenges/ultimate_extraordinaire ultimate14
-
-advancement grant @a[scores={Ultimate=15}] only commands:challenges/ultimate_extraordinaire ultimate15
-
-advancement grant @a[scores={Ultimate=16}] only commands:challenges/ultimate_extraordinaire ultimate16
-
-advancement grant @a[scores={Ultimate=17}] only commands:challenges/ultimate_extraordinaire ultimate17
-
-advancement grant @a[scores={Ultimate=18}] only commands:challenges/ultimate_extraordinaire ultimate18
-
-advancement grant @a[scores={Ultimate=19}] only commands:challenges/ultimate_extraordinaire ultimate19
-
-advancement grant @a[scores={Ultimate=20}] only commands:challenges/ultimate_extraordinaire ultimate20
-
-advancement grant @a[scores={Ultimate=21}] only commands:challenges/ultimate_extraordinaire ultimate21
-
-advancement grant @a[scores={Ultimate=22}] only commands:challenges/ultimate_extraordinaire ultimate22
-
-advancement grant @a[scores={Ultimate=23}] only commands:challenges/ultimate_extraordinaire ultimate23
-
-advancement grant @a[scores={Ultimate=24}] only commands:challenges/ultimate_extraordinaire ultimate24
-
-advancement grant @a[scores={Ultimate=25}] only commands:challenges/ultimate_extraordinaire ultimate25
-
-advancement grant @a[scores={Ultimate=26}] only commands:challenges/ultimate_extraordinaire ultimate26
+bossbar set commands:red_ult34 players @a[scores={Ultimate=34},team=Red]
 
 #End of Start
 

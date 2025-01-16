@@ -169,3 +169,7 @@ function commands:attributes/clears/clear_inhaler_buffs
 function commands:attributes/clears/clear_sticky_boots_gravity
 
 function commands:attributes/clears/clear_guarding_shield_buffs
+
+function commands:attributes/clears/clear_bone_shield_armor
+
+function commands:attributes/clears/clear_soul_reaper_atkdmg

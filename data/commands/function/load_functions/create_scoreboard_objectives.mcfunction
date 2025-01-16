@@ -16,6 +16,13 @@ team add parkour
 
 gamerule doImmediateRespawn true
 
+#Constants
+
+scoreboard players set #10000 constant 10000
+scoreboard players set #10 constant 10
+scoreboard players set #5 constant 5
+scoreboard players set #8 constant 8
+
 #Old Scoreboards that were made before this file existed
 scoreboard objectives add Kit dummy
 scoreboard objectives add textClick dummy
@@ -35,7 +42,6 @@ scoreboard objectives add posX dummy
 scoreboard objectives add posY dummy
 scoreboard objectives add posZ dummy
 scoreboard objectives add constant dummy
-scoreboard players set #10000 constant 10000
 scoreboard objectives add gameDuration dummy
 scoreboard objectives add totalDeaths dummy
 scoreboard objectives add UUID dummy
@@ -228,6 +234,7 @@ scoreboard objectives add entPassive minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add watcherTimer dummy
 scoreboard objectives add attractorTimer dummy
 scoreboard objectives add damage minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add kingDamage minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add damagePan dummy
 scoreboard objectives add basketTimer dummy
 scoreboard objectives add payRaiseTimer dummy
@@ -481,6 +488,38 @@ scoreboard objectives add gravityDur dummy
 scoreboard objectives add deathScreen dummy
 scoreboard objectives add nurTies dummy
 scoreboard objectives add nurTiesTDM dummy
+scoreboard objectives add reanimationTimer dummy
+scoreboard objectives add reanimationStore dummy
+scoreboard objectives add reanimationDis dummy
+scoreboard objectives add boneShieldTimer dummy
+scoreboard objectives add boneShieldStore dummy
+scoreboard objectives add boneShieldDis dummy
+scoreboard objectives add boneShieldDur dummy
+scoreboard objectives add undeadWhistleTimer dummy
+scoreboard objectives add undeadWhistleStore dummy
+scoreboard objectives add undeadWhistleDis dummy
+scoreboard objectives add vengeanceTimer dummy
+scoreboard objectives add vengeanceStore dummy
+scoreboard objectives add vengeanceDis dummy
+scoreboard objectives add vengeanceTally dummy
+scoreboard objectives add vengeanceDur dummy
+scoreboard objectives add vengeanceDamage minecraft.custom:minecraft.damage_taken
+scoreboard objectives add necroStaffTimer dummy
+scoreboard objectives add necroStaffStore dummy
+scoreboard objectives add necroStaffDis dummy
+scoreboard objectives add darkWarpTimer dummy
+scoreboard objectives add darkWarpStore dummy
+scoreboard objectives add darkWarpDis dummy
+scoreboard objectives add undeadArmyTimer dummy
+scoreboard objectives add undeadArmyDur dummy
+scoreboard objectives add soulReaperTimer dummy
+scoreboard objectives add soulReaperDur dummy
+scoreboard objectives add soulReaperCount dummy
+scoreboard objectives add necroWins dummy
+scoreboard objectives add necroLosses dummy
+scoreboard objectives add necroWinsTDM dummy
+scoreboard objectives add necroLossesTDM dummy
+
 function custom_heal:load
 
 scoreboard objectives remove dmDelay

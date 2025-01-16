@@ -222,6 +222,20 @@ loot replace entity @s[scores={Kit=16,RedKit=198}] armor.legs loot commands:main
 
 loot replace entity @s[scores={Kit=16,RedKit=198}] armor.feet loot commands:main_armor/school_nurse_boots
 
+loot give @s[scores={Kit=17,RedKit=198}] loot commands:main_weapons/necro_staff
+
+loot give @s[scores={Kit=17,RedKit=198}] loot commands:main_abilities/bone_shield
+
+loot give @s[scores={Kit=17,RedKit=198}] loot commands:main_abilities/reanimation
+
+loot replace entity @s[scores={Kit=17,RedKit=198}] armor.head loot commands:heads/necromancer
+
+loot replace entity @s[scores={Kit=17,RedKit=198}] armor.chest loot commands:main_armor/necromancer_chestplate
+
+loot replace entity @s[scores={Kit=17,RedKit=198}] armor.legs loot commands:main_armor/necromancer_leggings
+
+loot replace entity @s[scores={Kit=17,RedKit=198}] armor.feet loot commands:main_armor/necromancer_boots
+
 execute if entity @s[scores={RedKit=198},tag=hadUltimate] run function commands:other/ultimate_charger
 
 execute if entity @s[scores={RedKit=198}] run function commands:custom_deaths/reset_cooldowns

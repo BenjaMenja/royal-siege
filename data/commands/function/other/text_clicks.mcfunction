@@ -406,4 +406,24 @@ execute if score @s textClick matches 207 run function commands:practice_range/c
 
 execute if score @s textClick matches 208 run function commands:books/school_nurse
 
+execute if score @s textClick matches 209 run function commands:shops/necro_bones
+
+# execute if score @s textClick matches 210 run function commands:shops/team_reversal
+
+execute if score @s textClick matches 211 run function commands:shops/undead_whistle
+
+execute if score @s textClick matches 212 run function commands:shops/vengeance
+
+execute if score @s textClick matches 213 run function commands:shops/broodmother_spider
+
+execute if score @s textClick matches 214 run function commands:shops/dark_warp
+
+execute if score @s textClick matches 215 run function commands:starting/ultimate_select/undead_army
+
+execute if score @s textClick matches 216 run function commands:starting/ultimate_select/soul_reaper
+
+execute if score @s textClick matches 217 run function commands:books/necromancer
+
+execute if score @s textClick matches 218 run function commands:practice_range/character/necromancer
+
 scoreboard players reset @a[scores={textClick=1..}] textClick

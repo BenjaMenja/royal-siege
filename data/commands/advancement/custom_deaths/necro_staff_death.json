@@ -1,0 +1,23 @@
+{
+  "parent": "commands:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player",
+          "equipment": {
+            "mainhand": {
+              "predicates": {
+                "minecraft:custom_data": "{necrostaff:1b}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "commands:custom_deaths/necro_staff_death"
+  }
+}

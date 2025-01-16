@@ -396,6 +396,42 @@ execute at @s[predicate=commands:holding/universal_health_care] anchored eyes po
 
 execute at @s[predicate=commands:holding/ten_hour_energy] anchored eyes positioned ^ ^ ^ anchored feet run function commands:attributes/adds/add_ten_hour_energy_speed
 
+#Necro Staff Heal
+
+execute at @s[predicate=commands:holding/necro_staff,scores={necroStaffTimer=..0}] run function commands:raycasts/necro_staff_start_ray
+
+#Reanimation
+
+execute at @s[predicate=commands:holding/reanimation,scores={reanimationTimer=..0}] run function commands:other/reanimation
+
+#Bone Shield
+
+execute at @s[predicate=commands:holding/bone_shield,scores={boneShieldTimer=..0}] run function commands:other/bone_shield_init
+
+#Undead Whistle
+
+execute at @s[predicate=commands:holding/undead_whistle,scores={undeadWhistleTimer=..0}] run function commands:other/undead_whistle
+
+#Vengeance
+
+execute at @s[predicate=commands:holding/vengeance,scores={vengeanceTimer=..0}] run function commands:other/vengeance_init
+
+#Broodmother Spider
+
+execute at @s[predicate=commands:holding/broodmother_spider] run function commands:other/broodmother_spider
+
+#Dark Warp
+
+execute at @s[predicate=commands:holding/dark_warp,scores={darkWarpTimer=..0}] run function commands:other/dark_warp
+
+#Undead Army
+
+execute at @s[predicate=commands:holding/undead_army] run function commands:ultimates/undead_army
+
+#Soul Reaper
+
+execute at @s[predicate=commands:holding/soul_reaper] run function commands:ultimates/soul_reaper
+
 #Menu
 
 execute if entity @s[predicate=!commands:is_sneaking,predicate=commands:holding/menu] run tellraw @s [{"color":"green","text":"+"},{"color":"yellow","text":"===================================================="},{"text":"\n"},{"color":"#5AF6F9","text":"Welcome to the Menu!"},{"text":"\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 64"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Opens up your character's shop.","color":"green"}]},"text":"[Shops]"},{"text":"                       "},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 65"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Accesses your team's bank.\nYou can view your team's collective amount of Siege Bucks and Corrupt Credits\nas well as deposit and withdraw.","color":"green"}]},"text":"[Bank]"},{"text":"\n\n\n\n"},{"clickEvent":{"action":"run_command","value":"/trigger textClick set 191"},"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Warps you to your castle's respawn point.","color":"green"},{"text":"\nThis has a 3 second delay, and can be interrupted by taking damage.","color":"green"}]},"text":"[Warp to Castle]"},{"text":"\n\n"},{"color":"green","text":"+"},{"color":"yellow","text":"====================================================\n"}]

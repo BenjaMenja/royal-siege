@@ -1,0 +1,10 @@
+[
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:blast_protection": -2,
+      "minecraft:projectile_protection": -2
+    },
+    "add": true
+  }
+]

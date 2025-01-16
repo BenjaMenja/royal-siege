@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "e": {
+      "trigger": "minecraft:entity_hurt_player"
+    }
+  },
+  "rewards": {
+    "function": "commands:other/vengeance_damage"
+  }
+}

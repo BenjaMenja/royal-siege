@@ -32,6 +32,8 @@ execute if entity @s[tag=win,scores={Kit=15}] run scoreboard players add @s firW
 
 execute if entity @s[tag=win,scores={Kit=16}] run scoreboard players add @s nurWinsTDM 1
 
+execute if entity @s[tag=win,scores={Kit=17}] run scoreboard players add @s necroWinsTDM 1
+
 #Add Losses
 
 execute if entity @s[tag=lose,scores={Kit=1}] run scoreboard players add @s warLossesTDM 1
@@ -65,6 +67,8 @@ execute if entity @s[tag=lose,scores={Kit=14}] run scoreboard players add @s ast
 execute if entity @s[tag=lose,scores={Kit=15}] run scoreboard players add @s firLossesTDM 1
 
 execute if entity @s[tag=lose,scores={Kit=16}] run scoreboard players add @s nurLossesTDM 1
+
+execute if entity @s[tag=lose,scores={Kit=17}] run scoreboard players add @s necroLossesTDM 1
 
 #Other
 

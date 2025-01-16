@@ -232,7 +232,7 @@ scoreboard players set @a[scores={LifeForce=3600..}] LifeForce 0
 
 #End of the Game (Classic)
 
-scoreboard players add @a[predicate=commands:in_any_battlefield] End 1
+scoreboard players add @a[predicate=commands:in_any_battlefield,tag=inCurrentMatch] End 1
 
 execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Blue,tag=King] if score #gamemode settings matches 0 run tag @a[team=Red] add win
 
@@ -812,7 +812,7 @@ scoreboard players set @a[scores={Ultcharge=1..}] Ultcharge 0
 
 #Ultimate Charge Bossbars
 
-execute as @a[scores={Ultimate=1..32}] run function commands:other/ultimate_bossbars
+execute as @a[scores={Ultimate=1..34}] run function commands:other/ultimate_bossbars
 
 #Warrior Cooldown Display
 
@@ -1044,9 +1044,9 @@ scoreboard players set @a[scores={MinionTimer=3600..}] MinionTimer 0
 
 tag @e[type=zombie,tag=overcharge] add OC
 
-execute as @e[type=zombie,tag=overcharge,team=Red] at @s run data merge entity @s {CustomNameVisible:1b,Health:20f,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":16711680}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:max_health",base:20},{id:"minecraft:movement_speed",base:0.35}]}
+execute as @e[type=zombie,tag=overcharge,team=Red] at @s run data merge entity @s {CustomNameVisible:1b,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":16711680}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:movement_speed",base:0.35}]}
 
-execute as @e[type=zombie,tag=overcharge,team=Blue] at @s run data merge entity @s {CustomNameVisible:1b,Health:20f,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":255}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:max_health",base:20},{id:"minecraft:movement_speed",base:0.35}]}
+execute as @e[type=zombie,tag=overcharge,team=Blue] at @s run data merge entity @s {CustomNameVisible:1b,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":255}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:movement_speed",base:0.35}]}
 
 tag @e[type=zombie,tag=OC] remove overcharge
 
@@ -1558,6 +1558,44 @@ execute as @e[type=snowball,tag=snowball] run function commands:ball/visfix
 
 scoreboard players operation #global visfix *= #-1 visfix
 
+#King Activation when king reaches HP thresholds
+
+execute if entity @a[tag=inCurrentMatch] unless score #redking bossHP matches 768.. if entity @e[type=wither_skeleton,tag=King,tag=!active1,team=Red] run scoreboard players add @p[team=Red] Money 300
+
+execute if entity @a[tag=inCurrentMatch] unless score #redking bossHP matches 768.. if entity @e[type=wither_skeleton,tag=King,tag=!active1,team=Red] as @p[team=Red] run function commands:shops/king_activation
+
+execute if entity @a[tag=inCurrentMatch] unless score #redking bossHP matches 768.. run tag @e[type=wither_skeleton,tag=King,tag=!active1,team=Red] add active1
+
+execute if entity @a[tag=inCurrentMatch] unless score #redking bossHP matches 512.. if entity @e[type=wither_skeleton,tag=King,tag=!active2,team=Red] run scoreboard players add @p[team=Red] Money 300
+
+execute if entity @a[tag=inCurrentMatch] unless score #redking bossHP matches 512.. if entity @e[type=wither_skeleton,tag=King,tag=!active2,team=Red] as @p[team=Red] run function commands:shops/king_activation
+
+execute if entity @a[tag=inCurrentMatch] unless score #redking bossHP matches 512.. run tag @e[type=wither_skeleton,tag=King,tag=!active2,team=Red] add active2
+
+execute if entity @a[tag=inCurrentMatch] unless score #redking bossHP matches 256.. if entity @e[type=wither_skeleton,tag=King,tag=!active3,team=Red] run scoreboard players add @p[team=Red] Money 300
+
+execute if entity @a[tag=inCurrentMatch] unless score #redking bossHP matches 256.. if entity @e[type=wither_skeleton,tag=King,tag=!active3,team=Red] as @p[team=Red] run function commands:shops/king_activation
+
+execute if entity @a[tag=inCurrentMatch] unless score #redking bossHP matches 256.. run tag @e[type=wither_skeleton,tag=King,tag=!active3,team=Red] add active3
+
+execute if entity @a[tag=inCurrentMatch] unless score #blueking bossHP matches 768.. if entity @e[type=wither_skeleton,tag=King,tag=!active1,team=Blue] run scoreboard players add @p[team=Blue] Money 300
+
+execute if entity @a[tag=inCurrentMatch] unless score #blueking bossHP matches 768.. if entity @e[type=wither_skeleton,tag=King,tag=!active1,team=Blue] as @p[team=Blue] run function commands:shops/king_activation
+
+execute if entity @a[tag=inCurrentMatch] unless score #blueking bossHP matches 768.. run tag @e[type=wither_skeleton,tag=King,tag=!active1,team=Blue] add active1
+
+execute if entity @a[tag=inCurrentMatch] unless score #blueking bossHP matches 512.. if entity @e[type=wither_skeleton,tag=King,tag=!active2,team=Blue] run scoreboard players add @p[team=Blue] Money 300
+
+execute if entity @a[tag=inCurrentMatch] unless score #blueking bossHP matches 512.. if entity @e[type=wither_skeleton,tag=King,tag=!active2,team=Blue] as @p[team=Blue] run function commands:shops/king_activation
+
+execute if entity @a[tag=inCurrentMatch] unless score #blueking bossHP matches 512.. run tag @e[type=wither_skeleton,tag=King,tag=!active2,team=Blue] add active2
+
+execute if entity @a[tag=inCurrentMatch] unless score #blueking bossHP matches 256.. if entity @e[type=wither_skeleton,tag=King,tag=!active3,team=Blue] run scoreboard players add @p[team=Blue] Money 300
+
+execute if entity @a[tag=inCurrentMatch] unless score #blueking bossHP matches 256.. if entity @e[type=wither_skeleton,tag=King,tag=!active3,team=Blue] as @p[team=Blue] run function commands:shops/king_activation
+
+execute if entity @a[tag=inCurrentMatch] unless score #blueking bossHP matches 256.. run tag @e[type=wither_skeleton,tag=King,tag=!active3,team=Blue] add active3
+
 #King Activate
 
 scoreboard players remove @e[type=wither_skeleton,scores={kingActive=1..}] kingActive 1
@@ -1808,11 +1846,11 @@ execute if score #redking bossHP > #blueking bossHP if score #classicMap setting
 
 execute if score #redking bossHP = #blueking bossHP if score #classicMap settings matches 1 run setblock 58 51 -1030 white_stained_glass
 
-execute if score #redking bossHP < #blueking bossHP if score #classicMap settings matches 2 run setblock 19 62 -1971 blue_stained_glass
+execute if score #redking bossHP < #blueking bossHP if score #classicMap settings matches 2 run setblock 19 61 -1971 blue_stained_glass
 
-execute if score #redking bossHP > #blueking bossHP if score #classicMap settings matches 2 run setblock 19 62 -1971 red_stained_glass
+execute if score #redking bossHP > #blueking bossHP if score #classicMap settings matches 2 run setblock 19 61 -1971 red_stained_glass
 
-execute if score #redking bossHP = #blueking bossHP if score #classicMap settings matches 2 run setblock 19 62 -1971 white_stained_glass
+execute if score #redking bossHP = #blueking bossHP if score #classicMap settings matches 2 run setblock 19 61 -1971 white_stained_glass
 
 #Castle Throne Room Warps (Forest Glen)
 
@@ -1874,9 +1912,9 @@ kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}
 
 #Royal Guards
 
-execute unless entity @e[type=skeleton,tag=redroyalguard] if score #gamemode settings matches 0 run scoreboard players add #redroyalguard royalguardCD 1
+execute if entity @a[tag=inCurrentMatch] unless entity @e[type=skeleton,tag=redroyalguard] if score #gamemode settings matches 0 run scoreboard players add #redroyalguard royalguardCD 1
 
-execute unless entity @e[type=skeleton,tag=blueroyalguard] if score #gamemode settings matches 0 run scoreboard players add #blueroyalguard royalguardCD 1
+execute if entity @a[tag=inCurrentMatch] unless entity @e[type=skeleton,tag=blueroyalguard] if score #gamemode settings matches 0 run scoreboard players add #blueroyalguard royalguardCD 1
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 if score #redroyalguard royalguardCD matches 2400 positioned 12 57 -209 run function commands:entities/royal_guard_red
 
@@ -2098,9 +2136,13 @@ execute if score #loseKingHP gameDuration matches 20.. as @e[type=wither_skeleto
 
 execute if score #gameDuration gameDuration matches 10800 if score #gamemode settings matches 1 run title @a title {"text":"1 Minute Remaining!","color":"dark_red"}
 
-execute if entity @a[team=Blue,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #bluekills tdmKills > #redkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Blue] add End
+execute if entity @a[team=Blue,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #bluekills tdmKills > #redkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Blue] add win
 
-execute if entity @a[team=Red,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #redkills tdmKills > #bluekills tdmKills if score #gamemode settings matches 1 run tag @a[team=Red] add End
+execute if entity @a[team=Blue,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #bluekills tdmKills > #redkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Blue] add lose
+
+execute if entity @a[team=Red,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #redkills tdmKills > #bluekills tdmKills if score #gamemode settings matches 1 run tag @a[team=Red] add win
+
+execute if entity @a[team=Red,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #redkills tdmKills > #bluekills tdmKills if score #gamemode settings matches 1 run tag @a[team=Red] add lose
 
 execute if entity @a[scores={End=100..}] if score #gameDuration gameDuration matches 12000 if score #bluekills tdmKills = #redkills tdmKills if score #gamemode settings matches 1 run title @a title {"text":"Sudden Death!","color":"dark_red"}
 
@@ -2468,6 +2510,8 @@ execute as @a[tag=vaccinated] run function #commands:clear_slowness_attributes
 
 execute as @a[tag=vaccinated] run function #commands:clear_weakness_attributes
 
+execute as @a[tag=vaccinated] run function #commands:clear_armor_reduction_attributes
+
 #Inhaler
 
 execute as @a[predicate=commands:holding/inhaler] run function commands:attributes/adds/add_inhaler_buffs
@@ -2493,6 +2537,100 @@ execute as @a[scores={Ultimate=32},tag=!notAlive,predicate=!commands:inventory/t
 loot give @a[scores={10HourTimer=1800..}] loot commands:ultimates/ten_hour_energy
 
 scoreboard players set @a[scores={10HourTimer=1800..}] 10HourTimer 0
+
+#Necro Staff Heal
+
+scoreboard players remove @a[scores={Kit=17,necroStaffTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] necroStaffTimer 1
+
+#Necromancer Undead Summon Warp
+
+execute as @e[type=skeleton,tag=undeadsummon,team=Red] at @s unless entity @p[team=Red,scores={Kit=17},distance=..25] store result storage royalsiege:main ypos double 1 run data get entity @p[team=Red,scores={Kit=17}] Pos[1]
+
+execute as @e[type=skeleton,tag=undeadsummon,team=Red] at @s unless entity @p[team=Red,scores={Kit=17},distance=..25] run function commands:other/warp_undead_summon with storage royalsiege:main
+
+execute as @e[type=skeleton,tag=undeadsummon,team=Blue] at @s unless entity @p[team=Blue,scores={Kit=17},distance=..25] store result storage royalsiege:main ypos double 1 run data get entity @p[team=Blue,scores={Kit=17}] Pos[1]
+
+execute as @e[type=skeleton,tag=undeadsummon,team=Blue] at @s unless entity @p[team=Blue,scores={Kit=17},distance=..25] run function commands:other/warp_undead_summon with storage royalsiege:main
+
+#Reanimation
+
+scoreboard players remove @a[scores={Kit=17,reanimationTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] reanimationTimer 1
+
+#Bone Shield
+
+scoreboard players remove @a[scores={Kit=17,boneShieldTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] boneShieldTimer 1
+
+execute at @a[tag=boneShielded] run particle item{item:"minecraft:bone"} ~ ~ ~ 0.5 1 0.5 0.1 10
+
+#Necro Bones
+
+execute as @e[type=snowball,tag=!necrobonered,nbt={Item:{components:{"minecraft:custom_data":{necrobonered:1b}}}}] at @s run function commands:ball/necro_bone_found_red
+
+execute as @e[type=snowball,tag=!necroboneblue,nbt={Item:{components:{"minecraft:custom_data":{necroboneblue:1b}}}}] at @s run function commands:ball/necro_bone_found_blue
+
+execute as @e[type=area_effect_cloud,tag=necrobonered] unless predicate commands:is_riding_necro_bone_red at @s run function commands:ball/necro_bone_landed_red
+
+execute as @e[type=area_effect_cloud,tag=necroboneblue] unless predicate commands:is_riding_necro_bone_blue at @s run function commands:ball/necro_bone_landed_blue
+
+#Undead Whistle
+
+scoreboard players remove @a[scores={undeadWhistleTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] undeadWhistleTimer 1
+
+#Vengeance
+
+scoreboard players remove @a[scores={vengeanceTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] vengeanceTimer 1
+
+execute as @a[scores={Kit=17},team=Red,tag=vengeanceUser] at @s run tag @a[team=Red,distance=..10] add vengeance
+
+execute as @a[scores={Kit=17},team=Blue,tag=vengeanceUser] at @s run tag @a[team=Blue,distance=..10] add vengeance
+
+execute as @a[scores={Kit=17},team=Red,tag=vengeanceUser] at @s run tag @a[team=Red,distance=10..] remove vengeance
+
+execute as @a[scores={Kit=17},team=Blue,tag=vengeanceUser] at @s run tag @a[team=Blue,distance=10..] remove vengeance
+
+scoreboard players add @a[scores={vengeanceDur=0..}] vengeanceDur 1
+
+execute as @a[tag=vengeanceUser,scores={vengeanceDur=100}] at @s run function commands:other/vengeance_buffs
+
+execute as @a[scores={vengeanceDur=220..}] run function commands:other/vengeance_end
+
+#Dark Warp
+
+scoreboard players remove @a[scores={darkWarpTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] darkWarpTimer 1
+
+#Necromancer Cooldown Display
+
+execute as @a[scores={Kit=17}] run function commands:cooldowns/necromancer_display
+
+#Undead Army (Necromancer Ultimate)
+
+execute as @a[scores={Ultimate=33},tag=!notAlive,predicate=!commands:inventory/undead_army] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s undeadArmyTimer 1
+
+loot give @a[scores={undeadArmyTimer=2600..}] loot commands:ultimates/undead_army
+
+scoreboard players set @a[scores={undeadArmyTimer=2600..}] undeadArmyTimer 0
+
+scoreboard players add @e[type=marker,tag=undeadArmy] undeadArmyTimer 1
+
+scoreboard players add @e[type=marker,tag=undeadArmy] undeadArmyDur 1
+
+execute as @e[type=marker,tag=undeadArmy,scores={undeadArmyTimer=10..}] at @s run function commands:ultimates/undead_army_spawn
+
+execute as @e[type=marker,tag=undeadArmy] at @s run particle dust{color:[0.502,0.000,1.000],scale:1.25} ^ ^ ^7 0 0 0 0 1
+
+execute as @e[type=marker,tag=undeadArmy] at @s run tp @s ~ ~ ~ ~10 ~
+
+execute as @e[type=marker,tag=undeadArmy,scores={undeadArmyDur=160..}] run kill @s
+
+#Soul Reaper (Necromancer Alt. Ultimate)
+
+execute as @a[scores={Ultimate=34},tag=!notAlive,predicate=!commands:inventory/soul_reaper] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s soulReaperTimer 1
+
+loot give @a[scores={soulReaperTimer=3300..}] loot commands:ultimates/soul_reaper
+
+scoreboard players set @a[scores={soulReaperTimer=3300..}] soulReaperTimer 0
+
+execute as @a[scores={soulReaperDur=0..}] at @s run particle witch ~ ~2.2 ~ 0 0 0 0 1
 
 #Give menu item to people w/out it
 

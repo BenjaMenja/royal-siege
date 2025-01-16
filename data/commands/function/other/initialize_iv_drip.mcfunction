@@ -4,6 +4,10 @@ execute at @s[team=Blue] run summon minecraft:armor_stand ~ ~1 ~ {NoGravity:1b,I
 
 effect give @s regeneration infinite 1 true
 
+execute at @s[team=Red] run effect give @p[team=Red,scores={Kit=16}] regeneration infinite 2 true
+
+execute at @s[team=Blue] run effect give @p[team=Blue,scores={Kit=16}] regeneration infinite 2 true
+
 tag @s add ivAttached
 
 tag @n[type=item,tag=ivNeedle] add attached

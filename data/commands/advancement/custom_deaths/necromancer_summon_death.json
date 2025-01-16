@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "king": {
+            "trigger": "minecraft:entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"undeadsummon\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "commands:custom_deaths/necromancer_summon_death"
+    }
+}

@@ -4,9 +4,9 @@ execute if score #gamemode settings matches 0 if score #classicMap settings matc
 
 execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 run spawnpoint @a[team=Blue] -12 126 -1971
 
-execute if score #gamemode settings matches 1 if score #classicMap settings matches 0 run spawnpoint @a[team=Blue] 1015 53 -61
+execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 run spawnpoint @a[team=Blue] 1015 53 -61
 
-execute if score #gamemode settings matches 1 if score #classicMap settings matches 1 run spawnpoint @a[team=Blue] 1971 106 33
+execute if score #gamemode settings matches 1 if score #tdmMap settings matches 1 run spawnpoint @a[team=Blue] 1971 106 33
 
 execute as @a[team=Blue] at @s run teleport @s -1402 59 1230
 

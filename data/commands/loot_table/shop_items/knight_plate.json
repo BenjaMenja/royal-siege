@@ -29,7 +29,7 @@
                 "minecraft:enchantments": {
                   "minecraft:protection": 3,
                   "minecraft:projectile_protection": 3,
-                  "minecraft:blast_protection": 4
+                  "minecraft:blast_protection": 3
                 },
                 "minecraft:unbreakable": {
                   "show_in_tooltip": false
@@ -39,13 +39,6 @@
             {
               "function": "minecraft:set_attributes",
               "modifiers": [
-                {
-                  "attribute": "minecraft:max_health",
-                  "amount": 2,
-                  "operation": "add_value",
-                  "id": "62d5aa21-4069-4e9a-9704-9af0a860dd43",
-                  "slot": "chest"
-                },
                 {
                   "attribute": "minecraft:armor",
                   "amount": 6,

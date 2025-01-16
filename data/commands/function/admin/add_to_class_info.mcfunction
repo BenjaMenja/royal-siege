@@ -36,6 +36,8 @@ execute as @a[scores={Kit=15}] run scoreboard players add #firecrackertemp class
 
 execute as @a[scores={Kit=16}] run scoreboard players add #schoolnursetemp classInfo 1
 
+execute as @a[scores={Kit=17}] run scoreboard players add #necromancertemp classInfo 1
+
 #Add Ties
 
 execute if score #warriortemp classInfo matches 2.. run scoreboard players add #warriorties classInfo 1
@@ -69,6 +71,8 @@ execute if score #astronauttemp classInfo matches 2.. run scoreboard players add
 execute if score #firecrackertemp classInfo matches 2.. run scoreboard players add #firecrackerties classInfo 1
 
 execute if score #schoolnursetemp classInfo matches 2.. run scoreboard players add #schoolnurseties classInfo 1
+
+execute if score #necromancertemp classInfo matches 2.. run scoreboard players add #necromancerties classInfo 1
 
 #Add Wins
 
@@ -104,6 +108,8 @@ execute if score #firecrackertemp classInfo matches 1 if entity @a[tag=win,score
 
 execute if score #schoolnursetemp classInfo matches 1 if entity @a[tag=win,scores={Kit=16}] run scoreboard players add #schoolnursewins classInfo 1
 
+execute if score #necromancertemp classInfo matches 1 if entity @a[tag=win,scores={Kit=17}] run scoreboard players add #necromancerwins classInfo 1
+
 #Add Losses
 
 execute if score #warriortemp classInfo matches 1 unless entity @a[tag=win,scores={Kit=1}] run scoreboard players add #warriorlosses classInfo 1
@@ -137,6 +143,8 @@ execute if score #astronauttemp classInfo matches 1 unless entity @a[tag=win,sco
 execute if score #firecrackertemp classInfo matches 1 unless entity @a[tag=win,scores={Kit=15}] run scoreboard players add #firecrackerlosses classInfo 1
 
 execute if score #schoolnursetemp classInfo matches 1 unless entity @a[tag=win,scores={Kit=16}] run scoreboard players add #schoolnurselosses classInfo 1
+
+execute if score #necromancertemp classInfo matches 1 unless entity @a[tag=win,scores={Kit=17}] run scoreboard players add #necromancerlosses classInfo 1
 
 #Player Scores
 
@@ -175,3 +183,5 @@ scoreboard players reset #astronauttemp classInfo
 scoreboard players reset #firecrackertemp classInfo
 
 scoreboard players reset #schoolnursetemp classInfo
+
+scoreboard players reset #necromancertemp classInfo

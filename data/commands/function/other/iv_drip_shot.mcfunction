@@ -36,11 +36,11 @@ scoreboard players operation @e[tag=ivNeedle,limit=1,tag=!stop] posY -= @s posY
 
 scoreboard players operation @e[tag=ivNeedle,limit=1,tag=!stop] posZ -= @s posZ
 
-execute as @e[tag=ivNeedle,limit=1,tag=!stop] store result entity @s Motion[0] double 0.0008 run scoreboard players get @s posX
+execute as @e[tag=ivNeedle,limit=1,tag=!stop] store result entity @s Motion[0] double 0.004 run scoreboard players get @s posX
 
-execute as @e[tag=ivNeedle,limit=1,tag=!stop] store result entity @s Motion[1] double 0.0008 run scoreboard players get @s posY
+execute as @e[tag=ivNeedle,limit=1,tag=!stop] store result entity @s Motion[1] double 0.004 run scoreboard players get @s posY
 
-execute as @e[tag=ivNeedle,limit=1,tag=!stop] store result entity @s Motion[2] double 0.0008 run scoreboard players get @s posZ
+execute as @e[tag=ivNeedle,limit=1,tag=!stop] store result entity @s Motion[2] double 0.004 run scoreboard players get @s posZ
 
 tag @e[tag=ivNeedle] add stop
 
