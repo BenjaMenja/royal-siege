@@ -2544,11 +2544,19 @@ scoreboard players remove @a[scores={Kit=17,necroStaffTimer=1..},predicate=comma
 
 #Necromancer Undead Summon Warp
 
-execute as @e[type=skeleton,tag=undeadsummon,team=Red] at @s unless entity @p[team=Red,scores={Kit=17},distance=..25] store result storage royalsiege:main ypos double 1 run data get entity @p[team=Red,scores={Kit=17}] Pos[1]
+execute as @e[type=skeleton,tag=undeadsummon,team=Red] at @s unless entity @p[team=Red,scores={Kit=17},distance=..25] store result score @p[team=Red,scores={Kit=17}] posY run data get entity @p[team=Red,scores={Kit=17}] Pos[1]
+
+execute as @e[type=skeleton,tag=undeadsummon,team=Red] at @s unless entity @p[team=Red,scores={Kit=17},distance=..25] run scoreboard players add @p[team=Red,scores={Kit=17}] posY 1
+
+execute as @e[type=skeleton,tag=undeadsummon,team=Red] at @s unless entity @p[team=Red,scores={Kit=17},distance=..25] store result storage royalsiege:main ypos double 1 run scoreboard players get @p[team=Red,scores={Kit=17}] posY
 
 execute as @e[type=skeleton,tag=undeadsummon,team=Red] at @s unless entity @p[team=Red,scores={Kit=17},distance=..25] run function commands:other/warp_undead_summon with storage royalsiege:main
 
-execute as @e[type=skeleton,tag=undeadsummon,team=Blue] at @s unless entity @p[team=Blue,scores={Kit=17},distance=..25] store result storage royalsiege:main ypos double 1 run data get entity @p[team=Blue,scores={Kit=17}] Pos[1]
+execute as @e[type=skeleton,tag=undeadsummon,team=Blue] at @s unless entity @p[team=Blue,scores={Kit=17},distance=..25] store result score @p[team=Blue,scores={Kit=17}] posY run data get entity @p[team=Blue,scores={Kit=17}] Pos[1]
+
+execute as @e[type=skeleton,tag=undeadsummon,team=Blue] at @s unless entity @p[team=Blue,scores={Kit=17},distance=..25] run scoreboard players add @p[team=Blue,scores={Kit=17}] posY 1
+
+execute as @e[type=skeleton,tag=undeadsummon,team=Blue] at @s unless entity @p[team=Blue,scores={Kit=17},distance=..25] store result storage royalsiege:main ypos double 1 run scoreboard players get @p[team=Blue,scores={Kit=17}] posY
 
 execute as @e[type=skeleton,tag=undeadsummon,team=Blue] at @s unless entity @p[team=Blue,scores={Kit=17},distance=..25] run function commands:other/warp_undead_summon with storage royalsiege:main
 
@@ -2571,6 +2579,12 @@ execute as @e[type=snowball,tag=!necroboneblue,nbt={Item:{components:{"minecraft
 execute as @e[type=area_effect_cloud,tag=necrobonered] unless predicate commands:is_riding_necro_bone_red at @s run function commands:ball/necro_bone_landed_red
 
 execute as @e[type=area_effect_cloud,tag=necroboneblue] unless predicate commands:is_riding_necro_bone_blue at @s run function commands:ball/necro_bone_landed_blue
+
+#Mind Inversion
+
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{mindinversionred:1b}}}}] at @s if entity @n[predicate=!commands:necromancer_cant_target,team=Blue,distance=..3] run function commands:other/mind_inversion
+
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{mindinversionblue:1b}}}}] at @s if entity @n[predicate=!commands:necromancer_cant_target,team=Red,distance=..3] run function commands:other/mind_inversion
 
 #Undead Whistle
 

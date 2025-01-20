@@ -306,6 +306,30 @@
           {
             "type": "minecraft:loot_table",
             "value": "commands:shop_items/first_aid_kit_red"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/necro_bone_red"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/mind_inversion_red"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/undead_whistle"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/vengeance"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/broodmother_spider"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "value": "commands:shop_items/dark_warp"
           }
         ]
       }

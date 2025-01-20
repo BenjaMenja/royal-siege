@@ -408,7 +408,7 @@ execute if score @s textClick matches 208 run function commands:books/school_nur
 
 execute if score @s textClick matches 209 run function commands:shops/necro_bones
 
-# execute if score @s textClick matches 210 run function commands:shops/team_reversal
+execute if score @s textClick matches 210 run function commands:shops/mind_inversion
 
 execute if score @s textClick matches 211 run function commands:shops/undead_whistle
 

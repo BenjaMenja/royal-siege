@@ -1,0 +1,68 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Mind Inversion",
+                "color": "dark_purple",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Drop onto an enemy minion to force them to switch teams."
+                },
+                {
+                  "text": "Cannot be used on ultimate minions such as Terror of the Seas."
+                },
+                {
+                  "text": "Lasts 10 seconds."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{mindinversionblue:1b,mindinversion:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    218
+                  ]
+                },
+                "consumable": {
+                  "consume_seconds": 1000000
+                },
+                "minecraft:food": {
+                  "nutrition": 0,
+                  "saturation": 0,
+                  "can_always_eat": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
