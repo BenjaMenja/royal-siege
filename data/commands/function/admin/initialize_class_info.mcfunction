@@ -32,6 +32,8 @@ scoreboard players add #firecrackerwins classInfo 0
 
 scoreboard players add #schoolnursewins classInfo 0
 
+scoreboard players add #necromancerwins classInfo 0
+
 
 #Init Losses
 
@@ -67,6 +69,8 @@ scoreboard players add #firecrackerlosses classInfo 0
 
 scoreboard players add #schoolnurselosses classInfo 0
 
+scoreboard players add #necromancerlosses classInfo 0
+
 #Init Ties
 
 scoreboard players add #warriorties classInfo 0
@@ -98,6 +102,8 @@ scoreboard players add #gamblerties classInfo 0
 scoreboard players add #astronautties classInfo 0
 
 scoreboard players add #schoolnurseties classInfo 0
+
+scoreboard players add #necromancerties classInfo 0
 
 #Init Wins TDM
 
@@ -133,6 +139,8 @@ scoreboard players add #firecrackerwinsTDM classInfo 0
 
 scoreboard players add #schoolnursewinsTDM classInfo 0
 
+scoreboard players add #necromancerwinsTDM classInfo 0
+
 #Init Losses TDM
 
 scoreboard players add #warriorlossesTDM classInfo 0
@@ -167,6 +175,8 @@ scoreboard players add #firecrackerlossesTDM classInfo 0
 
 scoreboard players add #schoolnurselossesTDM classInfo 0
 
+scoreboard players add #necromancerlossesTDM classInfo 0
+
 #Init Ties TDM
 
 scoreboard players add #warriortiesTDM classInfo 0
@@ -200,6 +210,8 @@ scoreboard players add #astronauttiesTDM classInfo 0
 scoreboard players add #firecrackertiesTDM classInfo 0
 
 scoreboard players add #schoolnursetiesTDM classInfo 0
+
+scoreboard players add #necromancertiesTDM classInfo 0
 
 #Init Games Played
 
@@ -241,6 +253,8 @@ scoreboard players add @s firWins 0
 
 scoreboard players add @s nurWins 0
 
+scoreboard players add @s necroWins 0
+
 scoreboard players add @s warLosses 0
 
 scoreboard players add @s ninLosses 0
@@ -272,6 +286,8 @@ scoreboard players add @s astLosses 0
 scoreboard players add @s firLosses 0
 
 scoreboard players add @s nurLosses 0
+
+scoreboard players add @s necroLosses 0
 
 scoreboard players add @s warTies 0
 
@@ -335,6 +351,8 @@ scoreboard players add @s firWinsTDM 0
 
 scoreboard players add @s nurWinsTDM 0
 
+scoreboard players add @s necroWinsTDM 0
+
 scoreboard players add @s warLossesTDM 0
 
 scoreboard players add @s ninLossesTDM 0
@@ -366,6 +384,8 @@ scoreboard players add @s astLossesTDM 0
 scoreboard players add @s firLossesTDM 0
 
 scoreboard players add @s nurLossesTDM 0
+
+scoreboard players add @s necroLossesTDM 0
 
 scoreboard players add @s warTiesTDM 0
 

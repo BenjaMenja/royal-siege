@@ -519,6 +519,7 @@ scoreboard objectives add necroWins dummy
 scoreboard objectives add necroLosses dummy
 scoreboard objectives add necroWinsTDM dummy
 scoreboard objectives add necroLossesTDM dummy
+scoreboard objectives add necroArmor dummy
 
 function custom_heal:load
 

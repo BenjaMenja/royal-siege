@@ -2646,6 +2646,12 @@ scoreboard players set @a[scores={soulReaperTimer=3300..}] soulReaperTimer 0
 
 execute as @a[scores={soulReaperDur=0..}] at @s run particle witch ~ ~2.2 ~ 0 0 0 0 1
 
+#Necromancer Character Challenge
+
+execute as @a[scores={Kit=17}] store result score @s necroArmor run attribute @s minecraft:armor get
+
+execute as @a[scores={Kit=17},predicate=!commands:in_practice_range] if score @s necroArmor matches 24.. run advancement grant @s only commands:character_challenges/undead_wall
+
 #Give menu item to people w/out it
 
 execute as @a[predicate=commands:in_any_battlefield,predicate=!commands:inventory/menu,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run loot give @s loot commands:gameplay/menu
