@@ -39,3 +39,7 @@ particle dust{color:[1.0,0.0,0.0],scale:1.25} ~ ~ ~ 0.5 1 0.5 0.25 75
 function commands:attributes/adds/add_soul_reaper_atkdmg with storage royalsiege:main
 
 playsound minecraft:entity.wither.death master @a ~ ~ ~ 1 2
+
+scoreboard players add @s ultsUsed 1
+
+clear @s carrot[custom_data~{soulreaper:1b}]
