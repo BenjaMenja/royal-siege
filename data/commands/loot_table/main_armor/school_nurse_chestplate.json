@@ -15,10 +15,10 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:dyed_color": {
-                  "rgb": 10592135,
-                  "show_in_tooltip": false
+                "tooltip_display": {
+                  "hidden_components": ["dyed_color"]
                 },
+                "minecraft:dyed_color": 10592135,
                 "minecraft:attribute_modifiers": [
                   {
                     "id": "1ee240f9-2d33-44cc-bfb3-80a6617e4769",
@@ -28,16 +28,12 @@
                     "slot": "chest"
                   }
                 ],
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": false
-                },
+                "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:blast_protection": 1,
-                    "minecraft:fire_protection": 1,
-                    "minecraft:projectile_protection": 1,
-                    "minecraft:protection": 2
-                  }
+                  "minecraft:blast_protection": 1,
+                  "minecraft:fire_protection": 1,
+                  "minecraft:projectile_protection": 1,
+                  "minecraft:protection": 2
                 }
               }
             }

@@ -44,14 +44,15 @@
             {
               "function": "minecraft:set_components",
               "components": {
+                "tooltip_display": {
+                  "hidden_components": ["unbreakable"]
+                },
                 "minecraft:custom_model_data": {
                   "floats": [
                     61
                   ]
                 },
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": false
-                },
+                "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
                   "minecraft:knockback": 3
                 }

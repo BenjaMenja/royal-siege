@@ -33,43 +33,41 @@
                   "can_always_eat": true
                 },
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:knockback": 1
-                  }
+                  "minecraft:knockback": 1
                 },
-                "minecraft:attribute_modifiers": {
-                  "modifiers": [
-                    {
-                      "type": "max_health",
-                      "id": "e7849b6f-e526-4d6a-9bf1-1aa56bdc0f50",
-                      "amount": 2,
-                      "operation": "add_value",
-                      "slot": "mainhand"
-                    },
-                    {
-                      "type": "max_health",
-                      "id": "fa975054-75ee-4eba-b17b-16a46469fa5c",
-                      "amount": 2,
-                      "operation": "add_value",
-                      "slot": "offhand"
-                    },
-                    {
-                      "type": "attack_damage",
-                      "id": "ffae960a-ce47-4a60-9f2e-2e51e54ec1d2",
-                      "amount": 6,
-                      "operation": "add_value",
-                      "slot": "mainhand"
-                    },
-                    {
-                      "type": "attack_speed",
-                      "id": "b5394c61-d558-4e4d-9854-e048f8704073",
-                      "amount": -2.6,
-                      "operation": "add_value",
-                      "slot": "mainhand"
-                    }
-                  ],
-                  "show_in_tooltip": false
-                }
+                "tooltip_display": {
+                  "hidden_components": ["attribute_modifiers"]
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "max_health",
+                    "id": "e7849b6f-e526-4d6a-9bf1-1aa56bdc0f50",
+                    "amount": 2,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "max_health",
+                    "id": "fa975054-75ee-4eba-b17b-16a46469fa5c",
+                    "amount": 2,
+                    "operation": "add_value",
+                    "slot": "offhand"
+                  },
+                  {
+                    "type": "attack_damage",
+                    "id": "ffae960a-ce47-4a60-9f2e-2e51e54ec1d2",
+                    "amount": 6,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "attack_speed",
+                    "id": "b5394c61-d558-4e4d-9854-e048f8704073",
+                    "amount": -2.6,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  }
+                ]
               }
             },
             {

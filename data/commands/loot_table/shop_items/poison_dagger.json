@@ -50,11 +50,12 @@
                     61
                   ]
                 },
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": false
-                },
+                "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
                   "commands:poison_dagger": 1
+                },
+                "tooltip_display": {
+                  "hidden_components": ["unbreakable"]
                 }
               }
             },

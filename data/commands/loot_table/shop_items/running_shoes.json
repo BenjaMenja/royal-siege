@@ -26,13 +26,14 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:dyed_color": {
-                  "rgb": 16252672
-                },
+                "minecraft:dyed_color": 16252672,
                 "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
                   "minecraft:protection": 4,
                   "minecraft:blast_protection": 5
+                },
+                "tooltip_display": {
+                  "hidden_components": ["unbreakable"]
                 }
               }
             },

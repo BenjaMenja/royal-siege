@@ -7,99 +7,97 @@
             "type": "minecraft:item",
             "name": "minecraft:carrot",
             "functions": [
-              {
-                "function": "minecraft:set_name",
-                "name": {
-                  "text": "Gunblade - Burst",
-                  "color": "red",
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Gunblade - Burst",
+                "color": "red",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "A gun with a blade! It doesn't get much more dangerous than that."
+                },
+                {
+                  "text": "It shoots a three round burst every 1s. You can switch"
+                },
+                {
+                  "text": "between special bullets by shooting while crouching."
+                },
+                {
+                  "text": "Cannot be fired if you have no ammo in your inventory."
+                },
+                {
+                  "text": "To reload, simply drop the item."
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "When in Main Hand:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " 7.5 Melee Damage",
+                  "color": "dark_green",
+                  "italic": false
+                },
+                {
+                  "text": " 1 Attack Speed",
+                  "color": "dark_green",
                   "italic": false
                 }
-              },
-              {
-                "function": "minecraft:set_lore",
-                "lore": [
-                  {
-                    "text": "Right-Click to use",
-                    "color": "yellow",
-                    "italic": false
-                  },
-                  {
-                    "text": " "
-                  },
-                  {
-                    "text": "A gun with a blade! It doesn’t get much more dangerous than that."
-                  },
-                  {
-                    "text": "It shoots a three round burst every 1s. You can switch"
-                  },
-                  {
-                    "text": "between special bullets by shooting while crouching."
-                  },
-                  {
-                    "text": "Cannot be fired if you have no ammo in your inventory."
-                  },
-                  {
-                    "text": "To reload, simply drop the item."
-                  },
-                  {
-                    "text": " "
-                  },
-                  {
-                    "text": "When in Main Hand:",
-                    "color": "gray",
-                    "italic": false
-                  },
-                  {
-                    "text": " 7.5 Melee Damage",
-                    "color": "dark_green",
-                    "italic": false
-                  },
-                  {
-                    "text": " 1 Attack Speed",
-                    "color": "dark_green",
-                    "italic": false
-                  }
-                ],
-                "mode": "insert"
-              },
-              {
-                "function": "minecraft:set_components",
-                "components": {
-                  "minecraft:unbreakable": {
-                    "show_in_tooltip": false
-                  },
-                  "minecraft:custom_model_data": {
-                    "floats": [
-                      16
-                    ]
-                  },
-                  "consumable": {
-                    "consume_seconds": 1000000
-                  },
-                  "minecraft:food": {
-                    "nutrition": 0,
-                    "saturation": 0,
-                    "can_always_eat": true
-                  },
-                  "minecraft:attribute_modifiers": {
-                    "modifiers": [
-                      {
-                        "type": "minecraft:attack_damage",
-                        "amount": 7.5,
-                        "operation": "add_value",
-                        "id": "4d3aec43-b352-44da-8031-9a2d86b14d10",
-                        "slot": "mainhand"
-                      },
-                      {
-                        "type": "minecraft:attack_speed",
-                        "amount": -3,
-                        "operation": "add_value",
-                        "id": "2943bf15-e340-4bdf-ae8b-b06e7189ded2",
-                        "slot": "mainhand"
-                      }
-                    ],
-                    "show_in_tooltip": false
-                  }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:tooltip_display": {
+                  "hidden_components": ["minecraft:unbreakable"]
+                },
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    16
+                  ]
+                },
+                "consumable": {
+                  "consume_seconds": 1000000
+                },
+                "minecraft:food": {
+                  "nutrition": 0,
+                  "saturation": 0,
+                  "can_always_eat": true
+                },
+                "minecraft:attribute_modifiers": [
+                    {
+                      "type": "minecraft:attack_damage",
+                      "amount": 7.5,
+                      "operation": "add_value",
+                      "id": "4d3aec43-b352-44da-8031-9a2d86b14d10",
+                      "slot": "mainhand"
+                    },
+                    {
+                      "type": "minecraft:attack_speed",
+                      "amount": -3,
+                      "operation": "add_value",
+                      "id": "2943bf15-e340-4bdf-ae8b-b06e7189ded2",
+                      "slot": "mainhand"
+                    }
+                  ]
                 }
               },
               {
@@ -112,10 +110,10 @@
                   "minecraft:attribute_modifiers": false
                 }
               }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+          ]
+        }
+      ]
+    }
+  ]
+}
   

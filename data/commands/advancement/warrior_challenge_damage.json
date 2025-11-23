@@ -12,7 +12,8 @@
         },
         "entity": {
           "type": "minecraft:player",
-          "player": {
+          "type_specific": {
+            "type": "minecraft:player",
             "advancements": {
               "commands:full_hp": true
             }

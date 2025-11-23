@@ -25,10 +25,8 @@
                   }
                 ],
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:projectile_protection": 1,
-                    "minecraft:protection": 1
-                  }
+                  "minecraft:projectile_protection": 1,
+                  "minecraft:protection": 1
                 },
                 "minecraft:profile": {
                   "id": [

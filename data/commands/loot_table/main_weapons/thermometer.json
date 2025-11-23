@@ -15,25 +15,25 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:attribute_modifiers": {
-                  "modifiers": [
-                    {
-                      "id": "6fbc0ff7-93ea-496f-880a-f63957f23b39",
-                      "type": "attack_damage",
-                      "amount": 6,
-                      "operation": "add_value",
-                      "slot": "mainhand"
-                    },
-                    {
-                      "id": "56534746-da61-401f-8a23-76fdc3229b3c",
-                      "type": "attack_speed",
-                      "amount": -2.8,
-                      "operation": "add_value",
-                      "slot": "mainhand"
-                    }
-                  ],
-                  "show_in_tooltip": false
+                "tooltip_display": {
+                  "hidden_components": ["attribute_modifiers"]
                 },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "id": "6fbc0ff7-93ea-496f-880a-f63957f23b39",
+                    "type": "attack_damage",
+                    "amount": 6,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  },
+                  {
+                    "id": "56534746-da61-401f-8a23-76fdc3229b3c",
+                    "type": "attack_speed",
+                    "amount": -2.8,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  }
+                ],
                 "minecraft:custom_data": {
                   "thermometer": true
                 },

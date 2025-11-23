@@ -51,9 +51,10 @@
                 "minecraft:enchantments": {
                   "minecraft:riptide": 4
                 },
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": true
-                }
+                "tooltip_display": {
+                  "hidden_components": ["unbreakable"]
+                },
+                "minecraft:unbreakable": {}
               }
             },
             {

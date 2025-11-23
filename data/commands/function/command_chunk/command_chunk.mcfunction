@@ -952,9 +952,9 @@ execute as @a[scores={Kit=3,defensiveSpell=1..},predicate=commands:in_any_battle
 
 scoreboard players remove @a[scores={Kit=3},predicate=commands:in_any_battlefield,tag=!notAlive] turretTimer 1
 
-give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','" "'],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},{id:"minecraft:dispenser",count:1}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
+give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','" "'],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
 
-give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={predicates:[{blocks:"#commands:can_place_on"}],show_in_tooltip:false},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','" "'],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],HandItems:[{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:power":4}}}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":1638655}},{id:"minecraft:dispenser",count:1}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
+give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','" "'],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":255}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
 
 scoreboard players set @a[scores={turretTimer=..0}] turretTimer 600
 
@@ -1044,9 +1044,9 @@ scoreboard players set @a[scores={MinionTimer=3600..}] MinionTimer 0
 
 tag @e[type=zombie,tag=overcharge] add OC
 
-execute as @e[type=zombie,tag=overcharge,team=Red] at @s run data merge entity @s {CustomNameVisible:1b,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":16711680}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:movement_speed",base:0.35}]}
+execute as @e[type=zombie,tag=overcharge,team=Red] at @s run data merge entity @s {CustomNameVisible:1b,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',equipment:{mainhand:{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":16711680}}},drop_chances:{mainhand:0.0,chest:0.0},active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:movement_speed",base:0.35}]}
 
-execute as @e[type=zombie,tag=overcharge,team=Blue] at @s run data merge entity @s {CustomNameVisible:1b,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',HandItems:[{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}}},{}],HandDropChances:[-327.670F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":255}},{}],ArmorDropChances:[0.085F,0.085F,-327.670F,0.085F],active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:movement_speed",base:0.35}]}
+execute as @e[type=zombie,tag=overcharge,team=Blue] at @s run data merge entity @s {CustomNameVisible:1b,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',equipment:{mainhand:{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":255}}},drop_chances:{mainhand:0.0,chest:0.0},active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:movement_speed",base:0.35}]}
 
 tag @e[type=zombie,tag=OC] remove overcharge
 
@@ -1634,7 +1634,7 @@ execute if score @e[type=wither_skeleton,team=Red,tag=King,limit=1] kingActive m
 
 execute if score @e[type=wither_skeleton,team=Blue,tag=King,limit=1] kingActive matches 1.. run teleport @e[type=wandering_trader,tag=wanderingKingBlue] ~ -200 ~
 
-execute as @e[type=wandering_trader,tag=wanderingKing] run data remove entity @s HandItems[0]
+execute as @e[type=wandering_trader,tag=wanderingKing] run data remove entity @s equipment.mainhand
 
 execute as @e[type=wandering_trader,tag=wanderingKing,scores={kingActive=200..}] run function commands:other/wandering_king_end
 
@@ -1664,7 +1664,7 @@ scoreboard players set @a[scores={died=1..}] dragonRageTimer 0
 
 execute as @e[tag=stop,type=dragon_fireball] store success entity @s Air short 1 if data entity @s {Air:0s}
 
-tag @e[type=area_effect_cloud,nbt={Particle:{type:"minecraft:dragon_breath"}},tag=!stop] add dRageCloud
+tag @e[type=area_effect_cloud,nbt={custom_particle:{type:"minecraft:dragon_breath"}},tag=!stop] add dRageCloud
 
 data merge entity @e[type=area_effect_cloud,tag=dRageCloud,tag=!stop,limit=1] {ReapplicationDelay:25,RadiusPerTick:-0.005f,RadiusOnUse:-0.005f,Duration:160}
 

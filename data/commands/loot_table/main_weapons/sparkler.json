@@ -67,9 +67,6 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": false
-                },
                 "minecraft:custom_model_data": {
                   "floats": [
                     184
@@ -86,25 +83,25 @@
                 "consumable": {
                   "consume_seconds": 1000000
                 },
-                "minecraft:attribute_modifiers": {
-                  "modifiers": [
-                    {
-                      "type": "minecraft:attack_damage",
-                      "amount": 6.5,
-                      "operation": "add_value",
-                      "id": "9fee31ab-9d7f-4afd-a46c-f170328ac9b2",
-                      "slot": "mainhand"
-                    },
-                    {
-                      "type": "minecraft:attack_speed",
-                      "amount": -2.2,
-                      "operation": "add_value",
-                      "id": "09e6d8e9-b680-4d2e-b084-b9bb52ece42c",
-                      "slot": "mainhand"
-                    }
-                  ],
-                  "show_in_tooltip": false
-                }
+                "tooltip_display": {
+                  "hidden_components": ["attribute_modifiers"]
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:attack_damage",
+                    "amount": 6.5,
+                    "operation": "add_value",
+                    "id": "9fee31ab-9d7f-4afd-a46c-f170328ac9b2",
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "minecraft:attack_speed",
+                    "amount": -2.2,
+                    "operation": "add_value",
+                    "id": "09e6d8e9-b680-4d2e-b084-b9bb52ece42c",
+                    "slot": "mainhand"
+                  }
+                ]
               }
             },
             {

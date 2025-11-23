@@ -15,12 +15,10 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:dyed_color": {
-                  "rgb": 16711680,
-                  "show_in_tooltip": false
-                },
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": false
+                "minecraft:dyed_color": 16711680,
+                "minecraft:unbreakable": {},
+                "tooltip_display": {
+                  "hidden_components": ["dyed_color", "unbreakable"]
                 },
                 "minecraft:attribute_modifiers": [
                   {
@@ -39,10 +37,8 @@
                   }
                 ],
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:projectile_protection": 1,
-                    "minecraft:protection": 1
-                  }
+                  "minecraft:projectile_protection": 1,
+                  "minecraft:protection": 1
                 },
                 "minecraft:custom_data": {
                   "lightupshoes": true

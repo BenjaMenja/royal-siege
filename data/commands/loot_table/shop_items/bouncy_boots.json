@@ -13,9 +13,7 @@
                 "minecraft:enchantments": {
                   "minecraft:protection": 3
                 },
-                "minecraft:dyed_color": {
-                  "rgb": 0
-                },
+                "minecraft:dyed_color": 0,
                 "minecraft:unbreakable": {}
               }
             },

@@ -17,10 +17,8 @@
               "components": {
                 "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:blast_protection": 1,
-                    "minecraft:protection": 1
-                  }
+                  "minecraft:blast_protection": 1,
+                  "minecraft:protection": 1
                 },
                 "minecraft:attribute_modifiers": [
                   {

@@ -15,25 +15,25 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:attribute_modifiers": {
-                  "modifiers": [
-                    {
-                      "id": "e3ae6ceb-95b4-42a1-be3e-02a970cd7701",
-                      "type": "attack_damage",
-                      "amount": 6.5,
-                      "operation": "add_value",
-                      "slot": "mainhand"
-                    },
-                    {
-                      "id": "12264d68-ed0c-4ee4-8bf2-4ea4c2df317b",
-                      "type": "attack_speed",
-                      "amount": -2.7,
-                      "operation": "add_value",
-                      "slot": "mainhand"
-                    }
-                  ],
-                  "show_in_tooltip": false
+                "tooltip_display": {
+                  "hidden_components": ["unbreakable"]
                 },
+                "minecraft:attribute_modifiers": [                    
+                  {
+                    "id": "e3ae6ceb-95b4-42a1-be3e-02a970cd7701",
+                    "type": "attack_damage",
+                    "amount": 6.5,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  },
+                  {
+                    "id": "12264d68-ed0c-4ee4-8bf2-4ea4c2df317b",
+                    "type": "attack_speed",
+                    "amount": -2.7,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  }
+                ],
                 "minecraft:custom_model_data": {
                   "floats": [
                     203
@@ -42,9 +42,7 @@
                 "minecraft:custom_data": {
                   "traumashears": true
                 },
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": false
-                }
+                "minecraft:unbreakable": {}
               }
             },
             {

@@ -25,29 +25,27 @@
                   "goldencutlass": 1
                 },
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:sweeping_edge": 2
-                  }
+                  "minecraft:sweeping_edge": 2
                 },
-                "minecraft:attribute_modifiers": {
-                  "modifiers": [
-                    {
-                      "type": "attack_damage",
-                      "id": "4ff36703-12f6-4300-a5a6-cf30ae59070e",
-                      "amount": 7,
-                      "operation": "add_value",
-                      "slot": "mainhand"
-                    },
-                    {
-                      "type": "attack_speed",
-                      "id": "4ff36703-12f6-4300-a5a6-cf30ae59017f",
-                      "amount": -2.4,
-                      "operation": "add_value",
-                      "slot": "mainhand"
-                    }
-                  ],
-                  "show_in_tooltip": false
-                }
+                "tooltip_display": {
+                  "hidden_components": ["attribute_modifiers"]
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "attack_damage",
+                    "id": "4ff36703-12f6-4300-a5a6-cf30ae59070e",
+                    "amount": 7,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "attack_speed",
+                    "id": "4ff36703-12f6-4300-a5a6-cf30ae59017f",
+                    "amount": -2.4,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  }
+                ]
               }
             },
             {

@@ -25,29 +25,27 @@
                   "wizardsword": 1
                 },
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:knockback": 1
-                  }
+                  "minecraft:knockback": 1
                 },
-                "minecraft:attribute_modifiers": {
-                  "modifiers": [
-                    {
-                      "type": "attack_damage",
-                      "id": "85626ae5-6ace-472d-9e05-c5c331ff0bef",
-                      "amount": 6,
-                      "operation": "add_value",
-                      "slot": "mainhand"
-                    },
-                    {
-                      "type": "attack_speed",
-                      "id": "85626ae5-6ace-472d-9e05-14b3b2df0bef",
-                      "amount": -2.4,
-                      "operation": "add_value",
-                      "slot": "mainhand"
-                    }
-                  ],
-                  "show_in_tooltip": false
-                }
+                "tooltip_display": {
+                  "hidden_components": ["attribute_modifiers"]
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "attack_damage",
+                    "id": "85626ae5-6ace-472d-9e05-c5c331ff0bef",
+                    "amount": 6,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "attack_speed",
+                    "id": "85626ae5-6ace-472d-9e05-14b3b2df0bef",
+                    "amount": -2.4,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  }
+                ]
               }
             },
             {
@@ -63,7 +61,7 @@
               "function": "set_lore",
               "lore": [
                 {
-                  "text": "It ran out of magical energy long ago, but it’s decently heavy,"
+                  "text": "It ran out of magical energy long ago, but it's decently heavy,"
                 },
                 {
                   "text": "so you might as well hit something with it."

@@ -34,7 +34,7 @@ scoreboard players set @s[tag=!dababy,tag=nonspec,tag=randomized] ultCheck 0
 
 tag @s[tag=nonspec,tag=randomized] remove readyUp
 
-tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Dinner's Ready]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 70"}},{"text":" "},{"text":"[Pizza Time]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 112"}}]
+tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Dinner's Ready]","color":"green","click_event":{"action":"run_command","command":"/trigger textClick set 70"}},{"text":" "},{"text":"[Pizza Time]","color":"green","click_event":{"action":"run_command","command":"/trigger textClick set 112"}}]
 
 tag @s remove dababy
 

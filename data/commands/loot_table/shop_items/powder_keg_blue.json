@@ -15,13 +15,11 @@
             {
               "function": "set_components",
               "components": {
+                "tooltip_display": {
+                  "hidden_components": ["can_place_on"]
+                },
                 "minecraft:can_place_on": {
-                  "predicates": [
-                    {
-                      "blocks": "#commands:can_place_on"
-                    }
-                  ],
-                  "show_in_tooltip": false
+                  "blocks": "#commands:can_place_on"
                 },
                 "minecraft:custom_model_data": {
                   "floats": [

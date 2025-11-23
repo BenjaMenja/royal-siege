@@ -17,10 +17,8 @@
               "components": {
                 "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:fire_protection": 1,
-                    "minecraft:protection": 3
-                  }
+                  "minecraft:fire_protection": 1,
+                  "minecraft:protection": 3
                 },
                 "minecraft:dyed_color": 16777215
               }

@@ -16,12 +16,13 @@
               "function": "set_components",
               "components": {
                 "minecraft:unbreakable": {},
+                "tooltip_display": {
+                  "hidden_components": ["dyed_color"]
+                },
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:feather_falling": 4,
-                    "minecraft:projectile_protection": 3,
-                    "minecraft:protection": 1
-                  }
+                  "minecraft:feather_falling": 4,
+                  "minecraft:projectile_protection": 3,
+                  "minecraft:protection": 1
                 },
                 "minecraft:attribute_modifiers": [
                   {

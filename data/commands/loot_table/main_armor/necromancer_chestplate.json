@@ -17,11 +17,9 @@
               "components": {
                 "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:blast_protection": 2,
-                    "minecraft:projectile_protection": 2,
-                    "minecraft:protection": 2
-                  }
+                  "minecraft:blast_protection": 2,
+                  "minecraft:projectile_protection": 2,
+                  "minecraft:protection": 2
                 },
                 "minecraft:attribute_modifiers": [
                   {
@@ -39,6 +37,9 @@
                     "slot": "chest"
                   }
                 ],
+                "tooltip_display": {
+                  "hidden_components": ["dyed_color"]
+                },
                 "minecraft:dyed_color": 2753093
               }
             }

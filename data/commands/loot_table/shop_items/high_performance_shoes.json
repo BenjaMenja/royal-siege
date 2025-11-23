@@ -82,8 +82,9 @@
                   "minecraft:projectile_protection": 1
                 },
                 "minecraft:unbreakable": {},
-                "minecraft:dyed_color": {
-                  "rgb": 4420139
+                "minecraft:dyed_color": 4420139,
+                "tooltip_display": {
+                  "hidden_components": ["unbreakable"]
                 }
               }
             },

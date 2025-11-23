@@ -25,11 +25,9 @@
                   "archerbow": 1
                 },
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:power": 3,
-                    "minecraft:punch": 1,
-                    "minecraft:infinity": 1
-                  }
+                  "minecraft:power": 3,
+                  "minecraft:punch": 1,
+                  "minecraft:infinity": 1
                 }
               }
             },
@@ -46,7 +44,7 @@
               "function": "set_lore",
               "lore": [
                 {
-                  "text": "It’s a little less powerful than a standard Olympic bow,"
+                  "text": "It's a little less powerful than a standard Olympic bow,"
                 },
                 {
                   "text": "but a lot less bulky and far more maneuverable."

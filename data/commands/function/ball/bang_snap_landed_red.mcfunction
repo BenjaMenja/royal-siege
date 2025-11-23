@@ -1,4 +1,4 @@
-particle flash ~ ~ ~ 0.1 0.1 0.1 1 5
+particle flash{color:[1.000,1.000,1.000,0.000]} ~ ~ ~ 0.1 0.1 0.1 1 5
 
 playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ 1 2
 

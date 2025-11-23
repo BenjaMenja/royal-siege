@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "id": "minecraft:chain"
+      "id": "minecraft:iron_chain"
     },
     "title": "Acrobatics",
     "description": "Kill a player while standing on the castle chains on Forest Glen.",

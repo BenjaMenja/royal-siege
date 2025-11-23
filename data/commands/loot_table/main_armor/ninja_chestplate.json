@@ -10,12 +10,10 @@
               {
                 "function": "minecraft:set_components",
                 "components": {
-                  "minecraft:dyed_color": {
-                    "rgb": 0,
-                    "show_in_tooltip": false
-                  },
-                  "minecraft:unbreakable": {
-                    "show_in_tooltip": false
+                  "minecraft:dyed_color": 0,
+                  "minecraft:unbreakable": {},
+                  "tooltip_display": {
+                    "hidden_components": ["dyed_color"]
                   },
                   "minecraft:enchantments": {
                     "minecraft:protection": 5,

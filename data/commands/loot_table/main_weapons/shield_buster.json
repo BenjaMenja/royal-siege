@@ -22,11 +22,11 @@
                   ]
                 },
                 "minecraft:enchantments": {
-                  "levels": {
                     "minecraft:efficiency": 5,
                     "minecraft:unbreaking": 1
-                  },
-                  "show_in_tooltip": false
+                },
+                "tooltip_display": {
+                  "hidden_components": ["unbreakable", "enchantments"]
                 }
               }
             },

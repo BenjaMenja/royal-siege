@@ -34,7 +34,7 @@ scoreboard players set @s[tag=!dababy,tag=nonspec,tag=randomized] ultCheck 0
 
 tag @s[tag=nonspec,tag=randomized] remove readyUp
 
-tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Chaos Bow]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 68"}},{"text":" "},{"text":"[Bow of Justice]","color":"green","clickEvent":{"action":"run_command","value":"/trigger textClick set 69"}}]
+tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Chaos Bow]","color":"green","click_event":{"action":"run_command","command":"/trigger textClick set 68"}},{"text":" "},{"text":"[Bow of Justice]","color":"green","click_event":{"action":"run_command","command":"/trigger textClick set 69"}}]
 
 tag @s remove dababy
 

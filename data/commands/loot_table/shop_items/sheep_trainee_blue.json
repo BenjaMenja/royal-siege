@@ -15,13 +15,11 @@
             {
               "function": "set_components",
               "components": {
+                "tooltip_display": {
+                  "hidden_components": ["can_place_on"]
+                },
                 "minecraft:can_place_on": {
-                  "predicates": [
-                    {
-                      "blocks": "#commands:can_place_on"
-                    }
-                  ],
-                  "show_in_tooltip": false
+                  "blocks": "#commands:can_place_on"
                 },
                 "minecraft:custom_data": {
                   "sheeptrainee": 1
@@ -34,10 +32,8 @@
                     "sheepblue",
                     "sheeptrainee"
                   ],
-                  "ArmorItems": [
-                    {},
-                    {},
-                    {
+                  "equipment": {
+                    "chest": {
                       "id": "minecraft:acacia_fence",
                       "count": 1,
                       "components": {
@@ -51,9 +47,8 @@
                           }
                         ]
                       }
-                    },
-                    {}
-                  ],
+                    }
+                  },
                   "attributes": [
                     {
                       "id": "knockback_resistance",

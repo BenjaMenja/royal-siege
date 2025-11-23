@@ -45,9 +45,6 @@
                     57
                   ]
                 },
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": false
-                },
                 "minecraft:enchantments": {
                   "minecraft:knockback": 4
                 }

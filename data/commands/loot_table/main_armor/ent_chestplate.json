@@ -17,12 +17,13 @@
               "components": {
                 "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
-                  "levels": {
-                    "minecraft:blast_protection": 1,
-                    "minecraft:projectile_protection": 1,
-                    "minecraft:protection": 2,
-                    "minecraft:thorns": 4
-                  }
+                  "minecraft:blast_protection": 1,
+                  "minecraft:projectile_protection": 1,
+                  "minecraft:protection": 2,
+                  "minecraft:thorns": 4
+                },
+                "tooltip_display": {
+                  "hidden_components": ["dyed_color"]
                 },
                 "minecraft:dyed_color": 9127187
               }

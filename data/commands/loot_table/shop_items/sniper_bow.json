@@ -31,14 +31,15 @@
                     23
                   ]
                 },
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": false
-                },
+                "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
                   "minecraft:infinity": 1,
                   "minecraft:punch": 1,
                   "minecraft:power": 7,
                   "commands:sniper_bow": 1
+                },
+                "tooltip_display": {
+                  "hidden_components": ["unbreakable"]
                 }
               }
             },

@@ -47,10 +47,11 @@
                     52
                   ]
                 },
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": false
-                },
-                "minecraft:enchantment_glint_override": true
+                "minecraft:unbreakable": {},
+                "minecraft:enchantment_glint_override": true,
+                "tooltip_display": {
+                  "hidden_components": ["unbreakable"]
+                }
               }
             },
             {

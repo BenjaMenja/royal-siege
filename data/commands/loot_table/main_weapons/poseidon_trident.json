@@ -48,32 +48,30 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": true
-                },
+                "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
                   "minecraft:bane_of_arthropods": 3,
                   "minecraft:impaling": 5
                 },
-                "minecraft:attribute_modifiers": {
-                  "modifiers": [
-                    {
-                      "type": "minecraft:attack_damage",
-                      "amount": 8,
-                      "operation": "add_value",
-                      "id": "901b7aa0-1b23-47aa-8c9e-41ad383ea41b",
-                      "slot": "mainhand"
-                    },
-                    {
-                      "type": "minecraft:attack_speed",
-                      "amount": -2.4,
-                      "operation": "add_value",
-                      "id": "27e50835-4cde-4090-8bd4-0a1ae2709580",
-                      "slot": "mainhand"
-                    }
-                  ],
-                  "show_in_tooltip": false
-                }
+                "tooltip_display": {
+                  "hidden_components": ["attribute_modifiers", "unbreakable"]
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:attack_damage",
+                    "amount": 8,
+                    "operation": "add_value",
+                    "id": "901b7aa0-1b23-47aa-8c9e-41ad383ea41b",
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "minecraft:attack_speed",
+                    "amount": -2.4,
+                    "operation": "add_value",
+                    "id": "27e50835-4cde-4090-8bd4-0a1ae2709580",
+                    "slot": "mainhand"
+                  }
+                ]
               }
             },
             {

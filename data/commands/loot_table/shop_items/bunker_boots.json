@@ -32,11 +32,10 @@
                   "minecraft:blast_protection": 3,
                   "minecraft:projectile_protection": 2
                 },
-                "minecraft:dyed_color": {
-                  "rgb": 2245157
-                },
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": false
+                "minecraft:dyed_color": 2245157,
+                "minecraft:unbreakable": {},
+                "tooltip_display": {
+                  "hidden_components": ["unbreakable"]
                 }
               }
             },

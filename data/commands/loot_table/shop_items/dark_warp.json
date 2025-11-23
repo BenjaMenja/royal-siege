@@ -53,9 +53,6 @@
                     215
                   ]
                 },
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": false
-                },
                 "consumable": {
                   "consume_seconds": 1000000
                 },

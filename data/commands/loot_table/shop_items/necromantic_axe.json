@@ -53,11 +53,12 @@
                     115
                   ]
                 },
-                "minecraft:unbreakable": {
-                  "show_in_tooltip": false
-                },
+                "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
                   "minecraft:knockback": 1
+                },
+                "tooltip_display": {
+                  "hidden_components": ["unbreakable"]
                 }
               }
             },
