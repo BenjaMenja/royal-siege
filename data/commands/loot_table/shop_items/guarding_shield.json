@@ -28,7 +28,9 @@
                 "minecraft:enchantment_glint_override": true,
                 "minecraft:unbreakable": {},
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable"]
+                  "hidden_components": [
+                    "unbreakable"
+                  ]
                 },
                 "minecraft:custom_data": {
                   "guardingshield": 1

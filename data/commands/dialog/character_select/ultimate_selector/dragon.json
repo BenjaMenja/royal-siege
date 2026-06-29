@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "type": "text",
+    "text": "Dragon Ultimates"
+  },
+  "body": [
+    {
+      "type": "item",
+      "item": {
+        "id": "dragon_head"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "type": "text",
+        "text": "Which ultimate will you use?"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": "Meteor Shower",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 102"
+      }
+    },
+    {
+      "label": "Evolution",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 103"
+      }
+    }
+  ]
+}

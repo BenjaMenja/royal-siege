@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Astronaut Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The astronaut utilizes their array of tools to assist their teammates in unexpected ways.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Gravity Suit\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Your space suit alters how gravity affects you.\nYour jump height is increased and you fall slower.\nHolding the sneak button causes you to fall quickly."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/debris_cannon"
+        },
+        {
+          "text": " Debris Cannon"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nA cannon that fires debris particles that deal damage and slow for a short time.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 145"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/gravity_canceler"
+        },
+        {
+          "text": " Gravity Canceler"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nCreates an inverted gravity field around the user that lifts the user and enemies with 15 blocks in the air.\nLasts 6s and has a cooldown of 30s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 146"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/rocket_booster"
+        },
+        {
+          "text": " Rocket Booster"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 450 Siege Bucks\nA rocket booster that gives nearby teammates a large speed buff.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 147"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/safety_tether"
+        },
+        {
+          "text": " Safety Tether"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nTethers you to your current location when used.\nUsing again within 10s will teleport you back to that location.\nYou must be within 30 blocks of the tether for the teleport to work.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 148"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/barrier"
+        },
+        {
+          "text": " Steel Boots"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 550 Siege Bucks\nA pair of boots that gives slightly better armor and protection, 60% knockback resistance, and slightly increased gravity.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 149"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/enhanced_space_helmet"
+        },
+        {
+          "text": " Enhanced Space Helmet"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 650 Siege Bucks\nAn improved helmet that gives increased defense.\nAlso automatically removes blindness, poison, and wither debuffs from the wearer.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 150"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nYour fast fall creates a small explosion when you land.\nThe explosion activates every 15s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

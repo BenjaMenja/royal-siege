@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Welcome to the Bank!",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 300,
+      "contents": [
+        {
+          "text": "You can interface with your team's siege buck and corrupt credit bank here!\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Amount of Siege Bucks in bank: ",
+          "color": "aqua"
+        },
+        {
+          "text": "$(red)",
+          "color": "gold"
+        }
+      ]
+    }
+  ],
+  "columns": 4,
+  "actions": [
+    {
+      "label": {
+        "text": "Deposit 100"
+      },
+      "tooltip": {
+        "text": "Deposits 100 Siege Bucks into your team's bank.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 182"
+      }
+    },
+    {
+      "label": {
+        "text": "Deposit 250"
+      },
+      "tooltip": {
+        "text": "Deposits 250 Siege Bucks into your team's bank.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 183"
+      }
+    },
+    {
+      "label": {
+        "text": "Deposit 500"
+      },
+      "tooltip": {
+        "text": "Deposits 500 Siege Bucks into your team's bank.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 184"
+      }
+    },
+    {
+      "label": {
+        "text": "Deposit 1000"
+      },
+      "tooltip": {
+        "text": "Deposits 1000 Siege Bucks into your team's bank.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 185"
+      }
+    },
+    {
+      "label": {
+        "text": "Withdraw 100"
+      },
+      "tooltip": {
+        "text": "Withdraws 100 Siege Bucks from your team's bank.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 187"
+      }
+    },
+    {
+      "label": {
+        "text": "Withdraw 250"
+      },
+      "tooltip": {
+        "text": "Withdraws 250 Siege Bucks from your team's bank.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 188"
+      }
+    },
+    {
+      "label": {
+        "text": "Withdraw 500"
+      },
+      "tooltip": {
+        "text": "Withdraws 500 Siege Bucks from your team's bank.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 189"
+      }
+    },
+    {
+      "label": {
+        "text": "Withdraw 1000"
+      },
+      "tooltip": {
+        "text": "Withdraws 1000 Siege Bucks from your team's bank.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 190"
+      }
+    },
+    {
+      "label": {
+        "text": "Deposit All"
+      },
+      "tooltip": {
+        "text": "Deposits all of your Siege Bucks into your team's bank.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 186"
+      },
+      "width": 302
+    },
+    {
+      "label": {
+        "text": "Withdraw Corrupt Credit"
+      },
+      "tooltip": {
+        "text": "Withdraws one Corrupt Credit from your team's bank.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 67"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "pause": false,
+  "can_close_with_escape": true,
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  }
+}

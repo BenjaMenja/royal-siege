@@ -1,0 +1,57 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Settings",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "The settings menu allows for players to customize their playing experience. There are currently 5 settings to choose from."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "While most settings simply alter aspects of the base game, you can also choose which gamemode you want to play via this menu."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Royal Siege has two gamemodes: Classic and Team Deathmatch. Classic mode is the recommended way to play the game. Many of the mechanics described in these info pages, such as the king and team bases, are present in classic mode only."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Team Deathmatch offers a quicker way to enjoy the combat of Royal Siege. Team Deathmatch is simple: Get the required amount of kills before the opposing team does. The amount of kills required scales with the chosen player count."
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

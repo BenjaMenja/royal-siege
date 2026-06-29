@@ -1,0 +1,120 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Chef Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "dragon_head"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Strengths\n",
+          "bold": true,
+          "color": "red"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "red"
+        },
+        {
+          "type": "text",
+          "text": "Extremely high damage across melee and explosive damage types.\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "red"
+        },
+        {
+          "type": "text",
+          "text": "Excellent uptime on high power abilities.\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "red"
+        },
+        {
+          "type": "text",
+          "text": "Great movement options that can be improved throughout a match.\n\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "Weaknesses\n",
+          "bold": true,
+          "color": "blue"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "blue"
+        },
+        {
+          "type": "text",
+          "text": "One of the only characters with a detrimental passive ability.\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "blue"
+        },
+        {
+          "type": "text",
+          "text": "High explosive damage can affect teammates.\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "blue"
+        },
+        {
+          "type": "text",
+          "text": "Ultimates are rather niche and/or difficult to maximize value.\n",
+          "bold": false,
+          "color": "white"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Dragon Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/dragon/dragon_homepage"
+      }
+    }
+  ]
+}

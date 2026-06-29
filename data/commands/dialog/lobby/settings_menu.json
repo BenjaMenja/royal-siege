@@ -1,0 +1,129 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Settings",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "The settings menu allows players to modify aspects of your upcoming Royal Siege match."
+      }
+    }
+  ],
+  "columns": 1,
+  "actions": [
+    {
+      "label": [
+        {
+          "type": "text",
+          "text": "Time of Day: ",
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "Nighttime",
+          "color": "dark_gray"
+        }
+      ],
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 93"
+      },
+      "width": 200
+    },
+    {
+      "label": [
+        {
+          "type": "text",
+          "text": "Underground Area: ",
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "Enabled",
+          "color": "green"
+        }
+      ],
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 94"
+      },
+      "width": 200
+    },
+    {
+      "label": [
+        {
+          "type": "text",
+          "text": "Corrupt Credit System: ",
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "Enabled",
+          "color": "green"
+        }
+      ],
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 95"
+      },
+      "width": 200
+    },
+    {
+      "label": [
+        {
+          "type": "text",
+          "text": "Display Deaths: ",
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "Enabled",
+          "color": "green"
+        }
+      ],
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 96"
+      },
+      "width": 200
+    },
+    {
+      "label": [
+        {
+          "type": "text",
+          "text": "Gamemode: ",
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "Classic",
+          "color": "aqua"
+        }
+      ],
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 97"
+      },
+      "width": 200
+    },
+    {
+      "label": [
+        {
+          "type": "text",
+          "text": "Choose Map",
+          "color": "white"
+        }
+      ],
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 98"
+      },
+      "width": 200
+    }
+  ]
+}

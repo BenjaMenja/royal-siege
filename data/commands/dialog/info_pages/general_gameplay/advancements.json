@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Advancements",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Royal Siege has something in store for the hundred percenters and perfectionists of the world! Each character has their own unique character challenge that can be found via the advancements tab. In addition, there are a wide assortment of hidden achievements that can also be obtained. There is no in-game description for how to get these, and many are quite obscure. However, they do add an extra easter egg feel to the game when players come across them."
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

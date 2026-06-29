@@ -1,6 +1,6 @@
-execute if score #tdmMap settings matches 0 run spreadplayers 1051.5 -60.5 1 28 under 55 true @s
+execute if data storage royalsiege:settings {Maps:{TDM:{value:0}}} run spreadplayers 1051.5 -60.5 1 28 under 55 true @s
 
-execute if score #tdmMap settings matches 1 run spreadplayers 2008.5 0.5 1 30 under 55 true @s
+execute if data storage royalsiege:settings {Maps:{TDM:{value:1}}} run spreadplayers 2008.5 0.5 1 30 under 55 true @s
 
 effect give @s resistance 3 2 true
 

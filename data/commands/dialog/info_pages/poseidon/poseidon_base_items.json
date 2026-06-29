@@ -1,0 +1,246 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Poseidon Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              -1507039303,
+              -968802075,
+              -188404,
+              -75244524
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzY4ZWExM2ZiOGYzNGU0NDdkYmFiZGNjYzhmNzMzODU1MGQ4MTk1NjEzOTQ5NWFkZTA1MWQ0ZjM4ZGQ2NjJlIn19fQ=="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Base Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "trident",
+        "components": {
+          "attribute_modifiers": [
+            {
+              "type": "minecraft:attack_damage",
+              "amount": 8,
+              "operation": "add_value",
+              "id": "901b7aa0-1b23-47aa-8c9e-41ad383ea41b",
+              "slot": "mainhand"
+            },
+            {
+              "type": "minecraft:attack_speed",
+              "amount": -2.4,
+              "operation": "add_value",
+              "id": "27e50835-4cde-4090-8bd4-0a1ae2709580",
+              "slot": "mainhand"
+            }
+          ],
+          "tooltip_display": {
+            "hidden_components": [
+              "attribute_modifiers"
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Poseidon's Trident",
+            "color": "#00B5AF",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "An oldie but a goodie."
+            },
+            {
+              "text": "Its tines are still as sharp as they were countless millennia prior."
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "When in Main Hand:",
+              "color": "gray",
+              "italic": false
+            },
+            {
+              "text": " 8 Attack Damage",
+              "color": "dark_green",
+              "italic": false
+            },
+            {
+              "text": " 1.6 Attack Speed",
+              "color": "dark_green",
+              "italic": false
+            }
+          ],
+          "minecraft:enchantments": {
+            "minecraft:bane_of_arthropods": 3,
+            "minecraft:impaling": 5
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Poseidon's Trident",
+        "width": 150
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "snowball",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              48
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Lightning Spell",
+            "color": "yellow",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Throwable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Strikes lightning onto nearby enemies."
+            },
+            {
+              "text": "Has a radius of 4 blocks."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Lightning Spell",
+        "width": 150
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              31
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "#22FF00",
+            "italic": false,
+            "text": "Blossom"
+          },
+          "minecraft:lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Gives a burst of energy and healing to nearby allies."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Blossom",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              32
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "#228A12",
+            "italic": false,
+            "text": "Rooting Spell"
+          },
+          "minecraft:lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Right click to shoot a rooting beam."
+            },
+            {
+              "text": "Successful hits will root an enemy,"
+            },
+            {
+              "text": "freezing them in place for a short time."
+            },
+            {
+              "text": "Has a maximum range of 10 blocks."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Rooting Spell",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Ent Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/ent/ent_homepage"
+      }
+    }
+  ]
+}

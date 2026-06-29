@@ -1,0 +1,57 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Currency",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Siege Bucks are the fundamental resource of Royal Siege. They are obtained throughout a match via passive generation and active depositing of Siege Coins.\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Each team has a coin deposit pit in their base where stacks of coins can be turned into Siege Bucks. You can even use your opponent's pit!"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Siege Bucks can be used to purchase items and upgrades from your character's shop. Shop items alter your character's playstyle and introduce additional ways to assist your team."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Siege Bucks can be transferred to teammates via dropping Siege Coins to them or by using the in-game bank."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "The bank is an interface where the team's currency is kept. Teammates are free to deposit and withdraw any amount of money from it to make purchases."
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

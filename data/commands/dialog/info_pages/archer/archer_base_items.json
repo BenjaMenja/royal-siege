@@ -1,0 +1,157 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Archer Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              1506350569,
+              -2016000832,
+              -1167242250,
+              549915695
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTkzZWU1YmIwYzdmYWNjYTBmM2RmZTA5NDMwYzViODRhOTBlNjU4OGQwYTEwOTlkYTg1YjZlYWViODk1OGY5YSJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Base Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "bow",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              158
+            ]
+          },
+          "tooltip_display": {
+            "hidden_components": [
+              "attribute_modifiers"
+            ]
+          },
+          "minecraft:item_name": {
+            "italic": false,
+            "text": "Archer's Bow"
+          },
+          "minecraft:lore": [
+            {
+              "text": "It's a little less powerful than a standard Olympic bow,"
+            },
+            {
+              "text": "but a lot less bulky and far more maneuverable."
+            }
+          ],
+          "minecraft:enchantments": {
+            "minecraft:power": 3,
+            "minecraft:punch": 1,
+            "minecraft:infinity": 1
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Archer's Bow",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "arrow",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              12
+            ]
+          },
+          "minecraft:item_name": {
+            "italic": false,
+            "text": "Bottomless Quiver"
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Bottomless Quiver",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "wooden_axe",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              11
+            ]
+          },
+          "minecraft:enchantments": {
+            "minecraft:efficiency": 5,
+            "minecraft:unbreaking": 1
+          },
+          "tooltip_display": {
+            "hidden_components": [
+              "unbreakable",
+              "enchantments"
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "#00FFBB",
+            "italic": false,
+            "text": "Shield Buster"
+          },
+          "minecraft:lore": [
+            {
+              "text": "Useful to take down shields in a pinch."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Shield Buster",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Archer Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/archer/archer_homepage"
+      }
+    }
+  ]
+}

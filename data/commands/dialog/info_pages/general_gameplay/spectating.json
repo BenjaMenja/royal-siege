@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Spectating",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Spectating a game is possible, and can be done in a few ways. Spectating players are transported to the character select room as usual, but will be unable to join a team or choose a character. Once a match is begun, spectators are put into spectator mode and can freely fly around within the map boundaries."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "To become a spectator, players can use the spectator button on the first floor of the lobby to toggle becoming a spectator for the next match. If a player joins the server while a match is in session, then they will automatically become a spectator. Additionally, if there are more players online than the chosen player count, any extra players will automatically become spectators."
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

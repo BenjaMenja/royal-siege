@@ -1,0 +1,210 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Necromancer Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              176185138,
+              -1752612576,
+              -1724563900,
+              2041804660
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjk1NWZjYjE2ZjE1YTQ2MGMwMTA5YWZiOTc1Yzc5ZDkzOWE2ODdhYWUzZjhjMzdiNDM4OGU0YTViZjgwMjJmZCJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Base Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              208
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "#38008C",
+            "italic": false,
+            "text": "Necro Staff"
+          },
+          "minecraft:lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Contains the will of a thousand souls, but sometimes it's better off being used as a cudgel."
+            },
+            {
+              "text": "Right-clicking fires a beam that heals undead summons and the Broodmother Spider 15 HP."
+            },
+            {
+              "text": "Can be used every 16s."
+            },
+            {
+              "text": "Cooldown reduced to 3s if the beam misses."
+            },
+            {
+              "text": " "
+            },
+            {
+              "color": "gray",
+              "italic": false,
+              "text": "When in Main Hand:"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 8 Attack Damage"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 1 Attack Speed"
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Necro Staff",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              209
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "#a94ffd",
+            "italic": false,
+            "text": "Reanimation"
+          },
+          "lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Creates an undead summon at all of your dead teammate's locations."
+            },
+            {
+              "text": "Can be used every 60s."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Reanimation",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              210
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "#bebebe",
+            "italic": false,
+            "text": "Bone Shield"
+          },
+          "minecraft:lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Surrounds you and your teammates in an 8 block radius in a bone shield."
+            },
+            {
+              "text": "The shield increases your armor by 2, your total projectile protection by 2,"
+            },
+            {
+              "text": "and your total blast protection by 2."
+            },
+            {
+              "text": "Taking damage while the shield is active will deal 3 damage to the attacker."
+            },
+            {
+              "text": "Lasts 6s."
+            },
+            {
+              "text": "Can be used every 25s."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Bone Shield",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Necromancer Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/necromancer/necromancer_homepage"
+      }
+    }
+  ]
+}

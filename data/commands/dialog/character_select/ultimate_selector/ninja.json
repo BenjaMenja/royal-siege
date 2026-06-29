@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "type": "text",
+    "text": "Ninja Ultimates"
+  },
+  "body": [
+    {
+      "type": "item",
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              103604342,
+              -1386918995,
+              -1757972842,
+              74746554
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmY3MzMyNjk2MTRmZThhOWFlODlmNWM1ODI4NmFhNTNiOWUzODNmYzRkYzU3ZTM3ZWNiZmE1ZTkzYSJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "type": "text",
+        "text": "Which ultimate will you use?"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": "Shadow Step",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 78"
+      }
+    },
+    {
+      "label": "Invisibility Cloak",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 79"
+      }
+    }
+  ]
+}

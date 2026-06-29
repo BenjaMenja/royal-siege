@@ -148,7 +148,7 @@ execute if score #necromancertemp classInfo matches 1 unless entity @a[tag=win,s
 
 #Player Scores
 
-execute if score #gamemode settings matches 0 as @a run function commands:admin/add_player_class_info
+execute if data storage royalsiege:settings {Gamemode:0} as @a run function commands:admin/add_player_class_info
 
 #Reset temp scores
 

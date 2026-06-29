@@ -56,6 +56,9 @@
                 },
                 {
                   "text": "Gives nearby teammates speed and strength."
+                },
+                {
+                  "text": "When used, both this and defensive spell will go on cooldown."
                 }
               ],
               "mode": "append"

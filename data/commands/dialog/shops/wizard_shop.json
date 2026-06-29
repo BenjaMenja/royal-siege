@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Wizard Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The wizard uses a unique variety of spells to wreak havoc on the battlefield.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Minions\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Summon small wizard minions at your feet to attack enemies. Minions can last a maximum of 90s and will disappear when the wizard dies. Spawns every 20s."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/fishing_rod"
+        },
+        {
+          "text": " Lightning Rod"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 900 Siege Bucks\nA special kind of lightning staff.\nConcentrates lightning strikes onto a single point.\nCan be latched onto blocks and players.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 30"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/leather_boots"
+        },
+        {
+          "text": " Running Shoes"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nA pair of running shoes that gives you increased protection and +40% movement speed.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 31"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/minion_swarm"
+        },
+        {
+          "text": " Minion Swarm"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 700 Siege Bucks\nSummons a swarm of 6 wizard minions.\nUnlike naturally spawned ones, there is no limit on the amount of\nwizard minions spawned from swarms.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 32"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/lightning_spell"
+        },
+        {
+          "text": " Charger"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 350 Siege Bucks\nGives you 6 charges to your lightning staff and\nempowers your next fireball.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 33"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/poisonous_potato"
+        },
+        {
+          "text": " Rotting Potato"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 450 Siege Bucks\nPoisons an enemy when you strike them with it.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 34"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/exp_bomb_blaster"
+        },
+        {
+          "text": " Exp. Bomb Blaster"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 900 Siege Bucks\nShoots a spread of Exp. Bottles loaded with explosives.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 35"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nDecreases the cooldown for wizard minion spawns to 16s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

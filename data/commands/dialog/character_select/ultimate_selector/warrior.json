@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "type": "text",
+    "text": "Warrior Ultimates"
+  },
+  "body": [
+    {
+      "type": "item",
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              -1119675796,
+              -506206,
+              -2001385496,
+              -61856676
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2ZjYWNjYjRkM2U2MWI1OWEwM2U3ZmVlMDk4YTdjNmE0YTYzZGI5YjI5M2E4YmEyYThkMmFlMWY1OGZjZiJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "type": "text",
+        "text": "Which ultimate will you use?"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": "Cavalry Charge",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 88"
+      }
+    },
+    {
+      "label": "Rally",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 89"
+      }
+    }
+  ]
+}

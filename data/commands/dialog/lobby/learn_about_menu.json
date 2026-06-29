@@ -1,0 +1,30 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "What would you like to learn about?",
+      "color": "aqua"
+    }
+  ],
+  "columns": 1,
+  "actions": [
+    {
+      "label": {
+        "text": "General Gameplay"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 129"
+      }
+    },
+    {
+      "label": {
+        "text": "Characters"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 192"
+      }
+    }
+  ]
+}

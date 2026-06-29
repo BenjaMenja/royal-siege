@@ -1,0 +1,58 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "TDM Maps",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Which TDM map would you like to play?"
+      }
+    }
+  ],
+  "columns": 1,
+  "actions": [
+    {
+      "label": [
+        {
+          "type": "text",
+          "text": "Colosseum: ",
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "Active",
+          "color": "green"
+        }
+      ],
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 136"
+      },
+      "width": 200
+    },
+    {
+      "label": [
+        {
+          "type": "text",
+          "text": "New Chicago Skyline: ",
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "Active",
+          "color": "green"
+        }
+      ],
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 137"
+      },
+      "width": 200
+    }
+  ]
+}

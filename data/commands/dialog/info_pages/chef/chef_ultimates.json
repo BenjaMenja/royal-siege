@@ -1,0 +1,135 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Chef Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              1448200512,
+              773932192,
+              -2064052068,
+              -324220262
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZmNmYyYmUxNWE2Mzk0OWRiYzQ1OGRkNDEwYjE4NGYxOTAwMzQ1NTVlMWRlOTY2NWRjY2NlOWQ5YjhjMzZlYiJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Ultimates\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              104
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Dinner's Ready!",
+            "color": "yellow",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Creates a circle of food around the chef."
+            },
+            {
+              "text": "Nearby teammates receive a wide variety of offensive buffs."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Dinner's Ready!",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              136
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Pizza Time",
+            "color": "#FF5E00",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Overloads your active ovens."
+            },
+            {
+              "text": "Overloaded ovens shoot every second instead of every 8 seconds."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Pizza Time",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Chef Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/chef/chef_homepage"
+      }
+    }
+  ]
+}

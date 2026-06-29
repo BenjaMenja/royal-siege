@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Menu",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "The menu serves as a central location for players to access core in-game mechanics. It can be opened by using the quick menu hotkey (Default: G)."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "From this menu, players can open their character's shop, exchange with the team's bank, and warp back to your team's base. Warping takes 3 seconds to activate, and can be interruppted by taking damage. Warping is only available during a match."
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

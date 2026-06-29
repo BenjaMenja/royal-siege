@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "type": "text",
+    "text": "Poseidon Ultimates"
+  },
+  "body": [
+    {
+      "type": "item",
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              -1507039303,
+              -968802075,
+              -188404,
+              -75244524
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzY4ZWExM2ZiOGYzNGU0NDdkYmFiZGNjYzhmNzMzODU1MGQ4MTk1NjEzOTQ5NWFkZTA1MWQ0ZjM4ZGQ2NjJlIn19fQ=="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "type": "text",
+        "text": "Which ultimate will you use?"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": "Scourge of the Seas",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 82"
+      }
+    },
+    {
+      "label": "Terror of the Seas",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 83"
+      }
+    }
+  ]
+}

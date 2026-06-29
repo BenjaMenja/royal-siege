@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Characters",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Characters are the cornerstones of a team. There are a wide variety of characters to choose from, each with their own unique items, abilities, shops, and ultimates.\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Characters can range from fast-paced rushers to stalwart tanks to combat medics to mixed bag damage dealers. There's something for everyone to try!"
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Angel Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              330708613,
+              -1204793457,
+              -1642454402,
+              -2045380575
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzZmMDQ4NTQ1M2QzYTkwZjM1NDMyMWU4ZjM4MmJlZjEwNmJmNTA2NDI0ZjcwYzA0YTIwN2Y4MmJkYjI4NTZiOSJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Ultimates\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              70
+            ]
+          },
+          "tooltip_display": {
+            "hidden_components": [
+              "attribute_modifiers"
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Lifeforce",
+            "color": "#C90606",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Gives everyone on your team a big boost in health for a short time."
+            },
+            {
+              "text": "Teammates also receive increased health regeneration and instant healing."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Lifeforce",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              71
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Resurrection",
+            "color": "#4FFE74",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Resurrects a fallen ally, skipping the respawn timer and spawning them at their previous death location."
+            },
+            {
+              "text": "The angel must be within 3 blocks to start the resurrection."
+            },
+            {
+              "text": "Resurrection takes 3 seconds to complete."
+            },
+            {
+              "text": "Resurrection can be interrupted if the angel is moved 6 blocks away from the body after starting."
+            },
+            {
+              "text": "If it is interrupted, the angel is refunded 20% of their ultimate."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Resurrection",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Angel Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/angel/angel_homepage"
+      }
+    }
+  ]
+}

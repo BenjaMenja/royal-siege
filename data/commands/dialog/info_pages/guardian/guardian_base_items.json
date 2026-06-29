@@ -1,0 +1,178 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Guardian Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              -369259414,
+              -168932698,
+              -1520939587,
+              824470675
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q0NzMwYWQ1MmE5Yjk5Nzk1MGU2MzdlNTk1NDJmNjY2NDFhYTJmY2Q5OWFmM2E5Mzc3MzZmMDQyNjQyNjg4In19fQ=="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Base Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "iron_sword",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              154
+            ]
+          },
+          "tooltip_display": {
+            "hidden_components": [
+              "attribute_modifiers"
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "dark_gray",
+            "italic": false,
+            "text": "Guardian's Blade"
+          },
+          "minecraft:lore": [
+            {
+              "text": "The blade is so wide that the shield almost feels redundant."
+            },
+            {
+              "text": " "
+            },
+            {
+              "color": "gray",
+              "italic": false,
+              "text": "When in Main Hand:"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 7 Attack Damage"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 1.1 Attack Speed"
+            }
+          ],
+          "minecraft:enchantments": {
+            "minecraft:sweeping_edge": 3
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Guardian's Blade",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              19
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "#00FFBB",
+            "italic": false,
+            "text": "Defensive Spell"
+          },
+          "minecraft:lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Gives nearby teammates absorption and resistance."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Defensive Spell",
+        "width": 125
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "skeleton_spawn_egg",
+        "count": 2,
+        "components": {
+          "custom_model_data": {
+            "floats": [
+              95
+            ]
+          },
+          "item_name": {
+            "color": "#B8481F",
+            "italic": false,
+            "text": "Turret"
+          },
+          "lore": [
+            {
+              "text": "Placeable",
+              "color": "yellow",
+              "italic": false
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Turret",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Guardian Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/guardian/guardian_homepage"
+      }
+    }
+  ]
+}

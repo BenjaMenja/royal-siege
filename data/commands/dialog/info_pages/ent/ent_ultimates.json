@@ -1,0 +1,134 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Ent Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              922351862,
+              -2026683839,
+              -1211501750,
+              10060195
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWY1NzE5MmIxOTRjNjU4YWFhODg4MTY4NDhjYmNlN2M3NDk0NjZhNzkyYjhhN2UxZDNmYWZhNDFjNDRmMzQxMiJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Ultimates\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "bat_spawn_egg",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              78
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Tree of Life",
+            "color": "#22FF00",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Placeable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Sprouts a tree from the ground that provides healing to allies and damage to enemies."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Tree of Life",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              79
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Decay Aura",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Inflicts Wither III to nearby enemies."
+            },
+            {
+              "text": "Also reduces nearby enemies' attack damage by 3, movement speed by 15%, and armor points by 6."
+            },
+            {
+              "text": "Lasts 6 seconds."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Decay Aura",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Ent Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/ent/ent_homepage"
+      }
+    }
+  ]
+}

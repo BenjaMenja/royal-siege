@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Nurse's Office",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The school nurse takes care of their team using traditional and aggressive means.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Resourceful\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Tally the number of people affected by your ice packs. When this number reaches 8, instantly replenish 1 ice pack."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/defibrillator"
+        },
+        {
+          "text": " Defibrillator"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 650 Siege Bucks\nRestarts a teammate's heartbeat, rapidly healing them over 3s.\nMust be used on an ally below 10 HP.\nCan be used every 25s.\nCooldown reduced to 15s if missed, and 5s if used on an ally at or above 10 HP.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 199"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/light_up_shoes"
+        },
+        {
+          "text": " Light Up Shoes"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 550 Siege Bucks\nA pair of shoes that light up and change colors.\nProvides a slight increase to protection, armor, and movement speed.\nProvides glowing to enemies in a 10 block radius around you.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 200"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/first_aid_kit"
+        },
+        {
+          "text": " First Aid Kit"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 250 Siege Bucks\nA health pack that can be picked up by teammates, restoring 4 HP.\nTakes 3s to arm itself before teammates can use it.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 201"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/inhaler"
+        },
+        {
+          "text": " Inhaler"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 700 Siege Bucks\nItem that can be passed to the closest teammate by throwing the item.\nWhen held, grants a large speed boost, but lowers your armor.\nBuffs activate if the inhaler is the only item being held.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 202"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/trauma_shears"
+        },
+        {
+          "text": " Trauma Shears"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 650 Siege Bucks\nDeals slightly more damage than your thermometer.\nAdditionally inflicts Bleed I on enemies for 3s.\nAdditional hits refresh this bleed effect.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 203"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/live_attenuated_vaccine"
+        },
+        {
+          "text": " Live-Attenuated Vaccine"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nInjects a weak virus into a teammate, inflicting slowness, weakness, and nausea for 4s.\nAfter the debuffs expire, the teammate becomes immune to them as well as armor reduction for the rest of the current life.\nHas a max range of 2 blocks.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 204"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nReduces the player requirement for the passive from 8 to 6.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

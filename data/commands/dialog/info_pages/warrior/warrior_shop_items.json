@@ -1,0 +1,260 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Warrior Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              -1119675796,
+              -506206,
+              -2001385496,
+              -61856676
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2ZjYWNjYjRkM2U2MWI1OWEwM2U3ZmVlMDk4YTdjNmE0YTYzZGI5YjI5M2E4YmEyYThkMmFlMWY1OGZjZiJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Shop Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "shield",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              64
+            ]
+          },
+          "tooltip_display": {
+            "hidden_components": [
+              "attribute_modifiers"
+            ]
+          },
+          "minecraft:item_name": "Warrior Shield",
+          "minecraft:lore": [
+            {
+              "text": "A shield that grants you increased"
+            },
+            {
+              "text": "max health and attack damage."
+            }
+          ],
+          "minecraft:attribute_modifiers": [
+            {
+              "type": "minecraft:max_health",
+              "amount": 4,
+              "operation": "add_value",
+              "id": "ddf3f095-c386-4ec5-a693-a701ef0516b3",
+              "slot": "offhand"
+            },
+            {
+              "type": "minecraft:attack_damage",
+              "amount": 0.1,
+              "operation": "add_multiplied_base",
+              "id": "225c60a3-c647-4a45-b8e0-2ffc27198538",
+              "slot": "offhand"
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Warrior Shield",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "iron_axe",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Valkyrie Axe",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "A high damage axe with a slow attack speed."
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "When in Main Hand:",
+              "color": "gray",
+              "italic": false
+            },
+            {
+              "text": " 13 Attack Damage",
+              "color": "dark_green",
+              "italic": false
+            },
+            {
+              "text": " 0.65 Attack Speed",
+              "color": "dark_green",
+              "italic": false
+            }
+          ],
+          "tooltip_display": {
+            "hidden_components": [
+              "unbreakable",
+              "attribute_modifiers"
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Valkyrie Axe",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "iron_chestplate",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Knight's Plate",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "A much more powerful iron chestplate."
+            }
+          ],
+          "minecraft:enchantments": {
+            "minecraft:protection": 3,
+            "minecraft:projectile_protection": 3,
+            "minecraft:blast_protection": 3
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Knight's Plate",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "potion",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Warrior Strength",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "A long lasting strength potion."
+            }
+          ],
+          "minecraft:potion_contents": {
+            "custom_color": 8519680,
+            "custom_effects": [
+              {
+                "id": "minecraft:strength",
+                "amplifier": 0,
+                "duration": 1000,
+                "show_particles": false
+              }
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Warrior Strength",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "lapis_lazuli",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Strength Stone",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Increases attack damage when in your offhand."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              7
+            ]
+          },
+          "minecraft:enchantment_glint_override": true,
+          "attribute_modifiers": [
+            {
+              "type": "minecraft:attack_damage",
+              "amount": 0.35,
+              "operation": "add_multiplied_base",
+              "id": "add8793f-8518-4020-9970-0ffc85f94654",
+              "slot": "offhand"
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Strength Stone",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "golden_apple",
+        "count": 2
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "2 Golden Apples",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Warrior Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/warrior/warrior_homepage"
+      }
+    }
+  ]
+}

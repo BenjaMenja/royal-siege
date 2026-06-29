@@ -1,0 +1,50 @@
+{
+  "type": "dialog_list",
+  "title": [
+    {
+      "text": "Royal Siege Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": {
+        "text": "Welcome to Royal Siege!",
+        "color": "aqua"
+      }
+    },
+    {
+      "type": "plain_message",
+      "contents": {
+        "text": "This guide aims to familiarize players with the ins and outs of Royal Siege. Press any of the buttons to learn more about a particular aspect of the game.",
+        "color": "aqua"
+      }
+    },
+    {
+      "type": "plain_message",
+      "contents": {
+        "text": "",
+        "color": "white"
+      }
+    }
+  ],
+  "columns": 2,
+  "dialogs": [
+    "commands:info_pages/general_gameplay/introduction",
+    "commands:info_pages/general_gameplay/starting_the_game",
+    "commands:info_pages/general_gameplay/characters",
+    "commands:info_pages/general_gameplay/teams",
+    "commands:info_pages/general_gameplay/currency",
+    "commands:info_pages/general_gameplay/abilities",
+    "commands:info_pages/general_gameplay/ultimates",
+    "commands:info_pages/general_gameplay/your_king",
+    "commands:info_pages/general_gameplay/menu",
+    "commands:info_pages/general_gameplay/settings",
+    "commands:info_pages/general_gameplay/health",
+    "commands:info_pages/general_gameplay/corrupt_credits",
+    "commands:info_pages/general_gameplay/spectating",
+    "commands:info_pages/general_gameplay/advancements",
+    "commands:info_pages/general_gameplay/ending_the_game"
+  ]
+}

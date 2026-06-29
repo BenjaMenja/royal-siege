@@ -1,0 +1,162 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Dragon Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "dragon_head"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Base Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "ghast_tear",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              108
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "yellow",
+            "italic": false,
+            "text": "Dragon Claw"
+          },
+          "minecraft:lore": [
+            {
+              "text": "Don't even think about making any manicure jokes."
+            },
+            {
+              "text": " "
+            },
+            {
+              "color": "gray",
+              "italic": false,
+              "text": "When in Main Hand:"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 9 Attack Damage"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 1.6 Attack Speed"
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Dragon Claw",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              110
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "#4000A1",
+            "italic": false,
+            "text": "Dragon Rage"
+          },
+          "lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Shoots a weak dragon fireball in the direction you are facing."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Dragon Rage",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              109
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "#4000A1",
+            "italic": false,
+            "text": "Dragon Rush"
+          },
+          "lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Teleports you 10 blocks in the direction you're facing, after a brief startup."
+            },
+            {
+              "text": "Teleporting through an enemy will cause them to blow up."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Dragon Rush",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Dragon Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/dragon/dragon_homepage"
+      }
+    }
+  ]
+}

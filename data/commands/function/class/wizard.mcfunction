@@ -34,7 +34,7 @@ scoreboard players set @s[tag=!dababy,tag=nonspec,tag=randomized] ultCheck 0
 
 tag @s[tag=nonspec,tag=randomized] remove readyUp
 
-tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Kerfuffle]","color":"green","click_event":{"action":"run_command","command":"/trigger textClick set 90"}},{"text":" "},{"text":"[Overcharge]","color":"green","click_event":{"action":"run_command","command":"/trigger textClick set 91"}}]
+dialog show @s[tag=!dababy,tag=nonspec,tag=randomized] commands:character_select/ultimate_selector/wizard
 
 tag @s remove dababy
 

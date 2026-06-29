@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Abilities",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Abilities are a core component of a character's kit and identity. They serve as cooldown-based actions that cover a wide range of functions.\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Abilities can include, but are not limited to: Thrown projectiles, Movement options, Beam attacks, Healing pulses, and Self buffs, just to name a few."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Abilities are activated by using the ability's item in your hotbar. Text appears in the description of each ability with a brief note on how to use the ability."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Once an ability is used, it is either consumed or will go on cooldown. Cooldowns appear above your hotbar with a number that displays how many seconds until your ability is ready to use."
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

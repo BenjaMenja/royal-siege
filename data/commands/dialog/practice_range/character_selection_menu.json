@@ -1,0 +1,139 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Character Selection Menu",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Who would you like to play?"
+        }
+      ]
+    }
+  ],
+  "columns": 3,
+  "actions": [
+    {
+      "label": "Warrior",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 154"
+      }
+    },
+    {
+      "label": "Ninja",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 155"
+      }
+    },
+    {
+      "label": "Guardian",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 156"
+      }
+    },
+    {
+      "label": "Angel",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 157"
+      }
+    },
+    {
+      "label": "Archer",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 158"
+      }
+    },
+    {
+      "label": "Wizard",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 159"
+      }
+    },
+    {
+      "label": "Pirate",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 160"
+      }
+    },
+    {
+      "label": "Ent",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 161"
+      }
+    },
+    {
+      "label": "Poseidon",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 162"
+      }
+    },
+    {
+      "label": "Robot",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 163"
+      }
+    },
+    {
+      "label": "Chef",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 164"
+      }
+    },
+    {
+      "label": "Dragon",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 165"
+      }
+    },
+    {
+      "label": "Gambler",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 166"
+      }
+    },
+    {
+      "label": "Astronaut",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 167"
+      }
+    },
+    {
+      "label": "Firecracker",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 180"
+      }
+    },
+    {
+      "label": "School Nurse",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 207"
+      }
+    },
+    {
+      "label": "Necromancer",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 218"
+      }
+    }
+  ]
+}

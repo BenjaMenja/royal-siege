@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "type": "text",
+    "text": "Robot Ultimates"
+  },
+  "body": [
+    {
+      "type": "item",
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              1875422177,
+              577324483,
+              -1208308071,
+              1214094985
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTNmMzA4MjNlOTk3NGNhNWFhYTJjMDE5MzA4Yjg0MjQ5ODQ1ZjBiOWFjYTZhYTExMTkxY2UyN2RhYzcwZTk2OCJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "type": "text",
+        "text": "Which ultimate will you use?"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": "System Reboot",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 86"
+      }
+    },
+    {
+      "label": "Artificial Intelligence",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 87"
+      }
+    }
+  ]
+}

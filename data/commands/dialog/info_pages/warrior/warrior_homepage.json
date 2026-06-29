@@ -1,0 +1,90 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Warrior Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              -1119675796,
+              -506206,
+              -2001385496,
+              -61856676
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2ZjYWNjYjRkM2U2MWI1OWEwM2U3ZmVlMDk4YTdjNmE0YTYzZGI5YjI5M2E4YmEyYThkMmFlMWY1OGZjZiJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "The warrior was always born to be a brawler. His melee capabilities make him a terrifying close range opponent.\n"
+        },
+        {
+          "type": "text",
+          "text": "Select an option below to learn more about the warrior."
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Strengths / Weaknesses"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/warrior/warrior_strengths_weaknesses"
+      }
+    },
+    {
+      "label": {
+        "type": "text",
+        "text": "Base Items"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/warrior/warrior_base_items"
+      }
+    },
+    {
+      "label": {
+        "type": "text",
+        "text": "Ultimates"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/warrior/warrior_ultimates"
+      }
+    },
+    {
+      "label": {
+        "type": "text",
+        "text": "Shop Items"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/warrior/warrior_shop_items"
+      }
+    }
+  ]
+}

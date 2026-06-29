@@ -1,0 +1,319 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Necromancer Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              176185138,
+              -1752612576,
+              -1724563900,
+              2041804660
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjk1NWZjYjE2ZjE1YTQ2MGMwMTA5YWZiOTc1Yzc5ZDkzOWE2ODdhYWUzZjhjMzdiNDM4OGU0YTViZjgwMjJmZCJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Shop Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "snowball",
+        "count": 2,
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              211
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Necro Bone",
+            "color": "#797979",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Throwable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "A harvested bone that can be thrown at enemies."
+            },
+            {
+              "text": "The bone deals 5 damage and heals the user 2 HP."
+            },
+            {
+              "text": "Can have a max of 4 of these at once."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Necro Bone",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "gold_ingot",
+        "components": {
+          "item_name": {
+            "text": "Mind Inversion",
+            "color": "dark_purple",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Drop onto an enemy minion to force them to switch teams."
+            },
+            {
+              "text": "Cannot be used on ultimate minions such as Terror of the Seas."
+            },
+            {
+              "text": "Lasts 10 seconds."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              218
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Mind Inversion",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Undead Whistle",
+            "italic": false,
+            "color": "#f87e26"
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Calls all of your team's summons within 25 blocks to your location."
+            },
+            {
+              "text": "Can be used every 45s."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              212
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Undead Whistle",
+        "width": 150
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Vengeance",
+            "italic": false,
+            "color": "#4c180a"
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "When used, counts the amount of damage taken by yourself and teammates within 10 blocks."
+            },
+            {
+              "text": "After 5s, gives you and teammates within 10 blocks armor equal to 20% of the total damage taken."
+            },
+            {
+              "text": "Also gives 2 extra protection levels if the total damage taken is over 20."
+            },
+            {
+              "text": "The additional defense lasts 6s."
+            },
+            {
+              "text": "Can be used every 30s."
+            }
+          ],
+          "custom_model_data": {
+            "floats": [
+              213
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Vengeance",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Broodmother Spider",
+            "italic": false,
+            "color": "#3e003c"
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Summons a powerful spider to aid you in combat."
+            },
+            {
+              "text": "The spider has a large amount of health, deals a moderate amount of damage, and poisons enemies."
+            },
+            {
+              "text": "Enemies that die to the spider release a pack of 4 cave spiders that have low health, deal low damage, and poison enemies."
+            },
+            {
+              "text": "Can only have 1 spider active and in your inventory at once."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              214
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Broodmother Spider",
+        "width": 150
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Dark Warp",
+            "italic": false,
+            "color": "#391163"
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Warps you to the closest undead summon or Broodmother Spider within 15 blocks."
+            },
+            {
+              "text": "The teleport leaves behind a weak undead summon."
+            },
+            {
+              "text": "Warping again will not teleport you to this summon."
+            },
+            {
+              "text": "Can be used every 15s."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              215
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Dark Warp",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Necromancer Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/necromancer/necromancer_homepage"
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Teams",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Teams are made simple: Red vs. Blue. When players are moved to the character select room, teams are randomized where half of the selected player count moves to red, and the rest move to blue.\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Players on your team cannot damage each other through most means (barring some explosion damage). They can, however, damage friendly non-players, including your own king."
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

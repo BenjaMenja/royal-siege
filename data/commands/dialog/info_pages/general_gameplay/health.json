@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Health",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Royal Siege uses Minecraft's health system to control all entities' health and all events that can modify health. Players can see their teammates' health as number values above their name tag. You can also see enemy health values via the player list menu (Default: TAB)."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "When a player's health reaches 0, they are killed and temporarily removed from the match. Dead players are placed in an invisible chamber above the battlefield where they must wait for a countdown before respawning."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Respawning takes 10 seconds from death until you are placed back in your team base's spawnpoint. If the amtch time is over 15 minutes, respawning will take 15 seconds instead."
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

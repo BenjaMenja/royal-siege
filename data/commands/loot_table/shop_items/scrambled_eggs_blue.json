@@ -30,7 +30,7 @@
                   "text": "Shoots a scrambling egg."
                 },
                 {
-                  "text": "Scrambles up an enemy's hotbar when hit."
+                  "text": "Scrambles up an enemy's hotbar on hit."
                 }
               ],
               "mode": "insert"

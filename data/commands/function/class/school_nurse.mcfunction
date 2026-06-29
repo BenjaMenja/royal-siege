@@ -34,7 +34,7 @@ scoreboard players set @s[tag=!dababy,tag=nonspec,tag=randomized] ultCheck 0
 
 tag @s[tag=nonspec,tag=randomized] remove readyUp
 
-tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Universal Health Care]","color":"green","click_event":{"action":"run_command","command":"/trigger textClick set 205"}},{"text":" "},{"text":"[10 Hour Energy]","color":"green","click_event":{"action":"run_command","command":"/trigger textClick set 206"}}]
+dialog show @s[tag=!dababy,tag=nonspec,tag=randomized] commands:character_select/ultimate_selector/school_nurse
 
 tag @s remove dababy
 

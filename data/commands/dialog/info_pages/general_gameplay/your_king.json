@@ -1,0 +1,66 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Your King",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "The King is the focal point of your team in classic mode. He resides in your team's base in a special throne room. Due to his age, he cannot leave his throne through traditional means."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "The king fights back against unsuspecting enemies by dealing massive melee damage and knockback. He also has a pair of royal guards that chase and attack enemies within the throne room. Once slain, these guards take 2 minutes to respawn."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "In the menu, you'll notice that you can activate your king through the King Activation tool. This tool costs Siege Bucks, but allows the king to move for 5 seconds. Continuous purchases increase the timer by 5 seconds."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Each team's king has their health displayed at the top of the screen as a health bar. Use this to strategize about attacking the opponent versus defending your own king."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "If a match has been going on for over 15 minutes, kings start to lose 1 HP per second. This can eliminate your king, so be careful!"
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

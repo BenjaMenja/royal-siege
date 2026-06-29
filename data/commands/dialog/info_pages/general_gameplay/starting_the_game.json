@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Starting the Game",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Starting the game is simple, only requiring a few steps to configure the game and jump into character selection.\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "To begin, select the number of players using the wall of signs. This is important to set up core game start mechanics."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Now, before moving to the character select room, make note of the signs at the desk of the first floor. Here, you can change game settings, reopen this guide, or choose to become a spectator."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Once all pre-select settings have been set, it's time to select your character. Pressing the sign will move all players to the character select room and randomize the teams. Here, players can learn about and select characters, swap teams if necessary, and finally, ready up. Once all players have readied up, the game automatically starts."
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

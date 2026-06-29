@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Corrupt Credits",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Corrupt Credits are an additional form of currency that add a hint of randomness to a match. Credits spawn as an item at the battlefield's beacon every minute, and can be deposited into the team's bank similar to Siege Coins."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Corrupt Credits can be traded with Mysterious Men, which are hidden traders that will offer gimmick items of varying quality in exchange for these credits. The Mysterious Men are accessible in a different location on every map. When a match starts, 3 random items are selected from a pool of corrupt items and placed into the trader's stock."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Although corrupt credits are on by default, they can be toggled off via the settings menu."
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

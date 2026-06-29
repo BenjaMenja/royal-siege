@@ -1,0 +1,136 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Archer Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              1506350569,
+              -2016000832,
+              -1167242250,
+              549915695
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTkzZWU1YmIwYzdmYWNjYTBmM2RmZTA5NDMwYzViODRhOTBlNjU4OGQwYTEwOTlkYTg1YjZlYWViODk1OGY5YSJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Strengths\n",
+          "bold": true,
+          "color": "red"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "red"
+        },
+        {
+          "type": "text",
+          "text": "Very strong, consistent projectile damage.\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "red"
+        },
+        {
+          "type": "text",
+          "text": "High potential movement speed can help escape incoming threats.\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "red"
+        },
+        {
+          "type": "text",
+          "text": "Ultimates can easily take care of enemy teams with proper use.\n\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "Weaknesses\n",
+          "bold": true,
+          "color": "blue"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "blue"
+        },
+        {
+          "type": "text",
+          "text": "Struggles in close range combat.\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "blue"
+        },
+        {
+          "type": "text",
+          "text": "Requires consistent projectile accuracy to maximize kit value.\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "blue"
+        },
+        {
+          "type": "text",
+          "text": "Ultimates, although powerful, have the highest cost to use out of all characters.\n",
+          "bold": false,
+          "color": "white"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Archer Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/archer/archer_homepage"
+      }
+    }
+  ]
+}

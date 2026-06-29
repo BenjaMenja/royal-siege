@@ -14,7 +14,7 @@ team add parkour
 
 #Gamerules
 
-gamerule doImmediateRespawn true
+gamerule immediate_respawn true
 
 #Constants
 

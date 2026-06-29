@@ -1,0 +1,141 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "School Nurse Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              -238284530,
+              1919240605,
+              -1546129992,
+              1798622527
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI1OTUwOTk0ZWFhOTUzNGM0ZWVlMmNmN2IxZThjNjAxOGZlYTEzOWYyZDIwNTNkNDE4NTE4MTAyNzYyNzE3YSJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Ultimates\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              205
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Universal Health Care",
+            "color": "red",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Gives all teammates a temporary health care plan."
+            },
+            {
+              "text": "All teammates are granted 2HP lifesteal every time they land a melee hit."
+            },
+            {
+              "text": "Lasts 10s."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Universal Health Care",
+        "width": 150
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              206
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "10 Hour Energy",
+            "color": "#ec6c17",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "When you've got a long work day ahead of you..."
+            },
+            {
+              "text": "Grants you and your attached ally a massive speed boost."
+            },
+            {
+              "text": "Lasts 6s."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "10 Hour Energy",
+        "width": 150
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to School Nurse Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/school_nurse/school_nurse_homepage"
+      }
+    }
+  ]
+}

@@ -8,9 +8,9 @@ execute as @a[tag=!spectator] unless score @s damageKing matches 1.. run advance
 
 #Adding Stuff to Class Info
 
-execute if score #gamemode settings matches 0 run function commands:admin/add_to_class_info
+execute if data storage royalsiege:settings {Gamemode:0} run function commands:admin/add_to_class_info
 
-execute if score #gamemode settings matches 1 run function commands:admin/add_to_class_info_tdm
+execute if data storage royalsiege:settings {Gamemode:1} run function commands:admin/add_to_class_info_tdm
 
 execute as @a run function commands:other/reset_scores
 

@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Dragon Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The gambler uses sheer luck and number manipulation to create advantages for their team.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Money Manipulator\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Landing a final blow on a player causes them to have a 25% of dropping an extra Siege Coin."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/russian_roulette"
+        },
+        {
+          "text": " Russian Roulette"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nFires a powerful bullet that pierces with a 16.66% success rate.\nCan be used every 5s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 116"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/barrier"
+        },
+        {
+          "text": " Betting Chips"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - Varies\nPlaces a bounty on an enemy player.\nIf that player is killed within 20s, you will receive double your bet.\nYou will select a bet amount after selecting this item.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 117"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/insurance"
+        },
+        {
+          "text": " Insurance"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 900 Siege Bucks\nWhile this is in your inventory, all new money your team drops on death will be claimed for 100 Siege Bucks.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 118"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/inspection"
+        },
+        {
+          "text": " Inspection"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nInforms your team on every player that currently has their ultimate.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 119"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/security_guard"
+        },
+        {
+          "text": " Security Guard"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nA security guard that chases the enemy with the most amount of money.\nYou can have a max of 2 guards in your inventory and on the field at once.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 120"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/coin_gun"
+        },
+        {
+          "text": " Coin Gun"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 300 Siege Bucks\nA gun that fires your own money at the enemy.\nConsumes 100 money per shot, but deals good damage.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 121"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nIncreases the chance for an additional coin to drop from enemy deaths from 25% to 50%.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

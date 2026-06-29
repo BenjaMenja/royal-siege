@@ -1,0 +1,74 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Dragon Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "dragon_head"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 568,
+      "contents": [
+        {
+          "type": "text",
+          "text": "The dragon rains destruction on the battlefield with chaotic abilities and weapons.\n"
+        },
+        {
+          "type": "text",
+          "text": "Select an option below to learn more about the dragon."
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Strengths / Weaknesses"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/dragon/dragon_strengths_weaknesses"
+      }
+    },
+    {
+      "label": {
+        "type": "text",
+        "text": "Base Items"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/dragon/dragon_base_items"
+      }
+    },
+    {
+      "label": {
+        "type": "text",
+        "text": "Ultimates"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/dragon/dragon_ultimates"
+      }
+    },
+    {
+      "label": {
+        "type": "text",
+        "text": "Shop Items"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/dragon/dragon_shop_items"
+      }
+    }
+  ]
+}

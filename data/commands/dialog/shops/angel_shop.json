@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Angel Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The angel uses her arsenal of supportive abilities to turn the tides in combat.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Pixie Helper\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Healing teammates 6 times in total will summon a pixie to help you in battle. The pixie automatically heals the lowest health person on your team every 8s. Taking too much damage will kill the pixie."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/health_stone"
+        },
+        {
+          "text": " Health Stone"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 700 Siege Bucks\nA stone that gives you massively increased max health\nwhen in your offhand.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 19"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/shielding_spell"
+        },
+        {
+          "text": " Shielding Spell"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 550 Siege Bucks\nA spell that gives 12 shield health to allies within 10 blocks.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 20"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/angelic_blessing"
+        },
+        {
+          "text": " Angelic Blessing"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 750 Siege Bucks\nBlesses a targeted ally upon use.\nBlessed allies receive your spell effects from any distance.\nThey also receive an additional Regeneration II effect for 3s\nwhen targeted by Angelic Staff's right-click ability.\nHas a cooldown of 6s to switch targets.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 21"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/vigor_spell"
+        },
+        {
+          "text": " Vigor Spell"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 550 Siege Bucks\nA spell that grants +2 attack damage, +15% movement speed, Jump Boost I,\nand Fire Resistance to allies within 10 blocks for 20s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 22"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/rejuvenating_spell"
+        },
+        {
+          "text": " Rejuvenating Spell"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 450 Siege Bucks\nA spell that grants +6 HP/s health regeneration to allies within 10 blocks for 3s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 23"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/magic_wand"
+        },
+        {
+          "text": " Magic Wand"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nA stronger version of the Angelic Staff.\nGives +0.8 HP/s health regeneration to allies within 10 blocks for 7s when you deal damage.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 24"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nReduce the healing cooldown for the pixie from 8s to 6s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "type": "text",
+    "text": "School Nurse Ultimates"
+  },
+  "body": [
+    {
+      "type": "item",
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              -238284530,
+              1919240605,
+              -1546129992,
+              1798622527
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI1OTUwOTk0ZWFhOTUzNGM0ZWVlMmNmN2IxZThjNjAxOGZlYTEzOWYyZDIwNTNkNDE4NTE4MTAyNzYyNzE3YSJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "type": "text",
+        "text": "Which ultimate will you use?"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": "Universal Health Care",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 205"
+      }
+    },
+    {
+      "label": "10 Hour Energy",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 206"
+      }
+    }
+  ]
+}

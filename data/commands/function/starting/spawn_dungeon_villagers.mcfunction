@@ -35,24 +35,24 @@ execute if score #rng RNG matches 8 run summon minecraft:villager -1215 54 1260 
 
 execute if score #rng RNG matches 8 run summon minecraft:villager -1215 54 1260 {Invulnerable:1b,Team:"Blue",PersistenceRequired:1b,CustomName:'{"text":"Mysterious Man"}',attributes:[{id:movement_speed,base:0}],VillagerData:{level:2,profession:"minecraft:farmer",type:"minecraft:plains"},Offers:{Recipes:[{rewardExp:0b,maxUses:2147483647,uses:0,buy:{id:"minecraft:ender_eye",count:2,components:{"minecraft:custom_name":'{"italic":false,"text":"Corrupt Credit"}',"minecraft:custom_model_data":{floats:[27]}}},sell:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_name":'{"color":"gray","italic":false,"text":"Castle Chain"}',"minecraft:lore":['{"color":"yellow","italic":false,"text":"Right-click to use"}','{"text":" "}','{"text":"Forms a long chain connecting your castle to the enemy\'s"}','{"text":"Lasts 30 seconds."}'],"minecraft:custom_model_data":{floats:[127]},"minecraft:custom_data":{castlechain:1b},"minecraft:food":{nutrition:0,saturation:0,can_always_eat:true},"minecraft:consumable":{consume_seconds:1000000}}}},{rewardExp:0b,maxUses:2147483647,uses:0,buy:{id:"minecraft:ender_eye",count:3,components:{"minecraft:custom_name":'{"italic":false,"text":"Corrupt Credit"}',"minecraft:custom_model_data":{floats:[27]}}},sell:{id:"minecraft:iron_ingot",count:1,components:{"minecraft:custom_name":'{"color":"gold","italic":false,"text":"Gold Magnet"}',"minecraft:lore":['{"text":"Magnetizes all siege coins towards you when in your inventory."}','{"text":"Filters out fake money, leaving it on the ground."}'],"minecraft:custom_model_data":{floats:[128]},"minecraft:custom_data":{goldmagnet:1b}}}},{rewardExp:0b,maxUses:2147483647,uses:0,buy:{id:"minecraft:ender_eye",count:2,components:{"minecraft:custom_name":'{"italic":false,"text":"Corrupt Credit"}',"minecraft:custom_model_data":{floats:[27]}}},sell:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_name":'{"color":"dark_red","italic":false,"text":"Killer King"}',"minecraft:lore":['{"color":"yellow","italic":false,"text":"Right-click to use"}','{"text":" "}','{"text":"When used, your king\'s next attack will deal tremendous amounts of damage."}'],"minecraft:custom_model_data":{floats:[129]},"minecraft:custom_data":{killerking:1b},"minecraft:food":{nutrition:0,saturation:0,can_always_eat:true},"minecraft:consumable":{consume_seconds:1000000}}}}]}}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 run tp @e[type=villager,team=Red] -20 25 -145
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run tp @e[type=villager,team=Red] -20 25 -145
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 run tp @e[type=villager,team=Blue] -18 25 -145
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run tp @e[type=villager,team=Blue] -18 25 -145
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 run tp @e[type=villager,team=Red] 103 53 -1060
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run tp @e[type=villager,team=Red] 103 53 -1060
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 run tp @e[type=villager,team=Blue] 83 53 -1080
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run tp @e[type=villager,team=Blue] 83 53 -1080
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 run tp @e[type=villager,team=Red] 96 56 -1971
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run tp @e[type=villager,team=Red] 96 56 -1971
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 run tp @e[type=villager,team=Blue] -58 56 1971
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run tp @e[type=villager,team=Blue] -58 56 1971
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 run tp @e[type=villager,team=Red] 1086 53 -59
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:0}}} run tp @e[type=villager,team=Red] 1086 53 -59
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 run tp @e[type=villager,team=Blue] 1015 53 -63
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:0}}} run tp @e[type=villager,team=Blue] 1015 53 -63
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 1 run tp @e[type=villager,team=Red] 2043 106 -33
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:1}}} run tp @e[type=villager,team=Red] 2043 106 -33
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 1 run tp @e[type=villager,team=Blue] 1974 106 33
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:1}}} run tp @e[type=villager,team=Blue] 1974 106 33
 
 scoreboard players reset #rng RNG

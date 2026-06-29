@@ -25,7 +25,9 @@
                   "lightdagger": 1
                 },
                 "tooltip_display": {
-                  "hidden_components": ["attribute_modifiers"]
+                  "hidden_components": [
+                    "attribute_modifiers"
+                  ]
                 },
                 "minecraft:attribute_modifiers": [
                   {
@@ -61,7 +63,7 @@
                   "text": "Sturdy and razor sharp, made the traditional way in Japan."
                 },
                 {
-                  "text": "You don’t want to know how many shifts at Taco Bell it took to get this."
+                  "text": "You don't want to know how many shifts at Taco Bell it took to get this."
                 },
                 {
                   "text": " "

@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "type": "text",
+    "text": "Necromancer Ultimates"
+  },
+  "body": [
+    {
+      "type": "item",
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              176185138,
+              -1752612576,
+              -1724563900,
+              2041804660
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjk1NWZjYjE2ZjE1YTQ2MGMwMTA5YWZiOTc1Yzc5ZDkzOWE2ODdhYWUzZjhjMzdiNDM4OGU0YTViZjgwMjJmZCJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "type": "text",
+        "text": "Which ultimate will you use?"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": "Undead Army",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 215"
+      }
+    },
+    {
+      "label": "Soul Reaper",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 216"
+      }
+    }
+  ]
+}

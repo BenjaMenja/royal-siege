@@ -1,0 +1,57 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Ultimates",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Ultimates are powerful abilities that can tip the scales of a battle in the blink of an eye. Each character has two they can pick from during the character selection process."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Instead of having traditional cooldowns, ultimates have Charge Costs. Charge costs show how many in game ticks an ultimate takes to charge passively. For example, an ultimate with a charge cost of 3000 will take 3000 ticks, or 150 seconds, to charge passively. Dealing damage to opposing players and healing allies also contributes to your ultimate charge. You can see your ultimate charge via a bar at the top of your screen."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Once an ultimate is charged, this bar depletes, and you will receive your ultimate item. The item has instructions similar to abilities that describe how to use the ultimate."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Dealing damage to opposing players and healing allies also contributes to your ultimate charge."
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

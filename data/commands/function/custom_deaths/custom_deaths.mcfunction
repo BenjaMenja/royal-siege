@@ -36,9 +36,9 @@ execute if entity @s[team=Blue,scores={Kit=6}] run kill @e[type=zombie,team=Blue
 
 #TDM Kill Counter
 
-execute if entity @s[team=Red] if score #gamemode settings matches 1 run scoreboard players add #bluekills tdmKills 1
+execute if entity @s[team=Red] if data storage royalsiege:settings {Gamemode:1} run scoreboard players add #bluekills tdmKills 1
 
-execute if entity @s[team=Blue] if score #gamemode settings matches 1 run scoreboard players add #redkills tdmKills 1
+execute if entity @s[team=Blue] if data storage royalsiege:settings {Gamemode:1} run scoreboard players add #redkills tdmKills 1
 
 #Betting Chips
 
@@ -60,11 +60,11 @@ function commands:custom_deaths/reset_cooldowns
 
 scoreboard players set @s[predicate=commands:in_practice_range] totalDeaths 0
 
-execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players set @s Respawn -101
+execute if score #gameDuration gameDuration matches 18000.. if data storage royalsiege:settings {Gamemode:0} run scoreboard players set @s Respawn -101
 
-execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players set @s RedKit -101
+execute if score #gameDuration gameDuration matches 18000.. if data storage royalsiege:settings {Gamemode:0} run scoreboard players set @s RedKit -101
 
-execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players set @s BlueKit -101
+execute if score #gameDuration gameDuration matches 18000.. if data storage royalsiege:settings {Gamemode:0} run scoreboard players set @s BlueKit -101
 
 scoreboard players reset @s InvisDur
 

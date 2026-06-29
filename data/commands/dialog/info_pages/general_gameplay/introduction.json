@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Introduction",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "In a world where the entertainment industry has exhausted its options, designers scrambled to find the next generation of game show entertainment.\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Finally, after years of failed ideas, Siege Incorporated pitched Royal Siege, a team-based MOBA set in the constantly evolving Siege Arena."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "It was a smash hit, and quickly rose to mark the next generation of combat sports entertainment."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Teams work together and utilize their character's unique items, abilities, and ultimates to slay the opposing king. Seems simple enough, but Siege Inc.'s assortment of game elements, such as shops, teamplay elements, and production value propeled Royal Siege into the spotlight."
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

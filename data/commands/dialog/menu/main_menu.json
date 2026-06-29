@@ -1,0 +1,100 @@
+{
+  "type": "minecraft:multi_action",
+  "title": [
+    {
+      "text": "Main Menu",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "minecraft:carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              5
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "Welcome to the main menu!\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Here, you can access your character's shop,\n",
+          "color": "aqua"
+        },
+        {
+          "text": "your team's bank, and warp back to your castle.",
+          "color": "aqua"
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "columns": 1,
+  "actions": [
+    {
+      "label": {
+        "text": "Shop",
+        "color": "gold"
+      },
+      "tooltip": {
+        "text": "Opens up your character's shop.",
+        "color": "green"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 64"
+      }
+    },
+    {
+      "label": {
+        "text": "Bank",
+        "color": "gold"
+      },
+      "tooltip": [
+        {
+          "text": "Accesses your team's bank.\n",
+          "color": "green"
+        },
+        {
+          "text": "You can view your team's collective amount of Siege Bucks and Corrupt Credits as well as deposit and withdraw.",
+          "color": "green"
+        }
+      ],
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 65"
+      }
+    },
+    {
+      "label": {
+        "text": "Warp to Castle",
+        "color": "gold"
+      },
+      "tooltip": [
+        {
+          "text": "Warps you to your castle's respawn point.\n",
+          "color": "green"
+        },
+        {
+          "text": "This has a 3 second delay, and can be interrupted by taking damage.",
+          "color": "green"
+        }
+      ],
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 191"
+      }
+    }
+  ]
+}

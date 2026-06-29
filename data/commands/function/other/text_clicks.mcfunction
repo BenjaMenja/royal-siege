@@ -126,7 +126,7 @@ execute if score @s textClick matches 63 run function commands:shops/passive
 
 execute if score @s textClick matches 64 run function commands:other/shops
 
-execute if score @s textClick matches 65 run function commands:other/withdraw_text
+execute if score @s textClick matches 65 run function commands:dialog/bank/prepare_bank_dialog
 
 execute if score @s textClick matches 66 run function commands:settings/colliding_tides
 
@@ -182,21 +182,21 @@ execute if score @s textClick matches 91 run function commands:starting/ultimate
 
 execute if score @s textClick matches 92 run function commands:shops/toxin_ball
 
-execute if score @s textClick matches 93 run function commands:settings/day
+execute if score @s textClick matches 93 run function commands:settings/toggle_time_of_day
 
-execute if score @s textClick matches 94 run function commands:settings/night
+execute if score @s textClick matches 94 run function commands:settings/toggle_underground_area
 
-execute if score @s textClick matches 95 run function commands:settings/enable_underground
+execute if score @s textClick matches 95 run function commands:settings/toggle_corrupt_credits
 
-execute if score @s textClick matches 96 run function commands:settings/disable_underground
+execute if score @s textClick matches 96 run function commands:settings/toggle_death_counter
 
-execute if score @s textClick matches 97 run function commands:settings/enable_corrupt
+execute if score @s textClick matches 97 run function commands:settings/choose_gamemode
 
-execute if score @s textClick matches 98 run function commands:settings/disable_corrupt
+execute if score @s textClick matches 98 run function commands:settings/choose_map
 
-execute if score @s textClick matches 99 run function commands:settings/enable_death_counter
+# execute if score @s textClick matches 99 run function commands:settings/enable_death_counter
 
-execute if score @s textClick matches 100 run function commands:settings/disable_death_counter
+# execute if score @s textClick matches 100 run function commands:settings/disable_death_counter
 
 execute if score @s[predicate=commands:in_any_battlefield] textClick matches 101 run function commands:shops/king_activation
 
@@ -244,15 +244,15 @@ execute if score @s[tag=!chipbet] textClick matches 122..126 run function comman
 
 execute if score @s textClick matches 127 run function commands:spawn/ready_up
 
-execute if score @s textClick matches 128 run function commands:books/book_menu
+execute if score @s textClick matches 128 run dialog show @s commands:lobby/learn_about_menu
 
-execute if score @s textClick matches 129 run tag @s remove oldPlayer
+execute if score @s textClick matches 129 run dialog show @s commands:lobby/general_gameplay
 
-execute if score @s textClick matches 130 run function commands:books/warrior
+execute if score @s textClick matches 130 run function commands:settings/choose_classic_map {value: 0}
 
-execute if score @s textClick matches 131 run function commands:books/ninja
+execute if score @s textClick matches 131 run function commands:settings/choose_classic_map {value: 1}
 
-execute if score @s textClick matches 132 run function commands:books/guardian
+execute if score @s textClick matches 132 run function commands:settings/choose_classic_map {value: 2}
 
 execute if score @s textClick matches 133 run function commands:books/angel
 
@@ -260,9 +260,9 @@ execute if score @s textClick matches 134 run function commands:books/archer
 
 execute if score @s textClick matches 135 run function commands:books/wizard
 
-execute if score @s textClick matches 136 run function commands:books/pirate
+execute if score @s textClick matches 136 run function commands:settings/choose_tdm_map {value: 0}
 
-execute if score @s textClick matches 137 run function commands:books/ent
+execute if score @s textClick matches 137 run function commands:settings/choose_tdm_map {value: 1}
 
 execute if score @s textClick matches 138 run function commands:books/poseidon
 
@@ -330,7 +330,7 @@ execute if score @s textClick matches 169 run function commands:practice_range/t
 
 execute if score @s textClick matches 170 run function commands:shops/polearm
 
-execute if score @s textClick matches 171 run function commands:settings/colosseum
+execute if score @s textClick matches 171 run function commands:practice_range/select_character
 
 execute if score @s textClick matches 172 run function commands:settings/new_chicago_skyline
 
@@ -370,9 +370,9 @@ execute if score @s textClick matches 189 run function commands:other/withdraw_s
 
 execute if score @s textClick matches 190 run function commands:other/withdraw_siege_bucks {siege_bucks:1000}
 
-execute if score @s textClick matches 191 run tag @s add homewarp
+execute if score @s textClick matches 191 run function commands:gameplay_events/warp_to_castle_init
 
-execute if score @s textClick matches 192 run function commands:books/character_menu
+execute if score @s textClick matches 192 run dialog show @s commands:lobby/character_menu
 
 execute if score @s textClick matches 193 run function commands:books/map_menu
 
@@ -425,5 +425,7 @@ execute if score @s textClick matches 216 run function commands:starting/ultimat
 execute if score @s textClick matches 217 run function commands:books/necromancer
 
 execute if score @s textClick matches 218 run function commands:practice_range/character/necromancer
+
+execute if score @s textClick matches 219 run function commands:dialog/refresh_menu
 
 scoreboard players reset @a[scores={textClick=1..}] textClick

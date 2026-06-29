@@ -34,7 +34,7 @@ scoreboard players set @s[tag=!dababy,tag=nonspec,tag=randomized] ultCheck 0
 
 tag @s[tag=nonspec,tag=randomized] remove readyUp
 
-tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Immortality]","color":"green","click_event":{"action":"run_command","command":"/trigger textClick set 74"}},{"text":" "},{"text":"[Magic Barrier]","color":"green","click_event":{"action":"run_command","command":"/trigger textClick set 75"}}]
+dialog show @s[tag=!dababy,tag=nonspec,tag=randomized] commands:character_select/ultimate_selector/guardian
 
 tag @s remove dababy
 

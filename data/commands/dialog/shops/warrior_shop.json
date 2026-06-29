@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Warrior Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The warrior's melee capabilities and brawly nature make him a terrifying close range fighter.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Trapped!\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Enemies within 5 blocks are inflicted with -10% movement speed."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/shield_base_wood"
+        },
+        {
+          "text": " Warrior Shield"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 500 Siege Bucks\nA shield that grants you increased max health and attack damage.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 1"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/iron_axe"
+        },
+        {
+          "text": " Valkyrie Axe"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 650 Siege Bucks\nA very high damage axe with high knockback.\nHowever, it has a quite slow attack speed.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 2"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/iron_chestplate"
+        },
+        {
+          "text": " Knight's Plate"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 700 Siege Bucks\nA much more powerful iron chestplate with\na variety of increased stats.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 3"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/potion"
+        },
+        {
+          "text": " Strength Potion"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nA long lasting strength potion.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 4"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/strength_stone"
+        },
+        {
+          "text": " Strength Stone"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nA stone that increases your damage when\nin your offhand.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 5"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/golden_apple"
+        },
+        {
+          "text": " 2 Golden Apples"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nLiterally just 2 golden apples.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 6"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nYour slowness effect power is increased to -20%.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

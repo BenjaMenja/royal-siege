@@ -1,12 +1,12 @@
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 run spawnpoint @a[team=Red] 9 126 -161
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run spawnpoint @a[team=Red] 9 126 -161
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 run spawnpoint @a[team=Red] 99 126 -1017
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run spawnpoint @a[team=Red] 99 126 -1017
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 run spawnpoint @a[team=Red] 50 126 -1971
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run spawnpoint @a[team=Red] 50 126 -1971
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 run spawnpoint @a[team=Red] 1086 53 -61
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:0}}} run spawnpoint @a[team=Red] 1086 53 -61
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 1 run spawnpoint @a[team=Red] 2046 106 -33
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:1}}} run spawnpoint @a[team=Red] 2046 106 -33
 
 execute as @a[team=Red,distance=..3] at @s run teleport @s -1402 59 1194
 

@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": {
+    "text": "Ending the Game",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "\n"
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "The game ends when the chosen gamemode's objective is completed. For classic, this occurs as soon as a king's health bar reaches zero."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "For team deathmatch, things work slightly different. Unlike classic, team deathmatch runs on a timer. The game ends when a team reaches the required kill count first. However, if the timer finishes and the teams are tied, the game enters a sudden death situation where the next kill decides the victor."
+        }
+      ],
+      "width": 300
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "When a game finishes, all players and spectators are transported back to the lobby, where they can ready up, select characters, and start another match."
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "dialogs": [
+    "commands:lobby/general_gameplay"
+  ]
+}

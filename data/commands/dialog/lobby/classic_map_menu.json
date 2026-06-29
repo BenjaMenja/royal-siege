@@ -1,0 +1,77 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Classic Maps",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Which classic map would you like to play?"
+      }
+    }
+  ],
+  "columns": 1,
+  "actions": [
+    {
+      "label": [
+        {
+          "type": "text",
+          "text": "Forest Glen: ",
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "Active",
+          "color": "green"
+        }
+      ],
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 130"
+      },
+      "width": 200
+    },
+    {
+      "label": [
+        {
+          "type": "text",
+          "text": "Winterland: ",
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "Active",
+          "color": "green"
+        }
+      ],
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 131"
+      },
+      "width": 200
+    },
+    {
+      "label": [
+        {
+          "type": "text",
+          "text": "Colliding Tides: ",
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "Enabled",
+          "color": "green"
+        }
+      ],
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 132"
+      },
+      "width": 200
+    }
+  ]
+}

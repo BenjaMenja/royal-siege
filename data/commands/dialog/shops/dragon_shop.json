@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Dragon Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The dragon's raw power lets them cleave through enemies and kings alike.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Ender Curse\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "The power of the End holds you back. You cannot receive resistance and strength buffs."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/outrage"
+        },
+        {
+          "text": " Outrage"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 500 Siege Bucks\n Fly into a rage, increasing your damage and speed for 8s.\nFailure to land a killing blow for the duration will stun you, hindering your movement and damage.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 104"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/hatchlings"
+        },
+        {
+          "text": " Hatchlings"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nA 3 pack of small hatchling minions.\nA maximum of 10 hatchlings can exist at once per team.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 105"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/crystal_cannon"
+        },
+        {
+          "text": " Crystal Cannon"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 750 Siege Bucks\nA cannon that shoots end crystals.\nCan be used every 20s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 106"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/corruption"
+        },
+        {
+          "text": " Corruption"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 500 Siege Bucks\nCorrupts all players with corrupt credits in their inventory.\nCorrupted players are much more powerful, but are rather unstable.\nThis ability affects all players, including enemies.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 107"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/elytra"
+        },
+        {
+          "text": " Elytra"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 700 Siege Bucks\nA pair of elytra to help aid your mobility.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 108"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/necromantic_axe"
+        },
+        {
+          "text": " Necromantic Axe"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 750 Siege Bucks\nA powerful but slow swinging melee weapon.\nEnemies killed by the axe will be transformed into a slightly more powerful hatchling.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 109"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 1500 Siege Bucks\nLifts the ender curse, allowing you to receive all buffs.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

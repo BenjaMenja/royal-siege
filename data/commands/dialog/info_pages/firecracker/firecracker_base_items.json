@@ -1,0 +1,173 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Firecracker Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              584747035,
+              -887930049,
+              -1826469917,
+              1698739490
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODgzZjk3YzQyNmE5Y2ZjMWFkMGYyNjgzYmE2OWFmN2U5ZWUyMDc4ZTk4NzU0ZjM4ODA2ODkzODcyMzUyYmVkNCJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Base Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              184
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Sparkler",
+            "color": "#FAFF70",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Fires a spread of 3 sparks in front of you."
+            },
+            {
+              "text": "The sparks deal damage on contact and sets enemies on fire."
+            },
+            {
+              "text": "Firing the projectiles puts out the sparks for 4s, causing the sparkler"
+            },
+            {
+              "text": "to deal 1 less damage and no longer burn."
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "When in Main Hand:",
+              "color": "gray",
+              "italic": false
+            },
+            {
+              "text": " 6.5 Attack Damage",
+              "color": "dark_green",
+              "italic": false
+            },
+            {
+              "text": " 1.8 Attack Speed",
+              "color": "dark_green",
+              "italic": false
+            },
+            {
+              "text": " 7.5 Projectile Damage",
+              "color": "dark_green",
+              "italic": false
+            }
+          ],
+          "minecraft:enchantments": {
+            "minecraft:fire_aspect": 1
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Sparkler",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              187
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "#FFC300",
+            "italic": false,
+            "text": "Blazing Speed"
+          },
+          "lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Increases your movement speed by 50% for 1.5s."
+            },
+            {
+              "text": "You leave behind small bombs as you run."
+            },
+            {
+              "text": "The bombs pop after 1s, dealing 4 damage and burning enemies in a small radius."
+            },
+            {
+              "text": "Can be used every 9s."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Blazing Speed",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Firecracker Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/firecracker/firecracker_homepage"
+      }
+    }
+  ]
+}

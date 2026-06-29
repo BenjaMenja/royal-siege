@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Ninja Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The ninja is a skirmisher that uses his quick movement to punish unsuspecting foes.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Powerup\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Landing a killing blow will grant you +3 attack damage for 8s and give you one of your dashes back."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/leather_boots"
+        },
+        {
+          "text": " Sticky Boots"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 500 Siege Bucks\nA pair of sticky boots that allow the user to stick to wall by crouching next to one.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 7"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/ender_pearl"
+        },
+        {
+          "text": " Ender Pearl"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nA simple Ender Pearl.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 8"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/leather_boots"
+        },
+        {
+          "text": " Bouncy Boots"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nA pair of boots that gives you increased jump height.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 9"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/lifesteal_dagger"
+        },
+        {
+          "text": " Lifesteal Dagger"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 650 Siege Bucks\nA medium damage dagger that restores 4 HP when you kill with it.\nAlso grants you a short burst of regeneration when striking an enemy.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 10"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/poison_dagger"
+        },
+        {
+          "text": " Poison Dagger"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 650 Siege Bucks\nA medium damage dagger that poisons enemies for 4s if they are struck by it.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 11"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/chicken_bomb"
+        },
+        {
+          "text": " Chicken Bombs"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nA 16 stack of throwable chicken bombs.\nIf a chicken hatches, it will violently explode.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 12"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nReduce the cooldown of dash from 6s to 5s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

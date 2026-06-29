@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Pirate Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The pirate is a crowd controller that excels at punishing unsuspecting enemies.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Greed\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "You earn 200 money from redeeming siege coins, as opposed to the usual 150."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/siege_coin"
+        },
+        {
+          "text": " Fake Money Pack"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 500 Siege Bucks\nA 3 pack of fake money.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 36"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/leather_boots"
+        },
+        {
+          "text": " The Dutchman's Blade"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 750 Siege Bucks\nA more powerful version of the Golden Cutlass that trades sweeping capabilities for higher damage output.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 37"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/powder_keg"
+        },
+        {
+          "text": " Powder Keg"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 500 Siege Bucks\nA barrel loaded with explosives.\nThe barrel has 20 HP and can be damaged by teammates and enemies.\nWhen the barrel's HP reaches 0, it will violently explode, dealing damage to everything nearby.\nIt will also instantly explode if set on fire.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 38"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/potion"
+        },
+        {
+          "text": " Hard Ale"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 450 Siege Bucks\nA drink that grants you stronger melee capabilities, but makes you dizzy.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 39"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/chain_hook"
+        },
+        {
+          "text": " Chain Hook"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 1000 Siege Bucks\nShoots a hook that can drag an enemy towards you.\nThe enemy will also be slowed.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 40"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/coin_gun"
+        },
+        {
+          "text": " Coin Gun"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 500 Siege Bucks\nA gun that shoots piercing coins.\nCosts 100 Siege Bucks to shoot.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 121"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 3000 Siege Bucks\nReduces the cooldown of Fake Money from 45s to 30s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

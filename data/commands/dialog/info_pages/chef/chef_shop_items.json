@@ -1,0 +1,316 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Chef Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              1448200512,
+              773932192,
+              -2064052068,
+              -324220262
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZmNmYyYmUxNWE2Mzk0OWRiYzQ1OGRkNDEwYjE4NGYxOTAwMzQ1NTVlMWRlOTY2NWRjY2NlOWQ5YjhjMzZlYiJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Shop Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "bat_spawn_egg",
+        "count": 3,
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              134
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Oven",
+            "color": "gray",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Placeable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Places an oven sentry that shoots explosive pizzas."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Oven",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "sheep_spawn_egg",
+        "components": {
+          "item_name": {
+            "color": "dark_aqua",
+            "italic": false,
+            "text": "Sheep Trainee"
+          },
+          "lore": [
+            {
+              "text": "A pet sheep that gives resistance to nearby teammates."
+            },
+            {
+              "text": "Moves very slowly and has decent health."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Sheep Trainee",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "mushroom_stew",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Soup of the Day",
+            "color": "yellow",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Gives you one of 5 different soups."
+            },
+            {
+              "text": "Each soup is a weapon that has different effects."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              99
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Soup of the Day",
+        "width": 150
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "cooked_beef",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Specialty Dish",
+            "color": "aqua",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "A beautiful blend of luxury foods."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              101
+            ]
+          },
+          "consumable": {
+            "consume_seconds": 1.6,
+            "animation": "eat",
+            "on_consume_effects": [
+              {
+                "type": "minecraft:apply_effects",
+                "effects": [
+                  {
+                    "id": "minecraft:strength",
+                    "amplifier": 0,
+                    "duration": 600,
+                    "show_particles": false
+                  },
+                  {
+                    "id": "minecraft:haste",
+                    "amplifier": 0,
+                    "duration": 600,
+                    "show_particles": false
+                  },
+                  {
+                    "id": "minecraft:regeneration",
+                    "amplifier": 1,
+                    "duration": 200,
+                    "show_particles": false
+                  },
+                  {
+                    "id": "minecraft:resistance",
+                    "amplifier": 0,
+                    "duration": 600,
+                    "show_particles": false
+                  },
+                  {
+                    "id": "minecraft:fire_resistance",
+                    "amplifier": 0,
+                    "duration": 600,
+                    "show_particles": false
+                  },
+                  {
+                    "id": "minecraft:health_boost",
+                    "amplifier": 0,
+                    "duration": 600,
+                    "show_particles": false
+                  },
+                  {
+                    "id": "minecraft:absorption",
+                    "amplifier": 0,
+                    "duration": 600,
+                    "show_particles": false
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Specialty Dish",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Scrambled Eggs",
+            "color": "yellow",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Shoots a scrambling egg."
+            },
+            {
+              "text": "Scrambles up an enemy's hotbar on hit."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              102
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Scrambled Eggs",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Pay Raise",
+            "color": "gold",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Shoots a healing beam that heals teammates when hit."
+            },
+            {
+              "text": "If a teammate restores health from the beam, they will drop 1 Siege Coin."
+            },
+            {
+              "text": "Can be used every 15 seconds."
+            },
+            {
+              "text": "Cooldown is reduced to 5 seconds if it misses."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              103
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Pay Raise",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Chef Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/chef/chef_homepage"
+      }
+    }
+  ]
+}

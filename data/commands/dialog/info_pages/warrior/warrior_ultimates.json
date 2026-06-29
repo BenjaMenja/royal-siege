@@ -1,0 +1,138 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Warrior Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              -1119675796,
+              -506206,
+              -2001385496,
+              -61856676
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2ZjYWNjYjRkM2U2MWI1OWEwM2U3ZmVlMDk4YTdjNmE0YTYzZGI5YjI5M2E4YmEyYThkMmFlMWY1OGZjZiJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Ultimates\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "bat_spawn_egg",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              64
+            ]
+          },
+          "tooltip_display": {
+            "hidden_components": [
+              "attribute_modifiers"
+            ]
+          },
+          "minecraft:item_name": "Cavalry Charge",
+          "minecraft:lore": [
+            {
+              "text": "Placeable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Get on a horse and stomp on your enemies!"
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Cavalry Charge",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              65
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Rally",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Rally your team together!"
+            },
+            {
+              "text": "After a 0.5 second delay, teleport all teammates within 25 blocks to you."
+            },
+            {
+              "text": "Every teammate receives strength and speed."
+            },
+            {
+              "text": "The warrior receives resistance II."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Rally",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Warrior Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/warrior/warrior_homepage"
+      }
+    }
+  ]
+}

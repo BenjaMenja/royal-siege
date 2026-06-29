@@ -2,17 +2,17 @@
 
 scoreboard players add #corrupt Timer 1
 
-execute if score #corrupt Timer matches 1200.. if score #corruptcredit settings matches 0 run function commands:other/spawn_cc
+execute if score #corrupt Timer matches 1200.. if data storage royalsiege:settings {CorruptCredits:1} run function commands:other/spawn_cc
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 run tag @e[type=item,x=9,y=53,z=-132,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run tag @e[type=item,x=9,y=53,z=-132,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 run tag @e[type=item,x=58,y=52,z=-1030,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run tag @e[type=item,x=58,y=52,z=-1030,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 run tag @e[type=item,x=19,y=62,z=-1971,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run tag @e[type=item,x=19,y=62,z=-1971,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 run tag @e[type=item,x=1051,y=53,z=-76,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:0}}} run tag @e[type=item,x=1051,y=53,z=-76,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 1 run tag @e[type=item,x=2017,y=52,z=0,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:1}}} run tag @e[type=item,x=2017,y=52,z=0,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
 
 execute as @e[type=item,tag=CCDelete] run function commands:other/remove_extra_ccs
 
@@ -234,23 +234,23 @@ scoreboard players set @a[scores={LifeForce=3600..}] LifeForce 0
 
 scoreboard players add @a[predicate=commands:in_any_battlefield,tag=inCurrentMatch] End 1
 
-execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Blue,tag=King] if score #gamemode settings matches 0 run tag @a[team=Red] add win
+execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Blue,tag=King] if data storage royalsiege:settings {Gamemode:0} run tag @a[team=Red] add win
 
-execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Blue,tag=King] if score #gamemode settings matches 0 run tag @a[team=Blue] add lose
+execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Blue,tag=King] if data storage royalsiege:settings {Gamemode:0} run tag @a[team=Blue] add lose
 
-execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Red,tag=King] if score #gamemode settings matches 0 run tag @a[team=Blue] add win
+execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Red,tag=King] if data storage royalsiege:settings {Gamemode:0} run tag @a[team=Blue] add win
 
-execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Red,tag=King] if score #gamemode settings matches 0 run tag @a[team=Red] add lose
+execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Red,tag=King] if data storage royalsiege:settings {Gamemode:0} run tag @a[team=Red] add lose
 
 #End of the Game (TDM)
 
-execute if entity @a[team=!,scores={End=100..}] if score #redkills tdmKills >= #tdmreqkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Red] add win
+execute if entity @a[team=!,scores={End=100..}] if score #redkills tdmKills >= #tdmreqkills tdmKills if data storage royalsiege:settings {Gamemode:1} run tag @a[team=Red] add win
 
-execute if entity @a[team=!,scores={End=100..}] if score #redkills tdmKills >= #tdmreqkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Blue] add lose
+execute if entity @a[team=!,scores={End=100..}] if score #redkills tdmKills >= #tdmreqkills tdmKills if data storage royalsiege:settings {Gamemode:1} run tag @a[team=Blue] add lose
 
-execute if entity @a[team=!,scores={End=100..}] if score #bluekills tdmKills >= #tdmreqkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Blue] add win
+execute if entity @a[team=!,scores={End=100..}] if score #bluekills tdmKills >= #tdmreqkills tdmKills if data storage royalsiege:settings {Gamemode:1} run tag @a[team=Blue] add win
 
-execute if entity @a[team=!,scores={End=100..}] if score #bluekills tdmKills >= #tdmreqkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Red] add lose
+execute if entity @a[team=!,scores={End=100..}] if score #bluekills tdmKills >= #tdmreqkills tdmKills if data storage royalsiege:settings {Gamemode:1} run tag @a[team=Red] add lose
 
 #Other end of game stuff
 
@@ -264,11 +264,11 @@ execute if entity @a[tag=win] run function commands:other/end
 
 #TDM Display kills timer
 
-execute if score #gamemode settings matches 1 unless entity @a[predicate=commands:in_practice_range] run scoreboard players add #TDMTimer tdmTimer 1
+execute if data storage royalsiege:settings {Gamemode:1} unless entity @a[predicate=commands:in_practice_range] run scoreboard players add #TDMTimer tdmTimer 1
 
-execute if score #TDMTimer tdmTimer matches 400.. if score #gamemode settings matches 1 run tellraw @a [{"text":"Red team kill count: ","color":"red"},{"score":{"name":"#redkills","objective":"tdmKills"},"color":"green"},{"text":"/"},{"score":{"name":"#tdmreqkills","objective":"tdmKills"},"color":"green"},{"text":"\n"},{"text":"Blue team kill count: ","color":"blue"},{"score":{"name":"#bluekills","objective":"tdmKills"},"color":"green"},{"text":"/"},{"score":{"name":"#tdmreqkills","objective":"tdmKills"},"color":"green"}]
+execute if score #TDMTimer tdmTimer matches 400.. if data storage royalsiege:settings {Gamemode:1} run tellraw @a [{"text":"Red team kill count: ","color":"red"},{"score":{"name":"#redkills","objective":"tdmKills"},"color":"green"},{"text":"/"},{"score":{"name":"#tdmreqkills","objective":"tdmKills"},"color":"green"},{"text":"\n"},{"text":"Blue team kill count: ","color":"blue"},{"score":{"name":"#bluekills","objective":"tdmKills"},"color":"green"},{"text":"/"},{"score":{"name":"#tdmreqkills","objective":"tdmKills"},"color":"green"}]
 
-execute if score #TDMTimer tdmTimer matches 400.. if score #gamemode settings matches 1 run scoreboard players reset #TDMTimer tdmTimer
+execute if score #TDMTimer tdmTimer matches 400.. if data storage royalsiege:settings {Gamemode:1} run scoreboard players reset #TDMTimer tdmTimer
 
 #Experience Spawner
 
@@ -906,9 +906,9 @@ kill @e[type=arrow,scores={Timer=80..}]
 
 #Passive Money
 
-execute if score #gamemode settings matches 0 run scoreboard players add @a[team=!,predicate=commands:in_any_battlefield] Timer 1
+execute if data storage royalsiege:settings {Gamemode:0} run scoreboard players add @a[team=!,predicate=commands:in_any_battlefield] Timer 1
 
-execute if score #gamemode settings matches 1 run scoreboard players add @a[team=!,predicate=commands:in_any_battlefield] Timer 2
+execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players add @a[team=!,predicate=commands:in_any_battlefield] Timer 2
 
 execute as @a[team=Red,predicate=commands:in_any_red_castle] run scoreboard players add @s Timer 1
 
@@ -1112,7 +1112,7 @@ execute as @a[scores={reload=50..}] at @s run function commands:other/gunblade_r
 
 #Display deaths and Money
 
-execute if score #deathcounter settings matches 0 run scoreboard players add #displayDeaths totalDeaths 1
+execute if data storage royalsiege:settings {DeathCounter:1} run scoreboard players add #displayDeaths totalDeaths 1
 
 execute if score #displayDeaths totalDeaths matches 600 run scoreboard objectives setdisplay sidebar totalDeaths
 
@@ -1434,25 +1434,25 @@ teleport @e[type=zombie,scores={attractorTimer=1200..}] ~ -200 ~
 
 #Spectator boundaries
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @a[tag=spectator,predicate=!commands:in_forest_glen] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} as @a[tag=spectator,predicate=!commands:in_forest_glen] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @a[tag=spectator,predicate=!commands:in_forest_glen] run teleport @s 8 69 -132
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} as @a[tag=spectator,predicate=!commands:in_forest_glen] run teleport @s 8 69 -132
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @a[tag=spectator,predicate=!commands:in_winterland] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} as @a[tag=spectator,predicate=!commands:in_winterland] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @a[tag=spectator,predicate=!commands:in_winterland] run teleport @s 57 72 -1031
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} as @a[tag=spectator,predicate=!commands:in_winterland] run teleport @s 57 72 -1031
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 as @a[tag=spectator,predicate=!commands:in_colliding_tides] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} as @a[tag=spectator,predicate=!commands:in_colliding_tides] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 as @a[tag=spectator,predicate=!commands:in_colliding_tides] run teleport @s 19 80 -1971
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} as @a[tag=spectator,predicate=!commands:in_colliding_tides] run teleport @s 19 80 -1971
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 as @a[tag=spectator,predicate=!commands:in_colosseum] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:0}}} as @a[tag=spectator,predicate=!commands:in_colosseum] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 0 as @a[tag=spectator,predicate=!commands:in_colosseum] run teleport @s 1051 69 -61
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:0}}} as @a[tag=spectator,predicate=!commands:in_colosseum] run teleport @s 1051 69 -61
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 1 as @a[tag=spectator,predicate=!commands:in_ncs] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:1}}} as @a[tag=spectator,predicate=!commands:in_ncs] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
-execute if score #gamemode settings matches 1 if score #tdmMap settings matches 1 as @a[tag=spectator,predicate=!commands:in_ncs] run teleport @s 2017 69 0.5
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:1}}} as @a[tag=spectator,predicate=!commands:in_ncs] run teleport @s 2017 69 0.5
 
 gamemode spectator @a[tag=spectator]
 
@@ -1638,17 +1638,17 @@ execute as @e[type=wandering_trader,tag=wanderingKing] run data remove entity @s
 
 execute as @e[type=wandering_trader,tag=wanderingKing,scores={kingActive=200..}] run function commands:other/wandering_king_end
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @e[type=wandering_trader,tag=wanderingKingRed] run data merge entity @s {wander_target:[I;9,59,-216]}
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} as @e[type=wandering_trader,tag=wanderingKingRed] run data merge entity @s {wander_target:[I;9,59,-216]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 as @e[type=wandering_trader,tag=wanderingKingBlue] run data merge entity @s {wander_target:[I;9,59,-48]}
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} as @e[type=wandering_trader,tag=wanderingKingBlue] run data merge entity @s {wander_target:[I;9,59,-48]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingRed] run data merge entity @s {wander_target:[I;156,59,-1017]}
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} as @e[type=wandering_trader,tag=wanderingKingRed] run data merge entity @s {wander_target:[I;156,59,-1017]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 as @e[type=wandering_trader,tag=wanderingKingBlue] run data merge entity @s {wander_target:[I;45,59,-1128]}
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} as @e[type=wandering_trader,tag=wanderingKingBlue] run data merge entity @s {wander_target:[I;45,59,-1128]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 as @e[type=wandering_trader,tag=wanderingKingRed] run data merge entity @s {wander_target:[I;19,55,-1908]}
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} as @e[type=wandering_trader,tag=wanderingKingRed] run data merge entity @s {wander_target:[I;19,55,-1908]}
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 as @e[type=wandering_trader,tag=wanderingKingBlue] run data merge entity @s {wander_target:[I;19,55,-2034]}
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} as @e[type=wandering_trader,tag=wanderingKingBlue] run data merge entity @s {wander_target:[I;19,55,-2034]}
 
 #Dragon Rush
 
@@ -1834,23 +1834,23 @@ execute store result score #redking bossHP run bossbar get minecraft:redking val
 
 execute store result score #blueking bossHP run bossbar get minecraft:blueking value
 
-execute if score #redking bossHP < #blueking bossHP if score #classicMap settings matches 0 run setblock 9 51 -132 blue_stained_glass
+execute if score #redking bossHP < #blueking bossHP if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run setblock 9 51 -132 blue_stained_glass
 
-execute if score #redking bossHP > #blueking bossHP if score #classicMap settings matches 0 run setblock 9 51 -132 red_stained_glass
+execute if score #redking bossHP > #blueking bossHP if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run setblock 9 51 -132 red_stained_glass
 
-execute if score #redking bossHP = #blueking bossHP if score #classicMap settings matches 0 run setblock 9 51 -132 white_stained_glass
+execute if score #redking bossHP = #blueking bossHP if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run setblock 9 51 -132 white_stained_glass
 
-execute if score #redking bossHP < #blueking bossHP if score #classicMap settings matches 1 run setblock 58 51 -1030 blue_stained_glass
+execute if score #redking bossHP < #blueking bossHP if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run setblock 58 51 -1030 blue_stained_glass
 
-execute if score #redking bossHP > #blueking bossHP if score #classicMap settings matches 1 run setblock 58 51 -1030 red_stained_glass
+execute if score #redking bossHP > #blueking bossHP if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run setblock 58 51 -1030 red_stained_glass
 
-execute if score #redking bossHP = #blueking bossHP if score #classicMap settings matches 1 run setblock 58 51 -1030 white_stained_glass
+execute if score #redking bossHP = #blueking bossHP if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run setblock 58 51 -1030 white_stained_glass
 
-execute if score #redking bossHP < #blueking bossHP if score #classicMap settings matches 2 run setblock 19 61 -1971 blue_stained_glass
+execute if score #redking bossHP < #blueking bossHP if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run setblock 19 61 -1971 blue_stained_glass
 
-execute if score #redking bossHP > #blueking bossHP if score #classicMap settings matches 2 run setblock 19 61 -1971 red_stained_glass
+execute if score #redking bossHP > #blueking bossHP if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run setblock 19 61 -1971 red_stained_glass
 
-execute if score #redking bossHP = #blueking bossHP if score #classicMap settings matches 2 run setblock 19 61 -1971 white_stained_glass
+execute if score #redking bossHP = #blueking bossHP if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run setblock 19 61 -1971 white_stained_glass
 
 #Castle Throne Room Warps (Forest Glen)
 
@@ -1912,33 +1912,33 @@ kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}
 
 #Royal Guards
 
-execute if entity @a[tag=inCurrentMatch] unless entity @e[type=skeleton,tag=redroyalguard] if score #gamemode settings matches 0 run scoreboard players add #redroyalguard royalguardCD 1
+execute if entity @a[tag=inCurrentMatch] unless entity @e[type=skeleton,tag=redroyalguard] if data storage royalsiege:settings {Gamemode:0} run scoreboard players add #redroyalguard royalguardCD 1
 
-execute if entity @a[tag=inCurrentMatch] unless entity @e[type=skeleton,tag=blueroyalguard] if score #gamemode settings matches 0 run scoreboard players add #blueroyalguard royalguardCD 1
+execute if entity @a[tag=inCurrentMatch] unless entity @e[type=skeleton,tag=blueroyalguard] if data storage royalsiege:settings {Gamemode:0} run scoreboard players add #blueroyalguard royalguardCD 1
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 if score #redroyalguard royalguardCD matches 2400 positioned 12 57 -209 run function commands:entities/royal_guard_red
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} if score #redroyalguard royalguardCD matches 2400 positioned 12 57 -209 run function commands:entities/royal_guard_red
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 if score #redroyalguard royalguardCD matches 2400 positioned 6 57 -209 run function commands:entities/royal_guard_red
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} if score #redroyalguard royalguardCD matches 2400 positioned 6 57 -209 run function commands:entities/royal_guard_red
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 if score #blueroyalguard royalguardCD matches 2400 positioned 12 57 -55 run function commands:entities/royal_guard_blue
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} if score #blueroyalguard royalguardCD matches 2400 positioned 12 57 -55 run function commands:entities/royal_guard_blue
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 if score #blueroyalguard royalguardCD matches 2400 positioned 6 57 -55 run function commands:entities/royal_guard_blue
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} if score #blueroyalguard royalguardCD matches 2400 positioned 6 57 -55 run function commands:entities/royal_guard_blue
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if score #redroyalguard royalguardCD matches 2400 positioned 150 57 -1020 run function commands:entities/royal_guard_red
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} if score #redroyalguard royalguardCD matches 2400 positioned 150 57 -1020 run function commands:entities/royal_guard_red
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if score #redroyalguard royalguardCD matches 2400 positioned 150 57 -1014 run function commands:entities/royal_guard_red
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} if score #redroyalguard royalguardCD matches 2400 positioned 150 57 -1014 run function commands:entities/royal_guard_red
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if score #blueroyalguard royalguardCD matches 2400 positioned 42 57 -1122 run function commands:entities/royal_guard_blue
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} if score #blueroyalguard royalguardCD matches 2400 positioned 42 57 -1122 run function commands:entities/royal_guard_blue
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 if score #blueroyalguard royalguardCD matches 2400 positioned 48 57 -1122 run function commands:entities/royal_guard_blue
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} if score #blueroyalguard royalguardCD matches 2400 positioned 48 57 -1122 run function commands:entities/royal_guard_blue
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 if score #redroyalguard royalguardCD matches 2400 positioned 15 53 -1911 run function commands:entities/royal_guard_red
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} if score #redroyalguard royalguardCD matches 2400 positioned 15 53 -1911 run function commands:entities/royal_guard_red
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 if score #redroyalguard royalguardCD matches 2400 positioned 23 53 -1911 run function commands:entities/royal_guard_red
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} if score #redroyalguard royalguardCD matches 2400 positioned 23 53 -1911 run function commands:entities/royal_guard_red
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 if score #blueroyalguard royalguardCD matches 2400 positioned 23 53 -2031 run function commands:entities/royal_guard_blue
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} if score #blueroyalguard royalguardCD matches 2400 positioned 23 53 -2031 run function commands:entities/royal_guard_blue
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 if score #blueroyalguard royalguardCD matches 2400 positioned 15 53 -2031 run function commands:entities/royal_guard_blue
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} if score #blueroyalguard royalguardCD matches 2400 positioned 15 53 -2031 run function commands:entities/royal_guard_blue
 
 execute if score #redroyalguard royalguardCD matches 2400.. run scoreboard players reset #redroyalguard royalguardCD
 
@@ -1952,17 +1952,17 @@ execute as @e[type=skeleton,tag=blueroyalguard,nbt={attributes:[{id:"minecraft:m
 
 execute as @e[type=skeleton,tag=blueroyalguard,nbt={attributes:[{id:"minecraft:movement_speed",base:0.25d}]}] unless entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0.0d}]}
 
-execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 0 run teleport @s ~ ~ ~-0.2
+execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run teleport @s ~ ~ ~-0.2
 
-execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 1 run teleport @s ~0.2 ~ ~
+execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run teleport @s ~0.2 ~ ~
 
-execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 2 run teleport @s ~ ~ ~0.2
+execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run teleport @s ~ ~ ~0.2
 
-execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 0 run teleport @s ~ ~ ~0.2
+execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run teleport @s ~ ~ ~0.2
 
-execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 1 run teleport @s ~ ~ ~-0.2
+execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run teleport @s ~ ~ ~-0.2
 
-execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if score #gamemode settings matches 0 if score #classicMap settings matches 2 run teleport @s ~ ~ ~-0.2
+execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run teleport @s ~ ~ ~-0.2
 
 #King Invulnerable when no one is in the throne room
 
@@ -2030,11 +2030,11 @@ execute as @a[predicate=commands:in_any_respawn_room,tag=notAlive,team=Blue] at 
 
 #Spawntime 5s in TDM
 
-execute if score #gamemode settings matches 1 run scoreboard players set @a[scores={died=1..}] Respawn 90
+execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players set @a[scores={died=1..}] Respawn 90
 
-execute if score #gamemode settings matches 1 run scoreboard players set @a[team=Red,scores={died=1..}] RedKit 90
+execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players set @a[team=Red,scores={died=1..}] RedKit 90
 
-execute if score #gamemode settings matches 1 run scoreboard players set @a[team=Blue,scores={died=1..}] BlueKit 90
+execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players set @a[team=Blue,scores={died=1..}] BlueKit 90
 
 #TDM spreadplayer
 
@@ -2042,11 +2042,11 @@ execute as @a[predicate=commands:on_tdm_gates,tag=!notAlive] at @s run function 
 
 #TDM Spawn after delay
 
-execute if score #gamemode settings matches 1 run scoreboard players add @a[predicate=commands:in_tdm_gates] tdmSpawnTime 1
+execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players add @a[predicate=commands:in_tdm_gates] tdmSpawnTime 1
 
 execute as @a[scores={tdmSpawnTime=400..}] at @s run function commands:starting/tdm_spawn
 
-execute if score #gamemode settings matches 1 run scoreboard players reset @a[predicate=!commands:in_tdm_gates] tdmSpawnTime
+execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players reset @a[predicate=!commands:in_tdm_gates] tdmSpawnTime
 
 #Russian Roulette
 
@@ -2124,29 +2124,29 @@ execute as @a[scores={Kit=13}] run function commands:cooldowns/gambler_display
 
 execute if entity @a[scores={End=100..}] run scoreboard players add #gameDuration gameDuration 1
 
-execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players add #loseKingHP gameDuration 1
+execute if score #gameDuration gameDuration matches 18000.. if data storage royalsiege:settings {Gamemode:0} run scoreboard players add #loseKingHP gameDuration 1
 
-execute if score #gameDuration gameDuration matches 18000 if score #gamemode settings matches 0 run title @a title {"text":"Your kings have been weakened!","color":"dark_red"}
+execute if score #gameDuration gameDuration matches 18000 if data storage royalsiege:settings {Gamemode:0} run title @a title {"text":"Your kings have been weakened!","color":"dark_red"}
 
-execute if score #gameDuration gameDuration matches 18000 if score #gamemode settings matches 0 run title @a subtitle {"text":"The game has been going on for 15 minutes!","color":"green"}
+execute if score #gameDuration gameDuration matches 18000 if data storage royalsiege:settings {Gamemode:0} run title @a subtitle {"text":"The game has been going on for 15 minutes!","color":"green"}
 
 execute if score #loseKingHP gameDuration matches 20.. as @e[type=wither_skeleton,tag=King] run function commands:other/lower_king_hp
 
 #TDM Game End after 10 Minutes
 
-execute if score #gameDuration gameDuration matches 10800 if score #gamemode settings matches 1 run title @a title {"text":"1 Minute Remaining!","color":"dark_red"}
+execute if score #gameDuration gameDuration matches 10800 if data storage royalsiege:settings {Gamemode:1} run title @a title {"text":"1 Minute Remaining!","color":"dark_red"}
 
-execute if entity @a[team=Blue,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #bluekills tdmKills > #redkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Blue] add win
+execute if entity @a[team=Blue,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #bluekills tdmKills > #redkills tdmKills if data storage royalsiege:settings {Gamemode:1} run tag @a[team=Blue] add win
 
-execute if entity @a[team=Blue,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #bluekills tdmKills > #redkills tdmKills if score #gamemode settings matches 1 run tag @a[team=Blue] add lose
+execute if entity @a[team=Blue,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #bluekills tdmKills > #redkills tdmKills if data storage royalsiege:settings {Gamemode:1} run tag @a[team=Blue] add lose
 
-execute if entity @a[team=Red,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #redkills tdmKills > #bluekills tdmKills if score #gamemode settings matches 1 run tag @a[team=Red] add win
+execute if entity @a[team=Red,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #redkills tdmKills > #bluekills tdmKills if data storage royalsiege:settings {Gamemode:1} run tag @a[team=Red] add win
 
-execute if entity @a[team=Red,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #redkills tdmKills > #bluekills tdmKills if score #gamemode settings matches 1 run tag @a[team=Red] add lose
+execute if entity @a[team=Red,scores={End=100..}] if score #gameDuration gameDuration matches 12000.. if score #redkills tdmKills > #bluekills tdmKills if data storage royalsiege:settings {Gamemode:1} run tag @a[team=Red] add lose
 
-execute if entity @a[scores={End=100..}] if score #gameDuration gameDuration matches 12000 if score #bluekills tdmKills = #redkills tdmKills if score #gamemode settings matches 1 run title @a title {"text":"Sudden Death!","color":"dark_red"}
+execute if entity @a[scores={End=100..}] if score #gameDuration gameDuration matches 12000 if score #bluekills tdmKills = #redkills tdmKills if data storage royalsiege:settings {Gamemode:1} run title @a title {"text":"Sudden Death!","color":"dark_red"}
 
-execute if entity @a[scores={End=100..}] if score #gameDuration gameDuration matches 12000 if score #bluekills tdmKills = #redkills tdmKills if score #gamemode settings matches 1 run title @a subtitle {"text":"The next kill decides the winner!","color":"green"}
+execute if entity @a[scores={End=100..}] if score #gameDuration gameDuration matches 12000 if score #bluekills tdmKills = #redkills tdmKills if data storage royalsiege:settings {Gamemode:1} run title @a subtitle {"text":"The next kill decides the winner!","color":"green"}
 
 #Teleport to Dungeons
 
@@ -2406,7 +2406,7 @@ scoreboard players set #numPlayersOnFireBlue firCharChallenge 0
 
 #Pirates Map Stuff
 
-execute if score #classicMap settings matches 2 run function commands:other/pirate_map
+execute if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run function commands:other/pirate_map
 
 #School Nurse Cooldown Display
 

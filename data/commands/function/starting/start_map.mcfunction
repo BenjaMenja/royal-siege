@@ -17,17 +17,17 @@ teleport @e[type=horse] ~ -200 ~
 
 teleport @e[type=witch] ~ -200 ~
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 positioned 9 59 -216 run function commands:entities/king_red
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} positioned 9 59 -216 run function commands:entities/king_red
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 0 positioned 9 59 -48 run function commands:entities/king_blue
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} positioned 9 59 -48 run function commands:entities/king_blue
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 positioned 156 59 -1017 run function commands:entities/king_red
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} positioned 156 59 -1017 run function commands:entities/king_red
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 1 positioned 45 59 -1128 run function commands:entities/king_blue
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} positioned 45 59 -1128 run function commands:entities/king_blue
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 positioned 19 55 -1908 run function commands:entities/king_red
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} positioned 19 55 -1908 run function commands:entities/king_red
 
-execute if score #gamemode settings matches 0 if score #classicMap settings matches 2 positioned 19 55 -2034 run function commands:entities/king_blue
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} positioned 19 55 -2034 run function commands:entities/king_blue
 
 scoreboard players set #redroyalguard royalguardCD 2399
 
@@ -39,13 +39,13 @@ execute as @p[scores={Start=1..}] run bossbar set minecraft:blueking max 1024
 
 kill @e[type=area_effect_cloud]
 
-execute if score #gamemode settings matches 0 run bossbar set minecraft:redking players @a
+execute if data storage royalsiege:settings {Gamemode:0} run bossbar set minecraft:redking players @a
 
-execute if score #gamemode settings matches 0 run bossbar set minecraft:blueking players @a
+execute if data storage royalsiege:settings {Gamemode:0} run bossbar set minecraft:blueking players @a
 
-execute if score #gamemode settings matches 0 run bossbar set minecraft:redking visible true
+execute if data storage royalsiege:settings {Gamemode:0} run bossbar set minecraft:redking visible true
 
-execute if score #gamemode settings matches 0 run bossbar set minecraft:blueking visible true
+execute if data storage royalsiege:settings {Gamemode:0} run bossbar set minecraft:blueking visible true
 
 scoreboard players set @a[scores={Start=1..}] secret 0
 
@@ -67,17 +67,17 @@ advancement revoke @a only commands:pickup_fake_money
 
 execute as @a[team=Red] run scoreboard players add #numPlayersOnTeam multiItems 1
 
-execute if score #gamemode settings matches 1 run scoreboard players set #bluekills tdmKills 0
+execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players set #bluekills tdmKills 0
 
-execute if score #gamemode settings matches 1 run scoreboard players set #redkills tdmKills 0
+execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players set #redkills tdmKills 0
 
-execute if score @s players matches 4 if score #gamemode settings matches 1 run scoreboard players set #tdmreqkills tdmKills 15
+execute if score @s players matches 4 if data storage royalsiege:settings {Gamemode:1} run scoreboard players set #tdmreqkills tdmKills 15
 
-execute if score @s players matches 6 if score #gamemode settings matches 1 run scoreboard players set #tdmreqkills tdmKills 20
+execute if score @s players matches 6 if data storage royalsiege:settings {Gamemode:1} run scoreboard players set #tdmreqkills tdmKills 20
 
-execute if score @s players matches 8 if score #gamemode settings matches 1 run scoreboard players set #tdmreqkills tdmKills 25
+execute if score @s players matches 8 if data storage royalsiege:settings {Gamemode:1} run scoreboard players set #tdmreqkills tdmKills 25
 
-execute if score @s players matches 10 if score #gamemode settings matches 1 run scoreboard players set #tdmreqkills tdmKills 30
+execute if score @s players matches 10 if data storage royalsiege:settings {Gamemode:1} run scoreboard players set #tdmreqkills tdmKills 30
 
 execute as @a store result score @s UUID run data get entity @s UUID[0]
 
@@ -103,41 +103,41 @@ scoreboard objectives setdisplay sidebar.team.blue Money
 
 scoreboard players reset @a[team=spectator] Money
 
-execute if score #underground settings matches 1 if score #classicMap settings matches 0 run fill 4 52 -103 2 52 -105 minecraft:mossy_cobblestone replace air
+execute if data storage royalsiege:settings {Underground:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run fill 4 52 -103 2 52 -105 minecraft:mossy_cobblestone replace air
 
-execute if score #underground settings matches 1 if score #classicMap settings matches 0 run fill 13 52 -105 15 52 -103 mossy_cobblestone replace air
+execute if data storage royalsiege:settings {Underground:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run fill 13 52 -105 15 52 -103 mossy_cobblestone replace air
 
-execute if score #underground settings matches 1 if score #classicMap settings matches 0 run fill 14 52 -162 16 52 -160 minecraft:mossy_cobblestone replace air
+execute if data storage royalsiege:settings {Underground:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run fill 14 52 -162 16 52 -160 minecraft:mossy_cobblestone replace air
 
-execute if score #underground settings matches 1 if score #classicMap settings matches 0 run fill 3 52 -162 5 52 -160 mossy_cobblestone replace air
+execute if data storage royalsiege:settings {Underground:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run fill 3 52 -162 5 52 -160 mossy_cobblestone replace air
 
-execute if score #underground settings matches 0 if score #classicMap settings matches 0 run fill 4 52 -103 2 52 -105 air
+execute if data storage royalsiege:settings {Underground:1} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run fill 4 52 -103 2 52 -105 air
 
-execute if score #underground settings matches 0 if score #classicMap settings matches 0 run fill 13 52 -105 15 52 -103 air
+execute if data storage royalsiege:settings {Underground:1} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run fill 13 52 -105 15 52 -103 air
 
-execute if score #underground settings matches 0 if score #classicMap settings matches 0 run fill 14 52 -162 16 52 -160 air
+execute if data storage royalsiege:settings {Underground:1} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run fill 14 52 -162 16 52 -160 air
 
-execute if score #underground settings matches 0 if score #classicMap settings matches 0 run fill 3 52 -162 5 52 -160 air
+execute if data storage royalsiege:settings {Underground:1} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run fill 3 52 -162 5 52 -160 air
 
-execute if score #underground settings matches 1 if score #classicMap settings matches 1 run fill 72 54 -998 72 53 -997 packed_ice
+execute if data storage royalsiege:settings {Underground:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run fill 72 54 -998 72 53 -997 packed_ice
 
-execute if score #underground settings matches 1 if score #classicMap settings matches 1 run fill 86 51 -1034 87 49 -1034 packed_ice
+execute if data storage royalsiege:settings {Underground:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run fill 86 51 -1034 87 49 -1034 packed_ice
 
-execute if score #underground settings matches 1 if score #classicMap settings matches 1 run fill 64 52 -1063 65 52 -1061 snow_block
+execute if data storage royalsiege:settings {Underground:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run fill 64 52 -1063 65 52 -1061 snow_block
 
-execute if score #underground settings matches 1 if score #classicMap settings matches 1 run fill 25 54 -1046 26 53 -1046 packed_ice
+execute if data storage royalsiege:settings {Underground:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run fill 25 54 -1046 26 53 -1046 packed_ice
 
-execute if score #underground settings matches 0 if score #classicMap settings matches 1 run fill 72 54 -998 72 53 -997 air
+execute if data storage royalsiege:settings {Underground:1} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run fill 72 54 -998 72 53 -997 air
 
-execute if score #underground settings matches 0 if score #classicMap settings matches 1 run fill 86 51 -1034 87 49 -1034 air
+execute if data storage royalsiege:settings {Underground:1} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run fill 86 51 -1034 87 49 -1034 air
 
-execute if score #underground settings matches 0 if score #classicMap settings matches 1 run fill 64 52 -1063 65 52 -1061 air
+execute if data storage royalsiege:settings {Underground:1} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run fill 64 52 -1063 65 52 -1061 air
 
-execute if score #underground settings matches 0 if score #classicMap settings matches 1 run fill 25 54 -1046 26 53 -1046 air
+execute if data storage royalsiege:settings {Underground:1} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run fill 25 54 -1046 26 53 -1046 air
 
-execute if score #timeofday settings matches 0 run time set 5000
+execute if data storage royalsiege:settings {Nighttime:0} run time set 5000
 
-execute if score #timeofday settings matches 1 run time set 18000
+execute if data storage royalsiege:settings {Nighttime:1} run time set 18000
 
 tag @a[team=spectator] add spectator
 
@@ -157,7 +157,7 @@ kill @e[type=marker,tag=resSoul]
 
 tellraw @a {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
 
-execute if score #gamemode settings matches 0 run scoreboard players set @e[tag=King] kingActive -2
+execute if data storage royalsiege:settings {Gamemode:0} run scoreboard players set @e[tag=King] kingActive -2
 
 #Ultimates & Bossbars
 

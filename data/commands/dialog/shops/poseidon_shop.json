@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Poseidon Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The poseidon commands aquatic and storm abilities to smite his foes.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Storm's Calling\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "You receive lightning spells every 10s that stack up to 5.\nCan be thrown to strike lightning onto nearby enemies."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/cod"
+        },
+        {
+          "text": " Fish Slapper"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 450 Siege Bucks\nA raw fish with high knockback.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 46"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/fish_cannon"
+        },
+        {
+          "text": " Fish Cannon"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 650 Siege Bucks\nA handheld cannon that shoots explosive fish concentrations.\nEach fish dropped inflicts a debuff when picked up by an enemy.\nCan be used every 10s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 47"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/silverfish_spawn_egg"
+        },
+        {
+          "text": " Land Fish"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 300 Siege Bucks\nSummons a small land fish to annoy your enemies.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 48"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/squidzooka"
+        },
+        {
+          "text": " Squidzooka"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 700 Siege Bucks\nA handheld weapon that shoots explosive squids.\nThe explosion leaves behind a blinding ink cloud.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 49"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/anchor"
+        },
+        {
+          "text": " Anchor"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nA very slow attacking weapon that deals immense damage.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 50"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/leather_chestplate"
+        },
+        {
+          "text": " Leather Chestplate"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 650 Siege Bucks\nA stronger breastplate infused with prismarine.\nGrants you full fire immunity while worn alongside your armor.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 51"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nIncreases the max amount of spells from 5 to 8 and reduces the cooldown from 10s to 9s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

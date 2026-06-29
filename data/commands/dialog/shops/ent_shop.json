@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Ent Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The ent utilizes burst healing and disruptive abilities to assist their allies.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Natural Gift\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Dealing damage to enemies gives regeneration II to teammates within 10 blocks for 2s."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/magical_wood_sword"
+        },
+        {
+          "text": " Magical Wood Sword"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 800 Siege Bucks\nA sword infused with magical wood.\nThis sword rips through enemies, but makes you quite slow.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 41"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/rose_bush"
+        },
+        {
+          "text": " Thorn Bush"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 500 Siege Bucks\nAn extra thorny bush with a very high thorns enchantment.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 42"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/potion"
+        },
+        {
+          "text": " Tree Sap"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 500 Siege Bucks\nA healthy drink that grants a variety of buffs.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 43"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/flaming_stick"
+        },
+        {
+          "text": " Flaming Stick"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 300 Siege Bucks\nSets your enemies ablaze.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 44"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/poisonous_mushroom"
+        },
+        {
+          "text": " Poisonous Mushrooms"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nA 2 pack of poisonous mushrooms.\nPlaces a poisonous cloud that grows in size if a player stands within it.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 45"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/toxin_ball"
+        },
+        {
+          "text": " Toxin Ball"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 300 Siege Bucks\nA 2 pack of toxin balls that remove healing effects from enemies.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 92"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nIncreases speed from Blossom from +10% to +20%, and increases duration of all Blossom buffs.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

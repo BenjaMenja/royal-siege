@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Guardian Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The guardian is a sturdy fighter that lives to protect his team.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Defender\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Teammates within 5 blocks receive resistance I (+20% damage resistance)."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/stick"
+        },
+        {
+          "text": " Knockback Stick"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nA simple stick with high knockback.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 13"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/shield_base_wood"
+        },
+        {
+          "text": " Guarding Shield"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 700 Siege Bucks\nGrants buffs to your allies when you deflect damage.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 14"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/guardian_spawn_egg"
+        },
+        {
+          "text": " Guardian Minion"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 250 Siege Bucks\nA spawnable guardian that attacks enemies.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 15"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/counter"
+        },
+        {
+          "text": " Counter"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nEnter a counter state for 4s.\nWhile in this state, your movement speed will be slowed.\nAfter 4s is up, you will receive a level of strength\nbased on the amount of damage you took while countering.\nThis strength lasts 5s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 16"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/absorption_shield"
+        },
+        {
+          "text": " Absorption Shield"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 700 Siege Bucks\nProjects a particle barrier around you.\nThe particle barrier destroys enemy projectiles that come in contact with it.\nThe shield runs on a resource, displayed above your hotbar.\nNot using it causes the resource to regenerate.\nYou will also receive slowness while channeling the barrier.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 17"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/golden_apple"
+        },
+        {
+          "text": " Enchanted Golden Apple"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 800 Siege Bucks\nAn enchanted golden apple.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 18"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nYour resistance effect will last an additional 8s when a teammate moves away from you.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

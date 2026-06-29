@@ -1,0 +1,278 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Ninja Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              103604342,
+              -1386918995,
+              -1757972842,
+              74746554
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmY3MzMyNjk2MTRmZThhOWFlODlmNWM1ODI4NmFhNTNiOWUzODNmYzRkYzU3ZTM3ZWNiZmE1ZTkzYSJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Shop Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "leather_boots",
+        "components": {
+          "tooltip_display": {
+            "hidden_components": [
+              "unbreakable",
+              "dyed_color"
+            ]
+          },
+          "minecraft:dyed_color": 0,
+          "minecraft:attribute_modifiers": [
+            {
+              "id": "5d4333cc-c1b9-4ad3-9da9-fb32f3b82454",
+              "type": "armor",
+              "amount": 2,
+              "operation": "add_value",
+              "slot": "feet"
+            }
+          ],
+          "minecraft:enchantments": {
+            "minecraft:feather_falling": 3,
+            "minecraft:protection": 1
+          },
+          "minecraft:custom_data": {
+            "stickyboots": true
+          },
+          "minecraft:unbreakable": {},
+          "minecraft:item_name": {
+            "color": "dark_green",
+            "text": "Sticky Boots",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Allows the user to stick to walls by crouching next to one."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Sticky Boots",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "ender_pearl"
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Ender Pearl",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "leather_boots",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Bouncy Boots",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "A pair of boots that gives you increased jump height."
+            }
+          ],
+          "minecraft:enchantments": {
+            "minecraft:protection": 3
+          },
+          "minecraft:dyed_color": 0,
+          "tooltip_display": {
+            "hidden_components": [
+              "dyed_color"
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Bouncy Boots",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "iron_sword",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Lifesteal Dagger",
+            "color": "red",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Heals you if you get a kill with it."
+            },
+            {
+              "text": "Also grants Regeneration II for 1s on enemy hits."
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "When in Main Hand:",
+              "color": "gray",
+              "italic": false
+            },
+            {
+              "text": " 7 Attack Damage",
+              "color": "dark_green",
+              "italic": false
+            },
+            {
+              "text": " 2 Attack Speed",
+              "color": "dark_green",
+              "italic": false
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              58
+            ]
+          },
+          "tooltip_display": {
+            "hidden_components": [
+              "minecraft:attribute_modifiers"
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Lifesteal Dagger",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "iron_sword",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Poison Dagger",
+            "color": "dark_green",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Poisons enemies when you attack them."
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "When in Main Hand:",
+              "color": "gray",
+              "italic": false
+            },
+            {
+              "text": " 7 Attack Damage",
+              "color": "dark_green",
+              "italic": false
+            },
+            {
+              "text": " 2 Attack Speed",
+              "color": "dark_green",
+              "italic": false
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              61
+            ]
+          },
+          "minecraft:enchantment_glint_override": true,
+          "tooltip_display": {
+            "hidden_components": [
+              "minecraft:attribute_modifiers"
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Poison Dagger",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "egg",
+        "count": 16,
+        "components": {
+          "item_name": {
+            "text": "Chicken Bomb",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "If a chicken hatches from the egg,"
+            },
+            {
+              "text": "it will violently explode."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Chicken Bombs",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Ninja Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/ninja/ninja_homepage"
+      }
+    }
+  ]
+}

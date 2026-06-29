@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Necromancer Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The necromancer overwhelms his opponents with a variety of summons.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Undead Touch\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Landing a killing blow will create an undead summon at the victim's location. Summons warp to the necromancer if they are over 25 blocks away. Undead summons have 40 HP, are immune to fire, and deal 7 damage."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/necro_bone"
+        },
+        {
+          "text": " Necro Bones"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 200 Siege Bucks\nA 2-pack of bones that can be thrown at enemies.\nThe bones deal 5 damage and heal you 2 HP on hit.\nCan have a maximum of 4 at once.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 209"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/mind_inversion"
+        },
+        {
+          "text": " Mind Inversion"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 300 Siege Bucks\nA single use item that can be dropped on an enemy summon to convert it to your team.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 210"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/undead_whistle"
+        },
+        {
+          "text": " Undead Whistle"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nCalls all of your team's summons within 25 blocks to your location.\nCan be used every 45s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 211"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/vengeance"
+        },
+        {
+          "text": " Vengeance"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 500 Siege Bucks\nWhen used, counts the amount of damage taken by yourself and teammates within 10 blocks.\nAfter 5s, gives you and teammates within 10 blocks armor equal to 20% of the total damage taken.\nAlso gives 2 extra protection levels if the total damage taken is over 20\nThe additional defense lasts 6s.\nCan be used every 30s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 212"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/broodmother_spider"
+        },
+        {
+          "text": " Broodmother Spider"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 700 Siege Bucks\nSummons a powerful spider to aid you in combat.\nThe spider has a large amount of health, deals a moderate amount of damage, and poisons enemies.\nEnemies that die to the spider release a pack of 4 cave spiders that have low health, deal low damage, and poison enemies.\nCan only have 1 spider active and in your inventory at once.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 213"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/dark_warp"
+        },
+        {
+          "text": " Dark Warp"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 450 Siege Bucks\nWarps you to the closest undead summon or Broodmother Spider within 15 blocks.\nThe teleport leaves behind a weak undead summon.\nWarping again will not teleport you to this summon.\nCan be used every 15s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 214"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nUndead summons have their HP increased from 40 to 50 and their attack damage from 7 to 9. Increases the HP restored with the necro staff from 15 to 20.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

@@ -1,0 +1,168 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Warrior Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              -1119675796,
+              -506206,
+              -2001385496,
+              -61856676
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2ZjYWNjYjRkM2U2MWI1OWEwM2U3ZmVlMDk4YTdjNmE0YTYzZGI5YjI5M2E4YmEyYThkMmFlMWY1OGZjZiJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Base Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "iron_axe",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              153
+            ]
+          },
+          "tooltip_display": {
+            "hidden_components": [
+              "attribute_modifiers"
+            ]
+          },
+          "minecraft:item_name": "Warrior's Battleaxe",
+          "minecraft:lore": [
+            {
+              "text": "Nothing fancy, but it gets the job done."
+            },
+            {
+              "text": " "
+            },
+            {
+              "color": "gray",
+              "italic": false,
+              "text": "When in Main Hand:"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 9.5 Attack Damage"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 0.9 Attack Speed"
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Warrior's Battleaxe",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              6
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Seismic Slam",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Launches you into the air, granting you fall damage immunity in the process."
+            },
+            {
+              "text": "Afterwards, quickly slam onto the ground, launching nearby enemies into the air."
+            },
+            {
+              "text": "Can be used every 20s."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Seismic Slam",
+        "width": 125
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "golden_apple",
+        "count": 2
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "2 Golden Apples",
+        "width": 125
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "shield"
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Shield",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Warrior Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/warrior/warrior_homepage"
+      }
+    }
+  ]
+}

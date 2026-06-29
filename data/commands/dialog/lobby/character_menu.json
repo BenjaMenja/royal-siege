@@ -1,0 +1,35 @@
+{
+  "type": "dialog_list",
+  "title": {
+    "text": "Character Menu",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "What character would you like to learn about?"
+      }
+    }
+  ],
+  "columns": 2,
+  "dialogs": [
+    "commands:info_pages/warrior/warrior_homepage",
+    "commands:info_pages/ninja/ninja_homepage",
+    "commands:info_pages/guardian/guardian_homepage",
+    "commands:info_pages/angel/angel_homepage",
+    "commands:info_pages/archer/archer_homepage",
+    "commands:info_pages/wizard/wizard_homepage",
+    "commands:info_pages/pirate/pirate_homepage",
+    "commands:info_pages/ent/ent_homepage",
+    "commands:info_pages/poseidon/poseidon_homepage",
+    "commands:info_pages/robot/robot_homepage",
+    "commands:info_pages/chef/chef_homepage",
+    "commands:info_pages/dragon/dragon_homepage",
+    "commands:info_pages/gambler/gambler_homepage",
+    "commands:info_pages/astronaut/astronaut_homepage",
+    "commands:info_pages/firecracker/firecracker_homepage",
+    "commands:info_pages/school_nurse/school_nurse_homepage",
+    "commands:info_pages/necromancer/necromancer_homepage"
+  ]
+}

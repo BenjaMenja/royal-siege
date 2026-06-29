@@ -1,0 +1,282 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Firecracker Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              584747035,
+              -887930049,
+              -1826469917,
+              1698739490
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODgzZjk3YzQyNmE5Y2ZjMWFkMGYyNjgzYmE2OWFmN2U5ZWUyMDc4ZTk4NzU0ZjM4ODA2ODkzODcyMzUyYmVkNCJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Shop Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "snowball",
+        "count": 4,
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              189
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Bang Snap",
+            "color": "#FF763B",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Throwable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "A small snap that pops when coming in contact with a surface."
+            },
+            {
+              "text": "The pop deals 4 damage to enemies in a 5 block radius and sets them on fire."
+            },
+            {
+              "text": "Can have a max of 12 of these at once."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Bang Snap",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "leather_boots",
+        "components": {
+          "item_name": {
+            "text": "Bunker Boots",
+            "color": "#224225",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "A sturdy pair of boots that increases your speed when near a burning enemy."
+            }
+          ],
+          "minecraft:enchantments": {
+            "minecraft:protection": 2,
+            "minecraft:blast_protection": 3,
+            "minecraft:projectile_protection": 2
+          },
+          "minecraft:dyed_color": 2245157,
+          "attribute_modifiers": [
+            {
+              "type": "minecraft:armor",
+              "amount": 2,
+              "operation": "add_value",
+              "id": "527768e0-7ea8-4b61-8aab-474c3a1570b9",
+              "slot": "feet"
+            },
+            {
+              "type": "minecraft:movement_speed",
+              "amount": 0.2,
+              "operation": "add_multiplied_base",
+              "id": "521aec61-b40b-456d-9f08-c91fd11c3099",
+              "slot": "feet"
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Bunker Boots",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Bucket of Homemade Napalm",
+            "color": "#FFE957",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Splashes napalm in front of you."
+            },
+            {
+              "text": "The napalm debuffs burning enemies, reducing their armor points by 4 "
+            },
+            {
+              "text": "and slowing them by 15% for 5s."
+            },
+            {
+              "text": "Can be used every 15s."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              190
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Bucket of Homemade Napalm",
+        "width": 150
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "snowball",
+        "count": 2,
+        "components": {
+          "minecraft:item_name": {
+            "text": "Cinder Bomb",
+            "color": "#B50006",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Throwable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "A modified smoke bomb that can be thrown to spawn a blinding smoke cloud."
+            },
+            {
+              "text": "Deals 2 damage per second while enemies are within it."
+            },
+            {
+              "text": "Deals double damage and slows burning targets by 8%."
+            },
+            {
+              "text": "Can have a maximum of 4 at once."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              192
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Cinder Bomb",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Pyromania",
+            "color": "#FF4F4F",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Deals 5 damage to yourself to increase your movement speed by 30%"
+            },
+            {
+              "text": "and attack damage by 1."
+            },
+            {
+              "text": "Effects are increased to +40% movement speed and +2 attack damage"
+            },
+            {
+              "text": "while you are on fire."
+            },
+            {
+              "text": "The increased stats persist even if you are no longer on fire before the buff expires."
+            },
+            {
+              "text": "Lasts 5s, and can be used every 24s."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Pyromania",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Firecracker Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/firecracker/firecracker_homepage"
+      }
+    }
+  ]
+}

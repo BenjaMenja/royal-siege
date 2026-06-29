@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "type": "text",
+    "text": "Gambler Ultimates"
+  },
+  "body": [
+    {
+      "type": "item",
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              -537377127,
+              1545619789,
+              -1449981744,
+              -516340289
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTJhMWVlODMwMjUwNmZjMzA2Nzg3NmMwYmYwNmI0OWI3MWZkNTlmM2I2ZTQ0MGQ3NmI3N2JmMDJjZmZkOTMyOSJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "type": "text",
+        "text": "Which ultimate will you use?"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": "Busted!",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 114"
+      }
+    },
+    {
+      "label": "Sleight of Hand",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 115"
+      }
+    }
+  ]
+}

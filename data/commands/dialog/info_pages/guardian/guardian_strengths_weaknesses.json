@@ -1,0 +1,136 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Guardian Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              -369259414,
+              -168932698,
+              -1520939587,
+              824470675
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q0NzMwYWQ1MmE5Yjk5Nzk1MGU2MzdlNTk1NDJmNjY2NDFhYTJmY2Q5OWFmM2E5Mzc3MzZmMDQyNjQyNjg4In19fQ=="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Strengths\n",
+          "bold": true,
+          "color": "red"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "red"
+        },
+        {
+          "type": "text",
+          "text": "High damage reduction greatly increases survivability in a variety of scenarios.\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "red"
+        },
+        {
+          "type": "text",
+          "text": "Shield protects against projectiles and supports a melee focused playstyle.\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "red"
+        },
+        {
+          "type": "text",
+          "text": "Very powerful ultimates can turn the tide of battle with relative ease.\n\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "Weaknesses\n",
+          "bold": true,
+          "color": "blue"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "blue"
+        },
+        {
+          "type": "text",
+          "text": "Low, slow damage output can make it difficult to deal with persistent threats alone.\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "blue"
+        },
+        {
+          "type": "text",
+          "text": "Lack of proper ranged damage can make fighting ranged enemies difficult.\n",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "type": "text",
+          "text": "- ",
+          "bold": false,
+          "color": "blue"
+        },
+        {
+          "type": "text",
+          "text": "Disabled shield can render the guardian rather vulnerable.\n",
+          "bold": false,
+          "color": "white"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Guardian Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/guardian/guardian_homepage"
+      }
+    }
+  ]
+}

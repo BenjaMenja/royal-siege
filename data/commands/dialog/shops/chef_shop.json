@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Chef's Kitchen",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The chef's master of the culinary arts makes him a terrifying opponent and supportive teammate.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Bottomless Breadsticks\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "The wizard has enchanted your basket, filling it with a mysterious, unlimited food source."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/barrier"
+        },
+        {
+          "text": " Oven"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nA building that shoots explosive pizzas at nearby enemies.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 57"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/sheep_spawn_egg"
+        },
+        {
+          "text": " Sheep Trainee"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nA sheep that gives resistance to nearby teammates.\nMoves very slowly and has decent health.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 58"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/tomato_soup"
+        },
+        {
+          "text": " Soup of the Day"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nGives you 1 of 5 different soups.\nEach soup is a unique weapon with different stats.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 59"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/specialty_dish"
+        },
+        {
+          "text": " Specialty Dish"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 700 Siege Bucks\nGives the chef a wide variety of powerful offensive buffs.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 60"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/scrambled_eggs"
+        },
+        {
+          "text": " Scrambled Eggs"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 700 Siege Bucks\nShoots an egg projectile that scrambles an opponent's inventory if it successfully hits.\nCan be used every 25s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 61"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/pay_raise"
+        },
+        {
+          "text": " Pay Raise"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nShoots a beam that heals teammates. If they are healed by the beam, they will drop some money.\nCan be used every 15s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 62"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nReduces the cooldown of mystery basket from 14s to 10s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

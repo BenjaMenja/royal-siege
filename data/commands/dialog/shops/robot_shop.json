@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Robot Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The robot controls the flow of combat using adaptable projectile weapons.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Bottomless Ammo\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "You have unlimited ammunition for your rifle, but have a maximum clip size of 15 bullets."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/music_disc_chirp"
+        },
+        {
+          "text": " CD-ROM"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nA powerful compact disc with high damage and knockback.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 52"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/virus_detector"
+        },
+        {
+          "text": " Virus Detector"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nIncapacitates an enemy that is currently in your castle.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 53"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/iron_chestplate"
+        },
+        {
+          "text": "Reinforced Casing"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 650 Siege Bucks\nA stronger and more durable casing.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 54"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/illegal_modifiers"
+        },
+        {
+          "text": " Illegal Modifiers"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 1000 Siege Bucks\nIncreases the attack speed of your gunblade while in your offhand.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 55"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/wire_cutters"
+        },
+        {
+          "text": " Wire Cutters"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 550 Siege Bucks\nA weapon that deals lots of damage to non-players.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 56"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/multi_barrel_attachment"
+        },
+        {
+          "text": " Multi Barrel Attachment"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 400 Siege Bucks\nAn ability that makes your weapon fire more bullets.\nThe gun will still consume the normal amount of bullets.\nLasts 10s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 113"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nIncreases your maximum clip size from 15 to 20 bullets.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

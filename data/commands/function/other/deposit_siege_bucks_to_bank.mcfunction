@@ -15,3 +15,5 @@ $execute if score @s[team=Red] textClick matches 182..185 if score @s[team=Red] 
 $execute if score @s[team=Blue] textClick matches 182..185 if score @s[team=Blue] Money matches $(siege_bucks).. run scoreboard players add #blue siegeBank $(siege_bucks)
 
 $execute if score @s textClick matches 182..185 if score @s Money matches $(siege_bucks).. run scoreboard players remove @s Money $(siege_bucks)
+
+function commands:dialog/refresh_bank

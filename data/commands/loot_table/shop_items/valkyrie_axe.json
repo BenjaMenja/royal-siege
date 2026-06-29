@@ -45,7 +45,10 @@
               "function": "minecraft:set_components",
               "components": {
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable"]
+                  "hidden_components": [
+                    "unbreakable",
+                    "attribute_modifiers"
+                  ]
                 },
                 "minecraft:custom_model_data": {
                   "floats": [

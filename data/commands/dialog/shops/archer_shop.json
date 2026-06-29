@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Archer Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The archer is a long range fighter that excels in projectile based combat.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Hit and Run\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Landing a hit with your bow and arrow will grant you +10% movement speed for 3s. Consecutive hits refresh the speed and increase the power of the speed by 10%, up to 30%."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/sniper_bow"
+        },
+        {
+          "text": " Sniper Bow"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 700 Siege Bucks\nA very high power bow that slows your movement speed by 65%.\nArrows fired from this bow are not affected by gravity.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 25"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/punch_bow"
+        },
+        {
+          "text": " Punch Bow"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nA bow enchanted with very high punch.\nCan only be fired every 5s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 26"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/tipped_arrow_head"
+        },
+        {
+          "text": " Slowing Arrows"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 150 Siege Bucks\nAn 8 pack of arrows that inflict -45% movement speed for 3s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 27"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/tipped_arrow_head"
+        },
+        {
+          "text": " Weakness Arrows"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 250 Siege Bucks\nAn 8 pack of arrows that inflict -4 attack damage for 5s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 28"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/leather_boots"
+        },
+        {
+          "text": " High-Performance Shoes"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nA pair of sports ready shoes that give +10% movement speed and +1 block step height.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 29"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/polearm"
+        },
+        {
+          "text": " Polearm"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nA repurposed javelin that deals 8 damage, has 1 attack speed, and has +1 block reach.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 170"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nIncreases the speed cap for Hit and Run to +50%.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

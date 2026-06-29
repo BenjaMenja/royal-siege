@@ -1,0 +1,275 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Dragon Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "dragon_head"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Shop Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              111
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Outrage",
+            "color": "#B74AFF",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Fly into a rage, increasing your damage and speed for 8 seconds."
+            },
+            {
+              "text": "Failure to land a killing blow for the duration will stun you, hindering your movement and damage."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Outrage",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "bat_spawn_egg",
+        "components": {
+          "item_name": {
+            "text": "Hatchlings",
+            "color": "#4300A8",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Placeable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Spawns 3 hatchling minions that chase enemies."
+            },
+            {
+              "text": "Up to 10 can exist at once."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              112
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Hatchlings",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Crystal Cannon",
+            "color": "#BB00FF",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Shoots a small end crystal that transforms into a large one when it comes in contact with a surface."
+            },
+            {
+              "text": "The end crystal charges for 3 seconds, after which it explodes in a huge radius, damaging everything nearby."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              113
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Crystal Cannon",
+        "width": 150
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Corruption",
+            "color": "#020678",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Corrupts all players with corrupt credits in their inventory."
+            },
+            {
+              "text": "Corrupted players are much more powerful, but are rather unstable."
+            },
+            {
+              "text": "This ability affects all players, including enemies."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              114
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Corruption",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "elytra",
+        "components": {
+          "minecraft:enchantments": {
+            "minecraft:protection": 1,
+            "minecraft:projectile_protection": 1
+          },
+          "attribute_modifiers": [
+            {
+              "type": "minecraft:armor",
+              "id": "1998450b-3c0f-41f2-baa5-93808ca31bdd",
+              "amount": 3,
+              "operation": "add_value",
+              "slot": "chest"
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Elytra",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "stone_axe",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Necromantic Axe",
+            "color": "#4400FF",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "A powerful axe that cleaves through enemies."
+            },
+            {
+              "text": "Killing an enemy with this will cause them to turn into a friendly hatchling with increased stats."
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "When in Main Hand:",
+              "color": "gray",
+              "italic": false
+            },
+            {
+              "text": " 9.5 Attack Damage",
+              "color": "dark_green",
+              "italic": false
+            },
+            {
+              "text": " 1.1 Attack Speed",
+              "color": "dark_green",
+              "italic": false
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              115
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Necromantic Axe",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Dragon Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/dragon/dragon_homepage"
+      }
+    }
+  ]
+}

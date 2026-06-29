@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Team Menu",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Which team will you play on?"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Red Team",
+        "color": "red"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 168"
+      }
+    },
+    {
+      "label": {
+        "text": "Blue Team",
+        "color": "blue"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger textClick set 169"
+      }
+    }
+  ]
+}

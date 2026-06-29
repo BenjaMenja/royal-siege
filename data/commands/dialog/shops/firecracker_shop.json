@@ -1,0 +1,177 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Firecracker Shop",
+    "color": "aqua"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 600,
+      "contents": [
+        {
+          "text": "The firecracker sets enemies ablaze and capitalizes on it with their blistering speed.\n\n",
+          "color": "aqua"
+        },
+        {
+          "text": "Passive - Momentum\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Full fire resistance. Eliminations light your sparkler back on fire and increase the damage of the next sparkler projectile."
+        }
+      ]
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/bang_snap"
+        },
+        {
+          "text": " Bang Snaps"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 200 Siege Bucks\nA 4-pack of throwable snaps that pop when they hit a surface.\nThe pop deals 4 damage and ignites all victims in an 8 block radius.\nCan have a maximum of 12 at once.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 173"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/napalm_bucket"
+        },
+        {
+          "text": " Bucket of Homemade Napalm"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nDon't ask for the recipe.\nRight click to splash the napalm in front of you.\nThe napalm debuffs burning enemies, reducing their armor points by 4 and slowing them by 15% for 5s.\nCan be used every 15s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 174"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/bunker_boots"
+        },
+        {
+          "text": " Bunker Boots"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 550 Siege Bucks\nA sturdy pair of boots that increases your speed when near a burning enemy.\nAlso has slightly better armor and protection than base kit boots.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 175"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/pyromania"
+        },
+        {
+          "text": " Pyromania"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 650 Siege Bucks\nRight click to consume some of your health to increase your speed by 30% and attack damage by +1.\nThe effects are increased to 40% movement speed and +2 damage if you are on fire.\nLasts 5s. Can be used every 24s.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 176"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/cinder_bomb"
+        },
+        {
+          "text": " Cinder Bomb"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 350 Siege Bucks\nA 2 pack of bombs that can be thrown to place a modified smoke cloud.\nThe smoke blinds enemies and additionally deals a small amount of damage.\nDamage is doubled against burning enemies and slows them by 8%.\nCan have a maximum of 4 at once.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 177"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/enhanced_space_helmet"
+        },
+        {
+          "text": " Enhanced Space Helmet"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 650 Siege Bucks\nAn improved helmet that gives increased defense.\nAlso automatically removes blindness, poison, and wither debuffs from the wearer.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 178"
+      }
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "item/green_up"
+        },
+        {
+          "text": " Upgrade Passive"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 2000 Siege Bucks\nIncreases the sparkler damage increase on elimination to +3.5.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 63"
+      },
+      "width": 302
+    }
+  ],
+  "after_action": "none",
+  "exit_action": {
+    "label": "Back to Menu",
+    "width": 200,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger textClick set 219"
+    },
+    "tooltip": {
+      "text": "Returns you to the main menu.",
+      "color": "gold"
+    }
+  },
+  "pause": false
+}

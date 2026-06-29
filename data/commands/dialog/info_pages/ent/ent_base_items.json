@@ -1,0 +1,238 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Ent Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              922351862,
+              -2026683839,
+              -1211501750,
+              10060195
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWY1NzE5MmIxOTRjNjU4YWFhODg4MTY4NDhjYmNlN2M3NDk0NjZhNzkyYjhhN2UxZDNmYWZhNDFjNDRmMzQxMiJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Base Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "iron_axe",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              164
+            ]
+          },
+          "attribute_modifiers": [
+            {
+              "type": "attack_damage",
+              "id": "ba8cd5a9-1792-4303-98e8-368419e0d5df",
+              "amount": 10,
+              "operation": "add_value",
+              "slot": "mainhand"
+            },
+            {
+              "type": "attack_speed",
+              "id": "ba8cd5a9-1792-4303-98e8-36841988c10b",
+              "amount": -3.3,
+              "operation": "add_value",
+              "slot": "mainhand"
+            }
+          ],
+          "tooltip_display": {
+            "hidden_components": [
+              "attribute_modifiers"
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "#1A5C06",
+            "italic": false,
+            "text": "Lumberjaxe"
+          },
+          "minecraft:lore": [
+            {
+              "text": "The name doesn't make much sense, but damn, if it isn't a good pun."
+            },
+            {
+              "text": " "
+            },
+            {
+              "color": "gray",
+              "italic": false,
+              "text": "When in Main Hand:"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 10 Attack Damage"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 0.7 Attack Speed"
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Lumberjaxe",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "golden_apple",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              30
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Healing Fruit",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Can be thrown to allies from any distance."
+            },
+            {
+              "text": "The maximum number fruits on your team is equal to the number of players on your team."
+            },
+            {
+              "text": "The fruit takes 1s to consume."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Healing Fruit",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              31
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "#22FF00",
+            "italic": false,
+            "text": "Blossom"
+          },
+          "minecraft:lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Gives a burst of energy and healing to nearby allies."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Blossom",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              32
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "#228A12",
+            "italic": false,
+            "text": "Rooting Spell"
+          },
+          "minecraft:lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Right click to shoot a rooting beam."
+            },
+            {
+              "text": "Successful hits will root an enemy,"
+            },
+            {
+              "text": "freezing them in place for a short time."
+            },
+            {
+              "text": "Has a maximum range of 10 blocks."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Rooting Spell",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Ent Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/ent/ent_homepage"
+      }
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Astronaut Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              454251851,
+              -1251392843,
+              -1643556432,
+              222096488
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTVlYzY1NzU0ODRiMzQ5Yjc0MjgzMWVlNTVkNTNiNzVkYjJhMTNhZjY0MjVjOGQ1NWYyNmY4YWFlZDg3ZTQifX19"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Shop Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              173
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Debris Cannon",
+            "color": "#85775E",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Fires debris particles that deal damage and slow for a short time."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Debris Cannon",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "item_name": {
+            "text": "Gravity Canceler",
+            "color": "light_purple",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Creates an inverted gravity field around the user that lifts the user and enemies with 15 blocks in the air."
+            },
+            {
+              "text": "Lasts 6s and has a cooldown of 30s."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              25
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Gravity Canceler",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Rocket Boosters",
+            "color": "yellow",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Greatly increases speed of nearby teammates for a short time."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              174
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Rocket Boosters",
+        "width": 150
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Safety Tether",
+            "color": "#854905",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Creates a tether at your current location."
+            },
+            {
+              "text": ""
+            },
+            {
+              "text": "Using the ability again within 10 seconds will teleport you back to the tether."
+            },
+            {
+              "text": "If you move more than 30 blocks from the tether, it will break."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              175
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Safety Tether",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "leather_boots",
+        "components": {
+          "minecraft:item_name": {
+            "color": "dark_gray",
+            "text": "Steel Boots",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Gives high knockback resistance and increased gravity when worn."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Steel Boots",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Enhanced Space Helmet",
+            "color": "blue",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Filters out blindness, poison, and wither debuffs."
+            }
+          ],
+          "minecraft:enchantments": {
+            "minecraft:protection": 2,
+            "minecraft:blast_protection": 3
+          },
+          "minecraft:profile": {
+            "id": [
+              1578386573,
+              1603685694,
+              -1170502649,
+              2051381047
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWI5MmIwODYyMjY0ZmYyY2JhMWRiZDg4MTkyY2M4MTU0M2ZhYjU0OTY5ZTExN2Q0ZmU0MzUzYjk1MyJ9fX0="
+              }
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Enhanced Space Helmet",
+        "width": 150
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Astronaut Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/astronaut/astronaut_homepage"
+      }
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Gambler Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              -537377127,
+              1545619789,
+              -1449981744,
+              -516340289
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTJhMWVlODMwMjUwNmZjMzA2Nzg3NmMwYmYwNmI0OWI3MWZkNTlmM2I2ZTQ0MGQ3NmI3N2JmMDJjZmZkOTMyOSJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Shop Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              143
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Russian Roulette",
+            "color": "gold",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Fires a powerful bullet that pierces with a 16.66% success rate."
+            },
+            {
+              "text": "Can be used every 5 seconds."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Russian Roulette",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "iron_ingot",
+        "components": {
+          "item_name": {
+            "text": "Betting Chips",
+            "color": "yellow",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Place a bounty on a random enemy target for a variable amount of money."
+            },
+            {
+              "text": "If the bounty is successfully killed in 20 seconds, you will gain 2x your bet in money."
+            },
+            {
+              "text": "Failure to kill the bounty will result in a loss of money!"
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              200
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Betting Chips",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "paper",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Insurance",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "A proof of insurance."
+            },
+            {
+              "text": "All team members will claim new money for 100 Siege Bucks each."
+            },
+            {
+              "text": "Money that was in their inventory will still be dropped."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              144
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Insurance",
+        "width": 150
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Inspection",
+            "color": "red",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Reveals all players that currently have their ultimate."
+            },
+            {
+              "text": "Is consumed upon use."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              145
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Inspection",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Security Guard",
+            "color": "red",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Spawns a security guard that chases the enemy with the highest amount of money."
+            },
+            {
+              "text": "You can have a max of 2 guards in your inventory and on the field at once."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              146
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Security Guard",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Coin Gun",
+            "color": "gold",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Shoots coins that pierce enemies."
+            },
+            {
+              "text": "Consumes 100 Siege Bucks per shot."
+            },
+            {
+              "text": "Can be used every 8 seconds."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              147
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Coin Gun",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Gambler Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/gambler/gambler_homepage"
+      }
+    }
+  ]
+}

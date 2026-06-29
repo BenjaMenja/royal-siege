@@ -34,7 +34,7 @@ scoreboard players set @s[tag=!dababy,tag=nonspec,tag=randomized] ultCheck 0
 
 tag @s[tag=nonspec,tag=randomized] remove readyUp
 
-tellraw @s[tag=!dababy,tag=nonspec,tag=randomized] [{"text":"Which ultimate would you like to use?\n","color":"aqua"},{"text":"[Tree of Life]","color":"green","click_event":{"action":"run_command","command":"/trigger textClick set 72"}},{"text":" "},{"text":"[Decay Aura]","color":"green","click_event":{"action":"run_command","command":"/trigger textClick set 73"}}]
+dialog show @s[tag=!dababy,tag=nonspec,tag=randomized] commands:character_select/ultimate_selector/ent
 
 tag @s remove dababy
 

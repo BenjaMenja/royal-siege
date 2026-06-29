@@ -1,0 +1,225 @@
+{
+  "type": "multi_action",
+  "title": [
+    {
+      "text": "Ninja Guide",
+      "color": "aqua"
+    }
+  ],
+  "body": [
+    {
+      "type": "minecraft:item",
+      "show_tooltip": false,
+      "item": {
+        "id": "player_head",
+        "components": {
+          "minecraft:profile": {
+            "id": [
+              103604342,
+              -1386918995,
+              -1757972842,
+              74746554
+            ],
+            "properties": [
+              {
+                "name": "textures",
+                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmY3MzMyNjk2MTRmZThhOWFlODlmNWM1ODI4NmFhNTNiOWUzODNmYzRkYzU3ZTM3ZWNiZmE1ZTkzYSJ9fX0="
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "type": "text",
+          "text": "Base Items\n",
+          "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "iron_sword",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              155
+            ]
+          },
+          "tooltip_display": {
+            "hidden_components": [
+              "attribute_modifiers"
+            ]
+          },
+          "minecraft:item_name": "Ninjato",
+          "minecraft:lore": [
+            {
+              "text": "Sturdy and razor sharp, made the traditional way in Japan."
+            },
+            {
+              "text": "You don't want to know how many shifts at Taco Bell it took to get this."
+            },
+            {
+              "text": " "
+            },
+            {
+              "color": "gray",
+              "italic": false,
+              "text": "When in Main Hand:"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 7 Attack Damage"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 2 Attack Speed"
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Ninjato",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              9
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Dash",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Dash forward up to 5 blocks, creating an explosion wherever you land."
+            },
+            {
+              "text": "You also receive brief speed and damage resistance."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Dash",
+        "width": 125
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "snowball",
+        "count": 2,
+        "components": {
+          "custom_model_data": {
+            "floats": [
+              95
+            ]
+          },
+          "item_name": {
+            "text": "Shuriken",
+            "color": "#CECECE",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Throwable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "A simple shuriken that deals 5 damage."
+            },
+            {
+              "text": "Can have a max of 8 at once."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Shurikens",
+        "width": 125
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "snowball",
+        "count": 1,
+        "components": {
+          "custom_model_data": {
+            "floats": [
+              8
+            ]
+          },
+          "item_name": {
+            "text": "Smoke Bomb",
+            "color": "dark_gray",
+            "italic": false
+          },
+          "lore": [
+            {
+              "text": "Throwable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Throws a smoke bomb that creates a large smoke cloud on impact."
+            },
+            {
+              "text": "All enemies within range are inflicted with blindness."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Smoke Bomb",
+        "width": 125
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "type": "text",
+        "text": "Back to Ninja Homepage"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/ninja/ninja_homepage"
+      }
+    }
+  ]
+}

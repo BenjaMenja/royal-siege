@@ -16,9 +16,9 @@ scoreboard players set @a[team=Red,tag=resurrected] RedKit 197
 
 scoreboard players set @a[team=Blue,tag=resurrected] BlueKit 197
 
-execute if score #gameDuration gameDuration matches 18000.. if score #gamemode settings matches 0 run scoreboard players set @a[tag=resurrected] Respawn -101
+execute if score #gameDuration gameDuration matches 18000.. if data storage royalsiege:settings {Gamemode:0} run scoreboard players set @a[tag=resurrected] Respawn -101
 
-execute if score #gameDuration gameDuration matches ..18000 if score #gamemode settings matches 0 run scoreboard players set @a[tag=resurrected] Respawn 0
+execute if score #gameDuration gameDuration matches ..18000 if data storage royalsiege:settings {Gamemode:0} run scoreboard players set @a[tag=resurrected] Respawn 0
 
 execute as @a[team=Red,tag=resurrected] run function commands:starting/red
 
