@@ -168,7 +168,7 @@
       "show_tooltip": true,
       "description": {
         "contents": "Reinforced Casing",
-        "width": 150
+        "width": 125
       }
     },
     {
@@ -289,6 +289,35 @@
       "show_tooltip": true,
       "description": {
         "contents": "Multi-Barrel Attachment",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "quartz",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Upgrade Passive",
+            "color": "green",
+            "italic": false
+          },
+          "lore": [
+            {
+              "type": "text",
+              "text": "Increases your maximum clip size from 15 to 20 bullets."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              125
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Upgrade Passive",
         "width": 125
       }
     }

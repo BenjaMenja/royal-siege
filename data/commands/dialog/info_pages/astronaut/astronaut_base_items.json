@@ -36,15 +36,28 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "text": "Passive - Gravity Suit\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Your space suit alters how gravity affects you.\nYour jump height is increased and you fall slower.\nHolding the sneak button causes you to fall quickly."
         }
       ]
     },
     {
       "type": "minecraft:item",
       "item": {
-        "id": "stick",
+        "id": "carrot",
         "components": {
           "minecraft:custom_model_data": {
             "floats": [

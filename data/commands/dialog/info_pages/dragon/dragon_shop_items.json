@@ -139,7 +139,7 @@
       "show_tooltip": true,
       "description": {
         "contents": "Crystal Cannon",
-        "width": 150
+        "width": 125
       }
     },
     {
@@ -250,12 +250,46 @@
             "floats": [
               115
             ]
+          },
+          "tooltip_display": {
+            "hidden_components": [
+              "attribute_modifiers"
+            ]
           }
         }
       },
       "show_tooltip": true,
       "description": {
         "contents": "Necromantic Axe",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "quartz",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Upgrade Passive",
+            "color": "green",
+            "italic": false
+          },
+          "lore": [
+            {
+              "type": "text",
+              "text": "Lifts the ender curse, allowing you to receive all buffs."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              125
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Upgrade Passive",
         "width": 125
       }
     }

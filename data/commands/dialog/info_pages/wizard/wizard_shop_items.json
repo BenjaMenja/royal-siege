@@ -134,7 +134,7 @@
       "show_tooltip": true,
       "description": {
         "contents": "Running Shoes",
-        "width": 150
+        "width": 125
       }
     },
     {
@@ -231,6 +231,35 @@
       "show_tooltip": true,
       "description": {
         "contents": "Exp. Bomb Blaster",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "quartz",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Upgrade Passive",
+            "color": "green",
+            "italic": false
+          },
+          "lore": [
+            {
+              "type": "text",
+              "text": "Decreases the cooldown for wizard minion spawns to 16s."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              125
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Upgrade Passive",
         "width": 125
       }
     }

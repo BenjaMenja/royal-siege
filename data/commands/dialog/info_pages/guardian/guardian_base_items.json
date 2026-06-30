@@ -36,8 +36,21 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "text": "Passive - Defender\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Teammates within 5 blocks receive resistance I (+20% damage resistance)."
         }
       ]
     },

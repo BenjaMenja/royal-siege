@@ -58,6 +58,11 @@
           },
           "minecraft:lore": [
             {
+              "text": "Ultimate Cost - 3200",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": "Right-Click to use",
               "color": "yellow",
               "italic": false
@@ -99,6 +104,11 @@
             "text": "Terror of the Seas"
           },
           "minecraft:lore": [
+            {
+              "text": "Ultimate Cost - 3200",
+              "color": "yellow",
+              "italic": false
+            },
             {
               "color": "yellow",
               "italic": false,

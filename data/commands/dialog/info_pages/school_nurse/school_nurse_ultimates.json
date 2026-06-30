@@ -58,6 +58,11 @@
           },
           "minecraft:lore": [
             {
+              "text": "Ultimate Cost - 2800",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": "Right-Click to use",
               "color": "yellow",
               "italic": false
@@ -100,6 +105,11 @@
           },
           "minecraft:lore": [
             {
+              "text": "Ultimate Cost - 1800",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": "Right-Click to use",
               "color": "yellow",
               "italic": false
@@ -135,7 +145,8 @@
       "action": {
         "type": "minecraft:show_dialog",
         "dialog": "commands:info_pages/school_nurse/school_nurse_homepage"
-      }
+      },
+      "width": 200
     }
   ]
 }

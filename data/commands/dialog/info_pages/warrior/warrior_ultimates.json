@@ -59,6 +59,11 @@
           "minecraft:item_name": "Cavalry Charge",
           "minecraft:lore": [
             {
+              "text": "Ultimate Cost - 3000",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": "Placeable",
               "color": "yellow",
               "italic": false
@@ -93,6 +98,11 @@
             "italic": false
           },
           "minecraft:lore": [
+            {
+              "text": "Ultimate Cost - 3200",
+              "color": "yellow",
+              "italic": false
+            },
             {
               "text": "Right-Click to use",
               "color": "yellow",

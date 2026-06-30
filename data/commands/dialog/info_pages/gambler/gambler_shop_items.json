@@ -144,7 +144,7 @@
       "show_tooltip": true,
       "description": {
         "contents": "Insurance",
-        "width": 150
+        "width": 125
       }
     },
     {
@@ -264,6 +264,35 @@
       "show_tooltip": true,
       "description": {
         "contents": "Coin Gun",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "quartz",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Upgrade Passive",
+            "color": "green",
+            "italic": false
+          },
+          "lore": [
+            {
+              "type": "text",
+              "text": "Increases the chance for an additional coin to drop from enemy deaths from 25% to 50%."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              125
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Upgrade Passive",
         "width": 125
       }
     }

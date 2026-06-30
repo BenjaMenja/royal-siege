@@ -36,8 +36,21 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "text": "Passive - Resourceful\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Tally the number of people affected by your ice packs. When this number reaches 8, instantly replenish 1 ice pack."
         }
       ]
     },
@@ -190,7 +203,8 @@
       "action": {
         "type": "minecraft:show_dialog",
         "dialog": "commands:info_pages/school_nurse/school_nurse_homepage"
-      }
+      },
+      "width": 200
     }
   ]
 }

@@ -36,8 +36,21 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "text": "Passive - Momentum\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Full fire resistance. Eliminations light your sparkler back on fire and increase the damage of the next sparkler projectile."
         }
       ]
     },
@@ -167,7 +180,8 @@
       "action": {
         "type": "minecraft:show_dialog",
         "dialog": "commands:info_pages/firecracker/firecracker_homepage"
-      }
+      },
+      "width": 200
     }
   ]
 }

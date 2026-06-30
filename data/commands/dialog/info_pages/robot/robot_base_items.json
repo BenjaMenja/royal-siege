@@ -36,8 +36,21 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "text": "Passive - Bottomless Ammo\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "You have unlimited ammunition for your rifle, but have a maximum clip size of 15 bullets."
         }
       ]
     },

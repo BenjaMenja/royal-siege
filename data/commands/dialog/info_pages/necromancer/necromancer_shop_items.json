@@ -162,7 +162,7 @@
       "show_tooltip": true,
       "description": {
         "contents": "Undead Whistle",
-        "width": 150
+        "width": 125
       }
     },
     {
@@ -255,7 +255,7 @@
       "show_tooltip": true,
       "description": {
         "contents": "Broodmother Spider",
-        "width": 150
+        "width": 125
       }
     },
     {
@@ -302,6 +302,35 @@
         "contents": "Dark Warp",
         "width": 125
       }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "quartz",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Upgrade Passive",
+            "color": "green",
+            "italic": false
+          },
+          "lore": [
+            {
+              "type": "text",
+              "text": "Undead summons have their HP increased from 40 to 50 and their attack damage from 7 to 9. Increases the HP restored with the necro staff from 15 to 20."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              125
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Upgrade Passive",
+        "width": 125
+      }
     }
   ],
   "actions": [
@@ -313,7 +342,8 @@
       "action": {
         "type": "minecraft:show_dialog",
         "dialog": "commands:info_pages/necromancer/necromancer_homepage"
-      }
+      },
+      "width": 200
     }
   ]
 }

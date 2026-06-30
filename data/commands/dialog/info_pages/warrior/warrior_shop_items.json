@@ -51,11 +51,6 @@
               64
             ]
           },
-          "tooltip_display": {
-            "hidden_components": [
-              "attribute_modifiers"
-            ]
-          },
           "minecraft:item_name": "Warrior Shield",
           "minecraft:lore": [
             {
@@ -241,6 +236,35 @@
       "show_tooltip": true,
       "description": {
         "contents": "2 Golden Apples",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "quartz",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Upgrade Passive",
+            "color": "green",
+            "italic": false
+          },
+          "lore": [
+            {
+              "type": "text",
+              "text": "Your slowness effect power is increased to -20%."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              125
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Upgrade Passive",
         "width": 125
       }
     }

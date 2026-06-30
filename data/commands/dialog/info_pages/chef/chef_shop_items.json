@@ -132,7 +132,7 @@
       "show_tooltip": true,
       "description": {
         "contents": "Soup of the Day",
-        "width": 150
+        "width": 125
       }
     },
     {
@@ -297,6 +297,35 @@
       "show_tooltip": true,
       "description": {
         "contents": "Pay Raise",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "quartz",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Upgrade Passive",
+            "color": "green",
+            "italic": false
+          },
+          "lore": [
+            {
+              "type": "text",
+              "text": "Reduces the cooldown of mystery basket from 14s to 10s."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              125
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Upgrade Passive",
         "width": 125
       }
     }

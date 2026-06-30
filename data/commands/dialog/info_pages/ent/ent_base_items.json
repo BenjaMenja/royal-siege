@@ -36,8 +36,21 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "text": "Passive - Natural Gift\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Dealing damage to enemies gives regeneration II to teammates within 10 blocks for 2s."
         }
       ]
     },

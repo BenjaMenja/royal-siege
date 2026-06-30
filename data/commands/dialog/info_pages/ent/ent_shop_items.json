@@ -236,7 +236,36 @@
       "show_tooltip": true,
       "description": {
         "contents": "Poisonous Mushrooms",
-        "width": 125
+        "width": 150
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "quartz",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Upgrade Passive",
+            "color": "green",
+            "italic": false
+          },
+          "lore": [
+            {
+              "type": "text",
+              "text": "Increases speed from Blossom from +10% to +20%, and increases duration of all Blossom buffs."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              125
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Upgrade Passive",
+        "width": 150
       }
     }
   ],

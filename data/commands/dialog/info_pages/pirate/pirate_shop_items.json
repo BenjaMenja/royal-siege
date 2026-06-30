@@ -163,7 +163,7 @@
       "show_tooltip": true,
       "description": {
         "contents": "Powder Keg",
-        "width": 150
+        "width": 125
       }
     },
     {
@@ -301,6 +301,35 @@
       "show_tooltip": true,
       "description": {
         "contents": "Coin Gun",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "quartz",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Upgrade Passive",
+            "color": "green",
+            "italic": false
+          },
+          "lore": [
+            {
+              "type": "text",
+              "text": "Reduces the cooldown of Fake Money from 45s to 30s."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              125
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Upgrade Passive",
         "width": 125
       }
     }

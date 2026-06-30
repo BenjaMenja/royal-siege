@@ -166,7 +166,7 @@
       "show_tooltip": true,
       "description": {
         "contents": "First Aid Kit",
-        "width": 150
+        "width": 125
       }
     },
     {
@@ -293,6 +293,35 @@
         "contents": "Live-Attenuated Vaccine",
         "width": 125
       }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "quartz",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Upgrade Passive",
+            "color": "green",
+            "italic": false
+          },
+          "lore": [
+            {
+              "type": "text",
+              "text": "Reduces the player requirement for the passive from 8 to 6."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              125
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Upgrade Passive",
+        "width": 125
+      }
     }
   ],
   "actions": [
@@ -304,7 +333,8 @@
       "action": {
         "type": "minecraft:show_dialog",
         "dialog": "commands:info_pages/school_nurse/school_nurse_homepage"
-      }
+      },
+      "width": 200
     }
   ]
 }

@@ -20,8 +20,21 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "text": "Passive - Ender Curse\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "The power of the End holds you back. You cannot receive resistance and strength buffs."
         }
       ]
     },

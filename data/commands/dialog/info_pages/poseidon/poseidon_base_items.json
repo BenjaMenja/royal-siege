@@ -36,8 +36,21 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "text": "Passive - Storm's Calling\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "You receive lightning spells every 10s that stack up to 5.\nCan be thrown to strike lightning onto nearby enemies."
         }
       ]
     },
@@ -148,98 +161,17 @@
         "contents": "Lightning Spell",
         "width": 150
       }
-    },
-    {
-      "type": "item",
-      "item": {
-        "id": "carrot",
-        "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              31
-            ]
-          },
-          "minecraft:item_name": {
-            "color": "#22FF00",
-            "italic": false,
-            "text": "Blossom"
-          },
-          "minecraft:lore": [
-            {
-              "color": "yellow",
-              "italic": false,
-              "text": "Right-Click to use"
-            },
-            {
-              "text": " "
-            },
-            {
-              "text": "Gives a burst of energy and healing to nearby allies."
-            }
-          ]
-        }
-      },
-      "show_tooltip": true,
-      "description": {
-        "contents": "Blossom",
-        "width": 125
-      }
-    },
-    {
-      "type": "item",
-      "item": {
-        "id": "carrot",
-        "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              32
-            ]
-          },
-          "minecraft:item_name": {
-            "color": "#228A12",
-            "italic": false,
-            "text": "Rooting Spell"
-          },
-          "minecraft:lore": [
-            {
-              "color": "yellow",
-              "italic": false,
-              "text": "Right-Click to use"
-            },
-            {
-              "text": " "
-            },
-            {
-              "text": "Right click to shoot a rooting beam."
-            },
-            {
-              "text": "Successful hits will root an enemy,"
-            },
-            {
-              "text": "freezing them in place for a short time."
-            },
-            {
-              "text": "Has a maximum range of 10 blocks."
-            }
-          ]
-        }
-      },
-      "show_tooltip": true,
-      "description": {
-        "contents": "Rooting Spell",
-        "width": 125
-      }
     }
   ],
   "actions": [
     {
       "label": {
         "type": "text",
-        "text": "Back to Ent Homepage"
+        "text": "Back to Poseidon Homepage"
       },
       "action": {
         "type": "minecraft:show_dialog",
-        "dialog": "commands:info_pages/ent/ent_homepage"
+        "dialog": "commands:info_pages/poseidon/poseidon_homepage"
       }
     }
   ]

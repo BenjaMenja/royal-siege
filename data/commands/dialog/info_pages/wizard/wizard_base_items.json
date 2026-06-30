@@ -36,8 +36,21 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "text": "Passive - Minions\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Summon small wizard minions at your feet to attack enemies. Minions can last a maximum of 90s and will disappear when the wizard dies. Spawns every 20s."
         }
       ]
     },
@@ -109,67 +122,133 @@
       },
       "show_tooltip": true,
       "description": {
-        "contents": "Archer's Bow",
+        "contents": "Worn Out Staff",
         "width": 125
       }
     },
     {
       "type": "item",
       "item": {
-        "id": "arrow",
+        "id": "carrot",
         "components": {
           "minecraft:custom_model_data": {
             "floats": [
-              12
+              2
             ]
           },
           "minecraft:item_name": {
-            "italic": false,
-            "text": "Bottomless Quiver"
-          }
-        }
-      },
-      "show_tooltip": true,
-      "description": {
-        "contents": "Bottomless Quiver",
-        "width": 125
-      }
-    },
-    {
-      "type": "item",
-      "item": {
-        "id": "wooden_axe",
-        "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              11
-            ]
+            "text": "Lightning Staff",
+            "color": "aqua",
+            "italic": false
           },
-          "minecraft:enchantments": {
-            "minecraft:efficiency": 5,
-            "minecraft:unbreaking": 1
-          },
-          "tooltip_display": {
-            "hidden_components": [
-              "unbreakable",
-              "enchantments"
-            ]
-          },
-          "minecraft:item_name": {
-            "color": "#00FFBB",
-            "italic": false,
-            "text": "Shield Buster"
-          },
-          "minecraft:lore": [
+          "lore": [
             {
-              "text": "Useful to take down shields in a pinch."
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Shoots a beam that strikes lightning"
+            },
+            {
+              "text": "onto enemy players and blocks."
+            },
+            {
+              "text": "Gains a charge every 6 seconds,"
+            },
+            {
+              "text": "and can hold up to 8 charges."
             }
           ]
         }
       },
       "show_tooltip": true,
       "description": {
-        "contents": "Shield Buster",
+        "contents": "Lightning Staff",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              1
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "red",
+            "italic": false,
+            "text": "Fireball Launcher"
+          },
+          "minecraft:lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Contains an unlimited "
+            },
+            {
+              "text": "supply of fireballs to launch."
+            },
+            {
+              "text": "Can be used every 8 seconds."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Fireball Launcher",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              3
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "green",
+            "text": "Eject Button",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Ejects you in the direction you are looking in, knocking back anyone near you."
+            },
+            {
+              "text": "Can be used every 25s."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Eject Button",
         "width": 125
       }
     }
@@ -178,11 +257,11 @@
     {
       "label": {
         "type": "text",
-        "text": "Back to Archer Homepage"
+        "text": "Back to Wizard Homepage"
       },
       "action": {
         "type": "minecraft:show_dialog",
-        "dialog": "commands:info_pages/archer/archer_homepage"
+        "dialog": "commands:info_pages/wizard/wizard_homepage"
       }
     }
   ]

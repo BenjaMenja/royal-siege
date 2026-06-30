@@ -36,10 +36,23 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
         }
       ]
+    },
+    {
+      "type": "plain_message",
+      "contents": [
+        {
+          "text": "Passive - Pixie Helper\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Healing teammates 6 times in total will summon a pixie to help you in battle. The pixie automatically heals the lowest health person on your team every 8s. Taking too much damage will kill the pixie."
+        }
+      ],
+      "width": 512
     },
     {
       "type": "minecraft:item",
@@ -168,7 +181,7 @@
         "components": {
           "minecraft:custom_model_data": {
             "floats": [
-              18
+              19
             ]
           },
           "minecraft:item_name": {

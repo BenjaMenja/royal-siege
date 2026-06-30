@@ -130,7 +130,8 @@
       "action": {
         "type": "minecraft:show_dialog",
         "dialog": "commands:info_pages/school_nurse/school_nurse_homepage"
-      }
+      },
+      "width": 200
     }
   ]
 }

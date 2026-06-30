@@ -149,7 +149,7 @@
       "show_tooltip": true,
       "description": {
         "contents": "Rocket Boosters",
-        "width": 150
+        "width": 125
       }
     },
     {
@@ -173,9 +173,6 @@
             },
             {
               "text": "Creates a tether at your current location."
-            },
-            {
-              "text": ""
             },
             {
               "text": "Using the ability again within 10 seconds will teleport you back to the tether."
@@ -258,7 +255,40 @@
       "show_tooltip": true,
       "description": {
         "contents": "Enhanced Space Helmet",
-        "width": 150
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "quartz",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Upgrade Passive",
+            "color": "green",
+            "italic": false
+          },
+          "lore": [
+            {
+              "type": "text",
+              "text": "Your fast fall creates a small explosion when you land."
+            },
+            {
+              "type": "text",
+              "text": "The explosion activates every 15s."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              125
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Upgrade Passive",
+        "width": 125
       }
     }
   ],

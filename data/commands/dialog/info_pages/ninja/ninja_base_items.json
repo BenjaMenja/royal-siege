@@ -36,8 +36,21 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "text": "Passive - Powerup\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Landing a killing blow will grant you +3 attack damage for 8s and give you one of your dashes back."
         }
       ]
     },

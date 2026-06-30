@@ -202,19 +202,24 @@
             "floats": [
               52
             ]
+          },
+          "tooltip_display": {
+            "hidden_components": [
+              "attribute_modifiers"
+            ]
           }
         }
       },
       "show_tooltip": true,
       "description": {
         "contents": "Anchor",
-        "width": 125
+        "width": 150
       }
     },
     {
       "type": "item",
       "item": {
-        "id": "iron_pickaxe",
+        "id": "leather_chestplate",
         "components": {
           "minecraft:item_name": {
             "text": "Prismarine Breastplate",
@@ -250,6 +255,35 @@
         "contents": "Prismarine Breastplate",
         "width": 150
       }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "quartz",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Upgrade Passive",
+            "color": "green",
+            "italic": false
+          },
+          "lore": [
+            {
+              "type": "text",
+              "text": "Increases the max amount of spells from 5 to 8 and reduces the cooldown from 10s to 9s."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              125
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Upgrade Passive",
+        "width": 150
+      }
     }
   ],
   "actions": [
@@ -260,7 +294,7 @@
       },
       "action": {
         "type": "minecraft:show_dialog",
-        "dialog": "commands:info_pages/poseidon/poseidon_shop_items"
+        "dialog": "commands:info_pages/poseidon/poseidon_homepage"
       }
     }
   ]

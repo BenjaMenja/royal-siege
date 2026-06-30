@@ -58,6 +58,11 @@
           },
           "minecraft:lore": [
             {
+              "text": "Ultimate Cost - 2600",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": "Right-Click to use",
               "color": "yellow",
               "italic": false
@@ -97,6 +102,11 @@
           },
           "minecraft:lore": [
             {
+              "text": "Ultimate Cost - 3300",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": "Right-Click to use",
               "color": "yellow",
               "italic": false
@@ -135,7 +145,8 @@
       "action": {
         "type": "minecraft:show_dialog",
         "dialog": "commands:info_pages/necromancer/necromancer_homepage"
-      }
+      },
+      "width": 200
     }
   ]
 }

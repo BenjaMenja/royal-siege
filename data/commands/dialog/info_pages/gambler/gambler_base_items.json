@@ -36,8 +36,21 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "text": "Passive - Money Manipulator\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Landing a final blow on a player causes them to have a 25% of dropping an extra Siege Coin."
         }
       ]
     },

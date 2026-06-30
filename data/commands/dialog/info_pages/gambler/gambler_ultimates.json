@@ -58,6 +58,11 @@
           },
           "minecraft:lore": [
             {
+              "text": "Ultimate Cost - 3200",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": "Right-Click to use",
               "color": "yellow",
               "italic": false
@@ -97,6 +102,11 @@
           },
           "minecraft:lore": [
             {
+              "text": "Ultimate Cost - 3200",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": "Right-Click to use",
               "color": "yellow",
               "italic": false
@@ -122,7 +132,7 @@
       "show_tooltip": true,
       "description": {
         "contents": "Sleight of Hand",
-        "width": 150
+        "width": 125
       }
     }
   ],

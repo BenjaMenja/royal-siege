@@ -36,8 +36,21 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "text": "Passive - Greed\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "You earn 200 money from redeeming siege coins, as opposed to the usual 150."
         }
       ]
     },

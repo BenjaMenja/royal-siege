@@ -171,7 +171,7 @@
       "show_tooltip": true,
       "description": {
         "contents": "Bucket of Homemade Napalm",
-        "width": 150
+        "width": 125
       }
     },
     {
@@ -257,12 +257,46 @@
             {
               "text": "Lasts 5s, and can be used every 24s."
             }
-          ]
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              191
+            ]
+          }
         }
       },
       "show_tooltip": true,
       "description": {
         "contents": "Pyromania",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "quartz",
+        "components": {
+          "minecraft:item_name": {
+            "text": "Upgrade Passive",
+            "color": "green",
+            "italic": false
+          },
+          "lore": [
+            {
+              "type": "text",
+              "text": "Increases the sparkler damage increase on elimination to +3.5."
+            }
+          ],
+          "minecraft:custom_model_data": {
+            "floats": [
+              125
+            ]
+          }
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Upgrade Passive",
         "width": 125
       }
     }
@@ -276,7 +310,8 @@
       "action": {
         "type": "minecraft:show_dialog",
         "dialog": "commands:info_pages/firecracker/firecracker_homepage"
-      }
+      },
+      "width": 200
     }
   ]
 }

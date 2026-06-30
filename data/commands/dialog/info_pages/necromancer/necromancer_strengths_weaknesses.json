@@ -130,7 +130,8 @@
       "action": {
         "type": "minecraft:show_dialog",
         "dialog": "commands:info_pages/necromancer/necromancer_homepage"
-      }
+      },
+      "width": 200
     }
   ]
 }

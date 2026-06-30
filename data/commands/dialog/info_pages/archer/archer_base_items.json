@@ -36,8 +36,21 @@
       "contents": [
         {
           "type": "text",
-          "text": "Base Items\n",
+          "text": "Base Items",
           "underlined": true
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 512,
+      "contents": [
+        {
+          "text": "Passive - Hit and Run\n\n",
+          "color": "yellow"
+        },
+        {
+          "text": "Landing a hit with your bow and arrow will grant you +10% movement speed for 3s. Consecutive hits refresh the speed and increase the power of the speed by 10%, up to 30%."
         }
       ]
     },

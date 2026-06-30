@@ -42,6 +42,11 @@
           },
           "minecraft:lore": [
             {
+              "text": "Ultimate Cost - 3600",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "color": "yellow",
               "italic": false,
               "text": "Placeable"
@@ -86,6 +91,11 @@
             "italic": false
           },
           "minecraft:lore": [
+            {
+              "text": "Ultimate Cost - 3600",
+              "color": "yellow",
+              "italic": false
+            },
             {
               "text": "Right-Click to use",
               "color": "yellow",
