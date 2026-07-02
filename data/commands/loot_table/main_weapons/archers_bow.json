@@ -28,6 +28,11 @@
                   "minecraft:power": 3,
                   "minecraft:punch": 1,
                   "minecraft:infinity": 1
+                },
+                "tooltip_display": {
+                  "hidden_components": [
+                    "unbreakable"
+                  ]
                 }
               }
             },

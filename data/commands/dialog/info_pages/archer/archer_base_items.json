@@ -133,7 +133,8 @@
           "tooltip_display": {
             "hidden_components": [
               "unbreakable",
-              "enchantments"
+              "enchantments",
+              "attribute_modifiers"
             ]
           },
           "minecraft:item_name": {
@@ -143,7 +144,25 @@
           },
           "minecraft:lore": [
             {
-              "text": "Useful to take down shields in a pinch."
+              "text": "Helps you disable shields in a pinch."
+            },
+            {
+              "text": " "
+            },
+            {
+              "color": "gray",
+              "italic": false,
+              "text": "When in Main Hand:"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 7 Attack Damage"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 0.8 Attack Speed"
             }
           ]
         }

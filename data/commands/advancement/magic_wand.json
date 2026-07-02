@@ -4,7 +4,16 @@
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "type": "minecraft:player"
+                    "entity_type": "minecraft:player"
+                },
+                "player": {
+                    "equipment": {
+                        "mainhand": {
+                            "components": {
+                                "minecraft:custom_data": "{magicwand:1b}"
+                            }
+                        }
+                    }
                 }
             }
         }

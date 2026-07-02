@@ -112,7 +112,7 @@
         }
       ],
       "tooltip": {
-        "text": "Cost - 700 Siege Bucks\nProjects a particle barrier around you.\nThe particle barrier destroys enemy projectiles that come in contact with it.\nThe shield runs on a resource, displayed above your hotbar.\nNot using it causes the resource to regenerate.\nYou will also receive slowness while channeling the barrier.",
+        "text": "Cost - 700 Siege Bucks\nProjects a particle barrier around you.\nThe particle barrier destroys enemy projectiles that come in contact with it.\nThe shield runs on a resource, displayed above your hotbar.\nNot using it causes the resource to regenerate.\nYou will also receive -10% movement speed while channeling the barrier.",
         "color": "gold"
       },
       "action": {

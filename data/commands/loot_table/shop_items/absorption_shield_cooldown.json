@@ -39,7 +39,7 @@
                   "text": "Not using it causes the resource to regenerate."
                 },
                 {
-                  "text": "You will also receive slowness while channeling the barrier."
+                  "text": "You will also receive -10% movement speed while channeling the barrier."
                 }
               ],
               "mode": "insert"

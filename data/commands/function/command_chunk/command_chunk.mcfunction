@@ -98,11 +98,11 @@ execute as @e[type=piglin,tag=mimic,scores={mimicdeath=1200..}] at @s run functi
 
 execute as @e[type=snowball,tag=!groundingspellred,nbt={Item:{components:{"minecraft:custom_data":{groundingspellred:1b}}}}] at @s run function commands:ball/grounding_spell_found_red
 
-execute as @e[type=area_effect_cloud,tag=groundingspellred] unless predicate commands:is_riding_grounding_spell_red at @s run function commands:ball/grounding_spell_landed_red
+execute as @e[type=marker,tag=groundingspellred] unless predicate commands:is_riding_grounding_spell_red at @s run function commands:ball/grounding_spell_landed_red
 
 execute as @e[type=snowball,tag=!groundingspellblue,nbt={Item:{components:{"minecraft:custom_data":{groundingspellblue:1b}}}}] at @s run function commands:ball/grounding_spell_found_blue
 
-execute as @e[type=area_effect_cloud,tag=groundingspellblue] unless predicate commands:is_riding_grounding_spell_blue at @s run function commands:ball/grounding_spell_landed_blue
+execute as @e[type=marker,tag=groundingspellblue] unless predicate commands:is_riding_grounding_spell_blue at @s run function commands:ball/grounding_spell_landed_blue
 
 #Kick other people off of cavalry charge
 
@@ -440,9 +440,9 @@ execute as @a[scores={Kit=8,blossomTimer=1..},predicate=commands:in_any_battlefi
 
 execute as @a[scores={Kit=8,rootingTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s rootingTimer 1
 
-execute at @a[team=Red,scores={hFruitTimer=..0}] run summon minecraft:item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",count:1,components:{"minecraft:custom_name":'{"italic":false,"text":"Healing Fruit"}',"minecraft:lore":['"Can be thrown to allies from any distance."','"The maximum number fruits on your team is equal to the number of players on your team."','"The fruit takes 1s to consume."'],"minecraft:custom_model_data":{floats:[30]},"minecraft:custom_data":{redhealingfruit:1b,healingfruit:1b},"minecraft:consumable":{consume_seconds:1,on_consume_effects:[{type:"minecraft:apply_effects",effects:[{id:"minecraft:regeneration",amplifier:1,duration:100,show_particles:0b,show_icon:1b},{id:"minecraft:absorption",amplifier:0,duration:2400,show_particles:0b,show_icon:1b}]}]},"minecraft:food":{nutrition:4,saturation:9.6,can_always_eat:true}}}}
+execute at @a[team=Red,scores={hFruitTimer=..0}] run loot spawn ~ ~ ~ loot commands:main_abilities/healing_fruit_red
 
-execute at @a[team=Blue,scores={hFruitTimer=..0}] run summon minecraft:item ~ ~ ~ {Tags:["spawn"],Item:{id:"minecraft:golden_apple",count:1,components:{"minecraft:custom_name":'{"italic":false,"text":"Healing Fruit"}',"minecraft:lore":['{"text":"Can be thrown to allies from any distance."}','{"text":"The maximum number fruits on your team is equal to the number of players on your team."}','"The fruit takes 1s to consume."'],"minecraft:custom_model_data":{floats:[30]},"minecraft:custom_data":{bluehealingfruit:1b,healingfruit:1b},"minecraft:consumable":{consume_seconds:1,on_consume_effects:[{type:"minecraft:apply_effects",effects:[{id:"minecraft:regeneration",amplifier:1,duration:100,show_particles:0b,show_icon:1b},{id:"minecraft:absorption",amplifier:0,duration:2400,show_particles:0b,show_icon:1b}]}]},"minecraft:food":{nutrition:4,saturation:9.6,can_always_eat:true}}}}
+execute at @a[team=Blue,scores={hFruitTimer=..0}] run loot spawn ~ ~ ~ loot commands:main_abilities/healing_fruit_blue
 
 scoreboard players set @a[scores={hFruitTimer=..0}] hFruitTimer 400
 
@@ -466,21 +466,21 @@ execute as @e[type=item,tag=spawn,scores={FruitRemove=1..},nbt={Item:{components
 
 execute as @e[type=item,tag=spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] at @s run data modify entity @s Owner set from entity @p[team=Blue,scores={Kit=8}]
 
-execute as @e[type=item,scores={FruitRemove=1}] run data merge entity @s {PickupDelay:1}
+execute as @e[type=item,scores={FruitRemove=1}] run data merge entity @s {PickupDelay:0}
 
-execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s if entity @p[scores={Kit=8},dx=0] as @a[team=Red,distance=..100,predicate=commands:in_any_battlefield] unless score @s Kit matches 8 run tag @s add closest
+execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s if data entity @s Thrower if entity @p[scores={Kit=8},dx=0] as @a[team=Red,distance=..100,predicate=commands:in_any_battlefield] unless score @s Kit matches 8 run tag @s add closest
 
-execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] at @s if entity @p[scores={Kit=8},dx=0] as @a[team=Blue,distance=..100,predicate=commands:in_any_battlefield] unless score @s Kit matches 8 run tag @s add closest
+execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] at @s if data entity @s Thrower if entity @p[scores={Kit=8},dx=0] as @a[team=Blue,distance=..100,predicate=commands:in_any_battlefield] unless score @s Kit matches 8 run tag @s add closest
 
-execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s if entity @p[scores={Kit=8},dx=0] run tellraw @a[team=Red,scores={Kit=8}] [{"text":"You gave a healing fruit to: ","color":"green"},{"selector":"@p[team=Red,tag=closest,distance=..100]"}]
+execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s if data entity @s Thrower if entity @p[scores={Kit=8},dx=0] if entity @a[team=Red,tag=closest] run tellraw @a[team=Red,scores={Kit=8}] [{"text":"You gave a healing fruit to: ","color":"green"},{"selector":"@p[team=Red,tag=closest,distance=..100]"}]
 
-execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] at @s if entity @p[scores={Kit=8},dx=0] run tellraw @a[team=Blue,scores={Kit=8}] [{"text":"You gave a healing fruit to: ","color":"green"},{"selector":"@p[team=Blue,tag=closest,distance=..100]"}]
+execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] at @s if data entity @s Thrower if entity @p[scores={Kit=8},dx=0] if entity @a[team=Red,tag=closest] run tellraw @a[team=Blue,scores={Kit=8}] [{"text":"You gave a healing fruit to: ","color":"green"},{"selector":"@p[team=Blue,tag=closest,distance=..100]"}]
 
 execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s run tp @s @p[team=Red,tag=closest]
 
 execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] at @s run tp @s @p[team=Blue,tag=closest]
 
-execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..}] unless data entity @s Thrower run kill @s
+execute as @e[type=item,tag=!spawn,scores={FruitRemove=2..}] unless data entity @s Thrower run kill @s
 
 tag @a[tag=closest] remove closest
 
@@ -560,7 +560,7 @@ tag @a[scores={damageTaken=1..},tag=homewarp] remove homewarp
 
 tellraw @a[scores={castleWarpTimer=1}] {"text":"Warping back to spawnpoint...","color":"green"}
 
-execute as @a[scores={castleWarpTimer=60..},tag=homewarp] run function commands:other/warp_to_castle
+execute as @a[scores={castleWarpTimer=60..},tag=homewarp] run function commands:gameplay_events/warp_to_castle
 
 #Growth Injection
 
@@ -654,11 +654,11 @@ scoreboard players set @a[scores={NinjaItems=..0}] NinjaItems 900
 
 execute as @e[type=snowball,tag=!smokebombred,nbt={Item:{components:{"minecraft:custom_data":{smokebombred:1b}}}}] at @s run function commands:ball/smoke_bomb_found_red
 
-execute as @e[type=area_effect_cloud,tag=smokebombcloudred] unless predicate commands:is_riding_smoke_bomb_red at @s run function commands:ball/smoke_bomb_landed_red
+execute as @e[type=marker,tag=smokebombcloudred] unless predicate commands:is_riding_smoke_bomb_red at @s run function commands:ball/smoke_bomb_landed_red
 
 execute as @e[type=snowball,tag=!smokebombblue,nbt={Item:{components:{"minecraft:custom_data":{smokebombblue:1b}}}}] at @s run function commands:ball/smoke_bomb_found_blue
 
-execute as @e[type=area_effect_cloud,tag=smokebombcloudblue] unless predicate commands:is_riding_smoke_bomb_blue at @s run function commands:ball/smoke_bomb_landed_blue
+execute as @e[type=marker,tag=smokebombcloudblue] unless predicate commands:is_riding_smoke_bomb_blue at @s run function commands:ball/smoke_bomb_landed_blue
 
 execute at @e[type=area_effect_cloud,tag=smokered] run effect give @a[team=Blue,predicate=!commands:armor/enhanced_space_helmet,distance=..5] blindness 2 0 true
 
@@ -674,9 +674,9 @@ execute as @e[type=snowball,tag=!shurikenred,nbt={Item:{components:{"minecraft:c
 
 execute as @e[type=snowball,tag=!shurikenblue,nbt={Item:{components:{"minecraft:custom_data":{shurikenblue:1b}}}}] at @s run function commands:ball/shuriken_found_blue
 
-execute as @e[type=area_effect_cloud,tag=shurikenred] unless predicate commands:is_riding_shuriken_red at @s run function commands:ball/shuriken_landed_red
+execute as @e[type=marker,tag=shurikenred] unless predicate commands:is_riding_shuriken_red at @s run function commands:ball/shuriken_landed_red
 
-execute as @e[type=area_effect_cloud,tag=shurikenblue] unless predicate commands:is_riding_shuriken_blue at @s run function commands:ball/shuriken_landed_blue
+execute as @e[type=marker,tag=shurikenblue] unless predicate commands:is_riding_shuriken_blue at @s run function commands:ball/shuriken_landed_blue
 
 #Ninja Strength passive
 
@@ -952,9 +952,9 @@ execute as @a[scores={Kit=3,defensiveSpell=1..},predicate=commands:in_any_battle
 
 scoreboard players remove @a[scores={Kit=3},predicate=commands:in_any_battlefield,tag=!notAlive] turretTimer 1
 
-give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','" "'],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
+give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=[{"color":"yellow","italic":false,"text":"Placeable"},{"text": " "}],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
 
-give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=['{"color":"yellow","italic":false,"text":"Placeable"}','" "'],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":255}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
+give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=[{"color":"yellow","italic":false,"text":"Placeable"},{"text": " "}],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":255}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
 
 scoreboard players set @a[scores={turretTimer=..0}] turretTimer 600
 
@@ -1326,11 +1326,11 @@ scoreboard players set @a[tag=upgraded,scores={poseidonPassive=..0}] poseidonPas
 
 execute as @e[type=snowball,tag=!lightningspellred,nbt={Item:{components:{"minecraft:custom_data":{lightningspellred:1b}}}}] at @s run function commands:ball/lightning_spell_found_red
 
-execute as @e[type=area_effect_cloud,tag=lightningspellred] unless predicate commands:is_riding_lightning_spell_red at @s run function commands:ball/lightning_spell_landed_red
+execute as @e[type=marker,tag=lightningspellred] unless predicate commands:is_riding_lightning_spell_red at @s run function commands:ball/lightning_spell_landed_red
 
 execute as @e[type=snowball,tag=!lightningspellblue,nbt={Item:{components:{"minecraft:custom_data":{lightningspellblue:1b}}}}] at @s run function commands:ball/lightning_spell_found_blue
 
-execute as @e[type=area_effect_cloud,tag=lightningspellblue] unless predicate commands:is_riding_lightning_spell_blue at @s run function commands:ball/lightning_spell_landed_blue
+execute as @e[type=marker,tag=lightningspellblue] unless predicate commands:is_riding_lightning_spell_blue at @s run function commands:ball/lightning_spell_landed_blue
 
 #Poseidon Cooldown Displays
 
@@ -1546,11 +1546,11 @@ scoreboard players reset @a[scores={exChargeDelay=2..}] exChargeDelay
 
 execute as @e[type=snowball,tag=!toxinballred,nbt={Item:{components:{"minecraft:custom_data":{toxinballred:1b}}}}] at @s run function commands:ball/toxin_ball_found_red
 
-execute as @e[type=area_effect_cloud,tag=toxinitemred] unless predicate commands:is_riding_toxin_ball_red at @s run function commands:ball/toxin_ball_landed_red
+execute as @e[type=marker,tag=toxinitemred] unless predicate commands:is_riding_toxin_ball_red at @s run function commands:ball/toxin_ball_landed_red
 
 execute as @e[type=snowball,tag=!toxinballblue,nbt={Item:{components:{"minecraft:custom_data":{toxinballblue:1b}}}}] at @s run function commands:ball/toxin_ball_found_blue
 
-execute as @e[type=area_effect_cloud,tag=toxinitemblue] unless predicate commands:is_riding_toxin_ball_blue at @s run function commands:ball/toxin_ball_landed_blue
+execute as @e[type=marker,tag=toxinitemblue] unless predicate commands:is_riding_toxin_ball_blue at @s run function commands:ball/toxin_ball_landed_blue
 
 #Generic Snowball Attack things
 
@@ -1710,9 +1710,9 @@ scoreboard players reset @e[type=item,tag=cCannonItem] nearbyBlocks
 
 scoreboard players add @e[type=armor_stand,tag=cCannonMarker] cCannonTimer 1
 
-execute as @e[type=armor_stand,tag=cCannonMarker,scores={cCannonTimer=20}] run data merge entity @s {CustomName:'{"text":"2","color":"red","italic":false}'}
+execute as @e[type=armor_stand,tag=cCannonMarker,scores={cCannonTimer=20}] run data merge entity @s {CustomName:{"text":"2","color":"red","italic":false}}
 
-execute as @e[type=armor_stand,tag=cCannonMarker,scores={cCannonTimer=40}] run data merge entity @s {CustomName:'{"text":"1","color":"red","italic":false}'}
+execute as @e[type=armor_stand,tag=cCannonMarker,scores={cCannonTimer=40}] run data merge entity @s {CustomName:{"text":"1","color":"red","italic":false}}
 
 execute as @e[type=armor_stand,tag=cCannonMarker,scores={cCannonTimer=60..}] at @s run function commands:other/crystal_cannon_explode
 
@@ -2316,9 +2316,9 @@ execute as @e[type=snowball,tag=!bangsnapred,nbt={Item:{components:{"minecraft:c
 
 execute as @e[type=snowball,tag=!bangsnapblue,nbt={Item:{components:{"minecraft:custom_data":{bangsnapblue:1b}}}}] at @s run function commands:ball/bang_snap_found_blue
 
-execute as @e[type=area_effect_cloud,tag=bangsnapred] unless predicate commands:is_riding_bang_snap_red at @s run function commands:ball/bang_snap_landed_red
+execute as @e[type=marker,tag=bangsnapred] unless predicate commands:is_riding_bang_snap_red at @s run function commands:ball/bang_snap_landed_red
 
-execute as @e[type=area_effect_cloud,tag=bangsnapblue] unless predicate commands:is_riding_bang_snap_blue at @s run function commands:ball/bang_snap_landed_blue
+execute as @e[type=marker,tag=bangsnapblue] unless predicate commands:is_riding_bang_snap_blue at @s run function commands:ball/bang_snap_landed_blue
 
 #Bucket of Homemade Napalm
 
@@ -2340,9 +2340,9 @@ execute as @e[type=snowball,tag=!cinderbombred,nbt={Item:{components:{"minecraft
 
 execute as @e[type=snowball,tag=!cinderbombblue,nbt={Item:{components:{"minecraft:custom_data":{cinderbombblue:1b}}}}] at @s run function commands:ball/cinder_bomb_found_blue
 
-execute as @e[type=area_effect_cloud,tag=cinderbombred] unless predicate commands:is_riding_cinder_bomb_red at @s run function commands:ball/cinder_bomb_landed_red
+execute as @e[type=marker,tag=cinderbombred] unless predicate commands:is_riding_cinder_bomb_red at @s run function commands:ball/cinder_bomb_landed_red
 
-execute as @e[type=area_effect_cloud,tag=cinderbombblue] unless predicate commands:is_riding_cinder_bomb_blue at @s run function commands:ball/cinder_bomb_landed_blue
+execute as @e[type=marker,tag=cinderbombblue] unless predicate commands:is_riding_cinder_bomb_blue at @s run function commands:ball/cinder_bomb_landed_blue
 
 execute as @e[type=area_effect_cloud,tag=cindersmokered] at @s run effect give @a[distance=..5,team=Blue] blindness 2 0
 
@@ -2448,11 +2448,11 @@ execute as @a[scores={icePackPassive=6..},tag=upgraded] run function commands:ot
 
 execute as @e[type=snowball,tag=!icepackred,nbt={Item:{components:{"minecraft:custom_data":{icepackred:1b}}}}] at @s run function commands:ball/ice_pack_found_red
 
-execute as @e[type=area_effect_cloud,tag=icepackred] unless predicate commands:is_riding_ice_pack_red at @s run function commands:ball/ice_pack_landed_red
+execute as @e[type=marker,tag=icepackred] unless predicate commands:is_riding_ice_pack_red at @s run function commands:ball/ice_pack_landed_red
 
 execute as @e[type=snowball,tag=!icepackblue,nbt={Item:{components:{"minecraft:custom_data":{icepackblue:1b}}}}] at @s run function commands:ball/ice_pack_found_blue
 
-execute as @e[type=area_effect_cloud,tag=icepackblue] unless predicate commands:is_riding_ice_pack_blue at @s run function commands:ball/ice_pack_landed_blue
+execute as @e[type=marker,tag=icepackblue] unless predicate commands:is_riding_ice_pack_blue at @s run function commands:ball/ice_pack_landed_blue
 
 #Defibrillator
 
@@ -2576,9 +2576,9 @@ execute as @e[type=snowball,tag=!necrobonered,nbt={Item:{components:{"minecraft:
 
 execute as @e[type=snowball,tag=!necroboneblue,nbt={Item:{components:{"minecraft:custom_data":{necroboneblue:1b}}}}] at @s run function commands:ball/necro_bone_found_blue
 
-execute as @e[type=area_effect_cloud,tag=necrobonered] unless predicate commands:is_riding_necro_bone_red at @s run function commands:ball/necro_bone_landed_red
+execute as @e[type=marker,tag=necrobonered] unless predicate commands:is_riding_necro_bone_red at @s run function commands:ball/necro_bone_landed_red
 
-execute as @e[type=area_effect_cloud,tag=necroboneblue] unless predicate commands:is_riding_necro_bone_blue at @s run function commands:ball/necro_bone_landed_blue
+execute as @e[type=marker,tag=necroboneblue] unless predicate commands:is_riding_necro_bone_blue at @s run function commands:ball/necro_bone_landed_blue
 
 #Mind Inversion
 

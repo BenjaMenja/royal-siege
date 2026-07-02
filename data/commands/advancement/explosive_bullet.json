@@ -1,22 +1,21 @@
 {
-    "criteria": {
-      "c1": {
-        "trigger": "minecraft:entity_hurt_player",
-        "conditions": {
-          "damage": {
-            "blocked": false,
-            "type": {
-              "direct_entity": {
-                "type": "minecraft:arrow",
-                "nbt": "{Tags:[\"explosiveBullet\"]}"
-              }
+  "criteria": {
+    "c1": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "blocked": false,
+          "type": {
+            "direct_entity": {
+              "entity_type": "minecraft:arrow",
+              "nbt": "{Tags:[\"explosiveBullet\"]}"
             }
           }
         }
       }
-    },
-    "rewards": {
-      "function": "commands:other/explosive_bullet"
     }
+  },
+  "rewards": {
+    "function": "commands:other/explosive_bullet"
   }
-  
+}

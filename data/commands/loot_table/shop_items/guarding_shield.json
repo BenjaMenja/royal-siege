@@ -10,7 +10,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "Guarding Shield"
+                "text": "Guarding Shield",
+                "italic": false
               }
             },
             {

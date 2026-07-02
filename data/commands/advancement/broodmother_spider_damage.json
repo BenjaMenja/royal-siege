@@ -6,7 +6,7 @@
         "player": {},
         "damage": {
           "source_entity": {
-            "type": "minecraft:spider",
+            "entity_type": "minecraft:spider",
             "nbt": "{Tags:[\"broodmotherspider\"]}"
           }
         }
@@ -18,7 +18,7 @@
         "player": {},
         "damage": {
           "source_entity": {
-            "type": "minecraft:cave_spider",
+            "entity_type": "minecraft:cave_spider",
             "nbt": "{Tags:[\"broodmotherspawn\"]}"
           }
         }

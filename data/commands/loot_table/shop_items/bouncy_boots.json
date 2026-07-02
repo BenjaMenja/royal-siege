@@ -14,7 +14,12 @@
                   "minecraft:protection": 3
                 },
                 "minecraft:dyed_color": 0,
-                "minecraft:unbreakable": {}
+                "minecraft:unbreakable": {},
+                "tooltip_display": {
+                  "hidden_components": [
+                    "unbreakable"
+                  ]
+                }
               }
             },
             {

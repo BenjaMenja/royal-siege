@@ -42,7 +42,8 @@
       "action": {
         "type": "minecraft:run_command",
         "command": "trigger textClick set 173"
-      }
+      },
+      "width": 175
     },
     {
       "label": [
@@ -61,7 +62,8 @@
       "action": {
         "type": "minecraft:run_command",
         "command": "trigger textClick set 174"
-      }
+      },
+      "width": 175
     },
     {
       "label": [
@@ -80,7 +82,8 @@
       "action": {
         "type": "minecraft:run_command",
         "command": "trigger textClick set 175"
-      }
+      },
+      "width": 175
     },
     {
       "label": [
@@ -118,26 +121,8 @@
       "action": {
         "type": "minecraft:run_command",
         "command": "trigger textClick set 177"
-      }
-    },
-    {
-      "label": [
-        {
-          "atlas": "minecraft:items",
-          "sprite": "item/enhanced_space_helmet"
-        },
-        {
-          "text": " Enhanced Space Helmet"
-        }
-      ],
-      "tooltip": {
-        "text": "Cost - 650 Siege Bucks\nAn improved helmet that gives increased defense.\nAlso automatically removes blindness, poison, and wither debuffs from the wearer.",
-        "color": "gold"
       },
-      "action": {
-        "type": "minecraft:run_command",
-        "command": "trigger textClick set 178"
-      }
+      "width": 175
     },
     {
       "label": [

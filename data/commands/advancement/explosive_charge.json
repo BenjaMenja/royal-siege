@@ -14,7 +14,7 @@
           "blocked": false
         },
         "entity": {
-          "type": "minecraft:player"
+          "entity_type": "minecraft:player"
         }
       }
     },
@@ -32,7 +32,7 @@
           "blocked": true
         },
         "entity": {
-          "type": "minecraft:player"
+          "entity_type": "minecraft:player"
         }
       }
     }

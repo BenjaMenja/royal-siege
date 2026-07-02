@@ -29,7 +29,8 @@
                 },
                 "tooltip_display": {
                   "hidden_components": [
-                    "attribute_modifiers"
+                    "attribute_modifiers",
+                    "unbreakable"
                   ]
                 },
                 "minecraft:attribute_modifiers": [

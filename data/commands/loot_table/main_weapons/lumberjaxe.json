@@ -25,7 +25,10 @@
                   "lumberjaxe": 1
                 },
                 "tooltip_display": {
-                  "hidden_components": ["attribute_modifiers"]
+                  "hidden_components": [
+                    "attribute_modifiers",
+                    "unbreakable"
+                  ]
                 },
                 "minecraft:enchantment_glint_override": false,
                 "minecraft:attribute_modifiers": [

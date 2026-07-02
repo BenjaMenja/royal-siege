@@ -16,9 +16,12 @@
               "function": "set_components",
               "components": {
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable"]
+                  "hidden_components": [
+                    "unbreakable",
+                    "attribute_modifiers"
+                  ]
                 },
-                "minecraft:attribute_modifiers": [                    
+                "minecraft:attribute_modifiers": [
                   {
                     "id": "e3ae6ceb-95b4-42a1-be3e-02a970cd7701",
                     "type": "attack_damage",

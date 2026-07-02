@@ -10,7 +10,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "Knockback Stick"
+                "text": "Knockback Stick",
+                "italic": false
               }
             },
             {
@@ -18,6 +19,9 @@
               "lore": [
                 {
                   "text": "A simple stick with high knockback."
+                },
+                {
+                  "text": " "
                 },
                 {
                   "text": "When in Main Hand:",

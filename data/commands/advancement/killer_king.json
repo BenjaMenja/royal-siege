@@ -5,7 +5,7 @@
       "conditions": {
         "damage": {
           "source_entity": {
-            "type": "minecraft:wither_skeleton",
+            "entity_type": "minecraft:wither_skeleton",
             "nbt": "{Tags:[\"King\",\"killerking\"]}"
           }
         }

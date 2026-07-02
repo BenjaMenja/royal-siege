@@ -11,9 +11,8 @@
           "blocked": false
         },
         "entity": {
-          "type": "minecraft:player",
-          "type_specific": {
-            "type": "minecraft:player",
+          "entity_type": "minecraft:player",
+          "type_specific/player": {
             "advancements": {
               "commands:full_hp": true
             }

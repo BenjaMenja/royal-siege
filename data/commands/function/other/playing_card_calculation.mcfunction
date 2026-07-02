@@ -23,13 +23,13 @@ execute if score #cardsChecked cardTemp matches 7 run scoreboard players operati
 
 execute if score #cardsChecked cardTemp matches 7 run scoreboard players set #cardTemp cardValue 0
 
-execute if score @s cardSuite matches 1 run data merge entity @s {CustomName:'{"text":"♥"}'}
+execute if score @s cardSuite matches 1 run data merge entity @s {CustomName:{"text":"♥"}}
 
-execute if score @s cardSuite matches 2 run data merge entity @s {CustomName:'{"text":"♦"}'}
+execute if score @s cardSuite matches 2 run data merge entity @s {CustomName:{"text":"♦"}}
 
-execute if score @s cardSuite matches 3 run data merge entity @s {CustomName:'{"text":"♣"}'}
+execute if score @s cardSuite matches 3 run data merge entity @s {CustomName:{"text":"♣"}}
 
-execute if score @s cardSuite matches 4 run data merge entity @s {CustomName:'{"text":"♠"}'}
+execute if score @s cardSuite matches 4 run data merge entity @s {CustomName:{"text":"♠"}}
 
 execute if score #cardsChecked cardTemp matches 7 run tellraw @a[tag=cardShooter] [{"text":"Hand: ","color":"aqua"},{"score":{"name":"@e[type=item,tag=pCard,tag=card1,tag=!stop,limit=1]","objective":"cardValue"},"color":"green"},{"selector":"@e[type=item,tag=pCard,tag=card1,tag=!stop]"},{"text":" "},{"score":{"name":"@e[type=item,tag=pCard,tag=card2,tag=!stop,limit=1]","objective":"cardValue"},"color":"green"},{"selector":"@e[type=item,tag=pCard,tag=card2,tag=!stop]"},{"text":" "},{"score":{"name":"@e[type=item,tag=pCard,tag=card3,tag=!stop,limit=1]","objective":"cardValue"},"color":"green"},{"selector":"@e[type=item,tag=pCard,tag=card3,tag=!stop]"},{"text":" "},{"score":{"name":"@e[type=item,tag=pCard,tag=card4,tag=!stop,limit=1]","objective":"cardValue"},"color":"green"},{"selector":"@e[type=item,tag=pCard,tag=card4,tag=!stop]"},{"text":" "},{"score":{"name":"@e[type=item,tag=pCard,tag=card5,tag=!stop,limit=1]","objective":"cardValue"},"color":"green"},{"selector":"@e[type=item,tag=pCard,tag=card5,tag=!stop]"},{"text":" | "},{"score":{"name":"@e[type=item,tag=pCard,tag=card6,tag=!stop,limit=1]","objective":"cardValue"},"color":"green"},{"selector":"@e[type=item,tag=pCard,tag=card6,tag=!stop]"},{"text":" "},{"score":{"name":"@e[type=item,tag=pCard,tag=card7,tag=!stop,limit=1]","objective":"cardValue"},"color":"green"},{"selector":"@e[type=item,tag=pCard,tag=card7,tag=!stop]"}]
 

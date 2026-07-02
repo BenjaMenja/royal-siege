@@ -22,12 +22,39 @@
                   ]
                 },
                 "minecraft:enchantments": {
-                    "minecraft:efficiency": 5,
-                    "minecraft:unbreaking": 1
+                  "minecraft:efficiency": 5,
+                  "minecraft:unbreaking": 1
                 },
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable", "enchantments"]
-                }
+                  "hidden_components": [
+                    "unbreakable",
+                    "enchantments",
+                    "attribute_modifiers"
+                  ]
+                },
+                "lore": [
+                  {
+                    "text": "Helps you disable shields in a pinch."
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "color": "gray",
+                    "italic": false,
+                    "text": "When in Main Hand:"
+                  },
+                  {
+                    "color": "dark_green",
+                    "italic": false,
+                    "text": " 7 Attack Damage"
+                  },
+                  {
+                    "color": "dark_green",
+                    "italic": false,
+                    "text": " 0.8 Attack Speed"
+                  }
+                ]
               }
             },
             {

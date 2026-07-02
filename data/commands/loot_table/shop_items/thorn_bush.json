@@ -18,6 +18,11 @@
               "function": "minecraft:set_lore",
               "lore": [
                 {
+                  "text": "Thorns XI",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
                   "text": "A thorny bush with very high thorns."
                 }
               ],
@@ -28,6 +33,11 @@
               "components": {
                 "minecraft:enchantments": {
                   "minecraft:thorns": 11
+                },
+                "tooltip_display": {
+                  "hidden_components": [
+                    "enchantments"
+                  ]
                 }
               }
             }

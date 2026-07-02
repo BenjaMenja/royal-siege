@@ -4,12 +4,12 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:player"
+          "entity_type": "minecraft:player"
         },
         "killing_blow": {
           "direct_entity": {
-            "type": "minecraft:arrow",
-            "nbt": "{weapon:{components:{\"minecraft:enchantments\":{levels:{\"minecraft:power\":100}}}}}"
+            "entity_type": "minecraft:arrow",
+            "nbt": "{weapon:{id:\"arrow\",components:{\"minecraft:enchantments\":{\"minecraft:power\":100}}}}"
           }
         }
       }

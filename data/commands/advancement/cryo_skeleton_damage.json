@@ -6,7 +6,7 @@
         "player": {},
         "damage": {
           "source_entity": {
-            "type": "minecraft:skeleton",
+            "entity_type": "minecraft:skeleton",
             "nbt": "{Tags:[\"cryoskeleton\"]}"
           }
         }

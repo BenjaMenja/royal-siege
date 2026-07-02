@@ -28,7 +28,10 @@
                   "minecraft:sweeping_edge": 2
                 },
                 "tooltip_display": {
-                  "hidden_components": ["attribute_modifiers"]
+                  "hidden_components": [
+                    "attribute_modifiers",
+                    "unbreakable"
+                  ]
                 },
                 "minecraft:attribute_modifiers": [
                   {

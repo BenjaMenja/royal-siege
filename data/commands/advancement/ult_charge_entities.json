@@ -5,7 +5,7 @@
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:wither_skeleton",
+          "entity_type": "minecraft:wither_skeleton",
           "nbt": "{Tags:[\"King\"]}"
         }
       }
@@ -14,7 +14,7 @@
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:horse"
+          "entity_type": "minecraft:horse"
         }
       }
     },
@@ -22,7 +22,7 @@
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:skeleton"
+          "entity_type": "minecraft:skeleton"
         }
       }
     },
@@ -30,7 +30,7 @@
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:zombie"
+          "entity_type": "minecraft:zombie"
         }
       }
     }

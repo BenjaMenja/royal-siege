@@ -124,7 +124,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/exp_bomb_blaster"
+          "sprite": "item/exp_bomb_launcher"
         },
         {
           "text": " Exp. Bomb Blaster"

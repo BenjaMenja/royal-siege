@@ -61,6 +61,19 @@
             },
             {
               "text": "Arrows fired from this bow are unaffected by gravity."
+            },
+            {
+              "text": " "
+            },
+            {
+              "color": "gray",
+              "italic": false,
+              "text": "When in Either Hand:"
+            },
+            {
+              "color": "red",
+              "italic": false,
+              "text": "-65% Speed"
             }
           ],
           "minecraft:enchantments": {

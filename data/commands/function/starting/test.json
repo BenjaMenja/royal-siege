@@ -1,0 +1,122 @@
+{Invulnerable: 1b,Team: "Red",PersistenceRequired: 1b,CustomName:'{
+    "text": "Mysterious Man"
+  }',attributes: [
+    {id:movement_speed,base: 0
+    }
+  ],VillagerData: {level: 2,profession: "minecraft:farmer",type: "minecraft:plains"
+  },Offers: {Recipes: [
+      {rewardExp: 0b,maxUses: 2147483647,uses: 0,buy: {id: "minecraft:ender_eye",count: 2,components: {
+            "minecraft:custom_name":'{
+              "italic": false,
+              "text": "Corrupt Credit"
+            }',
+            "minecraft:custom_model_data": {floats: [
+                27
+              ]
+            }
+          }
+        },sell: {id: "minecraft:snowball",count: 2,components: {
+            "minecraft:custom_name":'{
+              "text": "Grounding Spell",
+              "italic": false
+            }',
+            "minecraft:lore": ['{
+                "color": "yellow",
+                "italic": false,
+                "text": "Throwable"
+              }','{
+                "text": " "
+              }','{
+                "text": "Throws a spell that prevents nearby enemies from jumping for a short time."
+              }'
+            ],
+            "minecraft:custom_model_data": {floats: [
+                195
+              ]
+            },
+            "minecraft:custom_data": {groundingspell: 1b,groundingspellred: 1b
+            }
+          }
+        }
+      },
+      {rewardExp: 0b,maxUses: 2147483647,uses: 0,buy: {id: "minecraft:ender_eye",count: 2,components: {
+            "minecraft:custom_name":'{
+              "italic": false,
+              "text": "Corrupt Credit"
+            }',
+            "minecraft:custom_model_data": {floats: [
+                27
+              ]
+            }
+          }
+        },sell: {id: "minecraft:wooden_shovel",count: 1,components: {
+            "minecraft:custom_name":'{
+              "italic": false,
+              "text": "The Spoon"
+            }',
+            "minecraft:lore": ['{
+                "text": " "
+              }','{
+                "color": "gray",
+                "italic": false,
+                "text": "When in Main Hand:"
+              }','{
+                "color": "dark_green",
+                "italic": false,
+                "text": " 11 Attack Damage"
+              }','{
+                "color": "dark_green",
+                "italic": false,
+                "text": " 1.1 Attack Speed"
+              }'
+            ],
+            "minecraft:unbreakable": {},
+            "minecraft:custom_model_data": {floats: [
+                87
+              ]
+            },
+            "minecraft:attribute_modifiers": [
+              {type: "attack_damage",amount: 11,operation: "add_value",id: "6c512ce9-f2fd-48d2-8747-8091b466cbc0",slot: "mainhand"
+              },
+              {type: "attack_speed",amount: -2.9,operation: "add_value",id: "827d8894-7780-47e2-a825-37d5585fa913",slot: "mainhand"
+              }
+            ],show_in_tooltip: false
+          }
+        }
+      }
+    },
+    {rewardExp: 0b,maxUses: 2147483647,uses: 0,buy: {id: "minecraft:ender_eye",count: 4,components: {
+          "minecraft:custom_name":'{
+            "italic": false,
+            "text": "Corrupt Credit"
+          }',
+          "minecraft:custom_model_data": {floats: [
+              27
+            ]
+          }
+        }
+      },sell: {id: "minecraft:bow",count: 1,components: {
+          "minecraft:custom_name":'{
+            "text": "TNT Bow",
+            "italic": false
+          }',
+          "minecraft:lore": ['{
+              "text": "Shoots arrows that explode upon contact with an enemy player."
+            }'
+          ],
+          "minecraft:unbreakable": {},
+          "minecraft:custom_model_data": {floats: [
+              88
+            ]
+          },
+          "minecraft:custom_data": {tntbow: 1b
+          },
+          "minecraft:enchantments": {
+            "minecraft:infinity": 1,power: 1
+          }
+        }
+      }
+    }
+  ]
+}
+}

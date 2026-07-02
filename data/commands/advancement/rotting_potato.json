@@ -1,26 +1,25 @@
 {
-    "parent": "commands:root",
-    "criteria": {
-      "rotting_potato": {
-        "trigger": "minecraft:entity_hurt_player",
-        "conditions": {
-          "damage": {
-            "source_entity": {
-              "type": "minecraft:player",
-              "equipment": {
-                "mainhand": {
-                  "items": [
-                    "minecraft:poisonous_potato"
-                  ]
-                }
+  "parent": "commands:root",
+  "criteria": {
+    "rotting_potato": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "entity_type": "minecraft:player",
+            "equipment": {
+              "mainhand": {
+                "items": [
+                  "minecraft:poisonous_potato"
+                ]
               }
             }
           }
         }
       }
-    },
-    "rewards": {
-      "function": "commands:other/rotting_potato"
     }
+  },
+  "rewards": {
+    "function": "commands:other/rotting_potato"
   }
-  
+}
