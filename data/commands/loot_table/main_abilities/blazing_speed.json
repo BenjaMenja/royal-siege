@@ -52,6 +52,11 @@
                   "text": "Right-Click to use"
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 9s"
+                },
+                {
                   "text": " "
                 },
                 {
@@ -62,9 +67,6 @@
                 },
                 {
                   "text": "The bombs pop after 1s, dealing 4 damage and burning enemies in a small radius."
-                },
-                {
-                  "text": "Can be used every 9s."
                 }
               ],
               "mode": "append"

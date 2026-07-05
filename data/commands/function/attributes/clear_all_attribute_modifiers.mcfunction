@@ -30,8 +30,6 @@ function commands:attributes/clears/clear_archer_passive_speed
 
 function commands:attributes/clears/clear_blossom_speed
 
-function commands:attributes/clears/clear_blossom_upgrade_speed
-
 function commands:attributes/clears/clear_corruption_speed
 
 function commands:attributes/clears/clear_mystery_basket_speed
@@ -173,3 +171,5 @@ function commands:attributes/clears/clear_guarding_shield_buffs
 function commands:attributes/clears/clear_bone_shield_armor
 
 function commands:attributes/clears/clear_soul_reaper_atkdmg
+
+function commands:attributes/clears/clear_storm_of_blades_atkdmg

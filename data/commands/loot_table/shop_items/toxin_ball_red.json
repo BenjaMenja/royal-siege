@@ -28,6 +28,11 @@
                   "italic": false
                 },
                 {
+                  "text": "Consumable",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
                   "text": " "
                 },
                 {
@@ -44,7 +49,7 @@
               "components": {
                 "minecraft:custom_model_data": {
                   "floats": [
-                    107 
+                    107
                   ]
                 }
               }

@@ -52,6 +52,11 @@
                   "text": "Right-Click to use"
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 25s"
+                },
+                {
                   "text": " "
                 },
                 {
@@ -68,9 +73,6 @@
                 },
                 {
                   "text": "Lasts 6s."
-                },
-                {
-                  "text": "Can be used every 25s."
                 }
               ],
               "mode": "append"

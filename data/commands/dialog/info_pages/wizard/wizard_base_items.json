@@ -148,6 +148,16 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 6s"
+            },
+            {
+              "color": "aqua",
+              "italic": false,
+              "text": "Max Stack Count: 8"
+            },
+            {
               "text": " "
             },
             {
@@ -193,16 +203,15 @@
               "text": "Right-Click to use"
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 8s"
+            },
+            {
               "text": " "
             },
             {
-              "text": "Contains an unlimited "
-            },
-            {
-              "text": "supply of fireballs to launch."
-            },
-            {
-              "text": "Can be used every 8 seconds."
+              "text": "Contains an unlimited supply of fireballs to launch."
             }
           ]
         }
@@ -235,13 +244,15 @@
               "text": "Right-Click to use"
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 25s"
+            },
+            {
               "text": " "
             },
             {
               "text": "Ejects you in the direction you are looking in, knocking back anyone near you."
-            },
-            {
-              "text": "Can be used every 25s."
             }
           ]
         }
@@ -249,6 +260,41 @@
       "show_tooltip": true,
       "description": {
         "contents": "Eject Button",
+        "width": 125
+      }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "custom_color": 1446173,
+            "custom_effects": [
+              {
+                "id": "minecraft:wither",
+                "amplifier": 2,
+                "duration": 80,
+                "show_particles": false
+              }
+            ]
+          },
+          "minecraft:item_name": {
+            "text": "Withering Potion",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 45s"
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Withering Potion",
         "width": 125
       }
     }

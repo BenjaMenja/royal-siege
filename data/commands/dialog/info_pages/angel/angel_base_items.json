@@ -81,6 +81,11 @@
               "text": "Right-Click to use"
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 6s"
+            },
+            {
               "text": " "
             },
             {
@@ -160,6 +165,11 @@
               "text": "Right-Click to use"
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 15s"
+            },
+            {
               "text": " "
             },
             {
@@ -194,6 +204,11 @@
               "color": "yellow",
               "italic": false,
               "text": "Right-Click to use"
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 25s"
             },
             {
               "text": " "
@@ -233,6 +248,11 @@
               "color": "yellow",
               "italic": false,
               "text": "Right-Click to use"
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 25s"
             },
             {
               "text": " "

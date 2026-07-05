@@ -52,6 +52,11 @@
                   "text": "Right-Click to use"
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 7s"
+                },
+                {
                   "text": " "
                 },
                 {

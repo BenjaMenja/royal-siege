@@ -14,11 +14,11 @@
           "color": "aqua"
         },
         {
-          "text": "Passive - Storm's Calling\n\n",
+          "text": "Passive - Storm of Blades\n\n",
           "color": "yellow"
         },
         {
-          "text": "You receive lightning spells every 10s that stack up to 5.\nCan be thrown to strike lightning onto nearby enemies."
+          "text": "Projectile hits with your trident against players increases the damage of your next trident melee by 1, stacking up to 3.\nThe melee strike can be used on any entity, not just a player."
         }
       ]
     }
@@ -150,7 +150,7 @@
         }
       ],
       "tooltip": {
-        "text": "Cost - 2000 Siege Bucks\nIncreases the max amount of spells from 5 to 8 and reduces the cooldown from 10s to 9s.",
+        "text": "Cost - 2000 Siege Bucks\nIncreases the damage cap of Storm of Blades to 5.",
         "color": "gold"
       },
       "action": {

@@ -64,6 +64,11 @@
               "italic": false
             },
             {
+              "text": "Consumable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": " "
             },
             {
@@ -143,13 +148,15 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 45s"
+            },
+            {
               "text": " "
             },
             {
               "text": "Calls all of your team's summons within 25 blocks to your location."
-            },
-            {
-              "text": "Can be used every 45s."
             }
           ],
           "minecraft:custom_model_data": {
@@ -182,6 +189,11 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 30s"
+            },
+            {
               "text": " "
             },
             {
@@ -195,9 +207,6 @@
             },
             {
               "text": "The additional defense lasts 6s."
-            },
-            {
-              "text": "Can be used every 30s."
             }
           ],
           "custom_model_data": {
@@ -226,6 +235,11 @@
           "minecraft:lore": [
             {
               "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": "Consumable",
               "color": "yellow",
               "italic": false
             },
@@ -275,6 +289,11 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 15s"
+            },
+            {
               "text": " "
             },
             {
@@ -285,9 +304,6 @@
             },
             {
               "text": "Warping again will not teleport you to this summon."
-            },
-            {
-              "text": "Can be used every 15s."
             }
           ],
           "minecraft:custom_model_data": {

@@ -24,13 +24,18 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 30s"
+                },
+                {
                   "text": " "
                 },
                 {
                   "text": "Creates an inverted gravity field around the user that lifts the user and enemies with 15 blocks in the air."
                 },
                 {
-                  "text": "Lasts 6s and has a cooldown of 30s."
+                  "text": "Lasts 6s."
                 }
               ],
               "mode": "insert"

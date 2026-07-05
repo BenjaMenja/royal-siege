@@ -47,6 +47,11 @@
               "italic": false
             },
             {
+              "text": "Consumable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": " "
             },
             {
@@ -77,6 +82,11 @@
           "lore": [
             {
               "text": "Placeable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": "Consumable",
               "color": "yellow",
               "italic": false
             },
@@ -120,6 +130,11 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 20s"
+            },
+            {
               "text": " "
             },
             {
@@ -155,6 +170,11 @@
           "lore": [
             {
               "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": "Consumable",
               "color": "yellow",
               "italic": false
             },

@@ -132,10 +132,6 @@ scoreboard players add @a[scores={RSAttr.BlossomSpeed=0..}] RSAttr.BlossomSpeed 
 
 execute as @a[scores={RSAttr.BlossomSpeed=160..}] run function commands:attributes/clears/clear_blossom_speed
 
-scoreboard players add @a[scores={RSAttr.BlossomUpgradeSpeed=0..}] RSAttr.BlossomUpgradeSpeed 1
-
-execute as @a[scores={RSAttr.BlossomUpgradeSpeed=160..}] run function commands:attributes/clears/clear_blossom_upgrade_speed
-
 #Outrage
 
 scoreboard players add @a[scores={RSAttr.OutrageSpeed=0..}] RSAttr.OutrageSpeed 1

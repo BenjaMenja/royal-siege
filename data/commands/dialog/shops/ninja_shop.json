@@ -150,7 +150,7 @@
         }
       ],
       "tooltip": {
-        "text": "Cost - 2000 Siege Bucks\nReduce the cooldown of dash from 6s to 5s.",
+        "text": "Cost - 2000 Siege Bucks\nPowerup now refunds all of your dashes instead of just one.",
         "color": "gold"
       },
       "action": {

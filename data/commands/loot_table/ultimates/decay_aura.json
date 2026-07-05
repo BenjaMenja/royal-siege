@@ -1,68 +1,72 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:carrot",
-            "functions": [
-              {
-                "function": "minecraft:set_name",
-                "name": {
-                  "text": "Decay Aura",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Decay Aura",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
                   "italic": false
+                },
+                {
+                  "text": "Consumable",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Inflicts Wither III to nearby enemies."
+                },
+                {
+                  "text": "Also reduces nearby enemies' attack damage by 3, movement speed by 15%, and armor points by 6."
+                },
+                {
+                  "text": "Lasts 6 seconds."
                 }
-              },
-              {
-                "function": "minecraft:set_lore",
-                "lore": [
-                  {
-                    "text": "Right-Click to use",
-                    "color": "yellow",
-                    "italic": false
-                  },
-                  {
-                    "text": " "
-                  },
-                  {
-                    "text": "Inflicts Wither III to nearby enemies."
-                  },
-                  {
-                    "text": "Also reduces nearby enemies' attack damage by 3, movement speed by 15%, and armor points by 6."
-                  },
-                  {
-                    "text": "Lasts 6 seconds."
-                  }
-                ],
-                "mode": "insert"
-              },
-              {
-                "function": "minecraft:set_custom_data",
-                "tag": "{ultimateitem:1b,decay:1b}"
-              },
-              {
-                "function": "minecraft:set_components",
-                "components": {
-                  "minecraft:custom_model_data": {
-                    "floats": [
-                      79
-                    ]
-                  },
-                  "consumable": {
-                    "consume_seconds": 1000000
-                  },
-                  "minecraft:food": {
-                    "nutrition": 0,
-                    "saturation": 0,
-                    "can_always_eat": true
-                  }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{ultimateitem:1b,decay:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    79
+                  ]
+                },
+                "consumable": {
+                  "consume_seconds": 1000000
+                },
+                "minecraft:food": {
+                  "nutrition": 0,
+                  "saturation": 0,
+                  "can_always_eat": true
                 }
               }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

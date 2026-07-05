@@ -122,6 +122,11 @@
               "text": "Right-Click to use"
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 20s"
+            },
+            {
               "text": " "
             },
             {
@@ -129,9 +134,6 @@
             },
             {
               "text": "Afterwards, quickly slam onto the ground, launching nearby enemies into the air."
-            },
-            {
-              "text": "Can be used every 20s."
             }
           ]
         }

@@ -24,13 +24,15 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 6s"
+                },
+                {
                   "text": " "
                 },
                 {
                   "text": "Shoots a blast of 8 arrows in front of you, doing lots of damage."
-                },
-                {
-                  "text": "Can be used every 6 seconds."
                 }
               ],
               "mode": "insert"

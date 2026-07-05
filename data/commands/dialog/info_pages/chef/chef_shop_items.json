@@ -64,6 +64,11 @@
               "italic": false
             },
             {
+              "text": "Consumable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": " "
             },
             {
@@ -233,6 +238,11 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 25s"
+            },
+            {
               "text": " "
             },
             {
@@ -272,6 +282,11 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 15s"
+            },
+            {
               "text": " "
             },
             {
@@ -279,9 +294,6 @@
             },
             {
               "text": "If a teammate restores health from the beam, they will drop 1 Siege Coin."
-            },
-            {
-              "text": "Can be used every 15 seconds."
             },
             {
               "text": "Cooldown is reduced to 5 seconds if it misses."
@@ -313,7 +325,7 @@
           "lore": [
             {
               "type": "text",
-              "text": "Reduces the cooldown of mystery basket from 14s to 10s."
+              "text": "Increases the fire aspect level of Cooking with Fire by 1 and the regeneration duration by 1s."
             }
           ],
           "minecraft:custom_model_data": {

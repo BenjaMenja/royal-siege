@@ -1,12 +1,12 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:carrot",
-            "functions": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot",
+          "functions": [
             {
               "function": "minecraft:set_name",
               "name": {
@@ -22,6 +22,11 @@
                   "text": "Right-Click to use",
                   "color": "yellow",
                   "italic": false
+                },
+                {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 1s"
                 },
                 {
                   "text": " "
@@ -67,7 +72,9 @@
               "components": {
                 "minecraft:unbreakable": {},
                 "minecraft:tooltip_display": {
-                  "hidden_components": ["minecraft:unbreakable"]
+                  "hidden_components": [
+                    "minecraft:unbreakable"
+                  ]
                 },
                 "minecraft:custom_model_data": {
                   "floats": [
@@ -83,37 +90,36 @@
                   "can_always_eat": true
                 },
                 "minecraft:attribute_modifiers": [
-                    {
-                      "type": "minecraft:attack_damage",
-                      "amount": 7.5,
-                      "operation": "add_value",
-                      "id": "4d3aec43-b352-44da-8031-9a2d86b14d10",
-                      "slot": "mainhand"
-                    },
-                    {
-                      "type": "minecraft:attack_speed",
-                      "amount": -3,
-                      "operation": "add_value",
-                      "id": "2943bf15-e340-4bdf-ae8b-b06e7189ded2",
-                      "slot": "mainhand"
-                    }
-                  ]
-                }
-              },
-              {
-                "function": "minecraft:set_custom_data",
-                "tag": "{gunblade:1b,switch:1b}"
-              },
-              {
-                "function": "minecraft:toggle_tooltips",
-                "toggles": {
-                  "minecraft:attribute_modifiers": false
-                }
+                  {
+                    "type": "minecraft:attack_damage",
+                    "amount": 7.5,
+                    "operation": "add_value",
+                    "id": "4d3aec43-b352-44da-8031-9a2d86b14d10",
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "minecraft:attack_speed",
+                    "amount": -3,
+                    "operation": "add_value",
+                    "id": "2943bf15-e340-4bdf-ae8b-b06e7189ded2",
+                    "slot": "mainhand"
+                  }
+                ]
               }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gunblade:1b,switch:1b}"
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
+            }
           ]
         }
       ]
     }
   ]
 }
-  

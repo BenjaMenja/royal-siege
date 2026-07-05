@@ -24,6 +24,11 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 15s"
+                },
+                {
                   "text": " "
                 },
                 {
@@ -31,9 +36,6 @@
                 },
                 {
                   "text": "If a teammate restores health from the beam, they will drop 1 Siege Coin."
-                },
-                {
-                  "text": "Can be used every 15 seconds."
                 },
                 {
                   "text": "Cooldown is reduced to 5 seconds if it misses."

@@ -520,6 +520,9 @@ scoreboard objectives add necroLosses dummy
 scoreboard objectives add necroWinsTDM dummy
 scoreboard objectives add necroLossesTDM dummy
 scoreboard objectives add necroArmor dummy
+scoreboard objectives add pirateCoinDeposits dummy
+scoreboard objectives add RSAttr.StormOfBlades dummy
+scoreboard objectives add stormOfBladesTier dummy
 
 function custom_heal:load
 
@@ -543,3 +546,4 @@ scoreboard objectives remove gasVacDis
 scoreboard objectives remove gasVacStore
 scoreboard objectives remove gasVacTimer
 scoreboard objectives remove useCrossbow
+scoreboard objectives remove RSAttr.BlossomUpgradeSpeed

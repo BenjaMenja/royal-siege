@@ -176,6 +176,11 @@
               "text": "Right-Click to use"
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 20s"
+            },
+            {
               "text": " "
             },
             {
@@ -210,6 +215,11 @@
               "color": "yellow",
               "italic": false,
               "text": "Right-Click to use"
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 22s"
             },
             {
               "text": " "

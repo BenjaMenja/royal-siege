@@ -46,11 +46,14 @@
       "width": 512,
       "contents": [
         {
-          "text": "Passive - Storm's Calling\n\n",
+          "text": "Passive - Storm of Blades\n\n",
           "color": "yellow"
         },
         {
-          "text": "You receive lightning spells every 10s that stack up to 5.\nCan be thrown to strike lightning onto nearby enemies."
+          "text": "Projectile hits with your trident against players increases the damage of your next trident melee by 1, stacking up to 3.\n"
+        },
+        {
+          "text": "The melee strike can be used on any entity, not just a player."
         }
       ]
     },
@@ -143,6 +146,11 @@
               "text": "Throwable",
               "color": "yellow",
               "italic": false
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 10s"
             },
             {
               "text": " "

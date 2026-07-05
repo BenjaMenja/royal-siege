@@ -24,13 +24,15 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 45s"
+                },
+                {
                   "text": " "
                 },
                 {
                   "text": "Calls all of your team's summons within 25 blocks to your location."
-                },
-                {
-                  "text": "Can be used every 45s."
                 }
               ],
               "mode": "insert"

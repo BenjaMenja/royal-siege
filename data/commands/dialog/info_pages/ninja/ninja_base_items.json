@@ -125,6 +125,11 @@
               "text": "Right-Click to use"
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 6s"
+            },
+            {
               "text": " "
             },
             {
@@ -165,6 +170,11 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 5s"
+            },
+            {
               "text": " "
             },
             {
@@ -203,6 +213,11 @@
               "text": "Throwable",
               "color": "yellow",
               "italic": false
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 45s"
             },
             {
               "text": " "

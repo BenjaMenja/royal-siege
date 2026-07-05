@@ -138,6 +138,11 @@
               "text": "Placeable"
             },
             {
+              "text": "Consumable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": " "
             },
             {
@@ -239,6 +244,11 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 20s"
+            },
+            {
               "text": " "
             },
             {
@@ -279,6 +289,11 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 10s"
+            },
+            {
               "text": " "
             },
             {
@@ -286,9 +301,6 @@
             },
             {
               "text": "Consumes 100 Siege Bucks per shot."
-            },
-            {
-              "text": "Can be used every 8 seconds."
             }
           ],
           "minecraft:custom_model_data": {
@@ -317,7 +329,7 @@
           "lore": [
             {
               "type": "text",
-              "text": "Reduces the cooldown of Fake Money from 45s to 30s."
+              "text": "Every 5 siege coins you deposit will grant you an additional 200 siege bucks."
             }
           ],
           "minecraft:custom_model_data": {

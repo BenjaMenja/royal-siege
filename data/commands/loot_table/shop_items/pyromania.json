@@ -24,6 +24,11 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 24s"
+                },
+                {
                   "text": " "
                 },
                 {
@@ -42,7 +47,7 @@
                   "text": "The increased stats persist even if you are no longer on fire before the buff expires."
                 },
                 {
-                  "text": "Lasts 5s, and can be used every 24s."
+                  "text": "Lasts 5s."
                 }
               ],
               "mode": "insert"

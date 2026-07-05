@@ -125,6 +125,11 @@
               "text": "Right-Click to use"
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 2s"
+            },
+            {
               "text": " "
             },
             {
@@ -134,10 +139,7 @@
               "text": "The needle provides regeneration II to the attached teammate."
             },
             {
-              "text": "The drip breaks over long distance, and cooldown is 8s if broken."
-            },
-            {
-              "text": "The drip can be retracted, and cooldown is reduced to 4s."
+              "text": "The drip breaks over long distance and can be retracted, both putting the ability on cooldown."
             }
           ]
         }
@@ -170,6 +172,11 @@
               "text": "Throwable"
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 10s"
+            },
+            {
               "text": " "
             },
             {
@@ -180,9 +187,6 @@
             },
             {
               "text": "Can have a max of 2 at once."
-            },
-            {
-              "text": "Can be used every 10s."
             }
           ]
         }

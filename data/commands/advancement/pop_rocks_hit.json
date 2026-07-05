@@ -7,7 +7,7 @@
           "nbt": "{Tags:[\"poprocks\"]}"
         },
         "entity": {
-          "entity_type": "minecraft:player",
+          "type": "minecraft:player",
           "flags": {
             "is_on_fire": true
           }

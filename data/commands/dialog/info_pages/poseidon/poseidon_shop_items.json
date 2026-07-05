@@ -89,6 +89,11 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 10s"
+            },
+            {
               "text": " "
             },
             {
@@ -96,9 +101,6 @@
             },
             {
               "text": "Each fish dropped gives a specific effect when picked up by an enemy."
-            },
-            {
-              "text": "Can be used every 10 seconds."
             }
           ]
         }
@@ -124,6 +126,11 @@
               "text": "Right-Click to use",
               "color": "yellow",
               "italic": false
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 10s"
             },
             {
               "text": " "
@@ -269,7 +276,7 @@
           "lore": [
             {
               "type": "text",
-              "text": "Increases the max amount of spells from 5 to 8 and reduces the cooldown from 10s to 9s."
+              "text": "Increases the damage cap of Storm of Blades to 5."
             }
           ],
           "minecraft:custom_model_data": {

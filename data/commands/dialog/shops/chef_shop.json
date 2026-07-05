@@ -14,11 +14,11 @@
           "color": "aqua"
         },
         {
-          "text": "Passive - Bottomless Breadsticks\n\n",
+          "text": "Passive - Cooking with Fire\n\n",
           "color": "yellow"
         },
         {
-          "text": "The wizard has enchanted your basket, filling it with a mysterious, unlimited food source."
+          "text": "Dealing 30 cumulative damage with your frying pan will light it on fire for your next swing.\nThe lit frying pan will burn enemies, knock them back further, and give Regeneration III for 3s to nearby teammates."
         }
       ]
     }
@@ -150,7 +150,7 @@
         }
       ],
       "tooltip": {
-        "text": "Cost - 2000 Siege Bucks\nReduces the cooldown of mystery basket from 14s to 10s.",
+        "text": "Cost - 2000 Siege Bucks\nIncreases the fire aspect level of Cooking with Fire by 1 and the regeneration duration by 1s.",
         "color": "gold"
       },
       "action": {

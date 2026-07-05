@@ -95,6 +95,11 @@
               "italic": false
             },
             {
+              "text": "Consumable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": " "
             },
             {
@@ -126,6 +131,11 @@
           "minecraft:lore": [
             {
               "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": "Consumable",
               "color": "yellow",
               "italic": false
             },
@@ -166,6 +176,11 @@
               "italic": false
             },
             {
+              "text": "Consumable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": " "
             },
             {
@@ -200,6 +215,11 @@
               "text": "Right-Click to use",
               "color": "yellow",
               "italic": false
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 6s"
             },
             {
               "text": " "

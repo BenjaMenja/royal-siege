@@ -63,13 +63,15 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 5s"
+            },
+            {
               "text": " "
             },
             {
               "text": "Fires a powerful bullet that pierces with a 16.66% success rate."
-            },
-            {
-              "text": "Can be used every 5 seconds."
             }
           ]
         }
@@ -164,6 +166,11 @@
               "italic": false
             },
             {
+              "text": "Consumable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": " "
             },
             {
@@ -199,6 +206,11 @@
           "lore": [
             {
               "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": "Consumable",
               "color": "yellow",
               "italic": false
             },
@@ -242,6 +254,11 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 10s"
+            },
+            {
               "text": " "
             },
             {
@@ -249,9 +266,6 @@
             },
             {
               "text": "Consumes 100 Siege Bucks per shot."
-            },
-            {
-              "text": "Can be used every 8 seconds."
             }
           ],
           "minecraft:custom_model_data": {

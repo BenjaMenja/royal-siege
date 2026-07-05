@@ -23,6 +23,11 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 20s"
+                },
+                {
                   "text": " "
                 },
                 {

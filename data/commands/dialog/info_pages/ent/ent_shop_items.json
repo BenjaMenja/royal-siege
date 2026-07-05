@@ -227,6 +227,11 @@
               "italic": false
             },
             {
+              "text": "Consumable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": " "
             },
             {
@@ -262,7 +267,7 @@
           "lore": [
             {
               "type": "text",
-              "text": "Increases speed from Blossom from +10% to +20%, and increases duration of all Blossom buffs."
+              "text": "Natural Gift's duration is increased from 2s to 4s."
             }
           ],
           "minecraft:custom_model_data": {

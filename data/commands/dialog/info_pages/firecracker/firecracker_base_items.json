@@ -76,6 +76,11 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 4s"
+            },
+            {
               "text": " "
             },
             {
@@ -85,10 +90,7 @@
               "text": "The sparks deal damage on contact and sets enemies on fire."
             },
             {
-              "text": "Firing the projectiles puts out the sparks for 4s, causing the sparkler"
-            },
-            {
-              "text": "to deal 1 less damage and no longer burn."
+              "text": "While on cooldown, the sparkler deals 1 less damage and no longer burns."
             },
             {
               "text": " "
@@ -147,6 +149,11 @@
               "text": "Right-Click to use"
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 9s"
+            },
+            {
               "text": " "
             },
             {
@@ -157,9 +164,6 @@
             },
             {
               "text": "The bombs pop after 1s, dealing 4 damage and burning enemies in a small radius."
-            },
-            {
-              "text": "Can be used every 9s."
             }
           ]
         }

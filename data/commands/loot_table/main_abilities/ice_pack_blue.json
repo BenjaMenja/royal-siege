@@ -45,6 +45,11 @@
                   "text": "Throwable"
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 10s"
+                },
+                {
                   "text": " "
                 },
                 {
@@ -55,9 +60,6 @@
                 },
                 {
                   "text": "Can have a max of 2 at once."
-                },
-                {
-                  "text": "Can be used every 10s."
                 }
               ],
               "mode": "append"

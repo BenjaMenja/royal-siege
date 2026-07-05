@@ -24,6 +24,11 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 4s"
+                },
+                {
                   "text": " "
                 },
                 {
@@ -33,10 +38,7 @@
                   "text": "The sparks deal damage on contact and sets enemies on fire."
                 },
                 {
-                  "text": "Firing the projectiles puts out the sparks for 4s, causing the sparkler"
-                },
-                {
-                  "text": "to deal 1 less damage and no longer burn."
+                  "text": "While on cooldown, the sparkler deals 1 less damage and no longer burns."
                 },
                 {
                   "text": " "
@@ -84,7 +86,9 @@
                   "consume_seconds": 1000000
                 },
                 "tooltip_display": {
-                  "hidden_components": ["attribute_modifiers"]
+                  "hidden_components": [
+                    "attribute_modifiers"
+                  ]
                 },
                 "minecraft:attribute_modifiers": [
                   {

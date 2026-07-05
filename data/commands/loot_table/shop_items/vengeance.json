@@ -24,6 +24,11 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 30s"
+                },
+                {
                   "text": " "
                 },
                 {
@@ -37,9 +42,6 @@
                 },
                 {
                   "text": "The additional defense lasts 6s."
-                },
-                {
-                  "text": "Can be used every 30s."
                 }
               ],
               "mode": "insert"

@@ -150,7 +150,7 @@
         }
       ],
       "tooltip": {
-        "text": "Cost - 3000 Siege Bucks\nReduces the cooldown of Fake Money from 45s to 30s.",
+        "text": "Cost - 3000 Siege Bucks\nEvery 5 siege coins you deposit will grant you an additional 200 siege bucks.",
         "color": "gold"
       },
       "action": {

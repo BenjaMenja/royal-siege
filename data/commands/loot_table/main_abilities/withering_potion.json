@@ -15,6 +15,17 @@
               }
             },
             {
+              "function": "set_lore",
+              "mode": "insert",
+              "lore": [
+                {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 45s"
+                }
+              ]
+            },
+            {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:potion_contents": {

@@ -32,7 +32,9 @@
                   "can_always_eat": true
                 },
                 "tooltip_display": {
-                  "hidden_components": ["attribute_modifiers"]
+                  "hidden_components": [
+                    "attribute_modifiers"
+                  ]
                 },
                 "minecraft:attribute_modifiers": [
                   {
@@ -71,6 +73,11 @@
                   "text": "Right-Click to use"
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 16s"
+                },
+                {
                   "text": " "
                 },
                 {
@@ -78,9 +85,6 @@
                 },
                 {
                   "text": "Right-clicking fires a beam that heals undead summons and the Broodmother Spider 15 HP."
-                },
-                {
-                  "text": "Can be used every 16s."
                 },
                 {
                   "text": "Cooldown reduced to 3s if the beam misses."

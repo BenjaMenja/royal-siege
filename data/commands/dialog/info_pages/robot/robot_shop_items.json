@@ -104,6 +104,11 @@
               "italic": false
             },
             {
+              "text": "Consumable",
+              "color": "yellow",
+              "italic": false
+            },
+            {
               "text": " "
             },
             {
@@ -263,6 +268,11 @@
           "lore": [
             {
               "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": "Consumable",
               "color": "yellow",
               "italic": false
             },

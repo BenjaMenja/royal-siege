@@ -52,16 +52,15 @@
                   "text": "Right-Click to use"
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 8s"
+                },
+                {
                   "text": " "
                 },
                 {
-                  "text": "Contains an unlimited "
-                },
-                {
-                  "text": "supply of fireballs to launch."
-                },
-                {
-                  "text": "Can be used every 8 seconds."
+                  "text": "Contains an unlimited supply of fireballs to launch."
                 }
               ],
               "mode": "append"

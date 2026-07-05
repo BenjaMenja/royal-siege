@@ -52,6 +52,11 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 20s"
+                },
+                {
                   "text": " "
                 },
                 {
@@ -59,9 +64,6 @@
                 },
                 {
                   "text": "The explosion roots enemies for 3 seconds in a 3 block radius."
-                },
-                {
-                  "text": "Can be used every 20 seconds."
                 }
               ],
               "mode": "append"

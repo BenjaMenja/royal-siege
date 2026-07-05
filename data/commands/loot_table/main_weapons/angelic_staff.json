@@ -36,7 +36,9 @@
                   "minecraft:knockback": 1
                 },
                 "tooltip_display": {
-                  "hidden_components": ["attribute_modifiers"]
+                  "hidden_components": [
+                    "attribute_modifiers"
+                  ]
                 },
                 "minecraft:attribute_modifiers": [
                   {
@@ -87,6 +89,11 @@
                   "color": "yellow",
                   "italic": false,
                   "text": "Right-Click to use"
+                },
+                {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 6s"
                 },
                 {
                   "text": " "

@@ -638,9 +638,7 @@ scoreboard players add #ninjavoiceblue voicelineCD 1
 
 scoreboard players add @a[scores={Kit=2},predicate=commands:in_any_battlefield,tag=!notAlive] dashcharge 1
 
-scoreboard players set @a[scores={dashcharge=361..},tag=!upgraded,tag=!wrenched] dashcharge 361
-
-scoreboard players set @a[scores={dashcharge=301..},tag=upgraded] dashcharge 301
+scoreboard players set @a[scores={dashcharge=361..},tag=!wrenched] dashcharge 361
 
 #Smoke Bomb
 
@@ -682,7 +680,9 @@ execute as @e[type=marker,tag=shurikenblue] unless predicate commands:is_riding_
 
 execute as @a[scores={Ninjakill=1..,Kit=2}] run function commands:attributes/adds/add_ninja_passive_atkdmg
 
-scoreboard players add @a[scores={Ninjakill=1..,Kit=2}] dashcharge 120
+scoreboard players add @a[scores={Ninjakill=1..,Kit=2},tag=!upgraded] dashcharge 120
+
+scoreboard players add @a[scores={Ninjakill=1..,Kit=2},tag=upgraded] dashcharge 360
 
 #Ninja Cooldown Display
 
@@ -1378,9 +1378,13 @@ execute if entity @e[type=elder_guardian,team=Blue,tag=terror,scores={timeLimit=
 
 #Ent Passive
 
-execute as @a[team=Red,scores={Kit=8,entPassive=1..}] at @s run effect give @a[team=Red,distance=..10] regeneration 2 1 true
+execute as @a[team=Red,scores={Kit=8,entPassive=1..},tag=!upgraded] at @s run effect give @a[team=Red,distance=..10] regeneration 2 1 true
 
-execute as @a[team=Blue,scores={Kit=8,entPassive=1..}] at @s run effect give @a[team=Blue,distance=..10] regeneration 2 1 true
+execute as @a[team=Red,scores={Kit=8,entPassive=1..},tag=upgraded] at @s run effect give @a[team=Red,distance=..10] regeneration 4 1 true
+
+execute as @a[team=Blue,scores={Kit=8,entPassive=1..},tag=!upgraded] at @s run effect give @a[team=Blue,distance=..10] regeneration 2 1 true
+
+execute as @a[team=Blue,scores={Kit=8,entPassive=1..},tag=upgraded] at @s run effect give @a[team=Blue,distance=..10] regeneration 4 1 true
 
 scoreboard players reset @a[scores={Kit=8,entPassive=1..}] entPassive
 

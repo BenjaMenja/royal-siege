@@ -172,6 +172,47 @@
         "contents": "Shield Buster",
         "width": 125
       }
+    },
+    {
+      "type": "item",
+      "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:custom_model_data": {
+            "floats": [
+              13
+            ]
+          },
+          "minecraft:item_name": {
+            "color": "yellow",
+            "italic": false,
+            "text": "Glowing Effect"
+          },
+          "minecraft:lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 60s"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Make all enemies glow for a short time."
+            }
+          ]
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Glowing Effect",
+        "width": 125
+      }
     }
   ],
   "actions": [

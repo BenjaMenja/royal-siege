@@ -275,7 +275,7 @@
           "lore": [
             {
               "type": "text",
-              "text": "Reduce the cooldown of dash from 6s to 5s."
+              "text": "Powerup now refunds all of your dashes instead of just one."
             }
           ],
           "minecraft:custom_model_data": {

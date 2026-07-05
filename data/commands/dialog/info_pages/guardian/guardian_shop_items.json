@@ -227,6 +227,11 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 2s"
+            },
+            {
               "text": " "
             },
             {

@@ -48,6 +48,11 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 6s"
+                },
+                {
                   "text": " "
                 },
                 {

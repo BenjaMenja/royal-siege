@@ -24,6 +24,11 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 10s"
+                },
+                {
                   "text": " "
                 },
                 {
@@ -31,9 +36,6 @@
                 },
                 {
                   "text": "Consumes 100 Siege Bucks per shot."
-                },
-                {
-                  "text": "Can be used every 8 seconds."
                 }
               ],
               "mode": "insert"

@@ -6,7 +6,7 @@
       "conditions": {
         "killing_blow": {
           "direct_entity": {
-            "entity_type": "minecraft:arrow",
+            "type": "minecraft:arrow",
             "nbt": "{damage:3.5d,Tags:[\"blunderArrow\"]}"
           }
         }

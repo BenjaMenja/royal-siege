@@ -52,13 +52,15 @@
                   "text": "Right-Click to use"
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 60s"
+                },
+                {
                   "text": " "
                 },
                 {
                   "text": "Creates an undead summon at all of your dead teammate's locations."
-                },
-                {
-                  "text": "Can be used every 60s."
                 }
               ],
               "mode": "append"

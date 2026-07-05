@@ -76,6 +76,8 @@ execute if entity @s[team=Blue,scores={Kit=4}] run scoreboard players set #blueH
 
 tag @s[team=Blue,tag=blessed] remove blessed
 
+scoreboard players set @s[scores={Kit=9}] stormOfBladesTier 0
+
 #Practice range players get their items back
 
 scoreboard players set @s[team=Red,predicate=commands:in_practice_range] RedKit 196
@@ -111,6 +113,8 @@ tag @s remove gamblerMoneyStolen
 tag @s remove vaccinated
 
 tag @s remove UHC
+
+tag @s remove stormOfBlades
 
 #Reset scores and run function again
 

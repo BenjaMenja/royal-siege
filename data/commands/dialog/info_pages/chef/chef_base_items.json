@@ -46,11 +46,14 @@
       "width": 512,
       "contents": [
         {
-          "text": "Passive - Bottomless Breadsticks\n\n",
+          "text": "Passive - Cooking with Fire\n\n",
           "color": "yellow"
         },
         {
-          "text": "The wizard has enchanted your basket, filling it with a mysterious, unlimited food source."
+          "text": "Dealing 30 cumulative damage with your frying pan will light it on fire for your next swing.\n"
+        },
+        {
+          "text": "The lit frying pan will burn enemies, knock them back further, and give Regeneration III for 3s to nearby teammates."
         }
       ]
     },
@@ -128,6 +131,11 @@
               "color": "yellow",
               "italic": false,
               "text": "Right-Click to use"
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 14s"
             },
             {
               "text": " "

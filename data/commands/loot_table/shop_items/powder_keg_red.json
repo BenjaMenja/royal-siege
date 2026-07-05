@@ -16,7 +16,9 @@
               "function": "set_components",
               "components": {
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable"]
+                  "hidden_components": [
+                    "unbreakable"
+                  ]
                 },
                 "minecraft:can_place_on": {
                   "blocks": "#commands:can_place_on"
@@ -57,6 +59,11 @@
                   "color": "yellow",
                   "italic": false,
                   "text": "Placeable"
+                },
+                {
+                  "text": "Consumable",
+                  "color": "yellow",
+                  "italic": false
                 },
                 {
                   "text": " "

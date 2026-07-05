@@ -24,6 +24,16 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 6s"
+                },
+                {
+                  "color": "aqua",
+                  "italic": false,
+                  "text": "Max Stack Count: 8"
+                },
+                {
                   "text": " "
                 },
                 {

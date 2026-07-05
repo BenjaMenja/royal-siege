@@ -24,6 +24,11 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 10s"
+                },
+                {
                   "text": " "
                 },
                 {
@@ -31,9 +36,6 @@
                 },
                 {
                   "text": "Each fish dropped gives a specific effect when picked up by an enemy."
-                },
-                {
-                  "text": "Can be used every 10 seconds."
                 }
               ],
               "mode": "insert"

@@ -24,6 +24,11 @@
                   "italic": false
                 },
                 {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 15s"
+                },
+                {
                   "text": " "
                 },
                 {
@@ -34,9 +39,6 @@
                 },
                 {
                   "text": "Warping again will not teleport you to this summon."
-                },
-                {
-                  "text": "Can be used every 15s."
                 }
               ],
               "mode": "insert"

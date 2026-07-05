@@ -63,6 +63,11 @@
               "italic": false
             },
             {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 25s"
+            },
+            {
               "text": " "
             },
             {
@@ -70,9 +75,6 @@
             },
             {
               "text": "Must be used on an ally below 10 HP."
-            },
-            {
-              "text": "Can be used every 25s."
             },
             {
               "text": "Cooldown reduced to 15s if missed, and 5s if used on an ally at or above 10 HP."
@@ -265,6 +267,11 @@
           "lore": [
             {
               "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": "Consumable",
               "color": "yellow",
               "italic": false
             },
