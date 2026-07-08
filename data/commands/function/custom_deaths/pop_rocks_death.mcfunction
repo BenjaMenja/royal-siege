@@ -10,9 +10,9 @@ execute if score #rng RNG matches 2 run tellraw @a [{"selector":"@s"},{"text":"'
 
 execute if score #rng RNG matches 3 run tellraw @a [{"selector":"@s"},{"text":" couldn't handle the heat.","color":"white"}]
 
-execute if entity @s[team=Red] as @a[team=Blue,scores={Kit=15}] run function commands:other/sparkler_upgrade
+execute if entity @s[team=Red] as @a[team=Blue,scores={Kit=15}] run function commands:weapons/weapon_effects/sparkler_upgrade
 
-execute if entity @s[team=Blue] as @a[team=Red,scores={Kit=15}] run function commands:other/sparkler_upgrade
+execute if entity @s[team=Blue] as @a[team=Red,scores={Kit=15}] run function commands:weapons/weapon_effects/sparkler_upgrade
 
 scoreboard players reset #rng RNG
 

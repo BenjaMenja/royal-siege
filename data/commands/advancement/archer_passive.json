@@ -59,6 +59,6 @@
     ]
   ],
   "rewards": {
-    "function": "commands:other/archer_passive"
+    "function": "commands:passives/archer_passive"
   }
 }

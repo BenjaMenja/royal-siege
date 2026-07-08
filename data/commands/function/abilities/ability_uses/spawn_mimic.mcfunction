@@ -1,0 +1,11 @@
+execute if entity @s[tag=mimicred] run summon minecraft:piglin ~ ~ ~ {NoAI:1b,Silent:1b,Health:20f,Tags:["mimicred","mimic"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],attributes:[{id:"max_health",base:20}]}
+
+execute if entity @s[tag=mimicblue] run summon minecraft:piglin ~ ~ ~ {NoAI:1b,Silent:1b,Health:20f,Tags:["mimicblue","mimic"],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],attributes:[{id:"max_health",base:20}]}
+
+execute if entity @s[tag=mimicred] run summon marker ~ ~ ~ {Tags:["mimic","mimicred"]}
+
+execute if entity @s[tag=mimicblue] run summon marker ~ ~ ~ {Tags:["mimic","mimicblue"]}
+
+setblock ~ ~ ~ minecraft:chest[facing=north]{lock:{items:"minecraft:tnt",count:1,components:{"minecraft:custom_name":'"mrdoordash"'}}} replace
+
+kill @s

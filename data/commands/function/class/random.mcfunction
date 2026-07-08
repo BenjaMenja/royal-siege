@@ -1,6 +1,6 @@
 execute if entity @s[tag=startDelay] run return -1
 
-tag @s[predicate=commands:dababy_chance] add dababy
+tag @s[predicate=commands:rng/dababy_chance] add dababy
 
 execute unless score @s Kit matches 100 run tag @s add nonspec
 

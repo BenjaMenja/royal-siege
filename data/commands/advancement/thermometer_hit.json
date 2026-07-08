@@ -24,7 +24,7 @@
       }
     },
     "rewards": {
-      "function": "commands:other/thermometer_damage"
+      "function": "commands:weapons/weapon_effects/thermometer_damage"
     }
   }
   

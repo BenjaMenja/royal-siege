@@ -1,12 +1,12 @@
-effect give @s[tag=!respawning,predicate=commands:in_any_respawn_room] blindness 1 0 true
+effect give @s[tag=!respawning,predicate=commands:location/battlefields/in_any_respawn_room] blindness 1 0 true
 
-scoreboard players add @s[tag=!respawning,predicate=commands:in_any_respawn_room] deathScreen 1
+scoreboard players add @s[tag=!respawning,predicate=commands:location/battlefields/in_any_respawn_room] deathScreen 1
 
-title @s[scores={deathScreen=1},predicate=commands:in_any_respawn_room] title {"text":"You Died!","color":"red"}
+title @s[scores={deathScreen=1},predicate=commands:location/battlefields/in_any_respawn_room] title {"text":"You Died!","color":"red"}
 
-tag @s[scores={deathScreen=40..},predicate=commands:in_any_respawn_room] add respawning
+tag @s[scores={deathScreen=40..},predicate=commands:location/battlefields/in_any_respawn_room] add respawning
 
-tag @s[predicate=!commands:in_any_respawn_room] add respawning
+tag @s[predicate=!commands:location/battlefields/in_any_respawn_room] add respawning
 
 scoreboard players reset @s[tag=respawning] deathScreen
 
@@ -70,9 +70,9 @@ execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsi
 
 execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run teleport @s[scores={Respawn=200..}] 19 64 -1901
 
-execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:0}}} run teleport @s[scores={Respawn=200..},predicate=!commands:in_tdm_gates] 1086 53 -61
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:0}}} run teleport @s[scores={Respawn=200..},predicate=!commands:location/battlefields/in_tdm_gates] 1086 53 -61
 
-execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:1}}} run teleport @s[scores={Respawn=200..},predicate=!commands:in_tdm_gates] 2046 106 -33
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:1}}} run teleport @s[scores={Respawn=200..},predicate=!commands:location/battlefields/in_tdm_gates] 2046 106 -33
 
 title @s[scores={Respawn=200..}] times 10 40 20
 

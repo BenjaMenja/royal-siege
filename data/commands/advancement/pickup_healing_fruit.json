@@ -32,6 +32,6 @@
     ]
   ],
   "rewards": {
-    "function": "commands:other/remove_healing_fruit"
+    "function": "commands:utils/inventory/remove_healing_fruit"
   }
 }

@@ -16,6 +16,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/scourge_kill"
+    "function": "commands:ultimates/scourge_kill"
   }
 }

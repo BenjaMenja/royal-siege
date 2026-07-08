@@ -15,6 +15,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/obtain_tnt_bow"
+    "function": "commands:corrupt_credit_items/ability_effects/obtain_tnt_bow"
   }
 }

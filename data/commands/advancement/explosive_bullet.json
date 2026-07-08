@@ -16,6 +16,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/explosive_bullet"
+    "function": "commands:abilities/ability_effects/explosive_bullet"
   }
 }

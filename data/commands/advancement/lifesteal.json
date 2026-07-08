@@ -4,11 +4,11 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "entity_type": "minecraft:player"
+          "type": "minecraft:player"
         },
         "killing_blow": {
           "direct_entity": {
-            "entity_type": "minecraft:player",
+            "type": "minecraft:player",
             "equipment": {
               "mainhand": {
                 "items": "minecraft:iron_sword",
@@ -23,6 +23,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/lifesteal"
+    "function": "commands:weapons/weapon_effects/lifesteal"
   }
 }

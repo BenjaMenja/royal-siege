@@ -24,6 +24,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/poseidon_trident_projectile_hit"
+    "function": "commands:weapons/weapon_effects/poseidon_trident_projectile_hit"
   }
 }

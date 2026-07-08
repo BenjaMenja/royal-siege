@@ -1,0 +1,17 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:location/battlefields/in_blue_castle_forest_glen"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:location/battlefields/in_blue_castle_winterland"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:location/battlefields/in_blue_ship_colliding_tides"
+    }
+  ]
+}

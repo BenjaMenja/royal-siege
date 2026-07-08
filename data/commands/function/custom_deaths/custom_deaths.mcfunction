@@ -42,7 +42,7 @@ execute if entity @s[team=Blue] if data storage royalsiege:settings {Gamemode:1}
 
 #Betting Chips
 
-execute if entity @s[tag=hasBounty] run function commands:other/betting_chip_kill
+execute if entity @s[tag=hasBounty] run function commands:abilities/ability_effects/betting_chip_kill
 
 #Kill Undead Summons
 
@@ -58,7 +58,7 @@ execute if entity @s[team=Blue,scores={Kit=17}] run kill @e[tag=undeadSpawn,team
 
 function commands:custom_deaths/reset_cooldowns
 
-scoreboard players set @s[predicate=commands:in_practice_range] totalDeaths 0
+scoreboard players set @s[predicate=commands:location/practice_range/in_practice_range] totalDeaths 0
 
 execute if score #gameDuration gameDuration matches 18000.. if data storage royalsiege:settings {Gamemode:0} run scoreboard players set @s Respawn -101
 
@@ -80,13 +80,13 @@ scoreboard players set @s[scores={Kit=9}] stormOfBladesTier 0
 
 #Practice range players get their items back
 
-scoreboard players set @s[team=Red,predicate=commands:in_practice_range] RedKit 196
+scoreboard players set @s[team=Red,predicate=commands:location/practice_range/in_practice_range] RedKit 196
 
-scoreboard players set @s[team=Blue,predicate=commands:in_practice_range] BlueKit 196
+scoreboard players set @s[team=Blue,predicate=commands:location/practice_range/in_practice_range] BlueKit 196
 
-tag @s[team=Red,predicate=commands:in_practice_range] add practiceRangeRespawn
+tag @s[team=Red,predicate=commands:location/practice_range/in_practice_range] add practiceRangeRespawn
 
-tag @s[team=Blue,predicate=commands:in_practice_range] add practiceRangeRespawn
+tag @s[team=Blue,predicate=commands:location/practice_range/in_practice_range] add practiceRangeRespawn
 
 #Attribute Removal
 

@@ -14,7 +14,7 @@
         ],
         "damage": {
           "source_entity": {
-            "entity_type": "minecraft:player"
+            "type": "minecraft:player"
           }
         }
       }

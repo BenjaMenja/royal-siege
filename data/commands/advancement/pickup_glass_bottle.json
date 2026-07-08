@@ -17,6 +17,6 @@
     ]
   ],
   "rewards": {
-    "function": "commands:other/remove_glass_bottle"
+    "function": "commands:utils/inventory/remove_glass_bottle"
   }
 }

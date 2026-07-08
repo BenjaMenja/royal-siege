@@ -16,6 +16,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/midas_bullet"
+    "function": "commands:abilities/ability_effects/midas_bullet"
   }
 }

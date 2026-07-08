@@ -19,6 +19,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/use_ability"
+    "function": "commands:abilities/ability_uses/use_ability"
   }
 }

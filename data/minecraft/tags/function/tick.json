@@ -1,1 +1,6 @@
-{"replace": false,"values": ["commands:other/text_click_activate"]}
+{
+  "replace": false,
+  "values": [
+    "commands:utils/texts/text_click_activate"
+  ]
+}

@@ -32,6 +32,6 @@
     ]
   ],
   "rewards": {
-    "function": "commands:other/fake_money"
+    "function": "commands:abilities/ability_effects/fake_money"
   }
 }

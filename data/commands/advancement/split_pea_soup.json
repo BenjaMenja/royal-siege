@@ -20,6 +20,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/split_pea_soup_effects"
+    "function": "commands:weapons/weapon_effects/split_pea_soup_effects"
   }
 }

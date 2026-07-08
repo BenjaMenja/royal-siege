@@ -2,7 +2,7 @@ tag @s remove rebooting
 
 scoreboard players reset @s Rebooting
 
-execute if entity @a[predicate=commands:in_practice_range] run return 1
+execute if entity @a[predicate=commands:location/practice_range/in_practice_range] run return 1
 
 execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} if entity @s[team=Blue] run teleport @s -4 60 -67
 

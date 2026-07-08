@@ -5,6 +5,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/vengeance_damage"
+    "function": "commands:abilities/ability_effects/vengeance_damage"
   }
 }

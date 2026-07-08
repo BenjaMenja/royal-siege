@@ -20,6 +20,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/rotting_potato"
+    "function": "commands:weapons/weapon_effects/rotting_potato_hit"
   }
 }

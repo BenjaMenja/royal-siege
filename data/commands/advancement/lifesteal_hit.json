@@ -28,6 +28,6 @@
     ]
   ],
   "rewards": {
-    "function": "commands:other/lifesteal_hit"
+    "function": "commands:weapons/weapon_effects/lifesteal_hit"
   }
 }

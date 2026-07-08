@@ -1,6 +1,6 @@
 kill @s
 
-execute as @a[team=Red,distance=..5] run function commands:other/custom_heal {health:3,ult_charge_receiver:"@a[team=Blue,scores={Kit=16}]"}
+execute as @a[team=Red,distance=..5] run function commands:utils/heal/custom_heal {health:3,ult_charge_receiver:"@a[team=Blue,scores={Kit=16}]"}
 
 execute as @a[team=Red,distance=..5] run function commands:attributes/adds/add_ice_pack_speed
 

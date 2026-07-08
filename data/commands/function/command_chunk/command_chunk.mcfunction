@@ -2,7 +2,7 @@
 
 scoreboard players add #corrupt Timer 1
 
-execute if score #corrupt Timer matches 1200.. if data storage royalsiege:settings {CorruptCredits:1} run function commands:other/spawn_cc
+execute if score #corrupt Timer matches 1200.. if data storage royalsiege:settings {CorruptCredits:1} run function commands:gameplay_events/money/spawn_cc
 
 execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run tag @e[type=item,x=9,y=53,z=-132,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
 
@@ -14,13 +14,13 @@ execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsi
 
 execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:1}}} run tag @e[type=item,x=2017,y=52,z=0,distance=..3,nbt={Item:{count:5,components:{"minecraft:custom_data":{corruptcredit:1b}}}}] add CCDelete
 
-execute as @e[type=item,tag=CCDelete] run function commands:other/remove_extra_ccs
+execute as @e[type=item,tag=CCDelete] run function commands:gameplay_events/money/remove_extra_ccs
 
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{corruptcredit:1b}}}}] run data merge entity @s {Health:1000}
 
 #Assign Teams to Arrows shot by bows
 
-execute as @e[type=arrow,tag=!getTeam] at @s run function commands:other/arrow_get_team
+execute as @e[type=arrow,tag=!getTeam] at @s run function commands:utils/projectiles/arrow_get_team
 
 #Kill Items and prevent players from dropping
 
@@ -28,7 +28,7 @@ function commands:command_chunk/item_clear_filter
 
 #Internal Ability Cooldown
 
-scoreboard players add @a[predicate=commands:in_any_battlefield] abilityCD 1
+scoreboard players add @a[predicate=commands:location/battlefields/in_any_battlefield] abilityCD 1
 
 #Cavalry Charge (Warrior Ultimate)
 
@@ -58,7 +58,7 @@ execute as @a[team=Blue,scores={Ultimate=2}] at @s unless data entity @s RootVeh
 
 #Minion Swarm
 
-execute as @e[type=bat,tag=minionswarm] run function commands:other/minion_swarm
+execute as @e[type=bat,tag=minionswarm] run function commands:abilities/ability_uses/minion_swarm
 
 #Lightning Rod
 
@@ -66,21 +66,21 @@ execute as @a[scores={useFishingRod=1..},predicate=commands:holding/lightning_ro
 
 scoreboard players add @e[type=fishing_bobber,tag=lightningrod] LightningRod 1
 
-execute as @e[type=fishing_bobber,tag=lightningrod,scores={LightningRod=20..},predicate=!commands:in_tdm_gates] at @s run summon lightning_bolt
+execute as @e[type=fishing_bobber,tag=lightningrod,scores={LightningRod=20..},predicate=!commands:location/battlefields/in_tdm_gates] at @s run summon lightning_bolt
 
 kill @e[type=fishing_bobber,tag=lightningrod,scores={LightningRod=100..}]
 
 #Mimics
 
-execute as @e[type=bat,tag=mimic] at @s run function commands:other/spawn_mimic
+execute as @e[type=bat,tag=mimic] at @s run function commands:abilities/ability_uses/spawn_mimic
 
 scoreboard players add @e[type=piglin,tag=mimic] mimicdeath 1
 
 execute as @e[type=piglin,tag=mimic,scores={mimicdeath=100..}] at @s run particle dust{color:[1.0,0.0,0.0],scale:1} ~ ~1 ~ 0 0 0 0 1 force
 
-execute as @e[type=piglin,tag=mimicred,scores={mimicdeath=100..}] at @s if entity @p[team=Blue,distance=..4] run function commands:other/mimic_eat
+execute as @e[type=piglin,tag=mimicred,scores={mimicdeath=100..}] at @s if entity @p[team=Blue,distance=..4] run function commands:corrupt_credit_items/ability_effects/mimic_eat
 
-execute as @e[type=piglin,tag=mimicblue,scores={mimicdeath=100..}] at @s if entity @p[team=Red,distance=..4] run function commands:other/mimic_eat
+execute as @e[type=piglin,tag=mimicblue,scores={mimicdeath=100..}] at @s if entity @p[team=Red,distance=..4] run function commands:corrupt_credit_items/ability_effects/mimic_eat
 
 scoreboard players add @a[tag=mimiceat] Mimic 1
 
@@ -90,19 +90,19 @@ kill @a[scores={Mimic=120..}]
 
 scoreboard players set @a[scores={Mimic=120..}] Mimic 0
 
-execute as @e[type=marker,tag=mimic] at @s unless entity @e[type=piglin,tag=mimic,distance=..1] run function commands:other/mimic_eat
+execute as @e[type=marker,tag=mimic] at @s unless entity @e[type=piglin,tag=mimic,distance=..1] run function commands:corrupt_credit_items/ability_effects/mimic_eat
 
-execute as @e[type=piglin,tag=mimic,scores={mimicdeath=1200..}] at @s run function commands:other/mimic_eat
+execute as @e[type=piglin,tag=mimic,scores={mimicdeath=1200..}] at @s run function commands:corrupt_credit_items/ability_effects/mimic_eat
 
 #Grounding Spell
 
 execute as @e[type=snowball,tag=!groundingspellred,nbt={Item:{components:{"minecraft:custom_data":{groundingspellred:1b}}}}] at @s run function commands:ball/grounding_spell_found_red
 
-execute as @e[type=marker,tag=groundingspellred] unless predicate commands:is_riding_grounding_spell_red at @s run function commands:ball/grounding_spell_landed_red
+execute as @e[type=marker,tag=groundingspellred] unless predicate commands:riding/snowballs/is_riding_grounding_spell_red at @s run function commands:ball/grounding_spell_landed_red
 
 execute as @e[type=snowball,tag=!groundingspellblue,nbt={Item:{components:{"minecraft:custom_data":{groundingspellblue:1b}}}}] at @s run function commands:ball/grounding_spell_found_blue
 
-execute as @e[type=marker,tag=groundingspellblue] unless predicate commands:is_riding_grounding_spell_blue at @s run function commands:ball/grounding_spell_landed_blue
+execute as @e[type=marker,tag=groundingspellblue] unless predicate commands:riding/snowballs/is_riding_grounding_spell_blue at @s run function commands:ball/grounding_spell_landed_blue
 
 #Kick other people off of cavalry charge
 
@@ -170,7 +170,7 @@ execute as @a[scores={Kit=12},tag=!upgraded] run function #commands:clear_streng
 
 effect give @a[scores={Kit=14}] jump_boost 1 3 true
 
-execute as @a[predicate=commands:is_sneaking,scores={Kit=14},nbt={OnGround:0b}] run function commands:attributes/adds/add_astronaut_passive_gravity
+execute as @a[predicate=commands:flags/is_sneaking,scores={Kit=14},nbt={OnGround:0b}] run function commands:attributes/adds/add_astronaut_passive_gravity
 
 execute as @a[scores={Kit=14},tag=astrogravity,nbt={OnGround:1b}] run function commands:attributes/clears/clear_astronaut_passive_gravity
 
@@ -178,7 +178,7 @@ effect give @a[scores={Kit=15}] fire_resistance 1 0 true
 
 effect give @a[tag=inCastleSpawnRoom] resistance 1 4 true
 
-tag @a[predicate=!commands:in_any_castle_spawn_room] remove inCastleSpawnRoom
+tag @a[predicate=!commands:location/battlefields/in_any_castle_spawn_room] remove inCastleSpawnRoom
 
 #King Bossbar
 
@@ -188,7 +188,7 @@ execute store result bossbar minecraft:blueking value run data get entity @e[typ
 
 #Gravity Canceler
 
-scoreboard players remove @a[scores={gravityTimer=1..},predicate=commands:inventory/gravity_canceler,predicate=commands:in_any_battlefield,tag=!notAlive] gravityTimer 1
+scoreboard players remove @a[scores={gravityTimer=1..},predicate=commands:inventory/gravity_canceler,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] gravityTimer 1
 
 scoreboard players add @a[tag=gravCancel] gravityDur 1
 
@@ -232,7 +232,7 @@ scoreboard players set @a[scores={LifeForce=3600..}] LifeForce 0
 
 #End of the Game (Classic)
 
-scoreboard players add @a[predicate=commands:in_any_battlefield,tag=inCurrentMatch] End 1
+scoreboard players add @a[predicate=commands:location/battlefields/in_any_battlefield,tag=inCurrentMatch] End 1
 
 execute if entity @a[team=!,scores={End=100..}] unless entity @e[type=wither_skeleton,team=Blue,tag=King] if data storage royalsiege:settings {Gamemode:0} run tag @a[team=Red] add win
 
@@ -260,11 +260,11 @@ execute if entity @a[team=Blue,tag=win] run title @a title ["",{"text":"Blue Tea
 
 execute if entity @a[tag=win] as @a run function commands:starting/end_score_tag_reset
 
-execute if entity @a[tag=win] run function commands:other/end
+execute if entity @a[tag=win] run function commands:gameplay_events/ending/end
 
 #TDM Display kills timer
 
-execute if data storage royalsiege:settings {Gamemode:1} unless entity @a[predicate=commands:in_practice_range] run scoreboard players add #TDMTimer tdmTimer 1
+execute if data storage royalsiege:settings {Gamemode:1} unless entity @a[predicate=commands:location/practice_range/in_practice_range] run scoreboard players add #TDMTimer tdmTimer 1
 
 execute if score #TDMTimer tdmTimer matches 400.. if data storage royalsiege:settings {Gamemode:1} run tellraw @a [{"text":"Red team kill count: ","color":"red"},{"score":{"name":"#redkills","objective":"tdmKills"},"color":"green"},{"text":"/"},{"score":{"name":"#tdmreqkills","objective":"tdmKills"},"color":"green"},{"text":"\n"},{"text":"Blue team kill count: ","color":"blue"},{"score":{"name":"#bluekills","objective":"tdmKills"},"color":"green"},{"text":"/"},{"score":{"name":"#tdmreqkills","objective":"tdmKills"},"color":"green"}]
 
@@ -288,17 +288,17 @@ kill @e[type=marker,tag=xpspawner,scores={xpspawner=300..}]
 
 #Convert Gold Ingots to Siege Bucks
 
-tag @e[type=item,predicate=commands:in_gold_pit,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},limit=1] add convertToMoney
+tag @e[type=item,predicate=commands:location/battlefields/in_gold_pit,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},limit=1] add convertToMoney
 
-execute as @e[type=item,tag=convertToMoney] at @s run function commands:other/convert_to_money
+execute as @e[type=item,tag=convertToMoney] at @s run function commands:gameplay_events/money/convert_coins_to_money
 
 #Convert Corrupt Credits to Bank
 
-tag @e[type=item,predicate=commands:in_gold_pit,nbt={Item:{components:{"minecraft:custom_data":{corruptcredit:1b}}}},tag=!ccspawn,limit=1] add convertToBank
+tag @e[type=item,predicate=commands:location/battlefields/in_gold_pit,nbt={Item:{components:{"minecraft:custom_data":{corruptcredit:1b}}}},tag=!ccspawn,limit=1] add convertToBank
 
-execute as @e[type=item,tag=convertToBank] at @s if entity @p[team=Red,distance=..4] run function commands:other/convert_to_bank_red
+execute as @e[type=item,tag=convertToBank] at @s if entity @p[team=Red,distance=..4] run function commands:bank/convert_ccs_to_bank_red
 
-execute as @e[type=item,tag=convertToBank] at @s if entity @p[team=Blue,distance=..4] run function commands:other/convert_to_bank_blue
+execute as @e[type=item,tag=convertToBank] at @s if entity @p[team=Blue,distance=..4] run function commands:bank/convert_ccs_to_bank_blue
 
 #Starting the map
 
@@ -308,7 +308,7 @@ execute as @p[scores={Start=1}] at @s run function commands:starting/start_map
 
 scoreboard players add @e[type=zombie,tag=Minion] MinionDeath 1
 
-scoreboard players add @a[scores={Kit=6},predicate=commands:in_any_battlefield,tag=!notAlive] WizardMinion 1
+scoreboard players add @a[scores={Kit=6},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] WizardMinion 1
 
 execute as @a[team=Red,tag=!upgraded,scores={WizardMinion=400..}] at @s run function commands:entities/wizard_minion_red
 
@@ -338,11 +338,11 @@ scoreboard players add #redking kingAttackCD 1
 
 scoreboard players add #blueking kingAttackCD 1
 
-execute as @e[type=wither_skeleton,tag=King,scores={Defend=1..}] run function commands:other/king_attacked
+execute as @e[type=wither_skeleton,tag=King,scores={Defend=1..}] run function commands:gameplay_events/king/king_attacked
 
 #Glowing effect
 
-execute as @a[scores={Kit=5,glowingEffectCD=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s glowingEffectCD 1
+execute as @a[scores={Kit=5,glowingEffectCD=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s glowingEffectCD 1
 
 #Archer Cooldown Display
 
@@ -370,15 +370,15 @@ kill @e[type=item,tag=fakeMoney,scores={Timer=2400..}]
 
 #Powder Keg
 
-execute as @e[type=bat,tag=powderKeg] at @s run function commands:other/place_powder_keg
+execute as @e[type=bat,tag=powderKeg] at @s run function commands:abilities/ability_uses/place_powder_keg
 
-execute as @e[type=item_frame,tag=powderKeg] at @s unless entity @e[type=piglin,limit=1,sort=nearest,distance=..0.75,tag=powderKeg] run function commands:other/destroy_powder_keg
+execute as @e[type=item_frame,tag=powderKeg] at @s unless entity @e[type=piglin,limit=1,sort=nearest,distance=..0.75,tag=powderKeg] run function commands:abilities/ability_cleanup/destroy_powder_keg
 
-execute as @e[type=piglin,tag=powderKeg,nbt=!{Fire:-1s}] at @s run function commands:other/destroy_powder_keg
+execute as @e[type=piglin,tag=powderKeg,nbt=!{Fire:-1s}] at @s run function commands:abilities/ability_cleanup/destroy_powder_keg
 
 #Chain Hook
 
-execute as @a[scores={cHookCD=1..},predicate=commands:inventory/chain_hook,predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s cHookCD 1
+execute as @a[scores={cHookCD=1..},predicate=commands:inventory/chain_hook,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s cHookCD 1
 
 execute as @e[type=item,tag=hookRed] at @s run tag @p[distance=..2,team=Blue] add hooked
 
@@ -386,9 +386,9 @@ execute as @e[type=item,tag=hookBlue] at @s run tag @p[distance=..2,team=Red] ad
 
 execute as @e[type=item,tag=hook] at @s run tag @e[type=wither_skeleton,tag=dummy,distance=..1.5,limit=1] add hooked
 
-execute as @a[tag=hooked] run function commands:other/chain_hook
+execute as @a[tag=hooked] run function commands:abilities/ability_effects/chain_hook
 
-execute as @e[type=wither_skeleton,tag=dummy,tag=hooked,limit=1] run function commands:other/chain_hook
+execute as @e[type=wither_skeleton,tag=dummy,tag=hooked,limit=1] run function commands:abilities/ability_effects/chain_hook
 
 scoreboard players add @e[type=item,tag=hook] chainHook 1
 
@@ -396,7 +396,7 @@ scoreboard players add @a[tag=hooked] chainHook 1
 
 scoreboard players add @e[type=wither_skeleton,tag=dummy,tag=hooked] chainHook 1
 
-execute as @e[type=!item,scores={chainHook=10..}] at @s run function commands:other/chain_hook_pull
+execute as @e[type=!item,scores={chainHook=10..}] at @s run function commands:abilities/ability_effects/chain_hook_pull
 
 kill @e[type=item,tag=hook,scores={chainHook=10..}]
 
@@ -434,11 +434,11 @@ execute as @a[scores={Kit=7},predicate=commands:inventory/punch_bow,predicate=!c
 
 #Ent Items
 
-scoreboard players remove @a[scores={Kit=8},predicate=commands:in_any_battlefield,tag=!notAlive] hFruitTimer 1
+scoreboard players remove @a[scores={Kit=8},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] hFruitTimer 1
 
-execute as @a[scores={Kit=8,blossomTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s blossomTimer 1
+execute as @a[scores={Kit=8,blossomTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s blossomTimer 1
 
-execute as @a[scores={Kit=8,rootingTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s rootingTimer 1
+execute as @a[scores={Kit=8,rootingTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s rootingTimer 1
 
 execute at @a[team=Red,scores={hFruitTimer=..0}] run loot spawn ~ ~ ~ loot commands:main_abilities/healing_fruit_red
 
@@ -468,9 +468,9 @@ execute as @e[type=item,tag=spawn,scores={FruitRemove=1..},nbt={Item:{components
 
 execute as @e[type=item,scores={FruitRemove=1}] run data merge entity @s {PickupDelay:0}
 
-execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s if data entity @s Thrower if entity @p[scores={Kit=8},dx=0] as @a[team=Red,distance=..100,predicate=commands:in_any_battlefield] unless score @s Kit matches 8 run tag @s add closest
+execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s if data entity @s Thrower if entity @p[scores={Kit=8},dx=0] as @a[team=Red,distance=..100,predicate=commands:location/battlefields/in_any_battlefield] unless score @s Kit matches 8 run tag @s add closest
 
-execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] at @s if data entity @s Thrower if entity @p[scores={Kit=8},dx=0] as @a[team=Blue,distance=..100,predicate=commands:in_any_battlefield] unless score @s Kit matches 8 run tag @s add closest
+execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{bluehealingfruit:1b}}}}] at @s if data entity @s Thrower if entity @p[scores={Kit=8},dx=0] as @a[team=Blue,distance=..100,predicate=commands:location/battlefields/in_any_battlefield] unless score @s Kit matches 8 run tag @s add closest
 
 execute as @e[type=item,tag=!spawn,scores={FruitRemove=1..},nbt={Item:{components:{"minecraft:custom_data":{redhealingfruit:1b}}}}] at @s if data entity @s Thrower if entity @p[scores={Kit=8},dx=0] if entity @a[team=Red,tag=closest] run tellraw @a[team=Red,scores={Kit=8}] [{"text":"You gave a healing fruit to: ","color":"green"},{"selector":"@p[team=Red,tag=closest,distance=..100]"}]
 
@@ -506,7 +506,7 @@ scoreboard players reset #blueHFruit hFruitNum
 
 #Poisonous Mushroom
 
-execute as @e[type=bat,tag=mushroom] at @s run function commands:other/poisonous_mushroom
+execute as @e[type=bat,tag=mushroom] at @s run function commands:abilities/ability_uses/poisonous_mushroom
 
 execute as @e[type=area_effect_cloud,tag=mushroom] store result score @s mushroomRadius run data get entity @s Radius
 
@@ -536,7 +536,7 @@ kill @e[type=armor_stand,scores={Treeremove=200..}]
 
 #Pirate Items
 
-scoreboard players remove @a[scores={Kit=7},predicate=commands:in_any_battlefield,tag=!notAlive] fakeTimer 1
+scoreboard players remove @a[scores={Kit=7},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] fakeTimer 1
 
 loot give @a[team=Red,scores={fakeTimer=..0}] loot commands:main_abilities/fake_money_red
 
@@ -560,31 +560,31 @@ tag @a[scores={damageTaken=1..},tag=homewarp] remove homewarp
 
 tellraw @a[scores={castleWarpTimer=1}] {"text":"Warping back to spawnpoint...","color":"green"}
 
-execute as @a[scores={castleWarpTimer=60..},tag=homewarp] run function commands:gameplay_events/warp_to_castle
+execute as @a[scores={castleWarpTimer=60..},tag=homewarp] run function commands:gameplay_events/warps/warp_to_castle
 
 #Growth Injection
 
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{growthinjection:1b}}}}] at @s if entity @e[type=#commands:growth_injection_targetable,distance=..3] run function commands:other/growth_injection
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{growthinjection:1b}}}}] at @s if entity @e[type=#commands:growth_injection_targetable,distance=..3] run function commands:corrupt_credit_items/ability_effects/growth_injection
 
 #Cryo Skeleton
 
-execute as @e[type=bat,tag=cryoskeleton] at @s run function commands:other/spawn_cryo_skeleton
+execute as @e[type=bat,tag=cryoskeleton] at @s run function commands:abilities/ability_uses/spawn_cryo_skeleton
 
 #Mysterious Brew
 
 execute as @e[type=item,tag=mysteriousbrew] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on_without_grass force
 
-execute as @e[type=item,tag=mysteriousbrew,scores={nearbyBlocks=1..}] at @s run function commands:other/mysterious_brew_land
+execute as @e[type=item,tag=mysteriousbrew,scores={nearbyBlocks=1..}] at @s run function commands:corrupt_credit_items/ability_effects/mysterious_brew_land
 
 #Angelic Blessing
 
-execute as @a[scores={angelicBlessingTimer=1..},predicate=commands:inventory/angelic_blessing,predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s angelicBlessingTimer 1
+execute as @a[scores={angelicBlessingTimer=1..},predicate=commands:inventory/angelic_blessing,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s angelicBlessingTimer 1
 
 execute at @a[tag=blessed] run particle dust{color:[0.0,1.0,0.0],scale:1} ~ ~2.5 ~ 0 0 0 1 1
 
 #Fireball Launcher
 
-execute as @a[scores={FireballTimer=1..},predicate=commands:inventory/fireball_launcher,predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s FireballTimer 1
+execute as @a[scores={FireballTimer=1..},predicate=commands:inventory/fireball_launcher,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s FireballTimer 1
 
 #Wizard Lightning Staff
 
@@ -600,7 +600,7 @@ scoreboard players set @a[scores={chaosbow=1..}] chaosbow 0
 
 #Experience Bomb Blaster
 
-execute as @a[scores={expBombTimer=1..},predicate=commands:inventory/exp_blaster,predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s expBombTimer 1
+execute as @a[scores={expBombTimer=1..},predicate=commands:inventory/exp_blaster,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s expBombTimer 1
 
 execute as @e[tag=stop,type=experience_bottle] store success entity @s Air short 1 if data entity @s {Air:0s}
 
@@ -618,7 +618,7 @@ execute as @a[nbt={AbsorptionAmount:0.0f}] run effect clear @s absorption
 
 #Withering Potion
 
-execute as @a[scores={Kit=6},predicate=!commands:inventory/withering_potion,predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s witherTimer 1
+execute as @a[scores={Kit=6},predicate=!commands:inventory/withering_potion,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s witherTimer 1
 
 loot give @a[scores={witherTimer=..0}] loot commands:main_abilities/withering_potion
 
@@ -626,9 +626,9 @@ scoreboard players set @a[scores={witherTimer=..0}] witherTimer 900
 
 #Eject Button
 
-execute as @a[scores={Kit=6,ejectTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s ejectTimer 1
+execute as @a[scores={Kit=6,ejectTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s ejectTimer 1
 
-execute as @a[scores={Kit=6},predicate=commands:in_any_battlefield,tag=!notAlive] at @s run ride @s mount @n[type=snowball,distance=..1.5,tag=ejectitem]
+execute as @a[scores={Kit=6},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s run ride @s mount @n[type=snowball,distance=..1.5,tag=ejectitem]
 
 #Ninja Dash
 
@@ -636,13 +636,13 @@ scoreboard players add #ninjavoicered voicelineCD 1
 
 scoreboard players add #ninjavoiceblue voicelineCD 1
 
-scoreboard players add @a[scores={Kit=2},predicate=commands:in_any_battlefield,tag=!notAlive] dashcharge 1
+scoreboard players add @a[scores={Kit=2},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] dashcharge 1
 
 scoreboard players set @a[scores={dashcharge=361..},tag=!wrenched] dashcharge 361
 
 #Smoke Bomb
 
-scoreboard players remove @a[scores={Kit=2},predicate=commands:in_any_battlefield,tag=!notAlive] NinjaItems 1
+scoreboard players remove @a[scores={Kit=2},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] NinjaItems 1
 
 loot give @a[team=Red,scores={NinjaItems=..0}] loot commands:main_abilities/smoke_bomb_red
 
@@ -652,11 +652,11 @@ scoreboard players set @a[scores={NinjaItems=..0}] NinjaItems 900
 
 execute as @e[type=snowball,tag=!smokebombred,nbt={Item:{components:{"minecraft:custom_data":{smokebombred:1b}}}}] at @s run function commands:ball/smoke_bomb_found_red
 
-execute as @e[type=marker,tag=smokebombcloudred] unless predicate commands:is_riding_smoke_bomb_red at @s run function commands:ball/smoke_bomb_landed_red
+execute as @e[type=marker,tag=smokebombcloudred] unless predicate commands:riding/snowballs/is_riding_smoke_bomb_red at @s run function commands:ball/smoke_bomb_landed_red
 
 execute as @e[type=snowball,tag=!smokebombblue,nbt={Item:{components:{"minecraft:custom_data":{smokebombblue:1b}}}}] at @s run function commands:ball/smoke_bomb_found_blue
 
-execute as @e[type=marker,tag=smokebombcloudblue] unless predicate commands:is_riding_smoke_bomb_blue at @s run function commands:ball/smoke_bomb_landed_blue
+execute as @e[type=marker,tag=smokebombcloudblue] unless predicate commands:riding/snowballs/is_riding_smoke_bomb_blue at @s run function commands:ball/smoke_bomb_landed_blue
 
 execute at @e[type=area_effect_cloud,tag=smokered] run effect give @a[team=Blue,predicate=!commands:armor/enhanced_space_helmet,distance=..5] blindness 2 0 true
 
@@ -664,17 +664,17 @@ execute at @e[type=area_effect_cloud,tag=smokeblue] run effect give @a[team=Red,
 
 #Shuriken
 
-execute as @a[scores={Kit=2,shurikenTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s shurikenTimer 1
+execute as @a[scores={Kit=2,shurikenTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s shurikenTimer 1
 
-execute as @a[scores={Kit=2,shurikenTimer=..0}] run function commands:other/get_shurikens
+execute as @a[scores={Kit=2,shurikenTimer=..0}] run function commands:abilities/ability_uses/shuriken_get
 
 execute as @e[type=snowball,tag=!shurikenred,nbt={Item:{components:{"minecraft:custom_data":{shurikenred:1b}}}}] at @s run function commands:ball/shuriken_found_red
 
 execute as @e[type=snowball,tag=!shurikenblue,nbt={Item:{components:{"minecraft:custom_data":{shurikenblue:1b}}}}] at @s run function commands:ball/shuriken_found_blue
 
-execute as @e[type=marker,tag=shurikenred] unless predicate commands:is_riding_shuriken_red at @s run function commands:ball/shuriken_landed_red
+execute as @e[type=marker,tag=shurikenred] unless predicate commands:riding/snowballs/is_riding_shuriken_red at @s run function commands:ball/shuriken_landed_red
 
-execute as @e[type=marker,tag=shurikenblue] unless predicate commands:is_riding_shuriken_blue at @s run function commands:ball/shuriken_landed_blue
+execute as @e[type=marker,tag=shurikenblue] unless predicate commands:riding/snowballs/is_riding_shuriken_blue at @s run function commands:ball/shuriken_landed_blue
 
 #Ninja Strength passive
 
@@ -696,7 +696,7 @@ effect give @a[predicate=commands:armor/bouncy_boots] jump_boost 2 1 true
 
 execute as @a[predicate=commands:armor/sticky_boots] at @s store result score @s nearbyBlocks run clone ~-0.5 ~0.01 ~-0.5 ~0.5 ~0.1 ~0.5 ~-0.5 ~ ~-0.5 filtered #commands:can_place_on_without_grass force
 
-execute as @a[scores={nearbyBlocks=1..},predicate=commands:armor/sticky_boots,predicate=commands:is_sneaking] run function commands:attributes/adds/add_sticky_boots_gravity
+execute as @a[scores={nearbyBlocks=1..},predicate=commands:armor/sticky_boots,predicate=commands:flags/is_sneaking] run function commands:attributes/adds/add_sticky_boots_gravity
 
 #Chicken Bombs
 
@@ -744,13 +744,13 @@ execute as @e[type=arrow,scores={Timer=24}] run data merge entity @s {damage:2.0
 
 #Display which bullets are ready
 
-execute if entity @a[scores={Kit=10}] run function commands:other/bullet_display
+execute if entity @a[scores={Kit=10}] run function commands:cooldowns/robot_display
 
 #Robot items
 
-execute as @a[scores={Kit=10,ironTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s ironTimer 1
+execute as @a[scores={Kit=10,ironTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s ironTimer 1
 
-execute as @a[scores={Kit=10,shockGrenadeTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s shockGrenadeTimer 1
+execute as @a[scores={Kit=10,shockGrenadeTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s shockGrenadeTimer 1
 
 execute as @a[scores={Kit=10}] run scoreboard players operation @s ironStore = @s ironTimer
 
@@ -764,23 +764,23 @@ execute as @a[scores={Kit=10}] store result score @s shockGrenadeDis run scorebo
 
 scoreboard players add @a[tag=multiBarrel] multiBarrel 1
 
-execute as @a[scores={multiBarrel=200..}] run function commands:other/multi_barrel_end
+execute as @a[scores={multiBarrel=200..}] run function commands:abilities/ability_cleanup/multi_barrel_end
 
 #Iron wall
 
 scoreboard players add @a[tag=iron_wall] ironwall 1
 
-execute as @a[scores={ironwall=100..}] run function commands:other/iron_wall_end
+execute as @a[scores={ironwall=100..}] run function commands:abilities/ability_cleanup/iron_wall_end
 
 #Shock Grenade
 
 execute as @e[type=item,tag=shockGrenade] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on_without_grass force
 
-execute as @e[type=item,tag=shockGrenadeRed] at @s if entity @a[team=Blue,distance=..3] run function commands:other/shock_grenade_explode
+execute as @e[type=item,tag=shockGrenadeRed] at @s if entity @a[team=Blue,distance=..3] run function commands:abilities/ability_effects/shock_grenade_explode
 
-execute as @e[type=item,tag=shockGrenadeBlue] at @s if entity @a[team=Red,distance=..3] run function commands:other/shock_grenade_explode
+execute as @e[type=item,tag=shockGrenadeBlue] at @s if entity @a[team=Red,distance=..3] run function commands:abilities/ability_effects/shock_grenade_explode
 
-execute as @e[type=item,tag=shockGrenade,scores={nearbyBlocks=1..}] at @s run function commands:other/shock_grenade_explode
+execute as @e[type=item,tag=shockGrenade,scores={nearbyBlocks=1..}] at @s run function commands:abilities/ability_effects/shock_grenade_explode
 
 #System Reboot (Robot Ultimate)
 
@@ -806,13 +806,13 @@ execute as @a[scores={Rebooting=100..}] run function commands:ultimates/system_r
 
 #Damage gives ultimate charge
 
-execute as @a[scores={Ultcharge=1..}] run function commands:other/ult_charge
+execute as @a[scores={Ultcharge=1..}] run function commands:ultimates/ult_charge/ult_charge
 
 scoreboard players set @a[scores={Ultcharge=1..}] Ultcharge 0
 
 #Ultimate Charge Bossbars
 
-execute as @a[scores={Ultimate=1..34}] run function commands:other/ultimate_bossbars
+execute as @a[scores={Ultimate=1..34}] run function commands:text/ultimate_bossbars
 
 #Warrior Cooldown Display
 
@@ -820,7 +820,7 @@ execute as @a[scores={Kit=1}] run function commands:cooldowns/warrior_display
 
 #Seismic Slam
 
-execute as @a[scores={Kit=1,WarriorItem=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s WarriorItem 1
+execute as @a[scores={Kit=1,WarriorItem=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s WarriorItem 1
 
 effect give @a[tag=slamming,nbt={OnGround:0b}] resistance 1 2 true
 
@@ -882,13 +882,13 @@ scoreboard players set @a[scores={Message=1..}] Message 0
 
 scoreboard players add #ultChecker Timer 1
 
-execute if score #ultChecker Timer matches 4.. as @a[tag=!spectator] run function commands:other/ult_checker
+execute if score #ultChecker Timer matches 4.. as @a[tag=!spectator] run function commands:utils/ultimates/ult_checker
 
 #Angel Items
 
-execute as @a[scores={Kit=4,HealerItems=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s HealerItems 1
+execute as @a[scores={Kit=4,HealerItems=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s HealerItems 1
 
-execute as @a[scores={Kit=4,healSpell=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s healSpell 1
+execute as @a[scores={Kit=4,healSpell=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s healSpell 1
 
 scoreboard players add #angelspellsred voicelineCD 1
 
@@ -906,13 +906,13 @@ kill @e[type=arrow,scores={Timer=80..}]
 
 #Passive Money
 
-execute if data storage royalsiege:settings {Gamemode:0} run scoreboard players add @a[team=!,predicate=commands:in_any_battlefield] Timer 1
+execute if data storage royalsiege:settings {Gamemode:0} run scoreboard players add @a[team=!,predicate=commands:location/battlefields/in_any_battlefield] Timer 1
 
-execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players add @a[team=!,predicate=commands:in_any_battlefield] Timer 2
+execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players add @a[team=!,predicate=commands:location/battlefields/in_any_battlefield] Timer 2
 
-execute as @a[team=Red,predicate=commands:in_any_red_castle] run scoreboard players add @s Timer 1
+execute as @a[team=Red,predicate=commands:location/battlefields/in_any_red_castle] run scoreboard players add @s Timer 1
 
-execute as @a[team=Blue,predicate=commands:in_any_blue_castle] run scoreboard players add @s Timer 1
+execute as @a[team=Blue,predicate=commands:location/battlefields/in_any_blue_castle] run scoreboard players add @s Timer 1
 
 scoreboard players add @a[scores={Timer=80..}] Money 10
 
@@ -948,9 +948,9 @@ execute as @a[predicate=commands:effects/health_boost,predicate=!commands:effect
 
 #Guardian Items
 
-execute as @a[scores={Kit=3,defensiveSpell=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s defensiveSpell 1
+execute as @a[scores={Kit=3,defensiveSpell=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s defensiveSpell 1
 
-scoreboard players remove @a[scores={Kit=3},predicate=commands:in_any_battlefield,tag=!notAlive] turretTimer 1
+scoreboard players remove @a[scores={Kit=3},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] turretTimer 1
 
 give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=[{"color":"yellow","italic":false,"text":"Placeable"},{"text": " "}],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
 
@@ -1066,13 +1066,13 @@ scoreboard players add @e[type=spruce_boat,tag=flyingdutchman] fDutchmanTimer 1
 
 scoreboard players add @e[type=spruce_boat,tag=flyingdutchman] fDutchmanDur 1
 
-execute as @a[predicate=commands:vehicle/flying_dutchman] run effect give @s resistance 1 2 true
+execute as @a[predicate=commands:riding/boats/flying_dutchman] run effect give @s resistance 1 2 true
 
 execute as @e[type=spruce_boat,tag=flyingdutchman,scores={fDutchmanTimer=16..}] at @s run summon fireball ~ ~-1 ~ {ExplosionPower:4,Tags:["WF","fm"],Motion:[0.0,-1.0,0.0]}
 
 scoreboard players reset @e[type=spruce_boat,tag=flyingdutchman,scores={fDutchmanTimer=16..}] fDutchmanTimer
 
-execute as @e[type=spruce_boat,scores={fDutchmanDur=220}] at @s run tellraw @a[distance=..2,predicate=commands:vehicle/flying_dutchman] {"text":"Your boat is falling apart!","color":"green"}
+execute as @e[type=spruce_boat,scores={fDutchmanDur=220}] at @s run tellraw @a[distance=..2,predicate=commands:riding/boats/flying_dutchman] {"text":"Your boat is falling apart!","color":"green"}
 
 execute as @e[type=spruce_boat,scores={fDutchmanDur=280..}] run function commands:ultimates/flying_dutchman_end
 
@@ -1098,17 +1098,17 @@ execute if entity @e[type=zombie,team=Blue,tag=AI,scores={timeLimit=900}] run te
 
 #Angelic Staff Beam
 
-execute as @a[scores={Kit=4,RegenTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s RegenTimer 1
+execute as @a[scores={Kit=4,RegenTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s RegenTimer 1
 
 #Give Weapons to players that dropped their weapon
 
-execute as @a[scores={Kit=9},predicate=!commands:inventory/poseidon_trident,predicate=commands:in_any_battlefield,tag=!notAlive] run function commands:replace/poseidon_trident_replace
+execute as @a[scores={Kit=9},predicate=!commands:inventory/poseidon_trident,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] run function commands:replace/poseidon_trident_replace
 
-execute as @a[scores={Kit=10},predicate=!commands:inventory/gunblade,predicate=commands:in_any_battlefield,tag=!notAlive] run function commands:other/gunblade_reload_init
+execute as @a[scores={Kit=10},predicate=!commands:inventory/gunblade,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] run function commands:abilities/ability_effects/gunblade_reload_init
 
 scoreboard players add @a[tag=reloading] reload 1
 
-execute as @a[scores={reload=50..}] at @s run function commands:other/gunblade_reload
+execute as @a[scores={reload=50..}] at @s run function commands:abilities/ability_effects/gunblade_reload
 
 #Display deaths and Money
 
@@ -1122,13 +1122,13 @@ execute if score #displayDeaths totalDeaths matches 700 run scoreboard players s
 
 #Display class name and health
 
-execute as @a[predicate=commands:in_any_battlefield] run function commands:other/health_display_prep
+execute as @a[predicate=commands:location/battlefields/in_any_battlefield] run function commands:text/health_display_prep
 
 #Ender Pearl checks for advancement
 
-execute as @a[scores={Kit=2}] if entity @e[type=ender_pearl,tag=!found] run function commands:other/link_projectile
+execute as @a[scores={Kit=2}] if entity @e[type=ender_pearl,tag=!found] run function commands:utils/projectiles/link_projectile
 
-execute as @a[tag=warping] if entity @e[type=ender_pearl,tag=!found2] run function commands:other/find_projectile
+execute as @a[tag=warping] if entity @e[type=ender_pearl,tag=!found2] run function commands:utils/projectiles/find_projectile
 
 execute as @a[tag=warping] unless entity @e[type=ender_pearl,tag=found] run scoreboard players set @s numProjs 0
 
@@ -1146,9 +1146,9 @@ scoreboard players reset @a[scores={ePearlTimer=40..}] ePearlTimer
 
 #Advancement Grants
 
-advancement grant @a[scores={Money=5000..},predicate=commands:in_any_battlefield,predicate=!commands:in_practice_range] only commands:challenges/hoarder
+advancement grant @a[scores={Money=5000..},predicate=commands:location/battlefields/in_any_battlefield,predicate=!commands:location/practice_range/in_practice_range] only commands:challenges/hoarder
 
-advancement grant @a[scores={Health=40..},predicate=commands:in_any_battlefield,predicate=!commands:in_practice_range] only commands:challenges/unstoppable_tank
+advancement grant @a[scores={Health=40..},predicate=commands:location/battlefields/in_any_battlefield,predicate=!commands:location/practice_range/in_practice_range] only commands:challenges/unstoppable_tank
 
 advancement grant @a[scores={craftShovel=1..}] only commands:hidden_advancements/craft_iron_shovel
 
@@ -1158,11 +1158,11 @@ advancement grant @a[scores={craftQuartzBlock=1..}] only commands:hidden_advance
 
 scoreboard players add @a[tag=slamming,nbt={OnGround:0b}] slamSuspend 1
 
-advancement grant @a[scores={slamSuspend=300..},predicate=!commands:in_practice_range] only commands:hidden_advancements/seismic_suspension
+advancement grant @a[scores={slamSuspend=300..},predicate=!commands:location/practice_range/in_practice_range] only commands:hidden_advancements/seismic_suspension
 
 advancement grant @a[scores={useAnvil=1..}] only commands:hidden_advancements/rename_item
 
-advancement grant @a[scores={totalDeaths=25..},predicate=!commands:in_practice_range] only commands:challenges/death_wish
+advancement grant @a[scores={totalDeaths=25..},predicate=!commands:location/practice_range/in_practice_range] only commands:challenges/death_wish
 
 execute if score #red corruptBank matches 25.. run advancement grant @a[team=Red] only commands:challenges/corrupt_hoarder
 
@@ -1170,29 +1170,29 @@ execute if score #blue corruptBank matches 25.. run advancement grant @a[team=Bl
 
 advancement grant @a[scores={useJukebox=1..}] only commands:hidden_advancements/record_label
 
-advancement grant @a[scores={Ninjakill=1..,ePearlTimer=..40,Kit=2},predicate=!commands:in_practice_range] only commands:character_challenges/translocator
+advancement grant @a[scores={Ninjakill=1..,ePearlTimer=..40,Kit=2},predicate=!commands:location/practice_range/in_practice_range] only commands:character_challenges/translocator
 
-advancement grant @a[scores={ultsEaten=2..,Kit=3},predicate=!commands:in_practice_range] only commands:character_challenges/buffet
+advancement grant @a[scores={ultsEaten=2..,Kit=3},predicate=!commands:location/practice_range/in_practice_range] only commands:character_challenges/buffet
 
-execute if score #redHS healstreak matches 20.. run advancement grant @a[scores={Kit=4},team=Red,predicate=commands:in_any_battlefield,predicate=!commands:in_practice_range] only commands:character_challenges/angelic_presence
+execute if score #redHS healstreak matches 20.. run advancement grant @a[scores={Kit=4},team=Red,predicate=commands:location/battlefields/in_any_battlefield,predicate=!commands:location/practice_range/in_practice_range] only commands:character_challenges/angelic_presence
 
-execute if score #blueHS healstreak matches 20.. run advancement grant @a[scores={Kit=4},team=Blue,predicate=commands:in_any_battlefield,predicate=!commands:in_practice_range] only commands:character_challenges/angelic_presence
+execute if score #blueHS healstreak matches 20.. run advancement grant @a[scores={Kit=4},team=Blue,predicate=commands:location/battlefields/in_any_battlefield,predicate=!commands:location/practice_range/in_practice_range] only commands:character_challenges/angelic_presence
 
-advancement grant @a[scores={boatDistance=25000..,Kit=7},predicate=!commands:in_practice_range] only commands:character_challenges/pirates_journey
+advancement grant @a[scores={boatDistance=25000..,Kit=7},predicate=!commands:location/practice_range/in_practice_range] only commands:character_challenges/pirates_journey
 
 advancement grant @a[scores={Health=20..}] only commands:full_hp
 
 advancement revoke @a[scores={Health=..19}] only commands:full_hp
 
-advancement grant @a[advancements={commands:warrior_challenge_damage=true,commands:warrior_challenge_kill=true},scores={Kit=1},predicate=!commands:in_practice_range] only commands:character_challenges/pure_destruction
+advancement grant @a[advancements={commands:warrior_challenge_damage=true,commands:warrior_challenge_kill=true},scores={Kit=1},predicate=!commands:location/practice_range/in_practice_range] only commands:character_challenges/pure_destruction
 
-advancement grant @a[scores={Kit=9,scourgeKills=3..},predicate=!commands:in_practice_range] only commands:character_challenges/wrath_of_the_gods
+advancement grant @a[scores={Kit=9,scourgeKills=3..},predicate=!commands:location/practice_range/in_practice_range] only commands:character_challenges/wrath_of_the_gods
 
-advancement grant @a[scores={eBulletHit=2..,Kit=10},predicate=!commands:in_practice_range] only commands:character_challenges/explosive_combo
+advancement grant @a[scores={eBulletHit=2..,Kit=10},predicate=!commands:location/practice_range/in_practice_range] only commands:character_challenges/explosive_combo
 
-execute if entity @e[type=area_effect_cloud,tag=redmushroom,scores={mushroomRadius=15..}] run advancement grant @a[scores={Kit=8},team=Red,predicate=commands:in_any_battlefield,predicate=!commands:in_practice_range] only commands:character_challenges/fungus_amongus
+execute if entity @e[type=area_effect_cloud,tag=redmushroom,scores={mushroomRadius=15..}] run advancement grant @a[scores={Kit=8},team=Red,predicate=commands:location/battlefields/in_any_battlefield,predicate=!commands:location/practice_range/in_practice_range] only commands:character_challenges/fungus_amongus
 
-execute if entity @e[type=area_effect_cloud,tag=bluemushroom,scores={mushroomRadius=15..}] run advancement grant @a[scores={Kit=8},team=Blue,predicate=commands:in_any_battlefield,predicate=!commands:in_practice_range] only commands:character_challenges/fungus_amongus
+execute if entity @e[type=area_effect_cloud,tag=bluemushroom,scores={mushroomRadius=15..}] run advancement grant @a[scores={Kit=8},team=Blue,predicate=commands:location/battlefields/in_any_battlefield,predicate=!commands:location/practice_range/in_practice_range] only commands:character_challenges/fungus_amongus
 
 #Remove extra things
 
@@ -1210,29 +1210,29 @@ execute as @e[type=wither_skeleton,team=Red,tag=King] run scoreboard players add
 
 execute as @e[type=wither_skeleton,team=Blue,tag=King] run scoreboard players add #bluekings multiItems 1
 
-execute as @a[scores={multiItems=2..,Kit=10}] run function commands:other/remove_multi_items
+execute as @a[scores={multiItems=2..,Kit=10}] run function commands:utils/inventory/remove_multi_items
 
-execute as @a[scores={multiItems=6..,Kit=9},tag=!upgraded] run function commands:other/remove_multi_items
+execute as @a[scores={multiItems=6..,Kit=9},tag=!upgraded] run function commands:utils/inventory/remove_multi_items
 
-execute as @a[scores={multiItems=9..,Kit=9},tag=upgraded] run function commands:other/remove_multi_items
+execute as @a[scores={multiItems=9..,Kit=9},tag=upgraded] run function commands:utils/inventory/remove_multi_items
 
-execute as @a[scores={multiItems=5..,Kit=3}] run function commands:other/remove_multi_items
+execute as @a[scores={multiItems=5..,Kit=3}] run function commands:utils/inventory/remove_multi_items
 
-execute if score #redkings multiItems matches 2.. run function commands:other/remove_multi_items
+execute if score #redkings multiItems matches 2.. run function commands:utils/inventory/remove_multi_items
 
-execute if score #bluekings multiItems matches 2.. run function commands:other/remove_multi_items
+execute if score #bluekings multiItems matches 2.. run function commands:utils/inventory/remove_multi_items
 
 execute as @e[type=zombie,tag=hatchlingred] run scoreboard players add #redhatchlings multiItems 1
 
 execute as @e[type=zombie,tag=hatchlingblue] run scoreboard players add #bluehatchlings multiItems 1
 
-execute if score #redhatchlings multiItems matches 11.. run function commands:other/remove_multi_items
+execute if score #redhatchlings multiItems matches 11.. run function commands:utils/inventory/remove_multi_items
 
-execute if score #bluehatchlings multiItems matches 11.. run function commands:other/remove_multi_items
+execute if score #bluehatchlings multiItems matches 11.. run function commands:utils/inventory/remove_multi_items
 
-execute as @a[predicate=commands:in_any_battlefield,team=!] run scoreboard players add #playersalive multiItems 1
+execute as @a[predicate=commands:location/battlefields/in_any_battlefield,team=!] run scoreboard players add #playersalive multiItems 1
 
-execute if score #playersalive multiItems matches 1 run advancement grant @p[predicate=commands:in_any_battlefield,predicate=!commands:in_practice_range] only commands:hidden_advancements/last_man_standing
+execute if score #playersalive multiItems matches 1 run advancement grant @p[predicate=commands:location/battlefields/in_any_battlefield,predicate=!commands:location/practice_range/in_practice_range] only commands:hidden_advancements/last_man_standing
 
 execute as @e[type=zombie,team=Red,tag=OC] run scoreboard players add #RedOCMinions multiItems 1
 
@@ -1258,11 +1258,11 @@ scoreboard players reset #BlueOCMinions multiItems
 
 #Skybox Check
 
-execute as @a[predicate=commands:skybox,tag=!notAlive] unless entity @a[predicate=commands:in_practice_range] run advancement grant @s only commands:hidden_advancements/hit_skybox
+execute as @a[predicate=commands:location/misc/skybox,tag=!notAlive] unless entity @a[predicate=commands:location/practice_range/in_practice_range] run advancement grant @s only commands:hidden_advancements/hit_skybox
 
-execute as @a[predicate=commands:skybox,tag=!notAlive] unless entity @a[predicate=commands:in_practice_range] at @s run teleport @s ~ 122 ~
+execute as @a[predicate=commands:location/misc/skybox,tag=!notAlive] unless entity @a[predicate=commands:location/practice_range/in_practice_range] at @s run teleport @s ~ 122 ~
 
-execute as @e[type=ender_pearl,predicate=commands:skybox] at @s unless entity @a[predicate=commands:in_practice_range] run teleport @s ~ 122 ~
+execute as @e[type=ender_pearl,predicate=commands:location/misc/skybox] at @s unless entity @a[predicate=commands:location/practice_range/in_practice_range] run teleport @s ~ 122 ~
 
 #Fish Cannon
 
@@ -1270,15 +1270,15 @@ scoreboard players remove @a[scores={fishCannonTimer=1..},predicate=commands:inv
 
 execute at @e[type=item,tag=fishCannon] run particle dust{color:[0.000,1.000,0.765],scale:1} ~ ~ ~ 0.25 0.25 0.25 1 5 normal
 
-execute as @e[type=item,tag=fishCannon,nbt={OnGround:1b}] at @s run function commands:other/fish_cannon
+execute as @e[type=item,tag=fishCannon,nbt={OnGround:1b}] at @s run function commands:abilities/ability_effects/fish_cannon
 
 execute as @e[type=item,tag=fishCannon] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on_without_grass force
 
-execute as @e[type=item,tag=fishCannon,scores={nearbyBlocks=1..}] at @s run function commands:other/fish_cannon
+execute as @e[type=item,tag=fishCannon,scores={nearbyBlocks=1..}] at @s run function commands:abilities/ability_effects/fish_cannon
 
-execute as @a[team=Red,predicate=commands:inventory/fish_cannon_item_blue] run function commands:other/fish_cannon_item_blue
+execute as @a[team=Red,predicate=commands:inventory/fish_cannon_item_blue] run function commands:abilities/ability_effects/fish_cannon_item_blue
 
-execute as @a[team=Blue,predicate=commands:inventory/fish_cannon_item_red] run function commands:other/fish_cannon_item_red
+execute as @a[team=Blue,predicate=commands:inventory/fish_cannon_item_red] run function commands:abilities/ability_effects/fish_cannon_item_red
 
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{fishcannonitemred:1b}}}}] at @s run data modify entity @s Owner set from entity @p[team=Blue] UUID
 
@@ -1298,11 +1298,11 @@ scoreboard players remove @a[scores={squidzookaTimer=1..},predicate=commands:inv
 
 scoreboard players set @a[scores={died=1..}] squidzookaTimer 0
 
-execute as @e[type=item,tag=squidzooka,nbt={OnGround:1b}] at @s run function commands:other/squidzooka_explosion
+execute as @e[type=item,tag=squidzooka,nbt={OnGround:1b}] at @s run function commands:abilities/ability_effects/squidzooka_explosion
 
 execute as @e[type=item,tag=squidzooka] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on_without_grass force
 
-execute as @e[type=item,tag=squidzooka] at @s if score @s nearbyBlocks matches 1.. run function commands:other/squidzooka_explosion
+execute as @e[type=item,tag=squidzooka] at @s if score @s nearbyBlocks matches 1.. run function commands:abilities/ability_effects/squidzooka_explosion
 
 #Poseidon Voice Line CD
 
@@ -1312,9 +1312,9 @@ scoreboard players add #poseidonvoiceblue voicelineCD 1
 
 #Poseidon Passive (Lightning Spells)
 
-scoreboard players remove @a[scores={Kit=9,multiItems=..4},predicate=commands:in_any_battlefield,tag=!notAlive,tag=!upgraded] poseidonPassive 1
+scoreboard players remove @a[scores={Kit=9,multiItems=..4},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive,tag=!upgraded] poseidonPassive 1
 
-scoreboard players remove @a[scores={Kit=9,multiItems=..7},predicate=commands:in_any_battlefield,tag=!notAlive,tag=upgraded] poseidonPassive 1
+scoreboard players remove @a[scores={Kit=9,multiItems=..7},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive,tag=upgraded] poseidonPassive 1
 
 loot give @a[team=Red,scores={poseidonPassive=..0}] loot commands:main_abilities/lightning_spell_red
 
@@ -1326,11 +1326,11 @@ scoreboard players set @a[tag=upgraded,scores={poseidonPassive=..0}] poseidonPas
 
 execute as @e[type=snowball,tag=!lightningspellred,nbt={Item:{components:{"minecraft:custom_data":{lightningspellred:1b}}}}] at @s run function commands:ball/lightning_spell_found_red
 
-execute as @e[type=marker,tag=lightningspellred] unless predicate commands:is_riding_lightning_spell_red at @s run function commands:ball/lightning_spell_landed_red
+execute as @e[type=marker,tag=lightningspellred] unless predicate commands:riding/snowballs/is_riding_lightning_spell_red at @s run function commands:ball/lightning_spell_landed_red
 
 execute as @e[type=snowball,tag=!lightningspellblue,nbt={Item:{components:{"minecraft:custom_data":{lightningspellblue:1b}}}}] at @s run function commands:ball/lightning_spell_found_blue
 
-execute as @e[type=marker,tag=lightningspellblue] unless predicate commands:is_riding_lightning_spell_blue at @s run function commands:ball/lightning_spell_landed_blue
+execute as @e[type=marker,tag=lightningspellblue] unless predicate commands:riding/snowballs/is_riding_lightning_spell_blue at @s run function commands:ball/lightning_spell_landed_blue
 
 #Poseidon Cooldown Displays
 
@@ -1396,7 +1396,7 @@ scoreboard players add @e[type=zombie,tag=watcherblue] watcherTimer 1
 
 execute at @e[type=zombie,scores={watcherTimer=1..}] run particle dust{color:[1.000,0.090,1.000],scale:1} ~ ~1 ~ 0 0 0 1 1 normal
 
-execute as @e[type=bat,tag=watcher] run function commands:other/watcher
+execute as @e[type=bat,tag=watcher] run function commands:corrupt_credit_items/ability_uses/watcher
 
 execute at @e[type=zombie,tag=watcherred] run tag @a[team=Blue,distance=..10] add watchRed
 
@@ -1422,7 +1422,7 @@ teleport @e[type=zombie,scores={watcherTimer=1200..}] ~ -200 ~
 
 #The attractor
 
-execute as @e[type=bat,tag=attractor] at @s run function commands:other/attractor
+execute as @e[type=bat,tag=attractor] at @s run function commands:corrupt_credit_items/ability_uses/attractor
 
 scoreboard players add @e[type=zombie,tag=attractorred] attractorTimer 1
 
@@ -1438,39 +1438,39 @@ teleport @e[type=zombie,scores={attractorTimer=1200..}] ~ -200 ~
 
 #Spectator boundaries
 
-execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} as @a[tag=spectator,predicate=!commands:in_forest_glen] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} as @a[tag=spectator,predicate=!commands:location/battlefields/in_forest_glen] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
-execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} as @a[tag=spectator,predicate=!commands:in_forest_glen] run teleport @s 8 69 -132
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} as @a[tag=spectator,predicate=!commands:location/battlefields/in_forest_glen] run teleport @s 8 69 -132
 
-execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} as @a[tag=spectator,predicate=!commands:in_winterland] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} as @a[tag=spectator,predicate=!commands:location/battlefields/in_winterland] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
-execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} as @a[tag=spectator,predicate=!commands:in_winterland] run teleport @s 57 72 -1031
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} as @a[tag=spectator,predicate=!commands:location/battlefields/in_winterland] run teleport @s 57 72 -1031
 
-execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} as @a[tag=spectator,predicate=!commands:in_colliding_tides] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} as @a[tag=spectator,predicate=!commands:location/battlefields/in_colliding_tides] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
-execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} as @a[tag=spectator,predicate=!commands:in_colliding_tides] run teleport @s 19 80 -1971
+execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} as @a[tag=spectator,predicate=!commands:location/battlefields/in_colliding_tides] run teleport @s 19 80 -1971
 
-execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:0}}} as @a[tag=spectator,predicate=!commands:in_colosseum] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:0}}} as @a[tag=spectator,predicate=!commands:location/battlefields/in_colosseum] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
-execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:0}}} as @a[tag=spectator,predicate=!commands:in_colosseum] run teleport @s 1051 69 -61
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:0}}} as @a[tag=spectator,predicate=!commands:location/battlefields/in_colosseum] run teleport @s 1051 69 -61
 
-execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:1}}} as @a[tag=spectator,predicate=!commands:in_ncs] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:1}}} as @a[tag=spectator,predicate=!commands:location/battlefields/in_ncs] run tellraw @s {"text":"You moved out of bounds!","color":"red"}
 
-execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:1}}} as @a[tag=spectator,predicate=!commands:in_ncs] run teleport @s 2017 69 0.5
+execute if data storage royalsiege:settings {Gamemode:1} if data storage royalsiege:settings {Maps:{TDM:{value:1}}} as @a[tag=spectator,predicate=!commands:location/battlefields/in_ncs] run teleport @s 2017 69 0.5
 
 gamemode spectator @a[tag=spectator]
 
 #Frying Pan Fire Aspect Enchantment
 
-execute as @a[scores={damage=1..,Kit=11}] run function commands:other/frying_pan_damage
+execute as @a[scores={damage=1..,Kit=11}] run function commands:weapons/weapon_effects/frying_pan_damage
 
-execute as @a[scores={damagePan=300..,Kit=11},predicate=!commands:inventory/frying_pan_burning] run function commands:other/frying_pan_enchant
+execute as @a[scores={damagePan=300..,Kit=11},predicate=!commands:inventory/frying_pan_burning] run function commands:weapons/weapon_effects/frying_pan_enchant
 
-execute as @a[scores={damagePan=1..,Kit=11},predicate=commands:inventory/frying_pan_burning] run function commands:other/frying_pan_normal
+execute as @a[scores={damagePan=1..,Kit=11},predicate=commands:inventory/frying_pan_burning] run function commands:weapons/weapon_effects/frying_pan_normal
 
 #Mystery Basket
 
-scoreboard players remove @a[scores={Kit=11,basketTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] basketTimer 1
+scoreboard players remove @a[scores={Kit=11,basketTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] basketTimer 1
 
 #Chef Cooldown Display
 
@@ -1484,7 +1484,7 @@ execute at @e[type=sheep,tag=sheepblue] run effect give @a[team=Blue,distance=..
 
 #Pay Raise
 
-scoreboard players remove @a[scores={payRaiseTimer=1..},predicate=commands:in_any_battlefield,predicate=commands:inventory/pay_raise,tag=!notAlive] payRaiseTimer 1
+scoreboard players remove @a[scores={payRaiseTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,predicate=commands:inventory/pay_raise,tag=!notAlive] payRaiseTimer 1
 
 scoreboard players add @a[tag=needsmoney] ray.payRaise 1
 
@@ -1496,7 +1496,7 @@ scoreboard players reset @a[scores={ray.payRaise=10..}] ray.payRaise
 
 #Scrambled Eggs
 
-scoreboard players remove @a[scores={scrambleTimer=1..},predicate=commands:in_any_battlefield,predicate=commands:inventory/scrambled_eggs,tag=!notAlive] scrambleTimer 1
+scoreboard players remove @a[scores={scrambleTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,predicate=commands:inventory/scrambled_eggs,tag=!notAlive] scrambleTimer 1
 
 execute as @e[type=item,tag=eggred] at @s run tag @p[distance=..4,team=Blue] add scrambled
 
@@ -1536,7 +1536,7 @@ execute as @a[scores={dinnerEnd=300..}] run function commands:ultimates/dinners_
 
 #Explosive Charge (Warrior Ability)
 
-scoreboard players remove @a[scores={exCharge=1..},predicate=commands:in_any_battlefield,tag=!notAlive] exCharge 1
+scoreboard players remove @a[scores={exCharge=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] exCharge 1
 
 scoreboard players add @a[tag=exCharge] exChargeDelay 1
  
@@ -1550,11 +1550,11 @@ scoreboard players reset @a[scores={exChargeDelay=2..}] exChargeDelay
 
 execute as @e[type=snowball,tag=!toxinballred,nbt={Item:{components:{"minecraft:custom_data":{toxinballred:1b}}}}] at @s run function commands:ball/toxin_ball_found_red
 
-execute as @e[type=marker,tag=toxinitemred] unless predicate commands:is_riding_toxin_ball_red at @s run function commands:ball/toxin_ball_landed_red
+execute as @e[type=marker,tag=toxinitemred] unless predicate commands:riding/snowballs/is_riding_toxin_ball_red at @s run function commands:ball/toxin_ball_landed_red
 
 execute as @e[type=snowball,tag=!toxinballblue,nbt={Item:{components:{"minecraft:custom_data":{toxinballblue:1b}}}}] at @s run function commands:ball/toxin_ball_found_blue
 
-execute as @e[type=marker,tag=toxinitemblue] unless predicate commands:is_riding_toxin_ball_blue at @s run function commands:ball/toxin_ball_landed_blue
+execute as @e[type=marker,tag=toxinitemblue] unless predicate commands:riding/snowballs/is_riding_toxin_ball_blue at @s run function commands:ball/toxin_ball_landed_blue
 
 #Generic Snowball Attack things
 
@@ -1640,7 +1640,7 @@ execute if score @e[type=wither_skeleton,team=Blue,tag=King,limit=1] kingActive 
 
 execute as @e[type=wandering_trader,tag=wanderingKing] run data remove entity @s equipment.mainhand
 
-execute as @e[type=wandering_trader,tag=wanderingKing,scores={kingActive=200..}] run function commands:other/wandering_king_end
+execute as @e[type=wandering_trader,tag=wanderingKing,scores={kingActive=200..}] run function commands:gameplay_events/king/wandering_king_end
 
 execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} as @e[type=wandering_trader,tag=wanderingKingRed] run data merge entity @s {wander_target:[I;9,59,-216]}
 
@@ -1656,13 +1656,13 @@ execute if data storage royalsiege:settings {Gamemode:0} if data storage royalsi
 
 #Dragon Rush
 
-scoreboard players remove @a[scores={dragonRushTimer=1..},predicate=commands:inventory/dragon_rush,predicate=commands:in_any_battlefield,tag=!notAlive] dragonRushTimer 1
+scoreboard players remove @a[scores={dragonRushTimer=1..},predicate=commands:inventory/dragon_rush,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] dragonRushTimer 1
 
 scoreboard players reset @a[scores={died=1..}] dragonRushTimer
 
 #Dragon Rage
 
-scoreboard players remove @a[scores={Kit=12,dragonRageTimer=1..},predicate=commands:inventory/dragon_rage,predicate=commands:in_any_battlefield,tag=!notAlive] dragonRageTimer 1
+scoreboard players remove @a[scores={Kit=12,dragonRageTimer=1..},predicate=commands:inventory/dragon_rage,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] dragonRageTimer 1
 
 scoreboard players set @a[scores={died=1..}] dragonRageTimer 0
 
@@ -1684,17 +1684,17 @@ execute as @a[scores={Kit=12}] run function commands:cooldowns/dragon_display
 
 scoreboard players add @a[tag=outrage] outrageTimer 1
 
-execute as @a[scores={outrageTimer=161..}] run function commands:other/outrage_effects
+execute as @a[scores={outrageTimer=161..}] run function commands:abilities/ability_effects/outrage_effects
 
 #Hatchlings
 
-execute as @e[type=bat,tag=hatchlings] at @s run function commands:other/hatchlings
+execute as @e[type=bat,tag=hatchlings] at @s run function commands:abilities/ability_uses/hatchlings
 
 #Corruption
 
 scoreboard players add @a[tag=corrupted] corruptTimer 1
 
-execute as @a[tag=corrupted,scores={corruptDamage=0..}] run function commands:other/corrupt_side_effects
+execute as @a[tag=corrupted,scores={corruptDamage=0..}] run function commands:abilities/ability_effects/corrupt_side_effects
 
 tag @a[scores={corruptTimer=200..}] remove corrupted
 
@@ -1708,7 +1708,7 @@ scoreboard players remove @a[predicate=commands:inventory/crystal_cannon,scores=
 
 execute as @e[type=item,tag=cCannonItem] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on force
 
-execute as @e[type=item,tag=cCannonItem] if score @s nearbyBlocks matches 1.. at @s run function commands:other/crystal_cannon_prime
+execute as @e[type=item,tag=cCannonItem] if score @s nearbyBlocks matches 1.. at @s run function commands:abilities/ability_effects/crystal_cannon_prime
 
 scoreboard players reset @e[type=item,tag=cCannonItem] nearbyBlocks
 
@@ -1718,7 +1718,7 @@ execute as @e[type=armor_stand,tag=cCannonMarker,scores={cCannonTimer=20}] run d
 
 execute as @e[type=armor_stand,tag=cCannonMarker,scores={cCannonTimer=40}] run data merge entity @s {CustomName:{"text":"1","color":"red","italic":false}}
 
-execute as @e[type=armor_stand,tag=cCannonMarker,scores={cCannonTimer=60..}] at @s run function commands:other/crystal_cannon_explode
+execute as @e[type=armor_stand,tag=cCannonMarker,scores={cCannonTimer=60..}] at @s run function commands:abilities/ability_effects/crystal_cannon_explode
 
 #Meteor Shower (Dragon Ultimate)
 
@@ -1790,13 +1790,13 @@ execute as @a[team=Blue,tag=healstreak] at @s anchored eyes positioned ^ ^ ^ as 
 
 scoreboard players add @e[tag=angelpassive] HSTimer 1
 
-execute as @e[type=item,tag=angelpassive,scores={HSTimer=160..}] at @s if entity @p[tag=!upgraded,distance=..2,scores={Kit=4}] run function commands:other/angel_passive
+execute as @e[type=item,tag=angelpassive,scores={HSTimer=160..}] at @s if entity @p[tag=!upgraded,distance=..2,scores={Kit=4}] run function commands:passives/angel_passive
 
-execute as @e[type=item,tag=angelpassive,scores={HSTimer=120..}] at @s if entity @p[tag=upgraded,distance=..2,scores={Kit=4}] run function commands:other/angel_passive
+execute as @e[type=item,tag=angelpassive,scores={HSTimer=120..}] at @s if entity @p[tag=upgraded,distance=..2,scores={Kit=4}] run function commands:passives/angel_passive
 
 scoreboard players reset @a[tag=!healstreak] HSdamage
 
-execute as @a[scores={HSdamage=200..}] run function commands:other/angel_passive_end
+execute as @a[scores={HSdamage=200..}] run function commands:passives/angel_passive_end
 
 execute as @e[type=item,tag=HSRed] at @s unless entity @p[team=Red,distance=..3,scores={Kit=4}] run kill @s
 
@@ -1808,7 +1808,7 @@ scoreboard players reset @a[tag=!countering] counterDmg
 
 scoreboard players add @a[tag=countering] counterTimer 1
 
-execute as @a[scores={counterTimer=80..}] run function commands:other/counter_effects
+execute as @a[scores={counterTimer=80..}] run function commands:abilities/ability_effects/counter_effects
 
 #Get Absorption amount
 
@@ -1820,7 +1820,7 @@ execute as @a[predicate=commands:inventory/absorption_shield,scores={absShieldCD
 
 scoreboard players add @a[tag=!absShield,scores={Kit=3}] absShieldCD 1
 
-execute as @a[tag=absShield,scores={absShieldCount=1..,absShieldCD=40..}] at @s run function commands:other/absorption_shield_effects
+execute as @a[tag=absShield,scores={absShieldCount=1..,absShieldCD=40..}] at @s run function commands:abilities/ability_effects/absorption_shield_effects
 
 scoreboard players add @a[tag=!absShield,scores={absShieldCount=..79}] absShieldTimer 1
 
@@ -1902,17 +1902,17 @@ execute positioned 139 57 -1010 as @a[distance=..1,gamemode=!spectator] run tele
 
 #Castle Healing Stations
 
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},predicate=commands:in_red_healing_station] at @s run effect give @p[team=Red,distance=..4] regeneration 10 1 true
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},predicate=commands:location/battlefields/in_red_healing_station] at @s run effect give @p[team=Red,distance=..4] regeneration 10 1 true
 
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},predicate=commands:in_blue_healing_station] at @s run effect give @p[team=Blue,distance=..4] regeneration 10 1 true
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},predicate=commands:location/battlefields/in_blue_healing_station] at @s run effect give @p[team=Blue,distance=..4] regeneration 10 1 true
 
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},predicate=commands:in_red_healing_station] at @s run playsound minecraft:entity.player.levelup master @p[team=Red,distance=..4] ~ ~ ~ 1 2
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},predicate=commands:location/battlefields/in_red_healing_station] at @s run playsound minecraft:entity.player.levelup master @p[team=Red,distance=..4] ~ ~ ~ 1 2
 
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},predicate=commands:in_blue_healing_station] at @s run playsound minecraft:entity.player.levelup master @p[team=Blue,distance=..4] ~ ~ ~ 1 2
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},predicate=commands:location/battlefields/in_blue_healing_station] at @s run playsound minecraft:entity.player.levelup master @p[team=Blue,distance=..4] ~ ~ ~ 1 2
 
-kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},predicate=commands:in_red_healing_station]
+kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},predicate=commands:location/battlefields/in_red_healing_station]
 
-kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},predicate=commands:in_blue_healing_station]
+kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{moneyitem:1b}}}},predicate=commands:location/battlefields/in_blue_healing_station]
 
 #Royal Guards
 
@@ -1948,41 +1948,41 @@ execute if score #redroyalguard royalguardCD matches 2400.. run scoreboard playe
 
 execute if score #blueroyalguard royalguardCD matches 2400.. run scoreboard players reset #blueroyalguard royalguardCD
 
-execute as @e[type=skeleton,tag=redroyalguard,nbt={attributes:[{id:"minecraft:movement_speed",base:0.0d}]}] if entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0.25d}]}
+execute as @e[type=skeleton,tag=redroyalguard,nbt={attributes:[{id:"minecraft:movement_speed",base:0.0d}]}] if entity @a[team=Blue,predicate=commands:location/battlefields/in_any_red_throne_room] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0.25d}]}
 
-execute as @e[type=skeleton,tag=redroyalguard,nbt={attributes:[{id:"minecraft:movement_speed",base:0.25d}]}] unless entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0.0d}]}
+execute as @e[type=skeleton,tag=redroyalguard,nbt={attributes:[{id:"minecraft:movement_speed",base:0.25d}]}] unless entity @a[team=Blue,predicate=commands:location/battlefields/in_any_red_throne_room] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0.0d}]}
 
-execute as @e[type=skeleton,tag=blueroyalguard,nbt={attributes:[{id:"minecraft:movement_speed",base:0.0d}]}] if entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0.25d}]}
+execute as @e[type=skeleton,tag=blueroyalguard,nbt={attributes:[{id:"minecraft:movement_speed",base:0.0d}]}] if entity @a[team=Red,predicate=commands:location/battlefields/in_any_blue_throne_room] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0.25d}]}
 
-execute as @e[type=skeleton,tag=blueroyalguard,nbt={attributes:[{id:"minecraft:movement_speed",base:0.25d}]}] unless entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0.0d}]}
+execute as @e[type=skeleton,tag=blueroyalguard,nbt={attributes:[{id:"minecraft:movement_speed",base:0.25d}]}] unless entity @a[team=Red,predicate=commands:location/battlefields/in_any_blue_throne_room] run data merge entity @s {attributes:[{id:"minecraft:movement_speed",base:0.0d}]}
 
-execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run teleport @s ~ ~ ~-0.2
+execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:location/battlefields/in_any_red_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run teleport @s ~ ~ ~-0.2
 
-execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run teleport @s ~0.2 ~ ~
+execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:location/battlefields/in_any_red_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run teleport @s ~0.2 ~ ~
 
-execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:in_any_red_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run teleport @s ~ ~ ~0.2
+execute as @e[type=skeleton,tag=redroyalguard,predicate=!commands:location/battlefields/in_any_red_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run teleport @s ~ ~ ~0.2
 
-execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run teleport @s ~ ~ ~0.2
+execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:location/battlefields/in_any_blue_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:0}}} run teleport @s ~ ~ ~0.2
 
-execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run teleport @s ~ ~ ~-0.2
+execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:location/battlefields/in_any_blue_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:1}}} run teleport @s ~ ~ ~-0.2
 
-execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:in_any_blue_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run teleport @s ~ ~ ~-0.2
+execute as @e[type=skeleton,tag=blueroyalguard,predicate=!commands:location/battlefields/in_any_blue_throne_room] at @s if data storage royalsiege:settings {Gamemode:0} if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run teleport @s ~ ~ ~-0.2
 
 #King Invulnerable when no one is in the throne room
 
-execute as @e[type=wither_skeleton,team=Red,tag=King] unless entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {Invulnerable:1b}
+execute as @e[type=wither_skeleton,team=Red,tag=King] unless entity @a[team=Blue,predicate=commands:location/battlefields/in_any_red_throne_room] run data merge entity @s {Invulnerable:1b}
 
-execute as @e[type=wither_skeleton,team=Blue,tag=King] unless entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {Invulnerable:1b}
+execute as @e[type=wither_skeleton,team=Blue,tag=King] unless entity @a[team=Red,predicate=commands:location/battlefields/in_any_blue_throne_room] run data merge entity @s {Invulnerable:1b}
 
-execute as @e[type=wither_skeleton,team=Red,tag=King] if entity @a[team=Blue,predicate=commands:in_any_red_throne_room] run data merge entity @s {Invulnerable:0b}
+execute as @e[type=wither_skeleton,team=Red,tag=King] if entity @a[team=Blue,predicate=commands:location/battlefields/in_any_red_throne_room] run data merge entity @s {Invulnerable:0b}
 
-execute as @e[type=wither_skeleton,team=Blue,tag=King] if entity @a[team=Red,predicate=commands:in_any_blue_throne_room] run data merge entity @s {Invulnerable:0b}
+execute as @e[type=wither_skeleton,team=Blue,tag=King] if entity @a[team=Red,predicate=commands:location/battlefields/in_any_blue_throne_room] run data merge entity @s {Invulnerable:0b}
 
 #Castle Chain
 
 scoreboard players add @a[tag=castleChain] castleChain 1
 
-execute as @a[scores={castleChain=600..}] run function commands:other/castle_chain_end
+execute as @a[scores={castleChain=600..}] run function commands:corrupt_credit_items/ability_cleanup/castle_chain_end
 
 #Gold Magnet
 
@@ -1994,21 +1994,21 @@ execute at @e[type=wither_skeleton,tag=King,tag=killerking] run particle minecra
 
 #Oven
 
-execute as @e[type=bat,tag=oven] at @s run function commands:other/place_oven
+execute as @e[type=bat,tag=oven] at @s run function commands:abilities/ability_uses/place_oven
 
 scoreboard players add @e[type=zombified_piglin,tag=oven] ovenTimer 1
 
 scoreboard players add @e[type=zombified_piglin,tag=oven] ovenDur 1
 
-execute as @e[type=item_frame,tag=oven] at @s unless entity @e[type=zombified_piglin,limit=1,sort=nearest,distance=..1] run function commands:other/destroy_oven
+execute as @e[type=item_frame,tag=oven] at @s unless entity @e[type=zombified_piglin,limit=1,sort=nearest,distance=..1] run function commands:abilities/ability_cleanup/destroy_oven
 
 execute as @e[type=zombified_piglin,tag=oven,scores={ovenTimer=30,ovenDur=1..}] at @s run data modify entity @e[type=item_frame,tag=oven,limit=1,sort=nearest] Item set value {id:"minecraft:stone_bricks",count:1,components:{"minecraft:custom_model_data":{floats:[134]}}}
 
-execute as @e[type=zombified_piglin,tag=oven,tag=pizzatime,scores={ovenTimer=20..}] at @s run function commands:other/shoot_pizza
+execute as @e[type=zombified_piglin,tag=oven,tag=pizzatime,scores={ovenTimer=20..}] at @s run function commands:abilities/ability_effects/shoot_pizza
 
-execute as @e[type=zombified_piglin,tag=oven,scores={ovenTimer=160..}] at @s run function commands:other/shoot_pizza
+execute as @e[type=zombified_piglin,tag=oven,scores={ovenTimer=160..}] at @s run function commands:abilities/ability_effects/shoot_pizza
 
-execute as @e[type=zombified_piglin,tag=oven,scores={ovenDur=1600..}] at @s run function commands:other/destroy_oven
+execute as @e[type=zombified_piglin,tag=oven,scores={ovenDur=1600..}] at @s run function commands:abilities/ability_cleanup/destroy_oven
 
 #Pizza Time (Chef Alt. Ultimate)
 
@@ -2028,9 +2028,9 @@ execute as @e[type=zombified_piglin,tag=pizzatime,tag=oven,scores={pizzaTimer=20
 
 #Respawning
 
-execute as @a[predicate=commands:in_any_respawn_room,tag=notAlive,team=Red] at @s run function commands:starting/respawn_timer_red
+execute as @a[predicate=commands:location/battlefields/in_any_respawn_room,tag=notAlive,team=Red] at @s run function commands:starting/respawn_timer_red
 
-execute as @a[predicate=commands:in_any_respawn_room,tag=notAlive,team=Blue] at @s run function commands:starting/respawn_timer_blue
+execute as @a[predicate=commands:location/battlefields/in_any_respawn_room,tag=notAlive,team=Blue] at @s run function commands:starting/respawn_timer_blue
 
 #Spawntime 5s in TDM
 
@@ -2042,15 +2042,15 @@ execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players 
 
 #TDM spreadplayer
 
-execute as @a[predicate=commands:on_tdm_gates,tag=!notAlive] at @s run function commands:starting/tdm_spawn
+execute as @a[predicate=commands:standing_location/battlefields/on_tdm_gates,tag=!notAlive] at @s run function commands:starting/tdm_spawn
 
 #TDM Spawn after delay
 
-execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players add @a[predicate=commands:in_tdm_gates] tdmSpawnTime 1
+execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players add @a[predicate=commands:location/battlefields/in_tdm_gates] tdmSpawnTime 1
 
 execute as @a[scores={tdmSpawnTime=400..}] at @s run function commands:starting/tdm_spawn
 
-execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players reset @a[predicate=!commands:in_tdm_gates] tdmSpawnTime
+execute if data storage royalsiege:settings {Gamemode:1} run scoreboard players reset @a[predicate=!commands:location/battlefields/in_tdm_gates] tdmSpawnTime
 
 #Russian Roulette
 
@@ -2058,19 +2058,19 @@ scoreboard players remove @a[scores={rouletteTimer=1..},predicate=commands:inven
 
 #Betting Chips
 
-execute as @a[tag=!chipbet,scores={chipBet=1..5}] run function commands:other/betting_chips
+execute as @a[tag=!chipbet,scores={chipBet=1..5}] run function commands:abilities/ability_uses/betting_chips
 
 scoreboard players add @a[scores={chipBet=1..5}] betChipTimer 1
 
 scoreboard players add @a[tag=hasBounty] betChipTimer 1
 
-execute as @a[scores={betChipTimer=400..}] run function commands:other/betting_chip_end
+execute as @a[scores={betChipTimer=400..}] run function commands:abilities/ability_cleanup/betting_chip_end
 
 #Security Guard
 
 scoreboard players add @e[type=zombified_piglin,tag=security] securityTimer 1
 
-execute as @e[type=zombified_piglin,tag=security,scores={securityTimer=20..}] run function commands:other/security_guard_target
+execute as @e[type=zombified_piglin,tag=security,scores={securityTimer=20..}] run function commands:abilities/ability_effects/security_guard_target
 
 #Coin Gun
 
@@ -2080,7 +2080,7 @@ execute as @e[type=item,tag=coinBulletRed] at @s run tag @e[type=#commands:proje
 
 execute as @e[type=item,tag=coinBulletBlue] at @s run tag @e[type=#commands:projectile_hits,team=Red,distance=..2,limit=1,sort=nearest] add coinHit
 
-execute as @e[type=#commands:projectile_hits,tag=coinHit] at @s run function commands:other/coin_gun_hit
+execute as @e[type=#commands:projectile_hits,tag=coinHit] at @s run function commands:abilities/ability_effects/coin_gun_hit
 
 kill @e[type=item,tag=coinBullet,nbt={OnGround:1b}]
 
@@ -2108,13 +2108,13 @@ scoreboard players reset @a[scores={sleightDur=300..}] sleightDur
 
 #Playing Cards
 
-scoreboard players remove @a[scores={Kit=13,pCardsTimer=1..},predicate=commands:inventory/playing_cards,predicate=commands:in_any_battlefield,tag=!notAlive] pCardsTimer 1
+scoreboard players remove @a[scores={Kit=13,pCardsTimer=1..},predicate=commands:inventory/playing_cards,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] pCardsTimer 1
 
 execute as @e[type=item,tag=pCardRed] at @s run tag @e[type=#commands:projectile_hits,team=Blue,distance=..2] add cardEffect
 
 execute as @e[type=item,tag=pCardBlue] at @s run tag @e[type=#commands:projectile_hits,team=Red,distance=..2] add cardEffect
 
-execute as @e[type=#commands:projectile_hits,tag=cardEffect] at @s run function commands:other/playing_card_damage
+execute as @e[type=#commands:projectile_hits,tag=cardEffect] at @s run function commands:abilities/ability_effects/playing_card_damage
 
 scoreboard players add @e[type=item,tag=pCard] pCardsTimer 1
 
@@ -2134,7 +2134,7 @@ execute if score #gameDuration gameDuration matches 18000 if data storage royals
 
 execute if score #gameDuration gameDuration matches 18000 if data storage royalsiege:settings {Gamemode:0} run title @a subtitle {"text":"The game has been going on for 15 minutes!","color":"green"}
 
-execute if score #loseKingHP gameDuration matches 20.. as @e[type=wither_skeleton,tag=King] run function commands:other/lower_king_hp
+execute if score #loseKingHP gameDuration matches 20.. as @e[type=wither_skeleton,tag=King] run function commands:gameplay_events/king/lower_king_hp
 
 #TDM Game End after 10 Minutes
 
@@ -2156,29 +2156,29 @@ execute if entity @a[scores={End=100..}] if score #gameDuration gameDuration mat
 
 scoreboard players add @a[tag=dungeonTP] dungeonDelay 1
 
-execute as @a[scores={dungeonDelay=60..}] run function commands:other/dungeon_tp
+execute as @a[scores={dungeonDelay=60..}] run function commands:gameplay_events/warps/dungeon_tp
 
-execute as @a[tag=dungeonTP,scores={damageTaken=1..}] run function commands:other/dungeon_cancel
+execute as @a[tag=dungeonTP,scores={damageTaken=1..}] run function commands:gameplay_events/warps/dungeon_cancel
 
 #Slime block jump boost and Speed Pads
 
-execute as @a[predicate=commands:on_launch_pads] at @s if block ~ ~-0.5 ~ slime_block run effect give @s jump_boost 1 13 true
+execute as @a[predicate=commands:standing_location/battlefields/on_launch_pads] at @s if block ~ ~-0.5 ~ slime_block run effect give @s jump_boost 1 13 true
 
-execute as @a[predicate=commands:on_colliding_tides_bounce_pad] at @s run effect give @s jump_boost 1 10 true
+execute as @a[predicate=commands:standing_location/battlefields/on_colliding_tides_bounce_pad] at @s run effect give @s jump_boost 1 10 true
 
-tag @a[predicate=commands:on_colliding_tides_bounce_pad] add onPirateBouncePad
+tag @a[predicate=commands:standing_location/battlefields/on_colliding_tides_bounce_pad] add onPirateBouncePad
 
-scoreboard players set @a[predicate=commands:on_colliding_tides_bounce_pad] RSAttr.SafeFallDist 2147483647
+scoreboard players set @a[predicate=commands:standing_location/battlefields/on_colliding_tides_bounce_pad] RSAttr.SafeFallDist 2147483647
 
-execute as @a[predicate=commands:on_colliding_tides_bounce_pad] at @s run function commands:attributes/adds/add_safe_fall_dist
+execute as @a[predicate=commands:standing_location/battlefields/on_colliding_tides_bounce_pad] at @s run function commands:attributes/adds/add_safe_fall_dist
 
-execute as @a[predicate=commands:on_ncs_speed_pad] at @s if block ~ ~-0.5 ~ magenta_glazed_terracotta run effect give @s speed 1 40 true
+execute as @a[predicate=commands:standing_location/battlefields/on_ncs_speed_pad] at @s if block ~ ~-0.5 ~ magenta_glazed_terracotta run effect give @s speed 1 40 true
 
-effect clear @a[predicate=commands:on_ncs_roof,predicate=commands:effects/speed_pad] speed
+effect clear @a[predicate=commands:standing_location/battlefields/on_ncs_roof,predicate=commands:effects/speed_pad] speed
 
-execute as @a[tag=onPirateBouncePad,predicate=!commands:on_colliding_tides_bounce_pad,nbt={OnGround:1b}] run function commands:attributes/clears/clear_safe_fall_dist
+execute as @a[tag=onPirateBouncePad,predicate=!commands:standing_location/battlefields/on_colliding_tides_bounce_pad,nbt={OnGround:1b}] run function commands:attributes/clears/clear_safe_fall_dist
 
-tag @a[tag=onPirateBouncePad,predicate=!commands:on_colliding_tides_bounce_pad,nbt={OnGround:1b}] remove onPirateBouncePad
+tag @a[tag=onPirateBouncePad,predicate=!commands:standing_location/battlefields/on_colliding_tides_bounce_pad,nbt={OnGround:1b}] remove onPirateBouncePad
 
 #Winterland Boats
 
@@ -2188,11 +2188,11 @@ kill @e[type=oak_boat,tag=winterBoat,scores={Timer=400..}]
 
 #Asteroid
 
-scoreboard players remove @a[scores={Kit=14,asteroidTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] asteroidTimer 1
+scoreboard players remove @a[scores={Kit=14,asteroidTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] asteroidTimer 1
 
-execute as @e[type=area_effect_cloud,tag=asteroidLand] unless predicate commands:is_riding_asteroid at @s run function commands:other/asteroid_land
+execute as @e[type=area_effect_cloud,tag=asteroidLand] unless predicate commands:riding/fireballs/is_riding_asteroid at @s run function commands:abilities/ability_effects/asteroid_land
 
-execute as @e[type=item,tag=asteroidshard,nbt={OnGround:1b}] at @s run function commands:other/asteroid_shard
+execute as @e[type=item,tag=asteroidshard,nbt={OnGround:1b}] at @s run function commands:abilities/ability_effects/asteroid_shard_land
 
 #Enhanced Space Helmet
 
@@ -2204,23 +2204,23 @@ effect clear @a[predicate=commands:armor/enhanced_space_helmet] poison
 
 #Safety Tether
 
-execute as @e[type=area_effect_cloud,tag=redTether] at @s unless entity @a[team=Red,distance=..30,tag=tethered] run function commands:other/destroy_tether
+execute as @e[type=area_effect_cloud,tag=redTether] at @s unless entity @a[team=Red,distance=..30,tag=tethered] run function commands:abilities/ability_cleanup/destroy_tether
 
-execute as @e[type=area_effect_cloud,tag=blueTether] at @s unless entity @a[team=Blue,distance=..30,tag=tethered] run function commands:other/destroy_tether
+execute as @e[type=area_effect_cloud,tag=blueTether] at @s unless entity @a[team=Blue,distance=..30,tag=tethered] run function commands:abilities/ability_cleanup/destroy_tether
 
-execute as @e[type=area_effect_cloud,tag=tetherSpot,scores={tetherTimer=200..}] at @s run function commands:other/destroy_tether
+execute as @e[type=area_effect_cloud,tag=tetherSpot,scores={tetherTimer=200..}] at @s run function commands:abilities/ability_cleanup/destroy_tether
 
 scoreboard players add @e[type=area_effect_cloud,tag=tetherSpot] tetherTimer 1
 
 #Debris Cannon
 
-scoreboard players remove @a[scores={debrisTimer=1..},predicate=commands:inventory/debris_cannon,predicate=commands:in_any_battlefield,tag=!notAlive] debrisTimer 1
+scoreboard players remove @a[scores={debrisTimer=1..},predicate=commands:inventory/debris_cannon,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] debrisTimer 1
 
 kill @e[type=item,tag=debrisitem,nbt={OnGround:1b}]
 
-execute as @e[type=#commands:projectile_hits,team=Red,predicate=commands:inventory/debris_item_blue] run function commands:other/debris_item
+execute as @e[type=#commands:projectile_hits,team=Red,predicate=commands:inventory/debris_item_blue] run function commands:abilities/ability_effects/debris_item
 
-execute as @e[type=#commands:projectile_hits,team=Blue,predicate=commands:inventory/debris_item_red] run function commands:other/debris_item
+execute as @e[type=#commands:projectile_hits,team=Blue,predicate=commands:inventory/debris_item_red] run function commands:abilities/ability_effects/debris_item
 
 execute as @e[type=item,tag=redDebris] at @s run data modify entity @s Owner set from entity @p[team=Blue] UUID
 
@@ -2230,11 +2230,11 @@ execute as @e[type=item,tag=blueDebris] at @s run data modify entity @s Owner se
 
 scoreboard players remove @a[scores={Kit=14,astroPassTimer=1..},tag=upgraded] astroPassTimer 1
 
-execute as @a[scores={Kit=14,astroPassTimer=..0,jump=1..},tag=upgraded,predicate=commands:is_sneaking,nbt={OnGround:1b}] at @s run function commands:other/astronaut_upgrade_passive
+execute as @a[scores={Kit=14,astroPassTimer=..0,jump=1..},tag=upgraded,predicate=commands:flags/is_sneaking,nbt={OnGround:1b}] at @s run function commands:passives/astronaut_upgrade_passive
 
 #Space Wrench Ability
 
-scoreboard players remove @a[scores={Kit=14,wrenchTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] wrenchTimer 1
+scoreboard players remove @a[scores={Kit=14,wrenchTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] wrenchTimer 1
 
 #Astronaut Cooldown Display
 
@@ -2284,7 +2284,7 @@ execute as @a[scores={died=1..},tag=hasSmartDrone] at @s run function commands:u
 
 #Sparkler
 
-scoreboard players remove @a[scores={Kit=15,sparklerTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] sparklerTimer 1
+scoreboard players remove @a[scores={Kit=15,sparklerTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] sparklerTimer 1
 
 execute as @a[scores={Kit=15,sparklerTimer=1}] run function commands:replace/sparkler_ready
 
@@ -2292,9 +2292,9 @@ scoreboard players add @e[type=item,tag=sparkleritem] sparklerTimer 1
 
 kill @e[type=item,tag=sparkleritem,scores={sparklerTimer=4..}]
 
-execute as @e[type=item,tag=sparklerred] at @s as @a[team=Blue,distance=..3] at @s run function commands:other/sparkler_hit
+execute as @e[type=item,tag=sparklerred] at @s as @a[team=Blue,distance=..3] at @s run function commands:abilities/ability_effects/sparkler_hit
 
-execute as @e[type=item,tag=sparklerblue] at @s as @a[team=Red,distance=..3] at @s run function commands:other/sparkler_hit
+execute as @e[type=item,tag=sparklerblue] at @s as @a[team=Red,distance=..3] at @s run function commands:abilities/ability_effects/sparkler_hit
 
 tag @a[tag=sparkled] remove sparkled
 
@@ -2306,13 +2306,13 @@ kill @e[type=small_fireball,scores={Timer=2..}]
 
 #Blazing Speed
 
-scoreboard players remove @a[scores={Kit=15,blazingSpeedTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] blazingSpeedTimer 1
+scoreboard players remove @a[scores={Kit=15,blazingSpeedTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] blazingSpeedTimer 1
 
-execute as @a[scores={RSAttr.BlazingSpeed=0..}] at @s run function commands:other/blazing_speed_effects
+execute as @a[scores={RSAttr.BlazingSpeed=0..}] at @s run function commands:abilities/ability_effects/blazing_speed_effects
 
 execute as @e[type=item,tag=blazingspeedbomb] run scoreboard players add @s blazingSpeedTimer 1
 
-execute as @e[type=item,tag=blazingspeedbomb,scores={blazingSpeedTimer=20..}] at @s run function commands:other/blazing_speed_bomb_explode
+execute as @e[type=item,tag=blazingspeedbomb,scores={blazingSpeedTimer=20..}] at @s run function commands:abilities/ability_effects/blazing_speed_bomb_explode
 
 #Bang Snaps
 
@@ -2320,9 +2320,9 @@ execute as @e[type=snowball,tag=!bangsnapred,nbt={Item:{components:{"minecraft:c
 
 execute as @e[type=snowball,tag=!bangsnapblue,nbt={Item:{components:{"minecraft:custom_data":{bangsnapblue:1b}}}}] at @s run function commands:ball/bang_snap_found_blue
 
-execute as @e[type=marker,tag=bangsnapred] unless predicate commands:is_riding_bang_snap_red at @s run function commands:ball/bang_snap_landed_red
+execute as @e[type=marker,tag=bangsnapred] unless predicate commands:riding/snowballs/is_riding_bang_snap_red at @s run function commands:ball/bang_snap_landed_red
 
-execute as @e[type=marker,tag=bangsnapblue] unless predicate commands:is_riding_bang_snap_blue at @s run function commands:ball/bang_snap_landed_blue
+execute as @e[type=marker,tag=bangsnapblue] unless predicate commands:riding/snowballs/is_riding_bang_snap_blue at @s run function commands:ball/bang_snap_landed_blue
 
 #Bucket of Homemade Napalm
 
@@ -2344,9 +2344,9 @@ execute as @e[type=snowball,tag=!cinderbombred,nbt={Item:{components:{"minecraft
 
 execute as @e[type=snowball,tag=!cinderbombblue,nbt={Item:{components:{"minecraft:custom_data":{cinderbombblue:1b}}}}] at @s run function commands:ball/cinder_bomb_found_blue
 
-execute as @e[type=marker,tag=cinderbombred] unless predicate commands:is_riding_cinder_bomb_red at @s run function commands:ball/cinder_bomb_landed_red
+execute as @e[type=marker,tag=cinderbombred] unless predicate commands:riding/snowballs/is_riding_cinder_bomb_red at @s run function commands:ball/cinder_bomb_landed_red
 
-execute as @e[type=marker,tag=cinderbombblue] unless predicate commands:is_riding_cinder_bomb_blue at @s run function commands:ball/cinder_bomb_landed_blue
+execute as @e[type=marker,tag=cinderbombblue] unless predicate commands:riding/snowballs/is_riding_cinder_bomb_blue at @s run function commands:ball/cinder_bomb_landed_blue
 
 execute as @e[type=area_effect_cloud,tag=cindersmokered] at @s run effect give @a[distance=..5,team=Blue] blindness 2 0
 
@@ -2356,7 +2356,7 @@ execute as @e[type=area_effect_cloud,tag=cindersmoke] at @s run particle flame ~
 
 scoreboard players remove @e[type=area_effect_cloud,tag=cindersmoke] cinderBombDuration 1
 
-execute as @e[type=area_effect_cloud,tag=cindersmoke,scores={cinderBombDuration=..0}] at @s run function commands:other/cinder_bomb_effects
+execute as @e[type=area_effect_cloud,tag=cindersmoke,scores={cinderBombDuration=..0}] at @s run function commands:abilities/ability_effects/cinder_bomb_effects
 
 #Chrysanthemum Shell
 
@@ -2398,9 +2398,9 @@ execute as @a[team=Red,predicate=commands:effects/on_fire] run scoreboard player
 
 execute as @a[team=Blue,predicate=commands:effects/on_fire] run scoreboard players add #numPlayersOnFireBlue firCharChallenge 1
 
-execute if score #numPlayersOnFireRed firCharChallenge >= #numPlayersOnTeam multiItems run scoreboard players add @a[scores={Kit=15},team=Blue,tag=inCurrentMatch,predicate=!commands:in_practice_range] firCharChallenge 1
+execute if score #numPlayersOnFireRed firCharChallenge >= #numPlayersOnTeam multiItems run scoreboard players add @a[scores={Kit=15},team=Blue,tag=inCurrentMatch,predicate=!commands:location/practice_range/in_practice_range] firCharChallenge 1
 
-execute if score #numPlayersOnFireBlue firCharChallenge >= #numPlayersOnTeam multiItems run scoreboard players add @a[scores={Kit=15},team=Red,tag=inCurrentMatch,predicate=!commands:in_practice_range] firCharChallenge 1
+execute if score #numPlayersOnFireBlue firCharChallenge >= #numPlayersOnTeam multiItems run scoreboard players add @a[scores={Kit=15},team=Red,tag=inCurrentMatch,predicate=!commands:location/practice_range/in_practice_range] firCharChallenge 1
 
 execute as @a[scores={Kit=15,firCharChallenge=600..}] run advancement grant @s only commands:character_challenges/pot_roast_party
 
@@ -2408,9 +2408,9 @@ scoreboard players set #numPlayersOnFireRed firCharChallenge 0
 
 scoreboard players set #numPlayersOnFireBlue firCharChallenge 0
 
-#Pirates Map Stuff
+#Colliding Tides Stuff
 
-execute if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run function commands:other/pirate_map
+execute if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run function commands:maps/colliding_tides_tick
 
 #School Nurse Cooldown Display
 
@@ -2418,19 +2418,19 @@ execute as @a[scores={Kit=16}] run function commands:cooldowns/school_nurse_disp
 
 #IV Drip
 
-scoreboard players remove @a[scores={Kit=16,ivDripTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] ivDripTimer 1
+scoreboard players remove @a[scores={Kit=16,ivDripTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] ivDripTimer 1
 
 scoreboard players add @e[type=item,tag=ivNeedle] ivDripTimer 1
 
 kill @e[type=item,tag=ivNeedle,tag=!attached,scores={ivDripTimer=10..}]
 
-execute as @e[type=item,tag=ivRed,tag=!attached] at @s as @p[team=Red,tag=!ivAttached,distance=..2] unless score @s Kit matches 16 run function commands:other/initialize_iv_drip
+execute as @e[type=item,tag=ivRed,tag=!attached] at @s as @p[team=Red,tag=!ivAttached,distance=..2] unless score @s Kit matches 16 run function commands:abilities/ability_effects/initialize_iv_drip
 
-execute as @e[type=item,tag=ivBlue,tag=!attached] at @s as @p[team=Blue,tag=!ivAttached,distance=..2] unless score @s Kit matches 16 run function commands:other/initialize_iv_drip
+execute as @e[type=item,tag=ivBlue,tag=!attached] at @s as @p[team=Blue,tag=!ivAttached,distance=..2] unless score @s Kit matches 16 run function commands:abilities/ability_effects/initialize_iv_drip
 
-execute as @a[team=Red,tag=ivAttached] at @s unless entity @a[team=Red,predicate=commands:holding/iv_drip,distance=..32] run function commands:other/iv_detach
+execute as @a[team=Red,tag=ivAttached] at @s unless entity @a[team=Red,predicate=commands:holding/iv_drip,distance=..32] run function commands:abilities/ability_cleanup/iv_detach
 
-execute as @a[team=Blue,tag=ivAttached] at @s unless entity @a[team=Blue,predicate=commands:holding/iv_drip,distance=..32] run function commands:other/iv_detach
+execute as @a[team=Blue,tag=ivAttached] at @s unless entity @a[team=Blue,predicate=commands:holding/iv_drip,distance=..32] run function commands:abilities/ability_cleanup/iv_detach
 
 execute as @a[team=Red,tag=ivAttached] at @s positioned ~ ~1.5 ~ as @n[type=armor_stand,tag=ivRed] run tp @s ~ ~ ~
 
@@ -2438,7 +2438,7 @@ execute as @a[team=Blue,tag=ivAttached] at @s positioned ~ ~1.5 ~ as @n[type=arm
 
 #Ice Packs
 
-scoreboard players remove @a[scores={Kit=16,multiItems=..1},predicate=commands:in_any_battlefield,tag=!notAlive] icePackTimer 1
+scoreboard players remove @a[scores={Kit=16,multiItems=..1},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] icePackTimer 1
 
 loot give @a[team=Red,scores={icePackTimer=..0}] loot commands:main_abilities/ice_pack_red
 
@@ -2446,29 +2446,29 @@ loot give @a[team=Blue,scores={icePackTimer=..0}] loot commands:main_abilities/i
 
 scoreboard players set @a[scores={icePackTimer=..0}] icePackTimer 200
 
-execute as @a[scores={icePackPassive=8..},tag=!upgraded] run function commands:other/ice_pack_passive
+execute as @a[scores={icePackPassive=8..},tag=!upgraded] run function commands:passives/ice_pack_passive
 
-execute as @a[scores={icePackPassive=6..},tag=upgraded] run function commands:other/ice_pack_passive
+execute as @a[scores={icePackPassive=6..},tag=upgraded] run function commands:passives/ice_pack_passive
 
 execute as @e[type=snowball,tag=!icepackred,nbt={Item:{components:{"minecraft:custom_data":{icepackred:1b}}}}] at @s run function commands:ball/ice_pack_found_red
 
-execute as @e[type=marker,tag=icepackred] unless predicate commands:is_riding_ice_pack_red at @s run function commands:ball/ice_pack_landed_red
+execute as @e[type=marker,tag=icepackred] unless predicate commands:riding/snowballs/is_riding_ice_pack_red at @s run function commands:ball/ice_pack_landed_red
 
 execute as @e[type=snowball,tag=!icepackblue,nbt={Item:{components:{"minecraft:custom_data":{icepackblue:1b}}}}] at @s run function commands:ball/ice_pack_found_blue
 
-execute as @e[type=marker,tag=icepackblue] unless predicate commands:is_riding_ice_pack_blue at @s run function commands:ball/ice_pack_landed_blue
+execute as @e[type=marker,tag=icepackblue] unless predicate commands:riding/snowballs/is_riding_ice_pack_blue at @s run function commands:ball/ice_pack_landed_blue
 
 #Defibrillator
 
-scoreboard players remove @a[scores={defibrillatorTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] defibrillatorTimer 1
+scoreboard players remove @a[scores={defibrillatorTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] defibrillatorTimer 1
 
 scoreboard players add @e[type=item,tag=defib] defibrillatorTimer 1
 
-execute as @e[type=item,scores={defibrillatorTimer=5..}] at @s run function commands:other/defibrillator_kill
+execute as @e[type=item,scores={defibrillatorTimer=5..}] at @s run function commands:abilities/ability_cleanup/defibrillator_kill
 
-execute as @e[type=item,tag=defibRed] at @s as @p[distance=..2,team=Red] unless score @s Kit matches 16 run function commands:other/defibrillator_hit
+execute as @e[type=item,tag=defibRed] at @s as @p[distance=..2,team=Red] unless score @s Kit matches 16 run function commands:abilities/ability_effects/defibrillator_hit
 
-execute as @e[type=item,tag=defibBlue] at @s as @p[distance=..2,team=Blue] unless score @s Kit matches 16 run function commands:other/defibrillator_hit
+execute as @e[type=item,tag=defibBlue] at @s as @p[distance=..2,team=Blue] unless score @s Kit matches 16 run function commands:abilities/ability_effects/defibrillator_hit
 
 #Light Up Shoes
 
@@ -2478,7 +2478,7 @@ execute as @a[team=Red,predicate=commands:armor/light_up_shoes] at @s run effect
 
 execute as @a[team=Blue,predicate=commands:armor/light_up_shoes] at @s run effect give @a[team=Red,distance=..10] glowing 2 0 true
 
-execute as @a[scores={lightUpTimer=20..}] run function commands:other/light_up_shoes
+execute as @a[scores={lightUpTimer=20..}] run function commands:armor/armor_effects/light_up_shoes
 
 #First Aid Kit
 
@@ -2486,9 +2486,9 @@ scoreboard players add @e[type=item,nbt={Item:{components:{"minecraft:custom_dat
 
 execute as @e[type=item,scores={firstAidTimer=60..}] at @s run particle dust{color:[0.133,1.000,0.000],scale:1} ~ ~1 ~ 0 0 0 1 0
 
-execute as @e[type=item,scores={firstAidTimer=60..},nbt={Item:{components:{"minecraft:custom_data":{firstaidred:1b}}}}] at @s as @p[distance=..2,team=Red] run function commands:other/first_aid_kit
+execute as @e[type=item,scores={firstAidTimer=60..},nbt={Item:{components:{"minecraft:custom_data":{firstaidred:1b}}}}] at @s as @p[distance=..2,team=Red] run function commands:abilities/ability_effects/first_aid_kit
 
-execute as @e[type=item,scores={firstAidTimer=60..},nbt={Item:{components:{"minecraft:custom_data":{firstaidblue:1b}}}}] at @s as @p[distance=..2,team=Blue] run function commands:other/first_aid_kit
+execute as @e[type=item,scores={firstAidTimer=60..},nbt={Item:{components:{"minecraft:custom_data":{firstaidblue:1b}}}}] at @s as @p[distance=..2,team=Blue] run function commands:abilities/ability_effects/first_aid_kit
 
 #Bleed Damage
 
@@ -2520,7 +2520,7 @@ execute as @a[tag=vaccinated] run function #commands:clear_armor_reduction_attri
 
 execute as @a[predicate=commands:holding/inhaler] run function commands:attributes/adds/add_inhaler_buffs
 
-execute as @e[nbt={Item:{components:{"minecraft:custom_data":{inhaler:1b}}}}] at @s run function commands:other/pass_inhaler
+execute as @e[nbt={Item:{components:{"minecraft:custom_data":{inhaler:1b}}}}] at @s run function commands:abilities/ability_effects/pass_inhaler
 
 #Universal Health Care (School Nurse Ultimate)
 
@@ -2544,7 +2544,7 @@ scoreboard players set @a[scores={10HourTimer=1800..}] 10HourTimer 0
 
 #Necro Staff Heal
 
-scoreboard players remove @a[scores={Kit=17,necroStaffTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] necroStaffTimer 1
+scoreboard players remove @a[scores={Kit=17,necroStaffTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] necroStaffTimer 1
 
 #Necromancer Undead Summon Warp
 
@@ -2554,7 +2554,7 @@ execute as @e[type=skeleton,tag=undeadsummon,team=Red] at @s unless entity @p[te
 
 execute as @e[type=skeleton,tag=undeadsummon,team=Red] at @s unless entity @p[team=Red,scores={Kit=17},distance=..25] store result storage royalsiege:main ypos double 1 run scoreboard players get @p[team=Red,scores={Kit=17}] posY
 
-execute as @e[type=skeleton,tag=undeadsummon,team=Red] at @s unless entity @p[team=Red,scores={Kit=17},distance=..25] run function commands:other/warp_undead_summon with storage royalsiege:main
+execute as @e[type=skeleton,tag=undeadsummon,team=Red] at @s unless entity @p[team=Red,scores={Kit=17},distance=..25] run function commands:abilities/ability_effects/undead_summon_warp with storage royalsiege:main
 
 execute as @e[type=skeleton,tag=undeadsummon,team=Blue] at @s unless entity @p[team=Blue,scores={Kit=17},distance=..25] store result score @p[team=Blue,scores={Kit=17}] posY run data get entity @p[team=Blue,scores={Kit=17}] Pos[1]
 
@@ -2562,15 +2562,15 @@ execute as @e[type=skeleton,tag=undeadsummon,team=Blue] at @s unless entity @p[t
 
 execute as @e[type=skeleton,tag=undeadsummon,team=Blue] at @s unless entity @p[team=Blue,scores={Kit=17},distance=..25] store result storage royalsiege:main ypos double 1 run scoreboard players get @p[team=Blue,scores={Kit=17}] posY
 
-execute as @e[type=skeleton,tag=undeadsummon,team=Blue] at @s unless entity @p[team=Blue,scores={Kit=17},distance=..25] run function commands:other/warp_undead_summon with storage royalsiege:main
+execute as @e[type=skeleton,tag=undeadsummon,team=Blue] at @s unless entity @p[team=Blue,scores={Kit=17},distance=..25] run function commands:abilities/ability_effects/undead_summon_warp with storage royalsiege:main
 
 #Reanimation
 
-scoreboard players remove @a[scores={Kit=17,reanimationTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] reanimationTimer 1
+scoreboard players remove @a[scores={Kit=17,reanimationTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] reanimationTimer 1
 
 #Bone Shield
 
-scoreboard players remove @a[scores={Kit=17,boneShieldTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] boneShieldTimer 1
+scoreboard players remove @a[scores={Kit=17,boneShieldTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] boneShieldTimer 1
 
 execute at @a[tag=boneShielded] run particle item{item:"minecraft:bone"} ~ ~ ~ 0.5 1 0.5 0.1 10
 
@@ -2580,23 +2580,23 @@ execute as @e[type=snowball,tag=!necrobonered,nbt={Item:{components:{"minecraft:
 
 execute as @e[type=snowball,tag=!necroboneblue,nbt={Item:{components:{"minecraft:custom_data":{necroboneblue:1b}}}}] at @s run function commands:ball/necro_bone_found_blue
 
-execute as @e[type=marker,tag=necrobonered] unless predicate commands:is_riding_necro_bone_red at @s run function commands:ball/necro_bone_landed_red
+execute as @e[type=marker,tag=necrobonered] unless predicate commands:riding/snowballs/is_riding_necro_bone_red at @s run function commands:ball/necro_bone_landed_red
 
-execute as @e[type=marker,tag=necroboneblue] unless predicate commands:is_riding_necro_bone_blue at @s run function commands:ball/necro_bone_landed_blue
+execute as @e[type=marker,tag=necroboneblue] unless predicate commands:riding/snowballs/is_riding_necro_bone_blue at @s run function commands:ball/necro_bone_landed_blue
 
 #Mind Inversion
 
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{mindinversionred:1b}}}}] at @s if entity @n[predicate=!commands:necromancer_cant_target,team=Blue,distance=..3] run function commands:other/mind_inversion
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{mindinversionred:1b}}}}] at @s if entity @n[predicate=!commands:entities/necromancer_cant_target,team=Blue,distance=..3] run function commands:abilities/ability_uses/mind_inversion
 
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{mindinversionblue:1b}}}}] at @s if entity @n[predicate=!commands:necromancer_cant_target,team=Red,distance=..3] run function commands:other/mind_inversion
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{mindinversionblue:1b}}}}] at @s if entity @n[predicate=!commands:entities/necromancer_cant_target,team=Red,distance=..3] run function commands:abilities/ability_uses/mind_inversion
 
 #Undead Whistle
 
-scoreboard players remove @a[scores={undeadWhistleTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] undeadWhistleTimer 1
+scoreboard players remove @a[scores={undeadWhistleTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] undeadWhistleTimer 1
 
 #Vengeance
 
-scoreboard players remove @a[scores={vengeanceTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] vengeanceTimer 1
+scoreboard players remove @a[scores={vengeanceTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] vengeanceTimer 1
 
 execute as @a[scores={Kit=17},team=Red,tag=vengeanceUser] at @s run tag @a[team=Red,distance=..10] add vengeance
 
@@ -2608,13 +2608,13 @@ execute as @a[scores={Kit=17},team=Blue,tag=vengeanceUser] at @s run tag @a[team
 
 scoreboard players add @a[scores={vengeanceDur=0..}] vengeanceDur 1
 
-execute as @a[tag=vengeanceUser,scores={vengeanceDur=100}] at @s run function commands:other/vengeance_buffs
+execute as @a[tag=vengeanceUser,scores={vengeanceDur=100}] at @s run function commands:abilities/ability_effects/vengeance_buffs
 
-execute as @a[scores={vengeanceDur=220..}] run function commands:other/vengeance_end
+execute as @a[scores={vengeanceDur=220..}] run function commands:abilities/ability_cleanup/vengeance_end
 
 #Dark Warp
 
-scoreboard players remove @a[scores={darkWarpTimer=1..},predicate=commands:in_any_battlefield,tag=!notAlive] darkWarpTimer 1
+scoreboard players remove @a[scores={darkWarpTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] darkWarpTimer 1
 
 #Necromancer Cooldown Display
 
@@ -2654,11 +2654,7 @@ execute as @a[scores={soulReaperDur=0..}] at @s run particle witch ~ ~2.2 ~ 0 0 
 
 execute as @a[scores={Kit=17}] store result score @s necroArmor run attribute @s minecraft:armor get
 
-execute as @a[scores={Kit=17},predicate=!commands:in_practice_range] if score @s necroArmor matches 24.. run advancement grant @s only commands:character_challenges/undead_wall
-
-#Give menu item to people w/out it
-
-execute as @a[predicate=commands:in_any_battlefield,predicate=!commands:inventory/menu,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run loot give @s loot commands:gameplay/menu
+execute as @a[scores={Kit=17},predicate=!commands:location/practice_range/in_practice_range] if score @s necroArmor matches 24.. run advancement grant @s only commands:character_challenges/undead_wall
 
 #Match ID Check for people returning while a game is over
 

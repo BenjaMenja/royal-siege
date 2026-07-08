@@ -4,15 +4,15 @@ scoreboard players reset #playercount spawnStuff
 
 #Players in Practice Range
 
-execute if entity @a[predicate=commands:in_practice_range] run tag @s remove selectWarp
+execute if entity @a[predicate=commands:location/practice_range/in_practice_range] run tag @s remove selectWarp
 
-execute if entity @a[predicate=commands:in_practice_range] run tellraw @a {"text":"All players must leave the practice range before starting!","color":"red"}
+execute if entity @a[predicate=commands:location/practice_range/in_practice_range] run tellraw @a {"text":"All players must leave the practice range before starting!","color":"red"}
 
 #Players in Parkour
 
-execute if entity @a[predicate=commands:in_parkour_area] run tag @s remove selectWarp
+execute if entity @a[predicate=commands:location/lobby/in_parkour_area] run tag @s remove selectWarp
 
-execute if entity @a[predicate=commands:in_parkour_area] run tellraw @a {"text":"All players must leave the parkour area before starting!","color":"red"}
+execute if entity @a[predicate=commands:location/lobby/in_parkour_area] run tellraw @a {"text":"All players must leave the parkour area before starting!","color":"red"}
 
 #Not Enough Players
 

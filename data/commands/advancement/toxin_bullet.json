@@ -16,6 +16,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/toxin_bullet"
+    "function": "commands:abilities/ability_effects/toxin_bullet"
   }
 }

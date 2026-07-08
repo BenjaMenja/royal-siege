@@ -1,4 +1,4 @@
-function commands:other/line_of_sight
+function commands:utils/entities/line_of_sight
 
 execute if entity @s[tag=smartDroneRed] if entity @a[team=Blue,tag=inLOS] at @s anchored eyes run summon item ^ ^ ^ {NoGravity:1b,Age:-32768,Health:1000,PickupDelay:32767,Tags:["smartDroneLaserRed","smartDroneLaser","redProj"],Item:{id:"minecraft:redstone",count:1}}
 

@@ -1,4 +1,4 @@
-execute as @a run function commands:other/reset_scores
+execute as @a run function commands:gameplay_events/ending/reset_scores
 
 #Other end of game stuff
 
@@ -88,7 +88,7 @@ advancement grant @a[tag=win] only commands:challenges/consecutive_wins win1
 
 advancement revoke @a[advancements={commands:character_challenges/soup_of_the_week=false}] only commands:character_challenges/soup_of_the_week
 
-function commands:other/remove_bossbar_display
+function commands:text/remove_bossbar_display
 
 execute as @a run function commands:attributes/clear_all_attribute_modifiers
 

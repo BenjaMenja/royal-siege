@@ -14,6 +14,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/cryo_skeleton_hit"
+    "function": "commands:corrupt_credit_items/entity_effects/cryo_skeleton_hit"
   }
 }

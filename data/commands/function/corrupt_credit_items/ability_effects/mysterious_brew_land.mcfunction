@@ -1,0 +1,3 @@
+execute store result storage commands:rng value int 1 run random value 3..20
+
+function commands:corrupt_credit_items/ability_effects/mysterious_brew_effects with storage commands:rng

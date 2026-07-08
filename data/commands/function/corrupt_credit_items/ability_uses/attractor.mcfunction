@@ -1,0 +1,5 @@
+execute at @s[tag=attractorred] run summon minecraft:zombie ~ ~ ~ {Silent:1b,NoAI:1b,Health:10f,IsBaby:0b,Tags:["attractorred"],equipment:{head:{id:"minecraft:ender_pearl",count:1}},drop_chances:{head:0.0f},active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],attributes:[{id:"max_health",base:10},{id:"knockback_resistance",base:1}]}
+
+execute at @s[tag=attractorblue] run summon minecraft:zombie ~ ~ ~ {Silent:1b,NoAI:1b,Health:10f,IsBaby:0b,Tags:["attractorblue"],equipment:{head:{id:"minecraft:ender_pearl",count:1}},drop_chances:{head:0.0f},active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:100000,show_particles:0b}],attributes:[{id:"max_health",base:10},{id:"knockback_resistance",base:1}]}
+
+teleport @s ~ -200 ~

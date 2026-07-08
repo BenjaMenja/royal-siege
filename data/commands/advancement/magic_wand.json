@@ -19,6 +19,6 @@
         }
     },
     "rewards": {
-        "function": "commands:other/magic_wand"
+        "function": "commands:weapons/weapon_effects/magic_wand"
     }
 }

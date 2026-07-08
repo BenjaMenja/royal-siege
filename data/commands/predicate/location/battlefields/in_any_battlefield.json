@@ -1,0 +1,29 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:location/battlefields/in_forest_glen"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:location/battlefields/in_winterland"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:location/battlefields/in_colliding_tides"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:location/battlefields/in_colosseum"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:location/battlefields/in_ncs"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "commands:location/practice_range/in_practice_range"
+    }
+  ]
+}

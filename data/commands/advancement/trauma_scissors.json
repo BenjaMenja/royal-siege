@@ -19,6 +19,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/apply_bleed"
+    "function": "commands:weapons/weapon_effects/apply_bleed"
   }
 }

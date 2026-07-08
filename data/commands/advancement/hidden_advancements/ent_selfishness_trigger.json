@@ -12,6 +12,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/ent_selfishness_trigger"
+    "function": "commands:advancements/ent_selfishness_trigger"
   }
 }

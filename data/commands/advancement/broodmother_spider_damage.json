@@ -32,6 +32,6 @@
     ]
   ],
   "rewards": {
-    "function": "commands:other/broodmother_spider_hit"
+    "function": "commands:abilities/ability_effects/broodmother_spider_hit"
   }
 }

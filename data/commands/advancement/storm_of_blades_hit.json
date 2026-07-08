@@ -34,6 +34,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/storm_of_blades_hit"
+    "function": "commands:weapons/weapon_effects/storm_of_blades_hit"
   }
 }

@@ -23,6 +23,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/chicken_noodle_soup_effects"
+    "function": "commands:abilities/ability_effects/chicken_noodle_soup_effects"
   }
 }

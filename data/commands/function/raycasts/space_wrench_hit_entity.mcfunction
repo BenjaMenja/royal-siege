@@ -29,7 +29,7 @@ tag @s[scores={Kit=8}] add wrenched
 
 execute if score @s Kit matches 9 run function commands:attributes/adds/add_poseidon_augment_atkdmg
 
-execute if entity @s[scores={Kit=10}] run function commands:other/gunblade_reload
+execute if entity @s[scores={Kit=10}] run function commands:abilities/ability_effects/gunblade_reload
 
 scoreboard players set @s[scores={Kit=11}] damagePan 300
 
@@ -41,9 +41,9 @@ scoreboard players set @s[scores={Kit=15}] blazingSpeedTimer 1
 
 scoreboard players set @s[scores={Kit=15}] sparklerTimer 1
 
-execute if entity @s[team=Red,scores={Kit=16}] as @a[team=Red,tag=ivAttached] run function commands:other/custom_heal {health:3,ult_charge_received:"@a[team=Red,scores={Kit=16}]"}
+execute if entity @s[team=Red,scores={Kit=16}] as @a[team=Red,tag=ivAttached] run function commands:utils/heal/custom_heal {health:3,ult_charge_received:"@a[team=Red,scores={Kit=16}]"}
 
-execute if entity @s[team=Blue,scores={Kit=16}] as @a[team=Blue,tag=ivAttached] run function commands:other/custom_heal {health:3,ult_charge_received:"@a[team=Blue,scores={Kit=16}]"}
+execute if entity @s[team=Blue,scores={Kit=16}] as @a[team=Blue,tag=ivAttached] run function commands:utils/heal/custom_heal {health:3,ult_charge_received:"@a[team=Blue,scores={Kit=16}]"}
 
 execute at @s[team=Red,scores={Kit=17}] run function commands:entities/dark_warp_summon_red
 

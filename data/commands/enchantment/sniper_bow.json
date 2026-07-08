@@ -26,7 +26,7 @@
             {
                 "effect": {
                     "type": "run_function",
-                    "function": "commands:other/sniper_enchant"
+                    "function": "commands:weapons/weapon_effects/sniper_enchant"
                 }
             }
         ]

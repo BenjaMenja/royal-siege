@@ -5,7 +5,7 @@
       "conditions": {
         "damage": {
           "source_entity": {
-            "entity_type": "minecraft:wither_skeleton",
+            "type": "minecraft:wither_skeleton",
             "nbt": "{Tags:[\"King\",\"killerking\"]}"
           }
         }
@@ -18,6 +18,6 @@
     ]
   ],
   "rewards": {
-    "function": "commands:other/remove_killer_king"
+    "function": "commands:corrupt_credit_items/ability_cleanup/remove_killer_king"
   }
 }

@@ -11,6 +11,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/bone_shield_hit"
+    "function": "commands:abilities/ability_effects/bone_shield_hit"
   }
 }

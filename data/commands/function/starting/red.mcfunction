@@ -142,7 +142,7 @@ loot give @s[scores={Kit=10,RedKit=198}] loot commands:main_abilities/iron_wall
 
 loot give @s[scores={Kit=10,RedKit=198}] loot commands:main_abilities/shock_grenade
 
-execute as @s[scores={Kit=10,RedKit=198}] run function commands:other/gunblade_reload
+execute as @s[scores={Kit=10,RedKit=198}] run function commands:abilities/ability_effects/gunblade_reload
 
 loot replace entity @s[scores={Kit=11,RedKit=198}] armor.head loot commands:heads/chef
 
@@ -236,7 +236,7 @@ loot replace entity @s[scores={Kit=17,RedKit=198}] armor.legs loot commands:main
 
 loot replace entity @s[scores={Kit=17,RedKit=198}] armor.feet loot commands:main_armor/necromancer_boots
 
-execute if entity @s[scores={RedKit=198},tag=hadUltimate] run function commands:other/ultimate_charger
+execute if entity @s[scores={RedKit=198},tag=hadUltimate] run function commands:corrupt_credit_items/ability_uses/ultimate_charger
 
 execute if entity @s[scores={RedKit=198}] run function commands:custom_deaths/reset_cooldowns
 

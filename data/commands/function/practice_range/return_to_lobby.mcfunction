@@ -1,6 +1,6 @@
 team leave @s 
 
-function commands:other/reset_scores
+function commands:gameplay_events/ending/reset_scores
 
 clear @s
 

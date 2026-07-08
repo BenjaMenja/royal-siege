@@ -44,6 +44,6 @@
     ]
   ],
   "rewards": {
-    "function": "commands:other/explosive_charge"
+    "function": "commands:abilities/ability_uses/explosive_charge"
   }
 }

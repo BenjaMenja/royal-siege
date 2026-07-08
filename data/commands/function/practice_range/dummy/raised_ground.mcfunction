@@ -1,4 +1,4 @@
-execute as @e[type=wither_skeleton,tag=dummy,predicate=commands:in_practice_range_raised_ground] run scoreboard players add #dummyRaisedGround multiItems 1
+execute as @e[type=wither_skeleton,tag=dummy,predicate=commands:location/practice_range/in_practice_range_raised_ground] run scoreboard players add #dummyRaisedGround multiItems 1
 
 execute if score #dummyRaisedGround multiItems matches 0 run tp @s 11 203 1061
 

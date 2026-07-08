@@ -15,6 +15,6 @@
     }
   },
   "rewards": {
-    "function": "commands:other/duel_tnt"
+    "function": "commands:corrupt_credit_items/ability_effects/duel_tnt"
   }
 }

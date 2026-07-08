@@ -1,4 +1,4 @@
-execute as @e[type=wither_skeleton,tag=dummy,predicate=commands:in_practice_range_bowling] run scoreboard players add #dummyBowling multiItems 1
+execute as @e[type=wither_skeleton,tag=dummy,predicate=commands:location/practice_range/in_practice_range_bowling] run scoreboard players add #dummyBowling multiItems 1
 
 execute if score #dummyBowling multiItems matches 0 run tp @s 25 203 1057
 

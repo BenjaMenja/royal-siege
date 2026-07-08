@@ -2,7 +2,7 @@ execute if score #poseidonvoicered voicelineCD matches 60.. if entity @a[team=Bl
 
 execute if score #poseidonvoicered voicelineCD matches 60.. if entity @a[team=Blue,distance=..4] run scoreboard players reset #poseidonvoicered voicelineCD
 
-execute at @a[team=Blue,distance=..4,predicate=!commands:in_tdm_gates] run summon lightning_bolt
+execute at @a[team=Blue,distance=..4,predicate=!commands:location/battlefields/in_tdm_gates] run summon lightning_bolt
 
 execute at @e[tag=dummy,distance=..4] run summon lightning_bolt
 

@@ -1,0 +1,2 @@
+execute if entity @s[predicate=!commands:flags/is_sneaking,predicate=!commands:location/battlefields/in_ncs_elevator_top] at @s run tp @s ~ ~6 ~
+execute if entity @s[predicate=commands:flags/is_sneaking,predicate=!commands:location/battlefields/in_ncs_elevator_bottom] at @s run tp @s ~ ~-6 ~
