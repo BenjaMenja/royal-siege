@@ -4,6 +4,7 @@
         "commands:load_functions/create_scoreboard_objectives",
         "commands:load_functions/create_bossbars",
         "commands:admin/create_player_scoreboards",
-        "commands:load_functions/storage_constants"
+        "commands:load_functions/storage_constants",
+        "pdb:zprivate/load"
     ]
 }
