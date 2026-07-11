@@ -1,5 +1,5 @@
-execute if entity @s[tag=!upgraded,nbt=!{Inventory:[{components:{"custom_data":{fryingpanburning:1b}}}]}] run function commands:replace/frying_pan_replace
+item modify entity @s[tag=!upgraded] weapon.mainhand commands:frying_pan_burning
 
-execute if entity @s[tag=upgraded,nbt=!{Inventory:[{components:{"custom_data":{fryingpanburning:1b}}}]}] run function commands:replace/frying_pan_upgraded_replace
+item modify entity @s[tag=upgraded] weapon.mainhand commands:frying_pan_burning_upgraded
 
 scoreboard players reset @s damagePan

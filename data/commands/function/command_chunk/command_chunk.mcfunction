@@ -604,7 +604,7 @@ execute as @a[scores={expBombTimer=1..},predicate=commands:inventory/exp_blaster
 
 execute as @e[tag=stop,type=experience_bottle] store success entity @s Air short 1 if data entity @s {Air:0s}
 
-execute as @e[type=experience_orb] at @s run summon fireball ~ ~ ~ {CustomNameVisible:0b,ExplosionPower:3,Motion:[0.0,-2.0,0.0],CustomName:'{"text":"Experience Bomb","color":"green"}',Item:{id:"minecraft:experience_bottle",count:1},Tags:["fm"]}
+execute as @e[type=experience_orb] at @s run summon fireball ~ ~ ~ {CustomNameVisible:0b,ExplosionPower:3,Motion:[0.0,-2.0,0.0],CustomName:{"text":"Experience Bomb","color":"green"},Item:{id:"minecraft:experience_bottle",count:1},Tags:["fm"]}
 
 kill @e[type=experience_orb]
 
@@ -952,9 +952,9 @@ execute as @a[scores={Kit=3,defensiveSpell=1..},predicate=commands:location/batt
 
 scoreboard players remove @a[scores={Kit=3},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] turretTimer 1
 
-give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=[{"color":"yellow","italic":false,"text":"Placeable"},{"text": " "}],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
+give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name={"color":"#B8481F","italic":false,"text":"Turret"},lore=[{"color":"yellow","italic":false,"text":"Placeable"},{"text": " "}],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
 
-give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name='{"color":"#B8481F","italic":false,"text":"Turret"}',lore=[{"color":"yellow","italic":false,"text":"Placeable"},{"text": " "}],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":255}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
+give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name={"color":"#B8481F","italic":false,"text":"Turret"},lore=[{"color":"yellow","italic":false,"text":"Placeable"},{"text": " "}],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":255}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
 
 scoreboard players set @a[scores={turretTimer=..0}] turretTimer 600
 
@@ -1044,9 +1044,9 @@ scoreboard players set @a[scores={MinionTimer=3600..}] MinionTimer 0
 
 tag @e[type=zombie,tag=overcharge] add OC
 
-execute as @e[type=zombie,tag=overcharge,team=Red] at @s run data merge entity @s {CustomNameVisible:1b,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',equipment:{mainhand:{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":16711680}}},drop_chances:{mainhand:0.0,chest:0.0},active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:movement_speed",base:0.35}]}
+execute as @e[type=zombie,tag=overcharge,team=Red] at @s run data merge entity @s {CustomNameVisible:1b,IsBaby:1b,CustomName:{"text":"Wizard Minion"},equipment:{mainhand:{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":16711680}}},drop_chances:{mainhand:0.0,chest:0.0},active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:movement_speed",base:0.35}]}
 
-execute as @e[type=zombie,tag=overcharge,team=Blue] at @s run data merge entity @s {CustomNameVisible:1b,IsBaby:1b,CustomName:'{"text":"Wizard Minion"}',equipment:{mainhand:{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":255}}},drop_chances:{mainhand:0.0,chest:0.0},active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:movement_speed",base:0.35}]}
+execute as @e[type=zombie,tag=overcharge,team=Blue] at @s run data merge entity @s {CustomNameVisible:1b,IsBaby:1b,CustomName:{"text":"Wizard Minion"},equipment:{mainhand:{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{"minecraft:fire_aspect":1,"minecraft:knockback":2,"minecraft:sharpness":7}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":255}}},drop_chances:{mainhand:0.0,chest:0.0},active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:follow_range",base:99},{id:"minecraft:movement_speed",base:0.35}]}
 
 tag @e[type=zombie,tag=OC] remove overcharge
 
@@ -1105,6 +1105,10 @@ execute as @a[scores={Kit=4,RegenTimer=1..},predicate=commands:location/battlefi
 execute as @a[scores={Kit=9},predicate=!commands:inventory/poseidon_trident,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] run function commands:replace/poseidon_trident_replace
 
 execute as @a[scores={Kit=10},predicate=!commands:inventory/gunblade,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] run function commands:abilities/ability_effects/gunblade_reload_init
+
+execute as @a[scores={Kit=9}] if items entity @s weapon.mainhand trident[custom_data~{poseidontrident:1b}] run scoreboard players set @s tridentSlot 0
+
+execute as @a[scores={Kit=9}] if items entity @s weapon.offhand trident[custom_data~{poseidontrident:1b}] run scoreboard players set @s tridentSlot 1
 
 scoreboard players add @a[tag=reloading] reload 1
 
@@ -1375,18 +1379,6 @@ tp @e[type=elder_guardian,tag=terror,scores={timeLimit=900..}] ~ -200 ~
 execute if entity @e[type=elder_guardian,team=Red,tag=terror,scores={timeLimit=900}] run tellraw @a {"text":"The Terror of the Seas faded away...","color":"red"}
 
 execute if entity @e[type=elder_guardian,team=Blue,tag=terror,scores={timeLimit=900}] run tellraw @a {"text":"The Terror of the Seas faded away...","color":"blue"}
-
-#Ent Passive
-
-execute as @a[team=Red,scores={Kit=8,entPassive=1..},tag=!upgraded] at @s run effect give @a[team=Red,distance=..10] regeneration 2 1 true
-
-execute as @a[team=Red,scores={Kit=8,entPassive=1..},tag=upgraded] at @s run effect give @a[team=Red,distance=..10] regeneration 4 1 true
-
-execute as @a[team=Blue,scores={Kit=8,entPassive=1..},tag=!upgraded] at @s run effect give @a[team=Blue,distance=..10] regeneration 2 1 true
-
-execute as @a[team=Blue,scores={Kit=8,entPassive=1..},tag=upgraded] at @s run effect give @a[team=Blue,distance=..10] regeneration 4 1 true
-
-scoreboard players reset @a[scores={Kit=8,entPassive=1..}] entPassive
 
 #The Watcher
 
@@ -1766,7 +1758,7 @@ execute as @a[scores={useBow=1..},predicate=commands:holding/punch_bow] run func
 
 scoreboard players add @a[predicate=commands:inventory/punch_bow] pBowTimer 1
 
-execute as @a[scores={pBowTimer=100}] run function commands:replace/punch_bow_ready
+execute as @a[scores={pBowTimer=100}] run function commands:replace/punch_bow_ready_check {custom_data:{punchbowitem:1b}}
 
 #Blunderbuss
 
@@ -1816,7 +1808,7 @@ execute as @a[predicate=commands:effects/absorption] store result score @s absHe
  
 #Absorption Shield
 
-execute as @a[predicate=commands:inventory/absorption_shield,scores={absShieldCD=40}] run function commands:replace/absorption_shield_ready
+execute as @a[scores={absShieldCD=40},predicate=commands:inventory/absorption_shield] run function commands:replace/generic_ability_ready_check {custom_data:{absorptionshield:1b}}
 
 scoreboard players add @a[tag=!absShield,scores={Kit=3}] absShieldCD 1
 
@@ -2286,7 +2278,7 @@ execute as @a[scores={died=1..},tag=hasSmartDrone] at @s run function commands:u
 
 scoreboard players remove @a[scores={Kit=15,sparklerTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] sparklerTimer 1
 
-execute as @a[scores={Kit=15,sparklerTimer=1}] run function commands:replace/sparkler_ready
+execute as @a[scores={Kit=15,sparklerTimer=1}] run function commands:replace/sparkler_ready_check {custom_data:{sparklerunlit:1b}}
 
 scoreboard players add @e[type=item,tag=sparkleritem] sparklerTimer 1
 

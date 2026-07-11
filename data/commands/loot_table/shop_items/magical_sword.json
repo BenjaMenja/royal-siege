@@ -60,10 +60,13 @@
                 },
                 "minecraft:unbreakable": {},
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable"]
+                  "hidden_components": [
+                    "unbreakable"
+                  ]
                 },
                 "minecraft:enchantments": {
-                  "minecraft:sweeping_edge": 1
+                  "minecraft:sweeping_edge": 1,
+                  "commands:natural_gift": 1
                 }
               }
             },

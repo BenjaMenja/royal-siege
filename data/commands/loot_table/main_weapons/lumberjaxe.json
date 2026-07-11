@@ -46,7 +46,10 @@
                     "operation": "add_value",
                     "slot": "mainhand"
                   }
-                ]
+                ],
+                "minecraft:enchantments": {
+                  "commands:natural_gift": 1
+                }
               }
             },
             {

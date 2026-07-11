@@ -1,0 +1,35 @@
+{
+  "function": "sequence",
+  "functions": [
+    {
+      "function": "set_custom_data",
+      "tag": {
+        "fryingpanburning": 1
+      }
+    },
+    {
+      "function": "set_enchantments",
+      "enchantments": {
+        "fire_aspect": 3,
+        "knockback": 2
+      }
+    },
+    {
+      "function": "set_custom_model_data",
+      "floats": {
+        "values": [
+          93
+        ],
+        "mode": "replace_all"
+      }
+    },
+    {
+      "function": "set_name",
+      "name": {
+        "text": "Frying Pan [Burning]",
+        "color": "#858585",
+        "italic": false
+      }
+    }
+  ]
+}

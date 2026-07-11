@@ -112,7 +112,10 @@
               "italic": false,
               "text": " 0.7 Attack Speed"
             }
-          ]
+          ],
+          "minecraft:enchantments": {
+            "commands:natural_gift": 1
+          }
         }
       },
       "show_tooltip": true,

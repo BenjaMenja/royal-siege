@@ -55,7 +55,9 @@
                 },
                 "minecraft:unbreakable": {},
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable"]
+                  "hidden_components": [
+                    "unbreakable"
+                  ]
                 }
               }
             },

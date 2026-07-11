@@ -1,12 +1,12 @@
 tag @s add wizard
 
-execute at @s[tag=!charged,team=Red] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:3,Tags:["WF","fm","redProj"],CustomName:'{"text":"Wizard Fireball"}'}
+execute at @s[tag=!charged,team=Red] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:3,Tags:["WF","fm","redProj"],CustomName:{"text":"Wizard Fireball"}}
 
-execute at @s[tag=charged,team=Red] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:5,Tags:["WF","fm","redProj"],CustomName:'{"text":"Wizard Fireball"}'}
+execute at @s[tag=charged,team=Red] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:5,Tags:["WF","fm","redProj"],CustomName:{"text":"Wizard Fireball"}}
 
-execute at @s[tag=!charged,team=Blue] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:3,Tags:["WF","fm","blueProj"],CustomName:'{"text":"Wizard Fireball"}'}
+execute at @s[tag=!charged,team=Blue] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:3,Tags:["WF","fm","blueProj"],CustomName:{"text":"Wizard Fireball"}}
 
-execute at @s[tag=charged,team=Blue] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:5,Tags:["WF","fm","blueProj"],CustomName:'{"text":"Wizard Fireball"}'}
+execute at @s[tag=charged,team=Blue] anchored eyes run summon fireball ^ ^ ^1 {ExplosionPower:5,Tags:["WF","fm","blueProj"],CustomName:{"text":"Wizard Fireball"}}
 
 execute as @e[type=fireball,tag=WF] run data modify entity @s Owner set from entity @a[tag=wizard,limit=1] UUID
 

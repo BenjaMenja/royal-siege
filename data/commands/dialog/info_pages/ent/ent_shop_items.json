@@ -86,7 +86,11 @@
               "color": "red",
               "italic": false
             }
-          ]
+          ],
+          "minecraft:enchantments": {
+            "minecraft:sweeping_edge": 1,
+            "commands:natural_gift": 1
+          }
         }
       },
       "show_tooltip": true,

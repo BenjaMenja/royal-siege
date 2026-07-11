@@ -57,7 +57,7 @@
     {
       "type": "minecraft:item",
       "item": {
-        "id": "wooden_sword",
+        "id": "blaze_rod",
         "components": {
           "minecraft:custom_model_data": {
             "floats": [

@@ -1,0 +1,37 @@
+{
+    "description": {
+        "text": "Natural Gift",
+        "color": "green",
+        "italic": false
+    },
+    "weight": 1,
+    "min_cost": {
+        "base": 1,
+        "per_level_above_first": 1
+    },
+    "max_cost": {
+        "base": 20,
+        "per_level_above_first": 1
+    },
+    "max_level": 1,
+    "slots": [
+        "any"
+    ],
+    "supported_items": [
+        "iron_axe",
+        "wooden_sword"
+    ],
+    "anvil_cost": 1,
+    "effects": {
+        "post_attack": [
+            {
+                "enchanted": "attacker",
+                "affected": "attacker",
+                "effect": {
+                    "type": "run_function",
+                    "function": "commands:passives/ent_passive_effect"
+                }
+            }
+        ]
+    }
+}

@@ -523,6 +523,7 @@ scoreboard objectives add necroArmor dummy
 scoreboard objectives add pirateCoinDeposits dummy
 scoreboard objectives add RSAttr.StormOfBlades dummy
 scoreboard objectives add stormOfBladesTier dummy
+scoreboard objectives add tridentSlot dummy
 
 function custom_heal:load
 
@@ -547,3 +548,4 @@ scoreboard objectives remove gasVacStore
 scoreboard objectives remove gasVacTimer
 scoreboard objectives remove useCrossbow
 scoreboard objectives remove RSAttr.BlossomUpgradeSpeed
+scoreboard objectives remove entPassive
