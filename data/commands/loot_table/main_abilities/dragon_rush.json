@@ -21,7 +21,21 @@
                   ]
                 },
                 "minecraft:custom_data": {
-                  "dragonrush": 1
+                  "dragonrush": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Dragon Rush: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "dRushDis"
+                    },
+                    "color": "aqua"
+                  }
                 },
                 "consumable": {
                   "consume_seconds": 1000000

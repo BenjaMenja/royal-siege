@@ -105,12 +105,25 @@
                     "id": "09e6d8e9-b680-4d2e-b084-b9bb52ece42c",
                     "slot": "mainhand"
                   }
-                ]
+                ],
+                "custom_data": {
+                  "sparkler": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Sparkler: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "sparklerDis"
+                    },
+                    "color": "aqua"
+                  }
+                }
               }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{sparkler:1b}"
             },
             {
               "function": "minecraft:toggle_tooltips",

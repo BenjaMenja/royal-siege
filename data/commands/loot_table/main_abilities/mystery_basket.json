@@ -21,7 +21,21 @@
                   ]
                 },
                 "minecraft:custom_data": {
-                  "mysterybasket": 1
+                  "mysterybasket": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Mystery Basket: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "basketDis"
+                    },
+                    "color": "aqua"
+                  }
                 },
                 "consumable": {
                   "consume_seconds": 1000000

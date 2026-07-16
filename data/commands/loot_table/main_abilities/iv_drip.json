@@ -16,7 +16,21 @@
               "function": "set_components",
               "components": {
                 "minecraft:custom_data": {
-                  "ivdrip": true
+                  "ivdrip": true,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "IV Drip: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "ivDripDis"
+                    },
+                    "color": "aqua"
+                  }
                 },
                 "minecraft:custom_model_data": {
                   "floats": [

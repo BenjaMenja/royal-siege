@@ -21,7 +21,21 @@
                   ]
                 },
                 "minecraft:custom_data": {
-                  "AssaultSpell": 1
+                  "AssaultSpell": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Other Spells: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "oSpellDis"
+                    },
+                    "color": "aqua"
+                  }
                 },
                 "minecraft:food": {
                   "nutrition": 0,

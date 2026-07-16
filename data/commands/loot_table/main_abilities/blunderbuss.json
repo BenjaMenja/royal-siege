@@ -38,16 +38,29 @@
               "mode": "insert"
             },
             {
-              "function": "minecraft:set_custom_data",
-              "tag": "{blunderbuss:1b}"
-            },
-            {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": {
                   "floats": [
                     118
                   ]
+                },
+                "custom_data": {
+                  "blunderbuss": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Blunderbuss: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "blunderDis"
+                    },
+                    "color": "aqua"
+                  }
                 },
                 "consumable": {
                   "consume_seconds": 1000000

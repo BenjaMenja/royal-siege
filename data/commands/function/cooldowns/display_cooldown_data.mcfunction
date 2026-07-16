@@ -1,0 +1,1 @@
+$title @s actionbar $(cooldown_data)

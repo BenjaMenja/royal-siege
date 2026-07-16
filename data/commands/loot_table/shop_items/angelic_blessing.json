@@ -17,7 +17,21 @@
                   ]
                 },
                 "minecraft:custom_data": {
-                  "angelicblessing": 1
+                  "angelicblessing": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Angelic Blessing: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "angelicBlessingDis"
+                    },
+                    "color": "aqua"
+                  }
                 },
                 "consumable": {
                   "consume_seconds": 1000000

@@ -21,7 +21,21 @@
                   ]
                 },
                 "minecraft:custom_data": {
-                  "DefensiveSpell": 1
+                  "DefensiveSpell": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Defensive Spell: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "oSpellDis"
+                    },
+                    "color": "aqua"
+                  }
                 },
                 "consumable": {
                   "consume_seconds": 1000000

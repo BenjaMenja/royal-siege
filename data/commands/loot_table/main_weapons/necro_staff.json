@@ -21,7 +21,21 @@
                   ]
                 },
                 "minecraft:custom_data": {
-                  "necrostaff": 1
+                  "necrostaff": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Necro Staff: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "necroStaffDis"
+                    },
+                    "color": "aqua"
+                  }
                 },
                 "consumable": {
                   "consume_seconds": 1000000

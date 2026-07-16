@@ -18,6 +18,7 @@ gamerule immediate_respawn true
 
 #Constants
 
+scoreboard players set #dashCD constant 120
 scoreboard players set #10000 constant 10000
 scoreboard players set #10 constant 10
 scoreboard players set #5 constant 5
@@ -524,6 +525,8 @@ scoreboard objectives add pirateCoinDeposits dummy
 scoreboard objectives add RSAttr.StormOfBlades dummy
 scoreboard objectives add stormOfBladesTier dummy
 scoreboard objectives add tridentSlot dummy
+scoreboard objectives add dashStore dummy
+scoreboard objectives add dashDis dummy
 
 function custom_heal:load
 

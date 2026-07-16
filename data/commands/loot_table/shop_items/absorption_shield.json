@@ -65,12 +65,25 @@
                   "nutrition": 0,
                   "saturation": 0,
                   "can_always_eat": true
+                },
+                "custom_data": {
+                  "absorptionshield": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Absorption Shield: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "absShieldCount"
+                    },
+                    "color": "aqua"
+                  }
                 }
               }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{absorptionshield:1b}"
             }
           ]
         }

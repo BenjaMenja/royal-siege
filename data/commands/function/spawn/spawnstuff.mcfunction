@@ -4,8 +4,6 @@ tag @a[tag=!newPlayer] add newPlayer
 
 execute as @a[tag=newPlayer,tag=!oldPlayer] run function commands:admin/initialize_class_info
 
-execute as @a[tag=newPlayer,tag=!oldPlayer] run function commands:books/manual
-
 kill @e[type=item,nbt={Item:{id:"minecraft:written_book"}},predicate=commands:location/lobby/in_spawn_room]
 
 #Textclicks

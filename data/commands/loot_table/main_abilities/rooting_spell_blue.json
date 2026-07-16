@@ -22,7 +22,21 @@
                 },
                 "minecraft:custom_data": {
                   "rootingspellblue": 1,
-                  "rootingspell": 1
+                  "rootingspell": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Rooting Spell: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "rootingDis"
+                    },
+                    "color": "aqua"
+                  }
                 },
                 "consumable": {
                   "consume_seconds": 1000000

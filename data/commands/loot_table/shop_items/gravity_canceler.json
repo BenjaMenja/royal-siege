@@ -59,6 +59,23 @@
                   "nutrition": 0,
                   "saturation": 0,
                   "can_always_eat": true
+                },
+                "custom_data": {
+                  "gravitycanceler": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Gravity Canceler: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "gravityDis"
+                    },
+                    "color": "aqua"
+                  }
                 }
               }
             }

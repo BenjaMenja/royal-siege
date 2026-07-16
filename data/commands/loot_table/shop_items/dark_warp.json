@@ -44,10 +44,6 @@
               "mode": "insert"
             },
             {
-              "function": "minecraft:set_custom_data",
-              "tag": "{darkwarp:1b}"
-            },
-            {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": {
@@ -62,6 +58,23 @@
                   "nutrition": 0,
                   "saturation": 0,
                   "can_always_eat": true
+                },
+                "custom_data": {
+                  "darkwarp": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Dark Warp: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "darkWarpDis"
+                    },
+                    "color": "aqua"
+                  }
                 }
               }
             }

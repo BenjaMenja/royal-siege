@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "pickup": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": "{cooldown_item:{value:1b}}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "commands:cooldowns/pickup_cooldown_item"
+  }
+}

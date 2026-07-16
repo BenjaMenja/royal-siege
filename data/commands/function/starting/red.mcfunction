@@ -240,5 +240,7 @@ execute if entity @s[scores={RedKit=198},tag=hadUltimate] run function commands:
 
 execute if entity @s[scores={RedKit=198}] run function commands:custom_deaths/reset_cooldowns
 
+execute if entity @s[scores={RedKit=198}] run function commands:cooldowns/pickup_cooldown_item
+
 scoreboard players set @s[scores={RedKit=198}] RedKit 0
 

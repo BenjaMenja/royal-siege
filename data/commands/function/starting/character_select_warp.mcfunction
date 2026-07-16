@@ -37,3 +37,5 @@ execute if entity @s[tag=selectWarp] run scoreboard players set @a Kit 0
 execute if entity @s[tag=selectWarp] run scoreboard players set @a ultCheck 0
 
 execute if entity @s[tag=selectWarp] run function commands:starting/create_teams
+
+execute if entity @s[tag=selectWarp] as @a run function pdb:new_player

@@ -21,7 +21,21 @@
                   ]
                 },
                 "minecraft:custom_data": {
-                  "boneshield": 1
+                  "boneshield": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Bone Shield: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "boneShieldDis"
+                    },
+                    "color": "aqua"
+                  }
                 },
                 "minecraft:food": {
                   "nutrition": 0,

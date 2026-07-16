@@ -37,13 +37,14 @@
                   "minecraft:infinity": 1
                 },
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable"]
+                  "hidden_components": [
+                    "unbreakable"
+                  ]
+                },
+                "custom_data": {
+                  "punchbow": 1
                 }
               }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{punchbow:1b}"
             }
           ]
         }

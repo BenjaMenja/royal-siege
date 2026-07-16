@@ -54,6 +54,10 @@ execute if entity @s[team=Blue,scores={Kit=17}] run kill @e[tag=undeadsummon,tea
 
 execute if entity @s[team=Blue,scores={Kit=17}] run kill @e[tag=undeadSpawn,team=Blue]
 
+#Clear cooldown data
+
+function commands:cooldowns/reset_cooldown_list
+
 #Score Removals
 
 function commands:custom_deaths/reset_cooldowns

@@ -59,6 +59,24 @@
                   "nutrition": 0,
                   "saturation": 0,
                   "can_always_eat": true
+                },
+                "custom_data": {
+                  "fishcannon": 1,
+                  "fishcannonred": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Fish Cannon: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "fishCannonDis"
+                    },
+                    "color": "aqua"
+                  }
                 }
               }
             }

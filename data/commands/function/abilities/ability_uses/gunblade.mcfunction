@@ -192,3 +192,5 @@ tag @s remove midas
 
 tag @s remove explosion
 
+function commands:cooldowns/pickup_cooldown_item
+

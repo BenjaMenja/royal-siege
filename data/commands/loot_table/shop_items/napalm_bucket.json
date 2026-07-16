@@ -58,12 +58,25 @@
                   "nutrition": 0,
                   "saturation": 0,
                   "can_always_eat": true
+                },
+                "custom_data": {
+                  "napalmbucket": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Napalm Bucket: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "napalmBucketDis"
+                    },
+                    "color": "aqua"
+                  }
                 }
               }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{napalmbucket:1b}"
             }
           ]
         }

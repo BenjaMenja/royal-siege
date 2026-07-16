@@ -22,7 +22,21 @@
                   ]
                 },
                 "minecraft:custom_data": {
-                  "spacewrench": 1
+                  "spacewrench": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Fine Tuning: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "wrenchDis"
+                    },
+                    "color": "aqua"
+                  }
                 },
                 "consumable": {
                   "consume_seconds": 1000000

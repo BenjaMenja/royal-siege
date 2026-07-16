@@ -38,10 +38,6 @@
               "mode": "insert"
             },
             {
-              "function": "minecraft:set_custom_data",
-              "tag": "{debriscannon:1b}"
-            },
-            {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": {
@@ -56,6 +52,23 @@
                   "nutrition": 0,
                   "saturation": 0,
                   "can_always_eat": true
+                },
+                "custom_data": {
+                  "debriscannon": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Debris Cannon: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "debrisDis"
+                    },
+                    "color": "aqua"
+                  }
                 }
               }
             }

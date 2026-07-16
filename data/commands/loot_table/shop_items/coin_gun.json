@@ -55,12 +55,25 @@
                   "nutrition": 0,
                   "saturation": 0,
                   "can_always_eat": true
+                },
+                "custom_data": {
+                  "coingun": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Coin Gun: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "coinGunDis"
+                    },
+                    "color": "aqua"
+                  }
                 }
               }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{coingun:1b}"
             }
           ]
         }

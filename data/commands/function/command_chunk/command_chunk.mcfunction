@@ -344,10 +344,6 @@ execute as @e[type=wither_skeleton,tag=King,scores={Defend=1..}] run function co
 
 execute as @a[scores={Kit=5,glowingEffectCD=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s glowingEffectCD 1
 
-#Archer Cooldown Display
-
-execute as @a[scores={Kit=5}] run function commands:cooldowns/archer_display
-
 #Keep zombies from drowning
 
 execute as @e[type=zombie] run data merge entity @s {InWaterTime:-1}
@@ -445,10 +441,6 @@ execute at @a[team=Red,scores={hFruitTimer=..0}] run loot spawn ~ ~ ~ loot comma
 execute at @a[team=Blue,scores={hFruitTimer=..0}] run loot spawn ~ ~ ~ loot commands:main_abilities/healing_fruit_blue
 
 scoreboard players set @a[scores={hFruitTimer=..0}] hFruitTimer 400
-
-#Ent Cooldown Display
-
-execute as @a[scores={Kit=8}] run function commands:cooldowns/ent_display
 
 #Ent Voice line CD
 
@@ -608,10 +600,6 @@ execute as @e[type=experience_orb] at @s run summon fireball ~ ~ ~ {CustomNameVi
 
 kill @e[type=experience_orb]
 
-#Wizard Cooldown Display
-
-execute as @a[scores={Kit=6}] run function commands:cooldowns/wizard_display
-
 #Clear absorption from people with no absorption hearts
 
 execute as @a[nbt={AbsorptionAmount:0.0f}] run effect clear @s absorption
@@ -684,10 +672,6 @@ scoreboard players add @a[scores={Ninjakill=1..,Kit=2},tag=!upgraded] dashcharge
 
 scoreboard players add @a[scores={Ninjakill=1..,Kit=2},tag=upgraded] dashcharge 360
 
-#Ninja Cooldown Display
-
-execute if entity @a[scores={Kit=2}] run function commands:cooldowns/ninja_display
-
 #Bouncy Boots
 
 effect give @a[predicate=commands:armor/bouncy_boots] jump_boost 2 1 true
@@ -730,6 +714,16 @@ scoreboard players add @a[scores={Kit=10}] MidasTimer 1
 
 scoreboard players add @a[scores={Kit=10}] ExplosionTimer 1
 
+execute as @a[scores={Kit=10}] if score @s PoisonTimer matches 160 run function commands:cooldowns/pickup_cooldown_item
+
+execute as @a[scores={Kit=10}] if score @s ToxinTimer matches 200 run function commands:cooldowns/pickup_cooldown_item
+
+execute as @a[scores={Kit=10}] if score @s DarknessTimer matches 280 run function commands:cooldowns/pickup_cooldown_item
+
+execute as @a[scores={Kit=10}] if score @s MidasTimer matches 280 run function commands:cooldowns/pickup_cooldown_item
+
+execute as @a[scores={Kit=10}] if score @s ExplosionTimer matches 280 run function commands:cooldowns/pickup_cooldown_item
+
 execute as @e[tag=stop,type=arrow] store success entity @s Air short 1 if data entity @s {Air:0s}
 
 #Gunblade Falloff
@@ -741,10 +735,6 @@ execute as @e[type=arrow,scores={Timer=8}] run data merge entity @s {damage:2.8d
 execute as @e[type=arrow,scores={Timer=16}] run data merge entity @s {damage:2.3d}
 
 execute as @e[type=arrow,scores={Timer=24}] run data merge entity @s {damage:2.0d}
-
-#Display which bullets are ready
-
-execute if entity @a[scores={Kit=10}] run function commands:cooldowns/robot_display
 
 #Robot items
 
@@ -813,10 +803,6 @@ scoreboard players set @a[scores={Ultcharge=1..}] Ultcharge 0
 #Ultimate Charge Bossbars
 
 execute as @a[scores={Ultimate=1..34}] run function commands:text/ultimate_bossbars
-
-#Warrior Cooldown Display
-
-execute as @a[scores={Kit=1}] run function commands:cooldowns/warrior_display
 
 #Seismic Slam
 
@@ -894,10 +880,6 @@ scoreboard players add #angelspellsred voicelineCD 1
 
 scoreboard players add #angelspellsblue voicelineCD 1
 
-#Angel Cooldown Display
-
-execute as @a[scores={Kit=4}] run function commands:cooldowns/angel_display
-
 #Clear old arrows
 
 scoreboard players add @e[type=arrow] Timer 1
@@ -957,10 +939,6 @@ give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_plac
 give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name={"color":"#B8481F","italic":false,"text":"Turret"},lore=[{"color":"yellow","italic":false,"text":"Placeable"},{"text": " "}],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":255}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
 
 scoreboard players set @a[scores={turretTimer=..0}] turretTimer 600
-
-#Guardian Cooldown Displays
-
-execute as @a[scores={Kit=3}] run function commands:cooldowns/guardian_display
 
 #Rally (Warrior Alt. Ultimate)
 
@@ -1336,10 +1314,6 @@ execute as @e[type=snowball,tag=!lightningspellblue,nbt={Item:{components:{"mine
 
 execute as @e[type=marker,tag=lightningspellblue] unless predicate commands:riding/snowballs/is_riding_lightning_spell_blue at @s run function commands:ball/lightning_spell_landed_blue
 
-#Poseidon Cooldown Displays
-
-execute as @a[scores={Kit=9}] run function commands:cooldowns/poseidon_display
-
 #Scourge of the Seas (Poseidon Ultimate)
 
 execute as @a[scores={Ultimate=9},tag=!notAlive,predicate=!commands:inventory/scourge_of_the_seas] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players add @s scourgeTimer 1
@@ -1463,10 +1437,6 @@ execute as @a[scores={damagePan=1..,Kit=11},predicate=commands:inventory/frying_
 #Mystery Basket
 
 scoreboard players remove @a[scores={Kit=11,basketTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] basketTimer 1
-
-#Chef Cooldown Display
-
-execute as @a[scores={Kit=11}] run function commands:cooldowns/chef_display
 
 #Sheep Trainee
 
@@ -1668,9 +1638,9 @@ execute at @e[type=area_effect_cloud,tag=dRageCloud,tag=!stop] run summon minecr
 
 tag @e[type=area_effect_cloud,tag=dRageCloud] add stop
 
-#Dragon Cooldown Display
+# New Cooldown Display
 
-execute as @a[scores={Kit=12}] run function commands:cooldowns/dragon_display
+execute as @a[predicate=commands:location/battlefields/in_any_battlefield] run function commands:cooldowns/get_cooldown_information
 
 #Outrage
 
@@ -1809,6 +1779,8 @@ execute as @a[predicate=commands:effects/absorption] store result score @s absHe
 #Absorption Shield
 
 execute as @a[scores={absShieldCD=40},predicate=commands:inventory/absorption_shield] run function commands:replace/generic_ability_ready_check {custom_data:{absorptionshield:1b}}
+
+execute as @a[predicate=commands:inventory/absorption_shield] run function commands:text/absorption_shield_prep
 
 scoreboard players add @a[tag=!absShield,scores={Kit=3}] absShieldCD 1
 
@@ -2112,10 +2084,6 @@ scoreboard players add @e[type=item,tag=pCard] pCardsTimer 1
 
 kill @e[type=item,scores={pCardsTimer=12..}]
 
-#Gambler Cooldown Displays
-
-execute as @a[scores={Kit=13}] run function commands:cooldowns/gambler_display
-
 #King health lowers after Game Duration
 
 execute if entity @a[scores={End=100..}] run scoreboard players add #gameDuration gameDuration 1
@@ -2227,10 +2195,6 @@ execute as @a[scores={Kit=14,astroPassTimer=..0,jump=1..},tag=upgraded,predicate
 #Space Wrench Ability
 
 scoreboard players remove @a[scores={Kit=14,wrenchTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] wrenchTimer 1
-
-#Astronaut Cooldown Display
-
-execute as @a[scores={Kit=14}] run function commands:cooldowns/astronaut_display
 
 #Rocket Launch (Astronaut Ultimate)
 
@@ -2380,10 +2344,6 @@ scoreboard players add @a[tag=poprocks] popRocksDur 1
 
 execute as @a[scores={popRocksDur=200..}] run function commands:ultimates/pop_rocks_end
 
-#Firecracker Cooldown Display
-
-execute as @a[scores={Kit=15}] run function commands:cooldowns/firecracker_display
-
 #Firecracker Character Challenge
 
 execute as @a[team=Red,predicate=commands:effects/on_fire] run scoreboard players add #numPlayersOnFireRed firCharChallenge 1
@@ -2403,10 +2363,6 @@ scoreboard players set #numPlayersOnFireBlue firCharChallenge 0
 #Colliding Tides Stuff
 
 execute if data storage royalsiege:settings {Maps:{Classic:{value:2}}} run function commands:maps/colliding_tides_tick
-
-#School Nurse Cooldown Display
-
-execute as @a[scores={Kit=16}] run function commands:cooldowns/school_nurse_display
 
 #IV Drip
 
@@ -2607,10 +2563,6 @@ execute as @a[scores={vengeanceDur=220..}] run function commands:abilities/abili
 #Dark Warp
 
 scoreboard players remove @a[scores={darkWarpTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] darkWarpTimer 1
-
-#Necromancer Cooldown Display
-
-execute as @a[scores={Kit=17}] run function commands:cooldowns/necromancer_display
 
 #Undead Army (Necromancer Ultimate)
 

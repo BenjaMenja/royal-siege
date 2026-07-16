@@ -1,19 +1,8 @@
-execute run scoreboard players operation @s ivDripStore = @s ivDripTimer
+data modify storage pdb:main in.cooldown_data append value {"text":"Ice Pack: ","color":"green"}
+data modify storage pdb:main in.cooldown_data append value {"score":{"name":"*","objective":"icePackDis"},"color":"aqua"}
+data modify storage pdb:main in.cooldown_data append value {"text": "   "}
 
-execute store result score @s ivDripDis run scoreboard players operation @s ivDripStore /= #ticks constant
-
-scoreboard players operation @s icePackStore = @s icePackTimer
-
-execute store result score @s icePackDis run scoreboard players operation @s icePackStore /= #ticks constant
-
-scoreboard players operation @s defibrillatorStore = @s defibrillatorTimer
-
-execute store result score @s defibrillatorDis run scoreboard players operation @s defibrillatorStore /= #ticks constant
-
-title @s[predicate=!commands:inventory/defibrillator,tag=!upgraded] actionbar [{"text":"IV Drip: ","color":"green"},{"score":{"name":"*","objective":"ivDripDis"},"color":"aqua"},{"text":"   Ice Pack: ","color":"green"},{"score":{"name":"*","objective":"icePackDis"},"color":"aqua"},{"text":"   Resourceful: ","color":"green"},{"score":{"name":"*","objective":"icePackPassive"},"color":"aqua"},{"text":"/8"}]
-
-title @s[predicate=commands:inventory/defibrillator,tag=!upgraded] actionbar [{"text":"IV Drip: ","color":"green"},{"score":{"name":"*","objective":"ivDripDis"},"color":"aqua"},{"text":"   Ice Pack: ","color":"green"},{"score":{"name":"*","objective":"icePackDis"},"color":"aqua"},{"text":"   Defibrillator: ","color":"green"},{"score":{"name":"*","objective":"defibrillatorDis"},"color":"aqua"},{"text":"   Resourceful: ","color":"green"},{"score":{"name":"*","objective":"icePackPassive"},"color":"aqua"},{"text":"/8"}]
-
-title @s[predicate=!commands:inventory/defibrillator,tag=upgraded] actionbar [{"text":"IV Drip: ","color":"green"},{"score":{"name":"*","objective":"ivDripDis"},"color":"aqua"},{"text":"   Ice Pack: ","color":"green"},{"score":{"name":"*","objective":"icePackDis"},"color":"aqua"},{"text":"   Resourceful: ","color":"green"},{"score":{"name":"*","objective":"icePackPassive"},"color":"aqua"},{"text":"/6"}]
-
-title @s[predicate=commands:inventory/defibrillator,tag=upgraded] actionbar [{"text":"IV Drip: ","color":"green"},{"score":{"name":"*","objective":"ivDripDis"},"color":"aqua"},{"text":"   Ice Pack: ","color":"green"},{"score":{"name":"*","objective":"icePackDis"},"color":"aqua"},{"text":"   Defibrillator: ","color":"green"},{"score":{"name":"*","objective":"defibrillatorDis"},"color":"aqua"},{"text":"   Resourceful: ","color":"green"},{"score":{"name":"*","objective":"icePackPassive"},"color":"aqua"},{"text":"/6"}]
+data modify storage pdb:main in.cooldown_data append value {"text":"Resourceful: ","color":"green"}
+data modify storage pdb:main in.cooldown_data append value {"score":{"name":"*","objective":"icePackPassive"},"color":"aqua"}
+execute if entity @s[tag=!upgraded] run data modify storage pdb:main in.cooldown_data append value {"text":"/8"}
+execute if entity @s[tag=upgraded] run data modify storage pdb:main in.cooldown_data append value {"text":"/6"}

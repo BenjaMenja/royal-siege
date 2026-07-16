@@ -104,12 +104,12 @@
                     "id": "2943bf15-e340-4bdf-ae8b-b06e7189ded2",
                     "slot": "mainhand"
                   }
-                ]
+                ],
+                "custom_data": {
+                  "gunblade": 1,
+                  "switch": 1
+                }
               }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{gunblade:1b,switch:1b}"
             },
             {
               "function": "minecraft:toggle_tooltips",

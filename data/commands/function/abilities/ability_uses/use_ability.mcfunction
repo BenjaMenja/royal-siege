@@ -360,7 +360,7 @@ execute if entity @s[scores={blazingSpeedTimer=..0},predicate=commands:holding/b
 
 #Napalm Bucket
 
-execute at @s[scores={napalmBucketTimer=..0},predicate=commands:holding/napalm_bucket] run function commands:other/napalm_bucket_splash
+execute at @s[scores={napalmBucketTimer=..0},predicate=commands:holding/napalm_bucket] run function commands:abilities/ability_uses/napalm_bucket_splash
 
 #Pyromania
 
