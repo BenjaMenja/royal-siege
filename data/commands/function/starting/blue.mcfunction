@@ -38,7 +38,7 @@ loot replace entity @s[scores={Kit=3,BlueKit=198}] armor.feet loot commands:main
 
 loot give @s[scores={Kit=3,BlueKit=198}] loot commands:main_weapons/guardian_blade
 
-loot give @s[scores={Kit=3,BlueKit=198}] loot commands:main_abilities/defensive_spell
+loot give @s[scores={Kit=3,BlueKit=198}] loot commands:main_abilities/defensive_spell_guardian
 
 item replace entity @s[scores={Kit=3,BlueKit=198}] weapon.offhand with minecraft:shield[unbreakable={}] 1
 

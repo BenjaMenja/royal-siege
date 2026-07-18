@@ -1,3 +1,5 @@
+advancement revoke @s only commands:pickup_debris_item
+
 effect give @s instant_damage 1 0 true
 
 function commands:attributes/adds/add_debris_cannon_slow

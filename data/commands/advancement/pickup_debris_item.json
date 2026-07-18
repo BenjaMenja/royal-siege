@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": "{debrisitem:1b}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "commands:abilities/ability_effects/debris_item"
+  }
+}

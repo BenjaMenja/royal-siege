@@ -17,33 +17,33 @@
               "components": {
                 "minecraft:custom_model_data": {
                   "floats": [
-                    20
+                    19
                   ]
                 },
                 "minecraft:custom_data": {
-                  "AssaultSpell": 1,
+                  "DefensiveSpell": 1,
                   "cooldown_item": {
                     "value": 1
                   },
                   "cooldown_name": {
-                    "text": "Assault Spell: ",
+                    "text": "Defensive Spell: ",
                     "color": "green"
                   },
                   "cooldown_score": {
                     "score": {
                       "name": "*",
-                      "objective": "oSpellDis"
+                      "objective": "dSpellDis"
                     },
                     "color": "aqua"
                   }
+                },
+                "consumable": {
+                  "consume_seconds": 1000000
                 },
                 "minecraft:food": {
                   "nutrition": 0,
                   "saturation": 0,
                   "can_always_eat": true
-                },
-                "consumable": {
-                  "consume_seconds": 1000000
                 }
               }
             },
@@ -51,9 +51,9 @@
               "function": "set_name",
               "name": [
                 {
-                  "color": "#820000",
+                  "color": "#00FFBB",
                   "italic": false,
-                  "text": "Assault Spell"
+                  "text": "Defensive Spell"
                 }
               ]
             },
@@ -68,16 +68,13 @@
                 {
                   "color": "#ff771c",
                   "italic": false,
-                  "text": "Cooldown: 25s"
+                  "text": "Cooldown: 20s"
                 },
                 {
                   "text": " "
                 },
                 {
-                  "text": "Gives nearby teammates speed and strength."
-                },
-                {
-                  "text": "When used, both this and defensive spell will go on cooldown."
+                  "text": "Gives nearby teammates absorption and resistance."
                 }
               ],
               "mode": "append"

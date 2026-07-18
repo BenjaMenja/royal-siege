@@ -10,8 +10,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "Fish Cannon",
-                "color": "aqua",
+                "text": "Pay Raise",
+                "color": "gold",
                 "italic": false
               }
             },
@@ -26,30 +26,29 @@
                 {
                   "color": "#ff771c",
                   "italic": false,
-                  "text": "Cooldown: 10s"
+                  "text": "Cooldown: 15s"
                 },
                 {
                   "text": " "
                 },
                 {
-                  "text": "A handheld cannon that can shoot explosive fish concentrations."
+                  "text": "Shoots a healing beam that heals teammates when hit."
                 },
                 {
-                  "text": "Each fish dropped gives a specific effect when picked up by an enemy."
+                  "text": "If a teammate restores health from the beam, they will drop 1 Siege Coin."
+                },
+                {
+                  "text": "Cooldown is reduced to 5 seconds if it misses."
                 }
               ],
               "mode": "insert"
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{fishcannon:1b,fishcannonred:1b}"
             },
             {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": {
                   "floats": [
-                    46
+                    103
                   ]
                 },
                 "consumable": {
@@ -61,19 +60,18 @@
                   "can_always_eat": true
                 },
                 "custom_data": {
-                  "fishcannon": 1,
-                  "fishcannonred": 1,
+                  "payraise": 1,
                   "cooldown_item": {
                     "value": 1
                   },
                   "cooldown_name": {
-                    "text": "Fish Cannon: ",
+                    "text": "Pay Raise: ",
                     "color": "green"
                   },
                   "cooldown_score": {
                     "score": {
                       "name": "*",
-                      "objective": "fishCannonDis"
+                      "objective": "payRaiseDis"
                     },
                     "color": "aqua"
                   }

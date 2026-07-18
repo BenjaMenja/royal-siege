@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": "{fishcannonitemred:1b}"
+            }
+          }
+        ]
+      }
+    },
+    "blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": "{fishcannonitemblue:1b}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "red",
+      "blue"
+    ]
+  ],
+  "rewards": {
+    "function": "commands:abilities/ability_effects/fish_cannon_item_pickup"
+  }
+}

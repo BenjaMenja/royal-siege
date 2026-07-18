@@ -162,9 +162,7 @@ execute if entity @s[scores={blossomTimer=..0},predicate=commands:holding/blosso
 
 #Rooting Spell
 
-execute at @s[team=Red,scores={rootingTimer=..0},predicate=commands:holding/rooting_spell] anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/rooting_spell_start_ray
-
-execute at @s[team=Blue,scores={rootingTimer=..0},predicate=commands:holding/rooting_spell] anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/rooting_spell_blue_start_ray
+execute at @s[scores={rootingTimer=..0},predicate=commands:holding/rooting_spell] anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/rooting_spell_start_ray
 
 #Decay Aura
 
@@ -172,9 +170,7 @@ execute at @s[predicate=commands:holding/decay_aura] run function commands:ultim
 
 #Fish Cannon
 
-execute at @s[scores={fishCannonTimer=..0},predicate=commands:holding/fish_cannon_blue] run function commands:abilities/ability_uses/fish_cannon_blue
-
-execute at @s[scores={fishCannonTimer=..0},predicate=commands:holding/fish_cannon_red] run function commands:abilities/ability_uses/fish_cannon_red
+execute at @s[scores={fishCannonTimer=..0},predicate=commands:holding/fish_cannon] run function commands:abilities/ability_uses/fish_cannon
 
 #Squidzooka
 
@@ -240,9 +236,7 @@ execute if entity @s[predicate=commands:holding/killer_king] run function comman
 
 #Pay Raise
 
-execute at @s[team=Blue,scores={payRaiseTimer=..0},predicate=commands:holding/pay_raise_blue] anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/pay_raise_blue_start_ray
-
-execute at @s[team=Red,scores={payRaiseTimer=..0},predicate=commands:holding/pay_raise_red] anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/pay_raise_red_start_ray
+execute at @s[scores={payRaiseTimer=..0},predicate=commands:holding/pay_raise] anchored eyes positioned ^ ^ ^ anchored feet run function commands:raycasts/pay_raise_start_ray
 
 #Scrambled Eggs
 

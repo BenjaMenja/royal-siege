@@ -8,7 +8,7 @@
         "equipment": {
           "mainhand": {
             "predicates": {
-              "minecraft:custom_data": "{payraisered:1b}"
+              "minecraft:custom_data": "{payraise:1b}"
             }
           }
         }
@@ -21,7 +21,7 @@
         "equipment": {
           "offhand": {
             "predicates": {
-              "minecraft:custom_data": "{payraisered:1b}"
+              "minecraft:custom_data": "{payraise:1b}"
             }
           }
         }

@@ -1,337 +1,337 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/wire_cutters"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/weak_arrows"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/warrior_strength"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/warrior_shield"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/valkyrie_axe"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/tree_sap"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/thorn_bush"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/strength_stone"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/sniper_bow"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/slowing_arrows"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/running_shoes"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/rotting_potato"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/counter"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/reinforced_casing"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/punch_bow"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/magical_sword"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/lightning_rod"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/knockback_stick"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/knight_plate"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/health_stone"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/hard_ale"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/guarding_shield"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/golden_apples"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/god_apple"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/flaming_stick"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/experience_bomb"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/ender_pearls"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/chicken_bombs"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/cdrom"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/bouncy_boots"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/dutchman_blade"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/high_performance_shoes"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/poisonous_mushrooms_red"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/guardian_minion_red"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/shielding_spell"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/vigor_spell"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/rejuvenating_spell"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/sticky_boots"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/lifesteal_dagger"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/poison_dagger"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/virus_detector"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/minion_swarm_red"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/sheep_trainee_red"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/soup_of_the_day"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/specialty_dish"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/scrambled_eggs_red"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/pay_raise_red"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/outrage"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/hatchlings_red"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/crystal_cannon"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/corruption"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/elytra"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/necromantic_axe"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/exp_bomb_blaster"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/russian_roulette"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/insurance"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/inspection"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/security_guard"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/coin_gun"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/debris_cannon"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/gravity_canceler"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/rocket_boosters"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/safety_tether"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/steel_boots"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/enhanced_space_helmet"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/bang_snap_red"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/napalm_bucket"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/bunker_boots"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/pyromania"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/cinder_bombs_red"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/cinder_bombs_blue"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/defibrillator"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/inhaler_red"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/live_attenuated_vaccine"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/light_up_shoes"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/first_aid_kit_red"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/necro_bone_red"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/mind_inversion_red"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/undead_whistle"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/vengeance"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/broodmother_spider"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "value": "commands:shop_items/dark_warp"
-          }
-        ]
-      }
-    ]
-  }
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/wire_cutters"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/weak_arrows"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/warrior_strength"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/warrior_shield"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/valkyrie_axe"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/tree_sap"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/thorn_bush"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/strength_stone"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/sniper_bow"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/slowing_arrows"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/running_shoes"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/rotting_potato"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/counter"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/reinforced_casing"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/punch_bow"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/magical_sword"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/lightning_rod"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/knockback_stick"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/knight_plate"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/health_stone"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/hard_ale"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/guarding_shield"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/golden_apples"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/god_apple"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/flaming_stick"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/experience_bomb"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/ender_pearls"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/chicken_bombs"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/cdrom"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/bouncy_boots"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/dutchman_blade"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/high_performance_shoes"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/poisonous_mushrooms_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/guardian_minion_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/shielding_spell"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/vigor_spell"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/rejuvenating_spell"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/sticky_boots"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/lifesteal_dagger"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/poison_dagger"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/virus_detector"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/minion_swarm_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/sheep_trainee_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/soup_of_the_day"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/specialty_dish"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/scrambled_eggs_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/pay_raise"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/outrage"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/hatchlings_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/crystal_cannon"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/corruption"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/elytra"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/necromantic_axe"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/exp_bomb_blaster"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/russian_roulette"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/insurance"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/inspection"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/security_guard"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/coin_gun"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/debris_cannon"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/gravity_canceler"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/rocket_boosters"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/safety_tether"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/steel_boots"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/enhanced_space_helmet"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/bang_snap_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/napalm_bucket"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/bunker_boots"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/pyromania"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/cinder_bombs_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/cinder_bombs_blue"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/defibrillator"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/inhaler_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/live_attenuated_vaccine"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/light_up_shoes"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/first_aid_kit_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/necro_bone_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/mind_inversion_red"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/undead_whistle"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/vengeance"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/broodmother_spider"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "commands:shop_items/dark_warp"
+        }
+      ]
+    }
+  ]
+}

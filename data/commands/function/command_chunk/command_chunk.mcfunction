@@ -1258,10 +1258,6 @@ execute as @e[type=item,tag=fishCannon] at @s store result score @s nearbyBlocks
 
 execute as @e[type=item,tag=fishCannon,scores={nearbyBlocks=1..}] at @s run function commands:abilities/ability_effects/fish_cannon
 
-execute as @a[team=Red,predicate=commands:inventory/fish_cannon_item_blue] run function commands:abilities/ability_effects/fish_cannon_item_blue
-
-execute as @a[team=Blue,predicate=commands:inventory/fish_cannon_item_red] run function commands:abilities/ability_effects/fish_cannon_item_red
-
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{fishcannonitemred:1b}}}}] at @s run data modify entity @s Owner set from entity @p[team=Blue] UUID
 
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{fishcannonitemblue:1b}}}}] at @s run data modify entity @s Owner set from entity @p[team=Red] UUID
@@ -2177,10 +2173,6 @@ scoreboard players add @e[type=area_effect_cloud,tag=tetherSpot] tetherTimer 1
 scoreboard players remove @a[scores={debrisTimer=1..},predicate=commands:inventory/debris_cannon,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] debrisTimer 1
 
 kill @e[type=item,tag=debrisitem,nbt={OnGround:1b}]
-
-execute as @e[type=#commands:projectile_hits,team=Red,predicate=commands:inventory/debris_item_blue] run function commands:abilities/ability_effects/debris_item
-
-execute as @e[type=#commands:projectile_hits,team=Blue,predicate=commands:inventory/debris_item_red] run function commands:abilities/ability_effects/debris_item
 
 execute as @e[type=item,tag=redDebris] at @s run data modify entity @s Owner set from entity @p[team=Blue] UUID
 
