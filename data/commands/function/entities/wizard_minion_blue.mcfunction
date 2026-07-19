@@ -1,1 +1,3 @@
 summon minecraft:zombie ~ ~ ~ {CustomNameVisible:1b,Team:"Blue",Health:12f,IsBaby:1b,Tags:["WM","Minion"],CustomName:"Wizard Minion",equipment:{chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:dyed_color":1184511}},mainhand:{id:"minecraft:wooden_sword",count:1,components:{"minecraft:enchantments":{"sharpness":2}}}},drop_chances:{chest:0.000,mainhand:0.000},active_effects:[{id:"minecraft:fire_resistance",amplifier:0,duration:100000,show_particles:0b}],attributes:[{id:"minecraft:max_health",base:12},{id:"minecraft:movement_speed",base:0.2}]}
+
+scoreboard players operation @n[type=zombie,tag=WM,team=Red] UUID = @s UUID

@@ -436,9 +436,9 @@ execute as @a[scores={Kit=8,blossomTimer=1..},predicate=commands:location/battle
 
 execute as @a[scores={Kit=8,rootingTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s rootingTimer 1
 
-execute at @a[team=Red,scores={hFruitTimer=..0}] run loot spawn ~ ~ ~ loot commands:main_abilities/healing_fruit_red
+execute at @a[team=Red,scores={Kit=8,hFruitTimer=..0}] run loot spawn ~ ~ ~ loot commands:main_abilities/healing_fruit_red
 
-execute at @a[team=Blue,scores={hFruitTimer=..0}] run loot spawn ~ ~ ~ loot commands:main_abilities/healing_fruit_blue
+execute at @a[team=Blue,scores={Kit=8,hFruitTimer=..0}] run loot spawn ~ ~ ~ loot commands:main_abilities/healing_fruit_blue
 
 scoreboard players set @a[scores={hFruitTimer=..0}] hFruitTimer 400
 
@@ -530,9 +530,9 @@ kill @e[type=armor_stand,scores={Treeremove=200..}]
 
 scoreboard players remove @a[scores={Kit=7},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] fakeTimer 1
 
-loot give @a[team=Red,scores={fakeTimer=..0}] loot commands:main_abilities/fake_money_red
+loot give @a[team=Red,scores={Kit=7,fakeTimer=..0}] loot commands:main_abilities/fake_money_red
 
-loot give @a[team=Blue,scores={fakeTimer=..0}] loot commands:main_abilities/fake_money_blue
+loot give @a[team=Blue,scores={Kit=7,fakeTimer=..0}] loot commands:main_abilities/fake_money_blue
 
 execute as @a[scores={Kit=7}] at @s run function commands:cooldowns/pirate_display
 
@@ -608,7 +608,7 @@ execute as @a[nbt={AbsorptionAmount:0.0f}] run effect clear @s absorption
 
 execute as @a[scores={Kit=6},predicate=!commands:inventory/withering_potion,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s witherTimer 1
 
-loot give @a[scores={witherTimer=..0}] loot commands:main_abilities/withering_potion
+loot give @a[scores={Kit=6,witherTimer=..0}] loot commands:main_abilities/withering_potion
 
 scoreboard players set @a[scores={witherTimer=..0}] witherTimer 900
 
@@ -632,9 +632,9 @@ scoreboard players set @a[scores={dashcharge=361..},tag=!wrenched] dashcharge 36
 
 scoreboard players remove @a[scores={Kit=2},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] NinjaItems 1
 
-loot give @a[team=Red,scores={NinjaItems=..0}] loot commands:main_abilities/smoke_bomb_red
+loot give @a[team=Red,scores={Kit=2,NinjaItems=..0}] loot commands:main_abilities/smoke_bomb_red
 
-loot give @a[team=Blue,scores={NinjaItems=..0}] loot commands:main_abilities/smoke_bomb_blue
+loot give @a[team=Blue,scores={Kit=2,NinjaItems=..0}] loot commands:main_abilities/smoke_bomb_blue
 
 scoreboard players set @a[scores={NinjaItems=..0}] NinjaItems 900
 
@@ -934,9 +934,9 @@ execute as @a[scores={Kit=3,defensiveSpell=1..},predicate=commands:location/batt
 
 scoreboard players remove @a[scores={Kit=3},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] turretTimer 1
 
-give @a[team=Red,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name={"color":"#B8481F","italic":false,"text":"Turret"},lore=[{"color":"yellow","italic":false,"text":"Placeable"},{"text": " "}],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
+give @a[team=Red,scores={Kit=3,turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name={"color":"#B8481F","italic":false,"text":"Turret"},lore=[{"color":"yellow","italic":false,"text":"Placeable"},{"text": " "}],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Red",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16711680}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
 
-give @a[team=Blue,scores={turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name={"color":"#B8481F","italic":false,"text":"Turret"},lore=[{"color":"yellow","italic":false,"text":"Placeable"},{"text": " "}],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":255}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
+give @a[team=Blue,scores={Kit=3,turretTimer=..0}] minecraft:skeleton_spawn_egg[can_place_on={blocks:"#commands:can_place_on"},tooltip_display={hidden_components:["minecraft:can_place_on"]},custom_name={"color":"#B8481F","italic":false,"text":"Turret"},lore=[{"color":"yellow","italic":false,"text":"Placeable"},{"text": " "}],custom_data={turret:1b},entity_data={id:"minecraft:skeleton",Silent:1b,Team:"Blue",Health:25f,Tags:["turret"],equipment:{mainhand:{id:"minecraft:bow",count:1,components:{"minecraft:enchantments":{"minecraft:power":4}}},chest:{id:"minecraft:leather_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":255}},head:{id:"minecraft:dispenser",count:1}},drop_chances:{mainhand:0.0,chest:0.0,head:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:200000}],attributes:[{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:movement_speed",base:-1.0}]}] 1
 
 scoreboard players set @a[scores={turretTimer=..0}] turretTimer 600
 
@@ -1288,15 +1288,15 @@ scoreboard players add #poseidonvoicered voicelineCD 1
 
 scoreboard players add #poseidonvoiceblue voicelineCD 1
 
-#Poseidon Passive (Lightning Spells)
+#Lightning Spell
 
 scoreboard players remove @a[scores={Kit=9,multiItems=..4},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive,tag=!upgraded] poseidonPassive 1
 
 scoreboard players remove @a[scores={Kit=9,multiItems=..7},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive,tag=upgraded] poseidonPassive 1
 
-loot give @a[team=Red,scores={poseidonPassive=..0}] loot commands:main_abilities/lightning_spell_red
+loot give @a[team=Red,scores={Kit=9,poseidonPassive=..0}] loot commands:main_abilities/lightning_spell_red
 
-loot give @a[team=Blue,scores={poseidonPassive=..0}] loot commands:main_abilities/lightning_spell_blue
+loot give @a[team=Blue,scores={Kit=9,poseidonPassive=..0}] loot commands:main_abilities/lightning_spell_blue
 
 scoreboard players set @a[tag=!upgraded,scores={poseidonPassive=..0}] poseidonPassive 200
 
@@ -2380,9 +2380,9 @@ execute as @a[team=Blue,tag=ivAttached] at @s positioned ~ ~1.5 ~ as @n[type=arm
 
 scoreboard players remove @a[scores={Kit=16,multiItems=..1},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] icePackTimer 1
 
-loot give @a[team=Red,scores={icePackTimer=..0}] loot commands:main_abilities/ice_pack_red
+loot give @a[team=Red,scores={Kit=16,icePackTimer=..0}] loot commands:main_abilities/ice_pack_red
 
-loot give @a[team=Blue,scores={icePackTimer=..0}] loot commands:main_abilities/ice_pack_blue
+loot give @a[team=Blue,scores={Kit=16,icePackTimer=..0}] loot commands:main_abilities/ice_pack_blue
 
 scoreboard players set @a[scores={icePackTimer=..0}] icePackTimer 200
 

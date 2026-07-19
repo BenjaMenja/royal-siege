@@ -21,7 +21,7 @@
     },
     "title": "Royal Siege Challenges",
     "description": "All Royal Siege Challenges",
-    "background": "minecraft:textures/block/gold_block.png",
+    "background": "minecraft:block/gold_block",
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": false

@@ -21,7 +21,7 @@
     },
     "title": "Royal Siege Hidden Advancements",
     "description": "All Royal Siege hidden advancements!",
-    "background": "minecraft:textures/block/gilded_blackstone.png",
+    "background": "minecraft:block/gilded_blackstone",
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": false

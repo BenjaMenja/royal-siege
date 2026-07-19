@@ -5,7 +5,7 @@
     },
     "title": "Royal Siege Character Challenges",
     "description": "All Royal Siege character challenges!",
-    "background": "minecraft:textures/block/raw_gold_block.png",
+    "background": "minecraft:block/raw_gold_block",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
