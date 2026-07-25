@@ -46,11 +46,7 @@
       "item": {
         "id": "snowball",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              48
-            ]
-          },
+          "minecraft:item_model": "royalsiege:charger",
           "minecraft:item_name": {
             "text": "Charger",
             "italic": false
@@ -164,11 +160,7 @@
               "text": "Summons a swarm of wizard minions."
             }
           ],
-          "custom_model_data": {
-            "floats": [
-              4
-            ]
-          }
+          "minecraft:item_model": "royalsiege:minion_swarm"
         }
       },
       "show_tooltip": true,
@@ -231,11 +223,7 @@
               "text": "Each bottle is loaded with explosives."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              140
-            ]
-          }
+          "minecraft:item_model": "royalsiege:exp_bomb_blaster"
         }
       },
       "show_tooltip": true,
@@ -260,11 +248,7 @@
               "text": "Decreases the cooldown for wizard minion spawns to 16s."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

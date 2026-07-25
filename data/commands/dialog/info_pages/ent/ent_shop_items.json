@@ -46,11 +46,7 @@
       "item": {
         "id": "wooden_sword",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              60
-            ]
-          },
+          "minecraft:item_model": "royalsiege:magical_wood_sword",
           "minecraft:item_name": {
             "text": "Magical Wood Sword",
             "color": "yellow",
@@ -197,11 +193,7 @@
               "text": "Set your enemies ablaze."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              55
-            ]
-          },
+          "minecraft:item_model": "royalsiege:flaming_stick",
           "minecraft:enchantments": {
             "minecraft:fire_aspect": 3
           }
@@ -245,11 +237,7 @@
               "text": "The cloud grows in size if a player stands in it."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              33
-            ]
-          }
+          "minecraft:item_model": "royalsiege:poisonous_mushroom"
         }
       },
       "show_tooltip": true,
@@ -274,11 +262,7 @@
               "text": "Natural Gift's duration is increased from 2s to 4s."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

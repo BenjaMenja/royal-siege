@@ -59,11 +59,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              184
-            ]
-          },
+          "minecraft:item_model": "royalsiege:sparkler",
           "minecraft:item_name": {
             "text": "Sparkler",
             "color": "#FAFF70",
@@ -132,11 +128,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              187
-            ]
-          },
+          "minecraft:item_model": "royalsiege:blazing_speed",
           "minecraft:item_name": {
             "color": "#FFC300",
             "italic": false,

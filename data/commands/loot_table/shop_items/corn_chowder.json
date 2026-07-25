@@ -3,7 +3,7 @@
     {
       "rolls": 1,
       "entries": [
-        {        
+        {
           "type": "minecraft:item",
           "name": "minecraft:mushroom_stew",
           "functions": [
@@ -42,11 +42,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    99
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:corn_chowder",
                 "minecraft:enchantments": {
                   "minecraft:fire_aspect": 2
                 }

@@ -53,11 +53,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    60
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:magical_wood_sword",
                 "minecraft:unbreakable": {},
                 "tooltip_display": {
                   "hidden_components": [

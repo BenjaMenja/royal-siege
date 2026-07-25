@@ -47,11 +47,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    107
-                  ]
-                }
+                "minecraft:item_model": "royalsiege:toxin_ball"
               }
             },
             {

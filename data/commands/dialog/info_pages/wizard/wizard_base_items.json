@@ -59,11 +59,7 @@
       "item": {
         "id": "blaze_rod",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              157
-            ]
-          },
+          "minecraft:item_model": "royalsiege:worn_out_staff",
           "attribute_modifiers": [
             {
               "type": "attack_damage",
@@ -131,11 +127,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              2
-            ]
-          },
+          "minecraft:item_model": "royalsiege:lightning_staff",
           "minecraft:item_name": {
             "text": "Lightning Staff",
             "color": "aqua",
@@ -186,11 +178,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              1
-            ]
-          },
+          "minecraft:item_model": "royalsiege:fireball_launcher",
           "minecraft:item_name": {
             "color": "red",
             "italic": false,
@@ -227,11 +215,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              3
-            ]
-          },
+          "minecraft:item_model": "royalsiege:eject_button",
           "minecraft:item_name": {
             "color": "green",
             "text": "Eject Button",

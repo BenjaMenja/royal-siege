@@ -40,11 +40,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    173
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:debris_cannon",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

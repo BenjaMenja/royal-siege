@@ -49,11 +49,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    213
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:vengeance",
                 "minecraft:enchantment_glint_override": true,
                 "consumable": {
                   "consume_seconds": 1000000

@@ -53,11 +53,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    194
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:pop_rocks",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

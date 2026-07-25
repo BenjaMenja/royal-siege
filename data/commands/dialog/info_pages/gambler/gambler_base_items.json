@@ -59,11 +59,7 @@
       "item": {
         "id": "stick",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              142
-            ]
-          },
+          "minecraft:item_model": "royalsiege:stylish_cane",
           "minecraft:item_name": {
             "color": "dark_blue",
             "italic": false,
@@ -105,11 +101,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              151
-            ]
-          },
+          "minecraft:item_model": "royalsiege:playing_cards",
           "minecraft:item_name": {
             "color": "green",
             "italic": false,

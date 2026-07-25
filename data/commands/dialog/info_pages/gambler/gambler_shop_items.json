@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              143
-            ]
-          },
+          "minecraft:item_model": "royalsiege:russian_roulette",
           "minecraft:item_name": {
             "text": "Russian Roulette",
             "color": "gold",
@@ -103,11 +99,7 @@
               "text": "Failure to kill the bounty will result in a loss of money!"
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              200
-            ]
-          }
+          "minecraft:item_model": "royalsiege:betting_chips"
         }
       },
       "show_tooltip": true,
@@ -136,11 +128,7 @@
               "text": "Money that was in their inventory will still be dropped."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              144
-            ]
-          }
+          "minecraft:item_model": "royalsiege:insurance"
         }
       },
       "show_tooltip": true,
@@ -180,11 +168,7 @@
               "text": "Is consumed upon use."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              145
-            ]
-          }
+          "minecraft:item_model": "royalsiege:inspection"
         }
       },
       "show_tooltip": true,
@@ -224,11 +208,7 @@
               "text": "You can have a max of 2 guards in your inventory and on the field at once."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              146
-            ]
-          }
+          "minecraft:item_model": "royalsiege:security_guard"
         }
       },
       "show_tooltip": true,
@@ -268,11 +248,7 @@
               "text": "Consumes 100 Siege Bucks per shot."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              147
-            ]
-          }
+          "minecraft:item_model": "royalsiege:coin_gun"
         }
       },
       "show_tooltip": true,
@@ -297,11 +273,7 @@
               "text": "Increases the chance for an additional coin to drop from enemy deaths from 25% to 50%."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

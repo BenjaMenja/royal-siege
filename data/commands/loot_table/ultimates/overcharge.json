@@ -46,11 +46,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    75
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:overcharge",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

@@ -59,11 +59,7 @@
       "item": {
         "id": "golden_sword",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              156
-            ]
-          },
+          "minecraft:item_model": "royalsiege:golden_cutlass",
           "attribute_modifiers": [
             {
               "type": "attack_damage",
@@ -131,11 +127,7 @@
       "item": {
         "id": "gold_ingot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              148
-            ]
-          },
+          "minecraft:item_model": "royalsiege:siege_coin",
           "minecraft:item_name": {
             "text": "Fake Money",
             "italic": false
@@ -170,11 +162,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              118
-            ]
-          },
+          "minecraft:item_model": "royalsiege:blunderbuss",
           "minecraft:item_name": {
             "text": "Blunderbuss",
             "color": "yellow",

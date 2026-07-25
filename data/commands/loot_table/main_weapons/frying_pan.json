@@ -48,11 +48,7 @@
                 "minecraft:enchantments": {
                   "minecraft:knockback": 1
                 },
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    92
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:frying_pan",
                 "minecraft:unbreakable": {},
                 "tooltip_display": {
                   "hidden_components": [

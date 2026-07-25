@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              193
-            ]
-          },
+          "minecraft:item_model": "royalsiege:chrysanthemum_shell",
           "minecraft:item_name": {
             "text": "Chrysanthemum Shell",
             "color": "#FF9900",
@@ -99,11 +95,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              194
-            ]
-          },
+          "minecraft:item_model": "royalsiege:pop_rocks",
           "minecraft:item_name": {
             "text": "Pop Rocks",
             "color": "#FFD940",

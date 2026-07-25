@@ -1,6 +1,6 @@
 tag @s add ejecting
 
-execute at @s anchored eyes run summon snowball ^ ^ ^1 {Tags:["ejectitem"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:custom_model_data":{floats:[3]}}}}
+execute at @s anchored eyes run summon snowball ^ ^ ^1 {Tags:["ejectitem"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:item_model":"royalsiege:eject_button"}}}
 
 execute as @e[type=item,tag=ejectitem] run data modify entity @s Owner set from entity @a[tag=ejecting,limit=1] UUID
 

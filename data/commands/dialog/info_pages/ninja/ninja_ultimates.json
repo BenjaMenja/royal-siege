@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              66
-            ]
-          },
+          "minecraft:item_model": "royalsiege:shadow_step",
           "tooltip_display": {
             "hidden_components": [
               "attribute_modifiers"
@@ -98,11 +94,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              137
-            ]
-          },
+          "minecraft:item_model": "royalsiege:invisibility_cloak",
           "minecraft:item_name": {
             "text": "Invisibility Cloak",
             "color": "gray",

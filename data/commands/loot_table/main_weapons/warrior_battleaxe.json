@@ -16,16 +16,15 @@
               "function": "set_components",
               "components": {
                 "minecraft:unbreakable": {},
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    153
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:warriors_battleaxe",
                 "minecraft:custom_data": {
                   "warrioraxe": 1
                 },
                 "tooltip_display": {
-                  "hidden_components": ["attribute_modifiers", "unbreakable"]
+                  "hidden_components": [
+                    "attribute_modifiers",
+                    "unbreakable"
+                  ]
                 },
                 "minecraft:attribute_modifiers": [
                   {

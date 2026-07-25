@@ -56,11 +56,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    193
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:chrysanthemum_shell",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

@@ -47,11 +47,7 @@
         "id": "gold_ingot",
         "count": 3,
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              148
-            ]
-          },
+          "minecraft:item_model": "royalsiege:siege_coin",
           "minecraft:item_name": {
             "text": "Fake Money",
             "italic": false
@@ -105,11 +101,7 @@
               "italic": false
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              54
-            ]
-          },
+          "minecraft:item_model": "royalsiege:dutchman_blade",
           "minecraft:enchantments": {
             "minecraft:smite": 1
           }
@@ -158,11 +150,7 @@
               "text": "It will also instantly explode if set on fire."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              28
-            ]
-          }
+          "minecraft:item_model": "royalsiege:powder_keg"
         }
       },
       "show_tooltip": true,
@@ -188,11 +176,7 @@
               "text": "but makes you quite tipsy."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              56
-            ]
-          },
+          "minecraft:item_model": "royalsiege:hard_ale",
           "minecraft:potion_contents": {
             "custom_color": 16756257,
             "custom_effects": [
@@ -258,11 +242,7 @@
               "text": "You and the victim will be forced to face each other and will be slowed on hit."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              29
-            ]
-          },
+          "minecraft:item_model": "royalsiege:chain_hook",
           "minecraft:enchantment_glint_override": true
         }
       },
@@ -303,11 +283,7 @@
               "text": "Consumes 100 Siege Bucks per shot."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              147
-            ]
-          }
+          "minecraft:item_model": "royalsiege:coin_gun"
         }
       },
       "show_tooltip": true,
@@ -332,11 +308,7 @@
               "text": "Every 5 siege coins you deposit will grant you an additional 200 siege bucks."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

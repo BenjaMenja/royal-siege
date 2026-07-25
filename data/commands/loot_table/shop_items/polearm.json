@@ -53,14 +53,12 @@
                 "minecraft:custom_data": {
                   "polearm": 1
                 },
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    183
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:polearm",
                 "minecraft:unbreakable": {},
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable"]
+                  "hidden_components": [
+                    "unbreakable"
+                  ]
                 }
               }
             },

@@ -62,11 +62,7 @@
       "item": {
         "id": "iron_shovel",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              92
-            ]
-          },
+          "minecraft:item_model": "royalsiege:frying_pan",
           "tooltip_display": {
             "hidden_components": [
               "attribute_modifiers"
@@ -116,11 +112,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              94
-            ]
-          },
+          "minecraft:item_model": "royalsiege:mystery_basket",
           "minecraft:item_name": {
             "color": "#FFC380",
             "italic": false,

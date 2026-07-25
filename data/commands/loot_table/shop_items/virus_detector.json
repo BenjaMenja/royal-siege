@@ -44,11 +44,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    44
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:virus_detector",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

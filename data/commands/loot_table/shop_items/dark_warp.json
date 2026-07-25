@@ -46,11 +46,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    215
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:dark_warp",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

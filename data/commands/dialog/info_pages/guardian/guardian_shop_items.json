@@ -46,11 +46,7 @@
       "item": {
         "id": "stick",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              57
-            ]
-          },
+          "minecraft:item_model": "royalsiege:knockback_stick",
           "minecraft:item_name": {
             "text": "Knockback Stick"
           },
@@ -197,11 +193,7 @@
               "text": "based off of the amount of damage you took."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              121
-            ]
-          }
+          "minecraft:item_model": "royalsiege:counter"
         }
       },
       "show_tooltip": true,
@@ -250,11 +242,7 @@
               "text": "You will also receive -10% movement speed while channeling the barrier."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              122
-            ]
-          },
+          "minecraft:item_model": "royalsiege:absorption_shield",
           "minecraft:enchantment_glint_override": true
         }
       },
@@ -333,11 +321,7 @@
               "text": "Your resistance effect will last an additional 8s when a teammate moves away from you."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

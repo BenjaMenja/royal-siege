@@ -60,17 +60,13 @@
     "mode": "replace_all"
   },
   {
-    "function": "minecraft:set_components",
-    "components": {
-      "minecraft:custom_model_data": {
-        "floats": [
-          161
-        ]
-      }
-    }
-  },
-  {
     "function": "minecraft:set_custom_data",
     "tag": "{switch:4b}"
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "item_model": "royalsiege:gunblade_darkness"
+    }
   }
 ]

@@ -30,11 +30,7 @@
       "item": {
         "id": "bat_spawn_egg",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              116
-            ]
-          },
+          "minecraft:item_model": "royalsiege:meteor_shower",
           "minecraft:item_name": {
             "color": "#FF0ABE",
             "italic": false,
@@ -80,11 +76,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              117
-            ]
-          },
+          "minecraft:item_model": "royalsiege:evolution",
           "minecraft:item_name": {
             "text": "Evolution",
             "color": "#A100FF",

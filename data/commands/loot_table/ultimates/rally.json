@@ -52,11 +52,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    65
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:rally",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

@@ -54,11 +54,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    59
-                  ]
-                }
+                "minecraft:item_model": "royalsiege:magic_wand"
               }
             },
             {

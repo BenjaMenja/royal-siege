@@ -30,11 +30,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              111
-            ]
-          },
+          "minecraft:item_model": "royalsiege:outrage",
           "minecraft:item_name": {
             "text": "Outrage",
             "color": "#B74AFF",
@@ -100,11 +96,7 @@
               "text": "Up to 10 can exist at once."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              112
-            ]
-          }
+          "minecraft:item_model": "royalsiege:hatchlings"
         }
       },
       "show_tooltip": true,
@@ -144,11 +136,7 @@
               "text": "The end crystal charges for 3 seconds, after which it explodes in a huge radius, damaging everything nearby."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              113
-            ]
-          }
+          "minecraft:item_model": "royalsiege:crystal_cannon"
         }
       },
       "show_tooltip": true,
@@ -191,11 +179,7 @@
               "text": "This ability affects all players, including enemies."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              114
-            ]
-          }
+          "minecraft:item_model": "royalsiege:corruption"
         }
       },
       "show_tooltip": true,
@@ -266,11 +250,7 @@
               "italic": false
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              115
-            ]
-          },
+          "minecraft:item_model": "royalsiege:necromantic_axe",
           "tooltip_display": {
             "hidden_components": [
               "attribute_modifiers"
@@ -300,11 +280,7 @@
               "text": "Lifts the ender curse, allowing you to receive all buffs."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

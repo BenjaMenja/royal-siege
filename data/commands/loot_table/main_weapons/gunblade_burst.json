@@ -76,11 +76,7 @@
                     "minecraft:unbreakable"
                   ]
                 },
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    16
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:gunblade_burst",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

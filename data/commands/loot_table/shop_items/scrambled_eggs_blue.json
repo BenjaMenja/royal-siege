@@ -43,11 +43,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    102
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:scrambled_eggs",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

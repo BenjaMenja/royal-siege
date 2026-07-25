@@ -16,11 +16,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:unbreakable": {},
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    156
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:golden_cutlass",
                 "minecraft:custom_data": {
                   "goldencutlass": 1
                 },

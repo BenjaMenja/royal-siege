@@ -46,11 +46,7 @@
       "item": {
         "id": "bow",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              23
-            ]
-          },
+          "minecraft:item_model": "royalsiege:sniper_bow",
           "minecraft:item_name": {
             "text": "Sniper Bow",
             "italic": false
@@ -107,11 +103,7 @@
               "text": "Can fire a single arrow before going on cooldown."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              62
-            ]
-          },
+          "minecraft:item_model": "royalsiege:punch_bow",
           "minecraft:enchantments": {
             "minecraft:punch": 4,
             "minecraft:infinity": 1
@@ -225,11 +217,7 @@
               "unbreakable"
             ]
           },
-          "minecraft:custom_model_data": {
-            "floats": [
-              38
-            ]
-          }
+          "minecraft:item_model": "royalsiege:polearm"
         }
       },
       "show_tooltip": true,
@@ -335,11 +323,7 @@
               "text": "Increases the speed cap for Hit and Run to +50%."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:high_performance_shoes"
         }
       },
       "show_tooltip": true,

@@ -45,13 +45,8 @@
       "type": "minecraft:item",
       "item": {
         "id": "bat_spawn_egg",
-        "count": 3,
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              134
-            ]
-          },
+          "minecraft:item_model": "royalsiege:oven_closed",
           "minecraft:item_name": {
             "text": "Oven",
             "color": "gray",
@@ -127,11 +122,7 @@
               "text": "Each soup is a weapon that has different effects."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              99
-            ]
-          }
+          "minecraft:item_model": "royalsiege:split_pea_soup"
         }
       },
       "show_tooltip": true,
@@ -155,11 +146,7 @@
               "text": "A beautiful blend of luxury foods."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              101
-            ]
-          },
+          "minecraft:item_model": "royalsiege:specialty_dish",
           "consumable": {
             "consume_seconds": 1.6,
             "animation": "eat",
@@ -252,11 +239,7 @@
               "text": "Scrambles up an enemy's hotbar on hit."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              102
-            ]
-          }
+          "minecraft:item_model": "royalsiege:scrambled_eggs"
         }
       },
       "show_tooltip": true,
@@ -299,11 +282,7 @@
               "text": "Cooldown is reduced to 5 seconds if it misses."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              103
-            ]
-          }
+          "minecraft:item_model": "royalsiege:pay_raise"
         }
       },
       "show_tooltip": true,
@@ -328,11 +307,7 @@
               "text": "Increases the fire aspect level of Cooking with Fire by 1 and the regeneration duration by 1s."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

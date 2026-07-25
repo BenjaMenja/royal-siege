@@ -49,11 +49,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    79
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:decay_aura",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

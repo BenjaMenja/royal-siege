@@ -42,11 +42,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    100
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:french_onion_soup",
                 "minecraft:enchantment_glint_override": true
               }
             },

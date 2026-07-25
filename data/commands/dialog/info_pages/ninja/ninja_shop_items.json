@@ -166,11 +166,7 @@
               "italic": false
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              58
-            ]
-          },
+          "minecraft:item_model": "royalsiege:lifesteal_dagger",
           "tooltip_display": {
             "hidden_components": [
               "minecraft:attribute_modifiers"
@@ -217,11 +213,7 @@
               "italic": false
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              61
-            ]
-          },
+          "minecraft:item_model": "royalsiege:poison_dagger",
           "minecraft:enchantment_glint_override": true,
           "tooltip_display": {
             "hidden_components": [
@@ -278,11 +270,7 @@
               "text": "Powerup now refunds all of your dashes instead of just one."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

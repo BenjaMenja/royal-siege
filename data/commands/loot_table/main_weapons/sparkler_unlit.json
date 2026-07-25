@@ -53,11 +53,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    185
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:sparkler_unlit",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

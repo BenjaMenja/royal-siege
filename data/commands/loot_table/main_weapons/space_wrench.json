@@ -16,11 +16,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:unbreakable": {},
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    171
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:space_wrench",
                 "minecraft:custom_data": {
                   "spacewrench": 1,
                   "cooldown_item": {

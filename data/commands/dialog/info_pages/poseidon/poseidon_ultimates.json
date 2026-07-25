@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              80
-            ]
-          },
+          "minecraft:item_model": "royalsiege:scourge_of_the_seas",
           "minecraft:item_name": {
             "text": "Scourge of the Seas",
             "color": "dark_aqua",
@@ -93,11 +89,7 @@
       "item": {
         "id": "elder_guardian_spawn_egg",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              81
-            ]
-          },
+          "minecraft:item_model": "royalsiege:terror_of_the_seas",
           "minecraft:item_name": {
             "color": "#0011FF",
             "italic": false,

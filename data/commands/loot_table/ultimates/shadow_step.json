@@ -50,11 +50,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    66
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:shadow_step",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

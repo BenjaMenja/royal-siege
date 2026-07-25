@@ -46,11 +46,7 @@
       "item": {
         "id": "shield",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              64
-            ]
-          },
+          "minecraft:item_model": "royalsiege:warrior_shield",
           "minecraft:item_name": "Warrior Shield",
           "minecraft:lore": [
             {
@@ -204,11 +200,7 @@
               "text": "Increases attack damage when in your offhand."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              7
-            ]
-          },
+          "minecraft:item_model": "royalsiege:strength_stone",
           "minecraft:enchantment_glint_override": true,
           "attribute_modifiers": [
             {
@@ -255,11 +247,7 @@
               "text": "Your slowness effect power is increased to -20%."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

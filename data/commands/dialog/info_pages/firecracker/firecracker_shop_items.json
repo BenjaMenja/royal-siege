@@ -47,11 +47,7 @@
         "id": "snowball",
         "count": 4,
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              189
-            ]
-          },
+          "minecraft:item_model": "royalsiege:bang_snap",
           "minecraft:item_name": {
             "text": "Bang Snap",
             "color": "#FF763B",
@@ -168,11 +164,7 @@
               "text": "and slowing them by 15% for 5s."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              190
-            ]
-          }
+          "minecraft:item_model": "royalsiege:napalm_bucket"
         }
       },
       "show_tooltip": true,
@@ -219,11 +211,7 @@
               "text": "Can have a maximum of 4 at once."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              192
-            ]
-          }
+          "minecraft:item_model": "royalsiege:cinder_bomb"
         }
       },
       "show_tooltip": true,
@@ -275,11 +263,7 @@
               "text": "Lasts 5s."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              191
-            ]
-          }
+          "minecraft:item_model": "royalsiege:pyromania"
         }
       },
       "show_tooltip": true,
@@ -304,11 +288,7 @@
               "text": "Increases the sparkler damage increase on elimination to +3.5."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

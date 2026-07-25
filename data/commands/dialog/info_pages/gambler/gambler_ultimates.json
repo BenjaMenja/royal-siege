@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              149
-            ]
-          },
+          "minecraft:item_model": "royalsiege:busted",
           "minecraft:item_name": {
             "text": "Busted!",
             "color": "gold",
@@ -90,11 +86,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              166
-            ]
-          },
+          "minecraft:item_model": "royalsiege:sleight_of_hand",
           "minecraft:item_name": {
             "text": "Sleight of Hand",
             "color": "yellow",

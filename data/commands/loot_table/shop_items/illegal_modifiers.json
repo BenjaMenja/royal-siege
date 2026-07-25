@@ -27,11 +27,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    45
-                  ]
-                }
+                "minecraft:item_model": "royalsiege:illegal_modifiers"
               }
             },
             {

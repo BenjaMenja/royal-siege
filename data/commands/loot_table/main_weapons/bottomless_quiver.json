@@ -17,11 +17,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    12
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:bottomless_quiver",
                 "minecraft:custom_data": {
                   "bottomlessquiver": 1
                 }

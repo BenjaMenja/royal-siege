@@ -23,11 +23,7 @@
                 "minecraft:can_place_on": {
                   "blocks": "#commands:can_place_on"
                 },
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    28
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:powder_keg",
                 "minecraft:custom_data": {
                   "powderkeg": 1
                 },

@@ -46,11 +46,7 @@
       "item": {
         "id": "quartz",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              56
-            ]
-          },
+          "minecraft:item_model": "royalsiege:health_stone",
           "minecraft:item_name": {
             "text": "Health Stone",
             "color": "#E6322F",
@@ -106,11 +102,7 @@
               "text": "Gives +12 shield health to all nearby allies."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              35
-            ]
-          }
+          "minecraft:item_model": "royalsiege:shielding_spell"
         }
       },
       "show_tooltip": true,
@@ -146,11 +138,7 @@
               "text": "Greatly increases health regeneration to nearby teammates."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              36
-            ]
-          }
+          "minecraft:item_model": "royalsiege:rejuvenating_spell"
         }
       },
       "show_tooltip": true,
@@ -187,11 +175,7 @@
               "text": "Grants a variety of buffs to your nearby teammates."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              37
-            ]
-          }
+          "minecraft:item_model": "royalsiege:vigor_spell"
         }
       },
       "show_tooltip": true,
@@ -240,11 +224,7 @@
               "text": "Has a cooldown of 6 seconds to switch targets."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              38
-            ]
-          }
+          "minecraft:item_model": "royalsiege:angelic_blessing"
         }
       },
       "show_tooltip": true,
@@ -291,11 +271,7 @@
               "italic": false
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              59
-            ]
-          },
+          "minecraft:item_model": "royalsiege:magic_wand",
           "tooltip_display": {
             "hidden_components": [
               "attribute_modifiers"
@@ -325,11 +301,7 @@
               "text": "Reduce the healing cooldown for the pixie from 8s to 6s."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

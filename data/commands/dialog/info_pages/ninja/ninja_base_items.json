@@ -59,11 +59,7 @@
       "item": {
         "id": "iron_sword",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              155
-            ]
-          },
+          "item_model": "royalsiege:ninjato",
           "tooltip_display": {
             "hidden_components": [
               "attribute_modifiers"
@@ -109,11 +105,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              9
-            ]
-          },
+          "minecraft:item_model": "royalsiege:dash",
           "minecraft:item_name": {
             "text": "Dash",
             "italic": false
@@ -153,11 +145,7 @@
         "id": "snowball",
         "count": 2,
         "components": {
-          "custom_model_data": {
-            "floats": [
-              95
-            ]
-          },
+          "minecraft:item_model": "royalsiege:shuriken",
           "item_name": {
             "text": "Shuriken",
             "color": "#CECECE",
@@ -198,11 +186,7 @@
         "id": "snowball",
         "count": 1,
         "components": {
-          "custom_model_data": {
-            "floats": [
-              8
-            ]
-          },
+          "minecraft:item_model": "royalsiege:smoke_bomb",
           "item_name": {
             "text": "Smoke Bomb",
             "color": "dark_gray",

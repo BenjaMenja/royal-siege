@@ -44,11 +44,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    57
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:knockback_stick",
                 "minecraft:enchantments": {
                   "minecraft:knockback": 4
                 }

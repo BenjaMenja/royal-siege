@@ -45,17 +45,15 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    61
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:poison_dagger",
                 "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
                   "commands:poison_dagger": 1
                 },
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable"]
+                  "hidden_components": [
+                    "unbreakable"
+                  ]
                 }
               }
             },

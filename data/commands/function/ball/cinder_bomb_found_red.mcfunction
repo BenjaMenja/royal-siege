@@ -1,4 +1,4 @@
-summon snowball ~ ~ ~ {Tags:["cinderbombred","init","snowball","redProj"],Passengers:[{id:"marker",Tags:["cinderbombred","redProj"]}],Item:{id:"minecraft:snowball",count:1,components:{"minecraft:custom_model_data":{floats:[192]}}}}
+summon snowball ~ ~ ~ {Tags:["cinderbombred","init","snowball","redProj"],Passengers:[{id:"marker",Tags:["cinderbombred","redProj"]}],Item:{id:"minecraft:snowball",count:1,components:{"minecraft:item_model":"royalsiege:cinder_bomb"}}}
 
 data modify entity @e[type=snowball,tag=cinderbombred,tag=init,limit=1] Owner set from entity @s Owner
 

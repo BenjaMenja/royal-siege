@@ -38,11 +38,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    202
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:first_aid_kit",
                 "max_stack_size": 1
               }
             },

@@ -46,11 +46,7 @@
       "item": {
         "id": "bat_spawn_egg",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              64
-            ]
-          },
+          "minecraft:item_model": "royalsiege:cavalry_charge",
           "tooltip_display": {
             "hidden_components": [
               "attribute_modifiers"
@@ -88,11 +84,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              65
-            ]
-          },
+          "minecraft:item_model": "royalsiege:rally",
           "minecraft:item_name": {
             "text": "Rally",
             "italic": false

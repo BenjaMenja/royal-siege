@@ -45,18 +45,14 @@
               "mode": "insert"
             },
             {
-              "function": "minecraft:set_components",
-              "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    95
-                  ]
-                }
-              }
-            },
-            {
               "function": "minecraft:set_custom_data",
               "tag": "{shurikenred:1b,shuriken:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_model": "royalsiege:shuriken"
+              }
             }
           ]
         }

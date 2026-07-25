@@ -3,11 +3,7 @@
     "icon": {
       "id": "minecraft:golden_apple",
       "components": {
-        "custom_model_data": {
-          "floats": [
-            30
-          ]
-        }
+        "minecraft:item_model": "royalsiege:healing_fruit"
       }
     },
     "title": "Selfishness",

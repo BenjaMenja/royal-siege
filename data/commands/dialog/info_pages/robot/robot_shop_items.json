@@ -46,11 +46,7 @@
       "item": {
         "id": "music_disc_chirp",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              53
-            ]
-          },
+          "minecraft:item_model": "royalsiege:cdrom",
           "minecraft:item_name": {
             "text": "CD-ROM",
             "color": "green",
@@ -115,11 +111,7 @@
               "text": "Incapacitates an enemy inside of your castle."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              44
-            ]
-          }
+          "minecraft:item_model": "royalsiege:virus_detector"
         }
       },
       "show_tooltip": true,
@@ -142,11 +134,6 @@
               "text": "Sturdier Casing = Sturdier Character!"
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              28
-            ]
-          },
           "minecraft:enchantments": {
             "minecraft:protection": 2,
             "minecraft:blast_protection": 1,
@@ -191,11 +178,7 @@
               "text": "Boosts the attack speed of your gunblade when in your offhand."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              45
-            ]
-          }
+          "minecraft:item_model": "royalsiege:illegal_modifiers"
         }
       },
       "show_tooltip": true,
@@ -237,11 +220,7 @@
               "italic": false
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              63
-            ]
-          },
+          "minecraft:item_model": "royalsiege:wire_cutters",
           "minecraft:enchantments": {
             "minecraft:sharpness": 1,
             "minecraft:smite": 6,
@@ -289,11 +268,7 @@
               "text": "Lasts 10 seconds."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              141
-            ]
-          }
+          "minecraft:item_model": "royalsiege:multi_barrel_attachment"
         }
       },
       "show_tooltip": true,
@@ -318,11 +293,7 @@
               "text": "Increases your maximum clip size from 15 to 20 bullets."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

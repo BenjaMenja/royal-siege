@@ -3,11 +3,7 @@
     "icon": {
       "id": "minecraft:iron_shovel",
       "components": {
-        "minecraft:custom_model_data": {
-          "floats": [
-            93
-          ]
-        }
+        "minecraft:item_model": "royalsiege:flaming_frying_pan"
       }
     },
     "title": "Dinner Is Served",

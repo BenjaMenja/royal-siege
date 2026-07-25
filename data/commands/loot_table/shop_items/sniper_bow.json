@@ -42,11 +42,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    23
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:sniper_bow",
                 "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
                   "minecraft:infinity": 1,

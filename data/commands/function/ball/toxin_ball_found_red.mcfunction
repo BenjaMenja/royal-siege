@@ -1,4 +1,4 @@
-summon snowball ~ ~ ~ {Tags:["toxinballred","init","snowball","redProj"],Passengers:[{id:"marker",Tags:["toxinitemred","redProj"]}],Item:{id:"minecraft:snowball",count:1,components:{"minecraft:custom_model_data":{floats:[107]}}}}
+summon snowball ~ ~ ~ {Tags:["toxinballred","init","snowball","redProj"],Passengers:[{id:"marker",Tags:["toxinitemred","redProj"]}],Item:{id:"minecraft:snowball",count:1,components:{"minecraft:item_model":"royalsiege:toxin_ball"}}}
 
 data modify entity @e[type=snowball,tag=toxinballred,tag=init,limit=1] Owner set from entity @s Owner
 

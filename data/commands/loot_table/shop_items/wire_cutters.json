@@ -46,13 +46,11 @@
               "function": "minecraft:set_components",
               "components": {
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable"]
-                },
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    63
+                  "hidden_components": [
+                    "unbreakable"
                   ]
                 },
+                "minecraft:item_model": "royalsiege:wire_cutters",
                 "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
                   "minecraft:sharpness": 1,

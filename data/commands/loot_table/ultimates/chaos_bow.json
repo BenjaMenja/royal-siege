@@ -34,17 +34,15 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    72
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:chaos_bow",
                 "minecraft:enchantments": {
                   "minecraft:multishot": 1,
                   "minecraft:quick_charge": 5
                 },
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable"]
+                  "hidden_components": [
+                    "unbreakable"
+                  ]
                 },
                 "minecraft:unbreakable": {}
               }

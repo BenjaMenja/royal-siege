@@ -40,11 +40,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    78
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:tree_of_life",
                 "minecraft:can_place_on": {
                   "blocks": "#commands:can_place_on"
                 },

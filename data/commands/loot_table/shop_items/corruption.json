@@ -50,11 +50,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    114
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:corruption",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

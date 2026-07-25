@@ -26,11 +26,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    7
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:strength_stone",
                 "minecraft:enchantment_glint_override": true
               }
             },

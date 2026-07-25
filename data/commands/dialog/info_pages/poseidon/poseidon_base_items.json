@@ -131,11 +131,7 @@
       "item": {
         "id": "snowball",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              48
-            ]
-          },
+          "minecraft:item_model": "royalsiege:lightning_spell",
           "minecraft:item_name": {
             "text": "Lightning Spell",
             "color": "yellow",

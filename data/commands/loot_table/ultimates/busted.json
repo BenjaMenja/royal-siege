@@ -47,11 +47,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    149
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:busted",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

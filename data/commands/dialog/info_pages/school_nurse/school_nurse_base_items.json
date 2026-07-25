@@ -59,11 +59,7 @@
       "item": {
         "id": "stick",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              198
-            ]
-          },
+          "minecraft:item_model": "royalsiege:thermometer",
           "minecraft:item_name": {
             "color": "red",
             "italic": false,
@@ -108,11 +104,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              199
-            ]
-          },
+          "minecraft:item_model": "royalsiege:iv_drip",
           "minecraft:item_name": {
             "color": "yellow",
             "italic": false,
@@ -155,11 +147,7 @@
       "item": {
         "id": "snowball",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              200
-            ]
-          },
+          "minecraft:item_model": "royalsiege:ice_pack",
           "minecraft:item_name": {
             "color": "aqua",
             "italic": false,

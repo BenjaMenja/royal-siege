@@ -58,11 +58,7 @@
                 "consumable": {
                   "consume_seconds": 1000000
                 },
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    2
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:lightning_staff",
                 "minecraft:food": {
                   "nutrition": 0,
                   "saturation": 0,

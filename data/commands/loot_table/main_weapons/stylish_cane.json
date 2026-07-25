@@ -15,16 +15,14 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    142
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:stylish_cane",
                 "minecraft:custom_data": {
                   "stylishcane": 1
                 },
                 "tooltip_display": {
-                  "hidden_components": ["attribute_modifiers"]
+                  "hidden_components": [
+                    "attribute_modifiers"
+                  ]
                 },
                 "minecraft:attribute_modifiers": [
                   {

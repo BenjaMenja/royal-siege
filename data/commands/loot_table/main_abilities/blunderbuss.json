@@ -40,11 +40,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    118
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:blunderbuss",
                 "custom_data": {
                   "blunderbuss": 1,
                   "cooldown_item": {

@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              216
-            ]
-          },
+          "minecraft:item_model": "royalsiege:undead_army",
           "minecraft:item_name": {
             "text": "Undead Army",
             "color": "#5a4f74",
@@ -90,11 +86,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              217
-            ]
-          },
+          "minecraft:item_model": "royalsiege:soul_reaper",
           "minecraft:item_name": {
             "text": "Soul Reaper",
             "color": "#f9fcbe",

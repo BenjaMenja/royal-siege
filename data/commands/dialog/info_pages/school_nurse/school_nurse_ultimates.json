@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              205
-            ]
-          },
+          "minecraft:item_model": "royalsiege:universal_health_care",
           "minecraft:item_name": {
             "text": "Universal Health Care",
             "color": "red",
@@ -93,11 +89,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              206
-            ]
-          },
+          "minecraft:item_model": "royalsiege:ten_hour_energy",
           "minecraft:item_name": {
             "text": "10 Hour Energy",
             "color": "#ec6c17",

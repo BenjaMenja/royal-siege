@@ -77,11 +77,7 @@
             "color": "aqua",
             "italic": false
           },
-          "minecraft:custom_model_data": {
-            "floats": [
-              46
-            ]
-          },
+          "minecraft:item_model": "royalsiege:fish_cannon",
           "lore": [
             {
               "text": "Right-Click to use",
@@ -139,11 +135,7 @@
               "text": "Shoots explosive squids that leave behind blindness clouds."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              47
-            ]
-          }
+          "minecraft:item_model": "royalsiege:squidzooka"
         }
       },
       "show_tooltip": true,
@@ -205,11 +197,7 @@
               "italic": false
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              52
-            ]
-          },
+          "minecraft:item_model": "royalsiege:anchor",
           "tooltip_display": {
             "hidden_components": [
               "attribute_modifiers"
@@ -279,11 +267,7 @@
               "text": "Increases the damage cap of Storm of Blades to 5."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

@@ -47,11 +47,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    165
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:chaos_bow_token",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

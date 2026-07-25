@@ -23,11 +23,7 @@
                 "minecraft:can_place_on": {
                   "blocks": "#commands:can_place_on"
                 },
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    83
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:artificial_intelligence",
                 "minecraft:custom_data": {
                   "ultimateitem": 1,
                   "ai": 1

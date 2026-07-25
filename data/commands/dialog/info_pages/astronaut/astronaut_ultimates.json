@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              177
-            ]
-          },
+          "minecraft:item_model": "royalsiege:rocket_launch",
           "minecraft:item_name": {
             "text": "Rocket Launch",
             "color": "dark_red",
@@ -90,11 +86,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              178
-            ]
-          },
+          "minecraft:item_model": "royalsiege:smart_drone",
           "minecraft:item_name": {
             "text": "Smart Drone",
             "color": "gray",

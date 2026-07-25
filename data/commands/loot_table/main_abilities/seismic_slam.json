@@ -15,11 +15,7 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    6
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:seismic_slam",
                 "minecraft:custom_data": {
                   "slam": 1,
                   "cooldown_item": {

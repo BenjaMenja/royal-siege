@@ -15,11 +15,7 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    9
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:dash",
                 "minecraft:custom_data": {
                   "ninjadash": 1,
                   "cooldown_item": {

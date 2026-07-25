@@ -15,11 +15,7 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    120
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:angelic_staff",
                 "minecraft:custom_data": {
                   "angelicstaff": 1,
                   "regenstaff": 1

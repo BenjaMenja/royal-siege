@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              74
-            ]
-          },
+          "minecraft:item_model": "royalsiege:kerfuffle",
           "minecraft:item_name": {
             "text": "Kerfuffle",
             "color": "#681CFF",
@@ -90,11 +86,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              75
-            ]
-          },
+          "minecraft:item_model": "royalsiege:overcharge",
           "minecraft:item_name": {
             "text": "Overcharge",
             "italic": false

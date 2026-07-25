@@ -37,11 +37,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    27
-                  ]
-                }
+                "minecraft:item_model": "royalsiege:corrupt_credit"
               }
             }
           ]

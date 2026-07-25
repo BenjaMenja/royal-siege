@@ -15,11 +15,7 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    151
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:playing_cards",
                 "minecraft:custom_data": {
                   "playingcards": 1,
                   "cooldown_item": {

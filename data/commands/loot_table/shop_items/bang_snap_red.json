@@ -50,11 +50,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    189
-                  ]
-                }
+                "minecraft:item_model": "royalsiege:bang_snap"
               }
             },
             {

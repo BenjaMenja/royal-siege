@@ -53,11 +53,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    217
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:soul_reaper",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

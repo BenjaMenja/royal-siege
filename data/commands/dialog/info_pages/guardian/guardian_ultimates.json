@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              138
-            ]
-          },
+          "minecraft:item_model": "royalsiege:immortality",
           "tooltip_display": {
             "hidden_components": [
               "attribute_modifiers"
@@ -98,11 +94,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              69
-            ]
-          },
+          "minecraft:item_model": "royalsiege:magic_barrier",
           "minecraft:item_name": {
             "text": "Magic Barrier",
             "italic": false

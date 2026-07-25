@@ -69,11 +69,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    184
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:sparkler",
                 "minecraft:enchantments": {
                   "minecraft:fire_aspect": 1
                 },

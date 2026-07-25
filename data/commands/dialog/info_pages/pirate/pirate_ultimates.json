@@ -46,11 +46,7 @@
       "item": {
         "id": "bat_spawn_egg",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              76
-            ]
-          },
+          "minecraft:item_model": "royalsiege:treasure_chest",
           "minecraft:item_name": {
             "text": "Treasure Chest",
             "color": "gold",
@@ -90,11 +86,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              139
-            ]
-          },
+          "minecraft:item_model": "royalsiege:flying_dutchman",
           "minecraft:item_name": {
             "text": "Flying Dutchman",
             "color": "yellow",

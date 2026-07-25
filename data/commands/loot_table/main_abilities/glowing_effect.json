@@ -15,11 +15,7 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    13
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:glowing_effect",
                 "minecraft:custom_data": {
                   "glowingeffect": 1,
                   "cooldown_item": {

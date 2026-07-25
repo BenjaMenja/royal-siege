@@ -59,11 +59,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              171
-            ]
-          },
+          "minecraft:item_model": "royalsiege:space_wrench",
           "minecraft:item_name": {
             "color": "dark_purple",
             "italic": false,
@@ -124,11 +120,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              172
-            ]
-          },
+          "minecraft:item_model": "royalsiege:asteroid",
           "minecraft:item_name": {
             "color": "dark_red",
             "italic": false,

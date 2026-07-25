@@ -59,11 +59,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              16
-            ]
-          },
+          "minecraft:item_model": "royalsiege:gunblade_burst",
           "attribute_modifiers": [
             {
               "type": "minecraft:attack_damage",
@@ -151,11 +147,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              43
-            ]
-          },
+          "minecraft:item_model": "royalsiege:shock_grenade",
           "minecraft:item_name": {
             "text": "Shock Grenade",
             "color": "aqua",
@@ -195,11 +187,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              42
-            ]
-          },
+          "minecraft:item_model": "royalsiege:iron_wall",
           "minecraft:item_name": {
             "color": "dark_gray",
             "italic": false,

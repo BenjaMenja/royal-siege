@@ -30,11 +30,7 @@
                 "minecraft:enchantments": {
                   "minecraft:fire_aspect": 3
                 },
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    55
-                  ]
-                }
+                "minecraft:item_model": "royalsiege:flaming_stick"
               }
             }
           ]

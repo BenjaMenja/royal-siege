@@ -53,11 +53,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    139
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:flying_dutchman",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

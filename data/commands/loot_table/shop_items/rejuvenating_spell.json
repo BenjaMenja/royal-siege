@@ -44,11 +44,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    36
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:rejuvenating_spell",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

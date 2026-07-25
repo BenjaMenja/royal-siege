@@ -3,11 +3,7 @@
     "icon": {
       "id": "minecraft:carrot",
       "components": {
-        "custom_model_data": {
-          "floats": [
-            71
-          ]
-        }
+        "minecraft:item_model": "royalsiege:resurrection"
       }
     },
     "title": "Miracle Worker",

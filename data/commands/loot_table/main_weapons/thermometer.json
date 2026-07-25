@@ -16,7 +16,9 @@
               "function": "set_components",
               "components": {
                 "tooltip_display": {
-                  "hidden_components": ["attribute_modifiers"]
+                  "hidden_components": [
+                    "attribute_modifiers"
+                  ]
                 },
                 "minecraft:attribute_modifiers": [
                   {
@@ -37,11 +39,7 @@
                 "minecraft:custom_data": {
                   "thermometer": true
                 },
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    198
-                  ]
-                }
+                "minecraft:item_model": "royalsiege:thermometer"
               }
             },
             {

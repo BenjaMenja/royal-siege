@@ -59,11 +59,7 @@
       "item": {
         "id": "iron_axe",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              153
-            ]
-          },
+          "minecraft:item_model": "royalsiege:warriors_battleaxe",
           "tooltip_display": {
             "hidden_components": [
               "attribute_modifiers"
@@ -106,11 +102,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              6
-            ]
-          },
+          "minecraft:item_model": "royalsiege:seismic_slam",
           "minecraft:item_name": {
             "text": "Seismic Slam",
             "italic": false

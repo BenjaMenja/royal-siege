@@ -46,11 +46,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    204
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:vaccine",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

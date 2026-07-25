@@ -46,11 +46,7 @@
       "item": {
         "id": "bat_spawn_egg",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              78
-            ]
-          },
+          "minecraft:item_model": "royalsiege:tree_of_life",
           "minecraft:item_name": {
             "text": "Tree of Life",
             "color": "#22FF00",
@@ -87,11 +83,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              79
-            ]
-          },
+          "minecraft:item_model": "royalsiege:decay_aura",
           "minecraft:item_name": {
             "text": "Decay Aura",
             "italic": false

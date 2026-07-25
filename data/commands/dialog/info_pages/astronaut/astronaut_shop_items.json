@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              173
-            ]
-          },
+          "minecraft:item_model": "royalsiege:debris_cannon",
           "minecraft:item_name": {
             "text": "Debris Cannon",
             "color": "#85775E",
@@ -113,11 +109,7 @@
               "text": "Lasts 6s."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              25
-            ]
-          }
+          "minecraft:item_model": "royalsiege:gravity_canceler"
         }
       },
       "show_tooltip": true,
@@ -154,11 +146,7 @@
               "text": "Greatly increases speed of nearby teammates for a short time."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              174
-            ]
-          }
+          "minecraft:item_model": "royalsiege:rocket_boosters"
         }
       },
       "show_tooltip": true,
@@ -201,11 +189,7 @@
               "text": "If you move more than 30 blocks from the tether, it will break."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              175
-            ]
-          }
+          "minecraft:item_model": "royalsiege:safety_tether"
         }
       },
       "show_tooltip": true,
@@ -298,11 +282,7 @@
               "text": "The explosion activates every 15s."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

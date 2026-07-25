@@ -43,11 +43,7 @@
       "item": {
         "id": "ghast_tear",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              108
-            ]
-          },
+          "minecraft:item_model": "royalsiege:dragon_claw",
           "minecraft:item_name": {
             "color": "yellow",
             "italic": false,
@@ -89,11 +85,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              110
-            ]
-          },
+          "minecraft:item_model": "royalsiege:dragon_rage",
           "minecraft:item_name": {
             "color": "#4000A1",
             "italic": false,
@@ -130,11 +122,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              109
-            ]
-          },
+          "minecraft:item_model": "royalsiege:dragon_rush",
           "minecraft:item_name": {
             "color": "#4000A1",
             "italic": false,

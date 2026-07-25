@@ -27,11 +27,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    148
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:siege_coin",
                 "minecraft:enchantment_glint_override": true
               }
             },

@@ -19,11 +19,7 @@
                   "inhaler": true,
                   "inhalerblue": true
                 },
-                "custom_model_data": {
-                  "floats": [
-                    207
-                  ]
-                }
+                "minecraft:item_model": "royalsiege:inhaler"
               }
             },
             {

@@ -43,11 +43,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    140
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:exp_bomb_blaster",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

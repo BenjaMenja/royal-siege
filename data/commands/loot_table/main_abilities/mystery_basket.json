@@ -15,11 +15,7 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    94
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:mystery_basket",
                 "minecraft:custom_data": {
                   "mysterybasket": 1,
                   "cooldown_item": {

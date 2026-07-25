@@ -26,11 +26,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    62
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:punch_bow",
                 "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
                   "minecraft:punch": 4,

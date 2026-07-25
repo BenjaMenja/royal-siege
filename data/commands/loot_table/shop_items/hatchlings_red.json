@@ -43,11 +43,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    112
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:hatchlings",
                 "minecraft:can_place_on": {
                   "blocks": "#commands:can_place_on"
                 },

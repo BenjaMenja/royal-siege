@@ -50,11 +50,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    205
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:universal_health_care",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

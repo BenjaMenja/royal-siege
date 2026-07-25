@@ -59,11 +59,7 @@
       "item": {
         "id": "bow",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              158
-            ]
-          },
+          "minecraft:item_model": "royalsiege:archers_bow",
           "tooltip_display": {
             "hidden_components": [
               "attribute_modifiers"
@@ -99,11 +95,7 @@
       "item": {
         "id": "arrow",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              12
-            ]
-          },
+          "minecraft:item_model": "royalsiege:bottomless_quiver",
           "minecraft:item_name": {
             "italic": false,
             "text": "Bottomless Quiver"
@@ -121,11 +113,7 @@
       "item": {
         "id": "wooden_axe",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              11
-            ]
-          },
+          "minecraft:item_model": "royalsiege:shield_buster",
           "minecraft:enchantments": {
             "minecraft:efficiency": 5,
             "minecraft:unbreaking": 1
@@ -178,11 +166,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              13
-            ]
-          },
+          "minecraft:item_model": "royalsiege:glowing_effect",
           "minecraft:item_name": {
             "color": "yellow",
             "italic": false,

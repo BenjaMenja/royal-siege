@@ -16,11 +16,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:unbreakable": {},
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    155
-                  ]
-                },
+                "item_model": "royalsiege:ninjato",
                 "minecraft:custom_data": {
                   "ninjato": 1
                 },

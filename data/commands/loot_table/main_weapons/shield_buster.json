@@ -16,11 +16,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:unbreakable": {},
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    11
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:shield_buster",
                 "minecraft:enchantments": {
                   "minecraft:efficiency": 5,
                   "minecraft:unbreaking": 1

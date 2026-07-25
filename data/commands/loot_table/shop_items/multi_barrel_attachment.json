@@ -50,11 +50,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    141
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:multi_barrel_attachment",
                 "consumable": {
                   "consume_seconds": 1000000
                 },

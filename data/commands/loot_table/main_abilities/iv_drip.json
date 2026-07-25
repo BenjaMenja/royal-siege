@@ -32,11 +32,7 @@
                     "color": "aqua"
                   }
                 },
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    199
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:iv_drip",
                 "minecraft:food": {
                   "nutrition": 0,
                   "saturation": 0,

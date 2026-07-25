@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              201
-            ]
-          },
+          "minecraft:item_model": "royalsiege:defibrillator",
           "minecraft:item_name": {
             "text": "Defibrillator",
             "color": "#d32f4a",
@@ -158,11 +154,7 @@
               "text": "Takes 3s to arm itself before teammates can use it."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              202
-            ]
-          }
+          "minecraft:item_model": "royalsiege:first_aid_kit"
         }
       },
       "show_tooltip": true,
@@ -192,11 +184,7 @@
               "text": "Buff only activates if the inhaler is the only item being held."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              207
-            ]
-          }
+          "minecraft:item_model": "royalsiege:inhaler"
         }
       },
       "show_tooltip": true,
@@ -241,11 +229,7 @@
               "text": " 1.3 Attack Speed"
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              203
-            ]
-          }
+          "minecraft:item_model": "royalsiege:trauma_shears"
         }
       },
       "show_tooltip": true,
@@ -288,11 +272,7 @@
               "text": "Has a max range of 2 blocks."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              204
-            ]
-          }
+          "minecraft:item_model": "royalsiege:vaccine"
         }
       },
       "show_tooltip": true,
@@ -317,11 +297,7 @@
               "text": "Reduces the player requirement for the passive from 8 to 6."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,

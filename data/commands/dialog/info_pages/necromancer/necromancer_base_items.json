@@ -59,11 +59,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              208
-            ]
-          },
+          "minecraft:item_model": "royalsiege:necro_staff",
           "minecraft:item_name": {
             "color": "#38008C",
             "italic": false,
@@ -124,11 +120,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              209
-            ]
-          },
+          "minecraft:item_model": "royalsiege:reanimation",
           "minecraft:item_name": {
             "color": "#a94ffd",
             "italic": false,
@@ -165,11 +157,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              210
-            ]
-          },
+          "minecraft:item_model": "royalsiege:bone_shield",
           "minecraft:item_name": {
             "color": "#bebebe",
             "italic": false,

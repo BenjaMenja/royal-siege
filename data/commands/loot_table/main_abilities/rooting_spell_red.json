@@ -15,11 +15,7 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    32
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:rooting_spell",
                 "minecraft:custom_data": {
                   "rootingspellred": 1,
                   "rootingspell": 1,

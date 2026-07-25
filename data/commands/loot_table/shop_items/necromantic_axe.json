@@ -48,17 +48,15 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    115
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:necromantic_axe",
                 "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
                   "minecraft:knockback": 1
                 },
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable"]
+                  "hidden_components": [
+                    "unbreakable"
+                  ]
                 }
               }
             },

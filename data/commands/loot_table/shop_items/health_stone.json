@@ -28,11 +28,7 @@
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:enchantment_glint_override": true,
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    56
-                  ]
-                }
+                "minecraft:item_model": "royalsiege:health_stone"
               }
             },
             {

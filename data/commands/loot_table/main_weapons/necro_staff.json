@@ -15,11 +15,7 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    208
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:necro_staff",
                 "minecraft:custom_data": {
                   "necrostaff": 1,
                   "cooldown_item": {

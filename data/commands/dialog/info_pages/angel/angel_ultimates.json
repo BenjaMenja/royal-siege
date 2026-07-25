@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              70
-            ]
-          },
+          "minecraft:item_model": "royalsiege:lifeforce",
           "tooltip_display": {
             "hidden_components": [
               "attribute_modifiers"
@@ -95,11 +91,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              71
-            ]
-          },
+          "minecraft:item_model": "royalsiege:resurrection",
           "minecraft:item_name": {
             "text": "Resurrection",
             "color": "#4FFE74",

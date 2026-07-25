@@ -59,11 +59,7 @@
       "item": {
         "id": "iron_sword",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              154
-            ]
-          },
+          "minecraft:item_model": "royalsiege:guardians_blade",
           "tooltip_display": {
             "hidden_components": [
               "attribute_modifiers"
@@ -113,11 +109,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              19
-            ]
-          },
+          "minecraft:item_model": "royalsiege:defensive_spell",
           "minecraft:item_name": {
             "color": "#00FFBB",
             "italic": false,
@@ -155,11 +147,7 @@
         "id": "skeleton_spawn_egg",
         "count": 2,
         "components": {
-          "custom_model_data": {
-            "floats": [
-              95
-            ]
-          },
+          "minecraft:item_model": "royalsiege:turret",
           "item_name": {
             "color": "#B8481F",
             "italic": false,

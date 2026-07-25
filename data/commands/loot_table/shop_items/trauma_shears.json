@@ -37,11 +37,7 @@
                     "slot": "mainhand"
                   }
                 ],
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    203
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:trauma_shears",
                 "minecraft:custom_data": {
                   "traumashears": true
                 },

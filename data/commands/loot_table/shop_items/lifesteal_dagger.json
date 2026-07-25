@@ -48,14 +48,12 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    58
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:lifesteal_dagger",
                 "minecraft:unbreakable": {},
                 "tooltip_display": {
-                  "hidden_components": ["unbreakable"]
+                  "hidden_components": [
+                    "unbreakable"
+                  ]
                 }
               }
             },

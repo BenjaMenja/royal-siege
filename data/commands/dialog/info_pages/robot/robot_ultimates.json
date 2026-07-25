@@ -46,11 +46,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              82
-            ]
-          },
+          "minecraft:item_model": "royalsiege:system_reboot",
           "minecraft:item_name": {
             "text": "System Reboot",
             "color": "#FF4158",
@@ -96,11 +92,7 @@
       "item": {
         "id": "bat_spawn_egg",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              83
-            ]
-          },
+          "minecraft:item_model": "royalsiege:artificial_intelligence",
           "minecraft:item_name": {
             "italic": false,
             "text": "Artificial Intelligence"

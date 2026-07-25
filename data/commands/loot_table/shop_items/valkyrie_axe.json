@@ -50,11 +50,7 @@
                     "attribute_modifiers"
                   ]
                 },
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    61
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:valkyrie_axe",
                 "minecraft:unbreakable": {},
                 "minecraft:enchantments": {
                   "minecraft:knockback": 3

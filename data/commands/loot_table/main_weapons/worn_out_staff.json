@@ -16,11 +16,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:unbreakable": {},
-                "minecraft:custom_model_data": {
-                  "floats": [
-                    157
-                  ]
-                },
+                "minecraft:item_model": "royalsiege:worn_out_staff",
                 "minecraft:custom_data": {
                   "wizardsword": 1
                 },

@@ -59,11 +59,7 @@
       "item": {
         "id": "iron_axe",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              164
-            ]
-          },
+          "minecraft:item_model": "royalsiege:lumberjaxe",
           "attribute_modifiers": [
             {
               "type": "attack_damage",
@@ -129,11 +125,7 @@
       "item": {
         "id": "golden_apple",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              30
-            ]
-          },
+          "minecraft:item_model": "royalsiege:healing_fruit",
           "minecraft:item_name": {
             "text": "Healing Fruit",
             "italic": false
@@ -162,11 +154,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              31
-            ]
-          },
+          "minecraft:item_model": "royalsiege:blossom",
           "minecraft:item_name": {
             "color": "#22FF00",
             "italic": false,
@@ -203,11 +191,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              32
-            ]
-          },
+          "minecraft:item_model": "royalsiege:rooting_spell",
           "minecraft:item_name": {
             "color": "#228A12",
             "italic": false,

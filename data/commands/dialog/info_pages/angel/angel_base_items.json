@@ -59,11 +59,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              120
-            ]
-          },
+          "minecraft:item_model": "royalsiege:angelic_staff",
           "tooltip_display": {
             "hidden_components": [
               "attribute_modifiers"
@@ -148,11 +144,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              18
-            ]
-          },
+          "minecraft:item_model": "royalsiege:healing_spell",
           "minecraft:item_name": {
             "color": "#FF08FF",
             "italic": false,
@@ -189,11 +181,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              19
-            ]
-          },
+          "minecraft:item_model": "royalsiege:defensive_spell",
           "minecraft:item_name": {
             "color": "#00FFBB",
             "italic": false,
@@ -233,11 +221,7 @@
       "item": {
         "id": "carrot",
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              20
-            ]
-          },
+          "minecraft:item_model": "royalsiege:assault_spell",
           "minecraft:item_name": {
             "color": "#820000",
             "italic": false,

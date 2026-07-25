@@ -47,11 +47,7 @@
         "id": "snowball",
         "count": 2,
         "components": {
-          "minecraft:custom_model_data": {
-            "floats": [
-              211
-            ]
-          },
+          "minecraft:item_model": "royalsiege:necro_bone",
           "minecraft:item_name": {
             "text": "Necro Bone",
             "color": "#797979",
@@ -118,11 +114,7 @@
               "text": "Lasts 10 seconds."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              218
-            ]
-          }
+          "minecraft:item_model": "royalsiege:mind_inversion"
         }
       },
       "show_tooltip": true,
@@ -159,11 +151,7 @@
               "text": "Calls all of your team's summons within 25 blocks to your location."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              212
-            ]
-          }
+          "minecraft:item_model": "royalsiege:undead_whistle"
         }
       },
       "show_tooltip": true,
@@ -209,11 +197,7 @@
               "text": "The additional defense lasts 6s."
             }
           ],
-          "custom_model_data": {
-            "floats": [
-              213
-            ]
-          }
+          "minecraft:item_model": "royalsiege:vengeance"
         }
       },
       "show_tooltip": true,
@@ -259,11 +243,7 @@
               "text": "Can only have 1 spider active and in your inventory at once."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              214
-            ]
-          }
+          "minecraft:item_model": "royalsiege:broodmother_spider"
         }
       },
       "show_tooltip": true,
@@ -306,11 +286,7 @@
               "text": "Warping again will not teleport you to this summon."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              215
-            ]
-          }
+          "minecraft:item_model": "royalsiege:dark_warp"
         }
       },
       "show_tooltip": true,
@@ -335,11 +311,7 @@
               "text": "Undead summons have their HP increased from 40 to 50 and their attack damage from 7 to 9. Increases the HP restored with the necro staff from 15 to 20."
             }
           ],
-          "minecraft:custom_model_data": {
-            "floats": [
-              125
-            ]
-          }
+          "minecraft:item_model": "royalsiege:green_up"
         }
       },
       "show_tooltip": true,
