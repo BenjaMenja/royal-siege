@@ -85,6 +85,7 @@
       "item": {
         "id": "iron_axe",
         "components": {
+          "item_model": "royalsiege:valkyrie_axe",
           "minecraft:item_name": {
             "text": "Valkyrie Axe",
             "italic": false

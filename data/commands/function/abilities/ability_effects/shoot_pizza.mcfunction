@@ -60,7 +60,7 @@ execute as @e[tag=pizza,limit=1,tag=!stop] store result entity @s Motion[2] doub
 
 tag @e[tag=pizza] add stop
 
-data modify entity @e[type=item_frame,limit=1,sort=nearest] Item set value {id:"minecraft:stone_bricks",count:1,components:{"minecraft:item_model":"royalsiege:oven_closed"}}
+data modify entity @e[type=item_frame,limit=1,sort=nearest] Item set value {id:"minecraft:stone_bricks",count:1,components:{"minecraft:item_model":"royalsiege:oven_open"}}
 
 scoreboard players reset @s ovenTimer
 

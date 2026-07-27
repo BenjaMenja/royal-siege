@@ -40,7 +40,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:item_model": "royalsiege:oven_closed",
+                "minecraft:item_model": "royalsiege:oven_sprite",
                 "minecraft:can_place_on": {
                   "blocks": "#commands:can_place_on"
                 },

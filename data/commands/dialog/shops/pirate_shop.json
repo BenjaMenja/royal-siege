@@ -29,7 +29,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/siege_coin"
+          "sprite": "royalsiege:item/siege_coin"
         },
         {
           "text": " Fake Money Pack"
@@ -48,7 +48,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/leather_boots"
+          "sprite": "royalsiege:item/dutchman_blade"
         },
         {
           "text": " The Dutchman's Blade"
@@ -67,7 +67,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/powder_keg"
+          "sprite": "royalsiege:item/powder_keg"
         },
         {
           "text": " Powder Keg"
@@ -86,7 +86,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/potion"
+          "sprite": "royalsiege:item/mug"
         },
         {
           "text": " Hard Ale"
@@ -105,7 +105,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/chain_hook"
+          "sprite": "royalsiege:item/chain_hook"
         },
         {
           "text": " Chain Hook"
@@ -124,7 +124,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/coin_gun"
+          "sprite": "royalsiege:item/coin_gun"
         },
         {
           "text": " Coin Gun"
@@ -143,7 +143,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/green_up"
+          "sprite": "royalsiege:item/green_up"
         },
         {
           "text": " Upgrade Passive"

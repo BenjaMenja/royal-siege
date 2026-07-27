@@ -370,7 +370,7 @@ execute as @e[type=bat,tag=powderKeg] at @s run function commands:abilities/abil
 
 execute as @e[type=item_frame,tag=powderKeg] at @s unless entity @e[type=piglin,limit=1,sort=nearest,distance=..0.75,tag=powderKeg] run function commands:abilities/ability_cleanup/destroy_powder_keg
 
-execute as @e[type=piglin,tag=powderKeg,nbt=!{Fire:-1s}] at @s run function commands:abilities/ability_cleanup/destroy_powder_keg
+execute as @e[type=piglin,tag=powderKeg,nbt=!{Fire:0s}] at @s run function commands:abilities/ability_cleanup/destroy_powder_keg
 
 #Chain Hook
 
@@ -1962,7 +1962,7 @@ scoreboard players add @e[type=zombified_piglin,tag=oven] ovenDur 1
 
 execute as @e[type=item_frame,tag=oven] at @s unless entity @e[type=zombified_piglin,limit=1,sort=nearest,distance=..1] run function commands:abilities/ability_cleanup/destroy_oven
 
-execute as @e[type=zombified_piglin,tag=oven,scores={ovenTimer=30,ovenDur=1..}] at @s run data modify entity @e[type=item_frame,tag=oven,limit=1,sort=nearest] Item set value {id:"minecraft:stone_bricks",count:1,components:{"minecraft:item_model":"royalsiege:oven_open"}}
+execute as @e[type=zombified_piglin,tag=oven,scores={ovenTimer=30,ovenDur=1..}] at @s run data modify entity @e[type=item_frame,tag=oven,limit=1,sort=nearest] Item set value {id:"minecraft:stone_bricks",count:1,components:{"minecraft:item_model":"royalsiege:oven_closed"}}
 
 execute as @e[type=zombified_piglin,tag=oven,tag=pizzatime,scores={ovenTimer=20..}] at @s run function commands:abilities/ability_effects/shoot_pizza
 

@@ -29,7 +29,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/defibrillator"
+          "sprite": "royalsiege:item/defibrillator"
         },
         {
           "text": " Defibrillator"
@@ -48,7 +48,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/light_up_shoes"
+          "sprite": "royalsiege:item/vanilla/light_up_shoes"
         },
         {
           "text": " Light Up Shoes"
@@ -67,7 +67,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/first_aid_kit"
+          "sprite": "royalsiege:item/first_aid_kit"
         },
         {
           "text": " First Aid Kit"
@@ -86,7 +86,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/inhaler"
+          "sprite": "royalsiege:item/inhaler"
         },
         {
           "text": " Inhaler"
@@ -105,7 +105,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/trauma_shears"
+          "sprite": "royalsiege:item/trauma_shears"
         },
         {
           "text": " Trauma Shears"
@@ -124,7 +124,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/live_attenuated_vaccine"
+          "sprite": "royalsiege:item/vaccine"
         },
         {
           "text": " Live-Attenuated Vaccine"
@@ -143,7 +143,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/green_up"
+          "sprite": "royalsiege:item/green_up"
         },
         {
           "text": " Upgrade Passive"

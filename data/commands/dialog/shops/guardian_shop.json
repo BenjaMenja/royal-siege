@@ -29,7 +29,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/stick"
+          "sprite": "royalsiege:item/knockback_stick"
         },
         {
           "text": " Knockback Stick"
@@ -48,7 +48,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/shield_base_wood"
+          "sprite": "royalsiege:item/shield_base_wood"
         },
         {
           "text": " Guarding Shield"
@@ -86,7 +86,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/counter"
+          "sprite": "royalsiege:item/counter"
         },
         {
           "text": " Counter"
@@ -105,7 +105,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/absorption_shield"
+          "sprite": "royalsiege:item/absorption_shield"
         },
         {
           "text": " Absorption Shield"
@@ -143,7 +143,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/green_up"
+          "sprite": "royalsiege:item/green_up"
         },
         {
           "text": " Upgrade Passive"

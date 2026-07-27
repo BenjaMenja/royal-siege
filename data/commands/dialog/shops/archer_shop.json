@@ -29,7 +29,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/sniper_bow"
+          "sprite": "royalsiege:item/sniper_bow"
         },
         {
           "text": " Sniper Bow"
@@ -48,7 +48,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/punch_bow"
+          "sprite": "royalsiege:item/punch_bow"
         },
         {
           "text": " Punch Bow"
@@ -67,7 +67,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/tipped_arrow_head"
+          "sprite": "royalsiege:item/vanilla/slowing_arrows"
         },
         {
           "text": " Slowing Arrows"
@@ -86,7 +86,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/tipped_arrow_head"
+          "sprite": "royalsiege:item/vanilla/weakening_arrows"
         },
         {
           "text": " Weakness Arrows"
@@ -105,7 +105,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/leather_boots"
+          "sprite": "royalsiege:item/vanilla/high_performance_shoes"
         },
         {
           "text": " High-Performance Shoes"
@@ -124,7 +124,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/polearm"
+          "sprite": "royalsiege:item/polearm"
         },
         {
           "text": " Polearm"
@@ -143,7 +143,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/green_up"
+          "sprite": "royalsiege:item/green_up"
         },
         {
           "text": " Upgrade Passive"

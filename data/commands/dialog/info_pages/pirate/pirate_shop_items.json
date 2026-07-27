@@ -150,7 +150,7 @@
               "text": "It will also instantly explode if set on fire."
             }
           ],
-          "minecraft:item_model": "royalsiege:powder_keg"
+          "minecraft:item_model": "royalsiege:powder_keg_sprite"
         }
       },
       "show_tooltip": true,

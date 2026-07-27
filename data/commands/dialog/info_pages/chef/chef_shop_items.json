@@ -46,7 +46,7 @@
       "item": {
         "id": "bat_spawn_egg",
         "components": {
-          "minecraft:item_model": "royalsiege:oven_closed",
+          "minecraft:item_model": "royalsiege:oven_sprite",
           "minecraft:item_name": {
             "text": "Oven",
             "color": "gray",

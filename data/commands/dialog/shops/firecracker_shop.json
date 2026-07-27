@@ -29,7 +29,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/bang_snap"
+          "sprite": "royalsiege:item/bang_snap"
         },
         {
           "text": " Bang Snaps"
@@ -49,7 +49,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/napalm_bucket"
+          "sprite": "royalsiege:item/napalm_bucket"
         },
         {
           "text": " Bucket of Homemade Napalm"
@@ -69,7 +69,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/bunker_boots"
+          "sprite": "royalsiege:item/vanilla/bunker_boots"
         },
         {
           "text": " Bunker Boots"
@@ -89,7 +89,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/pyromania"
+          "sprite": "royalsiege:item/pyromania"
         },
         {
           "text": " Pyromania"
@@ -108,7 +108,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/cinder_bomb"
+          "sprite": "royalsiege:item/cinder_bomb"
         },
         {
           "text": " Cinder Bomb"
@@ -128,7 +128,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/green_up"
+          "sprite": "royalsiege:item/green_up"
         },
         {
           "text": " Upgrade Passive"

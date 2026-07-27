@@ -29,7 +29,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/russian_roulette"
+          "sprite": "royalsiege:item/russian_roulette"
         },
         {
           "text": " Russian Roulette"
@@ -48,7 +48,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/barrier"
+          "sprite": "royalsiege:item/betting_chips"
         },
         {
           "text": " Betting Chips"
@@ -67,7 +67,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/insurance"
+          "sprite": "royalsiege:item/insurance"
         },
         {
           "text": " Insurance"
@@ -86,7 +86,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/inspection"
+          "sprite": "royalsiege:item/inspection"
         },
         {
           "text": " Inspection"
@@ -105,7 +105,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/security_guard"
+          "sprite": "royalsiege:item/security_guard"
         },
         {
           "text": " Security Guard"
@@ -124,7 +124,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/coin_gun"
+          "sprite": "royalsiege:item/coin_gun"
         },
         {
           "text": " Coin Gun"
@@ -143,7 +143,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/green_up"
+          "sprite": "royalsiege:item/green_up"
         },
         {
           "text": " Upgrade Passive"

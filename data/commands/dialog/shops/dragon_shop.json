@@ -29,7 +29,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/outrage"
+          "sprite": "royalsiege:item/outrage"
         },
         {
           "text": " Outrage"
@@ -48,7 +48,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/hatchlings"
+          "sprite": "royalsiege:item/hatchlings"
         },
         {
           "text": " Hatchlings"
@@ -67,7 +67,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/crystal_cannon"
+          "sprite": "royalsiege:item/crystal_cannon"
         },
         {
           "text": " Crystal Cannon"
@@ -86,7 +86,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/corruption"
+          "sprite": "royalsiege:item/corruption"
         },
         {
           "text": " Corruption"
@@ -124,7 +124,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/necromantic_axe"
+          "sprite": "royalsiege:item/necromantic_axe"
         },
         {
           "text": " Necromantic Axe"
@@ -143,7 +143,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/green_up"
+          "sprite": "royalsiege:item/green_up"
         },
         {
           "text": " Upgrade Passive"

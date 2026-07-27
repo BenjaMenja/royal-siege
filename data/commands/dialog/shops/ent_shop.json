@@ -29,7 +29,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/magical_wood_sword"
+          "sprite": "royalsiege:item/magical_wood_sword"
         },
         {
           "text": " Magical Wood Sword"
@@ -47,8 +47,8 @@
     {
       "label": [
         {
-          "atlas": "minecraft:items",
-          "sprite": "item/rose_bush"
+          "atlas": "minecraft:blocks",
+          "sprite": "block/rose_bush_top"
         },
         {
           "text": " Thorn Bush"
@@ -67,7 +67,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/potion"
+          "sprite": "royalsiege:item/vanilla/tree_sap"
         },
         {
           "text": " Tree Sap"
@@ -86,7 +86,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/flaming_stick"
+          "sprite": "royalsiege:item/flaming_stick"
         },
         {
           "text": " Flaming Stick"
@@ -104,8 +104,8 @@
     {
       "label": [
         {
-          "atlas": "minecraft:items",
-          "sprite": "item/poisonous_mushroom"
+          "atlas": "minecraft:blocks",
+          "sprite": "block/brown_mushroom"
         },
         {
           "text": " Poisonous Mushrooms"
@@ -124,7 +124,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/toxin_ball"
+          "sprite": "royalsiege:item/toxin_ball"
         },
         {
           "text": " Toxin Ball"
@@ -143,7 +143,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/green_up"
+          "sprite": "royalsiege:item/green_up"
         },
         {
           "text": " Upgrade Passive"

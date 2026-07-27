@@ -29,7 +29,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/debris_cannon"
+          "sprite": "royalsiege:item/debris_cannon"
         },
         {
           "text": " Debris Cannon"
@@ -48,7 +48,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/gravity_canceler"
+          "sprite": "royalsiege:item/gravity_canceler"
         },
         {
           "text": " Gravity Canceler"
@@ -67,7 +67,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/rocket_booster"
+          "sprite": "royalsiege:item/rocket_boosters"
         },
         {
           "text": " Rocket Booster"
@@ -86,7 +86,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/safety_tether"
+          "sprite": "royalsiege:item/safety_tether"
         },
         {
           "text": " Safety Tether"
@@ -105,7 +105,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/barrier"
+          "sprite": "royalsiege:item/vanilla/steel_boots"
         },
         {
           "text": " Steel Boots"
@@ -124,7 +124,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/enhanced_space_helmet"
+          "sprite": "royalsiege:item/vanilla/enhanced_space_helmet"
         },
         {
           "text": " Enhanced Space Helmet"
@@ -143,7 +143,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/green_up"
+          "sprite": "royalsiege:item/green_up"
         },
         {
           "text": " Upgrade Passive"

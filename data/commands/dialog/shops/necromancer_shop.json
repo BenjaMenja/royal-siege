@@ -29,7 +29,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/necro_bone"
+          "sprite": "royalsiege:item/necro_bone"
         },
         {
           "text": " Necro Bones"
@@ -48,7 +48,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/mind_inversion"
+          "sprite": "royalsiege:item/mind_inversion"
         },
         {
           "text": " Mind Inversion"
@@ -67,7 +67,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/undead_whistle"
+          "sprite": "royalsiege:item/undead_whistle"
         },
         {
           "text": " Undead Whistle"
@@ -86,7 +86,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/vengeance"
+          "sprite": "royalsiege:item/vengeance"
         },
         {
           "text": " Vengeance"
@@ -105,7 +105,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/broodmother_spider"
+          "sprite": "royalsiege:item/broodmother_spider"
         },
         {
           "text": " Broodmother Spider"
@@ -124,7 +124,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/dark_warp"
+          "sprite": "royalsiege:item/dark_warp"
         },
         {
           "text": " Dark Warp"
@@ -143,7 +143,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/green_up"
+          "sprite": "royalsiege:item/green_up"
         },
         {
           "text": " Upgrade Passive"

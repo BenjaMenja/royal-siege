@@ -29,7 +29,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/leather_boots"
+          "sprite": "royalsiege:item/vanilla/sticky_boots"
         },
         {
           "text": " Sticky Boots"
@@ -67,7 +67,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/leather_boots"
+          "sprite": "royalsiege:item/vanilla/bouncy_boots"
         },
         {
           "text": " Bouncy Boots"
@@ -86,7 +86,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/lifesteal_dagger"
+          "sprite": "royalsiege:item/lifesteal_dagger"
         },
         {
           "text": " Lifesteal Dagger"
@@ -105,7 +105,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/poison_dagger"
+          "sprite": "royalsiege:item/poison_dagger"
         },
         {
           "text": " Poison Dagger"
@@ -124,7 +124,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/chicken_bomb"
+          "sprite": "royalsiege:item/chicken_bomb"
         },
         {
           "text": " Chicken Bombs"
@@ -143,7 +143,7 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/green_up"
+          "sprite": "royalsiege:item/green_up"
         },
         {
           "text": " Upgrade Passive"
