@@ -29,14 +29,14 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/fishing_rod"
+          "sprite": "royalsiege:item/sparking_staff"
         },
         {
-          "text": " Lightning Rod"
+          "text": " Sparking Staff"
         }
       ],
       "tooltip": {
-        "text": "Cost - 900 Siege Bucks\nA special kind of lightning staff.\nConcentrates lightning strikes onto a single point.\nCan be latched onto blocks and players.",
+        "text": "Cost - 700 Siege Bucks\nAn upgrade to the worn out staff.\nConsecutive hits charge up the staff.\nA fully charged staff can shoot a spark that deals fire damage.",
         "color": "gold"
       },
       "action": {
@@ -105,14 +105,14 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "item/poisonous_potato"
+          "sprite": "royalsiege:item/arcane_sphere"
         },
         {
-          "text": " Rotting Potato"
+          "text": " Arcane Sphere"
         }
       ],
       "tooltip": {
-        "text": "Cost - 450 Siege Bucks\nPoisons an enemy when you strike them with it.",
+        "text": "Cost - 700 Siege Bucks\nFires a slow moving orb that zaps the nearest close range enemy.\nCan be redirected to move in the user's facing direction.",
         "color": "gold"
       },
       "action": {

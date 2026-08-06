@@ -1,0 +1,1 @@
+attribute @s minecraft:gravity modifier remove 12-1-500-0-0

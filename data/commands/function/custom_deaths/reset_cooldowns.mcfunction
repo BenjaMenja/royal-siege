@@ -2,6 +2,8 @@ scoreboard players set @s WizardMinion 1
 
 scoreboard players set @s glowingEffectCD 1
 
+scoreboard players set @s supersonicArrowTimer 1
+
 scoreboard players set @s cHookCD 1
 
 scoreboard players set @s FireballTimer 0
@@ -75,6 +77,8 @@ scoreboard players set @s blazingSpeedTimer 1
 scoreboard players set @s napalmBucketTimer 1
 
 scoreboard players set @s pyromaniaTimer 1
+
+scoreboard players set @s burningLeapTimer 1
 
 scoreboard players set @s angelicBlessingTimer 1
 

@@ -119,58 +119,86 @@
     {
       "type": "item",
       "item": {
-        "id": "tipped_arrow",
-        "count": 8,
+        "id": "carrot",
         "components": {
+          "minecraft:item_model": "royalsiege:supersonic_arrow",
           "minecraft:item_name": {
-            "text": "Slowing Arrow",
-            "italic": false
+            "color": "#3bb7ff",
+            "italic": false,
+            "text": "Supersonic Arrow"
           },
-          "minecraft:potion_contents": {
-            "custom_color": 397949,
-            "custom_effects": [
-              {
-                "id": "minecraft:slowness",
-                "amplifier": 2,
-                "duration": 260,
-                "show_particles": false
-              }
-            ]
-          }
+          "lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 12s"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Supercharges your next fired arrow from your Archer's bow."
+            },
+            {
+              "text": "The supercharged arrow flies faster and pierces enemies."
+            },
+            {
+              "text": "Using the ability again before firing will uncharge the arrow."
+            }
+          ]
         }
       },
       "show_tooltip": true,
       "description": {
-        "contents": "Slowing Arrows",
+        "contents": "Supersonic Arrow",
         "width": 125
       }
     },
     {
       "type": "item",
       "item": {
-        "id": "tipped_arrow",
-        "count": 8,
+        "id": "carrot",
         "components": {
+          "minecraft:item_model": "royalsiege:high_jump",
           "minecraft:item_name": {
-            "text": "Weakening Arrow",
-            "italic": false
+            "color": "#f1fc5d",
+            "italic": false,
+            "text": "High Jump"
           },
-          "minecraft:potion_contents": {
-            "custom_color": 3355443,
-            "custom_effects": [
-              {
-                "id": "minecraft:weakness",
-                "amplifier": 0,
-                "duration": 200,
-                "show_particles": false
-              }
-            ]
-          }
+          "lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 15s"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Leap into the air, falling slower in the process and receiving no fall damage until landing."
+            },
+            {
+              "text": "Your next bow shot fires a blast of arrows."
+            },
+            {
+              "text": "If you land before firing a shot, the blast of arrows will not trigger."
+            }
+          ]
         }
       },
       "show_tooltip": true,
       "description": {
-        "contents": "Weakening Arrows",
+        "contents": "High Jump",
         "width": 125
       }
     },

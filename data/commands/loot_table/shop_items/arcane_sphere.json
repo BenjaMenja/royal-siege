@@ -1,0 +1,82 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Arcane Sphere",
+                "color": "aqua",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click to use",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "color": "#ff771c",
+                  "italic": false,
+                  "text": "Cooldown: 20s"
+                },
+                {
+                  "text": " "
+                },
+                {
+                  "text": "Fires a slow moving orb that rapidly zaps the closest nearby enemy."
+                },
+                {
+                  "text": "Can be redirected to travel in the direction of the user by using the ability again."
+                },
+                {
+                  "text": "Lasts 10 seconds, or until it collides with a block."
+                }
+              ],
+              "mode": "insert"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_model": "royalsiege:arcane_sphere",
+                "consumable": {
+                  "consume_seconds": 1000000
+                },
+                "minecraft:food": {
+                  "nutrition": 0,
+                  "saturation": 0,
+                  "can_always_eat": true
+                },
+                "custom_data": {
+                  "arcanesphere": 1,
+                  "cooldown_item": {
+                    "value": 1
+                  },
+                  "cooldown_name": {
+                    "text": "Arcane Sphere: ",
+                    "color": "green"
+                  },
+                  "cooldown_score": {
+                    "score": {
+                      "name": "*",
+                      "objective": "arcaneSphereDis"
+                    },
+                    "color": "aqua"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -275,6 +275,46 @@
     {
       "type": "item",
       "item": {
+        "id": "carrot",
+        "components": {
+          "minecraft:item_name": {
+            "color": "#e77a13",
+            "italic": false,
+            "text": "Burning Leap"
+          },
+          "lore": [
+            {
+              "color": "yellow",
+              "italic": false,
+              "text": "Right-Click to use"
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 12s"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Launch yourself forward, dealing a burst of fire damage when landing."
+            },
+            {
+              "text": "Deals increased damage to burning enemies."
+            }
+          ],
+          "minecraft:item_model": "royalsiege:burning_leap"
+        }
+      },
+      "show_tooltip": true,
+      "description": {
+        "contents": "Burning Leap",
+        "width": 150
+      }
+    },
+    {
+      "type": "item",
+      "item": {
         "id": "quartz",
         "components": {
           "minecraft:item_name": {

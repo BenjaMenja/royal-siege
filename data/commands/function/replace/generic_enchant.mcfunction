@@ -1,0 +1,1 @@
+$item modify entity @s hotbar.$(activeHotbar) $(enchant_modifier)

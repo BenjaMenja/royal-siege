@@ -1,0 +1,36 @@
+{
+    "description": {
+        "text": "Sparking",
+        "color": "#ee8631",
+        "italic": false
+    },
+    "weight": 1,
+    "min_cost": {
+        "base": 1,
+        "per_level_above_first": 1
+    },
+    "max_cost": {
+        "base": 20,
+        "per_level_above_first": 1
+    },
+    "max_level": 1,
+    "slots": [
+        "mainhand"
+    ],
+    "supported_items": [
+        "blaze_rod"
+    ],
+    "anvil_cost": 1,
+    "effects": {
+        "post_attack": [
+            {
+                "enchanted": "attacker",
+                "affected": "attacker",
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "commands:weapons/weapon_effects/sparking_staff_hit"
+                }
+            }
+        ]
+    }
+}

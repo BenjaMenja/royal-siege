@@ -60,10 +60,6 @@ execute as @a[team=Blue,scores={Ultimate=2}] at @s unless data entity @s RootVeh
 
 execute as @e[type=bat,tag=minionswarm] run function commands:abilities/ability_uses/minion_swarm
 
-#Lightning Rod
-
-execute as @a[scores={useFishingRod=1..},predicate=commands:holding/lightning_rod] at @s run tag @n[type=fishing_bobber] add lightningrod
-
 scoreboard players add @e[type=fishing_bobber,tag=lightningrod] LightningRod 1
 
 execute as @e[type=fishing_bobber,tag=lightningrod,scores={LightningRod=20..},predicate=!commands:location/battlefields/in_tdm_gates] at @s run summon lightning_bolt
@@ -344,6 +340,16 @@ execute as @e[type=wither_skeleton,tag=King,scores={Defend=1..}] run function co
 
 execute as @a[scores={Kit=5,glowingEffectCD=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s glowingEffectCD 1
 
+#Supersonic Arrow
+
+scoreboard players remove @a[scores={supersonicArrowTimer=1..},predicate=commands:inventory/supersonic_arrow,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] supersonicArrowTimer 1
+
+#High Jump
+
+scoreboard players remove @a[scores={highJumpTimer=1..},predicate=commands:inventory/high_jump,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] highJumpTimer 1
+
+execute as @a[tag=highJumpHover,nbt={OnGround:1b}] run function commands:abilities/ability_cleanup/high_jump_end
+
 #Keep zombies from drowning
 
 execute as @e[type=zombie] run data merge entity @s {InWaterTime:-1}
@@ -599,6 +605,22 @@ execute as @e[tag=stop,type=experience_bottle] store success entity @s Air short
 execute as @e[type=experience_orb] at @s run summon fireball ~ ~ ~ {CustomNameVisible:0b,ExplosionPower:3,Motion:[0.0,-2.0,0.0],CustomName:{"text":"Experience Bomb","color":"green"},Item:{id:"minecraft:experience_bottle",count:1},Tags:["fm"]}
 
 kill @e[type=experience_orb]
+
+#Sparking Staff
+
+execute as @e[type=item,tag=sparkingStaffProjectileRed] at @s if entity @a[team=Blue,distance=..2] at @s run function commands:weapons/weapon_effects/sparking_staff_projectile_damage
+
+execute as @e[type=item,tag=sparkingStaffProjectileBlue] at @s if entity @a[team=Red,distance=..2] at @s run function commands:weapons/weapon_effects/sparking_staff_projectile_damage
+
+execute as @e[type=item,tag=sparkingStaffProjectile] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on_without_grass force
+
+execute as @e[type=item,tag=sparkingStaffProjectile,scores={nearbyBlocks=1..}] run kill @s
+
+#Arcane Sphere
+
+execute as @a[scores={arcaneSphereTimer=1..},predicate=commands:inventory/arcane_sphere,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] run scoreboard players remove @s arcaneSphereTimer 1
+
+execute as @e[type=item,tag=arcaneSphereProj] at @s run function commands:abilities/ability_effects/arcane_sphere_tick
 
 #Clear absorption from people with no absorption hearts
 
@@ -2146,7 +2168,7 @@ kill @e[type=oak_boat,tag=winterBoat,scores={Timer=400..}]
 
 scoreboard players remove @a[scores={Kit=14,asteroidTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] asteroidTimer 1
 
-execute as @e[type=area_effect_cloud,tag=asteroidLand] unless predicate commands:riding/fireballs/is_riding_asteroid at @s run function commands:abilities/ability_effects/asteroid_land
+execute as @e[type=marker,tag=asteroidLand] unless predicate commands:riding/fireballs/is_riding_asteroid at @s run function commands:abilities/ability_effects/asteroid_land
 
 execute as @e[type=item,tag=asteroidshard,nbt={OnGround:1b}] at @s run function commands:abilities/ability_effects/asteroid_shard_land
 
@@ -2198,7 +2220,7 @@ scoreboard players reset @a[scores={rocLaunchTimer=3000..}] rocLaunchTimer
 
 scoreboard players add @e[type=area_effect_cloud,tag=rocketPad] rocLaunchTimer 1
 
-execute as @e[type=area_effect_cloud,tag=rocketPad,scores={rocLaunchTimer=100..}] at @s run function commands:ultimates/rocket_launch
+execute as @e[type=marker,tag=rocketPad,scores={rocLaunchTimer=100..}] at @s run function commands:ultimates/rocket_launch
 
 execute as @e[type=item,tag=rocketItem,nbt={OnGround:1b}] at @s run function commands:ultimates/rocket_explode
 
@@ -2286,6 +2308,10 @@ execute as @a[team=Blue,predicate=commands:armor/bunker_boots] at @s if entity @
 
 scoreboard players remove @a[scores={pyromaniaTimer=1..},predicate=commands:inventory/pyromania,tag=!notAlive] pyromaniaTimer 1
 
+scoreboard players add @a[tag=pyromania] pyromaniaDur 1
+
+execute as @a[scores={pyromaniaDur=30..}] at @s run function commands:abilities/ability_effects/pyromania_self_damage
+
 #Cinder Bombs
 
 execute as @e[type=snowball,tag=!cinderbombred,nbt={Item:{components:{"minecraft:custom_data":{cinderbombred:1b}}}}] at @s run function commands:ball/cinder_bomb_found_red
@@ -2305,6 +2331,12 @@ execute as @e[type=area_effect_cloud,tag=cindersmoke] at @s run particle flame ~
 scoreboard players remove @e[type=area_effect_cloud,tag=cindersmoke] cinderBombDuration 1
 
 execute as @e[type=area_effect_cloud,tag=cindersmoke,scores={cinderBombDuration=..0}] at @s run function commands:abilities/ability_effects/cinder_bomb_effects
+
+#Burning Leap
+
+scoreboard players remove @a[scores={Kit=15,burningLeapTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] burningLeapTimer 1
+
+execute as @a[tag=burningLeap,predicate=!commands:riding/snowballs/is_riding_burning_leap] at @s run function commands:abilities/ability_effects/burning_leap_land
 
 #Chrysanthemum Shell
 
@@ -2605,6 +2637,10 @@ function commands:attributes/attribute_score_manager
 kill @e[type=arrow,nbt={inGround:1b}]
 
 kill @e[type=trident,nbt={inGround:1b}]
+
+#Safe Fall Check
+
+execute as @a[tag=safeFall,nbt={OnGround:1b}] run function commands:attributes/clears/clear_safe_fall_dist
 
 #Score Reset
 

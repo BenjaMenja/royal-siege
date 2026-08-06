@@ -173,3 +173,9 @@ function commands:attributes/clears/clear_bone_shield_armor
 function commands:attributes/clears/clear_soul_reaper_atkdmg
 
 function commands:attributes/clears/clear_storm_of_blades_atkdmg
+
+function commands:attributes/clears/clear_high_jump_up_gravity
+
+function commands:attributes/clears/clear_high_jump_down_gravity
+
+function commands:attributes/clears/clear_high_jump_initial_down_gravity

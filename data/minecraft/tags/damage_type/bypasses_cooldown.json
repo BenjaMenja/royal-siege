@@ -3,6 +3,8 @@
         "minecraft:fireball",
         "minecraft:unattributed_fireball",
         "commands:bypass_cooldown",
-        "commands:bleed"
+        "commands:bleed",
+        "commands:pyromania",
+        "commands:arcane_sphere"
     ]
 }

@@ -33,6 +33,10 @@
         },
         {
           "type": "minecraft:loot_table",
+          "value": "commands:shop_items/burning_leap"
+        },
+        {
+          "type": "minecraft:loot_table",
           "value": "commands:shop_items/cdrom"
         },
         {
@@ -189,7 +193,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "value": "commands:shop_items/lightning_rod"
+          "value": "commands:shop_items/sparking_staff"
         },
         {
           "type": "minecraft:loot_table",
@@ -281,7 +285,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "value": "commands:shop_items/rotting_potato"
+          "value": "commands:shop_items/arcane_sphere"
         },
         {
           "type": "minecraft:loot_table",
@@ -313,7 +317,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "value": "commands:shop_items/slowing_arrows"
+          "value": "commands:shop_items/high_jump"
         },
         {
           "type": "minecraft:loot_table",
@@ -389,7 +393,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "value": "commands:shop_items/weak_arrows"
+          "value": "commands:shop_items/supersonic_arrow"
         },
         {
           "type": "minecraft:loot_table",

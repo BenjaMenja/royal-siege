@@ -50,13 +50,13 @@ execute if score @s textClick matches 25 run function commands:shops/sniper_bow
 
 execute if score @s textClick matches 26 run function commands:shops/punch_bow
 
-execute if score @s textClick matches 27 run function commands:shops/slowing_arrows
+execute if score @s textClick matches 27 run function commands:shops/supersonic_arrow
 
-execute if score @s textClick matches 28 run function commands:shops/weak_arrows
+execute if score @s textClick matches 28 run function commands:shops/high_jump
 
 execute if score @s textClick matches 29 run function commands:shops/high_performance_shoes
 
-execute if score @s textClick matches 30 run function commands:shops/lightning_rod
+execute if score @s textClick matches 30 run function commands:shops/sparking_staff
 
 execute if score @s textClick matches 31 run function commands:shops/running_shoes
 
@@ -64,7 +64,7 @@ execute if score @s textClick matches 32 run function commands:shops/minion_swar
 
 execute if score @s textClick matches 33 run function commands:shops/charger
 
-execute if score @s textClick matches 34 run function commands:shops/rotting_potato
+execute if score @s textClick matches 34 run function commands:shops/arcane_sphere
 
 execute if score @s textClick matches 35 run function commands:shops/exp_bomb_blaster
 
@@ -128,7 +128,7 @@ execute if score @s textClick matches 64 run function commands:dialog/shops
 
 execute if score @s textClick matches 65 run function commands:dialog/bank/prepare_bank_dialog
 
-# execute if score @s textClick matches 66 run function commands:settings/colliding_tides
+execute if score @s textClick matches 66 run function commands:shops/burning_leap
 
 execute if score @s textClick matches 67 run function commands:bank/withdraw_credit
 
@@ -138,7 +138,7 @@ execute if score @s textClick matches 69 run function commands:starting/ultimate
 
 execute if score @s textClick matches 70 run function commands:starting/ultimate_select/dinners_ready
 
-# execute if score @s textClick matches 71 run function commands:starting/ultimate_select/
+execute if score @s textClick matches 71 run function commands:shops/supersonic_arrow
 
 execute if score @s textClick matches 72 run function commands:starting/ultimate_select/tree_of_life
 

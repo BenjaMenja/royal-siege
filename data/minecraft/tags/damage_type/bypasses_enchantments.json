@@ -2,6 +2,7 @@
   "values": [
     "minecraft:sonic_boom",
     "commands:shadow_step",
-    "commands:bleed"
+    "commands:bleed",
+    "commands:pyromania"
   ]
 }

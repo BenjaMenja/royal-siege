@@ -68,7 +68,20 @@
           "minecraft:item_name": "Warrior's Battleaxe",
           "minecraft:lore": [
             {
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 15s"
+            },
+            {
               "text": "Nothing fancy, but it gets the job done."
+            },
+            {
+              "text": "Using the axe (Default: Right-Click) will cause your next strike to explode, launching players as well as yourself."
             },
             {
               "text": " "

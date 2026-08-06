@@ -1,0 +1,9 @@
+[
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "commands:blast_shot": -1
+    },
+    "add": true
+  }
+]

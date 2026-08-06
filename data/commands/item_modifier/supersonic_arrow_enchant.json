@@ -1,0 +1,9 @@
+[
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "commands:supersonic_arrow": 1
+    },
+    "add": true
+  }
+]

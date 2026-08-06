@@ -18,6 +18,7 @@
     "minecraft:generic_kill",
     "minecraft:sonic_boom",
     "minecraft:outside_border",
-    "commands:shadow_step"
+    "commands:shadow_step",
+    "commands:pyromania"
   ]
 }

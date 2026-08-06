@@ -16,6 +16,10 @@ execute if score @s abilityCD matches ..1 if score @s Kit matches 10 run return 
 
 execute if score @s abilityCD matches 2.. if score @s Kit matches 10 run scoreboard players set @s abilityCD 0
 
+#Explosive Charge
+
+execute if entity @s[scores={exCharge=..0},predicate=commands:holding/warrior_axe] at @s run function commands:abilities/ability_uses/explosive_charge_toggle
+
 #Seismic Slam
 
 execute if entity @s[scores={WarriorItem=..0},predicate=commands:holding/seismic_slam,tag=!rooted] at @s run function commands:attributes/adds/add_seismic_slam_up_gravity
@@ -104,6 +108,14 @@ execute at @s[predicate=commands:holding/resurrection,team=Blue] if entity @e[ty
 
 execute if entity @s[scores={glowingEffectCD=..0},predicate=commands:holding/glowing_effect] run function commands:abilities/ability_uses/glowing_effect
 
+#Supersonic Arrow
+
+execute if entity @s[scores={supersonicArrowTimer=..0},predicate=commands:holding/supersonic_arrow] run function commands:abilities/ability_uses/supersonic_arrow_toggle
+
+#High Jump
+
+execute if entity @s[scores={highJumpTimer=..0},predicate=commands:holding/high_jump] run function commands:attributes/adds/add_high_jump_up_gravity
+
 #Chaos Bow
 
 execute if entity @s[predicate=commands:holding/chaos_bow_token] run function commands:ultimates/chaos_bow_init
@@ -123,6 +135,14 @@ execute if entity @s[scores={ejectTimer=..0},predicate=commands:holding/eject_bu
 #Exp Bomb Blaster
 
 execute if entity @s[scores={expBombTimer=..0},predicate=commands:holding/exp_bomb_blaster] at @s run function commands:abilities/ability_uses/exp_bomb_blaster
+
+#Sparking Staff
+
+execute if entity @s[scores={sparkingStaffCount=5..},predicate=commands:holding/sparking_staff] at @s run function commands:weapons/weapon_effects/sparking_staff_shoot
+
+#Arcane Sphere
+
+execute if entity @s[scores={arcaneSphereTimer=..0},predicate=commands:holding/arcane_sphere] at @s run function commands:abilities/ability_uses/arcane_sphere_prep
 
 #Kerfuffle
 
@@ -358,7 +378,13 @@ execute at @s[scores={napalmBucketTimer=..0},predicate=commands:holding/napalm_b
 
 #Pyromania
 
-execute at @s[scores={pyromaniaTimer=..0},predicate=commands:holding/pyromania] run function commands:abilities/ability_uses/pyromania
+execute at @s[tag=pyromania,predicate=commands:holding/pyromania] run function commands:abilities/ability_uses/pyromania_init
+
+execute at @s[scores={pyromaniaTimer=..0},predicate=commands:holding/pyromania] run function commands:abilities/ability_uses/pyromania_init
+
+#Burning Leap
+
+execute at @s[scores={burningLeapTimer=..0},predicate=commands:holding/burning_leap] run function commands:abilities/ability_uses/burning_leap
 
 #Chrysanthemum Shell
 

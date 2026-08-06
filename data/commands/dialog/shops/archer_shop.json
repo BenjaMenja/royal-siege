@@ -67,14 +67,14 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "royalsiege:item/vanilla/slowing_arrows"
+          "sprite": "royalsiege:item/supersonic_arrow"
         },
         {
-          "text": " Slowing Arrows"
+          "text": " Supersonic Arrow"
         }
       ],
       "tooltip": {
-        "text": "Cost - 150 Siege Bucks\nAn 8 pack of arrows that inflict -45% movement speed for 3s.",
+        "text": "Cost - 500 Siege Bucks\nSupercharges your next fired arrow from your Archer's bow.\nThe supercharged arrow flies faster and pierces enemies.",
         "color": "gold"
       },
       "action": {
@@ -86,14 +86,14 @@
       "label": [
         {
           "atlas": "minecraft:items",
-          "sprite": "royalsiege:item/vanilla/weakening_arrows"
+          "sprite": "royalsiege:item/high_jump"
         },
         {
-          "text": " Weakness Arrows"
+          "text": " High Jump"
         }
       ],
       "tooltip": {
-        "text": "Cost - 250 Siege Bucks\nAn 8 pack of arrows that inflict -4 attack damage for 5s.",
+        "text": "Cost - 600 Siege Bucks\nLeap into the air and fire a blast of arrows while airborne.",
         "color": "gold"
       },
       "action": {

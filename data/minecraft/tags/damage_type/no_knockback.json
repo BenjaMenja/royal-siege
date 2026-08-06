@@ -4,6 +4,8 @@
     "minecraft:player_explosion",
     "minecraft:bad_respawn_point",
     "minecraft:unattributed_fireball",
-    "commands:bleed"
+    "commands:bleed",
+    "commands:pyromania",
+    "commands:arcane_sphere"
   ]
 }

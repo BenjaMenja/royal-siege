@@ -120,6 +120,8 @@ tag @s remove UHC
 
 tag @s remove stormOfBlades
 
+tag @s remove pyromania
+
 #Reset scores and run function again
 
 scoreboard players set @s Message 0

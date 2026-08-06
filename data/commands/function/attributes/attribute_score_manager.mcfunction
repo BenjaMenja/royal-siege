@@ -290,16 +290,6 @@ scoreboard players add @a[scores={RSAttr.BunkerBootsSpeed=0..}] RSAttr.BunkerBoo
 
 execute as @a[scores={RSAttr.BunkerBootsSpeed=10..}] run function commands:attributes/clears/clear_bunker_boots_speed
 
-#Pyromania
-
-scoreboard players add @a[scores={RSAttr.PyromaniaSpeed=0..}] RSAttr.PyromaniaSpeed 1
-
-execute as @a[scores={RSAttr.PyromaniaSpeed=100..}] run function commands:attributes/clears/clear_pyromania_speed
-
-scoreboard players add @a[scores={RSAttr.PyromaniaAtkDmg=0..}] RSAttr.PyromaniaAtkDmg 1
-
-execute as @a[scores={RSAttr.PyromaniaAtkDmg=100..}] run function commands:attributes/clears/clear_pyromania_atkdmg
-
 #Chrysanthemum Shell
 
 scoreboard players add @a[scores={RSAttr.ChrysanthemumSpeed=0..}] RSAttr.ChrysanthemumSpeed 1
@@ -427,6 +417,14 @@ execute as @a[scores={boneShieldDur=120..}] run function commands:attributes/cle
 scoreboard players add @a[scores={soulReaperDur=0..}] soulReaperDur 1
 
 execute as @a[scores={soulReaperDur=120..}] run function commands:attributes/clears/clear_soul_reaper_atkdmg
+
+#High Jump
+
+scoreboard players add @a[scores={RSAttr.HighJumpGravity=0..}] RSAttr.HighJumpGravity 1
+
+execute as @a[tag=highJumpUpArc,scores={RSAttr.HighJumpGravity=6..}] run function commands:abilities/ability_effects/high_jump_hover
+
+execute as @a[tag=highJumpDownArc,scores={RSAttr.HighJumpGravity=6..}] run function commands:abilities/ability_cleanup/high_jump_down_arc_end
 
 
 

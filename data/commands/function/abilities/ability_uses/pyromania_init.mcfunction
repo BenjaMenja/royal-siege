@@ -1,4 +1,6 @@
-damage @s 5 commands:pyromania
+execute if entity @s[tag=pyromania] run return run function commands:abilities/ability_cleanup/pyromania_end
+
+tag @s add pyromania
 
 particle minecraft:flame ~ ~ ~ 0.5 1 0.5 0 100
 

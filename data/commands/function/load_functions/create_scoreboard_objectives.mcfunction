@@ -395,6 +395,7 @@ scoreboard objectives add RSAttr.BunkerBootsSpeed dummy
 scoreboard objectives add pyromaniaTimer dummy
 scoreboard objectives add pyromaniaStore dummy
 scoreboard objectives add pyromaniaDis dummy
+scoreboard objectives add pyromaniaDur dummy
 scoreboard objectives add RSAttr.PyromaniaSpeed dummy
 scoreboard objectives add RSAttr.PyromaniaAtkDmg dummy
 scoreboard objectives add cinderBombDuration dummy
@@ -527,6 +528,22 @@ scoreboard objectives add stormOfBladesTier dummy
 scoreboard objectives add tridentSlot dummy
 scoreboard objectives add dashStore dummy
 scoreboard objectives add dashDis dummy
+scoreboard objectives add exChargeToggle dummy
+scoreboard objectives add burningLeapTimer dummy
+scoreboard objectives add burningLeapStore dummy
+scoreboard objectives add burningLeapDis dummy
+scoreboard objectives add supersonicArrowTimer dummy
+scoreboard objectives add supersonicArrowStore dummy
+scoreboard objectives add supersonicArrowDis dummy
+scoreboard objectives add supersonicArrowToggle dummy
+scoreboard objectives add highJumpTimer dummy
+scoreboard objectives add highJumpStore dummy
+scoreboard objectives add highJumpDis dummy
+scoreboard objectives add RSAttr.HighJumpGravity dummy
+scoreboard objectives add sparkingStaffCount dummy
+scoreboard objectives add arcaneSphereTimer dummy
+scoreboard objectives add arcaneSphereStore dummy
+scoreboard objectives add arcaneSphereDis dummy
 
 function custom_heal:load
 
@@ -552,3 +569,5 @@ scoreboard objectives remove gasVacTimer
 scoreboard objectives remove useCrossbow
 scoreboard objectives remove RSAttr.BlossomUpgradeSpeed
 scoreboard objectives remove entPassive
+scoreboard objectives remove RSAttr.PyromaniaAtkDmg
+scoreboard objectives remove RSAttr.PyromaniaSpeed

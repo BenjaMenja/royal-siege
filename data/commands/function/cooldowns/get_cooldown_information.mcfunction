@@ -58,6 +58,14 @@ scoreboard players operation @s glowingStore = @s glowingEffectCD
 
 execute store result score @s glowingDis run scoreboard players operation @s glowingStore /= #ticks constant
 
+scoreboard players operation @s supersonicArrowStore = @s supersonicArrowTimer
+
+execute store result score @s supersonicArrowDis run scoreboard players operation @s supersonicArrowStore /= #ticks constant
+
+scoreboard players operation @s highJumpStore = @s highJumpTimer
+
+execute store result score @s highJumpDis run scoreboard players operation @s highJumpStore /= #ticks constant
+
 ## Wizard
 
 scoreboard players operation @s lightningStaffStore = @s LightningTimer
@@ -79,6 +87,10 @@ execute store result score @s ejectDis run scoreboard players operation @s eject
 scoreboard players operation @s witherStore = @s witherTimer
 
 execute store result score @s witherDis run scoreboard players operation @s witherStore /= #ticks constant
+
+scoreboard players operation @s arcaneSphereStore = @s arcaneSphereTimer
+
+execute store result score @s arcaneSphereDis run scoreboard players operation @s arcaneSphereStore /= #ticks constant
 
 ## Pirate
 
@@ -207,6 +219,10 @@ execute store result score @s napalmBucketDis run scoreboard players operation @
 scoreboard players operation @s pyromaniaStore = @s pyromaniaTimer
 
 execute store result score @s pyromaniaDis run scoreboard players operation @s pyromaniaStore /= #ticks constant
+
+scoreboard players operation @s burningLeapStore = @s burningLeapTimer
+
+execute store result score @s burningLeapDis run scoreboard players operation @s burningLeapStore /= #ticks constant
 
 ## School Nurse
 

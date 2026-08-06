@@ -102,7 +102,8 @@
       "action": {
         "type": "minecraft:run_command",
         "command": "trigger textClick set 176"
-      }
+      },
+      "width": 175
     },
     {
       "label": [
@@ -121,6 +122,26 @@
       "action": {
         "type": "minecraft:run_command",
         "command": "trigger textClick set 177"
+      },
+      "width": 175
+    },
+    {
+      "label": [
+        {
+          "atlas": "minecraft:items",
+          "sprite": "royalsiege:item/burning_leap"
+        },
+        {
+          "text": " Burning Leap"
+        }
+      ],
+      "tooltip": {
+        "text": "Cost - 600 Siege Bucks\nLaunch yourself forward, dealing a burst of fire damage when landing.\nDeals increased damage to burning enemies.",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger textClick set 66"
       },
       "width": 175
     },

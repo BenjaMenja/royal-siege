@@ -1,0 +1,3 @@
+function commands:attributes/clears/clear_high_jump_initial_down_gravity
+
+tag @s remove highJumpDownArc

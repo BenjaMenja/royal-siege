@@ -70,23 +70,58 @@
     {
       "type": "item",
       "item": {
-        "id": "fishing_rod",
+        "id": "blaze_rod",
         "components": {
-          "item_name": {
-            "text": "Lightning Rod",
-            "italic": false
+          "minecraft:item_name": {
+            "italic": false,
+            "text": "Sparking Staff",
+            "color": "yellow"
           },
           "lore": [
             {
-              "text": "Makes a lot of lightning."
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "text": "A long forgotten staff that seems to have a bit of energy left in it."
+            },
+            {
+              "text": "Hitting targets charges up the staff."
+            },
+            {
+              "text": "Fully charging the staff allows you to shoot a spark that deals fire damage, dissipating the charge in the process."
+            },
+            {
+              "text": " "
+            },
+            {
+              "color": "gray",
+              "italic": false,
+              "text": "When in Main Hand:"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 7 Attack Damage"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 1.6 Attack Speed"
+            },
+            {
+              "color": "dark_green",
+              "italic": false,
+              "text": " 7 Projectile Damage"
             }
           ],
-          "enchantment_glint_override": true
+          "minecraft:item_model": "royalsiege:sparking_staff"
         }
       },
       "show_tooltip": true,
       "description": {
-        "contents": "Lightning Rod",
+        "contents": "Sparking Staff",
         "width": 125
       }
     },
@@ -172,23 +207,43 @@
     {
       "type": "item",
       "item": {
-        "id": "poisonous_potato",
+        "id": "carrot",
         "components": {
           "minecraft:item_name": {
-            "text": "Rotting Potato",
+            "text": "Arcane Sphere",
+            "color": "aqua",
             "italic": false
           },
           "minecraft:lore": [
             {
-              "text": "Poisons an enemy when you strike them with it."
+              "text": "Right-Click to use",
+              "color": "yellow",
+              "italic": false
+            },
+            {
+              "color": "#ff771c",
+              "italic": false,
+              "text": "Cooldown: 20s"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Fires a slow moving orb that rapidly zaps the closest nearby enemy."
+            },
+            {
+              "text": "Can be redirected to travel in the direction of the user by using the ability again."
+            },
+            {
+              "text": "Lasts 10 seconds, or until it collides with a block."
             }
           ],
-          "enchantment_glint_override": true
+          "minecraft:item_model": "royalsiege:arcane_sphere"
         }
       },
       "show_tooltip": true,
       "description": {
-        "contents": "Rotting Potato",
+        "contents": "Arcane Sphere",
         "width": 125
       }
     },
