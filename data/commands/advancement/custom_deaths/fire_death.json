@@ -24,8 +24,38 @@
           }
         }
       }
+    },
+    "burning_leap": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Health:0.0f}"
+            }
+          }
+        ],
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "commands:burning_leap",
+                "expected": true
+              }
+            ]
+          }
+        }
+      }
     }
   },
+  "requirements": [
+    [
+      "burning_leap",
+      "requirement"
+    ]
+  ],
   "rewards": {
     "function": "commands:custom_deaths/fire_death"
   }

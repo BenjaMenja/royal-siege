@@ -85,6 +85,16 @@
         "type": "minecraft:show_dialog",
         "dialog": "commands:info_pages/astronaut/astronaut_shop_items"
       }
+    },
+    {
+      "label": {
+        "type": "text",
+        "text": "Augments"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "commands:info_pages/astronaut/augments/augment_page_1"
+      }
     }
   ]
 }
