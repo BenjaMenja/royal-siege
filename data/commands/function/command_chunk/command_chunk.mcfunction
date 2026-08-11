@@ -608,6 +608,8 @@ kill @e[type=experience_orb]
 
 #Sparking Staff
 
+execute as @e[type=item,tag=sparkingStaffProjectile] at @s run particle flame ~ ~ ~ 0.1 0.1 0.1 0 5
+
 execute as @e[type=item,tag=sparkingStaffProjectileRed] at @s if entity @a[team=Blue,distance=..2] at @s run function commands:weapons/weapon_effects/sparking_staff_projectile_damage
 
 execute as @e[type=item,tag=sparkingStaffProjectileBlue] at @s if entity @a[team=Red,distance=..2] at @s run function commands:weapons/weapon_effects/sparking_staff_projectile_damage

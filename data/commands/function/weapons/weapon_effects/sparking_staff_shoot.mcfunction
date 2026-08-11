@@ -1,8 +1,8 @@
 tag @s add sparkingStaffUse
 
-execute at @s[team=Red] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["sparkingStaffProjectileRed","sparkingStaffProjectile","redProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:item_model":"royalsiege:sparking_staff_spark"}}}
+execute at @s[team=Red] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["sparkingStaffProjectileRed","sparkingStaffProjectile","redProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:item_model":"royalsiege:sparking_staff_projectile"}}}
 
-execute at @s[team=Blue] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["sparkingStaffProjectileBlue","sparkingStaffProjectile","blueProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:item_model":"royalsiege:sparking_staff_spark"}}}
+execute at @s[team=Blue] anchored eyes run summon item ^ ^ ^1 {Health:1000,PickupDelay:32767,Tags:["sparkingStaffProjectileBlue","sparkingStaffProjectile","blueProj"],Item:{id:"minecraft:carrot",count:1,components:{"minecraft:item_model":"royalsiege:sparking_staff_projectile"}}}
 
 execute as @e[tag=sparkingStaffProjectile] run data modify entity @s Owner set from entity @a[tag=sparkingStaffUse,limit=1] UUID
 
@@ -31,6 +31,8 @@ execute as @e[tag=sparkingStaffProjectile,limit=1,tag=!stop] store result entity
 execute as @e[tag=sparkingStaffProjectile,limit=1,tag=!stop] store result entity @s Motion[1] double 0.0005 run scoreboard players get @s posY
 
 execute as @e[tag=sparkingStaffProjectile,limit=1,tag=!stop] store result entity @s Motion[2] double 0.0005 run scoreboard players get @s posZ
+
+function commands:replace/generic_enchant_check {custom_data:{sparkingstaff:1b},enchant_modifier:"sparking_staff_normal"}
 
 tag @e[tag=sparkingStaffProjectile] add stop
 

@@ -1,6 +1,6 @@
-execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {Tags:["arcaneSphereProj","arcaneSphereProjRed","redProj"],Motion:[0.0,0.0,0.0],Item:{id:"fire_charge",components:{item_model:"commands:arcane_sphere"}},PickupDelay:32767,NoGravity:1b}
+execute at @s[team=Red] anchored eyes run summon minecraft:item ^ ^ ^1 {Tags:["arcaneSphereProj","arcaneSphereProjRed","redProj"],Motion:[0.0,0.0,0.0],Item:{id:"fire_charge",components:{item_model:"royalsiege:arcane_sphere"}},PickupDelay:32767,NoGravity:1b}
 
-execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {Tags:["arcaneSphereProj","arcaneSphereProjBlue","blueProj"],Motion:[0.0,0.0,0.0],Item:{id:"fire_charge",components:{item_model:"commands:arcane_sphere"}},PickupDelay:32767,NoGravity:1b}
+execute at @s[team=Blue] anchored eyes run summon minecraft:item ^ ^ ^1 {Tags:["arcaneSphereProj","arcaneSphereProjBlue","blueProj"],Motion:[0.0,0.0,0.0],Item:{id:"fire_charge",components:{item_model:"royalsiege:arcane_sphere"}},PickupDelay:32767,NoGravity:1b}
 
 execute as @e[tag=arcaneSphereProj,tag=!stop] run scoreboard players operation @s UUID = @a[tag=arcaneSphere,limit=1] UUID
 
