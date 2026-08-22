@@ -544,6 +544,7 @@ scoreboard objectives add sparkingStaffCount dummy
 scoreboard objectives add arcaneSphereTimer dummy
 scoreboard objectives add arcaneSphereStore dummy
 scoreboard objectives add arcaneSphereDis dummy
+scoreboard objectives add impulseTimer dummy
 
 function custom_heal:load
 

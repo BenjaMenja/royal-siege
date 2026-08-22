@@ -1,0 +1,10 @@
+[
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "commands:impulse_backward": 0,
+      "commands:impulse_forward": 0,
+      "commands:impulse_forward_up": 0
+    }
+  }
+]

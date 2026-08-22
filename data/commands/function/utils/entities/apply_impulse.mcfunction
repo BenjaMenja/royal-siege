@@ -1,0 +1,1 @@
+$item modify entity @s armor.head {function:"set_enchantments",enchantments:{"$(type)":$(level)},add:true}

@@ -166,9 +166,9 @@ execute as @a[scores={Kit=12},tag=!upgraded] run function #commands:clear_streng
 
 effect give @a[scores={Kit=14}] jump_boost 1 3 true
 
-execute as @a[predicate=commands:flags/is_sneaking,scores={Kit=14},nbt={OnGround:0b}] run function commands:attributes/adds/add_astronaut_passive_gravity
+execute as @a[predicate=commands:flags/is_sneaking,scores={Kit=14},predicate=!commands:flags/on_ground] run function commands:attributes/adds/add_astronaut_passive_gravity
 
-execute as @a[scores={Kit=14},tag=astrogravity,nbt={OnGround:1b}] run function commands:attributes/clears/clear_astronaut_passive_gravity
+execute as @a[scores={Kit=14},tag=astrogravity,predicate=commands:flags/on_ground] run function commands:attributes/clears/clear_astronaut_passive_gravity
 
 effect give @a[scores={Kit=15}] fire_resistance 1 0 true
 
@@ -348,7 +348,7 @@ scoreboard players remove @a[scores={supersonicArrowTimer=1..},predicate=command
 
 scoreboard players remove @a[scores={highJumpTimer=1..},predicate=commands:inventory/high_jump,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] highJumpTimer 1
 
-execute as @a[tag=highJumpHover,nbt={OnGround:1b}] run function commands:abilities/ability_cleanup/high_jump_end
+execute as @a[tag=highJumpHover,predicate=commands:flags/on_ground] run function commands:abilities/ability_cleanup/high_jump_end
 
 #Keep zombies from drowning
 
@@ -418,7 +418,7 @@ execute as @e[type=armor_stand,tag=Chest] at @s run particle happy_villager ~ ~ 
 
 scoreboard players add @e[type=armor_stand,tag=Chest] TreasureDelete 1
 
-execute as @e[type=armor_stand,tag=Chest,nbt={OnGround:1b},tag=!placed] at @s run function commands:ultimates/treasure_chest_place
+execute as @e[type=armor_stand,tag=Chest,predicate=commands:flags/on_ground,tag=!placed] at @s run function commands:ultimates/treasure_chest_place
 
 execute as @e[type=armor_stand,scores={TreasureDelete=299}] at @s run summon fireball ~ ~ ~ {Motion:[0.0,-1.0,0.0],ExplosionPower:0}
 
@@ -640,8 +640,6 @@ scoreboard players set @a[scores={witherTimer=..0}] witherTimer 900
 
 execute as @a[scores={Kit=6,ejectTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s ejectTimer 1
 
-execute as @a[scores={Kit=6},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s run ride @s mount @n[type=snowball,distance=..1.5,tag=ejectitem]
-
 #Ninja Dash
 
 scoreboard players add #ninjavoicered voicelineCD 1
@@ -832,23 +830,23 @@ execute as @a[scores={Ultimate=1..34}] run function commands:text/ultimate_bossb
 
 execute as @a[scores={Kit=1,WarriorItem=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] at @s unless entity @e[type=item,scores={ItemKill=1},distance=..2] run scoreboard players remove @s WarriorItem 1
 
-effect give @a[tag=slamming,nbt={OnGround:0b}] resistance 1 2 true
+effect give @a[tag=slamming,predicate=!commands:flags/on_ground] resistance 1 2 true
 
-execute at @a[team=Red,tag=slamming,nbt={OnGround:1b}] as @a[team=Blue,distance=..5] run function commands:attributes/adds/add_seismic_slam_launch_gravity
+execute at @a[team=Red,tag=slamming,predicate=commands:flags/on_ground] as @a[team=Blue,distance=..5] run function commands:attributes/adds/add_seismic_slam_launch_gravity
 
-execute at @a[team=Blue,tag=slamming,nbt={OnGround:1b}] as @a[team=Red,distance=..5] run function commands:attributes/adds/add_seismic_slam_launch_gravity
+execute at @a[team=Blue,tag=slamming,predicate=commands:flags/on_ground] as @a[team=Red,distance=..5] run function commands:attributes/adds/add_seismic_slam_launch_gravity
 
-execute at @a[tag=slamming,nbt={OnGround:1b}] as @e[type=wither_skeleton,tag=dummy,distance=..5] run function commands:attributes/adds/add_seismic_slam_launch_gravity
+execute at @a[tag=slamming,predicate=commands:flags/on_ground] as @e[type=wither_skeleton,tag=dummy,distance=..5] run function commands:attributes/adds/add_seismic_slam_launch_gravity
 
-execute at @a[tag=slamming,nbt={OnGround:1b}] run playsound entity.generic.explode master @a[distance=..10] ~ ~ ~ 0.2
+execute at @a[tag=slamming,predicate=commands:flags/on_ground] run playsound entity.generic.explode master @a[distance=..10] ~ ~ ~ 0.2
 
-execute at @a[tag=slamming,nbt={OnGround:1b}] run particle dust{color:[0.239,0.239,0.239],scale:1} ~ ~ ~ 1.5 0 1.5 1 100 normal
+execute at @a[tag=slamming,predicate=commands:flags/on_ground] run particle dust{color:[0.239,0.239,0.239],scale:1} ~ ~ ~ 1.5 0 1.5 1 100 normal
 
-execute as @a[tag=slamming,nbt={OnGround:1b}] run function commands:attributes/clears/clear_safe_fall_dist
+execute as @a[tag=slamming,predicate=commands:flags/on_ground] run function commands:attributes/clears/clear_safe_fall_dist
 
-scoreboard players reset @a[tag=slamming,nbt={OnGround:1b}] slamSuspend
+scoreboard players reset @a[tag=slamming,predicate=commands:flags/on_ground] slamSuspend
 
-tag @a[tag=slamming,nbt={OnGround:1b}] remove slamming
+tag @a[tag=slamming,predicate=commands:flags/on_ground] remove slamming
 
 #Invisibility Cloak (Ninja Alt. Ultimate)
 
@@ -1162,7 +1160,7 @@ advancement grant @a[scores={craftPickaxe=1..}] only commands:hidden_advancement
 
 advancement grant @a[scores={craftQuartzBlock=1..}] only commands:hidden_advancements/craft_quartz_block
 
-scoreboard players add @a[tag=slamming,nbt={OnGround:0b}] slamSuspend 1
+scoreboard players add @a[tag=slamming,predicate=!commands:flags/on_ground] slamSuspend 1
 
 advancement grant @a[scores={slamSuspend=300..},predicate=!commands:location/practice_range/in_practice_range] only commands:hidden_advancements/seismic_suspension
 
@@ -1276,7 +1274,7 @@ scoreboard players remove @a[scores={fishCannonTimer=1..},predicate=commands:inv
 
 execute at @e[type=item,tag=fishCannon] run particle dust{color:[0.000,1.000,0.765],scale:1} ~ ~ ~ 0.25 0.25 0.25 1 5 normal
 
-execute as @e[type=item,tag=fishCannon,nbt={OnGround:1b}] at @s run function commands:abilities/ability_effects/fish_cannon
+execute as @e[type=item,tag=fishCannon,predicate=commands:flags/on_ground] at @s run function commands:abilities/ability_effects/fish_cannon
 
 execute as @e[type=item,tag=fishCannon] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on_without_grass force
 
@@ -1300,7 +1298,7 @@ scoreboard players remove @a[scores={squidzookaTimer=1..},predicate=commands:inv
 
 scoreboard players set @a[scores={died=1..}] squidzookaTimer 0
 
-execute as @e[type=item,tag=squidzooka,nbt={OnGround:1b}] at @s run function commands:abilities/ability_effects/squidzooka_explosion
+execute as @e[type=item,tag=squidzooka,predicate=commands:flags/on_ground] at @s run function commands:abilities/ability_effects/squidzooka_explosion
 
 execute as @e[type=item,tag=squidzooka] at @s store result score @s nearbyBlocks run clone ~-0.3 ~-0.3 ~-0.3 ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 filtered #commands:can_place_on_without_grass force
 
@@ -1490,11 +1488,11 @@ execute as @e[type=item,tag=eggblue] at @s if entity @p[distance=..4,team=Red] r
 
 execute as @a[tag=scrambled] at @s run function commands:scramble/randomize
 
-execute at @e[type=item,tag=egg,nbt={OnGround:1b}] run playsound minecraft:block.slime_block.step master @a ~ ~ ~
+execute at @e[type=item,tag=egg,predicate=commands:flags/on_ground] run playsound minecraft:block.slime_block.step master @a ~ ~ ~
 
-execute at @e[type=item,tag=egg,nbt={OnGround:1b}] run particle item{item:"egg"} ~ ~ ~ 1 1 1 1 20 normal
+execute at @e[type=item,tag=egg,predicate=commands:flags/on_ground] run particle item{item:"egg"} ~ ~ ~ 1 1 1 1 20 normal
 
-kill @e[type=item,tag=egg,nbt={OnGround:1b}]
+kill @e[type=item,tag=egg,predicate=commands:flags/on_ground]
 
 #Dinner's Ready! (Chef Ultimate)
 
@@ -2066,7 +2064,7 @@ execute as @e[type=item,tag=coinBulletBlue] at @s run tag @e[type=#commands:proj
 
 execute as @e[type=#commands:projectile_hits,tag=coinHit] at @s run function commands:abilities/ability_effects/coin_gun_hit
 
-kill @e[type=item,tag=coinBullet,nbt={OnGround:1b}]
+kill @e[type=item,tag=coinBullet,predicate=commands:flags/on_ground]
 
 #Busted (Gambler Ultimate)
 
@@ -2156,9 +2154,9 @@ execute as @a[predicate=commands:standing_location/battlefields/on_ncs_speed_pad
 
 effect clear @a[predicate=commands:standing_location/battlefields/on_ncs_roof,predicate=commands:effects/speed_pad] speed
 
-execute as @a[tag=onPirateBouncePad,predicate=!commands:standing_location/battlefields/on_colliding_tides_bounce_pad,nbt={OnGround:1b}] run function commands:attributes/clears/clear_safe_fall_dist
+execute as @a[tag=onPirateBouncePad,predicate=!commands:standing_location/battlefields/on_colliding_tides_bounce_pad,predicate=commands:flags/on_ground] run function commands:attributes/clears/clear_safe_fall_dist
 
-tag @a[tag=onPirateBouncePad,predicate=!commands:standing_location/battlefields/on_colliding_tides_bounce_pad,nbt={OnGround:1b}] remove onPirateBouncePad
+tag @a[tag=onPirateBouncePad,predicate=!commands:standing_location/battlefields/on_colliding_tides_bounce_pad,predicate=commands:flags/on_ground] remove onPirateBouncePad
 
 #Winterland Boats
 
@@ -2172,7 +2170,7 @@ scoreboard players remove @a[scores={Kit=14,asteroidTimer=1..},predicate=command
 
 execute as @e[type=marker,tag=asteroidLand] unless predicate commands:riding/fireballs/is_riding_asteroid at @s run function commands:abilities/ability_effects/asteroid_land
 
-execute as @e[type=item,tag=asteroidshard,nbt={OnGround:1b}] at @s run function commands:abilities/ability_effects/asteroid_shard_land
+execute as @e[type=item,tag=asteroidshard,predicate=commands:flags/on_ground] at @s run function commands:abilities/ability_effects/asteroid_shard_land
 
 #Enhanced Space Helmet
 
@@ -2196,7 +2194,7 @@ scoreboard players add @e[type=area_effect_cloud,tag=tetherSpot] tetherTimer 1
 
 scoreboard players remove @a[scores={debrisTimer=1..},predicate=commands:inventory/debris_cannon,predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] debrisTimer 1
 
-kill @e[type=item,tag=debrisitem,nbt={OnGround:1b}]
+kill @e[type=item,tag=debrisitem,predicate=commands:flags/on_ground]
 
 execute as @e[type=item,tag=redDebris] at @s run data modify entity @s Owner set from entity @p[team=Blue] UUID
 
@@ -2206,7 +2204,7 @@ execute as @e[type=item,tag=blueDebris] at @s run data modify entity @s Owner se
 
 scoreboard players remove @a[scores={Kit=14,astroPassTimer=1..},tag=upgraded] astroPassTimer 1
 
-execute as @a[scores={Kit=14,astroPassTimer=..0,jump=1..},tag=upgraded,predicate=commands:flags/is_sneaking,nbt={OnGround:1b}] at @s run function commands:passives/astronaut_upgrade_passive
+execute as @a[scores={Kit=14,astroPassTimer=..0,jump=1..},tag=upgraded,predicate=commands:flags/is_sneaking,predicate=commands:flags/on_ground] at @s run function commands:passives/astronaut_upgrade_passive
 
 #Space Wrench Ability
 
@@ -2224,7 +2222,7 @@ scoreboard players add @e[type=area_effect_cloud,tag=rocketPad] rocLaunchTimer 1
 
 execute as @e[type=marker,tag=rocketPad,scores={rocLaunchTimer=100..}] at @s run function commands:ultimates/rocket_launch
 
-execute as @e[type=item,tag=rocketItem,nbt={OnGround:1b}] at @s run function commands:ultimates/rocket_explode
+execute as @e[type=item,tag=rocketItem,predicate=commands:flags/on_ground] at @s run function commands:ultimates/rocket_explode
 
 #Smart Drone (Astronaut Alt. Ultimate)
 
@@ -2338,7 +2336,7 @@ execute as @e[type=area_effect_cloud,tag=cindersmoke,scores={cinderBombDuration=
 
 scoreboard players remove @a[scores={Kit=15,burningLeapTimer=1..},predicate=commands:location/battlefields/in_any_battlefield,tag=!notAlive] burningLeapTimer 1
 
-execute as @a[tag=burningLeap,predicate=!commands:riding/snowballs/is_riding_burning_leap] at @s run function commands:abilities/ability_effects/burning_leap_land
+execute as @a[tag=burningLeap,tag=!hasImpulse,predicate=commands:flags/on_ground] at @s run function commands:abilities/ability_effects/burning_leap_land
 
 #Chrysanthemum Shell
 
@@ -2356,7 +2354,7 @@ execute as @e[type=item,tag=chrysanthemum_projectile,scores={nearbyBlocks=1..}] 
 
 execute as @e[type=item,tag=chrysanthemum_projectile,scores={chrysanthemumShellTimer=30..}] at @s run function commands:ultimates/chrysanthemum_explosion
 
-execute as @a[tag=cshelldown,nbt={OnGround:1b}] run function commands:ultimates/chrysanthemum_expire
+execute as @a[tag=cshelldown,predicate=commands:flags/on_ground] run function commands:ultimates/chrysanthemum_expire
 
 #Pop Rocks
 
@@ -2626,6 +2624,12 @@ execute as @a[scores={Kit=17}] store result score @s necroArmor run attribute @s
 
 execute as @a[scores={Kit=17},predicate=!commands:location/practice_range/in_practice_range] if score @s necroArmor matches 24.. run advancement grant @s only commands:character_challenges/undead_wall
 
+#Clear Impulse
+
+scoreboard players add @a[tag=hasImpulse] impulseTimer 1
+
+execute as @a[tag=hasImpulse,scores={impulseTimer=2..}] run function commands:utils/entities/clear_impulses
+
 #Match ID Check for people returning while a game is over
 
 execute if score #matchID matchID matches 0 as @a[scores={matchID=-2147483648..2147483647}] run function commands:starting/leave_battlefield_when_match_over
@@ -2642,7 +2646,7 @@ kill @e[type=trident,nbt={inGround:1b}]
 
 #Safe Fall Check
 
-execute as @a[tag=safeFall,nbt={OnGround:1b}] run function commands:attributes/clears/clear_safe_fall_dist
+execute as @a[tag=safeFall,predicate=commands:flags/on_ground] run function commands:attributes/clears/clear_safe_fall_dist
 
 #Score Reset
 
@@ -2650,7 +2654,7 @@ tag @a[scores={useBow=1..}] remove wrenched
 
 scoreboard players reset @a[scores={useBow=1..}] useBow
 
-scoreboard players set @a[nbt={OnGround:1b}] jump 0
+scoreboard players set @a[predicate=commands:flags/on_ground] jump 0
 
 scoreboard players set @a[scores={Jump=1..}] Jump 0
 
